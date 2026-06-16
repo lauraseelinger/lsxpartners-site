@@ -1,51 +1,220 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { serviceSchema } from '../lib/schema';
-import { SITE, PERSON } from '../consts';
+import { SITE, PERSON, CTA } from '../consts';
 
-// HOME — personal-brand-forward, AI-visibility-only. Copy here is a STRUCTURED
-// PLACEHOLDER: real voice-checked copy lands in A4 (gated by A4-pre). Structure,
-// hierarchy, and schema are final.
+// HOME — brand-applied styled sample for Laura to react to.
+// Voice: "Full LinkedIn Laura." Copy is net-new and voice-grounded
+// (laura-public-voice). Stats are ONLY her own published, sourced figures.
 ---
-<BaseLayout
-  title={SITE.name}
-  description={SITE.description}
-  schemas={[serviceSchema()]}
->
-  <section class="hero container">
-    <p class="hero__eyebrow">{SITE.tagline}</p>
-    <h1>Get cited by AI — not just ranked.</h1>
-    <p class="hero__lede prose">
-      {SITE.description}
-      <!-- A4: replace with Laura's voice (punchy-personal). -->
+<BaseLayout title={SITE.name} description={SITE.description} schemas={[serviceSchema()]}>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="subhead">ai changed how people find answers</p>
+        <h1>Get cited by AI.<br />Not just ranked.</h1>
+        <p class="hero__lede">
+          Right now AI is telling people what your brand is — and it's not
+          reading your homepage to do it. It's pulling from Reddit, reviews and
+          random third-party pages you've never seen. I make sure that when
+          someone asks AI about your category, your brand is the answer it
+          actually cites.
+        </p>
+        <div class="hero__ctas">
+          <a class="button" href={CTA.calendly}>Book a call</a>
+          <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="/images/laura-3.jpg" alt={`${PERSON.name}, ${PERSON.jobTitle}`} width="900" height="980" />
+        <img class="hero__sticker" src="/brand/assets/sticker-certified-organic.svg" alt="" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PATTERN DIVIDER (tasteful craft touch) -->
+  <div class="pattern-strip" role="presentation"></div>
+
+  <!-- THE PROBLEM -->
+  <section class="container band prose">
+    <p class="subhead">here's the uncomfortable part</p>
+    <h2>AI doesn't build your brand from your website</h2>
+    <p>
+      It builds it from the ENTIRE internet — reviews, forums, Reddit threads,
+      comparison pages, stuff you didn't write, approve, or even know existed.
+      That's the identity it hands to a buyer. And most of the time the brand
+      isn't even the source getting credit.
     </p>
     <p>
-      <a class="button" href="/contact">Work with {PERSON.givenName}</a>
-      <a href="/services" style="margin-left: var(--space-2)">See services →</a>
+      About <strong>85% of brand mentions in AI answers come from third-party
+      pages</strong>, not brand-owned domains. Meanwhile brands cited in AI
+      Overviews are already earning <strong>35% more organic clicks and 91% more
+      paid clicks</strong> than the uncited brands on the same query
+      <span class="cite">(Seer Interactive, Sept 2025)</span>. You can rank #1 on
+      Google and still be invisible in the answer. Different game, different work.
     </p>
   </section>
 
-  <section class="container prose">
-    <h2>What I do</h2>
-    <ul>
-      <li><strong>AI Visibility Audit</strong> — where you show up (and don't) across AI engines, and why.</li>
-      <li><strong>AI Visibility Strategy</strong> — the plan to get cited, built on audience intelligence.</li>
-      <li><strong>Audience Intelligence</strong> — the real language buyers use, not keyword-tool guesses.</li>
-      <li><strong>Content Activation</strong> — content engineered to be quoted by AI.</li>
-    </ul>
-    <p><a href="/services">More on how this works →</a></p>
+  <!-- SERVICES -->
+  <section class="band band--surface">
+    <div class="container">
+      <p class="subhead">what i actually do</p>
+      <h2>AI visibility &amp; strategy</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>AI Visibility Audit</h3>
+          <p>Where you show up — and don't — across ChatGPT, Claude, Perplexity and Google AI. And the real reason why.</p>
+        </div>
+        <div class="card">
+          <h3>AI Visibility Strategy</h3>
+          <p>The plan to get cited, built on what your audience actually asks — not a list of prompts crowdsourced in a Teams thread.</p>
+        </div>
+        <div class="card">
+          <h3>Audience Intelligence</h3>
+          <p>The real language buyers use, mined from where they talk when no one's watching. The most important thing won't show up in a keyword tool.</p>
+        </div>
+        <div class="card">
+          <h3>Content Activation</h3>
+          <p>Content engineered to be extracted and quoted by AI — structured so the dice are loaded in your favor.</p>
+        </div>
+      </div>
+      <p><a href="/services">See how it works →</a></p>
+    </div>
+  </section>
+
+  <!-- THE LOOP -->
+  <section class="container band prose">
+    <p class="subhead">the framework</p>
+    <h2>The AI Intelligence Loop</h2>
+    <p>
+      Most agencies skip straight to producing content and hope it lands.
+      I run a loop instead: audience intelligence and brand-identity analysis
+      as <em>parallel</em> inputs, feeding a strategy built for AI visibility,
+      that feeds monitoring, that feeds right back into the intelligence. It
+      compounds. That's the whole point.
+    </p>
+    <ol class="loop">
+      <li><strong>Audience intelligence</strong> — what your buyers actually say and ask.</li>
+      <li><strong>Strategic translation</strong> — turn that into a plan AI can read.</li>
+      <li><strong>Content activation</strong> — publish what gets extracted and cited.</li>
+      <li><strong>Monitoring</strong> — watch what AI says, and feed it back in.</li>
+    </ol>
+  </section>
+
+  <!-- ANSWER VS CITATION (dark band) -->
+  <section class="band section--dark">
+    <div class="container prose">
+      <p class="subhead" style="color: var(--peach)">the distinction nobody makes</p>
+      <h2>Being the answer and being the cited source are two different things</h2>
+      <p>
+        I've had clients AI knew cold — name them in any category prompt — but
+        every citation pointed to a directory or a third-party page they had zero
+        control over. A few months of foundation work later, one client's own
+        domain became the #1 cited source for their category, with a 450% jump in
+        how often AI pulled from a single retrofitted page. You can't guarantee a
+        citation. You CAN structure everything so the probability moves your way.
+      </p>
+      <a class="button" href={CTA.calendly}>Let's load your dice</a>
+    </div>
+  </section>
+
+  <!-- CITED NEWSLETTER -->
+  <section class="band band--surface">
+    <div class="container cited">
+      <div>
+        <p class="subhead">my newsletter</p>
+        <h2>Cited</h2>
+        <p>
+          AI changed how customers find answers. Most brand &amp; agency
+          strategies haven't — here's what to do about it. Real audits, real
+          numbers, no recycled 2024 advice.
+        </p>
+        <a class="button" href={CTA.newsletter}>Subscribe to Cited</a>
+      </div>
+      <img src="/images/laura-2.jpg" alt="Laura at home" width="600" height="800" />
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF + FINAL CTA -->
+  <section class="container band prose final">
+    <img class="badge" src="/brand/logo/badge-green.svg" alt="" aria-hidden="true" width="84" height="84" />
+    <p class="subhead">featured speaker · cincy ai week</p>
+    <h2>Want your brand cited by AI by Q3?</h2>
+    <p>That's the work. Let's talk about it.</p>
+    <div class="hero__ctas">
+      <a class="button" href={CTA.calendly}>Book a call</a>
+      <a class="button button--ghost" href="/blog">Read the blog</a>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* HERO */
   .hero { padding-block: var(--space-5) var(--space-4); }
-  .hero__eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    font-weight: 700;
-    margin-bottom: var(--space-1);
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-5);
+    align-items: center;
   }
-  .hero__lede { font-size: var(--text-lg); color: var(--color-text-muted); }
+  .hero h1 { margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 46ch; }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+  .hero__media { position: relative; }
+  .hero__media > img {
+    width: 100%; border-radius: var(--radius);
+    border: 3px solid var(--brown);
+    box-shadow: 10px 10px 0 var(--olive);
+  }
+  .hero__sticker {
+    position: absolute; bottom: -28px; left: -28px;
+    width: 132px; height: auto; rotate: -8deg;
+  }
+
+  /* PATTERN STRIP */
+  .pattern-strip {
+    height: 46px;
+    background: url('/brand/patterns/pattern-peach.jpg') repeat-x center / auto 46px;
+    border-block: 1px solid var(--color-border);
+  }
+
+  .band { padding-block: var(--space-5); }
+  .band--surface { background: var(--color-surface); }
+  .cite { color: var(--color-text-muted); font-size: 0.85em; }
+
+  /* SERVICE CARDS */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    margin-block: var(--space-3);
+  }
+  .card {
+    background: var(--cream);
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+    padding: var(--space-3);
+  }
+  .card h3 { margin-top: 0; }
+  .card p { margin-bottom: 0; }
+
+  /* LOOP */
+  .loop { padding-left: 1.2em; }
+  .loop li { margin-bottom: var(--space-1); }
+
+  /* CITED */
+  .cited { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-4); align-items: center; }
+  .cited img { border-radius: var(--radius); border: 3px solid var(--brown); box-shadow: 8px 8px 0 var(--rust); }
+
+  /* FINAL */
+  .final { text-align: center; }
+  .final .hero__ctas { justify-content: center; }
+  .final .badge { margin: 0 auto var(--space-2); }
+
+  @media (max-width: 760px) {
+    .hero__grid, .cards, .cited { grid-template-columns: 1fr; }
+    .hero__media { order: -1; }
+    .cited img { order: -1; }
+  }
 </style>

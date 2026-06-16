@@ -33,6 +33,14 @@ export const PERSON = {
   ],
 } as const;
 
+// Calls-to-action. TODO(Laura): confirm these.
+// - Calendly link (MCP token expired at build time — placeholder below).
+// - "Cited" newsletter subscribe URL (LinkedIn newsletter, or native later).
+export const CTA = {
+  calendly: 'https://calendly.com/lsxpartners', // TODO: confirm exact scheduling URL
+  newsletter: 'https://www.linkedin.com/newsletters/cited', // TODO: confirm Cited URL
+} as const;
+
 // Services — AI visibility + strategy only.
 export const SERVICES = [
   'AI Visibility Audit',

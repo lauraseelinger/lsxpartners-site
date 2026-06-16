@@ -1,31 +1,44 @@
-/* Design tokens — the ONLY place colors/type/spacing are defined.
-   Neutral placeholder theme. At A5, swap these values for LSX brand
-   (colors, fonts, radius) and the whole site re-themes with zero structural
-   change. Components/layouts must reference var(--token), never raw values. */
+/* LSX Partners brand tokens — the ONLY place brand values live.
+   Palette + type from the official brand kit (Rebrand/). Lead direction:
+   cream canvas + rust headlines + olive/amber accents (Laura's pick). */
 
 :root {
-  /* Color — neutral, accessible. Replace at A5. */
-  --color-bg: #ffffff;
-  --color-surface: #f7f7f5;
-  --color-text: #1a1a1a;
-  --color-text-muted: #595959;
-  --color-accent: #1f513f; /* placeholder deep green; swap for brand */
-  --color-accent-contrast: #ffffff;
-  --color-border: #e4e4e0;
+  /* ---- Brand palette (raw) ---- */
+  --cream: #fcf5e5;        /* primary light base */
+  --cream-deep: #faeccd;   /* panels / surfaces (7403 @ 40%) */
+  --rust: #b55434;         /* primary brand / headlines */
+  --olive: #8b8c4a;        /* accent */
+  --amber: #d39000;        /* accent / highlights */
+  --peach: #ffbe9f;        /* soft accent */
+  --blue: #a3bbc3;         /* soft accent (dusty) */
+  --brown: #483729;        /* text */
+  --forest: #21362c;       /* deep accent / dark sections */
 
-  /* Type */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
-  --font-body: var(--font-sans);
-  --font-heading: var(--font-sans);
+  /* ---- Semantic ---- */
+  --color-bg: var(--cream);
+  --color-surface: var(--cream-deep);
+  --color-text: var(--brown);
+  --color-text-muted: #7a6550;        /* muted brown */
+  --color-heading: var(--rust);
+  --color-accent: var(--rust);        /* links, primary buttons */
+  --color-accent-hover: var(--amber);
+  --color-accent-contrast: var(--cream);
+  --color-border: #e7d8b8;            /* soft tan rule */
+  --color-dark-bg: var(--forest);     /* inverted sections */
+  --color-dark-text: var(--cream);
+
+  /* ---- Type (brand fonts, self-hosted via Fontsource) ---- */
+  --font-heading: 'Literata Variable', ui-serif, Georgia, serif;   /* headlines */
+  --font-sub: 'Besley', ui-serif, Georgia, serif;                  /* italic lowercase subheads */
+  --font-body: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace; /* body */
 
   /* Fluid type scale */
-  --text-sm: 0.875rem;
-  --text-base: 1.0625rem;
-  --text-lg: 1.25rem;
-  --text-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
-  --text-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
-  --text-3xl: clamp(2.5rem, 1.8rem + 3vw, 4rem);
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-lg: 1.1875rem;
+  --text-xl: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem);
+  --text-2xl: clamp(1.9rem, 1.4rem + 2.2vw, 3rem);
+  --text-3xl: clamp(2.6rem, 1.8rem + 4vw, 4.75rem);
 
   /* Spacing + layout */
   --space-1: 0.5rem;
@@ -34,8 +47,8 @@
   --space-4: 2.5rem;
   --space-5: 4rem;
   --space-6: 6rem;
-  --content-width: 72ch;   /* readable prose measure */
-  --page-width: 1100px;    /* max page container */
-  --radius: 8px;
-  --line-height: 1.65;
+  --content-width: 68ch;
+  --page-width: 1120px;
+  --radius: 10px;
+  --line-height: 1.7;
 }

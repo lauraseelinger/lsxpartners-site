@@ -1,12 +1,14 @@
 ---
-import { SITE, NAV } from '../consts';
+import { SITE, NAV, CTA } from '../consts';
 const path = Astro.url.pathname;
 const isActive = (href: string) =>
   href === '/' ? path === '/' : path.startsWith(href);
 ---
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="/" class="site-header__brand">{SITE.name}</a>
+    <a href="/" class="site-header__brand" aria-label={`${SITE.name} home`}>
+      <img src="/brand/logo/horizontal-rust.svg" alt={SITE.name} height="34" />
+    </a>
     <nav aria-label="Primary">
       <ul>
         {
@@ -18,6 +20,7 @@ const isActive = (href: string) =>
             </li>
           ))
         }
+        <li><a class="button" href={CTA.calendly}>Book a call</a></li>
       </ul>
     </nav>
   </div>
@@ -27,6 +30,9 @@ const isActive = (href: string) =>
   .site-header {
     border-bottom: 1px solid var(--color-border);
     background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
   .site-header__inner {
     display: flex;
@@ -35,12 +41,8 @@ const isActive = (href: string) =>
     gap: var(--space-3);
     padding-block: var(--space-2);
   }
-  .site-header__brand {
-    font-weight: 700;
-    font-size: var(--text-lg);
-    text-decoration: none;
-    color: var(--color-text);
-  }
+  .site-header__brand { display: inline-flex; align-items: center; }
+  .site-header__brand img { display: block; }
   nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -55,5 +57,8 @@ const isActive = (href: string) =>
     font-weight: 500;
   }
   nav a[aria-current='page'] { color: var(--color-accent); }
-  nav a:hover { color: var(--color-text); }
+  nav a:not(.button):hover { color: var(--color-text); }
+  /* Keep the CTA button's own colors (scoped nav a would otherwise win) */
+  nav a.button { color: var(--cream); }
+  nav a.button:hover { color: var(--cream); }
 </style>
