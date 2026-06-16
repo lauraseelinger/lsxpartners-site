@@ -1,0 +1,41 @@
+/* Design tokens — the ONLY place colors/type/spacing are defined.
+   Neutral placeholder theme. At A5, swap these values for LSX brand
+   (colors, fonts, radius) and the whole site re-themes with zero structural
+   change. Components/layouts must reference var(--token), never raw values. */
+
+:root {
+  /* Color — neutral, accessible. Replace at A5. */
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f5;
+  --color-text: #1a1a1a;
+  --color-text-muted: #595959;
+  --color-accent: #1f513f; /* placeholder deep green; swap for brand */
+  --color-accent-contrast: #ffffff;
+  --color-border: #e4e4e0;
+
+  /* Type */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+
+  /* Fluid type scale */
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --text-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --text-3xl: clamp(2.5rem, 1.8rem + 3vw, 4rem);
+
+  /* Spacing + layout */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --content-width: 72ch;   /* readable prose measure */
+  --page-width: 1100px;    /* max page container */
+  --radius: 8px;
+  --line-height: 1.65;
+}

@@ -1,0 +1,30 @@
+---
+import Schema from './Schema.astro';
+import { definedTermSchema } from '../lib/schema';
+
+// "What is X?" definition block + matching DefinedTerm JSON-LD.
+// Use a descriptive H2 ("What is AI visibility?") above clean 50–100 words.
+interface Props {
+  term: string;
+  /** Plain-text definition mirrored into DefinedTerm schema (must match the
+      visible text — schema without matching on-page content is a known miss). */
+  definition: string;
+}
+const { term, definition } = Astro.props;
+---
+<div class="def-block">
+  <h2 class="def-block__term">What is {term}?</h2>
+  <p class="def-block__def">{definition}</p>
+</div>
+<Schema schemas={[definedTermSchema(term, definition)]} />
+
+<style>
+  .def-block {
+    background: var(--color-surface);
+    padding: var(--space-3);
+    border-radius: var(--radius);
+    margin-block: var(--space-3);
+  }
+  .def-block__term { margin-top: 0; }
+  .def-block__def { margin-bottom: 0; }
+</style>

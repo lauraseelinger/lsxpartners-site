@@ -1,0 +1,38 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import FAQ from '../components/FAQ.astro';
+import { serviceSchema } from '../lib/schema';
+
+// SERVICES — AI visibility + strategy ONLY (no fractional marketing).
+// Placeholder copy; final voice + offer detail in A4.
+const faqs = [
+  { question: 'What is an AI visibility audit?', answer: 'It maps where your brand shows up — and gets cited — across AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews, and diagnoses why.' },
+  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They overlap but are not the same — you can rank well and still be invisible in AI answers.' },
+  { question: 'Do you do the implementation?', answer: 'Engagements range from strategy to content activation. We will scope what you need on a call.' },
+];
+---
+<PageLayout
+  title="Services"
+  description="AI visibility audits and strategy: get your brand cited by AI engines, not just ranked on Google."
+  schemas={[serviceSchema()]}
+>
+  <p class="prose">
+    <!-- A4: Laura's voice. Structure + schema final. -->
+    LSX Partners is AI visibility &amp; strategy. The goal is simple: when
+    someone asks AI a question in your category, your brand is the answer it cites.
+  </p>
+
+  <h2>AI Visibility Audit</h2>
+  <p>Where you show up (and don't) across AI engines, and the reasons why.</p>
+
+  <h2>AI Visibility Strategy</h2>
+  <p>The plan to get cited — grounded in what your audience actually asks.</p>
+
+  <h2>Audience Intelligence</h2>
+  <p>The real language buyers use, mined from where they actually talk.</p>
+
+  <h2>Content Activation</h2>
+  <p>Content engineered to be extracted and quoted by AI.</p>
+
+  <FAQ items={faqs} />
+</PageLayout>

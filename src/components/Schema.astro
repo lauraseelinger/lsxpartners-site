@@ -1,0 +1,17 @@
+---
+// Renders one or more JSON-LD objects as <script type="application/ld+json">.
+// Pass an array of schema objects (from src/lib/schema.ts).
+interface Props {
+  schemas: Record<string, unknown>[];
+}
+const { schemas } = Astro.props;
+---
+{
+  schemas.map((s) => (
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(s)}
+    />
+  ))
+}

@@ -1,17 +1,51 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { serviceSchema } from '../lib/schema';
+import { SITE, PERSON } from '../consts';
 
+// HOME — personal-brand-forward, AI-visibility-only. Copy here is a STRUCTURED
+// PLACEHOLDER: real voice-checked copy lands in A4 (gated by A4-pre). Structure,
+// hierarchy, and schema are final.
 ---
+<BaseLayout
+  title={SITE.name}
+  description={SITE.description}
+  schemas={[serviceSchema()]}
+>
+  <section class="hero container">
+    <p class="hero__eyebrow">{SITE.tagline}</p>
+    <h1>Get cited by AI — not just ranked.</h1>
+    <p class="hero__lede prose">
+      {SITE.description}
+      <!-- A4: replace with Laura's voice (punchy-personal). -->
+    </p>
+    <p>
+      <a class="button" href="/contact">Work with {PERSON.givenName}</a>
+      <a href="/services" style="margin-left: var(--space-2)">See services →</a>
+    </p>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="container prose">
+    <h2>What I do</h2>
+    <ul>
+      <li><strong>AI Visibility Audit</strong> — where you show up (and don't) across AI engines, and why.</li>
+      <li><strong>AI Visibility Strategy</strong> — the plan to get cited, built on audience intelligence.</li>
+      <li><strong>Audience Intelligence</strong> — the real language buyers use, not keyword-tool guesses.</li>
+      <li><strong>Content Activation</strong> — content engineered to be quoted by AI.</li>
+    </ul>
+    <p><a href="/services">More on how this works →</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { padding-block: var(--space-5) var(--space-4); }
+  .hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+  }
+  .hero__lede { font-size: var(--text-lg); color: var(--color-text-muted); }
+</style>

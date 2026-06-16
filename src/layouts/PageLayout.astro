@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+// Standard content page (about, services, contact, etc.).
+interface Props {
+  title: string;
+  description: string;
+  /** Visible H1; defaults to title. */
+  heading?: string;
+  schemas?: Record<string, unknown>[];
+}
+const { title, description, heading, schemas } = Astro.props;
+---
+<BaseLayout title={title} description={description} schemas={schemas}>
+  <article class="container prose page">
+    <h1>{heading ?? title}</h1>
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  .page { padding-block: var(--space-4); }
+</style>

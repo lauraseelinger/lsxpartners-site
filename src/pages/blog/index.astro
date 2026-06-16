@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Blog index — lists current, listed posts only (unlisted legacy posts keep
+// their URLs but don't appear here). Newest first.
+const posts = (await getCollection('blog', ({ data }) => !data.draft && !data.unlisted))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Blog"
+  description="AI visibility, GEO, and AEO — how to get your brand cited by AI, written plainly."
+>
+  <div class="container prose blog-index">
+    <h1>Blog</h1>
+    <p>AI visibility, GEO &amp; AEO — written so you can actually use it.</p>
+    <ul class="post-list">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            <p>{post.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-index { padding-block: var(--space-4); }
+  .post-list { list-style: none; padding: 0; }
+  .post-list li {
+    padding-block: var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .post-list a { font-size: var(--text-lg); font-weight: 600; }
+  .post-list p { color: var(--color-text-muted); margin: var(--space-1) 0 0; }
+</style>

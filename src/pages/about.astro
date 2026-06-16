@@ -1,0 +1,21 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { PERSON } from '../consts';
+
+// ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
+// this page is its canonical home (rel=author points here). A4: Laura's voice.
+---
+<PageLayout
+  title={`About ${PERSON.name}`}
+  heading={PERSON.name}
+  description={PERSON.description}
+>
+  <p class="prose">
+    <!-- A4: replace with Laura's real bio in her voice (punchy-personal). -->
+    {PERSON.name}, {PERSON.credentials} — {PERSON.jobTitle} at LSX Partners.
+    {PERSON.description}
+  </p>
+  <p>
+    <a href={PERSON.sameAs[0]}>LinkedIn</a> · <a href="/contact">Get in touch</a>
+  </p>
+</PageLayout>

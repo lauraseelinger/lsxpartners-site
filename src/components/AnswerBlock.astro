@@ -1,0 +1,28 @@
+---
+// A self-contained 50–100 word answer block — the unit AI engines lift
+// verbatim. Front-load it near the top of pillar content. Keep it standalone:
+// it should make sense pulled out of context (ai-site-foundation.md step 2).
+interface Props {
+  question?: string;
+}
+const { question } = Astro.props;
+---
+<div class="answer-block">
+  {question && <p class="answer-block__q">{question}</p>}
+  <div class="answer-block__a"><slot /></div>
+</div>
+
+<style>
+  .answer-block {
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-surface);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius);
+    margin-block: var(--space-3);
+  }
+  .answer-block__q {
+    font-weight: 700;
+    margin: 0 0 var(--space-1);
+  }
+  .answer-block__a > :global(*:last-child) { margin-bottom: 0; }
+</style>

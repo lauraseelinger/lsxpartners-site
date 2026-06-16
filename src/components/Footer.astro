@@ -1,0 +1,42 @@
+---
+import { SITE, PERSON } from '../consts';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      <strong>{SITE.name}</strong> — {SITE.tagline}
+    </p>
+    <ul>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      {PERSON.sameAs[0] && <li><a href={PERSON.sameAs[0]}>LinkedIn</a></li>}
+    </ul>
+    <p class="site-footer__fine">
+      © {year} {SITE.name}. <a href="/privacy-policy">Privacy</a> ·
+      <a href="/terms-conditions">Terms</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+    margin-top: var(--space-6);
+    padding-block: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+  }
+  .site-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+    margin: var(--space-1) 0;
+  }
+  .site-footer__fine { margin-top: var(--space-2); }
+</style>

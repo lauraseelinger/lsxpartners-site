@@ -1,0 +1,17 @@
+# LSX Partners
+
+> AI visibility & strategy. LSX Partners helps brands get cited by AI — not just ranked. Founded and led by Laura Seelinger (MBA), AI visibility expert.
+
+LSX Partners runs AI visibility audits and builds the strategy to get brands surfaced and cited by AI engines (ChatGPT, Claude, Perplexity, Google AI Overviews). The work is grounded in audience intelligence — the real language buyers use — and turned into content engineered to be quoted by AI.
+
+## Core pages
+- [Services](https://lsxpartners.com/services): AI visibility audit, strategy, audience intelligence, content activation.
+- [About Laura Seelinger](https://lsxpartners.com/about): founder, AI visibility strategist.
+- [Speaking](https://lsxpartners.com/speaking): talks on AI visibility, GEO, AEO.
+- [Contact](https://lsxpartners.com/contact)
+
+## Blog
+- [Blog index](https://lsxpartners.com/blog): AI visibility, GEO, and AEO, written plainly.
+
+## Notes
+- Sitemap: https://lsxpartners.com/sitemap-index.xml

@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Schema from '../components/Schema.astro';
+import { organizationSchema, personSchema } from '../lib/schema';
+
+// The html shell every page uses. Organization + Person JSON-LD is emitted
+// site-wide here (the entity anchor), so every page reinforces the same
+// brand+person graph for AI crawlers.
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  /** Page-specific schema objects appended to the site-wide Org+Person. */
+  schemas?: Record<string, unknown>[];
+}
+const { title, description, image, type = 'website', schemas = [] } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} image={image} type={type} />
+    <Schema schemas={[organizationSchema(), personSchema(), ...schemas]} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { articleSchema } from '../lib/schema';
+import { PERSON } from '../consts';
+
+// Blog post template. Article/BlogPosting + (site-wide) Person+Org schema.
+// Author byline on every post — the verified-author signal AI uses for trust.
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  register?: 'punchy-personal' | 'measured-pillar';
+}
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+
+const article = articleSchema({
+  title,
+  description,
+  url,
+  image: heroImage,
+  datePublished: pubDate,
+  dateModified: updatedDate ?? pubDate,
+});
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title={title} description={description} type="article" schemas={[article]}>
+  <article class="container post">
+    <header class="post__header prose">
+      <h1>{title}</h1>
+      <p class="post__meta">
+        By <a href="/about" rel="author">{PERSON.name}</a>
+        · <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
+        {updatedDate && (
+          <> · Updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>
+        )}
+      </p>
+    </header>
+    {heroImage && <img class="post__hero" src={heroImage} alt="" />}
+    <div class="prose post__body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post { padding-block: var(--space-4); }
+  .post__meta { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .post__hero { border-radius: var(--radius); margin-block: var(--space-3); }
+  .post__body { margin-top: var(--space-3); }
+</style>

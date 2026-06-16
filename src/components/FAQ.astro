@@ -1,0 +1,38 @@
+---
+import Schema from './Schema.astro';
+import { faqSchema, type FaqItem } from '../lib/schema';
+
+// Renders a visible FAQ section AND the matching FAQPage JSON-LD from one
+// source — so schema and on-page content can never drift apart.
+interface Props {
+  items: FaqItem[];
+  heading?: string;
+}
+const { items, heading = 'Frequently asked questions' } = Astro.props;
+---
+<section class="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">{heading}</h2>
+  {
+    items.map((item) => (
+      <details class="faq__item">
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))
+  }
+</section>
+<Schema schemas={[faqSchema(items)]} />
+
+<style>
+  .faq { margin-block: var(--space-4); }
+  .faq__item {
+    border-bottom: 1px solid var(--color-border);
+    padding-block: var(--space-2);
+  }
+  .faq__item summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: var(--text-lg);
+  }
+  .faq__item p { margin: var(--space-1) 0 0; color: var(--color-text-muted); }
+</style>

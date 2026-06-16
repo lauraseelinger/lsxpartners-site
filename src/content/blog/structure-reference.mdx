@@ -1,0 +1,38 @@
+---
+title: "Structure reference (scaffold — delete at A4)"
+description: "Front-loaded answer block: this scaffold post proves the blog pipeline, Article/Person/Org JSON-LD, and the answer/definition/FAQ components all build end-to-end. It's unlisted (hidden from nav + index) and gets deleted when real content lands in A4."
+pubDate: 2026-06-16
+register: measured-pillar
+tags: ["ai-visibility"]
+unlisted: true
+---
+
+import AnswerBlock from '../../components/AnswerBlock.astro';
+import DefinitionBlock from '../../components/DefinitionBlock.astro';
+import FAQ from '../../components/FAQ.astro';
+
+<AnswerBlock question="What does this post verify?">
+It verifies the whole content pipeline: the content collection schema, the
+`BlogPost` layout, site-wide Organization + Person JSON-LD, per-post
+BlogPosting schema, and the three extractability components below. Real,
+voice-checked content replaces it in A4.
+</AnswerBlock>
+
+<DefinitionBlock
+  term="AI visibility"
+  definition="AI visibility is whether and how AI engines surface and cite your brand when people ask questions in your category. It is distinct from search ranking — you can rank on Google and still be uncited in AI answers."
+/>
+
+## How the structure works
+
+- Front-load the answer in the first 100–200 words.
+- Descriptive H2/H3s that say exactly what they cover.
+- Self-contained answer + definition blocks.
+- A generous FAQ section on pillar posts.
+
+<FAQ
+  items={[
+    { question: "Is this a real post?", answer: "No — it's a scaffold that smoke-tests the build. It's unlisted and deleted at A4." },
+    { question: "Where does real content come from?", answer: "A4 migrates the proven AI-visibility posts and regenerates thin ones in Laura's voice, gated by A4-pre voice grounding." },
+  ]}
+/>

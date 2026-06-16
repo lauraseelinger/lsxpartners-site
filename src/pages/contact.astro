@@ -1,0 +1,17 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { PERSON } from '../consts';
+
+// CONTACT — A4 wires the real form/Calendly. Email + LinkedIn placeholder.
+---
+<PageLayout
+  title="Contact"
+  description="Work with LSX Partners on AI visibility and strategy. Get in touch with Laura Seelinger."
+>
+  <p class="prose">Let's talk about getting your brand cited by AI.</p>
+  <ul>
+    <li>Email: <a href={`mailto:${PERSON.email}`}>{PERSON.email}</a></li>
+    <li>LinkedIn: <a href={PERSON.sameAs[0]}>{PERSON.name}</a></li>
+  </ul>
+  <!-- A4: embed scheduling link / contact form. -->
+</PageLayout>

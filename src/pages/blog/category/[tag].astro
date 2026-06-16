@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+// Tag/category pages at clean kebab-case URLs, e.g. /blog/category/ai-visibility
+// (the legacy /blog/category/AI+visibility 301s here — see redirect-map.md).
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft && !data.unlisted);
+  const tags = [...new Set(posts.flatMap((p) => p.data.tags))];
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts
+        .filter((p) => p.data.tags.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const label = tag.replace(/-/g, ' ');
+---
+<BaseLayout title={`${label} articles`} description={`LSX Partners articles tagged ${label}.`}>
+  <div class="container prose" style="padding-block: var(--space-4)">
+    <h1 style="text-transform: capitalize">{label}</h1>
+    <ul class="post-list" style="list-style:none;padding:0">
+      {
+        posts.map((post) => (
+          <li style="padding-block:var(--space-2);border-bottom:1px solid var(--color-border)">
+            <a href={`/blog/${post.id}`} style="font-weight:600">{post.data.title}</a>
+            <p style="color:var(--color-text-muted);margin:var(--space-1) 0 0">{post.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
