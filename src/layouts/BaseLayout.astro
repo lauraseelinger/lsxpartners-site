@@ -31,5 +31,25 @@ const { title, description, image, type = 'website', schemas = [] } = Astro.prop
       <slot />
     </main>
     <Footer />
+    <script>
+      // Scroll-reveal: add .in-view as [data-reveal] elements enter the viewport.
+      const els = document.querySelectorAll('[data-reveal]');
+      if (els.length && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+        );
+        els.forEach((el) => io.observe(el));
+      } else {
+        els.forEach((el) => el.classList.add('in-view'));
+      }
+    </script>
   </body>
 </html>
