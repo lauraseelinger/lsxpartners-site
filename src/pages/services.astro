@@ -2,13 +2,16 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import FAQ from '../components/FAQ.astro';
 import { serviceSchema } from '../lib/schema';
+import { CTA } from '../consts';
 
 // SERVICES — AI visibility + strategy ONLY (no fractional marketing).
-// Placeholder copy; final voice + offer detail in A4.
+// Voice: Full LinkedIn Laura.
 const faqs = [
-  { question: 'What is an AI visibility audit?', answer: 'It maps where your brand shows up — and gets cited — across AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews, and diagnoses why.' },
-  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They overlap but are not the same — you can rank well and still be invisible in AI answers.' },
-  { question: 'Do you do the implementation?', answer: 'Engagements range from strategy to content activation. We will scope what you need on a call.' },
+  { question: 'What is an AI visibility audit?', answer: 'It maps where your brand shows up — and gets cited — across AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews, and diagnoses why. Not a single "score," but what AI actually says about you and where the gaps are.' },
+  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They overlap and have to run in the same strategy — you can rank #1 on Google and still be invisible (or uncited) in AI answers.' },
+  { question: 'Is it too early to invest in this?', answer: 'No. Brands cited in AI Overviews already earn 35% more organic clicks and 91% more paid clicks than uncited brands on the same query (Seer Interactive, Sept 2025). And AI citations can shift far faster than SEO rankings — the ones you own today can be gone in six weeks.' },
+  { question: 'Do you do the implementation?', answer: 'Engagements range from a one-time audit to embedded strategy and content activation. I work directly with brands and as an embedded strategy partner inside agency teams. We scope what you need on a call.' },
+  { question: 'Who do you work with?', answer: 'Brands and agencies — including regulated industries like healthcare and MedTech, where I spent years and know the approval chain cold.' },
 ];
 ---
 <PageLayout
@@ -16,23 +19,55 @@ const faqs = [
   description="AI visibility audits and strategy: get your brand cited by AI engines, not just ranked on Google."
   schemas={[serviceSchema()]}
 >
+  <p class="subhead">ai visibility &amp; strategy</p>
   <p class="prose">
-    <!-- A4: Laura's voice. Structure + schema final. -->
-    LSX Partners is AI visibility &amp; strategy. The goal is simple: when
-    someone asks AI a question in your category, your brand is the answer it cites.
+    The goal is simple: when someone asks AI a question in your category, your
+    brand is the answer it gives — and the source it actually cites. Here's the
+    catch most people miss: being the answer and being the cited source are two
+    different things. I work on both.
   </p>
 
   <h2>AI Visibility Audit</h2>
-  <p>Where you show up (and don't) across AI engines, and the reasons why.</p>
+  <p class="prose">
+    Where you show up — and don't — across ChatGPT, Claude, Perplexity, and Google
+    AI, plus the real reason why. I run a manual prompt audit, check your site for
+    AI extractability, and map where your brand exists outside your own website
+    (because AI builds your identity from the ENTIRE internet, not your homepage).
+  </p>
 
   <h2>AI Visibility Strategy</h2>
-  <p>The plan to get cited — grounded in what your audience actually asks.</p>
+  <p class="prose">
+    The plan to get cited — built on what your audience actually asks, not a list
+    of prompts crowdsourced in a Teams thread. SEO + AEO + GEO in one strategy, not
+    three separate workstreams. We fix the existing content before chasing shiny
+    new pages.
+  </p>
 
   <h2>Audience Intelligence</h2>
-  <p>The real language buyers use, mined from where they actually talk.</p>
+  <p class="prose">
+    The real language buyers use, mined from where they talk when no one's watching.
+    The most important thing about your audience won't show up in a keyword tool —
+    and it's both your creative brief and your AI visibility strategy.
+  </p>
 
   <h2>Content Activation</h2>
-  <p>Content engineered to be extracted and quoted by AI.</p>
+  <p class="prose">
+    Content engineered to be extracted and quoted by AI — structured so the dice
+    are loaded in your favor. In regulated industries, that includes mapping the
+    approval chain so the work actually ships instead of dying in legal review.
+  </p>
+
+  <h2>The AI Intelligence Loop</h2>
+  <p class="prose">
+    It all runs as a loop: audience intelligence and brand-identity analysis as
+    parallel inputs → a strategy built for AI visibility → content activation →
+    monitoring that feeds right back into the intelligence. It compounds. That's
+    the point.
+  </p>
 
   <FAQ items={faqs} />
+
+  <p style="margin-top: var(--space-4)">
+    <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+  </p>
 </PageLayout>

@@ -1,20 +1,40 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { CTA } from '../consts';
 
-// SPEAKING — keep + upgrade. A4 adds Cincy AI Week + the talk list in voice.
+// SPEAKING. Voice: Full LinkedIn Laura. Talks are real (Cincy AI Week featured
+// speaker; Eastern Illinois University guest lecture; Atlanta audit talk).
 ---
 <PageLayout
   title="Speaking"
-  description="Laura Seelinger speaks on AI visibility, GEO, and AEO — talks and workshops for marketing teams and events."
+  description="Laura Seelinger speaks on AI visibility, GEO, and AEO — practical, no-fluff talks and workshops for marketing teams, agencies, and events."
 >
+  <p class="subhead">talks &amp; workshops</p>
   <p class="prose">
-    <!-- A4: real talk list + Cincy AI Week (featured speaker) in Laura's voice. -->
-    Laura speaks on AI visibility, GEO, and AEO — practical, no-fluff talks for
-    marketing teams and events.
+    Giving people something they can actually action — not theory they nod at and
+    forget by the parking lot — is the thing that lights me up. My pet peeve is
+    leaving a session fired up with no real plan, so I don't do that to a room. I
+    speak on AI visibility, GEO, and AEO: what AI actually thinks about your brand,
+    the gaps most brands don't know they have, and the difference between owning
+    the answer and owning the citation.
   </p>
+
   <h2>Recent</h2>
-  <ul>
-    <li>Cincy AI Week — Featured Speaker (AI visibility)</li>
+  <ul class="prose">
+    <li><strong>Cincy AI Week</strong> — Featured Speaker. What AI actually thinks about your brand, and what to do about it.</li>
+    <li><strong>Eastern Illinois University</strong> — guest lecture on AI visibility and modern marketing.</li>
+    <li>Plus workshops and audit walk-throughs for brand and agency teams.</li>
   </ul>
-  <p><a href="/contact">Invite Laura to speak →</a></p>
+
+  <h2>Topics I cover</h2>
+  <ul class="prose">
+    <li>How to audit your AI visibility, step by step</li>
+    <li>Why your AI visibility "score" isn't the whole story</li>
+    <li>The LinkedIn / newsletter pivot for getting cited by AI</li>
+    <li>The lo-fi / analog pendulum swing and what it means for marketers</li>
+  </ul>
+
+  <p style="margin-top: var(--space-3)">
+    <a class="button" href={CTA.calendly}>Invite me to speak</a>
+  </p>
 </PageLayout>

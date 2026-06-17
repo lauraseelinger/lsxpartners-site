@@ -1,21 +1,55 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { PERSON } from '../consts';
+import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
-// this page is its canonical home (rel=author points here). A4: Laura's voice.
+// this page is its canonical home (rel=author points here).
+// Voice: Full LinkedIn Laura. Backstory facts are real (Libbey, corporate
+// healthcare, 15+ yrs agency+corporate, MBA, Cincy speaker).
 ---
 <PageLayout
   title={`About ${PERSON.name}`}
-  heading={PERSON.name}
-  description={PERSON.description}
+  heading="Hi, I'm Laura."
+  description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI."
 >
+  <p class="subhead">ai visibility expert · founder, lsx partners</p>
+
   <p class="prose">
-    <!-- A4: replace with Laura's real bio in her voice (punchy-personal). -->
-    {PERSON.name}, {PERSON.credentials} — {PERSON.jobTitle} at LSX Partners.
-    {PERSON.description}
+    I'm the AI marketing nerd who actually looks forward to the monthly reporting.
+    I help brands and agencies get <strong>cited by AI</strong> — not just ranked
+    on Google. Because when someone asks ChatGPT, Claude, or Perplexity about your
+    category, the brand it names (and the source it credits) is the new front page.
+    Most companies have no idea what AI is saying about them. That's the gap I live in.
   </p>
+
+  <p class="prose">
+    I've spent 15+ years across agency and corporate marketing. Four of them were
+    at Libbey, the glassware company in Toledo — I genuinely loved the products and
+    the people (I even wrote some of the Amazon copy I now roast in my case studies).
+    Most of my family works in healthcare, my husband included, so I spent years
+    deep in the world of regulated marketing where the simplest copy change needs
+    sign-off from medical, legal, compliance, and brand. That background is exactly
+    why I'm useful now: AI visibility isn't just a content problem, it's an
+    operations problem, and I've lived both sides.
+  </p>
+
+  <p class="prose">
+    I don't half-a** things. I test the tools myself — I've swapped my toolkit more
+    than once in six months because this space moves that fast — and I run my
+    process on real products and real client work before I ever recommend it. My
+    clients benefit from learnings months before they'd hit the standard agency
+    cycle, because I'm in this every single day.
+  </p>
+
+  <p class="prose">
+    When I'm not running audits on a Friday afternoon for fun, I'm probably writing
+    my newsletter (Cited), speaking at events like Cincy AI Week, hanging out with
+    my cats, or asking Claude how to start a fire in a wood stove. I'm 100% myself
+    here — em dashes and all.
+  </p>
+
   <p>
-    <a href={PERSON.sameAs[0]}>LinkedIn</a> · <a href="/contact">Get in touch</a>
+    <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+    <a class="button button--ghost" href={PERSON.sameAs[0]} style="margin-left: var(--space-1)">Find me on LinkedIn</a>
   </p>
 </PageLayout>

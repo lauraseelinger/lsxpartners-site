@@ -1,17 +1,28 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { PERSON } from '../consts';
+import { PERSON, CTA } from '../consts';
 
-// CONTACT — A4 wires the real form/Calendly. Email + LinkedIn placeholder.
+// CONTACT. Voice: Full LinkedIn Laura. Primary = Calendly; also email + LinkedIn.
 ---
 <PageLayout
   title="Contact"
-  description="Work with LSX Partners on AI visibility and strategy. Get in touch with Laura Seelinger."
+  description="Work with LSX Partners on AI visibility and strategy. Book a call with Laura Seelinger."
 >
-  <p class="prose">Let's talk about getting your brand cited by AI.</p>
-  <ul>
+  <p class="subhead">let's talk</p>
+  <p class="prose">
+    Want to know what AI is actually saying about your brand — and how to become
+    the source it cites? The fastest way is to grab 20 minutes on my calendar. No
+    pitch deck, no fluff.
+  </p>
+
+  <p>
+    <a class="button" href={CTA.calendly}>Book a call</a>
+    <a class="button button--ghost" href={CTA.newsletter} style="margin-left: var(--space-1)">Subscribe to Cited</a>
+  </p>
+
+  <h2>Other ways to reach me</h2>
+  <ul class="prose">
     <li>Email: <a href={`mailto:${PERSON.email}`}>{PERSON.email}</a></li>
     <li>LinkedIn: <a href={PERSON.sameAs[0]}>{PERSON.name}</a></li>
   </ul>
-  <!-- A4: embed scheduling link / contact form. -->
 </PageLayout>
