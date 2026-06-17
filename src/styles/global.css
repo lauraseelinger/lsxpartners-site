@@ -102,10 +102,49 @@ strong { font-weight: 600; }
 }
 .button--ghost:hover { background: var(--color-accent); color: var(--cream); }
 
-/* Inverted (forest) section */
-.section--dark {
-  background: var(--color-dark-bg);
-  color: var(--color-dark-text);
+/* ---- Section color blocks ----
+   Alternate full-width bands down a page for rhythm + contrast.
+   Pattern: <section class="band section--forest"><div class="container">…</div></section> */
+.section--cream      { background: var(--cream); }
+.section--cream-deep { background: var(--cream-deep); }
+.section--peach      { background: var(--peach); color: var(--brown); }
+.section--blue       { background: var(--blue); color: var(--brown); }
+.section--olive      { background: var(--olive); color: var(--cream); }
+.section--rust       { background: var(--rust); color: var(--cream); }
+.section--forest     { background: var(--forest); color: var(--cream); }
+.section--dark       { background: var(--forest); color: var(--cream); } /* alias */
+
+/* Light text on dark blocks */
+.section--olive, .section--rust, .section--forest { --on-dark: 1; }
+.section--olive :is(h1,h2,h3),
+.section--rust  :is(h1,h2,h3),
+.section--forest :is(h1,h2,h3) { color: var(--cream); }
+.section--olive .subhead,
+.section--rust  .subhead,
+.section--forest .subhead { color: var(--cream); opacity: 0.85; }
+.section--olive a:not(.button),
+.section--rust  a:not(.button),
+.section--forest a:not(.button) { color: var(--cream); text-decoration: underline; }
+.section--olive .cite, .section--rust .cite, .section--forest .cite { color: var(--cream); opacity: 0.8; }
+
+/* Headings on warm-light blocks stay on-brand */
+.section--peach :is(h2,h3), .section--blue :is(h2,h3) { color: var(--rust); }
+.section--peach .subhead, .section--blue .subhead { color: var(--brown); }
+
+/* Buttons invert on dark blocks so they pop */
+.section--olive .button:not(.button--ghost),
+.section--rust  .button:not(.button--ghost),
+.section--forest .button:not(.button--ghost) {
+  background: var(--cream); color: var(--brown); border-color: var(--cream);
 }
-.section--dark h1, .section--dark h2, .section--dark h3 { color: var(--peach); }
-.section--dark a { color: var(--peach); }
+.section--olive .button:not(.button--ghost):hover,
+.section--rust  .button:not(.button--ghost):hover,
+.section--forest .button:not(.button--ghost):hover {
+  background: var(--amber); border-color: var(--amber); color: var(--brown);
+}
+.section--olive .button--ghost,
+.section--rust  .button--ghost,
+.section--forest .button--ghost { color: var(--cream); border-color: var(--cream); }
+.section--olive .button--ghost:hover,
+.section--rust  .button--ghost:hover,
+.section--forest .button--ghost:hover { background: var(--cream); color: var(--brown); }

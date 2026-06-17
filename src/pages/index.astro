@@ -3,13 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { serviceSchema } from '../lib/schema';
 import { SITE, PERSON, CTA } from '../consts';
 
-// HOME — brand-applied styled sample for Laura to react to.
-// Voice: "Full LinkedIn Laura." Copy is net-new and voice-grounded
-// (laura-public-voice). Stats are ONLY her own published, sourced figures.
+// HOME — alternating full-width color blocks (forest/olive/rust/peach) for
+// rhythm + contrast. Voice: Full LinkedIn Laura. Stats are her own sourced figures.
 ---
 <BaseLayout title={SITE.name} description={SITE.description} schemas={[serviceSchema()]}>
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO (cream) -->
+  <section class="hero section--cream">
     <div class="container hero__grid">
       <div class="hero__copy">
         <p class="subhead">ai changed how people find answers</p>
@@ -33,31 +32,30 @@ import { SITE, PERSON, CTA } from '../consts';
     </div>
   </section>
 
-  <!-- PATTERN DIVIDER (tasteful craft touch) -->
-  <div class="pattern-strip" role="presentation"></div>
-
-  <!-- THE PROBLEM -->
-  <section class="container band prose">
-    <p class="subhead">here's the uncomfortable part</p>
-    <h2>AI doesn't build your brand from your website</h2>
-    <p>
-      It builds it from the ENTIRE internet — reviews, forums, Reddit threads,
-      comparison pages, stuff you didn't write, approve, or even know existed.
-      That's the identity it hands to a buyer. And most of the time the brand
-      isn't even the source getting credit.
-    </p>
-    <p>
-      About <strong>85% of brand mentions in AI answers come from third-party
-      pages</strong>, not brand-owned domains. Meanwhile brands cited in AI
-      Overviews are already earning <strong>35% more organic clicks and 91% more
-      paid clicks</strong> than the uncited brands on the same query
-      <span class="cite">(Seer Interactive, Sept 2025)</span>. You can rank #1 on
-      Google and still be invisible in the answer. Different game, different work.
-    </p>
+  <!-- THE PROBLEM (forest — the uncomfortable truth, high impact) -->
+  <section class="band section--forest">
+    <div class="container prose">
+      <p class="subhead">here's the uncomfortable part</p>
+      <h2>AI doesn't build your brand from your website</h2>
+      <p>
+        It builds it from the ENTIRE internet — reviews, forums, Reddit threads,
+        comparison pages, stuff you didn't write, approve, or even know existed.
+        That's the identity it hands to a buyer. And most of the time the brand
+        isn't even the source getting credit.
+      </p>
+      <p>
+        About <strong>85% of brand mentions in AI answers come from third-party
+        pages</strong>, not brand-owned domains. Meanwhile brands cited in AI
+        Overviews are already earning <strong>35% more organic clicks and 91% more
+        paid clicks</strong> than the uncited brands on the same query
+        <span class="cite">(Seer Interactive, Sept 2025)</span>. You can rank #1 on
+        Google and still be invisible in the answer. Different game, different work.
+      </p>
+    </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="band band--surface">
+  <!-- SERVICES (olive) -->
+  <section class="band section--olive">
     <div class="container">
       <p class="subhead">what i actually do</p>
       <h2>AI visibility &amp; strategy</h2>
@@ -79,33 +77,35 @@ import { SITE, PERSON, CTA } from '../consts';
           <p>Content engineered to be extracted and quoted by AI — structured so the dice are loaded in your favor.</p>
         </div>
       </div>
-      <p><a href="/services">See how it works →</a></p>
+      <p><a class="button button--ghost" href="/services">See how it works</a></p>
     </div>
   </section>
 
-  <!-- THE LOOP -->
-  <section class="container band prose">
-    <p class="subhead">the framework</p>
-    <h2>The AI Intelligence Loop</h2>
-    <p>
-      Most agencies skip straight to producing content and hope it lands.
-      I run a loop instead: audience intelligence and brand-identity analysis
-      as <em>parallel</em> inputs, feeding a strategy built for AI visibility,
-      that feeds monitoring, that feeds right back into the intelligence. It
-      compounds. That's the whole point.
-    </p>
-    <ol class="loop">
-      <li><strong>Audience intelligence</strong> — what your buyers actually say and ask.</li>
-      <li><strong>Strategic translation</strong> — turn that into a plan AI can read.</li>
-      <li><strong>Content activation</strong> — publish what gets extracted and cited.</li>
-      <li><strong>Monitoring</strong> — watch what AI says, and feed it back in.</li>
-    </ol>
+  <!-- THE LOOP (cream-deep) -->
+  <section class="band section--cream-deep">
+    <div class="container prose">
+      <p class="subhead">the framework</p>
+      <h2>The AI Intelligence Loop</h2>
+      <p>
+        Most agencies skip straight to producing content and hope it lands.
+        I run a loop instead: audience intelligence and brand-identity analysis
+        as <em>parallel</em> inputs, feeding a strategy built for AI visibility,
+        that feeds monitoring, that feeds right back into the intelligence. It
+        compounds. That's the whole point.
+      </p>
+      <ol class="loop">
+        <li><strong>Audience intelligence</strong> — what your buyers actually say and ask.</li>
+        <li><strong>Strategic translation</strong> — turn that into a plan AI can read.</li>
+        <li><strong>Content activation</strong> — publish what gets extracted and cited.</li>
+        <li><strong>Monitoring</strong> — watch what AI says, and feed it back in.</li>
+      </ol>
+    </div>
   </section>
 
-  <!-- ANSWER VS CITATION (dark band) -->
-  <section class="band section--dark">
+  <!-- ANSWER VS CITATION (rust) -->
+  <section class="band section--rust">
     <div class="container prose">
-      <p class="subhead" style="color: var(--peach)">the distinction nobody makes</p>
+      <p class="subhead">the distinction nobody makes</p>
       <h2>Being the answer and being the cited source are two different things</h2>
       <p>
         I've had clients AI knew cold — name them in any category prompt — but
@@ -119,8 +119,8 @@ import { SITE, PERSON, CTA } from '../consts';
     </div>
   </section>
 
-  <!-- CITED NEWSLETTER -->
-  <section class="band band--surface">
+  <!-- CITED NEWSLETTER (peach) -->
+  <section class="band section--peach">
     <div class="container cited">
       <div>
         <p class="subhead">my newsletter</p>
@@ -136,22 +136,24 @@ import { SITE, PERSON, CTA } from '../consts';
     </div>
   </section>
 
-  <!-- SOCIAL PROOF + FINAL CTA -->
-  <section class="container band prose final">
-    <img class="badge" src="/brand/logo/badge-green.svg" alt="" aria-hidden="true" width="84" height="84" />
-    <p class="subhead">featured speaker · cincy ai week</p>
-    <h2>Want your brand cited by AI by Q3?</h2>
-    <p>That's the work. Let's talk about it.</p>
-    <div class="hero__ctas">
-      <a class="button" href={CTA.calendly}>Book a call</a>
-      <a class="button button--ghost" href="/blog">Read the blog</a>
+  <!-- SOCIAL PROOF + FINAL CTA (forest) -->
+  <section class="band section--forest">
+    <div class="container prose final">
+      <img class="badge" src="/brand/logo/badge-green.svg" alt="" aria-hidden="true" width="84" height="84" />
+      <p class="subhead">featured speaker · cincy ai week</p>
+      <h2>Want your brand cited by AI by Q3?</h2>
+      <p>That's the work. Let's talk about it.</p>
+      <div class="hero__ctas">
+        <a class="button" href={CTA.calendly}>Book a call</a>
+        <a class="button button--ghost" href="/blog">Read the blog</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
   /* HERO */
-  .hero { padding-block: var(--space-5) var(--space-4); }
+  .hero { padding-block: var(--space-5) var(--space-5); }
   .hero__grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -165,25 +167,17 @@ import { SITE, PERSON, CTA } from '../consts';
   .hero__media > img {
     width: 100%; border-radius: var(--radius);
     border: 3px solid var(--brown);
-    box-shadow: 10px 10px 0 var(--olive);
+    box-shadow: 12px 12px 0 var(--olive);
   }
   .hero__sticker {
     position: absolute; bottom: -28px; left: -28px;
     width: 132px; height: auto; rotate: -8deg;
   }
 
-  /* PATTERN STRIP */
-  .pattern-strip {
-    height: 46px;
-    background: url('/brand/patterns/pattern-peach.jpg') repeat-x center / auto 46px;
-    border-block: 1px solid var(--color-border);
-  }
-
   .band { padding-block: var(--space-5); }
-  .band--surface { background: var(--color-surface); }
-  .cite { color: var(--color-text-muted); font-size: 0.85em; }
+  .cite { font-size: 0.85em; }
 
-  /* SERVICE CARDS */
+  /* SERVICE CARDS (sit on the olive band → must set their own text color) */
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -192,23 +186,25 @@ import { SITE, PERSON, CTA } from '../consts';
   }
   .card {
     background: var(--cream);
+    color: var(--brown);
     border: 2px solid var(--brown);
     border-radius: var(--radius);
     padding: var(--space-3);
+    box-shadow: 6px 6px 0 var(--forest);
   }
-  .card h3 { margin-top: 0; }
-  .card p { margin-bottom: 0; }
+  .card h3 { margin-top: 0; color: var(--rust); }
+  .card p { margin-bottom: 0; color: var(--brown); }
 
   /* LOOP */
   .loop { padding-left: 1.2em; }
   .loop li { margin-bottom: var(--space-1); }
 
   /* CITED */
-  .cited { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-4); align-items: center; }
-  .cited img { border-radius: var(--radius); border: 3px solid var(--brown); box-shadow: 8px 8px 0 var(--rust); }
+  .cited { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4); align-items: center; }
+  .cited img { border-radius: var(--radius); border: 3px solid var(--brown); box-shadow: 10px 10px 0 var(--rust); }
 
   /* FINAL */
-  .final { text-align: center; }
+  .final { text-align: center; max-width: none; }
   .final .hero__ctas { justify-content: center; }
   .final .badge { margin: 0 auto var(--space-2); }
 
