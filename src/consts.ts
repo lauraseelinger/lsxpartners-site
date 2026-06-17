@@ -37,7 +37,8 @@ export const PERSON = {
 // - Calendly link (MCP token expired at build time — placeholder below).
 // - "Cited" newsletter subscribe URL (LinkedIn newsletter, or native later).
 export const CTA = {
-  calendly: 'https://calendly.com/lsxpartners', // TODO: confirm exact scheduling URL
+  // "Let's talk AI visibility" — 20 min / Zoom (created via API 2026-06-17).
+  calendly: 'https://calendly.com/lsxpartners/let-s-talk-ai-visibility',
   newsletter: 'https://www.linkedin.com/newsletters/cited', // TODO: confirm Cited URL
 } as const;
 
