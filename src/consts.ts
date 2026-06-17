@@ -39,7 +39,8 @@ export const PERSON = {
 export const CTA = {
   // "Let's talk AI visibility" — 20 min / Zoom (created via API 2026-06-17).
   calendly: 'https://calendly.com/lsxpartners/let-s-talk-ai-visibility',
-  newsletter: 'https://www.linkedin.com/newsletters/cited', // TODO: confirm Cited URL
+  // "Cited" LinkedIn newsletter follow link.
+  newsletter: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7436449821441368064',
 } as const;
 
 // Services — AI visibility + strategy only.
