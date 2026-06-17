@@ -72,6 +72,20 @@ strong { font-weight: 600; }
 .prose > * + * { margin-top: var(--space-2); }
 .prose h2, .prose h3 { margin-top: var(--space-3); }
 
+/* Brand image treatment — soft, dimensional (not flat/outlined) */
+.brand-img {
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+}
+.img-right {
+  float: right;
+  width: min(340px, 42%);
+  margin: 0 0 var(--space-3) var(--space-3);
+}
+@media (max-width: 640px) {
+  .img-right { float: none; width: 100%; margin: var(--space-2) 0; }
+}
+
 /* Skip link */
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus {
@@ -114,11 +128,82 @@ strong { font-weight: 600; }
                 transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
   }
+  [data-reveal='left']  { transform: translateX(-44px); }
+  [data-reveal='right'] { transform: translateX(44px); }
+  [data-reveal='scale'] { transform: scale(0.93); }
   [data-reveal].in-view { opacity: 1; transform: none; }
   [data-reveal][data-reveal-delay='1'] { transition-delay: 0.09s; }
   [data-reveal][data-reveal-delay='2'] { transition-delay: 0.18s; }
   [data-reveal][data-reveal-delay='3'] { transition-delay: 0.27s; }
   [data-reveal][data-reveal-delay='4'] { transition-delay: 0.36s; }
+}
+
+/* ---- Marquee (continuous horizontal scroll) ---- */
+.marquee { overflow: hidden; white-space: nowrap; }
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  will-change: transform;
+  animation: marquee 30s linear infinite;
+}
+.marquee__track span {
+  font-family: var(--font-sub);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: var(--text-xl);
+}
+.marquee__dot { font-style: normal; opacity: 0.6; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
+
+/* ---- Textured section backgrounds (brand patterns) ---- */
+.tex-cream { background: var(--cream) url('/brand/patterns/pattern-3.jpg') center / 360px repeat; }
+.tex-olive { background: var(--olive) url('/brand/patterns/pattern-4.jpg') center / 360px repeat; }
+
+/* ---- Big-number stat block ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+.stat__num {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 2rem + 5vw, 6rem);
+  line-height: 0.95;
+  color: var(--peach);
+}
+.stat__label { margin-top: var(--space-1); font-size: var(--text-sm); opacity: 0.9; }
+@media (max-width: 680px) { .stat-grid { grid-template-columns: 1fr; gap: var(--space-3); text-align: center; } }
+
+/* ---- Step progression ---- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  counter-reset: step;
+}
+.step { position: relative; }
+.step__n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  background: var(--rust); color: var(--cream);
+  font-family: var(--font-heading); font-size: var(--text-lg);
+  margin-bottom: var(--space-1);
+}
+.step h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }
+.step p { font-size: var(--text-sm); margin: 0; }
+@media (max-width: 680px) { .steps { grid-template-columns: 1fr 1fr; } }
+
+/* ---- Pull-quote ---- */
+.pullquote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 1.2rem + 2.2vw, 2.8rem);
+  line-height: 1.18;
+  max-width: 20ch;
 }
 
 /* ---- Section color blocks ----

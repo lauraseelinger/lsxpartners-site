@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import FAQ from '../components/FAQ.astro';
+import FramedPhoto from '../components/FramedPhoto.astro';
 import { serviceSchema } from '../lib/schema';
 import { CTA } from '../consts';
 
@@ -20,6 +21,7 @@ const faqs = [
   schemas={[serviceSchema()]}
 >
   <p class="subhead">ai visibility &amp; strategy</p>
+  <FramedPhoto class="img-right" src="/images/laura-laptop-site.jpg" alt="Laura reviewing a website" shape="square" reveal />
   <p class="prose">
     The goal is simple: when someone asks AI a question in your category, your
     brand is the answer it gives — and the source it actually cites. Here's the

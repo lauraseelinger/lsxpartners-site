@@ -1,0 +1,50 @@
+---
+// Photo with a scalloped brand frame edge (from the kit's "Frames" set),
+// applied as a CSS mask + soft drop-shadow. On-brand, dimensional (not flat).
+interface Props {
+  src: string;
+  alt: string;
+  shape?: 'oval' | 'rect' | 'circle' | 'square';
+  reveal?: boolean;
+  delay?: '1' | '2' | '3';
+  class?: string;
+}
+const { src, alt, shape = 'oval', reveal = false, delay, class: cls = '' } = Astro.props;
+const ratios: Record<string, string> = {
+  oval: '624 / 770',
+  rect: '645 / 957',
+  circle: '1 / 1',
+  square: '1 / 1',
+};
+---
+<figure
+  class:list={['framed', `framed--${shape}`, cls]}
+  style={`--ratio:${ratios[shape]}`}
+  data-reveal={reveal ? '' : undefined}
+  data-reveal-delay={delay}
+>
+  <img src={src} alt={alt} loading="lazy" />
+</figure>
+
+<style>
+  .framed {
+    margin: 0;
+    filter: drop-shadow(0 16px 24px rgba(72, 55, 41, 0.26));
+  }
+  .framed img {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    object-fit: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+  .framed--oval img   { -webkit-mask-image: url('/brand/frames/oval.svg');   mask-image: url('/brand/frames/oval.svg'); }
+  .framed--rect img   { -webkit-mask-image: url('/brand/frames/rect.svg');   mask-image: url('/brand/frames/rect.svg'); }
+  .framed--circle img { -webkit-mask-image: url('/brand/frames/circle.svg'); mask-image: url('/brand/frames/circle.svg'); }
+  .framed--square img { -webkit-mask-image: url('/brand/frames/square.svg'); mask-image: url('/brand/frames/square.svg'); }
+</style>

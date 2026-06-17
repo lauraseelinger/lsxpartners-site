@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import FramedPhoto from '../components/FramedPhoto.astro';
 import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
@@ -13,6 +14,8 @@ import { PERSON, CTA } from '../consts';
   description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI."
 >
   <p class="subhead">ai visibility expert · founder, lsx partners</p>
+
+  <FramedPhoto class="img-right" src="/images/laura-kitchen.jpg" alt="Laura Seelinger" shape="oval" reveal />
 
   <p class="prose">
     I'm the AI marketing nerd who actually looks forward to the monthly reporting.

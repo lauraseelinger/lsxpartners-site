@@ -50,6 +50,38 @@ const { title, description, image, type = 'website', schemas = [] } = Astro.prop
       } else {
         els.forEach((el) => el.classList.add('in-view'));
       }
+
+      // Count-up: animate [data-count] numbers (0 → target) when they enter view.
+      const nums = document.querySelectorAll<HTMLElement>('[data-count]');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const runCount = (el: HTMLElement) => {
+        const target = parseFloat(el.getAttribute('data-count') || '0');
+        const suffix = el.getAttribute('data-suffix') || '';
+        if (reduce) { el.textContent = target + suffix; return; }
+        const dur = 1400;
+        let start = 0;
+        const step = (ts: number) => {
+          if (!start) start = ts;
+          const p = Math.min((ts - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      };
+      if (nums.length && 'IntersectionObserver' in window) {
+        const co = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) { runCount(entry.target as HTMLElement); co.unobserve(entry.target); }
+            }
+          },
+          { threshold: 0.5 }
+        );
+        nums.forEach((el) => co.observe(el));
+      } else {
+        nums.forEach((el) => runCount(el));
+      }
     </script>
   </body>
 </html>

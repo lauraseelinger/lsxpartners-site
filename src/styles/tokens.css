@@ -51,4 +51,8 @@
   --page-width: 1120px;
   --radius: 10px;
   --line-height: 1.7;
+
+  /* Soft, layered shadows (not flat offset blocks) */
+  --shadow-soft: 0 10px 25px -10px rgba(72, 55, 41, 0.35), 0 4px 10px -6px rgba(72, 55, 41, 0.2);
+  --shadow-card: 0 6px 18px -8px rgba(72, 55, 41, 0.28);
 }
