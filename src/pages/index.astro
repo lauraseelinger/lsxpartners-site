@@ -196,7 +196,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   .hero__lede { font-size: var(--text-lg); max-width: 44ch; margin-bottom: var(--space-3); }
 
   /* photo + sticker cluster */
-  .hero__cluster { position: relative; width: min(440px, 100%); aspect-ratio: 1 / 1; margin-inline: auto; }
+  .hero__cluster { position: relative; width: min(430px, 100%); aspect-ratio: 4 / 5; margin-inline: auto; }
   .hc__pattern { position: absolute; border-radius: 22px; box-shadow: var(--shadow-card); }
   /* back layer — blue checker, peeking opposite corner */
   .hc__pattern--back {
@@ -209,10 +209,10 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
     background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 220px repeat, var(--peach);
   }
   .hc__photo {
-    position: absolute; inset: 6% 9% 6% 7%; width: auto; height: 88%; z-index: 2;
+    position: absolute; inset: 3% 9% 0 7%; width: auto; height: 97%; z-index: 2;
     object-fit: cover; border-radius: 18px;
-    -webkit-mask-image: radial-gradient(125% 120% at 50% 44%, #000 74%, transparent 100%);
-    mask-image: radial-gradient(125% 120% at 50% 44%, #000 74%, transparent 100%);
+    -webkit-mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
+    mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
   }
   .hc__stk { position: absolute; height: auto; z-index: 3; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); will-change: transform; }
   /* locally-sourced pile, top-left — overlapping, varied size + color */
