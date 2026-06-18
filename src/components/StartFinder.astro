@@ -32,6 +32,10 @@ const RECS = {
   invisible_brand: { slug: 'ai-visibility-intensive', name: 'The AI Visibility Intensive', why: 'You’re a known name that needs to move now.', bullets: ['Whether you own the answer, the citation, or neither', 'Which departments need aligning to actually move', 'The fastest path from invisible to cited'] },
   invisible_agency: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'You need the AI visibility lane covered for clients.', bullets: ['Where the client is absent vs their competitors', 'How to offer AI visibility without staffing for it', 'What you can run vs where you want backup'] },
   invisible_founder: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'Start with the truth, then focus on what matters at your size.', bullets: ['What AI says about you today, with receipts', 'The handful of moves that matter most now', 'Where to focus first so it isn’t overwhelming'] },
+  // Agency variants — fully client-worded
+  where_agency: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'See exactly where your client stands before you scope the work.', bullets: ['What AI says about the client across the major platforms', 'Which third-party sources it cites instead of them', 'The gap between their messaging and how buyers talk'] },
+  rebuild_agency: { slug: 'ai-visibility-blueprint', name: 'AI Visibility Blueprint', why: 'The cheapest time to get a client’s site right is the rebuild.', bullets: ['What each page type needs to answer for their buyers', 'Where the openings are in the new structure', 'How to hand devs a citation-ready spec'] },
+  ongoing_agency: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'I become the AI-visibility lane you don’t have to staff.', bullets: ['Which conversations to monitor in the client’s category', 'What to publish so their visibility compounds', 'Fully white-label — your client never sees me'] },
 };
 ---
 <div class="finder" data-calendly={CTA.calendly}>
@@ -101,8 +105,8 @@ const RECS = {
 
     const showResult = () => {
       if (!state.org || !state.goal) return;
-      const key = state.goal === 'invisible' ? `invisible_${state.org}` : state.goal;
-      const rec = RECS[key] || RECS.where;
+      // Prefer an org-specific variant (e.g. rebuild_agency), else the generic.
+      const rec = RECS[`${state.goal}_${state.org}`] || RECS[state.goal] || RECS.where;
       finder.querySelector('[data-rec="name"]').textContent = rec.name;
       finder.querySelector('[data-rec="why"]').textContent = rec.why;
       const ul = finder.querySelector('[data-rec="bullets"]');

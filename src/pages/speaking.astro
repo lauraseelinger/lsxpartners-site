@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HoverReveal from '../components/HoverReveal.astro';
 import FramedPhoto from '../components/FramedPhoto.astro';
 import StitchDivider from '../components/StitchDivider.astro';
+import { eventSchema } from '../lib/schema';
 import { CTA } from '../consts';
 
 // SPEAKING — image-forward, color-blocked, with the hover-reveal pattern for
@@ -14,16 +15,50 @@ const topics = [
   { title: 'The lo-fi / analog pendulum', blurb: 'Why the swing back to real, human, un-AI’d content is a strategic opening for brands paying attention — and how to use it without looking like everyone else.' },
   { title: 'Auditing your own AI visibility', blurb: 'The step-by-step process I run for clients, walked through so your team leaves with a plan they can start Monday, not a notebook of inspiration.' },
 ];
-const recent = [
-  { ev: 'Cincy AI Week', role: 'Featured Speaker' },
-  { ev: 'Bowling Green State University', role: 'Guest lecture' },
-  { ev: 'Eastern Illinois University', role: 'Guest lecture' },
-  { ev: 'Brand & agency teams', role: 'Private workshops' },
+const talks = [
+  {
+    title: 'AI Visibility Audit: What AI Thinks About Your Brand & What to Do About It',
+    event: 'Cincy AI Week',
+    track: 'AI for Marketing, Sales & Operations',
+    dateDisplay: 'Wednesday, June 10, 2026 · 2:30–3:00 PM',
+    startISO: '2026-06-10T14:30:00-04:00',
+    endISO: '2026-06-10T15:00:00-04:00',
+    venue: 'Union Hall (Beer Hall)',
+    city: 'Cincinnati, OH',
+    description: 'A live look at what AI engines actually say about a brand — the audit process, the gaps most brands don’t know they have, and the difference between owning the answer and owning the citation.',
+    url: '',
+  },
+  {
+    title: 'How AI Is Rewriting Search and What It Means for Your Brand',
+    event: '',
+    track: 'AI in Action',
+    dateDisplay: 'Tuesday, April 21, 2026 · 1:30–2:00 PM',
+    startISO: '2026-04-21T13:30:00-04:00',
+    endISO: '2026-04-21T14:00:00-04:00',
+    venue: 'Roam Forum (Stage 5)',
+    city: '',
+    description: 'Google isn’t the only gatekeeper anymore. AI-powered search, answer engines, and conversational interfaces are rewriting how brands get discovered. This workshop equips marketing and digital teams with the strategies to maintain — and grow — brand visibility in the AI search era.',
+    url: '',
+  },
+  {
+    title: 'Sales Is Love Conference',
+    event: 'Eastern Illinois University · School of Business & SBDC',
+    track: 'Guest speaker',
+    dateDisplay: 'Friday, May 1, 2026 · 9:00 AM–4:00 PM',
+    startISO: '2026-05-01T09:00:00-05:00',
+    endISO: '2026-05-01T16:00:00-05:00',
+    venue: 'Tarble Museum of Art',
+    city: 'Charleston, IL',
+    description: 'A guest session on AI visibility at EIU’s student-run sales conference — built on the idea that the best sales feel like service, not pressure.',
+    url: 'https://www.eiu.edu/calendar/event.php?id=15665',
+  },
 ];
+const alsoSeen = ['Bowling Green State University', 'Columbus Startup Week', 'Private brand & agency workshops'];
 ---
 <BaseLayout
   title="Speaking"
   description="Laura Seelinger speaks on AI visibility, GEO, and AEO — practical, no-fluff talks and workshops for marketing teams, agencies, and events."
+  schemas={talks.map((t) => eventSchema(t))}
 >
   <!-- HERO -->
   <section class="hero media-overlay media-overlay--hero">
@@ -40,17 +75,20 @@ const recent = [
     </div>
   </section>
 
-  <!-- INTRO (forest) -->
+  <!-- INTRO (forest) — split with podium photo -->
   <section class="band section--forest">
-    <div class="container measure" data-reveal>
-      <p class="subhead">why book me</p>
-      <h2>I give a room something to do, not just something to clap for</h2>
-      <p>
-        I run live audits on stage, share the real numbers from client work, and
-        send people home with a process they can run themselves. It’s the same
-        thing that lights me up about the work — handing people something they can
-        action, not theory they’ll forget by the parking lot.
-      </p>
+    <div class="container intro-split">
+      <div data-reveal="left">
+        <p class="subhead">why book me</p>
+        <h2>I give a room something to actually do</h2>
+        <p>
+          I run live audits on stage, share the real numbers from client work, and
+          send people home with a process they can run themselves. It’s the same
+          thing that lights me up about the work: handing people something they can
+          action the next morning, while it still feels urgent.
+        </p>
+      </div>
+      <FramedPhoto src="/images/speaking-podium.jpg" alt="Laura presenting at Cincy AI Week" shape="feather" ratio="3 / 4" reveal delay="1" />
     </div>
   </section>
 
@@ -68,20 +106,29 @@ const recent = [
     </div>
   </section>
 
-  <!-- RECENT — split: feathered photo + list (rust) -->
+  <!-- RECENT & UPCOMING TALKS — detailed, schema-backed -->
   <StitchDivider bg="rust" stitch="ivory" />
   <section class="band section--rust">
-    <div class="container recent">
-      <div data-reveal="left">
-        <p class="subhead">recent stages</p>
-        <h2>Where I’ve been lately</h2>
-        <ul class="recent__list">
-          {recent.map((r) => (
-            <li><strong>{r.ev}</strong><span>{r.role}</span></li>
-          ))}
-        </ul>
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">recent &amp; upcoming</p>
+        <h2>Where I’ve been on stage</h2>
       </div>
-      <FramedPhoto src="/images/speaking-podium.jpg" alt="Laura presenting at Cincy AI Week" shape="feather" ratio="3 / 4" reveal delay="1" />
+      <div class="talks">
+        {talks.map((t, i) => (
+          <article class="talk" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <p class="talk__track">{t.track}{t.event ? ` · ${t.event}` : ''}</p>
+            <h3>{t.title}</h3>
+            <p class="talk__meta">
+              <time datetime={t.startISO}>{t.dateDisplay}</time><br />
+              {t.venue}{t.city ? `, ${t.city}` : ''}
+            </p>
+            <p class="talk__desc">{t.description}</p>
+            {t.url && <a class="talk__link" href={t.url}>Event details →</a>}
+          </article>
+        ))}
+      </div>
+      <p class="also" data-reveal>Also seen at: {alsoSeen.join(' · ')}</p>
     </div>
   </section>
 
@@ -106,14 +153,23 @@ const recent = [
   .measure { max-width: 60ch; }
   .measure--center { margin-inline: auto; text-align: center; }
 
-  .recent { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-5); align-items: center; }
-  .recent :global(.framed) { max-width: 360px; justify-self: center; }
-  .recent__list { list-style: none; padding: 0; margin: var(--space-2) 0 0; display: grid; gap: var(--space-2); }
-  .recent__list li { display: flex; flex-direction: column; border-top: 1px solid rgba(252,245,229,0.35); padding-top: var(--space-1); }
-  .recent__list span { opacity: 0.85; font-size: var(--text-sm); }
+  /* Intro split (forest + photo) */
+  .intro-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+  .intro-split > div { max-width: 56ch; }
+  .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
+
+  /* Talk cards (detailed, schema-backed) */
+  .talks { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+  .talk { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
+  .talk__track { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin-bottom: var(--space-1); }
+  .talk h3 { color: var(--rust); margin: 0 0 var(--space-1); font-size: var(--text-lg); }
+  .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--brown); margin-bottom: var(--space-1); }
+  .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+  .talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--olive); }
+  .also { margin-top: var(--space-4); font-size: var(--text-sm); }
 
   @media (max-width: 760px) {
-    .recent { grid-template-columns: 1fr; }
-    .recent :global(.framed) { order: -1; }
+    .intro-split { grid-template-columns: 1fr; }
+    .intro-split :global(.framed) { order: -1; }
   }
 </style>

@@ -105,6 +105,38 @@ export function faqSchema(items: FaqItem[]) {
   };
 }
 
+type EventInput = {
+  title: string;
+  event?: string;
+  startISO: string;
+  endISO?: string;
+  venue: string;
+  city?: string;
+  description: string;
+};
+
+// Event — speaking engagements. Structured date/venue/performer data is exactly
+// what AI engines cite for "where/when is X speaking."
+export function eventSchema(t: EventInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: t.title,
+    startDate: t.startISO,
+    endDate: t.endISO || t.startISO,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: t.venue,
+      ...(t.city ? { address: t.city } : {}),
+    },
+    performer: { '@id': PERSON_ID },
+    description: t.description,
+    ...(t.event ? { superEvent: { '@type': 'Event', name: t.event } } : {}),
+  };
+}
+
 // DefinedTerm — for glossary/definition blocks (AI loves extractable defs).
 export function definedTermSchema(term: string, definition: string) {
   return {
