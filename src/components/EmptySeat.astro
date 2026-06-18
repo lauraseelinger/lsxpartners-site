@@ -132,15 +132,19 @@ const mates = [
     const update = () => {
       const rect = board.getBoundingClientRect();
       const vh = window.innerHeight;
-      // long scroll window so the travel is slow enough to watch
-      const p = Math.min(1, Math.max(0, (vh - rect.top) / (vh * 0.85)));
-      const e = 1 - Math.pow(1 - p, 2);   // ease-out so it settles softly
-      const x = 200 * (1 - e);            // come in from far right
-      const y = 36 * (1 - e);             // and slightly up
+      // raw progress over a very long span (entering -> well past) = slow
+      const span = vh + 320;
+      const raw = Math.min(1, Math.max(0, (vh - rect.top) / span));
+      // hold on the empty silhouette for the first 35%, then glide in over the
+      // next 45% — so you actually see the seat sit empty before I arrive
+      const t = Math.min(1, Math.max(0, (raw - 0.35) / 0.45));
+      const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;  // ease-in-out
+      const x = 220 * (1 - e);            // come in from far right
+      const y = 40 * (1 - e);             // and slightly up
       const scale = 0.7 + 0.3 * e;
       photo.style.transform = `translate(calc(-50% + ${x}px), ${y}px) scale(${scale})`;
-      photo.style.opacity = String(Math.min(1, p * 1.6));
-      if (seat) seat.classList.toggle('is-filled', e > 0.85);
+      photo.style.opacity = String(t);
+      if (seat) seat.classList.toggle('is-filled', t > 0.9);
     };
     update();
     let ticking = false;
