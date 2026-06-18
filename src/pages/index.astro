@@ -35,11 +35,14 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
         <div class="hc__pattern hc__pattern--back" aria-hidden="true"></div>
         <div class="hc__pattern hc__pattern--front" aria-hidden="true"></div>
         <img class="hc__photo" src="/images/hero-portrait.jpg" alt="Laura Seelinger" />
-        <!-- locally-sourced sticker pile, top-left -->
+        <!-- locally-sourced sticker pile, top-left (overlapping, varied size/color) -->
         <img class="hc__stk ls ls--a" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="-10" data-depth="16" style="transform: rotate(-10deg)" />
-        <img class="hc__stk ls ls--b" src="/brand/assets/sticker-ls-rust.png" alt="" aria-hidden="true" data-cstk data-rot="9" data-depth="28" style="transform: rotate(9deg)" />
-        <img class="hc__stk ls ls--c" src="/brand/assets/sticker-ls-blue.png" alt="" aria-hidden="true" data-cstk data-rot="-3" data-depth="10" style="transform: rotate(-3deg)" />
-        <!-- feature sticker, bottom-right -->
+        <img class="hc__stk ls ls--b" src="/brand/assets/sticker-ls-rust.png" alt="" aria-hidden="true" data-cstk data-rot="9" data-depth="26" style="transform: rotate(9deg)" />
+        <img class="hc__stk ls ls--c" src="/brand/assets/sticker-ls-blue.png" alt="" aria-hidden="true" data-cstk data-rot="-4" data-depth="10" style="transform: rotate(-4deg)" />
+        <img class="hc__stk ls ls--d" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="6" data-depth="20" style="transform: rotate(6deg)" />
+        <!-- the other brand stickers, around the photo -->
+        <img class="hc__stk hc__stk--tailored" src="/brand/assets/sticker-tailored.png" alt="" aria-hidden="true" data-cstk data-rot="8" data-depth="22" style="transform: rotate(8deg)" />
+        <img class="hc__stk hc__stk--organic" src="/brand/assets/sticker-organic.png" alt="" aria-hidden="true" data-cstk data-rot="-7" data-depth="30" style="transform: rotate(-7deg)" />
         <img class="hc__stk hc__stk--feat" src="/brand/assets/sticker-team.png" alt="" aria-hidden="true" data-cstk data-rot="7" data-depth="34" style="transform: rotate(7deg)" />
       </div>
     </div>
@@ -193,7 +196,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   .hero__lede { font-size: var(--text-lg); max-width: 44ch; margin-bottom: var(--space-3); }
 
   /* photo + sticker cluster */
-  .hero__cluster { position: relative; width: min(440px, 100%); aspect-ratio: 4 / 5; margin-inline: auto; }
+  .hero__cluster { position: relative; width: min(440px, 100%); aspect-ratio: 1 / 1; margin-inline: auto; }
   .hc__pattern { position: absolute; border-radius: 22px; box-shadow: var(--shadow-card); }
   /* back layer — blue checker, peeking opposite corner */
   .hc__pattern--back {
@@ -206,19 +209,22 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
     background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 220px repeat, var(--peach);
   }
   .hc__photo {
-    position: absolute; inset: 4% 10% 0 6%; width: auto; height: 96%; z-index: 2;
+    position: absolute; inset: 6% 9% 6% 7%; width: auto; height: 88%; z-index: 2;
     object-fit: cover; border-radius: 18px;
-    -webkit-mask-image: radial-gradient(125% 115% at 50% 42%, #000 72%, transparent 100%);
-    mask-image: radial-gradient(125% 115% at 50% 42%, #000 72%, transparent 100%);
+    -webkit-mask-image: radial-gradient(125% 120% at 50% 44%, #000 74%, transparent 100%);
+    mask-image: radial-gradient(125% 120% at 50% 44%, #000 74%, transparent 100%);
   }
   .hc__stk { position: absolute; height: auto; z-index: 3; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); will-change: transform; }
-  /* locally-sourced pile, top-left, varied sizes + colors */
+  /* locally-sourced pile, top-left — overlapping, varied size + color */
   .ls { z-index: 4; }
-  .ls--a { top: -8%; left: -10%; width: 104px; }
-  .ls--b { top: 6%; left: -16%; width: 72px; z-index: 5; }
-  .ls--c { top: -14%; left: 14%; width: 58px; }
-  /* feature sticker bottom-right */
-  .hc__stk--feat { bottom: -6%; right: -8%; width: 122px; }
+  .ls--a { top: -7%; left: -7%; width: 92px; }
+  .ls--b { top: 5%; left: -13%; width: 64px; z-index: 6; }
+  .ls--c { top: -13%; left: 9%; width: 52px; z-index: 5; }
+  .ls--d { top: 9%; left: 8%; width: 44px; z-index: 5; }
+  /* the other stickers, framing the photo */
+  .hc__stk--tailored { top: -7%; right: -7%; width: 96px; }
+  .hc__stk--organic { bottom: 3%; left: -9%; width: 80px; }
+  .hc__stk--feat { bottom: -6%; right: -7%; width: 116px; }
 
   .ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
 
