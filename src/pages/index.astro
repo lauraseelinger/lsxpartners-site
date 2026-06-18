@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StitchDivider from '../components/StitchDivider.astro';
 import LoopDiagram from '../components/LoopDiagram.astro';
+import DefinitionBlock from '../components/DefinitionBlock.astro';
 import { serviceSchema } from '../lib/schema';
 import { targetQuarter } from '../lib/dates';
 import { SITE, PERSON, CTA, ENGAGEMENTS } from '../consts';
@@ -65,6 +66,16 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
           <p class="stat__label">more paid clicks for those same cited brands, on the same query.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS AI VISIBILITY — front-loaded definitional answer (DefinedTerm schema) -->
+  <section class="band">
+    <div class="container" data-reveal>
+      <DefinitionBlock
+        term="AI visibility"
+        definition="AI visibility is whether — and how — AI engines like ChatGPT, Claude, Perplexity and Google AI Overviews surface and cite your brand when people ask questions in your category. It’s distinct from search ranking: you can rank well on Google and still be missing, or uncited, in the AI answer itself."
+      />
     </div>
   </section>
 

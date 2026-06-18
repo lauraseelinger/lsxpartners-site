@@ -12,10 +12,12 @@ import { ENGAGEMENTS, CTA } from '../consts';
 const flagship = ENGAGEMENTS.find((e) => e.flagship)!;
 const others = ENGAGEMENTS.filter((e) => !e.flagship);
 const faqs = [
-  { question: 'Do you work with brands or agencies?', answer: 'Both. Brands hire me directly to come in and get their AI visibility together; agencies bring me in as an embedded, often white-labeled, strategy partner. The work is the same caliber either way.' },
-  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They run in the same strategy — you can rank #1 on Google and still be invisible (or uncited) in AI answers.' },
+  { question: 'Isn’t AI visibility just SEO with a new name?', answer: 'Partly, and that’s the nuance that matters. AI answers are built on top of search indexes, so good SEO still helps — on tight engines like Claude (which leans on Brave) it gets you most of the way. But looser engines like ChatGPT weight structure, earned media and third-party authority differently, so ranking isn’t enough. Knowing which lever each engine pulls is the actual work.' },
+  { question: 'Do I need an AI visibility tool?', answer: 'A tool tells you the score. It won’t tell you what to do about it. I use the tools (and test new ones constantly), but the value is the strategy: reading your current AI brand identity, finding the openings, and deciding what to amplify. That’s not something a dashboard does.' },
+  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links; AI visibility gets you quoted in the answer. They run in the same strategy — you can rank #1 on Google and still be invisible, or uncited, in AI answers.' },
+  { question: 'Is it too early to invest in this?', answer: 'The audience-conversation layer — what real buyers say and ask — is durable now; you don’t have to wait for the models to settle. And citations move faster than SEO rankings, so the ground you take early compounds.' },
+  { question: 'Do you work with brands or agencies?', answer: 'Both. Brands hire me directly to come in and get their AI visibility together; agencies bring me in as an embedded, often white-labeled, strategy partner. Same caliber of work either way.' },
   { question: 'What does it cost?', answer: 'Engagements are scoped to the brand and the goal, from a one-time audit to the one-month Intensive. The fastest way to a real number is a short call.' },
-  { question: 'Can you move fast?', answer: 'That’s the whole point of the Intensive — one month, in and out, with the foundation built. No year-long agency cycle.' },
 ];
 ---
 <BaseLayout
