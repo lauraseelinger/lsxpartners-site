@@ -5,20 +5,28 @@ import { faqSchema } from '../lib/schema';
 import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
-// this page is its canonical home (rel=author points here). Image-forward,
-// color-blocked, with movement. Full LinkedIn Laura voice. Backstory facts are
-// real (Libbey, regulated healthcare, 15+ yrs agency+corporate, MBA, Cincy).
-const monitors = ['ChatGPT', 'Perplexity', 'Claude', 'Gemini', 'Google AI Overviews', 'Reddit threads', 'your reviews', 'buyer questions'];
-const industries = ['⚙️ Manufacturing', '🚗 Automotive', '🛒 E-commerce', '💊 Pharma', '⚕️ MedTech', '🥃 CPG & glassware'];
-const plays = [
-  { t: 'ChatGPT', x: '8%', y: '20%' },
-  { t: 'Claude', x: '34%', y: '10%' },
-  { t: 'Perplexity', x: '63%', y: '14%' },
-  { t: 'Gemini', x: '12%', y: '64%' },
-  { t: 'Semrush', x: '44%', y: '70%' },
-  { t: '+ 3 new this week', x: '70%', y: '60%', neu: true },
+// this page is its canonical home. Image-forward, color-blocked, with movement.
+// Full LinkedIn Laura voice. Facts are real (Libbey, regulated healthcare,
+// 15+ yrs agency+corporate, MBA, Cincy).
+const monitors = ['LLMs', 'audience intelligence', 'third-party data', 'AI brand identity', 'citation sources', 'entity consistency', 'answer engines'];
+const sides = [
+  { key: 'corp', name: 'Corporate', blurb: 'Fortune-scale brand and marketing teams — process, approvals, and getting things shipped at scale.' },
+  { key: 'agency', name: 'Agency', blurb: 'Fast, creative, juggling a dozen clients at once — and white-labeling the deep work behind the scenes.' },
 ];
-const offclock = ['🐈 my cats', '🥾 walks & hikes', '📔 junk journaling', '🗺️ our next adventure', '☕ slow mornings'];
+const verticals = [
+  { name: 'Manufacturing', d: 'Long cycles, technical buyers, and dealer/distributor layers.' },
+  { name: 'Automotive', d: 'Brand-and-dealer tension, and a lot of compliance.' },
+  { name: 'E-commerce', d: 'Marketplace copy, reviews, and conversion.' },
+  { name: 'Pharma & MedTech', d: 'Medical, legal, and regulatory sign-off on every word.' },
+  { name: 'CPG & glassware', d: 'The Libbey years — retail, Amazon, and brand.' },
+];
+const offclock = ['🐈 my cats', '🥾 walks & hikes', '📔 junk journaling', '🧘 breathwork & meditation', '🎧 podcasts', '🗺️ our next adventure'];
+const stickers = [
+  { src: '/brand/assets/sticker-locally-sourced.png', cls: 'stk--1', rot: -8, depth: 26 },
+  { src: '/brand/assets/sticker-tailored.png', cls: 'stk--2', rot: 7, depth: 40 },
+  { src: '/brand/assets/sticker-team.png', cls: 'stk--3', rot: -5, depth: 16 },
+  { src: '/brand/assets/sticker-organic.png', cls: 'stk--4', rot: 9, depth: 32 },
+];
 const faqs = [
   {
     question: 'Who is Laura Seelinger?',
@@ -42,22 +50,24 @@ const faqs = [
   description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI — 15+ years in agency and corporate marketing, much of it in regulated industries."
   schemas={[faqSchema(faqs)]}
 >
-  <!-- HERO -->
-  <section class="hero media-overlay media-overlay--hero">
-    <img class="bg" src="/images/about-hero.jpg" alt="" aria-hidden="true" style="object-position: 70% 28%;" />
-    <div class="container hero__inner">
+  <!-- HERO — half pattern, half photo, blended seam -->
+  <section class="ahero">
+    <div class="ahero__text">
       <p class="subhead">ai visibility expert · founder, lsx partners</p>
       <h1>Hi, I'm Laura.</h1>
-      <p class="hero__lede">
+      <p class="ahero__lede">
         I'm the AI marketing nerd who actually looks forward to the monthly
         reporting. I help brands and agencies get <strong>cited by AI</strong> —
         and I'm in this every single day.
       </p>
       <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
     </div>
+    <div class="ahero__photo">
+      <img src="/images/about-hero.jpg" alt="Laura Seelinger" />
+    </div>
   </section>
 
-  <!-- THE GAP — signals I monitor float around me -->
+  <!-- THE GAP — advanced signals float around me -->
   <section class="band section--cream">
     <div class="container gap-grid">
       <div class="orbit" data-reveal>
@@ -80,7 +90,7 @@ const faqs = [
     </div>
   </section>
 
-  <!-- BACKGROUND — corporate + agency, across industries -->
+  <!-- BACKGROUND — both sides + industries accordion -->
   <StitchDivider bg="forest" stitch="yellow" />
   <section class="band section--forest">
     <div class="container">
@@ -91,45 +101,53 @@ const faqs = [
           Fifteen-plus years across agency and corporate marketing — four of them
           at Libbey, the glassware company in Toledo (I even wrote some of the
           Amazon copy I now roast in my case studies). Most of my family works in
-          healthcare, my husband included, so I went deep in regulated marketing,
-          where the simplest copy change needs sign-off from medical, legal,
-          compliance, and brand. That's exactly why I'm useful now: the content is
-          the easy part — getting it through a real organization is the work.
+          healthcare, so I went deep in regulated marketing, where the simplest copy
+          change needs sign-off from medical, legal, compliance, and brand. That's
+          exactly why I'm useful now: the content is the easy part — getting it
+          through a real organization is the work.
         </p>
       </div>
 
-      <div class="sides">
-        <div class="side" data-reveal>
-          <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="6" width="28" height="38" rx="2" /><line x1="6" y1="44" x2="42" y2="44" />
-            <line x1="17" y1="14" x2="20" y2="14" /><line x1="28" y1="14" x2="31" y2="14" />
-            <line x1="17" y1="22" x2="20" y2="22" /><line x1="28" y1="22" x2="31" y2="22" />
-            <line x1="17" y1="30" x2="20" y2="30" /><line x1="28" y1="30" x2="31" y2="30" />
-          </svg>
-          <h3>Corporate</h3>
-          <p>Fortune-scale brand and marketing teams — process, approvals, and getting things shipped at scale.</p>
+      <div class="bg-grid">
+        <div class="sides">
+          {sides.map((s, i) => (
+            <div class="side" data-reveal data-reveal-delay={i + 1}>
+              {s.key === 'corp' ? (
+                <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="11" y="6" width="26" height="38" rx="2" /><line x1="6" y1="44" x2="42" y2="44" />
+                  <line x1="18" y1="14" x2="20" y2="14" /><line x1="28" y1="14" x2="30" y2="14" />
+                  <line x1="18" y1="22" x2="20" y2="22" /><line x1="28" y1="22" x2="30" y2="22" />
+                  <line x1="18" y1="30" x2="20" y2="30" /><line x1="28" y1="30" x2="30" y2="30" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M26 4 L12 26 L23 26 L20 44 L36 20 L25 20 Z" />
+                </svg>
+              )}
+              <h3>{s.name}</h3>
+              <p>{s.blurb}</p>
+            </div>
+          ))}
         </div>
-        <div class="side" data-reveal data-reveal-delay="1">
-          <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M26 4 L12 26 L23 26 L20 44 L36 20 L25 20 Z" />
-          </svg>
-          <h3>Agency</h3>
-          <p>Fast, creative, juggling a dozen clients at once — and white-labeling the deep work behind the scenes.</p>
-        </div>
-      </div>
 
-      <p class="ind-cap" data-reveal>across a lot of rooms:</p>
-      <div class="industries">
-        {industries.map((s, i) => <span class="ind" data-reveal data-reveal-delay={i % 3}>{s}</span>)}
+        <div class="rooms" data-reveal="right">
+          <p class="rooms__cap">across a lot of rooms</p>
+          {verticals.map((v, i) => (
+            <details class="room" open={i === 0}>
+              <summary>{v.name}</summary>
+              <p>{v.d}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW I WORK — the coach's playbook -->
+  <!-- HOW I WORK — the coach's playbook, small + blended into the corner -->
   <StitchDivider bg="cream" stitch="rust" />
-  <section class="band tex-cream">
+  <section class="band tex-cream how-band">
     <div class="container">
-      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+      <div class="measure" data-reveal>
         <p class="subhead">how i actually work</p>
         <h2>I test it on myself first</h2>
         <p>
@@ -137,27 +155,36 @@ const faqs = [
           more than once in six months because this space moves that fast — and I
           run my process on real products and real client work before I ever
           recommend it. My clients get the learnings months before they'd hit the
-          standard agency cycle, because I'm in this every single day.
+          standard agency cycle, because I'm in this every single day. The stack is
+          never finished; every round, I run the next play on my own work first.
         </p>
       </div>
-
-      <div class="playboard" data-reveal>
-        <span class="playboard__tag">the play, this round</span>
-        <svg class="playboard__diagram" viewBox="0 0 600 300" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M70 250 C 70 170 180 190 200 110" stroke="var(--rust)" stroke-width="3" stroke-dasharray="2 9" />
-          <path d="M300 255 C 300 200 360 200 430 130" stroke="var(--olive)" stroke-width="3" stroke-dasharray="2 9" />
-          <path d="M470 250 C 470 200 500 190 520 150" stroke="var(--brown)" stroke-width="3" stroke-dasharray="2 9" />
-          <g stroke="var(--brown)" stroke-width="3" opacity="0.85">
-            <circle cx="70" cy="258" r="11" fill="none" /><circle cx="300" cy="262" r="11" fill="none" /><circle cx="470" cy="258" r="11" fill="none" />
-            <path d="M156 252 l16 16 M172 252 l-16 16" /><path d="M384 256 l16 16 M400 256 l-16 16" />
-          </g>
-        </svg>
-        {plays.map((p, i) => (
-          <span class={`play-chip${p.neu ? ' play-chip--new' : ''}`} style={`left:${p.x};top:${p.y}`} data-reveal="scale" data-reveal-delay={(i % 4) + 1}>{p.t}</span>
-        ))}
-      </div>
-      <p class="playboard__cap" data-reveal>The stack is never finished. Every round, I run the next tests on my own work before yours.</p>
     </div>
+    <figure class="playbook" data-reveal aria-hidden="true">
+      <span class="playbook__tag">the play, this round</span>
+      <svg viewBox="0 0 300 210" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- field hashes -->
+        <g stroke="var(--brown)" stroke-width="1" opacity="0.18">
+          <line x1="20" y1="70" x2="280" y2="70" /><line x1="20" y1="120" x2="280" y2="120" />
+        </g>
+        <!-- routes -->
+        <path d="M70 150 C 64 110 44 100 40 64" stroke="var(--rust)" stroke-width="3" stroke-dasharray="2 8" />
+        <path d="M230 150 C 236 112 258 104 262 70" stroke="var(--olive)" stroke-width="3" stroke-dasharray="2 8" />
+        <path d="M150 150 C 150 120 150 110 150 78" stroke="var(--brown)" stroke-width="3" stroke-dasharray="2 8" />
+        <path d="M40 64 l-7 12 M40 64 l9 9" stroke="var(--rust)" stroke-width="3" />
+        <path d="M262 70 l-9 9 M262 70 l7 12" stroke="var(--olive)" stroke-width="3" />
+        <path d="M150 78 l-8 10 M150 78 l8 10" stroke="var(--brown)" stroke-width="3" />
+        <!-- offense O's on the line -->
+        <g stroke="var(--brown)" stroke-width="3" fill="#fbf7ee">
+          <circle cx="70" cy="158" r="11" /><circle cx="110" cy="158" r="11" /><circle cx="150" cy="158" r="11" />
+          <circle cx="190" cy="158" r="11" /><circle cx="230" cy="158" r="11" />
+        </g>
+        <!-- QB -->
+        <circle cx="150" cy="190" r="10" stroke="var(--rust)" stroke-width="3" fill="none" />
+        <!-- defender X -->
+        <path d="M143 44 l14 14 M157 44 l-14 14" stroke="var(--brown)" stroke-width="3" opacity="0.7" />
+      </svg>
+    </figure>
   </section>
 
   <!-- OFF THE CLOCK -->
@@ -183,7 +210,7 @@ const faqs = [
     </div>
   </section>
 
-  <!-- FAQ — with a stack of brand stickers -->
+  <!-- FAQ — with a stack of distinct brand stickers -->
   <StitchDivider bg="cream" stitch="green" />
   <section class="band tex-cream">
     <div class="container faq-grid">
@@ -202,11 +229,10 @@ const faqs = [
         </dl>
       </div>
       <div class="stickers" data-reveal aria-hidden="true">
-        <img class="stk stk--1" src="/brand/logo/badge-rust.svg" alt="" />
-        <img class="stk stk--2" src="/brand/logo/badge-green.svg" alt="" />
-        <img class="stk stk--3" src="/brand/assets/sticker-locally-sourced.png" alt="" />
-        <img class="stk stk--4" src="/brand/logo/badge-pink.svg" alt="" />
-        <img class="stk stk--5" src="/brand/assets/sticker-certified-organic.svg" alt="" />
+        <div class="stickers__pattern"></div>
+        {stickers.map((s) => (
+          <img class={`stk ${s.cls}`} src={s.src} alt="" data-stk data-rot={s.rot} data-depth={s.depth} style={`transform: rotate(${s.rot}deg)`} />
+        ))}
       </div>
     </div>
   </section>
@@ -226,10 +252,25 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  .hero { display: flex; align-items: center; min-height: clamp(420px, 62vh, 600px); padding-block: var(--space-6); --hero-fade-to: var(--cream); }
-  .hero__inner { max-width: 700px; }
-  .hero h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
-  .hero__lede { font-size: var(--text-lg); max-width: 46ch; margin-bottom: var(--space-3); }
+  /* ---- Half/half hero, photo blended into the pattern ---- */
+  .ahero { display: grid; grid-template-columns: 1fr 1fr; min-height: clamp(360px, 46vh, 470px); }
+  .ahero__text {
+    display: flex; flex-direction: column; justify-content: center; padding: var(--space-5);
+    background:
+      linear-gradient(rgba(252, 245, 229, 0.72), rgba(252, 245, 229, 0.72)),
+      url('/brand/patterns/pattern-2.jpg') center / 300px repeat,
+      var(--cream);
+  }
+  .ahero__text h1 { font-size: clamp(2.4rem, 1.7rem + 3vw, 4rem); margin-block: var(--space-1) var(--space-2); }
+  .ahero__lede { font-size: var(--text-lg); max-width: 40ch; margin-bottom: var(--space-3); }
+  .ahero__photo { position: relative; overflow: hidden; }
+  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 52% 30%; }
+  /* feather + soft blur where the photo meets the pattern */
+  .ahero__photo::before {
+    content: ''; position: absolute; inset: 0 auto 0 -1px; width: 24%; z-index: 2;
+    background: linear-gradient(90deg, var(--cream) 8%, transparent);
+    backdrop-filter: blur(3px); -webkit-mask-image: linear-gradient(90deg, #000 30%, transparent);
+  }
 
   .band { padding-block: var(--space-6); }
   .measure { max-width: 44rem; }
@@ -239,7 +280,7 @@ const faqs = [
   .gap-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-5); align-items: center; }
   .gap-grid > div:last-child { max-width: 52ch; }
 
-  /* ---- Orbit: photo with floating chips drifting around it ---- */
+  /* ---- Orbit ---- */
   .orbit { position: relative; width: min(360px, 92%); aspect-ratio: 1; margin-inline: auto; }
   .orbit__me {
     position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: cover; border-radius: 50%;
@@ -254,14 +295,13 @@ const faqs = [
     box-shadow: var(--shadow-card); animation: floatA 6s ease-in-out infinite;
     animation-delay: calc(var(--i, 0) * -0.8s);
   }
-  .orbit .float:nth-child(2) { top: 2%; left: 8%; }
-  .orbit .float:nth-child(3) { top: 0%; right: 4%; }
-  .orbit .float:nth-child(4) { top: 38%; left: -6%; }
-  .orbit .float:nth-child(5) { top: 30%; right: -8%; }
-  .orbit .float:nth-child(6) { bottom: 20%; left: -4%; }
-  .orbit .float:nth-child(7) { bottom: 4%; right: 2%; }
-  .orbit .float:nth-child(8) { bottom: -2%; left: 26%; }
-  .orbit .float:nth-child(9) { top: 50%; right: 18%; }
+  .orbit .float:nth-child(2) { top: 2%; left: 6%; }
+  .orbit .float:nth-child(3) { top: -1%; right: 2%; }
+  .orbit .float:nth-child(4) { top: 36%; left: -8%; }
+  .orbit .float:nth-child(5) { top: 28%; right: -8%; }
+  .orbit .float:nth-child(6) { bottom: 18%; left: -6%; }
+  .orbit .float:nth-child(7) { bottom: 2%; right: 0%; }
+  .orbit .float:nth-child(8) { bottom: -3%; left: 28%; }
   .float--1 { animation-name: floatB; }
   .float--2 { animation-name: floatC; }
   .float--3 { animation-name: floatA; animation-duration: 7.5s; }
@@ -270,41 +310,35 @@ const faqs = [
   @keyframes floatB { 0%,100% { transform: translate(0,0) } 50% { transform: translate(7px, 9px) } }
   @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(-3deg) } 50% { transform: translate(-8px,-7px) rotate(3deg) } }
 
-  /* ---- Both sides + industries (forest) ---- */
-  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
+  /* ---- Both sides + industries accordion (forest) ---- */
+  .bg-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-4); margin-top: var(--space-4); align-items: start; }
+  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
   .side { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
-  .side svg { width: 40px; height: 40px; color: var(--rust); }
+  .side svg { width: 38px; height: 38px; color: var(--rust); }
   .side h3 { margin: var(--space-1) 0 0.2rem; color: var(--rust); }
   .side p { margin: 0; font-size: var(--text-sm); }
-  .ind-cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--peach); margin: var(--space-4) 0 var(--space-2); }
-  .industries { display: flex; flex-wrap: wrap; gap: var(--space-1); }
-  .ind {
-    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
-    color: var(--cream); border: 1.5px solid rgba(252,245,229,0.4); padding: 0.4rem 0.85rem; border-radius: 999px;
+  .rooms { background: rgba(252,245,229,0.08); border: 1px solid rgba(252,245,229,0.25); border-radius: 16px; padding: var(--space-2) var(--space-3); }
+  .rooms__cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--peach); margin: 0 0 var(--space-1); }
+  .room { border-bottom: 1px solid rgba(252,245,229,0.18); }
+  .room:last-child { border-bottom: 0; }
+  .room summary {
+    cursor: pointer; list-style: none; padding: 0.6rem 0; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-heading); font-size: var(--text-md, 1.05rem); color: var(--cream);
   }
+  .room summary::-webkit-details-marker { display: none; }
+  .room summary::after { content: '+'; color: var(--peach); font-size: 1.3rem; line-height: 1; }
+  .room[open] summary::after { content: '–'; }
+  .room p { margin: 0 0 0.7rem; font-size: var(--text-sm); color: rgba(252,245,229,0.85); }
 
-  /* ---- Coach's playbook (how I work) ---- */
-  .playboard {
-    position: relative; margin-top: var(--space-4); border-radius: 16px; aspect-ratio: 2 / 1;
-    background:
-      repeating-linear-gradient(0deg, transparent 0 31px, rgba(58,42,30,0.05) 31px 32px),
-      repeating-linear-gradient(90deg, transparent 0 31px, rgba(58,42,30,0.05) 31px 32px),
-      #fbf7ee;
-    border: 3px solid var(--brown); box-shadow: var(--shadow-card); overflow: hidden;
-  }
-  .playboard__tag {
-    position: absolute; top: 10px; left: 14px; z-index: 3;
-    font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm);
-  }
-  .playboard__diagram { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-  .play-chip {
-    position: absolute; z-index: 2; white-space: nowrap;
-    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
-    background: var(--cream); color: var(--brown); border: 2px solid var(--rust);
-    padding: 0.3rem 0.7rem; border-radius: 10px; box-shadow: var(--shadow-card);
-  }
-  .play-chip--new { border-style: dashed; border-color: var(--olive); color: var(--olive); background: transparent; }
-  .playboard__cap { margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+  /* ---- Playbook: small, blended into the corner ---- */
+  .how-band { position: relative; overflow: hidden; }
+  .playbook { position: absolute; right: 3%; bottom: 6%; width: min(300px, 34%); margin: 0; z-index: 0; opacity: 0.9;
+    -webkit-mask-image: radial-gradient(125% 120% at 70% 75%, #000 52%, transparent 92%);
+    mask-image: radial-gradient(125% 120% at 70% 75%, #000 52%, transparent 92%); }
+  .playbook svg { width: 100%; height: auto; display: block; }
+  .playbook__tag { position: absolute; top: -4px; left: 6%; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); opacity: 0.7; }
+  .how-band .container { position: relative; z-index: 1; }
+  .how-band .measure { max-width: 40rem; }
 
   /* ---- FAQ + sticker stack ---- */
   .faq-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-5); align-items: center; }
@@ -312,27 +346,60 @@ const faqs = [
   .faq__item { border-left: 3px solid var(--rust); padding-left: var(--space-2); }
   .faq dt { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--brown); margin-bottom: 0.3rem; }
   .faq dd { margin: 0; max-width: 56ch; }
-  .stickers { position: relative; height: 320px; }
-  .stk { position: absolute; width: 130px; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.22)); animation: floatA 7s ease-in-out infinite; }
-  .stk--1 { top: 6%; left: 18%; transform: rotate(-9deg); width: 150px; z-index: 4; }
-  .stk--2 { top: 30%; left: 48%; transform: rotate(7deg); z-index: 3; animation-name: floatB; animation-delay: -1.5s; }
-  .stk--3 { top: 2%; left: 52%; transform: rotate(11deg); width: 120px; z-index: 5; animation-name: floatC; animation-delay: -0.7s; }
-  .stk--4 { top: 52%; left: 14%; transform: rotate(6deg); width: 120px; z-index: 2; animation-delay: -2.2s; }
-  .stk--5 { top: 56%; left: 50%; transform: rotate(-8deg); width: 128px; z-index: 3; animation-name: floatB; animation-delay: -3s; }
+  .stickers { position: relative; height: 340px; }
+  .stickers__pattern {
+    position: absolute; inset: 8% 6%; border-radius: 24px; transform: rotate(-3deg);
+    background: linear-gradient(rgba(252,245,229,0.55), rgba(252,245,229,0.55)), url('/brand/patterns/pattern-peach.jpg') center / 220px repeat;
+    box-shadow: var(--shadow-card);
+  }
+  .stk { position: absolute; width: 138px; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.22)); will-change: transform; }
+  .stk--1 { top: 4%; left: 10%; width: 150px; z-index: 4; }
+  .stk--2 { top: 30%; left: 46%; z-index: 3; }
+  .stk--3 { top: 2%; left: 50%; width: 150px; z-index: 5; }
+  .stk--4 { top: 52%; left: 16%; width: 126px; z-index: 2; }
 
   .about-ctas { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .float, .stk { animation: none; }
+  @media (prefers-reduced-motion: reduce) { .float { animation: none; } }
+  @media (max-width: 900px) {
+    .bg-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 860px) {
+    .ahero { grid-template-columns: 1fr; min-height: 0; }
+    .ahero__photo { height: 42vh; order: -1; }
+    .ahero__photo::before { inset: auto 0 0 0; width: auto; height: 26%; background: linear-gradient(0deg, var(--cream), transparent); -webkit-mask-image: none; backdrop-filter: none; }
     .faq-grid { grid-template-columns: 1fr; }
-    .stickers { height: 260px; max-width: 360px; margin-inline: auto; }
+    .stickers { height: 280px; max-width: 380px; margin-inline: auto; }
+    .playbook { display: none; }
   }
   @media (max-width: 760px) {
     .gap-grid { grid-template-columns: 1fr; }
     .gap-grid--rev .orbit { order: -1; }
-    .sides { grid-template-columns: 1fr; }
-    .playboard { aspect-ratio: 3 / 2; }
+    .sides { grid-template-columns: 1fr 1fr; }
   }
 </style>
+
+<script>
+  // Stickers drift gently with scroll (subtle parallax), not a constant loop.
+  const stks = Array.from(document.querySelectorAll<HTMLElement>('[data-stk]'));
+  if (stks.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const onScroll = () => {
+      const vh = window.innerHeight;
+      stks.forEach((s) => {
+        const rect = s.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        const prog = (vh / 2 - center) / vh; // ~ -0.6..0.6
+        const rot = Number(s.dataset.rot || 0);
+        const depth = Number(s.dataset.depth || 20);
+        s.style.transform = `translateY(${(prog * depth).toFixed(1)}px) rotate(${rot}deg)`;
+      });
+    };
+    onScroll();
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { onScroll(); ticking = false; });
+    }, { passive: true });
+  }
+</script>
