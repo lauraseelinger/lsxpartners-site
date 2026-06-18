@@ -36,20 +36,22 @@ const faqs = [
   description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI — 15+ years in agency and corporate marketing, much of it in regulated industries."
   schemas={[faqSchema(faqs)]}
 >
-  <!-- HERO — half pattern, half playful photo -->
+  <!-- HERO — diagonal split: pattern panel + playful floor photo -->
   <section class="ahero">
-    <div class="ahero__text">
-      <p class="subhead">ai visibility expert · founder, lsx partners</p>
-      <h1>Hi, I'm Laura.</h1>
-      <p class="ahero__lede">
-        I'm the AI marketing nerd who actually looks forward to the monthly
-        reporting. I help brands and agencies get <strong>cited by AI</strong> —
-        and I'm in this every single day.
-      </p>
-      <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
-    </div>
     <div class="ahero__photo">
-      <img src="/images/laura-couch.jpg" alt="Laura Seelinger working from the couch" />
+      <img src="/images/laura-floor-phone.jpg" alt="Laura Seelinger laughing on the floor with her phone" />
+    </div>
+    <div class="container ahero__inner">
+      <div class="ahero__text">
+        <p class="subhead">ai visibility expert · founder, lsx partners</p>
+        <h1>Hi, I'm Laura.</h1>
+        <p class="ahero__lede">
+          I'm the AI marketing nerd who actually looks forward to the monthly
+          reporting. I help brands and agencies get <strong>cited by AI</strong> —
+          and I'm in this every single day.
+        </p>
+        <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+      </div>
     </div>
   </section>
 
@@ -194,25 +196,35 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  /* ---- Split hero: pattern panel + playful photo ---- */
-  .ahero { display: grid; grid-template-columns: 1.02fr 0.98fr; min-height: 78vh; }
-  .ahero__text {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: var(--space-6) var(--space-5);
+  /* ---- Diagonal-split hero: pattern panel + playful floor photo ---- */
+  .ahero {
+    position: relative; isolation: isolate; min-height: clamp(420px, 56vh, 580px);
+    display: flex; align-items: center;
     background:
-      linear-gradient(rgba(252, 245, 229, 0.7), rgba(252, 245, 229, 0.7)),
+      linear-gradient(rgba(252, 245, 229, 0.72), rgba(252, 245, 229, 0.72)),
       url('/brand/patterns/pattern-2.jpg') center / 300px repeat,
       var(--cream);
   }
-  .ahero__text h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
-  .ahero__lede { font-size: var(--text-lg); max-width: 42ch; margin-bottom: var(--space-3); }
-  .ahero__photo { position: relative; overflow: hidden; }
-  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
-  /* feather the seam so the photo melts into the pattern */
-  .ahero__photo::before {
-    content: ''; position: absolute; inset: 0 auto 0 0; width: 28%;
-    background: linear-gradient(90deg, var(--cream), transparent); z-index: 2;
+  /* photo occupies the right, cut on a diagonal */
+  .ahero__photo {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    clip-path: polygon(46% 0, 100% 0, 100% 100%, 26% 100%);
   }
+  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
+  /* soft warm wash to unify */
+  .ahero__photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(115deg, rgba(180, 96, 60, 0.1), transparent 50%);
+  }
+  .ahero__inner { position: relative; z-index: 1; }
+  .ahero__text {
+    max-width: 30rem;
+    padding: var(--space-4); margin: calc(-1 * var(--space-4));
+    border-radius: 16px;
+    background: linear-gradient(105deg, var(--cream) 62%, rgba(252, 245, 229, 0));
+  }
+  .ahero__text h1 { font-size: clamp(2.6rem, 1.8rem + 3.5vw, 4.4rem); margin-block: var(--space-1) var(--space-2); }
+  .ahero__lede { font-size: var(--text-lg); max-width: 34ch; margin-bottom: var(--space-3); }
 
   .band { padding-block: var(--space-6); }
   .measure { max-width: 44rem; }
@@ -288,9 +300,11 @@ const faqs = [
     .float, .marquee__track { animation: none; }
   }
   @media (max-width: 860px) {
-    .ahero { grid-template-columns: 1fr; min-height: 0; }
-    .ahero__photo { min-height: 46vh; order: -1; }
-    .ahero__photo::before { inset: auto 0 0 0; width: auto; height: 22%; background: linear-gradient(0deg, var(--cream), transparent); }
+    .ahero { display: block; min-height: 0; }
+    .ahero__photo { position: relative; inset: auto; height: 44vh; clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
+    .ahero__photo img { object-position: 50% 32%; }
+    .ahero__inner { padding-block: var(--space-4) var(--space-5); }
+    .ahero__text { max-width: none; margin: 0; padding: 0; background: none; }
   }
   @media (max-width: 760px) {
     .gap-grid { grid-template-columns: 1fr; }
