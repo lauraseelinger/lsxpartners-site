@@ -1,83 +1,75 @@
 ---
-// The team table: three seats already filled (solid olive figures), and the
-// AI-visibility seat sitting empty as a dotted rust stick figure with no head.
-// As the section scrolls through view, Laura's real head travels in and lands
-// on the stick figure — the gap you had, easily filled. Scroll-progress driven.
+// Your team at a table: three seats filled (solid olive head-and-shoulders
+// avatars), and one empty seat — the AI-visibility seat — drawn as a dotted
+// rust outline with no face. As the section scrolls through view, Laura's
+// real head travels in and lands on the empty seat, which then fills solid:
+// the gap you had, easily filled. All seats are the same scale.
+const mates = [0, 1, 2];
 ---
 <div class="seats" data-seats>
-  <div class="seats__row">
-    {[0, 1, 2].map(() => (
-      <svg class="mate" viewBox="0 0 60 116" aria-hidden="true">
-        <circle cx="30" cy="16" r="12" fill="var(--olive)" />
-        <g fill="none" stroke="var(--olive)" stroke-width="4" stroke-linecap="round">
-          <line x1="30" y1="30" x2="30" y2="74" />
-          <line x1="30" y1="44" x2="12" y2="62" />
-          <line x1="30" y1="44" x2="48" y2="62" />
-          <line x1="30" y1="74" x2="16" y2="110" />
-          <line x1="30" y1="74" x2="44" y2="110" />
-        </g>
+  <div class="seats__people">
+    {mates.map(() => (
+      <svg class="seat mate" viewBox="0 0 64 84" aria-hidden="true">
+        <circle cx="32" cy="20" r="13" fill="var(--olive)" />
+        <path d="M6 84 C6 54 58 54 58 84 Z" fill="var(--olive)" />
       </svg>
     ))}
-    <div class="me">
-      <svg class="stick" viewBox="0 0 100 150" aria-hidden="true" fill="none" stroke="var(--rust)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 7">
-        <circle cx="50" cy="28" r="20" class="stick__head" />
-        <line x1="50" y1="48" x2="50" y2="104" />
-        <line x1="50" y1="66" x2="24" y2="92" />
-        <line x1="50" y1="66" x2="80" y2="46" />
-        <line x1="50" y1="104" x2="28" y2="142" />
-        <line x1="50" y1="104" x2="72" y2="142" />
+    <div class="me seat-wrap">
+      <svg class="seat seat--empty" viewBox="0 0 64 84" aria-hidden="true" fill="none" stroke="var(--rust)" stroke-width="3" stroke-linejoin="round" stroke-dasharray="2.5 6">
+        <circle cx="32" cy="20" r="13" />
+        <path class="seat__body" d="M6 84 C6 54 58 54 58 84 Z" />
       </svg>
       <img class="me__face" src="/images/laura-cutout.png" alt="Laura Seelinger" data-head />
-      <span class="me__tag">AI visibility expert</span>
     </div>
   </div>
-  <div class="seats__floor" aria-hidden="true"></div>
+  <div class="seats__table" aria-hidden="true"></div>
+  <p class="seats__tag">your AI visibility seat</p>
 </div>
 
 <style>
   .seats { width: min(480px, 100%); margin-inline: auto; }
-  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-2); position: relative; z-index: 2; }
-  .mate { width: 40px; height: auto; opacity: 0.8; }
-  .me { position: relative; width: 100px; flex: none; }
-  .stick { width: 100%; height: auto; display: block; transition: stroke-dasharray 0.3s ease; }
-  .stick.is-filled { stroke-dasharray: none; }
+  .seats__people { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-3); position: relative; z-index: 1; }
+  .seat { width: 64px; height: auto; }
+  .mate { opacity: 0.85; }
+  .seat-wrap { position: relative; width: 64px; flex: none; }
+  .seat--empty { display: block; opacity: 0.75; }
+  .seat__body { transition: fill 0.3s ease; }
+  .seat--empty.is-filled { stroke-dasharray: none; opacity: 1; }
+  .seat--empty.is-filled .seat__body { fill: var(--rust); }
   .me__face {
-    position: absolute; left: 50%; top: -4%; width: 64%; height: auto; z-index: 3;
+    position: absolute; left: 50%; top: -6%; width: 74%; height: auto; z-index: 3;
     transform: translate(-50%, 0) scale(1); transform-origin: center;
   }
-  .me__tag {
-    position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 6px;
-    white-space: nowrap; font-family: var(--font-sub); font-style: italic; font-weight: 800;
+  /* The table sits in front of the lower torsos so the row reads as seated */
+  .seats__table {
+    position: relative; z-index: 2; height: 22px; border-radius: 6px 6px 10px 10px;
+    margin-top: -20px;
+    background: linear-gradient(var(--brown), color-mix(in srgb, var(--brown) 78%, var(--cream)));
+    box-shadow: var(--shadow-card);
+  }
+  .seats__tag {
+    margin: 0.6rem 0 0; text-align: right; padding-right: 8%;
+    font-family: var(--font-sub); font-style: italic; font-weight: 800;
     color: var(--rust); font-size: var(--text-sm);
   }
-  .seats__floor {
-    height: 14px; border-radius: 0 0 10px 10px;
-    background: color-mix(in srgb, var(--brown) 65%, var(--cream));
-    margin-top: -7px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .me__face { transition: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { .me__face { transition: none; } }
 </style>
 
 <script>
   document.querySelectorAll('[data-seats]').forEach((seats) => {
     const head = seats.querySelector('[data-head]') as HTMLElement | null;
-    const stick = seats.querySelector('.stick') as HTMLElement | null;
+    const empty = seats.querySelector('.seat--empty') as HTMLElement | null;
     if (!head) return;
-    // head travels in from above-right and lands on the stick figure as the
-    // section scrolls through the viewport
     const update = () => {
       const rect = seats.getBoundingClientRect();
       const vh = window.innerHeight;
-      // 0 when the block first enters the lower viewport, 1 once it's settled higher up
       const p = Math.min(1, Math.max(0, (vh * 0.9 - rect.top) / (vh * 0.55)));
-      const x = 70 * (1 - p);      // drift in from the right
-      const y = -130 * (1 - p);    // drop down from above
-      const scale = 0.65 + 0.35 * p;
+      const x = 55 * (1 - p);      // drift in from the right
+      const y = -95 * (1 - p);     // drop down from above
+      const scale = 0.7 + 0.3 * p;
       head.style.transform = `translate(calc(-50% + ${x}px), ${y}px) scale(${scale})`;
-      head.style.opacity = String(0.15 + 0.85 * p);
-      if (stick) stick.classList.toggle('is-filled', p > 0.82);
+      head.style.opacity = String(0.12 + 0.88 * p);
+      if (empty) empty.classList.toggle('is-filled', p > 0.82);
     };
     update();
     let ticking = false;
