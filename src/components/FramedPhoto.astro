@@ -1,25 +1,21 @@
 ---
-// Photo with a scalloped brand frame edge (from the kit's "Frames" set),
-// applied as a CSS mask + soft drop-shadow. On-brand, dimensional (not flat).
+// Photo treatments: soft rounded (with shadow), circle, or feathered edges
+// that fade into the background so the image blends in rather than sitting as
+// a separate hard rectangle. No hard borders / scalloped edges.
 interface Props {
   src: string;
   alt: string;
-  shape?: 'oval' | 'rect' | 'circle' | 'square';
+  shape?: 'rounded' | 'circle' | 'feather';
   reveal?: boolean;
   delay?: '1' | '2' | '3';
+  ratio?: string;
   class?: string;
 }
-const { src, alt, shape = 'oval', reveal = false, delay, class: cls = '' } = Astro.props;
-const ratios: Record<string, string> = {
-  oval: '624 / 770',
-  rect: '645 / 957',
-  circle: '1 / 1',
-  square: '1 / 1',
-};
+const { src, alt, shape = 'rounded', reveal = false, delay, ratio = '4 / 5', class: cls = '' } = Astro.props;
 ---
 <figure
   class:list={['framed', `framed--${shape}`, cls]}
-  style={`--ratio:${ratios[shape]}`}
+  style={`--ratio:${ratio}`}
   data-reveal={reveal ? '' : undefined}
   data-reveal-delay={delay}
 >
@@ -27,24 +23,18 @@ const ratios: Record<string, string> = {
 </figure>
 
 <style>
-  .framed {
-    margin: 0;
-    filter: drop-shadow(0 16px 24px rgba(72, 55, 41, 0.26));
-  }
+  .framed { margin: 0; }
   .framed img {
     display: block;
     width: 100%;
     aspect-ratio: var(--ratio);
     object-fit: cover;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
   }
-  .framed--oval img   { -webkit-mask-image: url('/brand/frames/oval.svg');   mask-image: url('/brand/frames/oval.svg'); }
-  .framed--rect img   { -webkit-mask-image: url('/brand/frames/rect.svg');   mask-image: url('/brand/frames/rect.svg'); }
-  .framed--circle img { -webkit-mask-image: url('/brand/frames/circle.svg'); mask-image: url('/brand/frames/circle.svg'); }
-  .framed--square img { -webkit-mask-image: url('/brand/frames/square.svg'); mask-image: url('/brand/frames/square.svg'); }
+  .framed--rounded img { border-radius: 16px; box-shadow: var(--shadow-soft); }
+  .framed--circle img { aspect-ratio: 1 / 1; border-radius: 50%; box-shadow: var(--shadow-soft); }
+  /* Feathered: edges fade to transparent so the photo melts into the section */
+  .framed--feather img {
+    -webkit-mask-image: radial-gradient(115% 120% at 50% 42%, #000 58%, transparent 100%);
+    mask-image: radial-gradient(115% 120% at 50% 42%, #000 58%, transparent 100%);
+  }
 </style>

@@ -4,15 +4,15 @@ import FramedPhoto from '../components/FramedPhoto.astro';
 import { serviceSchema } from '../lib/schema';
 import { SITE, PERSON, CTA } from '../consts';
 
-// HOME — varied block treatments + motion (marquee, count-up stats, step
-// progression, pull-quote, textured + framed sections). Voice: Full LinkedIn
-// Laura. Stats are her own sourced figures.
+// HOME — image-forward (full-bleed photos + text overlays), varied blocks,
+// motion. Modeled on the structure of the current lsxpartners.com but in the
+// new brand. Voice: Full LinkedIn Laura. Stats are her own sourced figures.
 const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience intelligence', 'content activation'];
 const services = [
-  { n: '01', t: 'AI Visibility Audit', d: 'Where you show up — and don’t — across ChatGPT, Claude, Perplexity and Google AI. And the real reason why.' },
-  { n: '02', t: 'AI Visibility Strategy', d: 'The plan to get cited, built on what your audience actually asks — not a list of prompts crowdsourced in a Teams thread.' },
-  { n: '03', t: 'Audience Intelligence', d: 'The real language buyers use, mined from where they talk when no one’s watching. It won’t show up in a keyword tool.' },
-  { n: '04', t: 'Content Activation', d: 'Content engineered to be extracted and quoted by AI — structured so the dice are loaded in your favor.' },
+  { n: '01', t: 'AI Visibility Audit', d: 'Where you show up — and don’t — across ChatGPT, Claude, Perplexity and Google AI, and the real reason why.' },
+  { n: '02', t: 'AI Visibility Strategy', d: 'The plan to get cited, built on what your audience actually asks — not prompts crowdsourced in a Teams thread.' },
+  { n: '03', t: 'Audience Intelligence', d: 'The real language buyers use, mined from where they talk when no one’s watching.' },
+  { n: '04', t: 'Content Activation', d: 'Content engineered to be extracted and quoted by AI — structured so the dice are loaded your way.' },
 ];
 const steps = [
   { t: 'Audience intelligence', d: 'What your buyers actually say and ask.' },
@@ -22,52 +22,41 @@ const steps = [
 ];
 ---
 <BaseLayout title={SITE.name} description={SITE.description} schemas={[serviceSchema()]}>
-  <!-- HERO (cream, subtle dot texture) -->
-  <section class="hero tex-cream">
-    <div class="container hero__grid">
-      <div class="hero__copy" data-reveal="left">
-        <p class="subhead">ai changed how people find answers</p>
-        <h1>Get cited by AI.<br />Not just ranked.</h1>
-        <p class="hero__lede">
-          Right now AI is telling people what your brand is — and it’s not
-          reading your homepage to do it. It’s pulling from Reddit, reviews and
-          random third-party pages you’ve never seen. I make sure that when
-          someone asks AI about your category, your brand is the answer it
-          actually cites.
-        </p>
-        <div class="hero__ctas">
-          <a class="button" href={CTA.calendly}>Book a call</a>
-          <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
-        </div>
-      </div>
-      <div class="hero__media" data-reveal="right">
-        <FramedPhoto src="/images/laura-3.jpg" alt={`${PERSON.name}, ${PERSON.jobTitle}`} shape="oval" />
-        <img class="hero__sticker" src="/brand/assets/sticker-certified-organic.svg" alt="" aria-hidden="true" />
+  <!-- HERO — full-bleed photo, text over image -->
+  <section class="hero media-overlay media-overlay--hero">
+    <img class="bg" src="/images/laura-desk-wide.jpg" alt="" aria-hidden="true" />
+    <div class="container hero__inner">
+      <p class="subhead">ai visibility &amp; strategy</p>
+      <h1>Get cited by AI.<br />Not just ranked.</h1>
+      <p class="hero__lede">
+        AI is already telling people what your brand is — and it’s not reading
+        your homepage to do it. I make sure that when someone asks AI about your
+        category, your brand is the answer it actually cites.
+      </p>
+      <div class="ctas">
+        <a class="button" href={CTA.calendly}>Book a call</a>
+        <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE (rust, moving) -->
+  <!-- MARQUEE -->
   <div class="band--marquee section--rust marquee" aria-hidden="true">
     <div class="marquee__track">
-      {[...marquee, ...marquee].map((m, i) => (
-        <>
-          <span>{m}</span><span class="marquee__dot">✦</span>
-        </>
-      ))}
+      {[...marquee, ...marquee].map((m) => (<><span>{m}</span><span class="marquee__dot">✦</span></>))}
     </div>
   </div>
 
-  <!-- STAT BLOCK (forest, animated numbers) -->
+  <!-- STATS (forest, animated) -->
   <section class="band section--forest">
     <div class="container">
-      <div class="prose" data-reveal>
+      <div class="measure" data-reveal>
         <p class="subhead">here’s the uncomfortable part</p>
         <h2>AI doesn’t build your brand from your website</h2>
         <p>
           It builds it from the ENTIRE internet — reviews, forums, Reddit threads,
           comparison pages, stuff you didn’t write or approve. You can rank #1 on
-          Google and still be invisible in the answer. Different game, different work.
+          Google and still be invisible in the answer.
         </p>
       </div>
       <div class="stat-grid">
@@ -77,7 +66,7 @@ const steps = [
         </div>
         <div data-reveal data-reveal-delay="2">
           <div class="stat__num"><span data-count="35" data-suffix="%">35%</span></div>
-          <p class="stat__label">more organic clicks for brands cited in AI Overviews <span class="cite">(Seer Interactive, Sept 2025)</span>.</p>
+          <p class="stat__label">more organic clicks for brands cited in AI Overviews <span class="cite">(Seer Interactive, 2025)</span>.</p>
         </div>
         <div data-reveal data-reveal-delay="3">
           <div class="stat__num"><span data-count="91" data-suffix="%">91%</span></div>
@@ -87,16 +76,16 @@ const steps = [
     </div>
   </section>
 
-  <!-- SERVICES (olive textured, numbered cards) -->
+  <!-- SERVICES (olive textured, numbered grid) -->
   <section class="band tex-olive section--olive">
     <div class="container">
-      <div data-reveal>
+      <div class="measure" data-reveal>
         <p class="subhead">what i actually do</p>
         <h2>AI visibility &amp; strategy</h2>
       </div>
       <div class="cards">
         {services.map((s, i) => (
-          <div class="card" data-reveal data-reveal-delay={String(i % 4)}>
+          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
             <span class="card__n">{s.n}</span>
             <h3>{s.t}</h3>
             <p>{s.d}</p>
@@ -107,20 +96,33 @@ const steps = [
     </div>
   </section>
 
-  <!-- THE LOOP (cream textured, step progression) -->
+  <!-- FULL-BLEED IMAGE BANNER — text over photo -->
+  <section class="band media-overlay media-overlay--center banner">
+    <img class="bg" src="/images/laura-laptop-wide.jpg" alt="" aria-hidden="true" />
+    <div class="container measure measure--center" data-reveal="scale">
+      <p class="subhead">the distinction nobody makes</p>
+      <h2>Being the answer and being the cited source are two different things</h2>
+      <p>
+        I’ve had clients AI knew cold — but every citation pointed to a directory
+        they didn’t control. A few months of foundation work later, their own
+        domain became the #1 cited source for their category. You can’t guarantee
+        a citation. You CAN load the dice.
+      </p>
+      <a class="button" href={CTA.calendly}>Let’s load your dice</a>
+    </div>
+  </section>
+
+  <!-- THE LOOP (cream textured, steps) -->
   <section class="band tex-cream">
     <div class="container">
-      <div class="prose" data-reveal>
+      <div class="measure" data-reveal>
         <p class="subhead">the framework</p>
         <h2>The AI Intelligence Loop</h2>
-        <p>
-          Most agencies skip straight to producing content and hope it lands. I run
-          a loop instead — and it compounds. That’s the whole point.
-        </p>
+        <p>Most agencies skip to producing content and hope it lands. I run a loop instead — and it compounds.</p>
       </div>
       <div class="steps">
         {steps.map((s, i) => (
-          <div class="step" data-reveal data-reveal-delay={String(i % 4)}>
+          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
             <span class="step__n">{i + 1}</span>
             <h3>{s.t}</h3>
             <p>{s.d}</p>
@@ -130,26 +132,8 @@ const steps = [
     </div>
   </section>
 
-  <!-- ANSWER VS CITATION (rust, pull-quote, asymmetric) -->
-  <section class="band section--rust">
-    <div class="container answer-grid">
-      <p class="pullquote" data-reveal="left">Being the answer and being the cited source are two different things.</p>
-      <div class="prose" data-reveal="right">
-        <p>
-          I’ve had clients AI knew cold — named in any category prompt — but every
-          citation pointed to a directory they had zero control over. A few months
-          of foundation work later, one client’s own domain became the #1 cited
-          source for their category, with a 450% jump in how often AI pulled from a
-          single retrofitted page.
-        </p>
-        <p>You can’t guarantee a citation. You CAN load the dice.</p>
-        <a class="button" href={CTA.calendly}>Let’s load your dice</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CITED NEWSLETTER (peach gingham, framed circle) -->
-  <section class="band section--peach cited-band">
+  <!-- CITED (peach gingham, feathered photo split) -->
+  <section class="band cited-band">
     <div class="container cited">
       <div data-reveal="left">
         <p class="subhead">my newsletter</p>
@@ -161,18 +145,18 @@ const steps = [
         </p>
         <a class="button" href={CTA.newsletter}>Subscribe to Cited</a>
       </div>
-      <FramedPhoto src="/images/laura-2.jpg" alt="Laura at home" shape="circle" reveal delay="1" />
+      <FramedPhoto src="/images/laura-2.jpg" alt="Laura at home" shape="feather" ratio="3 / 4" reveal delay="1" />
     </div>
   </section>
 
   <!-- FINAL CTA (forest) -->
   <section class="band section--forest">
-    <div class="container prose final" data-reveal="scale">
+    <div class="container measure measure--center final" data-reveal="scale">
       <img class="badge" src="/brand/logo/badge-green.svg" alt="" aria-hidden="true" width="84" height="84" />
       <p class="subhead">featured speaker · cincy ai week</p>
       <h2>Want your brand cited by AI by Q3?</h2>
       <p>That’s the work. Let’s talk about it.</p>
-      <div class="hero__ctas">
+      <div class="ctas">
         <a class="button" href={CTA.calendly}>Book a call</a>
         <a class="button button--ghost" href="/blog">Read the blog</a>
       </div>
@@ -181,54 +165,46 @@ const steps = [
 </BaseLayout>
 
 <style>
-  .hero { padding-block: var(--space-5) var(--space-5); }
-  .hero__grid {
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: var(--space-5);
-    align-items: center;
-  }
-  .hero h1 { margin-block: var(--space-1) var(--space-2); }
-  .hero__lede { font-size: var(--text-lg); max-width: 46ch; }
-  .hero__ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
-  .hero__media { position: relative; }
-  .hero__sticker {
-    position: absolute; bottom: -22px; left: -22px;
-    width: 124px; height: auto; rotate: -8deg; z-index: 2;
-  }
+  /* HERO */
+  .hero { display: flex; align-items: center; min-height: 86vh; padding-block: var(--space-6); }
+  .hero__inner { max-width: 760px; }
+  .hero h1 { font-size: clamp(2.8rem, 1.8rem + 5vw, 5.5rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 48ch; }
 
-  .band { padding-block: var(--space-5); }
+  .ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+
+  .band { padding-block: var(--space-6); }
   .band--marquee { padding-block: var(--space-2); }
+  .measure { max-width: 60ch; }
+  .measure--center { margin-inline: auto; text-align: center; }
+  .measure--center .ctas { justify-content: center; }
   .cite { font-size: 0.82em; opacity: 0.85; }
 
-  /* Numbered service cards */
-  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-block: var(--space-3); }
+  .banner { min-height: 60vh; display: flex; align-items: center; }
+
+  /* Service cards — responsive auto-fit grid (3–4 across) */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-3); margin-block: var(--space-4); }
   .card {
     background: var(--cream); color: var(--brown);
-    border-radius: 14px; padding: var(--space-3);
+    border-radius: 16px; padding: var(--space-3);
     box-shadow: var(--shadow-card);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
   .card__n { font-family: var(--font-heading); font-size: var(--text-xl); color: var(--olive); }
   .card h3 { margin: 0.2rem 0 0.4rem; color: var(--rust); }
   .card p { margin-bottom: 0; color: var(--brown); }
 
-  /* Answer / pull-quote */
-  .answer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: center; }
-
-  /* Cited */
+  /* Cited split */
   .cited-band { background: var(--peach) url('/brand/patterns/pattern-peach.jpg') center / 320px repeat; }
-  .cited { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4); align-items: center; }
-  .cited :global(.framed) { max-width: 340px; justify-self: center; }
+  .cited { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+  .cited :global(.framed) { max-width: 380px; justify-self: center; }
 
-  .final { text-align: center; max-width: none; }
-  .final .hero__ctas { justify-content: center; }
   .final .badge { margin: 0 auto var(--space-2); }
 
   @media (max-width: 760px) {
-    .hero__grid, .cards, .answer-grid, .cited { grid-template-columns: 1fr; }
-    .hero__media { order: -1; }
+    .cited { grid-template-columns: 1fr; }
     .cited :global(.framed) { order: -1; }
+    .hero { min-height: 70vh; }
   }
 </style>
