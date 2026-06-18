@@ -17,10 +17,10 @@ const isActive = (href: string) =>
               <li class="has-dropdown">
                 <a href={n.href} aria-current={isActive(n.href) ? 'page' : undefined}>{n.label}</a>
                 <ul class="dropdown">
+                  <li><a href="/services" class="dropdown__all">All services</a></li>
                   {ENGAGEMENTS.map((e) => (
                     <li><a href={`/services/${e.slug}`}>{e.name}</a></li>
                   ))}
-                  <li><a href="/services">All services</a></li>
                 </ul>
               </li>
             ) : (
@@ -106,15 +106,19 @@ const isActive = (href: string) =>
     font-size: var(--text-sm);
   }
   .dropdown a:hover { background: var(--cream-deep); color: var(--brown); }
+  .dropdown__all { font-weight: 700; color: var(--brown); }
+  .dropdown li:has(.dropdown__all) { border-bottom: 1px solid var(--color-border); margin-bottom: 0.2rem; padding-bottom: 0.2rem; }
 
-  /* On small screens, let the dropdown sit inline rather than overlay */
+  /* On small screens the submenu sits inline and stays expanded (no fragile
+     hover/focus toggle on touch); tapping "Services" still opens the hub. */
   @media (max-width: 760px) {
     .dropdown {
       position: static; opacity: 1; visibility: visible; transform: none;
       box-shadow: none; border: 0; background: transparent; min-width: 0;
       margin: 0 0 0 var(--space-2); padding: 0;
-      display: none;
+      display: block;
     }
-    .has-dropdown:focus-within .dropdown { display: block; }
+    .dropdown__all { font-weight: 600; }
+    .dropdown li:has(.dropdown__all) { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
   }
 </style>

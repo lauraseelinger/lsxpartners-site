@@ -57,13 +57,13 @@ const deliverables = [
       </div>
       <div class="payoff-contrast" data-reveal="right">
         <div class="pc">
-          <div class="pc__art pc__art--patched" aria-hidden="true">
+          <div class="pc__art pc__art--patched" data-patch aria-hidden="true">
             <span class="hole" style="top:24%;left:22%"></span>
             <span class="hole" style="top:62%;left:62%"></span>
             <span class="hole" style="top:70%;left:24%"></span>
-            <span class="tape" style="top:20%;left:14%"></span>
-            <span class="tape" style="top:58%;left:52%"></span>
-            <span class="tape" style="top:66%;left:16%; rotate:8deg"></span>
+            <span class="tape" style="top:20%;left:14%" data-tape data-rot="-11" data-dx="-52" data-dy="-6"></span>
+            <span class="tape" style="top:58%;left:52%" data-tape data-rot="-7" data-dx="58" data-dy="-10"></span>
+            <span class="tape" style="top:66%;left:16%" data-tape data-rot="9" data-dx="-46" data-dy="16"></span>
           </div>
           <span class="pc__lbl">patching holes</span>
           <p>Fix-by-fix on a finished site — endless little patches, always a step behind.</p>
@@ -87,7 +87,17 @@ const deliverables = [
   /* patched: holes with torn masking tape slapped over them */
   .pc__art--patched { background: var(--forest); }
   .hole { position: absolute; width: 20px; height: 20px; border-radius: 50%; background: #000; opacity: 0.5; }
-  .tape { position: absolute; width: 58px; height: 20px; background: color-mix(in srgb, var(--cream) 75%, var(--amber)); opacity: 0.9; transform: rotate(-11deg); box-shadow: 0 1px 3px rgba(0,0,0,0.3); clip-path: polygon(2% 8%, 98% 0, 100% 92%, 4% 100%); }
+  /* torn masking tape: frayed/jagged short ends, faint paper texture */
+  .tape {
+    position: absolute; width: 60px; height: 22px;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 7px, rgba(120,90,40,0.07) 7px 8px),
+      color-mix(in srgb, var(--cream) 72%, var(--amber));
+    opacity: 0.94; transform-origin: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    clip-path: polygon(5% 4%, 95% 2%, 100% 16%, 94% 32%, 99% 50%, 93% 66%, 100% 82%, 95% 98%, 6% 100%, 1% 84%, 7% 68%, 2% 50%, 8% 34%, 2% 18%);
+  }
+  @media (prefers-reduced-motion: reduce) { .tape { transition: none; } }
   /* framed: an iron scaffolding lattice */
   .pc__art--frame {
     background:
@@ -98,3 +108,30 @@ const deliverables = [
   }
   @media (max-width: 600px) { .payoff-contrast { grid-template-columns: 1fr; } }
 </style>
+
+<script>
+  // Tape slides over the holes as the patched panel scrolls through view.
+  document.querySelectorAll('[data-patch]').forEach((panel) => {
+    const tapes = Array.from(panel.querySelectorAll<HTMLElement>('[data-tape]'));
+    const place = () => {
+      const rect = panel.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * 0.85 - rect.top) / (vh * 0.5)));
+      tapes.forEach((t) => {
+        const rot = Number(t.dataset.rot || 0);
+        const dx = Number(t.dataset.dx || 0);
+        const dy = Number(t.dataset.dy || 0);
+        t.style.transform = `translate(${dx * (1 - p)}px, ${dy * (1 - p)}px) rotate(${rot}deg)`;
+        t.style.opacity = String(Math.min(1, p * 1.3));
+      });
+    };
+    place();
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { place(); ticking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', place, { passive: true });
+  });
+</script>
