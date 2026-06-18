@@ -82,7 +82,7 @@ const faqs = [
   </section>
 
   <!-- START FINDER — loud, interactive "where should you start?" -->
-  <StitchDivider bg="amber" stitch="brown" />
+  <StitchDivider bg="blue" stitch="brown" />
   <section class="band finder-band">
     <div class="container">
       <div class="finder-band__head" data-reveal>
@@ -93,9 +93,9 @@ const faqs = [
       <div class="finder-band__wrap" data-reveal>
         <div class="finder-doodle" aria-hidden="true">
           <span class="finder-callout">you don’t even have to give me your email!!</span>
-          <svg class="finder-arrow" viewBox="0 0 150 140" fill="none">
-            <path d="M18 16 C 70 8 96 44 78 84 C 70 102 84 116 120 116" stroke="var(--brown)" stroke-width="5" stroke-linecap="round"/>
-            <path d="M104 102 L122 117 L106 126" stroke="var(--brown)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg class="finder-arrow" viewBox="0 0 120 130" fill="none">
+            <path d="M14 14 C 64 16 96 40 82 80 C 78 94 80 104 78 118" stroke="var(--brown)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M64 104 L79 121 L94 104" stroke="var(--brown)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <StartFinder />
@@ -169,13 +169,13 @@ const faqs = [
   .eng-topics--dark ul { color: var(--cream); }
 
   /* Loud Start Finder band */
-  .finder-band { background: var(--amber); }
+  .finder-band { background: var(--blue); }
   .finder-band__head { max-width: 64ch; margin-bottom: var(--space-3); }
   .finder-band .subhead { color: var(--brown); opacity: 0.9; }
   .finder-band h2 { color: var(--brown); font-size: clamp(2.2rem, 1.5rem + 3vw, 3.8rem); }
   .finder-band__hype { font-size: var(--text-lg); color: var(--brown); max-width: 52ch; }
   .finder-band__wrap { position: relative; }
-  .finder-doodle { display: flex; align-items: flex-end; justify-content: flex-end; gap: var(--space-1); padding-right: 10%; margin-bottom: -8px; }
+  .finder-doodle { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-2); margin-bottom: -6px; }
   .finder-callout {
     font-family: var(--font-sub); font-weight: 800; font-style: italic;
     color: var(--brown); background: var(--cream);

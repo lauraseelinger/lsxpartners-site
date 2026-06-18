@@ -1,28 +1,37 @@
 ---
 import { CTA } from '../consts';
 
-// Interactive "where should you start?" picker. No email required — selections
-// recommend an entry point + give strategic prompts, fire an anonymous analytics
-// event (aggregate intel for Laura), and ride into Calendly as tracking params
-// if (and only if) the visitor books.
+// Interactive "where should you start?" picker. No email required. Step 1 (org)
+// drives Step 2 (situation) — agencies get client-centric phrasing. Selections
+// fire an anonymous analytics event and ride into Calendly as UTM params if booked.
 const orgs = [
   { id: 'brand', label: 'In-house brand team' },
   { id: 'agency', label: 'Agency or consultancy' },
   { id: 'founder', label: 'Founder or small team' },
 ];
-const goals = [
+const brandGoals = [
   { id: 'invisible', label: 'We’re missing (or wrong) in AI answers' },
   { id: 'rebuild', label: 'We’re building or redesigning our site' },
   { id: 'ongoing', label: 'We want an ongoing partner' },
   { id: 'where', label: 'We just want to know where we stand' },
 ];
+const GOALS = {
+  brand: brandGoals,
+  founder: brandGoals,
+  agency: [
+    { id: 'invisible', label: 'A client is missing (or wrong) in AI answers' },
+    { id: 'rebuild', label: 'We’re rebuilding a client’s site' },
+    { id: 'ongoing', label: 'We want an ongoing AI-visibility partner for clients' },
+    { id: 'where', label: 'We want to see where a client stands' },
+  ],
+};
 const RECS = {
-  where: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'Get the truth before you spend a dollar changing anything.', bullets: ['What AI actually says about you across the major platforms', 'Which third-party sources it cites instead of you', 'The gap between how you describe yourself and how buyers do'] },
-  rebuild: { slug: 'ai-visibility-blueprint', name: 'AI Visibility Blueprint', why: 'A redesign is the cheapest time to get this right.', bullets: ['What each page type needs to answer for your buyers', 'Where your real opportunities are in the new structure', 'How to launch citation-ready instead of patching later'] },
-  ongoing: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'You want the expertise without staffing for it.', bullets: ['Which conversations to monitor in your category', 'What to publish so visibility compounds over time', 'How this folds into what your team already does'] },
-  invisible_brand: { slug: 'ai-visibility-intensive', name: 'The AI Visibility Intensive', why: 'You’re a known name that needs to move now.', bullets: ['Whether you own the answer, the citation, or neither', 'Which departments need aligning to actually move', 'The fastest path from invisible to cited for your brand'] },
-  invisible_agency: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'You need the AI visibility lane covered for clients.', bullets: ['Where your client is absent vs their competitors', 'How to offer AI visibility without staffing for it', 'What you can run yourself vs where you need backup'] },
-  invisible_founder: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'Start with the truth, then focus on what matters at your size.', bullets: ['What AI says about you today, with receipts', 'The handful of moves that matter most right now', 'Where to focus first so it isn’t overwhelming'] },
+  where: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'Get the truth before spending a dollar changing anything.', bullets: ['What AI actually says across the major platforms', 'Which third-party sources it cites instead', 'The gap between the brand’s story and the buyer’s'] },
+  rebuild: { slug: 'ai-visibility-blueprint', name: 'AI Visibility Blueprint', why: 'A redesign is the cheapest time to get this right.', bullets: ['What each page type needs to answer for buyers', 'Where the real opportunities are in the new structure', 'How to launch citation-ready instead of patching later'] },
+  ongoing: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'You want the expertise without staffing for it.', bullets: ['Which conversations to monitor in the category', 'What to publish so visibility compounds', 'How it folds into the team that already exists'] },
+  invisible_brand: { slug: 'ai-visibility-intensive', name: 'The AI Visibility Intensive', why: 'You’re a known name that needs to move now.', bullets: ['Whether you own the answer, the citation, or neither', 'Which departments need aligning to actually move', 'The fastest path from invisible to cited'] },
+  invisible_agency: { slug: 'embedded-partner', name: 'Embedded Partner', why: 'You need the AI visibility lane covered for clients.', bullets: ['Where the client is absent vs their competitors', 'How to offer AI visibility without staffing for it', 'What you can run vs where you want backup'] },
+  invisible_founder: { slug: 'ai-visibility-audit', name: 'AI Visibility Audit', why: 'Start with the truth, then focus on what matters at your size.', bullets: ['What AI says about you today, with receipts', 'The handful of moves that matter most now', 'Where to focus first so it isn’t overwhelming'] },
 };
 ---
 <div class="finder" data-calendly={CTA.calendly}>
@@ -32,18 +41,16 @@ const RECS = {
       {orgs.map((o) => <button type="button" data-val={o.id}>{o.label}</button>)}
     </div>
   </div>
-  <div class="finder__q">
+  <div class="finder__q finder__q--goal" hidden>
     <p class="finder__label">…and</p>
-    <div class="finder__chips" data-group="goal">
-      {goals.map((g) => <button type="button" data-val={g.id}>{g.label}</button>)}
-    </div>
+    <div class="finder__chips" data-group="goal"></div>
   </div>
 
   <div class="finder__result" hidden>
     <p class="subhead">where i’d start you</p>
     <h3 data-rec="name"></h3>
     <p class="finder__why" data-rec="why"></p>
-    <p class="finder__sub">First things I’d look at for you:</p>
+    <p class="finder__sub">First things I’d look at:</p>
     <ul data-rec="bullets"></ul>
     <div class="finder__cta">
       <a class="button" data-rec="book" href={CTA.calendly}>Book a call — your answers come with you</a>
@@ -74,20 +81,21 @@ const RECS = {
   .finder__note { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); }
 </style>
 
-<script define:vars={{ RECS }}>
+<script define:vars={{ RECS, GOALS }}>
   document.querySelectorAll('.finder').forEach((finder) => {
     const state = { org: null, goal: null };
+    const goalQ = finder.querySelector('.finder__q--goal');
+    const goalChips = finder.querySelector('[data-group="goal"]');
     const result = finder.querySelector('.finder__result');
     const calendly = finder.getAttribute('data-calendly');
 
     const track = (rec) => {
       const props = { org: state.org, goal: state.goal, rec: rec.slug };
-      // Fire to whatever privacy analytics is installed (no-op if none yet).
       if (window.plausible) window.plausible('Start Finder', { props });
       if (window.gtag) window.gtag('event', 'start_finder', props);
     };
 
-    const render = () => {
+    const showResult = () => {
       if (!state.org || !state.goal) return;
       const key = state.goal === 'invisible' ? `invisible_${state.org}` : state.goal;
       const rec = RECS[key] || RECS.where;
@@ -97,21 +105,37 @@ const RECS = {
       ul.innerHTML = '';
       rec.bullets.forEach((b) => { const li = document.createElement('li'); li.textContent = b; ul.appendChild(li); });
       finder.querySelector('[data-rec="more"]').setAttribute('href', `/services/${rec.slug}`);
-      const url = `${calendly}?utm_source=lsxpartners&utm_medium=start-finder&utm_campaign=${state.org}_${state.goal}`;
-      finder.querySelector('[data-rec="book"]').setAttribute('href', url);
+      finder.querySelector('[data-rec="book"]').setAttribute('href', `${calendly}?utm_source=lsxpartners&utm_medium=start-finder&utm_campaign=${state.org}_${state.goal}`);
       result.hidden = false;
       track(rec);
     };
 
-    finder.querySelectorAll('.finder__chips').forEach((group) => {
-      const key = group.getAttribute('data-group');
-      group.querySelectorAll('button').forEach((btn) => {
+    const renderGoals = (org) => {
+      goalChips.innerHTML = '';
+      (GOALS[org] || []).forEach((g) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.setAttribute('data-val', g.id);
+        btn.textContent = g.label;
         btn.addEventListener('click', () => {
-          group.querySelectorAll('button').forEach((b) => b.classList.remove('is-selected'));
+          goalChips.querySelectorAll('button').forEach((b) => b.classList.remove('is-selected'));
           btn.classList.add('is-selected');
-          state[key] = btn.getAttribute('data-val');
-          render();
+          state.goal = g.id;
+          showResult();
         });
+        goalChips.appendChild(btn);
+      });
+      goalQ.hidden = false;
+    };
+
+    finder.querySelectorAll('[data-group="org"] button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        finder.querySelectorAll('[data-group="org"] button').forEach((b) => b.classList.remove('is-selected'));
+        btn.classList.add('is-selected');
+        state.org = btn.getAttribute('data-val');
+        state.goal = null;
+        result.hidden = true;
+        renderGoals(state.org);
       });
     });
   });
