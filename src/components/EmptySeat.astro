@@ -12,7 +12,7 @@ const mates = [
   { cls: 'pos-e' },   // front-left
 ];
 ---
-<div class="board">
+<div class="board" data-board>
   <!-- table -->
   <svg class="board__table" viewBox="0 0 540 360" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
     <ellipse cx="270" cy="228" rx="210" ry="72" fill="var(--brown)" />
@@ -36,8 +36,12 @@ const mates = [
   <!-- my seat -->
   <div class="bub pos-me">
     <span class="chair chair--me" aria-hidden="true"></span>
-    <span class="ava ava--me">
-      <img class="ava__photo" src="/images/laura-cutout.png" alt="Laura Seelinger" />
+    <span class="ava ava--me" data-seat>
+      <svg class="ava__ghost" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="24" r="13" fill="none" stroke="var(--rust)" stroke-width="2.5" stroke-dasharray="3 4" />
+        <path d="M10 60 C10 43 54 43 54 60 Z" fill="none" stroke="var(--rust)" stroke-width="2.5" stroke-dasharray="3 4" />
+      </svg>
+      <img class="ava__photo" src="/images/laura-cutout.png" alt="Laura Seelinger" data-head />
     </span>
   </div>
 
@@ -79,13 +83,19 @@ const mates = [
     overflow: hidden; background: var(--cream); box-shadow: var(--shadow-card); }
   .ava--mate svg { width: 100%; height: 100%; }
 
-  /* my seat: real photo, head sized to match the silhouette heads, ringed rust */
+  /* my seat: empty dotted silhouette, then my real photo floats in to fill it */
   .ava--me { border: 2.5px solid var(--rust); }
+  .ava__ghost { position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity 0.3s ease; }
+  .ava--me.is-filled .ava__ghost { opacity: 0.18; }
   .ava__photo {
-    position: absolute; top: 8%; left: 50%; transform: translateX(-50%);
-    width: 86%; height: auto;
+    position: absolute; top: 8%; left: 50%; transform: translate(-50%, 0);
+    width: 86%; height: auto; opacity: 0;
     -webkit-mask-image: radial-gradient(120% 90% at 50% 36%, #000 66%, transparent 100%);
     mask-image: radial-gradient(120% 90% at 50% 36%, #000 66%, transparent 100%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ava__photo { opacity: 1 !important; transform: translate(-50%, 0) !important; }
+    .ava--me.is-filled .ava__ghost { opacity: 0.18; }
   }
 
   /* arrow labels */
@@ -111,3 +121,31 @@ const mates = [
     .tag--me .tag__arrow--up { width: 24px; }
   }
 </style>
+
+<script>
+  // The empty seat fills: my photo floats down into place as the section
+  // scrolls through view, and the dotted silhouette fades behind it.
+  document.querySelectorAll('[data-board]').forEach((board) => {
+    const photo = board.querySelector('[data-head]') as HTMLElement | null;
+    const seat = board.querySelector('.ava--me') as HTMLElement | null;
+    if (!photo) return;
+    const update = () => {
+      const rect = board.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * 0.88 - rect.top) / (vh * 0.5)));
+      const y = -38 * (1 - p);            // float down from above
+      const scale = 0.78 + 0.22 * p;
+      photo.style.transform = `translate(-50%, ${y}px) scale(${scale})`;
+      photo.style.opacity = String(Math.min(1, p * 1.25));
+      if (seat) seat.classList.toggle('is-filled', p > 0.78);
+    };
+    update();
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { update(); ticking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+  });
+</script>
