@@ -1,72 +1,130 @@
 ---
-// Your team at a table (real head-and-shoulders silhouettes): three seats
-// filled in olive, and the AI-visibility seat sitting empty as a dotted rust
-// outline. As the section scrolls through view, Laura's real head travels in
-// and lands on that seat, the outline fills to a solid silhouette — the gap
-// you had, easily filled. All seats are the same scale.
-const MAN = "M62.4,0.0 L69.2,0.0 L74.8,3.2 L80.4,4.4 L83.6,6.0 L87.6,10.4 L88.8,14.0 L89.2,28.0 L90.8,32.0 L89.2,38.8 L84.8,46.0 L81.6,55.6 L82.0,62.4 L92.8,72.8 L113.2,80.0 L120.0,85.2 L121.6,92.0 L124.0,97.2 L125.6,105.2 L125.6,120.0 L0.0,120.0 L2.4,104.0 L6.4,86.8 L8.8,80.0 L11.6,78.4 L36.8,72.0 L50.0,63.2 L50.4,58.4 L48.4,54.4 L47.2,48.8 L41.2,38.8 L40.8,26.0 L41.6,18.8 L44.0,12.4 L48.8,6.4 L56.8,1.6 L62.0,0.4 Z";
-const WOMAN = "M56.6,0.0 L59.6,0.4 L62.6,1.9 L67.5,1.9 L69.1,2.6 L75.8,10.2 L84.9,23.8 L90.2,37.0 L90.2,39.6 L89.1,43.0 L89.1,46.4 L86.0,53.6 L87.5,70.6 L84.5,75.8 L86.4,77.7 L97.0,83.0 L103.4,85.3 L107.2,87.9 L111.3,92.5 L113.6,96.6 L114.7,101.5 L117.0,120.0 L0.0,120.0 L1.1,106.0 L4.2,97.4 L14.0,87.9 L27.9,80.0 L24.9,74.0 L23.8,67.5 L23.8,61.9 L25.3,57.4 L24.5,50.6 L25.3,48.3 L25.7,38.1 L27.9,28.3 L30.6,21.1 L34.7,13.6 L38.9,9.1 L46.8,3.4 L54.0,0.4 L56.2,0.4 Z";
-const team = [
-  { d: MAN, vw: 125.6 },
-  { d: WOMAN, vw: 117 },
-  { d: MAN, vw: 125.6 },
+// A round boardroom table seen in perspective. Three seats are filled with
+// placeholder teammate avatars (olive silhouette in a circle); one seat — the
+// AI-visibility seat — sits empty as a dotted rust ring. As the section scrolls
+// into view, Laura's real (feathered) photo drops into that seat: the gap your
+// team has, easily filled. Hand-drawn arrow labels call out team vs. expert.
+const mates = [
+  { cls: 'pos-a' },   // left
+  { cls: 'pos-b' },   // back-left
+  { cls: 'pos-c' },   // back-right
 ];
 ---
-<div class="seats" data-seats>
-  <div class="seats__people">
-    {team.map((p) => (
-      <svg class="seat" viewBox={`0 0 ${p.vw} 120`} aria-hidden="true">
-        <path d={p.d} fill="var(--olive)" />
-      </svg>
-    ))}
-    <svg class="seat seat--me" viewBox="0 0 117 120" aria-hidden="true">
-      <path class="silo" d={WOMAN} fill="none" stroke="var(--rust)" stroke-width="2.5" stroke-dasharray="3 6" stroke-linejoin="round" />
-      <image class="myhead" href="/images/laura-cutout.png" x="18" y="-12" width="80" height="82" data-head />
+<div class="board" data-seats>
+  <!-- table -->
+  <svg class="board__table" viewBox="0 0 540 360" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+    <ellipse cx="270" cy="228" rx="210" ry="72" fill="var(--brown)" />
+    <ellipse cx="270" cy="218" rx="210" ry="72" fill="color-mix(in srgb, var(--brown) 82%, var(--cream))" />
+    <ellipse cx="270" cy="218" rx="168" ry="52" fill="color-mix(in srgb, var(--brown) 70%, var(--cream))" />
+  </svg>
+
+  <!-- teammate seats -->
+  {mates.map((m) => (
+    <div class:list={['bub', m.cls]}>
+      <span class="chair" aria-hidden="true"></span>
+      <span class="ava ava--mate">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="24" r="13" fill="var(--olive)" />
+          <path d="M10 60 C10 43 54 43 54 60 Z" fill="var(--olive)" />
+        </svg>
+      </span>
+    </div>
+  ))}
+
+  <!-- my seat -->
+  <div class="bub pos-me">
+    <span class="chair chair--me" aria-hidden="true"></span>
+    <span class="ava ava--me" data-seat>
+      <span class="ring" aria-hidden="true"></span>
+      <img class="ava__photo" src="/images/laura-cutout.png" alt="Laura Seelinger" data-head />
+    </span>
+  </div>
+
+  <!-- labels -->
+  <div class="tag tag--team" aria-hidden="true">
+    <span class="tag__note">Your team</span>
+    <svg class="tag__arrow" viewBox="0 0 110 90" fill="none">
+      <path d="M6 12 C 60 8 96 26 96 66" stroke="var(--brown)" stroke-width="5" stroke-linecap="round" />
+      <path d="M80 56 L97 70 L106 50" stroke="var(--brown)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </div>
-  <div class="seats__table" aria-hidden="true"></div>
-  <p class="seats__tag">your AI visibility seat</p>
+  <div class="tag tag--me" aria-hidden="true">
+    <svg class="tag__arrow tag__arrow--up" viewBox="0 0 110 90" fill="none">
+      <path d="M104 78 C 50 82 14 64 14 24" stroke="var(--rust)" stroke-width="5" stroke-linecap="round" />
+      <path d="M30 34 L13 18 L4 40" stroke="var(--rust)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span class="tag__note tag__note--rust">AI visibility expert</span>
+  </div>
 </div>
 
 <style>
-  .seats { width: min(460px, 100%); margin-inline: auto; }
-  .seats__people { display: flex; align-items: flex-end; justify-content: center; gap: 4px; position: relative; z-index: 1; }
-  .seat { height: 132px; width: auto; display: block; }
-  .seat path[fill] { opacity: 0.82; }
-  .seat--me { overflow: visible; }
-  .silo { transition: fill 0.3s ease, stroke-dasharray 0.3s ease; }
-  .seat--me.is-filled .silo { fill: var(--rust); stroke-dasharray: none; }
-  .myhead { transform-box: fill-box; transform-origin: center; }
-  /* The table edge sits in front of the lower torsos so the row reads as seated */
-  .seats__table {
-    position: relative; z-index: 2; height: 30px; margin-top: -26px; border-radius: 5px;
-    background:
-      linear-gradient(var(--cream-deep) 0 9px, transparent 9px),
-      linear-gradient(to bottom, color-mix(in srgb, var(--brown) 88%, var(--cream)), var(--brown));
-    box-shadow: var(--shadow-card);
+  .board { position: relative; width: min(540px, 100%); aspect-ratio: 3 / 2; margin-inline: auto; }
+  .board__table { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; filter: drop-shadow(0 8px 14px rgba(58, 42, 30, 0.18)); }
+
+  .bub { position: absolute; width: 84px; transform: translate(-50%, -50%); z-index: 2; }
+  .pos-a { left: 16%; top: 49%; }
+  .pos-b { left: 33%; top: 25%; }
+  .pos-c { left: 67%; top: 25%; }
+  .pos-me { left: 84%; top: 49%; }
+
+  /* chair back peeking behind each avatar */
+  .chair { position: absolute; left: 50%; top: 54%; width: 66px; height: 78px; transform: translate(-50%, -50%);
+    background: color-mix(in srgb, var(--olive) 30%, var(--cream)); border-radius: 16px 16px 10px 10px; z-index: -1; }
+  .chair--me { background: color-mix(in srgb, var(--rust) 20%, var(--cream)); }
+
+  .ava { position: relative; display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%; overflow: hidden;
+    background: var(--cream); box-shadow: var(--shadow-card); }
+  .ava--mate svg { width: 100%; height: 100%; }
+
+  /* my empty seat → filled */
+  .ava--me { overflow: visible; }
+  .ring { position: absolute; inset: 0; border-radius: 50%; border: 2.5px dashed var(--rust);
+    transition: border-color 0.3s ease, border-style 0.3s ease; }
+  .ava__photo {
+    width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 28%;
+    -webkit-mask-image: radial-gradient(closest-side, #000 70%, transparent 100%);
+    mask-image: radial-gradient(closest-side, #000 70%, transparent 100%);
+    transform-origin: center;
   }
-  .seats__tag {
-    margin: 0.7rem 0 0; text-align: right; padding-right: 9%;
-    font-family: var(--font-sub); font-style: italic; font-weight: 800;
-    color: var(--rust); font-size: var(--text-sm);
+  .ava--me.is-filled .ring { border-style: solid; border-color: color-mix(in srgb, var(--rust) 55%, transparent); }
+
+  /* arrow labels */
+  .tag { position: absolute; display: flex; align-items: center; gap: 2px; z-index: 3; }
+  .tag__note {
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-lg);
+    color: var(--brown); background: var(--cream); padding: 0.4rem 0.85rem; border-radius: 10px;
+    box-shadow: var(--shadow-card); white-space: nowrap; line-height: 1.1;
+  }
+  .tag__note--rust { color: var(--rust); }
+  .tag__arrow { width: 58px; height: auto; flex: none; }
+  .tag--team { left: -2%; top: -6%; transform: rotate(-3deg); }
+  .tag--team .tag__note { transform: rotate(1deg); }
+  .tag--me { right: -4%; bottom: -4%; transform: rotate(2deg); }
+
+  @media (max-width: 560px) {
+    .bub { width: 64px; }
+    .ava, .chair { width: 64px; }
+    .ava { height: 64px; }
+    .chair { height: 60px; }
+    .tag__note { font-size: var(--text-sm); }
+    .tag__arrow { width: 42px; }
   }
 </style>
 
 <script>
-  document.querySelectorAll('[data-seats]').forEach((seats) => {
-    const head = seats.querySelector('[data-head]') as SVGElement | null;
-    const meSeat = seats.querySelector('.seat--me') as HTMLElement | null;
-    if (!head) return;
+  document.querySelectorAll('[data-seats]').forEach((board) => {
+    const photo = board.querySelector('[data-head]') as HTMLElement | null;
+    const seat = board.querySelector('.ava--me') as HTMLElement | null;
+    if (!photo) return;
     const update = () => {
-      const rect = seats.getBoundingClientRect();
+      const rect = board.getBoundingClientRect();
       const vh = window.innerHeight;
       const p = Math.min(1, Math.max(0, (vh * 0.9 - rect.top) / (vh * 0.55)));
-      const x = 42 * (1 - p);      // drift in from the right (viewBox units)
-      const y = -64 * (1 - p);     // drop down from above
-      const scale = 0.68 + 0.32 * p;
-      head.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
-      head.style.opacity = String(0.1 + 0.9 * p);
-      if (meSeat) meSeat.classList.toggle('is-filled', p > 0.8);
+      const y = -52 * (1 - p);      // drop in from above
+      const scale = 0.72 + 0.28 * p;
+      photo.style.transform = `translateY(${y}px) scale(${scale})`;
+      photo.style.opacity = String(0.08 + 0.92 * p);
+      if (seat) seat.classList.toggle('is-filled', p > 0.8);
     };
     update();
     let ticking = false;
