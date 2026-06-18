@@ -1,6 +1,14 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
 import AnswerBlock from '../../components/AnswerBlock.astro';
+import HoverReveal from '../../components/HoverReveal.astro';
+
+const prompts = [
+  { title: '“What’s the best [category] for me?”', blurb: 'The big one. You find out whether AI names you at all — and if it does, whether it’s citing your own site, a competitor’s comparison page, or a Reddit thread. This is where most brands learn they’re the answer but not the source.' },
+  { title: '“Is [your brand] any good?”', blurb: 'This surfaces your AI brand identity: what the whole internet has decided you are. Usually it’s built from reviews and forums — not the messaging you carefully wrote.' },
+  { title: '“[Your brand] vs a competitor”', blurb: 'Comparison prompts reveal how AI ranks you against rivals and which sources it trusts to make that call — almost always third-party, rarely you.' },
+  { title: '“How do I fix [the problem you solve]?”', blurb: 'Top-of-funnel prompts show whether you even enter the conversation before someone knows your name. Being absent here is one of the most common — and most fixable — findings.' },
+];
 
 const steps = [
   { t: 'Prompt audit', d: 'The real questions your buyers ask, run across ChatGPT, Claude, Gemini, Perplexity and Google AI — with every source each one cites captured.' },
@@ -47,6 +55,20 @@ const steps = [
             <p>{s.d}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO — pick a question your buyers ask AI -->
+  <section class="band tex-cream">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">a taste of it · hover a question</p>
+        <h2>Pick a question your buyers ask AI</h2>
+        <p>Here’s the kind of thing the audit surfaces for each one — on your brand, with receipts.</p>
+      </div>
+      <div data-reveal>
+        <HoverReveal items={prompts} />
       </div>
     </div>
   </section>
