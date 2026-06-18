@@ -64,7 +64,7 @@ export const ENGAGEMENTS = [
     eyebrow: 'the flagship · one month',
     tagline: 'I come in, and in one month your brand goes from invisible to cited.',
     summary: 'A one-month, all-in engagement for brands that need to move now — full audit, audience intelligence, and the foundation to flip how AI talks about you.',
-    image: '/images/hero-standing.jpg',
+    image: '/images/laura-blazer-phone.jpg',
   },
   {
     slug: 'ai-visibility-blueprint',
