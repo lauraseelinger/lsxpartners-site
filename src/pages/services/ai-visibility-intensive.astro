@@ -81,18 +81,23 @@ const weeks = [
 
   <!-- WHY IT WORKS (rust) -->
   <section class="band section--rust">
-    <div class="container measure" data-reveal="left">
-      <p class="subhead">why it works</p>
-      <h2>I’m in this every single day</h2>
-      <p>
-        I test the tools myself and run this process across real client work, so
-        you get learnings months before the standard agency cycle would surface
-        them. I’ve spent 15+ years across agency and corporate, including regulated
-        industries where nothing ships without medical, legal and brand sign-off.
-        That’s why the strategy I map actually gets agreed on and moves, instead of
-        stalling the second it hits someone’s queue.
-      </p>
-      <a class="button" href={CTA.calendly}>See if it’s a fit</a>
+    <div class="container">
+      <div class="measure" data-reveal="left">
+        <p class="subhead">why it works</p>
+        <h2>I’m in this every single day</h2>
+        <p>
+          I test the tools myself and run this process across real client work, so
+          you get learnings months before the standard agency cycle would surface them.
+          That’s why the strategy I map actually gets agreed on and moves, instead of
+          stalling the second it hits someone’s queue.
+        </p>
+      </div>
+      <div class="creds">
+        <div class="cred" data-reveal><span class="cred__big">15+ yrs</span><span>across agency &amp; corporate marketing</span></div>
+        <div class="cred" data-reveal data-reveal-delay="1"><span class="cred__big">Regulated</span><span>healthcare &amp; MedTech — medical, legal &amp; brand sign-off</span></div>
+        <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">Every day</span><span>testing tools + running real client work</span></div>
+      </div>
+      <a class="button" href={CTA.calendly} style="margin-top: var(--space-4)">See if it’s a fit</a>
     </div>
   </section>
 </EngagementLayout>
@@ -104,4 +109,11 @@ const weeks = [
   .deliv h3 { color: var(--peach); margin: 0 0 0.2rem; font-size: var(--text-lg); }
   .deliv p { margin: 0; font-size: var(--text-sm); color: var(--cream); opacity: 0.92; }
   @media (max-width: 680px) { .delivs { grid-template-columns: 1fr; } }
+
+  /* Credentials strip on the rust band */
+  .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+  .cred { display: flex; flex-direction: column; gap: 0.2rem; border-top: 2px solid rgba(252, 245, 229, 0.4); padding-top: var(--space-2); }
+  .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
+  .cred span:last-child { font-size: var(--text-sm); color: var(--cream); opacity: 0.9; }
+  @media (max-width: 680px) { .creds { grid-template-columns: 1fr; } }
 </style>

@@ -32,7 +32,7 @@ const deliverables = [
           brands and as the embedded strategy lane inside agency redesign teams.
         </p>
       </div>
-      <FramedPhoto src="/images/laura-laptop-site.jpg" alt="Laura reviewing a website build" shape="feather" ratio="4 / 3" reveal delay="1" />
+      <FramedPhoto src="/images/hero-couch.jpg" alt="Laura Seelinger" shape="feather" ratio="4 / 3" reveal delay="1" />
     </div>
   </section>
 
@@ -55,13 +55,22 @@ const deliverables = [
         A Blueprint during a redesign means you’re optimized from the ground up.
       </p>
       <div class="payoff-contrast">
-        <div class="pc pc--old">
-          <span class="pc__lbl">patching tires roadside</span>
-          <p>Fix-by-fix on a finished site. Endless little updates, always a step behind.</p>
+        <div class="pc">
+          <div class="pc__art pc__art--patched" aria-hidden="true">
+            <span class="hole" style="top:24%;left:22%"></span>
+            <span class="hole" style="top:62%;left:62%"></span>
+            <span class="hole" style="top:70%;left:24%"></span>
+            <span class="tape" style="top:20%;left:14%"></span>
+            <span class="tape" style="top:58%;left:52%"></span>
+            <span class="tape" style="top:66%;left:16%; rotate:8deg"></span>
+          </div>
+          <span class="pc__lbl">patching holes</span>
+          <p>Fix-by-fix on a finished site — endless little patches, always a step behind.</p>
         </div>
-        <div class="pc pc--new">
-          <span class="pc__lbl">on the railway</span>
-          <p>Built right once — then implementing at a speed competitors can’t touch.</p>
+        <div class="pc">
+          <div class="pc__art pc__art--frame" aria-hidden="true"></div>
+          <span class="pc__lbl">built on a frame</span>
+          <p>A structure that holds, so you implement at a speed competitors can’t touch.</p>
         </div>
       </div>
     </div>
@@ -69,12 +78,22 @@ const deliverables = [
 </EngagementLayout>
 
 <style>
-  .payoff-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); max-width: 640px; }
-  .pc { border-radius: 14px; padding: var(--space-3); }
-  .pc__lbl { display: block; font-family: var(--font-sub); font-weight: 800; font-style: italic; margin-bottom: var(--space-1); }
-  .pc p { margin: 0; font-size: var(--text-sm); }
-  .pc--old { border: 2px dashed rgba(252, 245, 229, 0.55); color: var(--cream); opacity: 0.85; }
-  .pc--new { background: var(--cream); color: var(--brown); box-shadow: var(--shadow-card); }
-  .pc--new .pc__lbl { color: var(--rust); }
+  .payoff-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); max-width: 680px; }
+  .pc { background: var(--cream); color: var(--brown); border-radius: 14px; padding: var(--space-2); box-shadow: var(--shadow-card); }
+  .pc__art { position: relative; height: 120px; border-radius: 10px; overflow: hidden; margin-bottom: var(--space-2); }
+  .pc__lbl { display: block; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--rust); margin: 0 var(--space-1) 0.2rem; }
+  .pc p { margin: 0 var(--space-1) var(--space-1); font-size: var(--text-sm); }
+  /* patched: holes with torn masking tape slapped over them */
+  .pc__art--patched { background: var(--forest); }
+  .hole { position: absolute; width: 20px; height: 20px; border-radius: 50%; background: #000; opacity: 0.5; }
+  .tape { position: absolute; width: 58px; height: 20px; background: color-mix(in srgb, var(--cream) 75%, var(--amber)); opacity: 0.9; transform: rotate(-11deg); box-shadow: 0 1px 3px rgba(0,0,0,0.3); clip-path: polygon(2% 8%, 98% 0, 100% 92%, 4% 100%); }
+  /* framed: an iron scaffolding lattice */
+  .pc__art--frame {
+    background:
+      repeating-linear-gradient(0deg, transparent 0 23px, color-mix(in srgb, var(--blue) 70%, var(--brown)) 23px 25px),
+      repeating-linear-gradient(90deg, transparent 0 23px, color-mix(in srgb, var(--blue) 70%, var(--brown)) 23px 25px),
+      color-mix(in srgb, var(--blue) 40%, var(--cream));
+    border: 3px solid var(--brown);
+  }
   @media (max-width: 600px) { .payoff-contrast { grid-template-columns: 1fr; } }
 </style>
