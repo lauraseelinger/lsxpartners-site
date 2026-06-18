@@ -1,7 +1,7 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
 import MonthTimeline from '../../components/MonthTimeline.astro';
-import FramedPhoto from '../../components/FramedPhoto.astro';
+import EmptySeat from '../../components/EmptySeat.astro';
 
 const weeks = [
   { label: 'Listen', title: 'Audience intelligence', desc: 'Ongoing mining of what your market actually says and asks — the input most strategies never get.' },
@@ -30,7 +30,7 @@ const weeks = [
           expertise, you’re the face to the client.
         </p>
       </div>
-      <FramedPhoto src="/images/laura-kitchen.jpg" alt="Laura Seelinger" shape="feather" ratio="4 / 5" reveal delay="1" />
+      <EmptySeat />
     </div>
   </section>
 
@@ -43,6 +43,11 @@ const weeks = [
       <div data-reveal>
         <MonthTimeline weeks={weeks} />
       </div>
+      <p class="measure measure--center" data-reveal style="margin-top: var(--space-4)">
+        And you’re never behind. I track everything moving in this space — new platforms,
+        shifting citation weights, fresh best practices — so your strategy reflects what’s
+        true this month, not what was true three months ago.
+      </p>
     </div>
   </section>
 
@@ -62,7 +67,7 @@ const weeks = [
           <p>A dedicated, deeper engagement scoped to one brand — yours. More hands-on and more embedded, priced for that focus.</p>
         </div>
       </div>
-      <div class="measure" data-reveal style="margin-top: var(--space-3)">
+      <div class="measure measure--center" data-reveal style="margin-top: var(--space-3)">
         <p>
           <strong>And it doesn’t stop at AI visibility.</strong> A big part of the work is
           translating what we learn into the rest of your marketing — social, experiential,

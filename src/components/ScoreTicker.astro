@@ -4,7 +4,7 @@
 ---
 <div class="ticker">
   <div class="ticker__readout">
-    <span class="ticker__num" data-ticker aria-hidden="true">63</span>
+    <span class="ticker__num" data-ticker aria-hidden="true">47</span>
     <span class="ticker__den">/ 100</span>
   </div>
   <p class="ticker__cap">
@@ -35,11 +35,11 @@
 <script>
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll<HTMLElement>('[data-ticker]').forEach((el) => {
-    if (reduce) { el.textContent = '74'; return; }
-    let val = 63;
+    if (reduce) { el.textContent = '47'; return; }
+    let val = 41;
     let delay = 90;
     const tick = () => {
-      val = Math.max(11, Math.min(98, val + Math.round((Math.random() - 0.5) * 36)));
+      val = Math.max(18, Math.min(64, val + Math.round((Math.random() - 0.5) * 30)));
       el.textContent = String(val);
       delay *= 1.18; // decelerate, like a slowing wheel
       if (delay < 750) setTimeout(tick, delay); // then it just... stops on a number

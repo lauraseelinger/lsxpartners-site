@@ -17,48 +17,62 @@ const topics = [
 ];
 const talks = [
   {
-    title: 'AI Visibility Audit: What AI Thinks About Your Brand & What to Do About It',
     event: 'Cincy AI Week',
+    title: 'AI Visibility Audit: What AI Thinks About Your Brand',
     track: 'AI for Marketing, Sales & Operations',
     dateDisplay: 'June 2026',
     startISO: '2026-06-10T14:30:00-04:00',
-    endISO: '2026-06-10T15:00:00-04:00',
-    venue: 'Union Hall (Beer Hall)',
-    city: 'Cincinnati, OH',
-    description: 'A live look at what AI engines actually say about a brand — the audit process, the gaps most brands don’t know they have, and the difference between owning the answer and owning the citation.',
+    venue: 'Union Hall', city: 'Cincinnati, OH',
+    description: 'A live look at what AI engines actually say about a brand — the gaps most brands don’t know they have, and the difference between owning the answer and owning the citation.',
     url: '',
   },
   {
+    event: 'Atlanta AI Week',
     title: 'How AI Is Rewriting Search and What It Means for Your Brand',
-    event: '',
     track: 'AI in Action',
     dateDisplay: 'April 2026',
     startISO: '2026-04-21T13:30:00-04:00',
-    endISO: '2026-04-21T14:00:00-04:00',
-    venue: 'Roam Forum (Stage 5)',
-    city: '',
-    description: 'Google isn’t the only gatekeeper anymore. AI-powered search, answer engines, and conversational interfaces are rewriting how brands get discovered. This workshop equips marketing and digital teams with the strategies to maintain — and grow — brand visibility in the AI search era.',
+    venue: 'Roam Forum', city: 'Atlanta, GA',
+    description: 'AI-powered search, answer engines and conversational interfaces are rewriting how brands get discovered. A workshop on keeping — and growing — brand visibility in the AI search era.',
     url: '',
   },
   {
+    event: 'Eastern Illinois University',
     title: 'Sales Is Love Conference',
-    event: 'Eastern Illinois University · School of Business & SBDC',
     track: 'Guest speaker',
     dateDisplay: 'May 2026',
     startISO: '2026-05-01T09:00:00-05:00',
-    endISO: '2026-05-01T16:00:00-05:00',
-    venue: 'Tarble Museum of Art',
-    city: 'Charleston, IL',
+    venue: 'Tarble Museum of Art', city: 'Charleston, IL',
     description: 'A guest session on AI visibility at EIU’s student-run sales conference — built on the idea that the best sales feel like service, not pressure.',
     url: 'https://www.eiu.edu/calendar/event.php?id=15665',
   },
+  {
+    event: 'Great Lakes AI Week',
+    title: 'Implementing AI into your processes — for real',
+    track: 'Workshop',
+    dateDisplay: 'November 2025',
+    startISO: '2025-11-01T00:00:00-04:00',
+    venue: '', city: '',
+    description: 'I reviewed how marketers can begin to implement AI into their processes in a real, meaningful way.',
+    url: '',
+  },
+  {
+    event: 'Bowling Green State University',
+    title: 'Guest session',
+    track: 'Guest speaker',
+    dateDisplay: '',
+    startISO: '',
+    venue: '', city: 'Bowling Green, OH',
+    description: 'A guest session with BGSU students and founders on getting found — and cited — by AI.',
+    url: '',
+  },
 ];
-const alsoSeen = ['Bowling Green State University', 'Columbus Startup Week', 'Private brand & agency workshops'];
+const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
 ---
 <BaseLayout
   title="Speaking"
   description="Laura Seelinger speaks on AI visibility, GEO, and AEO — practical, no-fluff talks and workshops for marketing teams, agencies, and events."
-  schemas={talks.map((t) => eventSchema(t))}
+  schemas={talks.filter((t) => t.startISO).map((t) => eventSchema(t))}
 >
   <!-- HERO -->
   <section class="hero media-overlay media-overlay--hero">
@@ -106,28 +120,49 @@ const alsoSeen = ['Bowling Green State University', 'Columbus Startup Week', 'Pr
     </div>
   </section>
 
-  <!-- RECENT & UPCOMING TALKS — detailed, schema-backed -->
+  <!-- RECENT & UPCOMING TALKS — horizontal carousel, schema-backed -->
   <StitchDivider bg="rust" stitch="ivory" />
   <section class="band section--rust">
     <div class="container">
-      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
-        <p class="subhead">recent &amp; upcoming</p>
-        <h2>Where I’ve been on stage</h2>
+      <div class="talks-head" data-reveal>
+        <div class="measure">
+          <p class="subhead">recent &amp; upcoming · scroll for more →</p>
+          <h2>Where I’ve been on stage</h2>
+        </div>
+        <div class="talks-nav">
+          <button type="button" class="tnav" data-dir="-1" aria-label="Previous">‹</button>
+          <button type="button" class="tnav" data-dir="1" aria-label="Next">›</button>
+        </div>
       </div>
-      <div class="talks">
-        {talks.map((t, i) => (
-          <article class="talk" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <p class="talk__track">{t.track}{t.event ? ` · ${t.event}` : ''}</p>
-            <h3>{t.title}</h3>
-            <p class="talk__meta"><time datetime={t.startISO}>{t.dateDisplay}</time></p>
+      <div class="talks" id="talks-track">
+        {talks.map((t) => (
+          <article class="talk">
+            <p class="talk__track">{t.track}</p>
+            <h3>{t.event}</h3>
+            <p class="talk__title">{t.title}</p>
+            {(t.dateDisplay || t.city) && (
+              <p class="talk__meta">{[t.dateDisplay, t.city].filter(Boolean).join(' · ')}</p>
+            )}
             <p class="talk__desc">{t.description}</p>
             {t.url && <a class="talk__link" href={t.url}>Event details →</a>}
           </article>
         ))}
       </div>
-      <p class="also" data-reveal>Also seen at: {alsoSeen.join(' · ')}</p>
+      <p class="also" data-reveal>Also: {alsoSeen.join(' · ')}</p>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.talks-nav').forEach((nav) => {
+      const track = document.getElementById('talks-track');
+      nav.querySelectorAll('button').forEach((btn) =>
+        btn.addEventListener('click', () => {
+          const dir = Number(btn.getAttribute('data-dir'));
+          if (track) track.scrollBy({ left: dir * 330, behavior: 'smooth' });
+        })
+      );
+    });
+  </script>
 
   <!-- CTA (forest) -->
   <StitchDivider bg="forest" stitch="yellow" />
@@ -155,12 +190,18 @@ const alsoSeen = ['Bowling Green State University', 'Columbus Startup Week', 'Pr
   .intro-split > div { max-width: 56ch; }
   .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
 
-  /* Talk cards (detailed, schema-backed) */
-  .talks { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
-  .talk { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
+  /* Talk carousel (horizontal scroll; 2 cards live off-screen) */
+  .talks-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
+  .talks-nav { display: flex; gap: 0.5rem; flex: none; }
+  .tnav { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: 2px solid var(--cream); background: transparent; color: var(--cream); font-size: 1.4rem; line-height: 1; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .tnav:hover { background: var(--cream); color: var(--rust); }
+  .talks { display: flex; gap: var(--space-3); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: var(--space-2); scrollbar-width: none; }
+  .talks::-webkit-scrollbar { display: none; }
+  .talk { flex: 0 0 300px; scroll-snap-align: start; background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
   .talk__track { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin-bottom: var(--space-1); }
-  .talk h3 { color: var(--rust); margin: 0 0 var(--space-1); font-size: var(--text-lg); }
-  .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--brown); margin-bottom: var(--space-1); }
+  .talk h3 { color: var(--rust); margin: 0 0 0.1rem; font-size: var(--text-lg); }
+  .talk__title { font-weight: 600; color: var(--brown); margin: 0 0 var(--space-1); }
+  .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--olive); margin-bottom: var(--space-1); }
   .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
   .talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--olive); }
   .also { margin-top: var(--space-4); font-size: var(--text-sm); }

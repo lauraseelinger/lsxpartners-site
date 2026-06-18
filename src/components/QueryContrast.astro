@@ -14,9 +14,9 @@ const examples = [
     ai: 'my dad was just diagnosed <mark>type 2 diabetic</mark> and he’s not great with tech — is there a <mark>glucose monitor</mark> that skips the <mark>finger pricks</mark> and just shows readings on his <mark>phone</mark>?',
   },
   {
-    tag: 'home & hardware',
-    google: 'best smart lock for front door',
-    ai: 'we just renovated and i want a <mark>front door lock</mark> that works with <mark>our phones</mark>, but my husband keeps getting locked out — something with a <mark>keypad</mark> the kids can use too, that doesn’t look cheap?',
+    tag: 'home fixtures',
+    google: 'best kitchen faucet brand',
+    ai: 'we’re redoing our kitchen and i want a <mark>faucet</mark> that doesn’t show <mark>water spots</mark>, has a <mark>pull-down sprayer</mark>, and matches our <mark>matte black</mark> hardware — which brands actually hold up?',
   },
 ];
 ---
@@ -82,8 +82,8 @@ const examples = [
   .qc__prompt { margin: 0; flex: 1; line-height: 1.55; color: var(--brown); font-size: var(--text-lg); }
   .qc__prompt :global(mark) { background: color-mix(in srgb, var(--amber) 55%, var(--cream)); color: var(--brown); padding: 0 0.15em; border-radius: 4px; font-weight: 600; }
   .qc__send { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--rust); color: var(--cream); font-size: 0.9rem; }
-  .qc__cap { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 60ch; margin: var(--space-3) 0 var(--space-2); }
-  .qc__dots { display: flex; gap: 0.5rem; }
+  .qc__cap { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 64ch; margin: var(--space-3) auto var(--space-2); text-align: center; }
+  .qc__dots { display: flex; gap: 0.5rem; justify-content: center; }
   .qc__dots button { width: 12px; height: 12px; border-radius: 50%; border: 0; cursor: pointer; background: var(--color-border); padding: 0; }
   .qc__dots button.is-active { background: var(--rust); }
 </style>

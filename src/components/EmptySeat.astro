@@ -1,0 +1,33 @@
+---
+// Satire visual for "the AI-visibility seat your team is missing": a dotted
+// outline of an empty chair that you (your head) fade into as the section
+// scrolls in.
+---
+<div class="seat">
+  <svg class="seat__chair" viewBox="0 0 220 230" aria-hidden="true" fill="none" stroke="var(--brown)" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="64" y="34" width="92" height="104" rx="16" />
+    <path d="M50 138 h120 v16 a10 10 0 0 1 -10 10 H60 a10 10 0 0 1 -10 -10 z" />
+    <line x1="64" y1="166" x2="58" y2="216" />
+    <line x1="156" y1="166" x2="162" y2="216" />
+    <line x1="50" y1="150" x2="30" y2="150" />
+    <line x1="170" y1="150" x2="190" y2="150" />
+  </svg>
+  <img class="seat__head" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
+  <p class="seat__cap">the seat your team’s been missing.</p>
+</div>
+
+<style>
+  .seat { position: relative; width: min(320px, 82%); margin-inline: auto; text-align: center; }
+  .seat__chair { width: 100%; height: auto; display: block; opacity: 0.8; }
+  .seat__head {
+    position: absolute; top: 2%; left: 50%; transform: translateX(-50%);
+    width: 44%; aspect-ratio: 1; object-fit: cover; object-position: center 28%;
+    border-radius: 50%; border: 3px solid var(--cream);
+    box-shadow: var(--shadow-soft);
+  }
+  /* the head fades up into the empty chair as you scroll (data-reveal handles it);
+     keep the translate centered so it doesn't drift off the seat */
+  .seat__head[data-reveal] { transform: translateX(-50%) translateY(26px); }
+  .seat__head[data-reveal].in-view { transform: translateX(-50%) translateY(0); }
+  .seat__cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); margin-top: var(--space-2); }
+</style>

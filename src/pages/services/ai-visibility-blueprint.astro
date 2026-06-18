@@ -46,15 +46,16 @@ const deliverables = [
   </section>
 
   <section class="band section--rust">
-    <div class="container" data-reveal="left">
-      <p class="subhead">the payoff</p>
-      <p class="pullquote">Build the railway while everyone else patches tires on the side of the road.</p>
-      <p style="max-width: 56ch; margin-top: var(--space-3)">
-        The brands that get the structure right now will implement at a speed their
-        competitors can’t, once AI optimization is as documented as SEO is today.
-        A Blueprint during a redesign means you’re optimized from the ground up.
-      </p>
-      <div class="payoff-contrast">
+    <div class="container split">
+      <div data-reveal="left">
+        <p class="subhead">the payoff</p>
+        <p class="pullquote">Stop patching. Build the frame.</p>
+        <p>
+          Once AI optimization is as documented as SEO is today, the brands that got
+          the structure right will move at a speed the patchers can’t.
+        </p>
+      </div>
+      <div class="payoff-contrast" data-reveal="right">
         <div class="pc">
           <div class="pc__art pc__art--patched" aria-hidden="true">
             <span class="hole" style="top:24%;left:22%"></span>
@@ -78,7 +79,7 @@ const deliverables = [
 </EngagementLayout>
 
 <style>
-  .payoff-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); max-width: 680px; }
+  .payoff-contrast { display: grid; grid-template-columns: 1fr; gap: var(--space-2); }
   .pc { background: var(--cream); color: var(--brown); border-radius: 14px; padding: var(--space-2); box-shadow: var(--shadow-card); }
   .pc__art { position: relative; height: 120px; border-radius: 10px; overflow: hidden; margin-bottom: var(--space-2); }
   .pc__lbl { display: block; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--rust); margin: 0 var(--space-1) 0.2rem; }
