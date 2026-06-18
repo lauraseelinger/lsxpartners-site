@@ -47,6 +47,10 @@ const faqs = [
         <h2>{flagship.name}</h2>
         <p class="flagship__tag">{flagship.tagline}</p>
         <p>{flagship.summary}</p>
+        <details class="eng-topics eng-topics--dark">
+          <summary>What’s included</summary>
+          <ul>{flagship.topics.map((t) => <li>{t}</li>)}</ul>
+        </details>
         <a class="button" href={`/services/${flagship.slug}`}>Explore the Intensive →</a>
       </div>
       <PhotoStack src="/images/laura-2.jpg" alt="Laura Seelinger" ratio="3 / 4" reveal delay="1" />
@@ -62,26 +66,38 @@ const faqs = [
       </div>
       <div class="eng-grid">
         {others.map((e, i) => (
-          <a class="eng-card" href={`/services/${e.slug}`} data-reveal data-reveal-delay={String((i % 3) + 1)}>
+          <div class="eng-card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
             <p class="subhead">{e.eyebrow}</p>
             <h3>{e.name}</h3>
             <p class="eng-card__sum">{e.summary}</p>
-            <span class="eng-card__go">Learn more →</span>
-          </a>
+            <details class="eng-topics">
+              <summary>What’s included</summary>
+              <ul>{e.topics.map((t) => <li>{t}</li>)}</ul>
+            </details>
+            <a class="eng-card__go" href={`/services/${e.slug}`}>Full details →</a>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- START FINDER — interactive "where should you start?" -->
-  <StitchDivider bg="cream-deep" stitch="rust" />
-  <section class="band section--cream-deep">
+  <!-- START FINDER — loud, interactive "where should you start?" -->
+  <StitchDivider bg="amber" stitch="brown" />
+  <section class="band finder-band">
     <div class="container">
-      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
-        <p class="subhead">not sure where to start?</p>
-        <h2>Tell me who you are — I’ll point you to the right place</h2>
+      <div class="finder-band__head" data-reveal>
+        <p class="subhead">10 seconds · no signup · no catch</p>
+        <h2>Where should you even start?</h2>
+        <p class="finder-band__hype">Pick two things and I’ll tell you exactly where I’d start you.</p>
       </div>
-      <div data-reveal>
+      <div class="finder-band__wrap" data-reveal>
+        <div class="finder-doodle" aria-hidden="true">
+          <span class="finder-callout">you don’t even have to give me your email!!</span>
+          <svg class="finder-arrow" viewBox="0 0 150 140" fill="none">
+            <path d="M18 16 C 70 8 96 44 78 84 C 70 102 84 116 120 116" stroke="var(--brown)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M104 102 L122 117 L106 126" stroke="var(--brown)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <StartFinder />
       </div>
     </div>
@@ -129,15 +145,46 @@ const faqs = [
   /* Engagement cards */
   .eng-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
   .eng-card {
-    display: block; text-decoration: none; color: var(--brown);
+    display: flex; flex-direction: column; color: var(--brown);
     background: var(--cream); border-radius: 16px; padding: var(--space-3);
     box-shadow: var(--shadow-card);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .eng-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
   .eng-card h3 { color: var(--rust); margin: 0.2rem 0 0.4rem; }
   .eng-card__sum { font-size: var(--text-sm); }
-  .eng-card__go { color: var(--olive); font-weight: 600; font-size: var(--text-sm); }
+  .eng-card__go { margin-top: var(--space-2); color: var(--olive); font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
+  .eng-card__go:hover { text-decoration: underline; }
+
+  /* Topics dropdown (native <details>) */
+  .eng-topics { margin: var(--space-1) 0; }
+  .eng-topics summary {
+    cursor: pointer; font-weight: 600; font-size: var(--text-sm);
+    color: var(--rust); list-style: none; padding: 0.4rem 0;
+  }
+  .eng-topics summary::after { content: ' ▾'; }
+  .eng-topics[open] summary::after { content: ' ▴'; }
+  .eng-topics ul { margin: 0 0 var(--space-1); padding-left: 1.1em; font-size: var(--text-sm); }
+  .eng-topics li { margin-bottom: 0.25rem; }
+  /* On the rust flagship band */
+  .eng-topics--dark summary { color: var(--cream); }
+  .eng-topics--dark ul { color: var(--cream); }
+
+  /* Loud Start Finder band */
+  .finder-band { background: var(--amber); }
+  .finder-band__head { max-width: 64ch; margin-bottom: var(--space-3); }
+  .finder-band .subhead { color: var(--brown); opacity: 0.9; }
+  .finder-band h2 { color: var(--brown); font-size: clamp(2.2rem, 1.5rem + 3vw, 3.8rem); }
+  .finder-band__hype { font-size: var(--text-lg); color: var(--brown); max-width: 52ch; }
+  .finder-band__wrap { position: relative; }
+  .finder-doodle { display: flex; align-items: flex-end; justify-content: flex-end; gap: var(--space-1); padding-right: 10%; margin-bottom: -8px; }
+  .finder-callout {
+    font-family: var(--font-sub); font-weight: 800; font-style: italic;
+    color: var(--brown); background: var(--cream);
+    padding: 0.5rem 0.95rem; border-radius: 10px;
+    transform: rotate(-3deg); box-shadow: var(--shadow-card);
+    font-size: var(--text-lg); line-height: 1.15; max-width: 16ch; text-align: center;
+  }
+  .finder-arrow { width: 84px; height: auto; flex: none; }
+  @media (max-width: 760px) { .finder-doodle { display: none; } }
 
   @media (max-width: 760px) {
     .flagship__grid { grid-template-columns: 1fr; }

@@ -65,6 +65,7 @@ export const ENGAGEMENTS = [
     tagline: 'I come in, map your AI visibility strategy, and get every relevant department aligned on the path to follow.',
     summary: 'A one-month engagement: full audit and audience intelligence, the strategy mapped to your brand, and every team that touches it aligned around a clear path forward — so the plan actually moves after I’m gone.',
     image: '/images/laura-blazer-phone.jpg',
+    topics: ['A full audit across every major AI platform', 'Audience intelligence + your AI brand identity', 'A prioritized, brand-specific strategy', 'Alignment across every department that touches it'],
   },
   {
     slug: 'ai-visibility-blueprint',
@@ -74,6 +75,7 @@ export const ENGAGEMENTS = [
     tagline: 'Build (or rebuild) your site structurally optimized for AI from the ground up.',
     summary: 'The foundation for a website redesign or new build: navigation, sitemap, page templates and schema — plus an ongoing recommendations list to seed what comes next.',
     image: '/images/laura-laptop-site.jpg',
+    topics: ['Site architecture mapped to how buyers search', 'Page-type strategy: product, category, hub', 'A build-ready spec for your developers', 'A prioritized post-launch opportunity list'],
   },
   {
     slug: 'ai-visibility-audit',
@@ -83,6 +85,7 @@ export const ENGAGEMENTS = [
     tagline: 'Find out exactly what AI says about your brand — and where the gaps are.',
     summary: 'A manual prompt audit across every major AI platform, paired with audience intelligence, so you know where you show up, where you don’t, and why.',
     image: '/images/laura-desk-wide.jpg',
+    topics: ['Manual prompt audit across the major AI platforms', 'Whether your site is even extractable by AI', 'Where your brand lives off your own website', 'Clear findings and the gaps that actually matter'],
   },
   {
     slug: 'embedded-partner',
@@ -92,6 +95,7 @@ export const ENGAGEMENTS = [
     tagline: 'The AI visibility expertise your team isn’t staffed for — embedded with you.',
     summary: 'An ongoing monthly partner for agencies and in-house teams: audience intelligence, strategy, content activation and monitoring on a cadence. Can run fully behind your brand.',
     image: '/images/laura-writing.jpg',
+    topics: ['Ongoing audience intelligence in your category', 'Strategy plus content built to be cited', 'Monthly monitoring and reporting', 'Fully white-label for agencies'],
   },
 ] as const;
 
