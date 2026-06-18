@@ -62,8 +62,8 @@ export const ENGAGEMENTS = [
     name: 'The AI Visibility Intensive',
     flagship: true,
     eyebrow: 'the flagship · one month',
-    tagline: 'I come in, and in one month your brand goes from invisible to cited.',
-    summary: 'A one-month, all-in engagement for brands that need to move now — full audit, audience intelligence, and the foundation to flip how AI talks about you.',
+    tagline: 'I come in, map your AI visibility strategy, and get every relevant department aligned on the path to follow.',
+    summary: 'A one-month engagement: full audit and audience intelligence, the strategy mapped to your brand, and every team that touches it aligned around a clear path forward — so the plan actually moves after I’m gone.',
     image: '/images/laura-blazer-phone.jpg',
   },
   {
