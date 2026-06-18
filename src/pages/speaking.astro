@@ -125,14 +125,14 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   <section class="band section--olive travel-map">
     <div class="map-pins" aria-hidden="true">
       {[
+        { name: 'Atlanta', x: '40%', y: '66%', lead: true },
         { name: 'Cincinnati', x: '20%', y: '30%' },
-        { name: 'Atlanta', x: '38%', y: '70%' },
-        { name: 'Charleston', x: '12%', y: '58%' },
-        { name: 'Bowling Green', x: '58%', y: '24%' },
-        { name: 'Grand Rapids', x: '74%', y: '46%' },
-        { name: 'and counting', x: '86%', y: '76%' },
+        { name: 'Charleston', x: '11%', y: '60%' },
+        { name: 'Grand Rapids', x: '72%', y: '32%' },
+        { name: 'Bowling Green', x: '60%', y: '52%' },
+        { name: 'and counting', x: '87%', y: '74%' },
       ].map((p) => (
-        <span class="map-pin" style={`left:${p.x};top:${p.y}`}>
+        <span class:list={['map-pin', p.lead && 'map-pin--lead']} style={`left:${p.x};top:${p.y}`}>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
           <span class="map-pin__label">{p.name}</span>
         </span>
@@ -209,12 +209,15 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   .travel-map > .container { position: relative; z-index: 2; }
   .map-pins { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
   .map-pin { position: absolute; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; gap: 2px; }
-  .map-pin svg { width: 18px; height: 18px; fill: rgba(252, 245, 229, 0.32); }
+  .map-pin svg { width: 16px; height: 16px; fill: rgba(252, 245, 229, 0.26); }
   .map-pin__label {
     font-family: var(--font-sub); font-style: italic; font-weight: 800;
-    font-size: var(--text-sm); color: rgba(252, 245, 229, 0.22);
+    font-size: var(--text-sm); color: rgba(252, 245, 229, 0.18);
     white-space: nowrap; letter-spacing: 0.02em;
   }
+  /* Atlanta reads as the marquee stop */
+  .map-pin--lead svg { width: 30px; height: 30px; fill: var(--peach); }
+  .map-pin--lead .map-pin__label { color: var(--peach); font-size: var(--text-lg); }
   @media (max-width: 760px) { .map-pins { display: none; } }
   .travel-map {
     background:
