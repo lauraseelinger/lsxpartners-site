@@ -70,10 +70,9 @@ const faqs = [
   <!-- THE GAP — advanced signals float around me -->
   <section class="band section--cream">
     <div class="container gap-grid">
-      <div class="orbit" data-reveal>
-        <img class="orbit__me" src="/images/laura-kitchen.jpg" alt="Laura Seelinger" />
+      <div class="thoughts" data-reveal aria-hidden="true">
         {monitors.map((m, i) => (
-          <span class={`float float--${i % 4}`} style={`--i:${i}`}>{m}</span>
+          <span class={`thought thought--${i % 6}`} style={`--i:${i}`}>{m}</span>
         ))}
       </div>
       <div data-reveal="right">
@@ -299,6 +298,33 @@ const faqs = [
   .float--2 { animation-name: floatC; }
   .float--3 { animation-name: floatA; animation-duration: 7.5s; }
   .orbit--life .float { color: var(--olive); font-size: 0.95rem; }
+
+  /* ---- Thought bubbles (the gap I live in) ---- */
+  .thoughts { position: relative; width: min(400px, 100%); aspect-ratio: 1 / 1; margin-inline: auto; }
+  .thought {
+    position: absolute; white-space: nowrap; z-index: 2;
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
+    padding: 0.5rem 0.95rem; border-radius: 1.4rem; box-shadow: var(--shadow-card);
+    animation: floatA 6s ease-in-out infinite; animation-delay: calc(var(--i, 0) * -0.7s);
+  }
+  /* trailing thought-bubble dots, inherit the bubble colour */
+  .thought::before, .thought::after { content: ''; position: absolute; border-radius: 50%; background: inherit; }
+  .thought::before { width: 13px; height: 13px; bottom: -9px; left: 16px; }
+  .thought::after { width: 8px; height: 8px; bottom: -18px; left: 9px; }
+  .thought--0 { background: var(--rust); color: var(--cream); }
+  .thought--1 { background: var(--olive); color: var(--cream); animation-name: floatB; }
+  .thought--2 { background: var(--blue); color: var(--brown); }
+  .thought--3 { background: var(--peach); color: var(--brown); animation-name: floatC; }
+  .thought--4 { background: var(--forest); color: var(--cream); }
+  .thought--5 { background: var(--brown); color: var(--cream); animation-name: floatB; }
+  .thought:nth-child(1) { top: 3%; left: 1%; }
+  .thought:nth-child(2) { top: 0%; left: 46%; }
+  .thought:nth-child(3) { top: 23%; left: 18%; z-index: 3; }
+  .thought:nth-child(4) { top: 27%; left: 55%; }
+  .thought:nth-child(5) { top: 48%; left: 3%; }
+  .thought:nth-child(6) { top: 52%; left: 42%; z-index: 3; }
+  .thought:nth-child(7) { top: 72%; left: 20%; }
+
   @keyframes floatA { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
   @keyframes floatB { 0%,100% { transform: translate(0,0) } 50% { transform: translate(7px, 9px) } }
   @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(-3deg) } 50% { transform: translate(-8px,-7px) rotate(3deg) } }
@@ -343,7 +369,7 @@ const faqs = [
 
   .about-ctas { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
 
-  @media (prefers-reduced-motion: reduce) { .float { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .float, .thought { animation: none; } }
   @media (max-width: 900px) {
     .how-grid { grid-template-columns: 1fr; gap: var(--space-3); }
     .playbook { max-width: 420px; margin-inline: auto; }
