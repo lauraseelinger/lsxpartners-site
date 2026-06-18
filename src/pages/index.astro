@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
 import { serviceSchema } from '../lib/schema';
 import { SITE, PERSON, CTA } from '../consts';
 
@@ -132,10 +131,11 @@ const steps = [
     </div>
   </section>
 
-  <!-- CITED (peach gingham, feathered photo split) -->
-  <section class="band cited-band">
-    <div class="container cited">
-      <div data-reveal="left">
+  <!-- CITED — split: photo blends into the text half (readable solid bg) -->
+  <section class="split-feature">
+    <img class="split-feature__img" src="/images/laura-2.jpg" alt="Laura at home" />
+    <div class="container">
+      <div class="split-feature__text" data-reveal="left">
         <p class="subhead">my newsletter</p>
         <h2>Cited</h2>
         <p>
@@ -145,7 +145,6 @@ const steps = [
         </p>
         <a class="button" href={CTA.newsletter}>Subscribe to Cited</a>
       </div>
-      <FramedPhoto src="/images/laura-2.jpg" alt="Laura at home" shape="feather" ratio="3 / 4" reveal delay="1" />
     </div>
   </section>
 
@@ -195,16 +194,35 @@ const steps = [
   .card h3 { margin: 0.2rem 0 0.4rem; color: var(--rust); }
   .card p { margin-bottom: 0; color: var(--brown); }
 
-  /* Cited split */
-  .cited-band { background: var(--peach) url('/brand/patterns/pattern-peach.jpg') center / 320px repeat; }
-  .cited { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
-  .cited :global(.framed) { max-width: 380px; justify-self: center; }
+  /* Cited — feature split: image fills the right half and feathers into the
+     solid (readable) left half where the text lives. */
+  .split-feature {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream-deep);
+  }
+  .split-feature__img {
+    position: absolute; top: 0; right: 0;
+    width: 50%; height: 100%;
+    object-fit: cover; object-position: center 30%;
+    -webkit-mask-image: linear-gradient(to left, #000 58%, transparent 100%);
+    mask-image: linear-gradient(to left, #000 58%, transparent 100%);
+  }
+  .split-feature .container { position: relative; z-index: 2; }
+  .split-feature__text {
+    max-width: 44ch;
+    padding-block: var(--space-6);
+  }
 
   .final .badge { margin: 0 auto var(--space-2); }
 
   @media (max-width: 760px) {
-    .cited { grid-template-columns: 1fr; }
-    .cited :global(.framed) { order: -1; }
     .hero { min-height: 70vh; }
+    .split-feature__img {
+      position: relative; width: 100%; height: 260px;
+      -webkit-mask-image: linear-gradient(to top, #000 62%, transparent 100%);
+      mask-image: linear-gradient(to top, #000 62%, transparent 100%);
+    }
+    .split-feature__text { padding-block: var(--space-4); }
   }
 </style>
