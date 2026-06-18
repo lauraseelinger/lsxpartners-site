@@ -1,33 +1,47 @@
 ---
-// Satire visual for "the AI-visibility seat your team is missing": a dotted
-// outline of an empty chair that you (your head) fade into as the section
-// scrolls in.
+// Satire visual: a team seated at a table (silhouettes), with one empty,
+// dotted-outline seat labeled "AI visibility expert." As the section scrolls
+// in, your head drops onto that stick-figure body — you fill the missing seat.
 ---
-<div class="seat">
-  <svg class="seat__chair" viewBox="0 0 220 230" aria-hidden="true" fill="none" stroke="var(--brown)" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="64" y="34" width="92" height="104" rx="16" />
-    <path d="M50 138 h120 v16 a10 10 0 0 1 -10 10 H60 a10 10 0 0 1 -10 -10 z" />
-    <line x1="64" y1="166" x2="58" y2="216" />
-    <line x1="156" y1="166" x2="162" y2="216" />
-    <line x1="50" y1="150" x2="30" y2="150" />
-    <line x1="170" y1="150" x2="190" y2="150" />
-  </svg>
-  <img class="seat__head" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
-  <p class="seat__cap">the seat your team’s been missing.</p>
+<div class="seats">
+  <div class="seats__row">
+    {[0, 1, 2, 3].map(() => (
+      <div class="fig fig--filled" aria-hidden="true"><span class="fig__head"></span><span class="fig__body"></span></div>
+    ))}
+    <div class="fig fig--empty">
+      <img class="fig__face" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
+      <span class="fig__head"></span>
+      <span class="fig__body"></span>
+      <span class="fig__tag">AI visibility expert</span>
+    </div>
+  </div>
+  <div class="seats__table" aria-hidden="true"></div>
 </div>
 
 <style>
-  .seat { position: relative; width: min(320px, 82%); margin-inline: auto; text-align: center; }
-  .seat__chair { width: 100%; height: auto; display: block; opacity: 0.8; }
-  .seat__head {
-    position: absolute; top: 2%; left: 50%; transform: translateX(-50%);
-    width: 44%; aspect-ratio: 1; object-fit: cover; object-position: center 28%;
-    border-radius: 50%; border: 3px solid var(--cream);
-    box-shadow: var(--shadow-soft);
+  .seats { width: min(420px, 100%); margin-inline: auto; }
+  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-2); position: relative; z-index: 2; }
+  .fig { position: relative; width: 48px; display: flex; flex-direction: column; align-items: center; }
+  .fig__head { width: 24px; height: 24px; border-radius: 50%; }
+  .fig__body { width: 42px; height: 38px; border-radius: 21px 21px 6px 6px; margin-top: 4px; }
+  .fig--filled .fig__head, .fig--filled .fig__body { background: color-mix(in srgb, var(--olive) 45%, var(--cream)); }
+  .fig--empty .fig__head, .fig--empty .fig__body { border: 2px dashed var(--rust); background: transparent; }
+  .fig--empty { width: 56px; }
+  .fig__face {
+    position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
+    width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: center 28%;
+    border: 2px solid var(--cream); box-shadow: var(--shadow-soft); z-index: 3;
   }
-  /* the head fades up into the empty chair as you scroll (data-reveal handles it);
-     keep the translate centered so it doesn't drift off the seat */
-  .seat__head[data-reveal] { transform: translateX(-50%) translateY(26px); }
-  .seat__head[data-reveal].in-view { transform: translateX(-50%) translateY(0); }
-  .seat__cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); margin-top: var(--space-2); }
+  .fig__face[data-reveal] { transform: translateX(-50%) translateY(14px); }
+  .fig__face[data-reveal].in-view { transform: translateX(-50%) translateY(0); }
+  .fig__tag {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    margin-top: 6px; white-space: nowrap;
+    font-family: var(--font-sub); font-style: italic; font-weight: 800; color: var(--rust); font-size: var(--text-sm);
+  }
+  .seats__table {
+    height: 16px; border-radius: 0 0 10px 10px;
+    background: color-mix(in srgb, var(--brown) 70%, var(--cream));
+    margin-top: -14px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
+  }
 </style>

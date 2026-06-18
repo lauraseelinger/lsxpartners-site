@@ -43,11 +43,14 @@ const weeks = [
       <div data-reveal>
         <MonthTimeline weeks={weeks} />
       </div>
-      <p class="measure measure--center" data-reveal style="margin-top: var(--space-4)">
-        And you’re never behind. I track everything moving in this space — new platforms,
-        shifting citation weights, fresh best practices — so your strategy reflects what’s
-        true this month, not what was true three months ago.
-      </p>
+      <div class="boom boom--dark" data-reveal style="margin-top: var(--space-5)">
+        <p class="boom__big">You’re never three months behind.</p>
+        <p class="boom__sub">
+          I track everything moving in this space — new platforms, shifting citation
+          weights, fresh best practices — so your strategy reflects what’s true this
+          month, not last quarter. This is the part you can’t google.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -67,14 +70,20 @@ const weeks = [
           <p>A dedicated, deeper engagement scoped to one brand — yours. More hands-on and more embedded, priced for that focus.</p>
         </div>
       </div>
-      <div class="measure measure--center" data-reveal style="margin-top: var(--space-3)">
-        <p>
-          <strong>And it doesn’t stop at AI visibility.</strong> A big part of the work is
-          translating what we learn into the rest of your marketing — social, experiential,
-          the opportunities most teams walk past. AI visibility is what I lead with, not the
-          limit of what I see.
+      <div class="boom" data-reveal style="margin-top: var(--space-5)">
+        <p class="boom__big">AI visibility is the lead, not the limit.</p>
+        <p class="boom__sub">
+          A big part of the work is translating what we learn into the rest of your
+          marketing — social, experiential, the openings most teams walk right past.
         </p>
       </div>
     </div>
   </section>
 </EngagementLayout>
+
+<style>
+  .boom { max-width: 56ch; margin-inline: auto; text-align: center; }
+  .boom__big { font-family: var(--font-heading); font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.2rem); line-height: 1.12; margin: 0 0 var(--space-2); color: var(--rust); }
+  .boom--dark .boom__big { color: var(--peach); }
+  .boom__sub { font-size: var(--text-lg); margin: 0; }
+</style>

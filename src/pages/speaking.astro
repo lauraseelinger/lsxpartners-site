@@ -120,13 +120,13 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
     </div>
   </section>
 
-  <!-- RECENT & UPCOMING TALKS — horizontal carousel, schema-backed -->
-  <StitchDivider bg="rust" stitch="ivory" />
-  <section class="band section--rust">
+  <!-- RECENT & UPCOMING TALKS — horizontal carousel on a travel map -->
+  <StitchDivider bg="olive" stitch="ivory" />
+  <section class="band section--olive travel-map">
     <div class="container">
       <div class="talks-head" data-reveal>
         <div class="measure">
-          <p class="subhead">recent &amp; upcoming · scroll for more →</p>
+          <p class="subhead">cincy → atlanta → charleston → and counting</p>
           <h2>Where I’ve been on stage</h2>
         </div>
         <div class="talks-nav">
@@ -137,7 +137,6 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
       <div class="talks" id="talks-track">
         {talks.map((t) => (
           <article class="talk">
-            <p class="talk__track">{t.track}</p>
             <h3>{t.event}</h3>
             <p class="talk__title">{t.title}</p>
             {(t.dateDisplay || t.city) && (
@@ -189,6 +188,18 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   .intro-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
   .intro-split > div { max-width: 56ch; }
   .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
+
+  /* Travel-map background — reads as "she's been all over" */
+  .travel-map {
+    background:
+      radial-gradient(circle at 16% 28%, rgba(252, 245, 229, 0.16) 0 11%, transparent 30%),
+      radial-gradient(circle at 82% 66%, rgba(163, 187, 195, 0.28) 0 12%, transparent 32%),
+      radial-gradient(circle at 60% 20%, rgba(255, 190, 159, 0.22) 0 8%, transparent 24%),
+      linear-gradient(rgba(252, 245, 229, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(252, 245, 229, 0.1) 1px, transparent 1px),
+      var(--olive);
+    background-size: auto, auto, auto, 28px 28px, 28px 28px, auto;
+  }
 
   /* Talk carousel (horizontal scroll; 2 cards live off-screen) */
   .talks-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
