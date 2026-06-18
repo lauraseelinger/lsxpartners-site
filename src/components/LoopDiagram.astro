@@ -1,71 +1,112 @@
 ---
-// The AI Intelligence Loop, visualized as an actual loop (4 nodes around a ring
-// on desktop; a numbered vertical flow on mobile). Reusable on home + services.
+// The AI Intelligence Loop — interactive. The loop visual sits on the left;
+// hovering (or tapping/focusing) a stage reveals its explanation on the right.
+// Desktop: 4 nodes around a ring. Mobile: ring stacks above the panel; tap a node.
 const stages = [
-  { t: 'Audience intelligence', d: 'what your buyers actually say' },
-  { t: 'Strategic translation', d: 'a plan built for AI visibility' },
-  { t: 'Content activation', d: 'content built to be cited' },
-  { t: 'Monitoring', d: 'watch it, then feed it back' },
+  {
+    t: 'Audience intelligence',
+    b: 'I mine the real language your buyers use — from the places they actually talk, not a keyword tool. It’s the input most strategies are missing, and it’s where the whole loop starts.',
+  },
+  {
+    t: 'Strategic translation',
+    b: 'Those insights become a plan: what your brand should say, what to prioritize, and how to amplify the third-party sources AI already leans on. This is the part that’s hard to fake.',
+  },
+  {
+    t: 'Content activation',
+    b: 'The strategy turns into content built to be extracted and cited — structured so the odds of getting pulled into an answer move in your favor.',
+  },
+  {
+    t: 'Monitoring',
+    b: 'I track what AI says next and whether citations are turning into real traffic, then feed that back into the intelligence — so the gains compound instead of fading.',
+  },
 ];
 ---
-<div class="loop" role="img" aria-label="The AI Intelligence Loop: audience intelligence, strategic translation, content activation, monitoring — feeding back to the start.">
-  <div class="loop__ring" aria-hidden="true"><span>↻</span></div>
-  <ol class="loop__nodes">
+<div class="loop">
+  <div class="loop__visual">
+    <div class="loop__ring" aria-hidden="true"><span>↻</span></div>
+    <ol class="loop__nodes">
+      {stages.map((s, i) => (
+        <li class={`loop__node loop__node--${i + 1} ${i === 0 ? 'is-active' : ''}`}>
+          <button type="button" data-i={i}>
+            <span class="loop__n">{i + 1}</span>
+            <span class="loop__t">{s.t}</span>
+          </button>
+        </li>
+      ))}
+    </ol>
+  </div>
+  <div class="loop__panel">
+    <p class="loop__hint">Hover a stage to see how it works ↓</p>
     {stages.map((s, i) => (
-      <li class={`loop__node loop__node--${i + 1}`}>
-        <span class="loop__n">{i + 1}</span>
-        <strong>{s.t}</strong>
-        <span class="loop__d">{s.d}</span>
-      </li>
+      <div class={`loop__blurb ${i === 0 ? 'is-active' : ''}`} data-i={i}>
+        <h3>{s.t}</h3>
+        <p>{s.b}</p>
+      </div>
     ))}
-  </ol>
+  </div>
 </div>
 
 <style>
-  .loop {
-    position: relative;
-    width: min(560px, 100%);
-    aspect-ratio: 1 / 1;
-    margin-inline: auto;
-  }
+  .loop { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-5); align-items: center; }
+  .loop__visual { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1 / 1; margin-inline: auto; }
   .loop__ring {
-    position: absolute; top: 50%; left: 50%;
-    width: 52%; height: 52%;
+    position: absolute; top: 50%; left: 50%; width: 50%; height: 50%;
     transform: translate(-50%, -50%);
-    border: 2px dashed var(--olive);
-    border-radius: 50%;
+    border: 2px dashed var(--olive); border-radius: 50%;
     display: grid; place-items: center;
   }
-  .loop__ring span { font-size: 2.4rem; color: var(--olive); }
+  .loop__ring span { font-size: 2rem; color: var(--olive); }
   .loop__nodes { list-style: none; margin: 0; padding: 0; }
-  .loop__node {
-    position: absolute;
-    width: 42%;
-    background: var(--cream);
-    border-radius: 14px;
-    padding: var(--space-2);
+  .loop__node { position: absolute; width: 40%; }
+  .loop__node button {
+    width: 100%; cursor: pointer; font: inherit; text-align: center;
+    background: var(--cream); color: var(--brown);
+    border: 2px solid transparent; border-radius: 14px;
+    padding: var(--space-2) var(--space-1);
     box-shadow: var(--shadow-card);
-    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
-  .loop__node strong { display: block; color: var(--rust); }
+  .loop__node button:hover, .loop__node.is-active button {
+    border-color: var(--rust); transform: translateY(-3px); box-shadow: var(--shadow-soft);
+  }
   .loop__n {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 1.9rem; height: 1.9rem; border-radius: 50%;
-    background: var(--rust); color: var(--cream);
-    font-family: var(--font-heading); margin-bottom: 0.3rem;
+    width: 1.8rem; height: 1.8rem; border-radius: 50%;
+    background: var(--rust); color: var(--cream); font-family: var(--font-heading);
+    margin-bottom: 0.3rem;
   }
-  .loop__d { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .loop__t { display: block; color: var(--rust); font-weight: 600; font-size: var(--text-sm); }
   .loop__node--1 { top: 0; left: 50%; transform: translateX(-50%); }
   .loop__node--2 { top: 50%; right: 0; transform: translateY(-50%); }
   .loop__node--3 { bottom: 0; left: 50%; transform: translateX(-50%); }
   .loop__node--4 { top: 50%; left: 0; transform: translateY(-50%); }
 
-  /* Mobile: drop the ring, stack as a numbered flow */
-  @media (max-width: 700px) {
-    .loop { aspect-ratio: auto; max-width: 460px; }
-    .loop__ring { display: none; }
-    .loop__nodes { display: grid; gap: var(--space-2); }
-    .loop__node { position: static; width: 100%; transform: none; text-align: left; display: flex; gap: var(--space-2); align-items: baseline; }
-    .loop__n { flex: none; margin-bottom: 0; }
+  .loop__hint { font-style: italic; opacity: 0.7; font-size: var(--text-sm); }
+  .loop__blurb { display: none; }
+  .loop__blurb.is-active { display: block; }
+  .loop__blurb h3 { margin-top: 0; }
+
+  @media (max-width: 760px) {
+    .loop { grid-template-columns: 1fr; gap: var(--space-4); }
+    .loop__visual { max-width: 360px; }
+    .loop__hint { display: none; }
   }
 </style>
+
+<script>
+  document.querySelectorAll('.loop').forEach((loop) => {
+    const nodes = loop.querySelectorAll('.loop__node');
+    const blurbs = loop.querySelectorAll('.loop__blurb');
+    const hint = loop.querySelector('.loop__hint');
+    const activate = (i: number) => {
+      nodes.forEach((n, j) => n.classList.toggle('is-active', j === i));
+      blurbs.forEach((b, j) => b.classList.toggle('is-active', j === i));
+      if (hint instanceof HTMLElement) hint.style.display = 'none';
+    };
+    loop.querySelectorAll<HTMLButtonElement>('.loop__node button').forEach((btn, i) => {
+      btn.addEventListener('mouseenter', () => activate(i));
+      btn.addEventListener('focus', () => activate(i));
+      btn.addEventListener('click', () => activate(i));
+    });
+  });
+</script>
