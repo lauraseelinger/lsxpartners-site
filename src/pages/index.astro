@@ -32,11 +32,15 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
         </div>
       </div>
       <div class="hero__cluster" data-cluster>
-        <div class="hc__pattern" aria-hidden="true"></div>
+        <div class="hc__pattern hc__pattern--back" aria-hidden="true"></div>
+        <div class="hc__pattern hc__pattern--front" aria-hidden="true"></div>
         <img class="hc__photo" src="/images/hero-portrait.jpg" alt="Laura Seelinger" />
-        <img class="hc__stk hc__stk--1" src="/brand/assets/sticker-tailored.png" alt="" aria-hidden="true" data-cstk data-rot="-11" data-depth="20" style="transform: rotate(-11deg)" />
-        <img class="hc__stk hc__stk--2" src="/brand/assets/sticker-team.png" alt="" aria-hidden="true" data-cstk data-rot="9" data-depth="34" style="transform: rotate(9deg)" />
-        <img class="hc__stk hc__stk--3" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="-6" data-depth="14" style="transform: rotate(-6deg)" />
+        <!-- locally-sourced sticker pile, top-left -->
+        <img class="hc__stk ls ls--a" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="-10" data-depth="16" style="transform: rotate(-10deg)" />
+        <img class="hc__stk ls ls--b" src="/brand/assets/sticker-ls-rust.png" alt="" aria-hidden="true" data-cstk data-rot="9" data-depth="28" style="transform: rotate(9deg)" />
+        <img class="hc__stk ls ls--c" src="/brand/assets/sticker-ls-blue.png" alt="" aria-hidden="true" data-cstk data-rot="-3" data-depth="10" style="transform: rotate(-3deg)" />
+        <!-- feature sticker, bottom-right -->
+        <img class="hc__stk hc__stk--feat" src="/brand/assets/sticker-team.png" alt="" aria-hidden="true" data-cstk data-rot="7" data-depth="34" style="transform: rotate(7deg)" />
       </div>
     </div>
   </section>
@@ -190,21 +194,31 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
 
   /* photo + sticker cluster */
   .hero__cluster { position: relative; width: min(440px, 100%); aspect-ratio: 4 / 5; margin-inline: auto; }
-  .hc__pattern {
-    position: absolute; inset: 6% 4% 4% 8%; border-radius: 22px; transform: rotate(-4deg); z-index: 0;
-    background: linear-gradient(rgba(255,190,159,0.4), rgba(255,190,159,0.4)), url('/brand/patterns/pattern-5.jpg') center / 220px repeat, var(--peach);
-    box-shadow: var(--shadow-card);
+  .hc__pattern { position: absolute; border-radius: 22px; box-shadow: var(--shadow-card); }
+  /* back layer — blue checker, peeking opposite corner */
+  .hc__pattern--back {
+    inset: 0 0 12% 14%; transform: rotate(6deg); z-index: 0;
+    background: linear-gradient(rgba(163,187,195,0.55), rgba(163,187,195,0.55)), url('/brand/patterns/pattern-2.jpg') center / 220px repeat, var(--blue);
+  }
+  /* front layer — peach */
+  .hc__pattern--front {
+    inset: 8% 12% 2% 2%; transform: rotate(-4deg); z-index: 1;
+    background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 220px repeat, var(--peach);
   }
   .hc__photo {
-    position: absolute; inset: 3% 8% 0 6%; width: auto; height: 97%; z-index: 1;
+    position: absolute; inset: 4% 10% 0 6%; width: auto; height: 96%; z-index: 2;
     object-fit: cover; border-radius: 18px;
     -webkit-mask-image: radial-gradient(125% 115% at 50% 42%, #000 72%, transparent 100%);
     mask-image: radial-gradient(125% 115% at 50% 42%, #000 72%, transparent 100%);
   }
-  .hc__stk { position: absolute; width: 116px; height: auto; z-index: 2; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); will-change: transform; }
-  .hc__stk--1 { top: -7%; left: -9%; width: 128px; }
-  .hc__stk--2 { bottom: -6%; right: -7%; width: 120px; }
-  .hc__stk--3 { top: 8%; right: -10%; width: 96px; }
+  .hc__stk { position: absolute; height: auto; z-index: 3; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); will-change: transform; }
+  /* locally-sourced pile, top-left, varied sizes + colors */
+  .ls { z-index: 4; }
+  .ls--a { top: -8%; left: -10%; width: 104px; }
+  .ls--b { top: 6%; left: -16%; width: 72px; z-index: 5; }
+  .ls--c { top: -14%; left: 14%; width: 58px; }
+  /* feature sticker bottom-right */
+  .hc__stk--feat { bottom: -6%; right: -8%; width: 122px; }
 
   .ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
 
