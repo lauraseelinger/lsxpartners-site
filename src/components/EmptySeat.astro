@@ -1,55 +1,56 @@
 ---
-// A team seated at a table: faceless filled silhouettes, plus one outlined
-// stick figure — the "AI visibility expert" seat — whose head your feathered
-// face-cutout drops onto as the section scrolls in. You're the real face at the table.
+// A team's table with empty chairs — the seat your team isn't staffed for.
+// One rust stick figure stands at the open seat with a blank, outlined head.
+// As the section scrolls in, Laura's real cutout drops onto the head: the
+// empty seat, filled. Satire-illustration vibe — a stick figure with a real face.
 ---
 <div class="seats">
   <div class="seats__row">
-    {[0, 1, 2, 3].map(() => (
-      <svg class="sil" viewBox="0 0 56 120" aria-hidden="true">
-        <circle cx="28" cy="20" r="15" />
-        <path d="M5 120 C 5 80 51 80 51 120 Z" />
+    {[0, 1, 2].map(() => (
+      <svg class="chair" viewBox="0 0 60 96" aria-hidden="true" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="15" y="6" width="30" height="44" rx="7" />
+        <rect x="10" y="50" width="40" height="11" rx="5" />
+        <line x1="16" y1="61" x2="16" y2="92" />
+        <line x1="44" y1="61" x2="44" y2="92" />
       </svg>
     ))}
     <div class="me">
-      <svg class="stick" viewBox="0 0 80 140" aria-hidden="true" fill="none" stroke="var(--rust)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="40" cy="24" r="16" />
-        <line x1="40" y1="40" x2="40" y2="92" />
-        <line x1="40" y1="56" x2="16" y2="76" />
-        <line x1="40" y1="56" x2="64" y2="76" />
-        <line x1="40" y1="92" x2="20" y2="126" />
-        <line x1="40" y1="92" x2="60" y2="126" />
+      <svg class="stick" viewBox="0 0 92 150" aria-hidden="true" fill="none" stroke="var(--rust)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="46" cy="26" r="19" class="stick__head" />
+        <line x1="46" y1="45" x2="46" y2="102" />
+        <line x1="46" y1="62" x2="22" y2="86" />
+        <line x1="46" y1="62" x2="76" y2="44" />
+        <line x1="46" y1="102" x2="26" y2="140" />
+        <line x1="46" y1="102" x2="66" y2="140" />
       </svg>
-      <img class="me__face" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
+      <img class="me__face" src="/images/laura-cutout.png" alt="Laura Seelinger" data-reveal />
       <span class="me__tag">AI visibility expert</span>
     </div>
   </div>
-  <div class="seats__table" aria-hidden="true"></div>
+  <div class="seats__floor" aria-hidden="true"></div>
 </div>
 
 <style>
-  .seats { width: min(440px, 100%); margin-inline: auto; }
-  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-1); position: relative; z-index: 2; }
-  .sil { width: 46px; height: auto; fill: color-mix(in srgb, var(--olive) 50%, var(--cream)); }
-  .me { position: relative; width: 70px; }
+  .seats { width: min(460px, 100%); margin-inline: auto; }
+  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-2); position: relative; z-index: 2; }
+  .chair { width: 42px; height: auto; stroke: color-mix(in srgb, var(--olive) 60%, transparent); opacity: 0.7; }
+  .me { position: relative; width: 92px; flex: none; }
   .stick { width: 100%; height: auto; display: block; }
   .me__face {
-    position: absolute; top: 1%; left: 50%; transform: translateX(-50%);
-    width: 42%; aspect-ratio: 1; object-fit: cover; object-position: center 30%;
-    -webkit-mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
-    mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
-    z-index: 3;
+    position: absolute; top: -8%; left: 50%; transform: translateX(-50%);
+    width: 50%; height: auto; z-index: 3;
   }
-  .me__face[data-reveal] { transform: translateX(-50%) translateY(16px) scale(0.85); }
-  .me__face[data-reveal].in-view { transform: translateX(-50%) translateY(0) scale(1); }
+  /* empty head until scrolled into view, then the real face drops on */
+  .me__face[data-reveal] { opacity: 0; transform: translateX(-50%) translateY(-10px) scale(0.85); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .me__face[data-reveal].in-view { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
   .me__tag {
-    position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 4px;
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 6px;
     white-space: nowrap; font-family: var(--font-sub); font-style: italic; font-weight: 800;
     color: var(--rust); font-size: var(--text-sm);
   }
-  .seats__table {
-    height: 16px; border-radius: 0 0 12px 12px;
-    background: color-mix(in srgb, var(--brown) 70%, var(--cream));
-    margin-top: -16px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
+  .seats__floor {
+    height: 14px; border-radius: 0 0 10px 10px;
+    background: color-mix(in srgb, var(--brown) 65%, var(--cream));
+    margin-top: -7px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
   }
 </style>
