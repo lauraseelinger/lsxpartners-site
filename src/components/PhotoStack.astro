@@ -1,0 +1,36 @@
+---
+import FramedPhoto from './FramedPhoto.astro';
+
+// A layered photo composition so a photo never reads as a lone scrapbook cutout:
+// a tilted brand-pattern panel behind, the feathered photo on top (its soft
+// edges melt into the panel), and an overlapping sticker badge.
+interface Props {
+  src: string;
+  alt: string;
+  ratio?: string;
+  reveal?: boolean;
+  delay?: '1' | '2' | '3';
+}
+const { src, alt, ratio = '3 / 4', reveal = false, delay } = Astro.props;
+---
+<div class="pstack" data-reveal={reveal ? '' : undefined} data-reveal-delay={delay}>
+  <span class="pstack__patch" aria-hidden="true"></span>
+  <FramedPhoto src={src} alt={alt} shape="feather" ratio={ratio} />
+  <img class="pstack__sticker" src="/brand/assets/sticker-certified-organic.svg" alt="" aria-hidden="true" />
+</div>
+
+<style>
+  .pstack { position: relative; width: min(400px, 100%); margin-inline: auto; }
+  .pstack__patch {
+    position: absolute; inset: -7%;
+    background: var(--cream-deep) url('/brand/patterns/pattern-3.jpg') center / 200px repeat;
+    border-radius: 22px; transform: rotate(-3.5deg);
+    box-shadow: var(--shadow-soft);
+    z-index: 0;
+  }
+  .pstack :global(.framed) { position: relative; z-index: 1; }
+  .pstack__sticker {
+    position: absolute; bottom: -20px; right: -14px;
+    width: 112px; height: auto; rotate: 7deg; z-index: 2;
+  }
+</style>

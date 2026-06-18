@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
+import PhotoStack from '../components/PhotoStack.astro';
 import { serviceSchema } from '../lib/schema';
 import { CTA } from '../consts';
 
@@ -28,11 +28,7 @@ const { title, eyebrow, lede, heroImage, heroRatio = '4 / 5', description } = As
         <p class="ep-lede">{lede}</p>
         <a class="button" href={CTA.calendly}>Book a call</a>
       </div>
-      <div class="ep-photo" data-reveal data-reveal-delay="1">
-        <span class="ep-photo__patch" aria-hidden="true"></span>
-        <FramedPhoto src={heroImage} alt="Laura Seelinger" shape="feather" ratio={heroRatio} />
-        <img class="ep-photo__sticker" src="/brand/assets/sticker-certified-organic.svg" alt="" aria-hidden="true" />
-      </div>
+      <PhotoStack src={heroImage} alt="Laura Seelinger" ratio={heroRatio} reveal delay="1" />
     </div>
   </section>
 
@@ -66,22 +62,8 @@ const { title, eyebrow, lede, heroImage, heroRatio = '4 / 5', description } = As
   .ep-lede { font-size: var(--text-lg); max-width: 50ch; margin-bottom: var(--space-3); }
   .ep-body { padding-block: var(--space-6); }
 
-  /* Layered photo composition (pattern panel behind + sticker) */
-  .ep-photo { position: relative; width: min(400px, 100%); margin-inline: auto; }
-  .ep-photo__patch {
-    position: absolute; inset: -7%;
-    background: var(--cream-deep) url('/brand/patterns/pattern-peach.jpg') center / 200px repeat;
-    border-radius: 22px; transform: rotate(-3.5deg);
-    box-shadow: var(--shadow-soft); z-index: 0;
-  }
-  .ep-photo :global(.framed) { position: relative; z-index: 1; }
-  .ep-photo__sticker {
-    position: absolute; bottom: -22px; right: -16px;
-    width: 116px; height: auto; rotate: 7deg; z-index: 2;
-  }
-
   @media (max-width: 760px) {
     .ep-hero__grid { grid-template-columns: 1fr; }
-    .ep-photo { order: -1; width: min(320px, 80%); }
+    .ep-hero :global(.pstack) { order: -1; width: min(320px, 80%); }
   }
 </style>

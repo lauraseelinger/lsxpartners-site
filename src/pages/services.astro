@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FAQ from '../components/FAQ.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
+import PhotoStack from '../components/PhotoStack.astro';
 import StitchDivider from '../components/StitchDivider.astro';
-import LoopDiagram from '../components/LoopDiagram.astro';
 import { serviceSchema } from '../lib/schema';
 import { ENGAGEMENTS, CTA } from '../consts';
 
@@ -49,7 +48,7 @@ const faqs = [
         <p>{flagship.summary}</p>
         <a class="button" href={`/services/${flagship.slug}`}>Explore the Intensive →</a>
       </div>
-      <FramedPhoto src={flagship.image} alt="Laura Seelinger" shape="feather" ratio="3 / 4" reveal delay="1" />
+      <PhotoStack src={flagship.image} alt="Laura Seelinger" ratio="3 / 4" reveal delay="1" />
     </div>
   </section>
 
@@ -73,17 +72,18 @@ const faqs = [
     </div>
   </section>
 
-  <!-- THE LOOP -->
+  <!-- HOW THE WORK RUNS — text treatment (the visual loop lives on the home page) -->
   <section class="band section--forest">
-    <div class="container">
-      <div class="measure" data-reveal style="margin-bottom: var(--space-4)">
-        <p class="subhead">how the work runs</p>
-        <h2>The AI Intelligence Loop</h2>
-        <p>Every engagement runs the same loop, and it compounds. That’s the point.</p>
-      </div>
-      <div data-reveal>
-        <LoopDiagram />
-      </div>
+    <div class="container measure" data-reveal>
+      <p class="subhead">how the work runs</p>
+      <h2>Every engagement runs the same method</h2>
+      <p>
+        It’s built on my AI Intelligence Loop: audience intelligence feeds the
+        strategy, the strategy drives what gets published, monitoring tells us what
+        AI does with it — and that learning feeds the next round. The longer we work
+        together, the sharper it gets.
+      </p>
+      <p><a href="/">See how the loop works →</a></p>
     </div>
   </section>
 
@@ -109,7 +109,7 @@ const faqs = [
   .flagship__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
   .flagship__grid > div { max-width: 48ch; }
   .flagship__tag { font-size: var(--text-lg); }
-  .flagship :global(.framed) { max-width: 360px; justify-self: center; }
+  .flagship :global(.pstack) { max-width: 340px; justify-self: center; }
 
   /* Engagement cards */
   .eng-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
