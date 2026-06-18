@@ -7,8 +7,12 @@ import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
 // this page is its canonical home (rel=author points here). Image-forward,
-// color-blocked, in Full LinkedIn Laura voice. Backstory facts are real
-// (Libbey, regulated healthcare, 15+ yrs agency+corporate, MBA, Cincy speaker).
+// color-blocked, with movement: split pattern/photo hero, floating monitored
+// signals, a scrolling toolkit, counting creds. Full LinkedIn Laura voice.
+// Backstory facts are real (Libbey, regulated healthcare, 15+ yrs, MBA, Cincy).
+const monitors = ['ChatGPT', 'Perplexity', 'Claude', 'Gemini', 'Google AI Overviews', 'Reddit threads', 'your reviews', 'buyer questions'];
+const stack = ['ChatGPT', 'Claude', 'Gemini', 'Perplexity', 'Google AI Overviews', 'Copilot', 'Grok', 'Semrush', 'Ahrefs', 'Reddit', '…and three I’m testing this week'];
+const offclock = ['writing Cited 📨', 'Cincy AI Week 🎤', 'my cats 🐈', 'wood-stove fires 🔥', 'Friday audits, for fun'];
 const faqs = [
   {
     question: 'Who is Laura Seelinger?',
@@ -32,39 +36,48 @@ const faqs = [
   description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI — 15+ years in agency and corporate marketing, much of it in regulated industries."
   schemas={[faqSchema(faqs)]}
 >
-  <!-- HERO -->
-  <section class="hero media-overlay media-overlay--hero">
-    <img class="bg" src="/images/hero-standing.jpg" alt="" aria-hidden="true" style="object-position: center 22%;" />
-    <div class="container hero__inner">
+  <!-- HERO — half pattern, half playful photo -->
+  <section class="ahero">
+    <div class="ahero__text">
       <p class="subhead">ai visibility expert · founder, lsx partners</p>
       <h1>Hi, I'm Laura.</h1>
-      <p class="hero__lede">
+      <p class="ahero__lede">
         I'm the AI marketing nerd who actually looks forward to the monthly
         reporting. I help brands and agencies get <strong>cited by AI</strong> —
         and I'm in this every single day.
       </p>
       <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
     </div>
+    <div class="ahero__photo">
+      <img src="/images/laura-couch.jpg" alt="Laura Seelinger working from the couch" />
+    </div>
   </section>
 
-  <!-- THE GAP (cream) -->
-  <section class="band tex-cream">
-    <div class="container intro-split">
-      <div data-reveal="left">
+  <!-- THE GAP — signals I monitor float around me -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band section--cream">
+    <div class="container gap-grid">
+      <div class="orbit" data-reveal aria-hidden="false">
+        <img class="orbit__me" src="/images/laura-kitchen.jpg" alt="Laura Seelinger" />
+        {monitors.map((m, i) => (
+          <span class={`float float--${i % 4}`} style={`--i:${i}`}>{m}</span>
+        ))}
+      </div>
+      <div data-reveal="right">
         <p class="subhead">the gap i live in</p>
         <h2>What AI says about you is the new front page</h2>
         <p>
           When someone asks ChatGPT, Claude, Gemini, or Perplexity about your
           category, the brand it names — and the source it credits — is what they
           act on. Most companies have no idea what AI is saying about them. That's
-          the gap I live in: finding it, and closing it.
+          the gap I live in: I watch all of it, find where you're missing, and
+          close it.
         </p>
       </div>
-      <FramedPhoto src="/images/laura-kitchen.jpg" alt="Laura Seelinger" shape="feather" ratio="3 / 4" reveal delay="1" />
     </div>
   </section>
 
-  <!-- BACKGROUND (forest) -->
+  <!-- BACKGROUND — counting creds -->
   <StitchDivider bg="forest" stitch="yellow" />
   <section class="band section--forest">
     <div class="container">
@@ -88,19 +101,18 @@ const faqs = [
         </p>
       </div>
       <div class="creds">
-        <div class="cred" data-reveal><span class="cred__big">15+ yrs</span><span>across agency &amp; corporate marketing</span></div>
+        <div class="cred" data-reveal><span class="cred__big"><span data-count="15" data-suffix="+">15+</span></span><span>years across agency &amp; corporate marketing</span></div>
         <div class="cred" data-reveal data-reveal-delay="1"><span class="cred__big">Regulated</span><span>healthcare &amp; MedTech — medical, legal &amp; brand sign-off</span></div>
         <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">MBA</span><span>plus a marketer's instinct for what actually moves</span></div>
       </div>
     </div>
   </section>
 
-  <!-- HOW I WORK (cream) -->
+  <!-- HOW I WORK — the stack keeps moving -->
   <StitchDivider bg="cream" stitch="rust" />
   <section class="band tex-cream">
-    <div class="container intro-split intro-split--rev">
-      <FramedPhoto src="/images/laura-writing.jpg" alt="Laura working" shape="feather" ratio="3 / 4" reveal />
-      <div data-reveal="right">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">how i actually work</p>
         <h2>I test it on myself first</h2>
         <p>
@@ -111,13 +123,24 @@ const faqs = [
           standard agency cycle, because I'm in this every single day.
         </p>
       </div>
+      <p class="stack-cap" data-reveal>the stack, give or take — it changes constantly →</p>
+      <div class="marquee" data-reveal aria-hidden="true">
+        <div class="marquee__track">
+          {[...stack, ...stack].map((s) => <span class="tool">{s}</span>)}
+        </div>
+      </div>
+      <div class="marquee marquee--rev" aria-hidden="true">
+        <div class="marquee__track">
+          {[...stack.slice().reverse(), ...stack.slice().reverse()].map((s) => <span class="tool tool--ghost">{s}</span>)}
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- OFF THE CLOCK (olive) -->
+  <!-- OFF THE CLOCK — playful floating life -->
   <StitchDivider bg="olive" stitch="ivory" />
   <section class="band section--olive">
-    <div class="container intro-split">
+    <div class="container gap-grid gap-grid--rev">
       <div data-reveal="left">
         <p class="subhead">off the clock</p>
         <h2>Running audits on a Friday, for fun</h2>
@@ -128,13 +151,18 @@ const faqs = [
           to start a fire in a wood stove. I'm 100% myself here — em dashes and all.
         </p>
       </div>
-      <FramedPhoto src="/images/laura-couch.jpg" alt="Laura at home" shape="feather" ratio="3 / 4" reveal delay="1" />
+      <div class="orbit orbit--life" data-reveal>
+        <img class="orbit__me" src="/images/laura-phone.jpg" alt="Laura at her desk" />
+        {offclock.map((m, i) => (
+          <span class={`float float--${i % 4}`} style={`--i:${i}`}>{m}</span>
+        ))}
+      </div>
     </div>
   </section>
 
-  <!-- FAQ (cream) -->
+  <!-- FAQ -->
   <StitchDivider bg="cream" stitch="green" />
-  <section class="band section--cream">
+  <section class="band tex-cream">
     <div class="container">
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">questions i get</p>
@@ -151,7 +179,7 @@ const faqs = [
     </div>
   </section>
 
-  <!-- CTA (rust) -->
+  <!-- CTA -->
   <StitchDivider bg="rust" stitch="yellow" />
   <section class="band section--rust">
     <div class="container measure measure--center" data-reveal="scale">
@@ -166,25 +194,89 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  .hero { display: flex; align-items: center; min-height: 70vh; padding-block: var(--space-6); --hero-fade-to: var(--cream); }
-  .hero__inner { max-width: 760px; }
-  .hero h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
-  .hero__lede { font-size: var(--text-lg); max-width: 52ch; margin-bottom: var(--space-3); }
+  /* ---- Split hero: pattern panel + playful photo ---- */
+  .ahero { display: grid; grid-template-columns: 1.02fr 0.98fr; min-height: 78vh; }
+  .ahero__text {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: var(--space-6) var(--space-5);
+    background:
+      linear-gradient(rgba(252, 245, 229, 0.7), rgba(252, 245, 229, 0.7)),
+      url('/brand/patterns/pattern-2.jpg') center / 300px repeat,
+      var(--cream);
+  }
+  .ahero__text h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
+  .ahero__lede { font-size: var(--text-lg); max-width: 42ch; margin-bottom: var(--space-3); }
+  .ahero__photo { position: relative; overflow: hidden; }
+  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
+  /* feather the seam so the photo melts into the pattern */
+  .ahero__photo::before {
+    content: ''; position: absolute; inset: 0 auto 0 0; width: 28%;
+    background: linear-gradient(90deg, var(--cream), transparent); z-index: 2;
+  }
 
   .band { padding-block: var(--space-6); }
   .measure { max-width: 44rem; }
   .measure--center { margin-inline: auto; text-align: center; }
 
-  .intro-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
-  .intro-split > div { max-width: 56ch; }
-  .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
+  /* ---- Two-up grid (photo/orbit + text) ---- */
+  .gap-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-5); align-items: center; }
+  .gap-grid > div:last-child { max-width: 52ch; }
 
-  /* credential strip (forest band) */
+  /* ---- Orbit: photo with floating signals drifting around it ---- */
+  .orbit { position: relative; width: min(360px, 92%); aspect-ratio: 1; margin-inline: auto; }
+  .orbit__me {
+    position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: cover; border-radius: 50%;
+    -webkit-mask-image: radial-gradient(closest-side, #000 78%, transparent 100%);
+    mask-image: radial-gradient(closest-side, #000 78%, transparent 100%);
+    box-shadow: var(--shadow-card);
+  }
+  .float {
+    position: absolute; white-space: nowrap; z-index: 3;
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
+    background: var(--cream); color: var(--rust); padding: 0.32rem 0.7rem; border-radius: 999px;
+    box-shadow: var(--shadow-card); animation: floatA 6s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * -0.8s);
+  }
+  /* scatter the chips around the ring */
+  .orbit .float:nth-child(2) { top: 2%; left: 8%; }
+  .orbit .float:nth-child(3) { top: 0%; right: 4%; }
+  .orbit .float:nth-child(4) { top: 38%; left: -6%; }
+  .orbit .float:nth-child(5) { top: 30%; right: -8%; }
+  .orbit .float:nth-child(6) { bottom: 20%; left: -4%; }
+  .orbit .float:nth-child(7) { bottom: 4%; right: 2%; }
+  .orbit .float:nth-child(8) { bottom: -2%; left: 26%; }
+  .orbit .float:nth-child(9) { top: 50%; right: 18%; }
+  .float--1 { animation-name: floatB; }
+  .float--2 { animation-name: floatC; }
+  .float--3 { animation-name: floatA; animation-duration: 7.5s; }
+  /* off-the-clock chips read olive/cream */
+  .orbit--life .float { color: var(--olive); }
+
+  @keyframes floatA { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+  @keyframes floatB { 0%,100% { transform: translate(0,0) } 50% { transform: translate(7px, 9px) } }
+  @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(-3deg) } 50% { transform: translate(-8px,-7px) rotate(3deg) } }
+
+  /* ---- Credential strip (forest) ---- */
   .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
   .cred { display: flex; flex-direction: column; gap: 0.3rem; }
   .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
 
-  /* FAQ */
+  /* ---- Moving toolkit marquee ---- */
+  .stack-cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); margin: var(--space-4) 0 var(--space-2); }
+  .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .marquee + .marquee { margin-top: var(--space-1); }
+  .marquee__track { display: flex; gap: var(--space-2); width: max-content; animation: scroll-x 26s linear infinite; }
+  .marquee--rev .marquee__track { animation-direction: reverse; animation-duration: 32s; }
+  .marquee:hover .marquee__track { animation-play-state: paused; }
+  .tool {
+    flex: none; font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-lg);
+    color: var(--brown); background: var(--cream); border: 1.5px solid var(--color-border);
+    padding: 0.5rem 1rem; border-radius: 12px; box-shadow: var(--shadow-card);
+  }
+  .tool--ghost { color: var(--color-text-muted); background: transparent; box-shadow: none; opacity: 0.8; }
+  @keyframes scroll-x { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+  /* ---- FAQ ---- */
   .faq { display: grid; gap: var(--space-3); margin: 0; }
   .faq__item { border-left: 3px solid var(--rust); padding-left: var(--space-2); }
   .faq dt { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--brown); margin-bottom: 0.3rem; }
@@ -192,10 +284,17 @@ const faqs = [
 
   .about-ctas { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
 
+  @media (prefers-reduced-motion: reduce) {
+    .float, .marquee__track { animation: none; }
+  }
+  @media (max-width: 860px) {
+    .ahero { grid-template-columns: 1fr; min-height: 0; }
+    .ahero__photo { min-height: 46vh; order: -1; }
+    .ahero__photo::before { inset: auto 0 0 0; width: auto; height: 22%; background: linear-gradient(0deg, var(--cream), transparent); }
+  }
   @media (max-width: 760px) {
-    .intro-split { grid-template-columns: 1fr; }
-    .intro-split :global(.framed) { order: -1; }
-    .intro-split--rev :global(.framed) { order: -1; }
+    .gap-grid { grid-template-columns: 1fr; }
+    .gap-grid--rev .orbit { order: -1; }
     .creds { grid-template-columns: 1fr; }
   }
 </style>
