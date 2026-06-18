@@ -1,0 +1,45 @@
+---
+// Architecture/blueprint visual: translucent layers stacked like blueprint sheets
+// on a grid; hovering or focusing a layer lifts it out of the stack. Each layer
+// is one deliverable building on the last.
+interface Layer { t: string; d: string }
+interface Props { layers: Layer[] }
+const { layers } = Astro.props;
+---
+<div class="lstack">
+  {layers.map((l, i) => (
+    <div class="lyr" tabindex="0" style={`z-index:${i + 1}`}>
+      <span class="lyr__n">{String(i + 1).padStart(2, '0')}</span>
+      <div class="lyr__body">
+        <h3>{l.t}</h3>
+        <p>{l.d}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .lstack { max-width: 760px; margin-top: var(--space-3); }
+  .lyr {
+    position: relative;
+    display: flex; gap: var(--space-2); align-items: flex-start;
+    background:
+      linear-gradient(rgba(72, 55, 41, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(72, 55, 41, 0.08) 1px, transparent 1px),
+      color-mix(in srgb, var(--blue) 62%, var(--cream));
+    background-size: 18px 18px, 18px 18px, auto;
+    border: 1.5px solid var(--brown);
+    border-radius: 12px;
+    padding: var(--space-3);
+    margin-top: -16px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+  }
+  .lyr:first-child { margin-top: 0; }
+  .lyr:hover, .lyr:focus { transform: translateX(18px); box-shadow: var(--shadow-soft); z-index: 20; outline: none; }
+  .lyr__n { font-family: var(--font-heading); font-size: var(--text-2xl); line-height: 1; color: var(--rust); flex: none; }
+  .lyr__body h3 { margin: 0 0 0.2rem; color: var(--brown); }
+  .lyr__body p { margin: 0; font-size: var(--text-sm); color: var(--brown); }
+
+  @media (max-width: 760px) { .lyr:hover, .lyr:focus { transform: translateX(8px); } }
+</style>

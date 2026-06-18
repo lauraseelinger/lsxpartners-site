@@ -1,5 +1,6 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
+import LayerStack from '../../components/LayerStack.astro';
 
 const deliverables = [
   { n: '01', t: 'The architecture call', d: 'Which pages exist, how they’re organized, and what each one has to answer — mapped to how your buyers actually search, so the site is built around the right questions from day one.' },
@@ -12,8 +13,8 @@ const deliverables = [
   title="AI Visibility Blueprint"
   eyebrow="project"
   lede="Building or rebuilding your site? Do it structurally optimized for AI from the ground up — instead of bolting on fixes across a finished site later."
-  heroImage="/images/laura-laptop-site.jpg"
-  heroRatio="4 / 3"
+  heroImage="/images/laura-3.jpg"
+  heroRatio="4 / 5"
   description="The strategy layer for a website redesign or new build: architecture and page-type decisions mapped to your brand, a build-ready spec, and a prioritized list of where your AI visibility opportunities are."
 >
   <section class="band">
@@ -33,15 +34,9 @@ const deliverables = [
 
   <section class="band section--forest">
     <div class="container">
-      <div class="measure" data-reveal><p class="subhead">what’s in it</p><h2>The website foundation</h2></div>
-      <div class="cards">
-        {deliverables.map((d, i) => (
-          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="card__n">{d.n}</span>
-            <h3>{d.t}</h3>
-            <p>{d.d}</p>
-          </div>
-        ))}
+      <div class="measure" data-reveal><p class="subhead">what’s in it · built up layer by layer</p><h2>The website foundation</h2></div>
+      <div data-reveal>
+        <LayerStack layers={deliverables} />
       </div>
     </div>
   </section>

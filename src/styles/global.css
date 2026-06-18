@@ -72,6 +72,31 @@ strong { font-weight: 600; }
 .prose > * + * { margin-top: var(--space-2); }
 .prose h2, .prose h3 { margin-top: var(--space-3); }
 
+/* Shared layout utilities — used across pages incl. the engagement sub-pages,
+   which have no scoped styles of their own, so these MUST be global. */
+.band { padding-block: var(--space-6); }
+.measure { max-width: 60ch; }
+.measure--center { max-width: none; margin-inline: auto; text-align: center; }
+.measure--center .ctas,
+.measure--center .hero__ctas { justify-content: center; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-3);
+  margin-block: var(--space-4);
+}
+.card {
+  background: var(--cream);
+  color: var(--brown);
+  border-radius: 16px;
+  padding: var(--space-3);
+  box-shadow: var(--shadow-card);
+}
+.card h3 { margin: 0.2rem 0 0.4rem; color: var(--rust); }
+.card p { color: var(--brown); }
+.card p:last-child { margin-bottom: 0; }
+.card__n { font-family: var(--font-heading); font-size: var(--text-xl); color: var(--olive); }
+
 /* Brand image treatment — soft, dimensional (not flat/outlined) */
 .brand-img {
   border-radius: 14px;

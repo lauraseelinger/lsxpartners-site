@@ -1,12 +1,13 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
+import MonthTimeline from '../../components/MonthTimeline.astro';
 import { CTA } from '../../consts';
 
 // FLAGSHIP — the $70–100k one-month intensive (big-brand hero offer).
 // Name is a PLACEHOLDER pending the CMO audience-intel naming work.
 // No pricing — premium, by scope.
 const deliverables = [
-  { n: '01', t: 'The full picture', d: 'Where your brand stands across ChatGPT, Claude, Perplexity and Google AI — what gets said, what gets cited, and who’s getting the credit instead of you.' },
+  { n: '01', t: 'The full picture', d: 'Where your brand stands across ChatGPT, Claude, Gemini, Perplexity and Google AI — what gets said, what gets cited, and who’s getting the credit instead of you.' },
   { n: '02', t: 'Audience intelligence', d: 'The real language your buyers use, mined from where they actually talk — the input most brand strategies are missing entirely.' },
   { n: '03', t: 'Your AI brand identity', d: 'What the internet has decided you are, where that diverges from how you see yourself, and the third-party sources you can uniquely amplify in your favor.' },
   { n: '04', t: 'The mapped strategy', d: 'A prioritized, brand-specific roadmap: where your real opportunities are, what to do about them, and in what order. The judgment, not a checklist.' },
@@ -14,10 +15,10 @@ const deliverables = [
   { n: '06', t: 'A path your team can follow', d: 'You leave the month with an agreed direction and the monitoring in place to track it — so the work actually moves once I’m gone.' },
 ];
 const weeks = [
-  { t: 'Week 1 — See', d: 'Audit and audience intelligence. We establish the truth: what AI says, what buyers ask, where you’re absent.' },
-  { t: 'Week 2 — Map', d: 'Turn the findings into a prioritized strategy built around your brand and the openings specific to you.' },
-  { t: 'Week 3 — Align', d: 'Walk every relevant department through the plan and their role, so nothing stalls in review later.' },
-  { t: 'Week 4 — Hand off', d: 'Exec-ready strategy, the agreed path, and monitoring live — your team can run with it.' },
+  { label: 'See', title: 'Establish the truth', desc: 'Audit + audience intelligence: what AI says, what buyers ask, where you’re absent.' },
+  { label: 'Map', title: 'Build the strategy', desc: 'Turn the findings into a prioritized strategy built around your brand and the openings specific to you.' },
+  { label: 'Align', title: 'Get everyone on board', desc: 'Walk every relevant department through the plan and their role, so nothing stalls in review later.' },
+  { label: 'Hand off', title: 'Leave the path', desc: 'Exec-ready strategy, the agreed path, and monitoring live — your team can run with it.' },
 ];
 ---
 <EngagementLayout
@@ -66,18 +67,12 @@ const weeks = [
   <!-- HOW THE MONTH WORKS (cream texture) -->
   <section class="band tex-cream">
     <div class="container">
-      <div class="measure" data-reveal>
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">how the month works</p>
-        <h2>Four weeks, four moves</h2>
+        <h2>One month, four moves</h2>
       </div>
-      <div class="steps">
-        {weeks.map((w, i) => (
-          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="step__n">{i + 1}</span>
-            <h3>{w.t}</h3>
-            <p>{w.d}</p>
-          </div>
-        ))}
+      <div data-reveal>
+        <MonthTimeline weeks={weeks} />
       </div>
     </div>
   </section>

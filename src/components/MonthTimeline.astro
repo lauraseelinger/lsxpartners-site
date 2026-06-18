@@ -1,0 +1,71 @@
+---
+// A one-month engagement shown as a calendar: four week-rows; hovering / tapping
+// a week highlights it and reveals that week's detail. Reuses the site's
+// hover-reveal interaction pattern.
+interface Week { label: string; title: string; desc: string }
+interface Props { weeks: Week[] }
+const { weeks } = Astro.props;
+const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+---
+<div class="cal">
+  <div class="cal__sheet">
+    <div class="cal__row cal__row--head" aria-hidden="true">
+      <span class="cal__wk"></span>
+      <span class="cal__days">{weekdays.map((d) => <span class="cal__dow">{d}</span>)}</span>
+    </div>
+    {weeks.map((w, i) => (
+      <button type="button" class:list={['cal__week', i === 0 && 'is-active']} data-i={i}>
+        <span class="cal__wk">Wk {i + 1}</span>
+        <span class="cal__days">
+          {Array.from({ length: 7 }, (_, d) => <span class="cal__day">{i * 7 + d + 1}</span>)}
+        </span>
+      </button>
+    ))}
+  </div>
+  <div class="cal__panel">
+    {weeks.map((w, i) => (
+      <div class:list={['cal__detail', i === 0 && 'is-active']} data-i={i}>
+        <p class="subhead">Week {i + 1} · {w.label}</p>
+        <h3>{w.title}</h3>
+        <p>{w.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .cal { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-4); align-items: start; }
+  .cal__sheet { background: var(--cream); border-radius: 16px; padding: var(--space-2); box-shadow: var(--shadow-card); display: grid; gap: 6px; }
+  .cal__row, .cal__week { display: flex; align-items: center; gap: 8px; width: 100%; }
+  .cal__week { cursor: pointer; font: inherit; background: transparent; border: 2px solid transparent; border-radius: 12px; padding: 5px; transition: border-color 0.15s ease; }
+  .cal__week:hover, .cal__week.is-active { border-color: var(--rust); }
+  .cal__wk { flex: 0 0 44px; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); text-align: left; }
+  .cal__days { display: flex; gap: 6px; flex: 1; }
+  .cal__dow { flex: 1; text-align: center; font-size: 0.7rem; color: var(--color-text-muted); }
+  .cal__day { flex: 1; aspect-ratio: 1; display: grid; place-items: center; border-radius: 8px; background: var(--cream-deep); color: var(--brown); font-size: var(--text-sm); }
+  .cal__week:hover .cal__day, .cal__week.is-active .cal__day { background: var(--rust); color: var(--cream); }
+
+  .cal__panel { background: var(--cream); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 11rem; }
+  .cal__detail { display: none; }
+  .cal__detail.is-active { display: block; }
+  .cal__detail h3 { color: var(--rust); margin: 0.2rem 0; }
+  .cal__detail p { margin-bottom: 0; }
+
+  @media (max-width: 760px) { .cal { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  document.querySelectorAll('.cal').forEach((cal) => {
+    const weeks = cal.querySelectorAll('.cal__week');
+    const details = cal.querySelectorAll('.cal__detail');
+    const activate = (i: number) => {
+      weeks.forEach((w, j) => w.classList.toggle('is-active', j === i));
+      details.forEach((d, j) => d.classList.toggle('is-active', j === i));
+    };
+    weeks.forEach((w, i) => {
+      w.addEventListener('mouseenter', () => activate(i));
+      w.addEventListener('focus', () => activate(i));
+      w.addEventListener('click', () => activate(i));
+    });
+  });
+</script>
