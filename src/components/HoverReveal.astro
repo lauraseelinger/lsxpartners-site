@@ -1,0 +1,80 @@
+---
+// Reusable "at-a-glance, hover for more" pattern (same interaction as the
+// LoopDiagram): a list of items on the left; hovering/tapping/focusing one
+// reveals its detail on the right. Pass items: [{ title, blurb }].
+interface Item { title: string; blurb: string; }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+---
+<div class="hr">
+  <ul class="hr__list">
+    {items.map((it, i) => (
+      <li>
+        <button type="button" data-i={i} class={i === 0 ? 'is-active' : ''}>
+          <span>{it.title}</span>
+          <span class="hr__arrow" aria-hidden="true">→</span>
+        </button>
+      </li>
+    ))}
+  </ul>
+  <div class="hr__panel">
+    {items.map((it, i) => (
+      <div class={`hr__blurb ${i === 0 ? 'is-active' : ''}`} data-i={i}>
+        <h3>{it.title}</h3>
+        <p>{it.blurb}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .hr { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-4); align-items: start; }
+  .hr__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
+  .hr__list button {
+    width: 100%; cursor: pointer; font: inherit; text-align: left;
+    display: flex; justify-content: space-between; align-items: center; gap: var(--space-2);
+    background: transparent; color: inherit;
+    border: 0; border-left: 3px solid transparent;
+    padding: var(--space-2); border-radius: 0 10px 10px 0;
+    font-family: var(--font-heading); font-size: var(--text-lg);
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+  .hr__list button:hover, .hr__list button.is-active {
+    background: color-mix(in srgb, var(--rust) 12%, transparent);
+    border-left-color: var(--rust);
+  }
+  .hr__arrow { opacity: 0; transition: opacity 0.18s ease; color: var(--rust); }
+  .hr__list button.is-active .hr__arrow, .hr__list button:hover .hr__arrow { opacity: 1; }
+
+  .hr__panel {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: var(--space-3);
+    box-shadow: var(--shadow-card);
+    min-height: 9rem;
+  }
+  .hr__blurb { display: none; }
+  .hr__blurb.is-active { display: block; }
+  .hr__blurb h3 { margin-top: 0; color: var(--rust); }
+  .hr__blurb p { margin-bottom: 0; color: var(--brown); }
+
+  @media (max-width: 760px) {
+    .hr { grid-template-columns: 1fr; gap: var(--space-2); }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.hr').forEach((hr) => {
+    const buttons = hr.querySelectorAll<HTMLButtonElement>('.hr__list button');
+    const blurbs = hr.querySelectorAll('.hr__blurb');
+    const activate = (i: number) => {
+      buttons.forEach((b, j) => b.classList.toggle('is-active', j === i));
+      blurbs.forEach((b, j) => b.classList.toggle('is-active', j === i));
+    };
+    buttons.forEach((btn, i) => {
+      btn.addEventListener('mouseenter', () => activate(i));
+      btn.addEventListener('focus', () => activate(i));
+      btn.addEventListener('click', () => activate(i));
+    });
+  });
+</script>

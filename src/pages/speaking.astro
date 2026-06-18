@@ -1,42 +1,119 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HoverReveal from '../components/HoverReveal.astro';
 import FramedPhoto from '../components/FramedPhoto.astro';
+import StitchDivider from '../components/StitchDivider.astro';
 import { CTA } from '../consts';
 
-// SPEAKING. Voice: Full LinkedIn Laura. Talks are real (Cincy AI Week featured
-// speaker; Eastern Illinois University guest lecture; Atlanta audit talk).
+// SPEAKING — image-forward, color-blocked, with the hover-reveal pattern for
+// talk topics. Photos are from Cincy AI Week (on stage).
+const topics = [
+  { title: 'What AI actually thinks about your brand', blurb: 'I pull up a real brand live and show the room what ChatGPT, Claude and Perplexity say about it — and where those citations are really coming from. It lands every time.' },
+  { title: 'Owning the answer vs. owning the citation', blurb: 'Getting named by AI and getting credited as the source take different work. I break down how a brand wins both, with real before-and-after numbers.' },
+  { title: 'The audience intelligence most brands skip', blurb: 'Where real buyer language actually lives, why keyword tools miss it, and how that same insight becomes your content and your AI visibility strategy at once.' },
+  { title: 'The lo-fi / analog pendulum', blurb: 'Why the swing back to real, human, un-AI’d content is a strategic opening for brands paying attention — and how to use it without looking like everyone else.' },
+  { title: 'Auditing your own AI visibility', blurb: 'The step-by-step process I run for clients, walked through so your team leaves with a plan they can start Monday, not a notebook of inspiration.' },
+];
+const recent = [
+  { ev: 'Cincy AI Week', role: 'Featured Speaker' },
+  { ev: 'Bowling Green State University', role: 'Guest lecture' },
+  { ev: 'Eastern Illinois University', role: 'Guest lecture' },
+  { ev: 'Brand & agency teams', role: 'Private workshops' },
+];
 ---
-<PageLayout
+<BaseLayout
   title="Speaking"
   description="Laura Seelinger speaks on AI visibility, GEO, and AEO — practical, no-fluff talks and workshops for marketing teams, agencies, and events."
 >
-  <p class="subhead">talks &amp; workshops</p>
-  <FramedPhoto class="img-right" src="/images/laura-phone.jpg" alt="Laura Seelinger" shape="feather" reveal />
-  <p class="prose">
-    Giving people something they can actually action — not theory they nod at and
-    forget by the parking lot — is the thing that lights me up. My pet peeve is
-    leaving a session fired up with no real plan, so I don't do that to a room. I
-    speak on AI visibility, GEO, and AEO: what AI actually thinks about your brand,
-    the gaps most brands don't know they have, and the difference between owning
-    the answer and owning the citation.
-  </p>
+  <!-- HERO -->
+  <section class="hero media-overlay media-overlay--hero">
+    <img class="bg" src="/images/speaking-stage-wide.jpg" alt="" aria-hidden="true" style="object-position: center 35%;" />
+    <div class="container hero__inner">
+      <p class="subhead">speaking &amp; workshops</p>
+      <h1>Talks people can actually act on</h1>
+      <p class="hero__lede">
+        My pet peeve is leaving a session fired up with no real plan. So I don’t
+        do that to a room. I speak on AI visibility, GEO and AEO — what AI thinks
+        about your brand, and exactly what to do about it.
+      </p>
+      <a class="button" href={CTA.calendly}>Invite me to speak</a>
+    </div>
+  </section>
 
-  <h2>Recent</h2>
-  <ul class="prose">
-    <li><strong>Cincy AI Week</strong> — Featured Speaker. What AI actually thinks about your brand, and what to do about it.</li>
-    <li><strong>Eastern Illinois University</strong> — guest lecture on AI visibility and modern marketing.</li>
-    <li>Plus workshops and audit walk-throughs for brand and agency teams.</li>
-  </ul>
+  <!-- INTRO (forest) -->
+  <section class="band section--forest">
+    <div class="container measure" data-reveal>
+      <p class="subhead">why book me</p>
+      <h2>I give a room something to do, not just something to clap for</h2>
+      <p>
+        I run live audits on stage, share the real numbers from client work, and
+        send people home with a process they can run themselves. It’s the same
+        thing that lights me up about the work — handing people something they can
+        action, not theory they’ll forget by the parking lot.
+      </p>
+    </div>
+  </section>
 
-  <h2>Topics I cover</h2>
-  <ul class="prose">
-    <li>How to audit your AI visibility, step by step</li>
-    <li>Why your AI visibility "score" isn't the whole story</li>
-    <li>The LinkedIn / newsletter pivot for getting cited by AI</li>
-    <li>The lo-fi / analog pendulum swing and what it means for marketers</li>
-  </ul>
+  <!-- TOPICS — hover reveal (cream texture) -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band tex-cream">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">what i talk about</p>
+        <h2>Pick a thread</h2>
+      </div>
+      <div data-reveal>
+        <HoverReveal items={topics} />
+      </div>
+    </div>
+  </section>
 
-  <p style="margin-top: var(--space-3)">
-    <a class="button" href={CTA.calendly}>Invite me to speak</a>
-  </p>
-</PageLayout>
+  <!-- RECENT — split: feathered photo + list (rust) -->
+  <StitchDivider bg="rust" stitch="ivory" />
+  <section class="band section--rust">
+    <div class="container recent">
+      <div data-reveal="left">
+        <p class="subhead">recent stages</p>
+        <h2>Where I’ve been lately</h2>
+        <ul class="recent__list">
+          {recent.map((r) => (
+            <li><strong>{r.ev}</strong><span>{r.role}</span></li>
+          ))}
+        </ul>
+      </div>
+      <FramedPhoto src="/images/speaking-podium.jpg" alt="Laura presenting at Cincy AI Week" shape="feather" ratio="3 / 4" reveal delay="1" />
+    </div>
+  </section>
+
+  <!-- CTA (forest) -->
+  <StitchDivider bg="forest" stitch="yellow" />
+  <section class="band section--forest">
+    <div class="container measure measure--center" data-reveal="scale">
+      <h2>Got a stage? Let’s talk.</h2>
+      <p>Events, team workshops, podcasts — if your audience needs to get AI visibility, I’m in.</p>
+      <a class="button" href={CTA.calendly}>Invite me to speak</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { display: flex; align-items: center; min-height: 72vh; padding-block: var(--space-6); --hero-fade-to: var(--forest); }
+  .hero__inner { max-width: 760px; }
+  .hero h1 { font-size: clamp(2.6rem, 1.8rem + 4vw, 4.8rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 50ch; margin-bottom: var(--space-3); }
+
+  .band { padding-block: var(--space-6); }
+  .measure { max-width: 60ch; }
+  .measure--center { margin-inline: auto; text-align: center; }
+
+  .recent { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-5); align-items: center; }
+  .recent :global(.framed) { max-width: 360px; justify-self: center; }
+  .recent__list { list-style: none; padding: 0; margin: var(--space-2) 0 0; display: grid; gap: var(--space-2); }
+  .recent__list li { display: flex; flex-direction: column; border-top: 1px solid rgba(252,245,229,0.35); padding-top: var(--space-1); }
+  .recent__list span { opacity: 0.85; font-size: var(--text-sm); }
+
+  @media (max-width: 760px) {
+    .recent { grid-template-columns: 1fr; }
+    .recent :global(.framed) { order: -1; }
+  }
+</style>
