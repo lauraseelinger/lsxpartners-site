@@ -132,12 +132,12 @@ const mates = [
     const update = () => {
       const rect = board.getBoundingClientRect();
       const vh = window.innerHeight;
-      // raw progress over a very long span (entering -> well past) = slow
-      const span = vh + 320;
+      // raw progress as the table moves up through view (done while centered,
+      // not after it has scrolled off)
+      const span = vh * 0.85;
       const raw = Math.min(1, Math.max(0, (vh - rect.top) / span));
-      // hold on the empty silhouette for the first 35%, then glide in over the
-      // next 45% — so you actually see the seat sit empty before I arrive
-      const t = Math.min(1, Math.max(0, (raw - 0.35) / 0.45));
+      // brief hold on the empty silhouette, then glide in and finish in-view
+      const t = Math.min(1, Math.max(0, (raw - 0.16) / 0.5));
       const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;  // ease-in-out
       const x = 220 * (1 - e);            // come in from far right
       const y = 40 * (1 - e);             // and slightly up
