@@ -4,7 +4,7 @@ import StitchDivider from '../components/StitchDivider.astro';
 import LoopDiagram from '../components/LoopDiagram.astro';
 import { serviceSchema } from '../lib/schema';
 import { targetQuarter } from '../lib/dates';
-import { SITE, PERSON, CTA } from '../consts';
+import { SITE, PERSON, CTA, ENGAGEMENTS } from '../consts';
 
 const quarter = targetQuarter(); // ~4–5 months out, recomputed each build
 
@@ -12,12 +12,6 @@ const quarter = targetQuarter(); // ~4–5 months out, recomputed each build
 // motion. Modeled on the structure of the current lsxpartners.com but in the
 // new brand. Voice: Full LinkedIn Laura. Stats are her own sourced figures.
 const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience intelligence', 'content activation'];
-const services = [
-  { n: '01', t: 'AI Visibility Audit', d: 'Where you show up — and don’t — across ChatGPT, Claude, Perplexity and Google AI, and the real reason why.' },
-  { n: '02', t: 'AI Visibility Strategy', d: 'The plan to get cited, built on what your audience actually asks — not prompts crowdsourced in a Teams thread.' },
-  { n: '03', t: 'Audience Intelligence', d: 'The real language buyers use, mined from where they talk when no one’s watching.' },
-  { n: '04', t: 'Content Activation', d: 'Content engineered to be extracted and quoted by AI — structured so the dice are loaded your way.' },
-];
 ---
 <BaseLayout title={SITE.name} description={SITE.description} schemas={[serviceSchema()]}>
   <!-- HERO — full-bleed photo, text over image -->
@@ -79,19 +73,20 @@ const services = [
   <section class="band tex-olive section--olive">
     <div class="container">
       <div class="measure" data-reveal>
-        <p class="subhead">what i actually do</p>
-        <h2>AI visibility &amp; strategy</h2>
+        <p class="subhead">ways to work with me</p>
+        <h2>Pick your entry point</h2>
       </div>
       <div class="cards">
-        {services.map((s, i) => (
-          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="card__n">{s.n}</span>
-            <h3>{s.t}</h3>
-            <p>{s.d}</p>
-          </div>
+        {ENGAGEMENTS.map((e, i) => (
+          <a class="card card--link" href={`/services/${e.slug}`} data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <p class="subhead">{e.eyebrow}</p>
+            <h3>{e.name}</h3>
+            <p>{e.summary}</p>
+            <span class="card__go">Learn more →</span>
+          </a>
         ))}
       </div>
-      <p data-reveal><a class="button button--ghost" href="/services">See how it works</a></p>
+      <p data-reveal><a class="button button--ghost" href="/services">See all services</a></p>
     </div>
   </section>
 
@@ -187,9 +182,10 @@ const services = [
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
-  .card__n { font-family: var(--font-heading); font-size: var(--text-xl); color: var(--olive); }
+  .card--link { text-decoration: none; display: flex; flex-direction: column; }
   .card h3 { margin: 0.2rem 0 0.4rem; color: var(--rust); }
-  .card p { margin-bottom: 0; color: var(--brown); }
+  .card p { margin-bottom: var(--space-2); color: var(--brown); }
+  .card__go { margin-top: auto; color: var(--olive); font-weight: 600; font-size: var(--text-sm); }
 
   /* Cited — feature split: image fills the right half and feathers into the
      solid (readable) left half where the text lives. */
