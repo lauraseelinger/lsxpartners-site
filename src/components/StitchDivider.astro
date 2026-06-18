@@ -1,0 +1,29 @@
+---
+// A horizontal cross-stitch seam (brand asset) used to separate section
+// blocks — like quilt panels stitched together. Sits as its own thin strip
+// whose background color matches the section it leads into, so the seam reads
+// as the top edge of that block.
+interface Props {
+  /** CSS color token name for the strip background, e.g. 'olive', 'cream', 'forest'. */
+  bg?: string;
+  /** Stitch thread color: rust | green | brown | ivory | yellow. */
+  stitch?: 'rust' | 'green' | 'brown' | 'ivory' | 'yellow';
+}
+const { bg = 'cream', stitch = 'rust' } = Astro.props;
+---
+<div
+  class="stitch-divider"
+  role="presentation"
+  style={`background-color: var(--${bg}); --stitch: url('/brand/assets/stitch-h-${stitch}.png');`}
+>
+</div>
+
+<style>
+  .stitch-divider {
+    height: 36px;
+    background-image: var(--stitch);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 20px;
+  }
+</style>

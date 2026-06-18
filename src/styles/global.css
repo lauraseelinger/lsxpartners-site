@@ -158,9 +158,21 @@ strong { font-weight: 600; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
 
-/* ---- Textured section backgrounds (brand patterns) ---- */
-.tex-cream { background: var(--cream) url('/brand/patterns/pattern-3.jpg') center / 360px repeat; }
-.tex-olive { background: var(--olive) url('/brand/patterns/pattern-4.jpg') center / 360px repeat; }
+/* ---- Textured section backgrounds (brand patterns) ----
+   A semi-opaque color wash over the pattern keeps the texture subtle and the
+   text crisp/legible. */
+.tex-cream {
+  background:
+    linear-gradient(rgba(252, 245, 229, 0.72), rgba(252, 245, 229, 0.72)),
+    url('/brand/patterns/pattern-3.jpg') center / 360px repeat,
+    var(--cream);
+}
+.tex-olive {
+  background:
+    linear-gradient(rgba(139, 140, 74, 0.8), rgba(139, 140, 74, 0.8)),
+    url('/brand/patterns/pattern-4.jpg') center / 360px repeat,
+    var(--olive);
+}
 
 /* ---- Big-number stat block ---- */
 .stat-grid {

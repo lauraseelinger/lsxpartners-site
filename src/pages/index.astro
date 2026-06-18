@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StitchDivider from '../components/StitchDivider.astro';
 import { serviceSchema } from '../lib/schema';
 import { SITE, PERSON, CTA } from '../consts';
 
@@ -75,6 +76,7 @@ const steps = [
     </div>
   </section>
 
+  <StitchDivider bg="olive" stitch="ivory" />
   <!-- SERVICES (olive textured, numbered grid) -->
   <section class="band tex-olive section--olive">
     <div class="container">
@@ -111,6 +113,7 @@ const steps = [
     </div>
   </section>
 
+  <StitchDivider bg="cream" stitch="rust" />
   <!-- THE LOOP (cream textured, steps) -->
   <section class="band tex-cream">
     <div class="container">
@@ -131,6 +134,7 @@ const steps = [
     </div>
   </section>
 
+  <StitchDivider bg="cream-deep" stitch="rust" />
   <!-- CITED — split: photo blends into the text half (readable solid bg) -->
   <section class="split-feature">
     <img class="split-feature__img" src="/images/hero-couch.jpg" alt="Laura Seelinger" />
@@ -148,6 +152,7 @@ const steps = [
     </div>
   </section>
 
+  <StitchDivider bg="forest" stitch="yellow" />
   <!-- FINAL CTA (forest) -->
   <section class="band section--forest">
     <div class="container measure measure--center final" data-reveal="scale">
