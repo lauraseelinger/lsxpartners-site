@@ -20,7 +20,7 @@ const verticals = [
   { name: 'Pharma & MedTech', d: 'Medical, legal, and regulatory sign-off on every word.' },
   { name: 'CPG & glassware', d: 'The Libbey years — retail, Amazon, and brand.' },
 ];
-const offclock = ['🐈 my cats', '🥾 walks & hikes', '📔 junk journaling', '🧘 breathwork & meditation', '🎧 podcasts', '🗺️ our next adventure'];
+const offclock = ['🐈 my cats', '🥾 hiking', '📔 junk journaling', '🌬️ breathwork', '🧘 meditation', '🎧 podcasts', '🚗 road trips'];
 const stickers = [
   { src: '/brand/assets/sticker-locally-sourced.png', cls: 'stk--1', rot: -8, depth: 26 },
   { src: '/brand/assets/sticker-tailored.png', cls: 'stk--2', rot: 7, depth: 40 },
@@ -108,45 +108,40 @@ const faqs = [
         </p>
       </div>
 
-      <div class="bg-grid">
-        <div class="sides">
-          {sides.map((s, i) => (
-            <div class="side" data-reveal data-reveal-delay={i + 1}>
-              {s.key === 'corp' ? (
-                <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="11" y="6" width="26" height="38" rx="2" /><line x1="6" y1="44" x2="42" y2="44" />
-                  <line x1="18" y1="14" x2="20" y2="14" /><line x1="28" y1="14" x2="30" y2="14" />
-                  <line x1="18" y1="22" x2="20" y2="22" /><line x1="28" y1="22" x2="30" y2="22" />
-                  <line x1="18" y1="30" x2="20" y2="30" /><line x1="28" y1="30" x2="30" y2="30" />
-                </svg>
-              ) : (
-                <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M26 4 L12 26 L23 26 L20 44 L36 20 L25 20 Z" />
-                </svg>
-              )}
-              <h3>{s.name}</h3>
-              <p>{s.blurb}</p>
-            </div>
-          ))}
-        </div>
-
-        <div class="rooms" data-reveal="right">
-          <p class="rooms__cap">across a lot of rooms</p>
-          {verticals.map((v, i) => (
-            <details class="room" open={i === 0}>
-              <summary>{v.name}</summary>
-              <p>{v.d}</p>
-            </details>
-          ))}
-        </div>
+      <div class="sides">
+        {sides.map((s, i) => (
+          <div class="side" data-reveal data-reveal-delay={i + 1}>
+            {s.key === 'corp' ? (
+              <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="11" y="6" width="26" height="38" rx="2" /><line x1="6" y1="44" x2="42" y2="44" />
+                <line x1="18" y1="14" x2="20" y2="14" /><line x1="28" y1="14" x2="30" y2="14" />
+                <line x1="18" y1="22" x2="20" y2="22" /><line x1="28" y1="22" x2="30" y2="22" />
+                <line x1="18" y1="30" x2="20" y2="30" /><line x1="28" y1="30" x2="30" y2="30" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M26 4 L12 26 L23 26 L20 44 L36 20 L25 20 Z" />
+              </svg>
+            )}
+            <h3>{s.name}</h3>
+            <p>{s.blurb}</p>
+          </div>
+        ))}
       </div>
+
+      <p class="rooms-line" data-reveal>
+        <span class="rooms-line__cap">across a lot of rooms —</span>
+        {verticals.map((v, i) => (
+          <span class="room-name">{v.name}{i < verticals.length - 1 ? <span class="dot"> · </span> : null}</span>
+        ))}
+      </p>
     </div>
   </section>
 
   <!-- HOW I WORK — the coach's playbook, small + blended into the corner -->
   <StitchDivider bg="cream" stitch="rust" />
   <section class="band tex-cream how-band">
-    <div class="container">
+    <div class="container how-grid">
       <div class="measure" data-reveal>
         <p class="subhead">how i actually work</p>
         <h2>I test it on myself first</h2>
@@ -159,10 +154,9 @@ const faqs = [
           never finished; every round, I run the next play on my own work first.
         </p>
       </div>
-    </div>
-    <figure class="playbook" data-reveal aria-hidden="true">
-      <span class="playbook__tag">the play, this round</span>
-      <svg viewBox="0 0 300 210" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <figure class="playbook" data-reveal aria-hidden="true">
+        <span class="playbook__tag">the play, this round</span>
+        <svg viewBox="0 0 300 210" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <!-- field hashes -->
         <g stroke="var(--brown)" stroke-width="1" opacity="0.18">
           <line x1="20" y1="70" x2="280" y2="70" /><line x1="20" y1="120" x2="280" y2="120" />
@@ -184,7 +178,8 @@ const faqs = [
         <!-- defender X -->
         <path d="M143 44 l14 14 M157 44 l-14 14" stroke="var(--brown)" stroke-width="3" opacity="0.7" />
       </svg>
-    </figure>
+      </figure>
+    </div>
   </section>
 
   <!-- OFF THE CLOCK -->
@@ -252,24 +247,22 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  /* ---- Half/half hero, photo blended into the pattern ---- */
-  .ahero { display: grid; grid-template-columns: 1fr 1fr; min-height: clamp(360px, 46vh, 470px); }
-  .ahero__text {
-    display: flex; flex-direction: column; justify-content: center; padding: var(--space-5);
+  /* ---- Half/half hero: photo masked so it dissolves into the pattern ---- */
+  .ahero {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: clamp(360px, 46vh, 470px);
     background:
       linear-gradient(rgba(252, 245, 229, 0.72), rgba(252, 245, 229, 0.72)),
       url('/brand/patterns/pattern-2.jpg') center / 300px repeat,
       var(--cream);
   }
+  .ahero__text { display: flex; flex-direction: column; justify-content: center; padding: var(--space-5); }
   .ahero__text h1 { font-size: clamp(2.4rem, 1.7rem + 3vw, 4rem); margin-block: var(--space-1) var(--space-2); }
   .ahero__lede { font-size: var(--text-lg); max-width: 40ch; margin-bottom: var(--space-3); }
-  .ahero__photo { position: relative; overflow: hidden; }
-  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 52% 30%; }
-  /* feather + soft blur where the photo meets the pattern */
-  .ahero__photo::before {
-    content: ''; position: absolute; inset: 0 auto 0 -1px; width: 24%; z-index: 2;
-    background: linear-gradient(90deg, var(--cream) 8%, transparent);
-    backdrop-filter: blur(3px); -webkit-mask-image: linear-gradient(90deg, #000 30%, transparent);
+  .ahero__photo { position: relative; }
+  .ahero__photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 52% 30%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0,0,0,0.4) 22%, #000 46%);
+    mask-image: linear-gradient(90deg, transparent 0, rgba(0,0,0,0.4) 22%, #000 46%);
   }
 
   .band { padding-block: var(--space-6); }
@@ -295,13 +288,13 @@ const faqs = [
     box-shadow: var(--shadow-card); animation: floatA 6s ease-in-out infinite;
     animation-delay: calc(var(--i, 0) * -0.8s);
   }
-  .orbit .float:nth-child(2) { top: 2%; left: 6%; }
-  .orbit .float:nth-child(3) { top: -1%; right: 2%; }
-  .orbit .float:nth-child(4) { top: 36%; left: -8%; }
-  .orbit .float:nth-child(5) { top: 28%; right: -8%; }
-  .orbit .float:nth-child(6) { bottom: 18%; left: -6%; }
-  .orbit .float:nth-child(7) { bottom: 2%; right: 0%; }
-  .orbit .float:nth-child(8) { bottom: -3%; left: 28%; }
+  .orbit .float:nth-child(2) { top: -3%; left: 4%; }
+  .orbit .float:nth-child(3) { top: 6%; right: -4%; }
+  .orbit .float:nth-child(4) { top: 34%; left: -14%; }
+  .orbit .float:nth-child(5) { top: 30%; right: -14%; }
+  .orbit .float:nth-child(6) { bottom: 26%; left: -10%; }
+  .orbit .float:nth-child(7) { bottom: 8%; right: -6%; }
+  .orbit .float:nth-child(8) { bottom: -4%; left: 30%; }
   .float--1 { animation-name: floatB; }
   .float--2 { animation-name: floatC; }
   .float--3 { animation-name: floatA; animation-duration: 7.5s; }
@@ -310,35 +303,25 @@ const faqs = [
   @keyframes floatB { 0%,100% { transform: translate(0,0) } 50% { transform: translate(7px, 9px) } }
   @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(-3deg) } 50% { transform: translate(-8px,-7px) rotate(3deg) } }
 
-  /* ---- Both sides + industries accordion (forest) ---- */
-  .bg-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-4); margin-top: var(--space-4); align-items: start; }
-  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  /* ---- Both sides + industries line (forest) ---- */
+  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
   .side { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
   .side svg { width: 38px; height: 38px; color: var(--rust); }
   .side h3 { margin: var(--space-1) 0 0.2rem; color: var(--rust); }
   .side p { margin: 0; font-size: var(--text-sm); }
-  .rooms { background: rgba(252,245,229,0.08); border: 1px solid rgba(252,245,229,0.25); border-radius: 16px; padding: var(--space-2) var(--space-3); }
-  .rooms__cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--peach); margin: 0 0 var(--space-1); }
-  .room { border-bottom: 1px solid rgba(252,245,229,0.18); }
-  .room:last-child { border-bottom: 0; }
-  .room summary {
-    cursor: pointer; list-style: none; padding: 0.6rem 0; display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--font-heading); font-size: var(--text-md, 1.05rem); color: var(--cream);
-  }
-  .room summary::-webkit-details-marker { display: none; }
-  .room summary::after { content: '+'; color: var(--peach); font-size: 1.3rem; line-height: 1; }
-  .room[open] summary::after { content: '–'; }
-  .room p { margin: 0 0 0.7rem; font-size: var(--text-sm); color: rgba(252,245,229,0.85); }
+  .rooms-line { margin: var(--space-4) 0 0; font-family: var(--font-sub); font-style: italic; font-weight: 800; font-size: var(--text-lg); color: var(--cream); line-height: 1.5; }
+  .rooms-line__cap { color: var(--peach); margin-right: 0.4rem; }
+  .rooms-line .dot { color: rgba(252,245,229,0.45); }
 
-  /* ---- Playbook: small, blended into the corner ---- */
+  /* ---- Playbook: balanced half of the section, blended in ---- */
   .how-band { position: relative; overflow: hidden; }
-  .playbook { position: absolute; right: 3%; bottom: 6%; width: min(300px, 34%); margin: 0; z-index: 0; opacity: 0.9;
-    -webkit-mask-image: radial-gradient(125% 120% at 70% 75%, #000 52%, transparent 92%);
-    mask-image: radial-gradient(125% 120% at 70% 75%, #000 52%, transparent 92%); }
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: center; }
+  .how-grid .measure { max-width: 42rem; }
+  .playbook { position: relative; margin: 0;
+    -webkit-mask-image: radial-gradient(140% 130% at 60% 55%, #000 60%, transparent 96%);
+    mask-image: radial-gradient(140% 130% at 60% 55%, #000 60%, transparent 96%); }
   .playbook svg { width: 100%; height: auto; display: block; }
-  .playbook__tag { position: absolute; top: -4px; left: 6%; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); opacity: 0.7; }
-  .how-band .container { position: relative; z-index: 1; }
-  .how-band .measure { max-width: 40rem; }
+  .playbook__tag { position: absolute; top: -8px; left: 4%; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); opacity: 0.75; }
 
   /* ---- FAQ + sticker stack ---- */
   .faq-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-5); align-items: center; }
@@ -362,20 +345,20 @@ const faqs = [
 
   @media (prefers-reduced-motion: reduce) { .float { animation: none; } }
   @media (max-width: 900px) {
-    .bg-grid { grid-template-columns: 1fr; }
+    .how-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+    .playbook { max-width: 420px; margin-inline: auto; }
   }
   @media (max-width: 860px) {
     .ahero { grid-template-columns: 1fr; min-height: 0; }
     .ahero__photo { height: 42vh; order: -1; }
-    .ahero__photo::before { inset: auto 0 0 0; width: auto; height: 26%; background: linear-gradient(0deg, var(--cream), transparent); -webkit-mask-image: none; backdrop-filter: none; }
+    .ahero__photo img { -webkit-mask-image: linear-gradient(0deg, transparent 0, #000 28%); mask-image: linear-gradient(0deg, transparent 0, #000 28%); }
     .faq-grid { grid-template-columns: 1fr; }
     .stickers { height: 280px; max-width: 380px; margin-inline: auto; }
-    .playbook { display: none; }
   }
   @media (max-width: 760px) {
     .gap-grid { grid-template-columns: 1fr; }
     .gap-grid--rev .orbit { order: -1; }
-    .sides { grid-template-columns: 1fr 1fr; }
+    .sides { grid-template-columns: 1fr; }
   }
 </style>
 
