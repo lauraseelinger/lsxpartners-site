@@ -1,0 +1,71 @@
+---
+// The AI Intelligence Loop, visualized as an actual loop (4 nodes around a ring
+// on desktop; a numbered vertical flow on mobile). Reusable on home + services.
+const stages = [
+  { t: 'Audience intelligence', d: 'what your buyers actually say' },
+  { t: 'Strategic translation', d: 'a plan built for AI visibility' },
+  { t: 'Content activation', d: 'content built to be cited' },
+  { t: 'Monitoring', d: 'watch it, then feed it back' },
+];
+---
+<div class="loop" role="img" aria-label="The AI Intelligence Loop: audience intelligence, strategic translation, content activation, monitoring — feeding back to the start.">
+  <div class="loop__ring" aria-hidden="true"><span>↻</span></div>
+  <ol class="loop__nodes">
+    {stages.map((s, i) => (
+      <li class={`loop__node loop__node--${i + 1}`}>
+        <span class="loop__n">{i + 1}</span>
+        <strong>{s.t}</strong>
+        <span class="loop__d">{s.d}</span>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .loop {
+    position: relative;
+    width: min(560px, 100%);
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+  }
+  .loop__ring {
+    position: absolute; top: 50%; left: 50%;
+    width: 52%; height: 52%;
+    transform: translate(-50%, -50%);
+    border: 2px dashed var(--olive);
+    border-radius: 50%;
+    display: grid; place-items: center;
+  }
+  .loop__ring span { font-size: 2.4rem; color: var(--olive); }
+  .loop__nodes { list-style: none; margin: 0; padding: 0; }
+  .loop__node {
+    position: absolute;
+    width: 42%;
+    background: var(--cream);
+    border-radius: 14px;
+    padding: var(--space-2);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+  }
+  .loop__node strong { display: block; color: var(--rust); }
+  .loop__n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.9rem; height: 1.9rem; border-radius: 50%;
+    background: var(--rust); color: var(--cream);
+    font-family: var(--font-heading); margin-bottom: 0.3rem;
+  }
+  .loop__d { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .loop__node--1 { top: 0; left: 50%; transform: translateX(-50%); }
+  .loop__node--2 { top: 50%; right: 0; transform: translateY(-50%); }
+  .loop__node--3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .loop__node--4 { top: 50%; left: 0; transform: translateY(-50%); }
+
+  /* Mobile: drop the ring, stack as a numbered flow */
+  @media (max-width: 700px) {
+    .loop { aspect-ratio: auto; max-width: 460px; }
+    .loop__ring { display: none; }
+    .loop__nodes { display: grid; gap: var(--space-2); }
+    .loop__node { position: static; width: 100%; transform: none; text-align: left; display: flex; gap: var(--space-2); align-items: baseline; }
+    .loop__n { flex: none; margin-bottom: 0; }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StitchDivider from '../components/StitchDivider.astro';
+import LoopDiagram from '../components/LoopDiagram.astro';
 import { serviceSchema } from '../lib/schema';
 import { targetQuarter } from '../lib/dates';
 import { SITE, PERSON, CTA } from '../consts';
@@ -16,12 +17,6 @@ const services = [
   { n: '02', t: 'AI Visibility Strategy', d: 'The plan to get cited, built on what your audience actually asks — not prompts crowdsourced in a Teams thread.' },
   { n: '03', t: 'Audience Intelligence', d: 'The real language buyers use, mined from where they talk when no one’s watching.' },
   { n: '04', t: 'Content Activation', d: 'Content engineered to be extracted and quoted by AI — structured so the dice are loaded your way.' },
-];
-const steps = [
-  { t: 'Audience intelligence', d: 'What your buyers actually say and ask.' },
-  { t: 'Strategic translation', d: 'Turn that into a plan AI can read.' },
-  { t: 'Content activation', d: 'Publish what gets extracted and cited.' },
-  { t: 'Monitoring', d: 'Watch what AI says, feed it back in.' },
 ];
 ---
 <BaseLayout title={SITE.name} description={SITE.description} schemas={[serviceSchema()]}>
@@ -117,22 +112,16 @@ const steps = [
   </section>
 
   <StitchDivider bg="cream" stitch="rust" />
-  <!-- THE LOOP (cream textured, steps) -->
+  <!-- THE LOOP (cream textured, visualized) -->
   <section class="band tex-cream">
     <div class="container">
-      <div class="measure" data-reveal>
+      <div class="measure" data-reveal style="margin-bottom: var(--space-4)">
         <p class="subhead">the framework</p>
         <h2>The AI Intelligence Loop</h2>
-        <p>Most agencies skip to producing content and hope it lands. I run a loop instead — and it compounds.</p>
+        <p>Most agencies skip to producing content and hope it lands. I run a loop instead, and it compounds.</p>
       </div>
-      <div class="steps">
-        {steps.map((s, i) => (
-          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="step__n">{i + 1}</span>
-            <h3>{s.t}</h3>
-            <p>{s.d}</p>
-          </div>
-        ))}
+      <div data-reveal>
+        <LoopDiagram />
       </div>
     </div>
   </section>

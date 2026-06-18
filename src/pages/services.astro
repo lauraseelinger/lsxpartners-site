@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import FAQ from '../components/FAQ.astro';
 import FramedPhoto from '../components/FramedPhoto.astro';
 import StitchDivider from '../components/StitchDivider.astro';
+import LoopDiagram from '../components/LoopDiagram.astro';
 import { serviceSchema } from '../lib/schema';
 import { ENGAGEMENTS, CTA } from '../consts';
 
@@ -74,14 +75,15 @@ const faqs = [
 
   <!-- THE LOOP -->
   <section class="band section--forest">
-    <div class="container measure" data-reveal>
-      <p class="subhead">how the work runs</p>
-      <h2>The AI Intelligence Loop</h2>
-      <p>
-        Every engagement runs the same loop: audience intelligence and brand-identity
-        analysis as parallel inputs → a strategy built for AI visibility → content
-        activation → monitoring that feeds back in. It compounds. That’s the point.
-      </p>
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-4)">
+        <p class="subhead">how the work runs</p>
+        <h2>The AI Intelligence Loop</h2>
+        <p>Every engagement runs the same loop, and it compounds. That’s the point.</p>
+      </div>
+      <div data-reveal>
+        <LoopDiagram />
+      </div>
     </div>
   </section>
 
