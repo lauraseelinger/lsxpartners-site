@@ -1,58 +1,201 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import FramedPhoto from '../components/FramedPhoto.astro';
+import StitchDivider from '../components/StitchDivider.astro';
+import { faqSchema } from '../lib/schema';
 import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
-// this page is its canonical home (rel=author points here).
-// Voice: Full LinkedIn Laura. Backstory facts are real (Libbey, corporate
-// healthcare, 15+ yrs agency+corporate, MBA, Cincy speaker).
+// this page is its canonical home (rel=author points here). Image-forward,
+// color-blocked, in Full LinkedIn Laura voice. Backstory facts are real
+// (Libbey, regulated healthcare, 15+ yrs agency+corporate, MBA, Cincy speaker).
+const faqs = [
+  {
+    question: 'Who is Laura Seelinger?',
+    answer:
+      'Laura Seelinger is an AI visibility expert and the founder of LSX Partners. She helps brands and agencies get cited by AI engines like ChatGPT, Claude, Gemini, and Perplexity, drawing on 15+ years in agency and corporate marketing — much of it in regulated industries like healthcare and MedTech.',
+  },
+  {
+    question: 'What does LSX Partners do?',
+    answer:
+      'LSX Partners is an AI visibility and strategy practice. It audits what AI engines actually say about a brand, then builds the strategy and content so those engines quote the brand as a source — not just rank it.',
+  },
+  {
+    question: 'Who does Laura work with?',
+    answer:
+      'Both in-house brand teams and agencies — agency work is often white-labeled. Engagements range from a one-time AI visibility audit to a focused one-month intensive to an ongoing monthly partnership.',
+  },
+];
 ---
-<PageLayout
+<BaseLayout
   title={`About ${PERSON.name}`}
-  heading="Hi, I'm Laura."
-  description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI."
+  description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI — 15+ years in agency and corporate marketing, much of it in regulated industries."
+  schemas={[faqSchema(faqs)]}
 >
-  <p class="subhead">ai visibility expert · founder, lsx partners</p>
+  <!-- HERO -->
+  <section class="hero media-overlay media-overlay--hero">
+    <img class="bg" src="/images/hero-standing.jpg" alt="" aria-hidden="true" style="object-position: center 22%;" />
+    <div class="container hero__inner">
+      <p class="subhead">ai visibility expert · founder, lsx partners</p>
+      <h1>Hi, I'm Laura.</h1>
+      <p class="hero__lede">
+        I'm the AI marketing nerd who actually looks forward to the monthly
+        reporting. I help brands and agencies get <strong>cited by AI</strong> —
+        and I'm in this every single day.
+      </p>
+      <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+    </div>
+  </section>
 
-  <FramedPhoto class="img-right" src="/images/laura-kitchen.jpg" alt="Laura Seelinger" shape="feather" reveal />
+  <!-- THE GAP (cream) -->
+  <section class="band tex-cream">
+    <div class="container intro-split">
+      <div data-reveal="left">
+        <p class="subhead">the gap i live in</p>
+        <h2>What AI says about you is the new front page</h2>
+        <p>
+          When someone asks ChatGPT, Claude, Gemini, or Perplexity about your
+          category, the brand it names — and the source it credits — is what they
+          act on. Most companies have no idea what AI is saying about them. That's
+          the gap I live in: finding it, and closing it.
+        </p>
+      </div>
+      <FramedPhoto src="/images/laura-kitchen.jpg" alt="Laura Seelinger" shape="feather" ratio="3 / 4" reveal delay="1" />
+    </div>
+  </section>
 
-  <p class="prose">
-    I'm the AI marketing nerd who actually looks forward to the monthly reporting.
-    I help brands and agencies get <strong>cited by AI</strong>. When someone asks
-    ChatGPT, Claude, Gemini, or Perplexity about your category, the brand it names — and
-    the source it credits — is the new front page.
-    Most companies have no idea what AI is saying about them. That's the gap I live in.
-  </p>
+  <!-- BACKGROUND (forest) -->
+  <StitchDivider bg="forest" stitch="yellow" />
+  <section class="band section--forest">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">where i come from</p>
+        <h2>I've lived both sides of the work</h2>
+      </div>
+      <div class="measure" data-reveal>
+        <p>
+          I've spent 15+ years across agency and corporate marketing. Four of them
+          were at Libbey, the glassware company in Toledo — I genuinely loved the
+          products and the people (I even wrote some of the Amazon copy I now roast
+          in my case studies). Most of my family works in healthcare, my husband
+          included, so I spent years deep in regulated marketing, where the simplest
+          copy change needs sign-off from medical, legal, compliance, and brand.
+        </p>
+        <p>
+          That background is exactly why I'm useful now. The content side is the
+          easy part — getting it through a real organization is where the work
+          actually happens, and I've lived both sides.
+        </p>
+      </div>
+      <div class="creds">
+        <div class="cred" data-reveal><span class="cred__big">15+ yrs</span><span>across agency &amp; corporate marketing</span></div>
+        <div class="cred" data-reveal data-reveal-delay="1"><span class="cred__big">Regulated</span><span>healthcare &amp; MedTech — medical, legal &amp; brand sign-off</span></div>
+        <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">MBA</span><span>plus a marketer's instinct for what actually moves</span></div>
+      </div>
+    </div>
+  </section>
 
-  <p class="prose">
-    I've spent 15+ years across agency and corporate marketing. Four of them were
-    at Libbey, the glassware company in Toledo — I genuinely loved the products and
-    the people (I even wrote some of the Amazon copy I now roast in my case studies).
-    Most of my family works in healthcare, my husband included, so I spent years
-    deep in the world of regulated marketing where the simplest copy change needs
-    sign-off from medical, legal, compliance, and brand. That background is exactly
-    why I'm useful now — the content side is the easy part; getting it through a
-    real organization is where the work actually happens, and I've lived both sides.
-  </p>
+  <!-- HOW I WORK (cream) -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band tex-cream">
+    <div class="container intro-split intro-split--rev">
+      <FramedPhoto src="/images/laura-writing.jpg" alt="Laura working" shape="feather" ratio="3 / 4" reveal />
+      <div data-reveal="right">
+        <p class="subhead">how i actually work</p>
+        <h2>I test it on myself first</h2>
+        <p>
+          I don't half-a** things. I test the tools myself — I've swapped my toolkit
+          more than once in six months because this space moves that fast — and I
+          run my process on real products and real client work before I ever
+          recommend it. My clients get the learnings months before they'd hit the
+          standard agency cycle, because I'm in this every single day.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <p class="prose">
-    I don't half-a** things. I test the tools myself — I've swapped my toolkit more
-    than once in six months because this space moves that fast — and I run my
-    process on real products and real client work before I ever recommend it. My
-    clients benefit from learnings months before they'd hit the standard agency
-    cycle, because I'm in this every single day.
-  </p>
+  <!-- OFF THE CLOCK (olive) -->
+  <StitchDivider bg="olive" stitch="ivory" />
+  <section class="band section--olive">
+    <div class="container intro-split">
+      <div data-reveal="left">
+        <p class="subhead">off the clock</p>
+        <h2>Running audits on a Friday, for fun</h2>
+        <p>
+          When I'm not running audits on a Friday afternoon for fun, I'm probably
+          writing my newsletter (<a href={CTA.newsletter}>Cited</a>), speaking at
+          events like Cincy AI Week, hanging out with my cats, or asking Claude how
+          to start a fire in a wood stove. I'm 100% myself here — em dashes and all.
+        </p>
+      </div>
+      <FramedPhoto src="/images/laura-couch.jpg" alt="Laura at home" shape="feather" ratio="3 / 4" reveal delay="1" />
+    </div>
+  </section>
 
-  <p class="prose">
-    When I'm not running audits on a Friday afternoon for fun, I'm probably writing
-    my newsletter (Cited), speaking at events like Cincy AI Week, hanging out with
-    my cats, or asking Claude how to start a fire in a wood stove. I'm 100% myself
-    here — em dashes and all.
-  </p>
+  <!-- FAQ (cream) -->
+  <StitchDivider bg="cream" stitch="green" />
+  <section class="band section--cream">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">questions i get</p>
+        <h2>A few things people ask</h2>
+      </div>
+      <dl class="faq">
+        {faqs.map((f, i) => (
+          <div class="faq__item" data-reveal data-reveal-delay={i}>
+            <dt>{f.question}</dt>
+            <dd>{f.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
 
-  <p>
-    <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
-    <a class="button button--ghost" href={PERSON.sameAs[0]} style="margin-left: var(--space-1)">Find me on LinkedIn</a>
-  </p>
-</PageLayout>
+  <!-- CTA (rust) -->
+  <StitchDivider bg="rust" stitch="yellow" />
+  <section class="band section--rust">
+    <div class="container measure measure--center" data-reveal="scale">
+      <h2>Want to know what AI says about you?</h2>
+      <p>That's the best first conversation we can have. Let's find out together.</p>
+      <p class="about-ctas">
+        <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+        <a class="button button--ghost" href={PERSON.sameAs[0]}>Find me on LinkedIn</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { display: flex; align-items: center; min-height: 70vh; padding-block: var(--space-6); --hero-fade-to: var(--cream); }
+  .hero__inner { max-width: 760px; }
+  .hero h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 52ch; margin-bottom: var(--space-3); }
+
+  .band { padding-block: var(--space-6); }
+  .measure { max-width: 44rem; }
+  .measure--center { margin-inline: auto; text-align: center; }
+
+  .intro-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+  .intro-split > div { max-width: 56ch; }
+  .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
+
+  /* credential strip (forest band) */
+  .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+  .cred { display: flex; flex-direction: column; gap: 0.3rem; }
+  .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
+
+  /* FAQ */
+  .faq { display: grid; gap: var(--space-3); margin: 0; }
+  .faq__item { border-left: 3px solid var(--rust); padding-left: var(--space-2); }
+  .faq dt { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--brown); margin-bottom: 0.3rem; }
+  .faq dd { margin: 0; max-width: 62ch; }
+
+  .about-ctas { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
+
+  @media (max-width: 760px) {
+    .intro-split { grid-template-columns: 1fr; }
+    .intro-split :global(.framed) { order: -1; }
+    .intro-split--rev :global(.framed) { order: -1; }
+    .creds { grid-template-columns: 1fr; }
+  }
+</style>
