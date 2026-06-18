@@ -60,7 +60,8 @@ const { title, eyebrow, lede, heroImage, heroRatio = '4 / 5', description } = As
   .ep-back a:hover { opacity: 1; }
   .ep-hero h1 { font-size: clamp(2.4rem, 1.6rem + 4vw, 4.5rem); margin-block: var(--space-1) var(--space-2); }
   .ep-lede { font-size: var(--text-lg); max-width: 50ch; margin-bottom: var(--space-3); }
-  .ep-body { padding-block: var(--space-6); }
+  /* No padding here — each slotted .band brings its own (avoids triple-stacking). */
+  .ep-body { padding-block: 0; }
 
   @media (max-width: 760px) {
     .ep-hero__grid { grid-template-columns: 1fr; }

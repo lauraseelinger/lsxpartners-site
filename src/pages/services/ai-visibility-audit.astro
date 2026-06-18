@@ -1,5 +1,6 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
+import AnswerBlock from '../../components/AnswerBlock.astro';
 
 const steps = [
   { t: 'Prompt audit', d: 'The real questions your buyers ask, run across ChatGPT, Claude, Perplexity and Google AI — with every source each one cites captured.' },
@@ -19,13 +20,18 @@ const steps = [
   <section class="band">
     <div class="container measure" data-reveal>
       <p class="subhead">the starting point</p>
-      <h2>You can’t fix what you can’t see</h2>
+      <h2>How do you find out what AI says about your brand?</h2>
+      <AnswerBlock>
+        You run the real questions your buyers ask through every major AI engine —
+        ChatGPT, Claude, Perplexity, Google AI — and record what each one says about
+        you and which sources it cites. That’s an AI visibility audit, and it’s the
+        honest baseline you need before changing anything.
+      </AnswerBlock>
       <p>
-        An AI visibility “score” from a tool won’t tell you what AI says about you
-        across a million different questions, or which sources it trusts to answer
-        them. This audit does — manually, the way I run it for every client — so
-        you have an honest baseline and a clear next move. It’s also the natural
-        on-ramp to a Blueprint or the Intensive.
+        A “score” from a tool won’t tell you what AI says about you across a million
+        different questions, or which sources it trusts to answer them. This audit
+        does — manually, the way I run it for every client — so you get a clear next
+        move. It’s also the natural on-ramp to a Blueprint or the Intensive.
       </p>
     </div>
   </section>
