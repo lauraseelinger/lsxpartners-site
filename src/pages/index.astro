@@ -38,8 +38,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
         <!-- locally-sourced sticker pile, top-left (overlapping, varied size/color) -->
         <img class="hc__stk ls ls--a" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="-10" data-depth="16" style="transform: rotate(-10deg)" />
         <img class="hc__stk ls ls--b" src="/brand/assets/sticker-ls-rust.png" alt="" aria-hidden="true" data-cstk data-rot="9" data-depth="26" style="transform: rotate(9deg)" />
-        <img class="hc__stk ls ls--c" src="/brand/assets/sticker-ls-blue.png" alt="" aria-hidden="true" data-cstk data-rot="-4" data-depth="10" style="transform: rotate(-4deg)" />
-        <img class="hc__stk ls ls--d" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" data-cstk data-rot="6" data-depth="20" style="transform: rotate(6deg)" />
+        <img class="hc__stk ls ls--c" src="/brand/assets/sticker-ls-blue.png" alt="" aria-hidden="true" data-cstk data-rot="6" data-depth="14" style="transform: rotate(6deg)" />
         <!-- the other brand stickers, around the photo -->
         <img class="hc__stk hc__stk--tailored" src="/brand/assets/sticker-tailored.png" alt="" aria-hidden="true" data-cstk data-rot="8" data-depth="22" style="transform: rotate(8deg)" />
         <img class="hc__stk hc__stk--organic" src="/brand/assets/sticker-organic.png" alt="" aria-hidden="true" data-cstk data-rot="-7" data-depth="30" style="transform: rotate(-7deg)" />
@@ -215,16 +214,16 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
     mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
   }
   .hc__stk { position: absolute; height: auto; z-index: 3; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); will-change: transform; }
-  /* locally-sourced pile, top-left — overlapping, varied size + color */
+  /* locally-sourced pile, top-left — three, overlapping/touching, varied size + color */
   .ls { z-index: 4; }
   .ls--a { top: -7%; left: -7%; width: 92px; }
-  .ls--b { top: 5%; left: -13%; width: 64px; z-index: 6; }
-  .ls--c { top: -13%; left: 9%; width: 52px; z-index: 5; }
-  .ls--d { top: 9%; left: 8%; width: 44px; z-index: 5; }
-  /* the other stickers, framing the photo */
-  .hc__stk--tailored { top: -7%; right: -7%; width: 96px; }
-  .hc__stk--organic { bottom: 3%; left: -9%; width: 80px; }
-  .hc__stk--feat { bottom: -6%; right: -7%; width: 116px; }
+  .ls--b { top: 8%; left: -11%; width: 66px; z-index: 6; }
+  .ls--c { top: 6%; left: 9%; width: 56px; z-index: 5; }
+  /* opposite corner: a second small cluster (balances the pile diagonally) */
+  .hc__stk--feat { bottom: -6%; right: -7%; width: 114px; z-index: 4; }
+  .hc__stk--tailored { bottom: 15%; right: -11%; width: 74px; z-index: 5; }
+  /* top-right: a single accent */
+  .hc__stk--organic { top: -6%; right: -6%; width: 88px; }
 
   .ctas { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
 
