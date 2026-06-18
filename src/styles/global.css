@@ -97,6 +97,15 @@ strong { font-weight: 600; }
 .card p:last-child { margin-bottom: 0; }
 .card__n { font-family: var(--font-heading); font-size: var(--text-xl); color: var(--olive); }
 
+/* Two-column split (text + media); stacks on mobile. */
+.split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+.split > :first-child { max-width: 56ch; }
+.split .framed, .split .pstack { max-width: 360px; justify-self: center; }
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; }
+  .split .framed, .split .pstack { order: -1; }
+}
+
 /* Brand image treatment — soft, dimensional (not flat/outlined) */
 .brand-img {
   border-radius: 14px;

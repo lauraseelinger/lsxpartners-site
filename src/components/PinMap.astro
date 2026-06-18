@@ -1,0 +1,90 @@
+---
+// Four audit "lenses" shown as pins dropped on a map; hover/tap a pin to read
+// that lens. The map is an abstract brand-colored terrain, not a real geography.
+interface Item { t: string; d: string }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+const pos = [
+  { top: '20%', left: '16%' },
+  { top: '32%', left: '64%' },
+  { top: '64%', left: '34%' },
+  { top: '74%', left: '78%' },
+];
+---
+<div class="pinmap">
+  <div class="pinmap__map">
+    <svg class="pinmap__route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <polyline points="16,20 64,32 34,64 78,74" fill="none" stroke="var(--brown)" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.45" />
+    </svg>
+    {items.map((it, i) => (
+      <button type="button" class:list={['pin', i === 0 && 'is-active']} data-i={i} style={`top:${pos[i].top};left:${pos[i].left}`} aria-label={it.t}>
+        <span class="pin__dot">{i + 1}</span>
+      </button>
+    ))}
+  </div>
+  <div class="pinmap__panel">
+    {items.map((it, i) => (
+      <div class:list={['pinmap__detail', i === 0 && 'is-active']} data-i={i}>
+        <p class="subhead">Lens {i + 1}</p>
+        <h3>{it.t}</h3>
+        <p>{it.d}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .pinmap { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-4); align-items: center; }
+  .pinmap__map {
+    position: relative; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;
+    border: 1.5px solid var(--color-border); box-shadow: var(--shadow-card);
+    background:
+      radial-gradient(circle at 20% 32%, color-mix(in srgb, var(--olive) 55%, var(--cream)) 0 16%, transparent 38%),
+      radial-gradient(circle at 76% 70%, color-mix(in srgb, var(--blue) 65%, var(--cream)) 0 15%, transparent 36%),
+      radial-gradient(circle at 58% 22%, color-mix(in srgb, var(--peach) 70%, var(--cream)) 0 11%, transparent 28%),
+      linear-gradient(rgba(72, 55, 41, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(72, 55, 41, 0.06) 1px, transparent 1px),
+      var(--cream-deep);
+    background-size: auto, auto, auto, 22px 22px, 22px 22px, auto;
+  }
+  .pinmap__route { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .pin { position: absolute; transform: translate(-50%, -50%); background: none; border: 0; cursor: pointer; padding: 0; }
+  .pin__dot {
+    position: relative; display: grid; place-items: center;
+    width: 2rem; height: 2rem; border-radius: 50%;
+    background: var(--olive); color: var(--cream);
+    font-family: var(--font-heading); box-shadow: var(--shadow-card);
+    transition: transform 0.18s ease, background 0.18s ease;
+  }
+  .pin__dot::after {
+    content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%);
+    border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid var(--olive);
+    transition: border-top-color 0.18s ease;
+  }
+  .pin:hover .pin__dot, .pin:focus .pin__dot, .pin.is-active .pin__dot { background: var(--rust); transform: scale(1.18); outline: none; }
+  .pin:hover .pin__dot::after, .pin:focus .pin__dot::after, .pin.is-active .pin__dot::after { border-top-color: var(--rust); }
+
+  .pinmap__panel { background: var(--cream); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 10rem; }
+  .pinmap__detail { display: none; }
+  .pinmap__detail.is-active { display: block; }
+  .pinmap__detail h3 { color: var(--rust); margin: 0.2rem 0; }
+  .pinmap__detail p { margin-bottom: 0; }
+
+  @media (max-width: 760px) { .pinmap { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  document.querySelectorAll('.pinmap').forEach((map) => {
+    const pins = map.querySelectorAll('.pin');
+    const details = map.querySelectorAll('.pinmap__detail');
+    const activate = (i: number) => {
+      pins.forEach((p, j) => p.classList.toggle('is-active', j === i));
+      details.forEach((d, j) => d.classList.toggle('is-active', j === i));
+    };
+    pins.forEach((p, i) => {
+      p.addEventListener('mouseenter', () => activate(i));
+      p.addEventListener('focus', () => activate(i));
+      p.addEventListener('click', () => activate(i));
+    });
+  });
+</script>

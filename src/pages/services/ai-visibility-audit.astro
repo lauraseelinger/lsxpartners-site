@@ -1,17 +1,12 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
 import AnswerBlock from '../../components/AnswerBlock.astro';
-import HoverReveal from '../../components/HoverReveal.astro';
+import ScoreTicker from '../../components/ScoreTicker.astro';
+import PinMap from '../../components/PinMap.astro';
+import QueryContrast from '../../components/QueryContrast.astro';
 
-const prompts = [
-  { title: '“What’s the best [category] for me?”', blurb: 'The big one. You find out whether AI names you at all — and if it does, whether it’s citing your own site, a competitor’s comparison page, or a Reddit thread. This is where most brands learn they’re the answer but not the source.' },
-  { title: '“Is [your brand] any good?”', blurb: 'This surfaces your AI brand identity: what the whole internet has decided you are. Usually it’s built from reviews and forums — not the messaging you carefully wrote.' },
-  { title: '“[Your brand] vs a competitor”', blurb: 'Comparison prompts reveal how AI ranks you against rivals and which sources it trusts to make that call — almost always third-party, rarely you.' },
-  { title: '“How do I fix [the problem you solve]?”', blurb: 'Top-of-funnel prompts show whether you even enter the conversation before someone knows your name. Being absent here is one of the most common — and most fixable — findings.' },
-];
-
-const steps = [
-  { t: 'Prompt audit', d: 'The real questions your buyers ask, run across ChatGPT, Claude, Gemini, Perplexity and Google AI — with every source each one cites captured.' },
+const lenses = [
+  { t: 'Prompt audit', d: 'The real situations your buyers describe, run across ChatGPT, Claude, Gemini, Perplexity and Google AI — with every source each one cites captured.' },
   { t: 'Extractability check', d: 'Whether your own pages are even structured for AI to read and quote you in the first place.' },
   { t: 'Off-site map', d: 'Where your brand exists beyond your website — reviews, Reddit, comparisons — because that’s where AI builds your identity.' },
   { t: 'Findings + gaps', d: 'A clear read on where you show up, where you don’t, and the difference between owning the answer and owning the citation.' },
@@ -26,49 +21,42 @@ const steps = [
   description="A manual prompt audit across every major AI platform plus audience intelligence: where your brand shows up in AI answers, where it doesn’t, and why."
 >
   <section class="band">
-    <div class="container measure" data-reveal>
+    <div class="container measure" data-reveal style="margin-bottom: var(--space-3)">
       <p class="subhead">the starting point</p>
       <h2>How do you find out what AI says about your brand?</h2>
       <AnswerBlock>
-        You run the real questions your buyers ask through every major AI engine —
-        ChatGPT, Claude, Gemini, Perplexity, Google AI — and record what each one says about
-        you and which sources it cites. That’s an AI visibility audit, and it’s the
+        You run the real situations your buyers describe through every major AI engine —
+        ChatGPT, Claude, Gemini, Perplexity, Google AI — and record what each one says
+        about you and which sources it cites. That’s an AI visibility audit, and it’s the
         honest baseline you need before changing anything.
       </AnswerBlock>
-      <p>
-        A “score” from a tool won’t tell you what AI says about you across a million
-        different questions, or which sources it trusts to answer them. This audit
-        does — manually, the way I run it for every client — so you get a clear next
-        move. It’s also the natural on-ramp to a Blueprint or the Intensive.
-      </p>
+      <p>And no — a single “score” isn’t that baseline:</p>
+    </div>
+    <div class="container" data-reveal>
+      <ScoreTicker />
     </div>
   </section>
 
   <section class="band section--forest">
     <div class="container">
-      <div class="measure" data-reveal><p class="subhead">what i look at</p><h2>Four lenses, one set of findings</h2></div>
-      <div class="steps">
-        {steps.map((s, i) => (
-          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="step__n">{i + 1}</span>
-            <h3>{s.t}</h3>
-            <p>{s.d}</p>
-          </div>
-        ))}
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">what i look at</p>
+        <h2>Four lenses, one set of findings</h2>
+      </div>
+      <div data-reveal>
+        <PinMap items={lenses} />
       </div>
     </div>
   </section>
 
-  <!-- DEMO — pick a question your buyers ask AI -->
   <section class="band tex-cream">
     <div class="container">
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
-        <p class="subhead">a taste of it · hover a question</p>
-        <h2>Pick a question your buyers ask AI</h2>
-        <p>Here’s the kind of thing the audit surfaces for each one — on your brand, with receipts.</p>
+        <p class="subhead">why keyword tools miss it</p>
+        <h2>Your buyers stopped typing keywords</h2>
       </div>
       <div data-reveal>
-        <HoverReveal items={prompts} />
+        <QueryContrast />
       </div>
     </div>
   </section>

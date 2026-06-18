@@ -1,0 +1,46 @@
+---
+// A fake "AI visibility score" that endlessly ticks and never settles — the
+// point being that a single score is meaningless. Price-Is-Right energy.
+---
+<div class="ticker">
+  <div class="ticker__readout">
+    <span class="ticker__num" data-ticker aria-hidden="true">63</span>
+    <span class="ticker__den">/ 100</span>
+  </div>
+  <p class="ticker__cap">
+    Your “AI visibility score.” A tool will happily spit out a number — and it’ll
+    keep changing. What it never tells you: what AI actually says about you, which
+    sources it’s citing, or what to do about any of it.
+  </p>
+</div>
+
+<style>
+  .ticker {
+    display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3);
+    background: var(--forest); color: var(--cream);
+    border-radius: 16px; padding: var(--space-4);
+    box-shadow: var(--shadow-card);
+  }
+  .ticker__readout { display: flex; align-items: baseline; gap: 0.4rem; flex: none; }
+  .ticker__num {
+    font-family: var(--font-body); font-weight: 700;
+    font-size: clamp(3.5rem, 2rem + 7vw, 7rem); line-height: 1;
+    color: var(--peach); font-variant-numeric: tabular-nums;
+    min-width: 2.4ch; text-align: right;
+  }
+  .ticker__den { font-family: var(--font-heading); font-size: var(--text-2xl); opacity: 0.7; }
+  .ticker__cap { margin: 0; max-width: 42ch; font-size: var(--text-base); }
+</style>
+
+<script>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-ticker]').forEach((el) => {
+    if (reduce) { el.textContent = '??'; return; }
+    let last = 63;
+    setInterval(() => {
+      // jitter around, never resting on a "real" number
+      last = Math.max(11, Math.min(98, last + Math.round((Math.random() - 0.5) * 34)));
+      el.textContent = String(last);
+    }, 140);
+  });
+</script>

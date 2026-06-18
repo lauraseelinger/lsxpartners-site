@@ -1,6 +1,7 @@
 ---
 import EngagementLayout from '../../layouts/EngagementLayout.astro';
 import LayerStack from '../../components/LayerStack.astro';
+import FramedPhoto from '../../components/FramedPhoto.astro';
 
 const deliverables = [
   { n: '01', t: 'The architecture call', d: 'Which pages exist, how they’re organized, and what each one has to answer — mapped to how your buyers actually search, so the site is built around the right questions from day one.' },
@@ -18,17 +19,20 @@ const deliverables = [
   description="The strategy layer for a website redesign or new build: architecture and page-type decisions mapped to your brand, a build-ready spec, and a prioritized list of where your AI visibility opportunities are."
 >
   <section class="band">
-    <div class="container measure" data-reveal>
-      <p class="subhead">who this is for</p>
-      <h2>Brands (and the agencies rebuilding their sites)</h2>
-      <p>
-        A redesign is the cheapest time to get AI visibility right, because you’re
-        building the structure anyway. The Blueprint is the strategy layer that
-        rides alongside the rebuild — the decisions about what the site should say
-        and how it should be organized for your brand — so it’s built right from
-        day one instead of needing quarters of patches after launch. I work directly
-        with brands and as the embedded strategy lane inside agency redesign teams.
-      </p>
+    <div class="container split">
+      <div data-reveal="left">
+        <p class="subhead">who this is for</p>
+        <h2>Brands — and the agencies rebuilding their sites</h2>
+        <p>
+          A redesign is the cheapest time to get AI visibility right, because you’re
+          building the structure anyway. The Blueprint is the strategy layer that
+          rides alongside the rebuild — the decisions about what the site should say
+          and how it’s organized for your brand — so it’s built right from day one
+          instead of needing quarters of patches after launch. I work directly with
+          brands and as the embedded strategy lane inside agency redesign teams.
+        </p>
+      </div>
+      <FramedPhoto src="/images/laura-laptop-site.jpg" alt="Laura reviewing a website build" shape="feather" ratio="4 / 3" reveal delay="1" />
     </div>
   </section>
 
@@ -41,15 +45,14 @@ const deliverables = [
     </div>
   </section>
 
-  <section class="band tex-cream">
-    <div class="container measure" data-reveal="left">
+  <section class="band section--rust">
+    <div class="container" data-reveal="left">
       <p class="subhead">the payoff</p>
-      <h2>Build the railway while everyone else patches tires on the side of the road</h2>
-      <p>
+      <p class="pullquote">Build the railway while everyone else patches tires on the side of the road.</p>
+      <p style="max-width: 56ch; margin-top: var(--space-3)">
         The brands that get the structure right now will implement at a speed their
-        competitors can’t once AI optimization is as documented as SEO is today.
-        A Blueprint during a redesign means you’re optimized from the ground up —
-        not making little updates across a site that was never built for it.
+        competitors can’t, once AI optimization is as documented as SEO is today.
+        A Blueprint during a redesign means you’re optimized from the ground up.
       </p>
     </div>
   </section>

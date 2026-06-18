@@ -19,27 +19,33 @@ const { layers } = Astro.props;
 </div>
 
 <style>
-  .lstack { max-width: 760px; margin-top: var(--space-3); }
+  /* Blueprint sheets fanned left → right, overlapping; lift one out on hover. */
+  .lstack { display: flex; align-items: stretch; padding-top: var(--space-4); }
   .lyr {
-    position: relative;
-    display: flex; gap: var(--space-2); align-items: flex-start;
+    flex: 1 1 0; min-width: 0;
+    display: flex; flex-direction: column; gap: var(--space-1);
     background:
       linear-gradient(rgba(72, 55, 41, 0.08) 1px, transparent 1px),
       linear-gradient(90deg, rgba(72, 55, 41, 0.08) 1px, transparent 1px),
       color-mix(in srgb, var(--blue) 62%, var(--cream));
-    background-size: 18px 18px, 18px 18px, auto;
+    background-size: 16px 16px, 16px 16px, auto;
     border: 1.5px solid var(--brown);
     border-radius: 12px;
     padding: var(--space-3);
-    margin-top: -16px;
+    margin-left: -26px;
     box-shadow: var(--shadow-card);
     transition: transform 0.22s ease, box-shadow 0.22s ease;
   }
-  .lyr:first-child { margin-top: 0; }
-  .lyr:hover, .lyr:focus { transform: translateX(18px); box-shadow: var(--shadow-soft); z-index: 20; outline: none; }
-  .lyr__n { font-family: var(--font-heading); font-size: var(--text-2xl); line-height: 1; color: var(--rust); flex: none; }
-  .lyr__body h3 { margin: 0 0 0.2rem; color: var(--brown); }
+  .lyr:first-child { margin-left: 0; }
+  .lyr:hover, .lyr:focus { transform: translateY(-16px); box-shadow: var(--shadow-soft); z-index: 20; outline: none; }
+  .lyr__n { font-family: var(--font-heading); font-size: var(--text-2xl); line-height: 1; color: var(--rust); }
+  .lyr__body h3 { margin: 0 0 0.2rem; color: var(--brown); font-size: var(--text-lg); }
   .lyr__body p { margin: 0; font-size: var(--text-sm); color: var(--brown); }
 
-  @media (max-width: 760px) { .lyr:hover, .lyr:focus { transform: translateX(8px); } }
+  @media (max-width: 760px) {
+    .lstack { flex-direction: column; padding-top: var(--space-3); }
+    .lyr { margin-left: 0; margin-top: -18px; }
+    .lyr:first-child { margin-top: 0; }
+    .lyr:hover, .lyr:focus { transform: translateX(12px); }
+  }
 </style>
