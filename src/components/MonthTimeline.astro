@@ -51,7 +51,7 @@ const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
   .cal__day { flex: 1; aspect-ratio: 1; display: grid; place-items: center; border-radius: 8px; background: var(--cream-deep); color: var(--brown); font-size: var(--text-sm); }
   .cal__week:hover .cal__day, .cal__week.is-active .cal__day { background: var(--rust); color: var(--cream); }
 
-  .cal__panel { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 11rem; }
+  .cal__panel { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 11rem; transition: transform 0.3s ease; }
   .cal__detail .subhead { color: var(--olive); opacity: 1; }
   .cal__detail { display: none; }
   .cal__detail.is-active { display: block; }
@@ -63,11 +63,19 @@ const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
 <script>
   document.querySelectorAll('.cal').forEach((cal) => {
-    const weeks = cal.querySelectorAll('.cal__week');
+    const weeks = cal.querySelectorAll<HTMLElement>('.cal__week');
     const details = cal.querySelectorAll('.cal__detail');
+    const panel = cal.querySelector<HTMLElement>('.cal__panel');
+    const sheet = cal.querySelector<HTMLElement>('.cal__sheet');
     const activate = (i: number) => {
       weeks.forEach((w, j) => w.classList.toggle('is-active', j === i));
       details.forEach((d, j) => d.classList.toggle('is-active', j === i));
+      // bump the descriptor panel down to line up with the active week
+      if (panel && sheet && window.innerWidth > 760) {
+        const offset = weeks[i].getBoundingClientRect().top - sheet.getBoundingClientRect().top;
+        const max = Math.max(0, sheet.offsetHeight - panel.offsetHeight);
+        panel.style.transform = `translateY(${Math.min(Math.max(0, offset), max)}px)`;
+      }
     };
     weeks.forEach((w, i) => {
       w.addEventListener('mouseenter', () => activate(i));

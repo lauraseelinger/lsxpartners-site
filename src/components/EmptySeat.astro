@@ -1,47 +1,55 @@
 ---
-// Satire visual: a team seated at a table (silhouettes), with one empty,
-// dotted-outline seat labeled "AI visibility expert." As the section scrolls
-// in, your head drops onto that stick-figure body — you fill the missing seat.
+// A team seated at a table: faceless filled silhouettes, plus one outlined
+// stick figure — the "AI visibility expert" seat — whose head your feathered
+// face-cutout drops onto as the section scrolls in. You're the real face at the table.
 ---
 <div class="seats">
   <div class="seats__row">
     {[0, 1, 2, 3].map(() => (
-      <div class="fig fig--filled" aria-hidden="true"><span class="fig__head"></span><span class="fig__body"></span></div>
+      <svg class="sil" viewBox="0 0 56 120" aria-hidden="true">
+        <circle cx="28" cy="20" r="15" />
+        <path d="M5 120 C 5 80 51 80 51 120 Z" />
+      </svg>
     ))}
-    <div class="fig fig--empty">
-      <img class="fig__face" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
-      <span class="fig__head"></span>
-      <span class="fig__body"></span>
-      <span class="fig__tag">AI visibility expert</span>
+    <div class="me">
+      <svg class="stick" viewBox="0 0 80 140" aria-hidden="true" fill="none" stroke="var(--rust)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="40" cy="24" r="16" />
+        <line x1="40" y1="40" x2="40" y2="92" />
+        <line x1="40" y1="56" x2="16" y2="76" />
+        <line x1="40" y1="56" x2="64" y2="76" />
+        <line x1="40" y1="92" x2="20" y2="126" />
+        <line x1="40" y1="92" x2="60" y2="126" />
+      </svg>
+      <img class="me__face" src="/images/laura-head.jpg" alt="Laura Seelinger" data-reveal />
+      <span class="me__tag">AI visibility expert</span>
     </div>
   </div>
   <div class="seats__table" aria-hidden="true"></div>
 </div>
 
 <style>
-  .seats { width: min(420px, 100%); margin-inline: auto; }
-  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-2); position: relative; z-index: 2; }
-  .fig { position: relative; width: 48px; display: flex; flex-direction: column; align-items: center; }
-  .fig__head { width: 24px; height: 24px; border-radius: 50%; }
-  .fig__body { width: 42px; height: 38px; border-radius: 21px 21px 6px 6px; margin-top: 4px; }
-  .fig--filled .fig__head, .fig--filled .fig__body { background: color-mix(in srgb, var(--olive) 45%, var(--cream)); }
-  .fig--empty .fig__head, .fig--empty .fig__body { border: 2px dashed var(--rust); background: transparent; }
-  .fig--empty { width: 56px; }
-  .fig__face {
-    position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
-    width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: center 28%;
-    border: 2px solid var(--cream); box-shadow: var(--shadow-soft); z-index: 3;
+  .seats { width: min(440px, 100%); margin-inline: auto; }
+  .seats__row { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-1); position: relative; z-index: 2; }
+  .sil { width: 46px; height: auto; fill: color-mix(in srgb, var(--olive) 50%, var(--cream)); }
+  .me { position: relative; width: 70px; }
+  .stick { width: 100%; height: auto; display: block; }
+  .me__face {
+    position: absolute; top: 1%; left: 50%; transform: translateX(-50%);
+    width: 42%; aspect-ratio: 1; object-fit: cover; object-position: center 30%;
+    -webkit-mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
+    mask-image: radial-gradient(closest-side, #000 72%, transparent 100%);
+    z-index: 3;
   }
-  .fig__face[data-reveal] { transform: translateX(-50%) translateY(14px); }
-  .fig__face[data-reveal].in-view { transform: translateX(-50%) translateY(0); }
-  .fig__tag {
-    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-    margin-top: 6px; white-space: nowrap;
-    font-family: var(--font-sub); font-style: italic; font-weight: 800; color: var(--rust); font-size: var(--text-sm);
+  .me__face[data-reveal] { transform: translateX(-50%) translateY(16px) scale(0.85); }
+  .me__face[data-reveal].in-view { transform: translateX(-50%) translateY(0) scale(1); }
+  .me__tag {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 4px;
+    white-space: nowrap; font-family: var(--font-sub); font-style: italic; font-weight: 800;
+    color: var(--rust); font-size: var(--text-sm);
   }
   .seats__table {
-    height: 16px; border-radius: 0 0 10px 10px;
+    height: 16px; border-radius: 0 0 12px 12px;
     background: color-mix(in srgb, var(--brown) 70%, var(--cream));
-    margin-top: -14px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
+    margin-top: -16px; box-shadow: var(--shadow-card); position: relative; z-index: 1;
   }
 </style>

@@ -123,10 +123,25 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   <!-- RECENT & UPCOMING TALKS — horizontal carousel on a travel map -->
   <StitchDivider bg="olive" stitch="ivory" />
   <section class="band section--olive travel-map">
+    <div class="map-pins" aria-hidden="true">
+      {[
+        { name: 'Cincinnati', x: '20%', y: '30%' },
+        { name: 'Atlanta', x: '38%', y: '70%' },
+        { name: 'Charleston', x: '12%', y: '58%' },
+        { name: 'Bowling Green', x: '58%', y: '24%' },
+        { name: 'Grand Rapids', x: '74%', y: '46%' },
+        { name: 'and counting', x: '86%', y: '76%' },
+      ].map((p) => (
+        <span class="map-pin" style={`left:${p.x};top:${p.y}`}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          <span class="map-pin__label">{p.name}</span>
+        </span>
+      ))}
+    </div>
     <div class="container">
       <div class="talks-head" data-reveal>
         <div class="measure">
-          <p class="subhead">cincy → atlanta → charleston → and counting</p>
+          <p class="subhead">on stage, on the road</p>
           <h2>Where I’ve been on stage</h2>
         </div>
         <div class="talks-nav">
@@ -181,7 +196,7 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   .hero__lede { font-size: var(--text-lg); max-width: 50ch; margin-bottom: var(--space-3); }
 
   .band { padding-block: var(--space-6); }
-  .measure { max-width: 60ch; }
+  .measure { max-width: 44rem; }
   .measure--center { margin-inline: auto; text-align: center; }
 
   /* Intro split (forest + photo) */
@@ -190,6 +205,17 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   .intro-split :global(.framed) { max-width: 340px; justify-self: center; }
 
   /* Travel-map background — reads as "she's been all over" */
+  .travel-map { position: relative; overflow: hidden; }
+  .travel-map > .container { position: relative; z-index: 2; }
+  .map-pins { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .map-pin { position: absolute; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .map-pin svg { width: 18px; height: 18px; fill: rgba(252, 245, 229, 0.32); }
+  .map-pin__label {
+    font-family: var(--font-sub); font-style: italic; font-weight: 800;
+    font-size: var(--text-sm); color: rgba(252, 245, 229, 0.22);
+    white-space: nowrap; letter-spacing: 0.02em;
+  }
+  @media (max-width: 760px) { .map-pins { display: none; } }
   .travel-map {
     background:
       radial-gradient(circle at 16% 28%, rgba(252, 245, 229, 0.16) 0 11%, transparent 30%),

@@ -75,7 +75,7 @@ strong { font-weight: 600; }
 /* Shared layout utilities — used across pages incl. the engagement sub-pages,
    which have no scoped styles of their own, so these MUST be global. */
 .band { padding-block: var(--space-6); }
-.measure { max-width: 60ch; }
+.measure { max-width: 44rem; }
 .measure--center { max-width: none; margin-inline: auto; text-align: center; }
 .measure--center .ctas,
 .measure--center .hero__ctas { justify-content: center; }
