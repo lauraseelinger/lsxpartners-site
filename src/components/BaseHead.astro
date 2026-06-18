@@ -41,3 +41,10 @@ const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
 <!-- Discovery -->
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Plausible analytics (privacy-first, no cookies). Ignores localhost automatically.
+     TODO(Laura): create a Plausible account and add the lsxpartners.com site to start recording. -->
+<script defer data-domain="lsxpartners.com" src="https://plausible.io/js/script.js"></script>
+<script is:inline>
+  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+</script>
