@@ -1,27 +1,46 @@
 ---
-// Visualizes the shift from keyword search to natural-language AI prompts:
-// the same person types a few keywords into Google but describes a whole
-// situation to AI — and only a few words point at the brand/category.
+// The shift from keyword search to natural-language AI prompts, shown across a
+// few industries. The same person types keywords into Google but describes a
+// whole situation to AI — only a few words point at the category (highlighted).
+const examples = [
+  {
+    tag: 'ecommerce',
+    google: 'running shoes for knee pain',
+    ai: 'ok so i keep getting <mark>knee pain</mark> after my runs and i just signed up for my first <mark>half marathon</mark>, mostly training on <mark>pavement</mark> — what <mark>running shoes</mark> actually won’t wreck my joints?',
+  },
+  {
+    tag: 'medtech',
+    google: 'best continuous glucose monitor',
+    ai: 'my dad was just diagnosed <mark>type 2 diabetic</mark> and he’s not great with tech — is there a <mark>glucose monitor</mark> that skips the <mark>finger pricks</mark> and just shows readings on his <mark>phone</mark>?',
+  },
+  {
+    tag: 'home building',
+    google: 'custom home builders near me',
+    ai: 'we just bought a <mark>lot</mark> outside the city and want to <mark>build</mark> something <mark>energy efficient</mark> for a family of five — who actually does <mark>custom homes</mark> around here and won’t blow the timeline?',
+  },
+];
 ---
 <div class="qc">
-  <div class="qc__side">
-    <span class="qc__tag">the old way · Google</span>
-    <div class="qc__bar qc__bar--g">
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="qc__icon"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <span>running shoes for knee pain</span>
-    </div>
-  </div>
-
-  <div class="qc__side">
-    <span class="qc__tag">how they actually search now · AI</span>
-    <div class="qc__bar qc__bar--ai">
-      <p class="qc__prompt">
-        ok so i keep getting <mark>knee pain</mark> after my runs and i just signed up for my first
-        <mark>half marathon</mark> in the fall, mostly training on <mark>pavement</mark> — what <mark>running shoes</mark>
-        actually won’t wreck my joints? budget’s flexible if they last.
-      </p>
-      <span class="qc__send" aria-hidden="true">➤</span>
-    </div>
+  <div class="qc__slides">
+    {examples.map((ex, i) => (
+      <div class:list={['qc__slide', i === 0 && 'is-active']} data-i={i}>
+        <span class="qc__cat">{ex.tag}</span>
+        <div class="qc__side">
+          <span class="qc__tag">the old way · Google</span>
+          <div class="qc__bar qc__bar--g">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="qc__icon"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>{ex.google}</span>
+          </div>
+        </div>
+        <div class="qc__side">
+          <span class="qc__tag">how they search now · AI</span>
+          <div class="qc__bar qc__bar--ai">
+            <p class="qc__prompt" set:html={ex.ai}></p>
+            <span class="qc__send" aria-hidden="true">➤</span>
+          </div>
+        </div>
+      </div>
+    ))}
   </div>
 
   <p class="qc__cap">
@@ -29,26 +48,52 @@
     words point at your category. That’s why a keyword tool misses it, and why the
     audit listens for the <em>situations</em> your buyers describe, not the terms they type.
   </p>
+
+  <div class="qc__dots" role="tablist" aria-label="Examples">
+    {examples.map((ex, i) => (
+      <button type="button" class:list={[i === 0 && 'is-active']} data-i={i} aria-label={ex.tag}></button>
+    ))}
+  </div>
 </div>
 
 <style>
-  .qc { display: grid; gap: var(--space-3); max-width: 760px; }
-  .qc__tag { display: inline-block; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin-bottom: var(--space-1); }
+  .qc { max-width: 780px; }
+  .qc__slides { position: relative; }
+  .qc__slide { display: none; }
+  .qc__slide.is-active { display: grid; gap: var(--space-3); }
+  .qc__cat { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--rust); font-size: var(--text-sm); }
+  .qc__tag { display: inline-block; font-weight: 600; color: var(--olive); font-size: 0.78rem; margin-bottom: 0.35rem; }
   .qc__bar {
     display: flex; align-items: center; gap: var(--space-2);
     background: var(--cream); border: 2px solid var(--brown);
-    border-radius: 999px; padding: var(--space-2) var(--space-3);
-    box-shadow: var(--shadow-card);
+    border-radius: 999px; padding: var(--space-2) var(--space-3); box-shadow: var(--shadow-card);
   }
   .qc__bar--g { color: var(--color-text-muted); }
   .qc__bar--g span { color: var(--brown); }
   .qc__icon { width: 1.2rem; height: 1.2rem; flex: none; }
   .qc__bar--ai { border-radius: 20px; align-items: flex-start; }
-  .qc__prompt { margin: 0; flex: 1; line-height: 1.55; }
-  .qc__prompt mark { background: color-mix(in srgb, var(--amber) 55%, var(--cream)); color: var(--brown); padding: 0 0.15em; border-radius: 4px; font-weight: 600; }
-  .qc__send {
-    flex: none; display: grid; place-items: center; width: 2rem; height: 2rem;
-    border-radius: 50%; background: var(--rust); color: var(--cream); font-size: 0.9rem;
-  }
-  .qc__cap { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 60ch; margin: 0; }
+  .qc__prompt { margin: 0; flex: 1; line-height: 1.55; color: var(--brown); }
+  .qc__prompt :global(mark) { background: color-mix(in srgb, var(--amber) 55%, var(--cream)); color: var(--brown); padding: 0 0.15em; border-radius: 4px; font-weight: 600; }
+  .qc__send { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--rust); color: var(--cream); font-size: 0.9rem; }
+  .qc__cap { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 60ch; margin: var(--space-3) 0 var(--space-2); }
+  .qc__dots { display: flex; gap: 0.5rem; }
+  .qc__dots button { width: 12px; height: 12px; border-radius: 50%; border: 0; cursor: pointer; background: var(--color-border); padding: 0; }
+  .qc__dots button.is-active { background: var(--rust); }
 </style>
+
+<script>
+  document.querySelectorAll('.qc').forEach((qc) => {
+    const slides = qc.querySelectorAll('.qc__slide');
+    const dots = qc.querySelectorAll('.qc__dots button');
+    let idx = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+    const show = (i: number) => {
+      idx = i;
+      slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
+      dots.forEach((d, j) => d.classList.toggle('is-active', j === i));
+    };
+    const start = () => { timer = setInterval(() => show((idx + 1) % slides.length), 5500); };
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); if (timer) clearInterval(timer); start(); }));
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
+  });
+</script>

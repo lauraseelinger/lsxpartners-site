@@ -15,8 +15,8 @@ const deliverables = [
   { n: '06', t: 'A path your team can follow', d: 'You leave the month with an agreed direction and the monitoring in place to track it — so the work actually moves once I’m gone.' },
 ];
 const weeks = [
-  { label: 'See', title: 'Establish the truth', desc: 'Audit + audience intelligence: what AI says, what buyers ask, where you’re absent.' },
-  { label: 'Map', title: 'Build the strategy', desc: 'Turn the findings into a prioritized strategy built around your brand and the openings specific to you.' },
+  { label: 'See', title: 'Audit + immersion', desc: 'I run the full AI audit and go deep — interviewing the teams that touch this, learning each area’s audiences and the third-party sites that actually matter to them.' },
+  { label: 'Map', title: 'Build the strategy', desc: 'Audience intelligence + everything I’ve gathered, synthesized into a prioritized strategy built around your brand, your real audiences, and where AI actually sources.' },
   { label: 'Align', title: 'Get everyone on board', desc: 'Walk every relevant department through the plan and their role, so nothing stalls in review later.' },
   { label: 'Hand off', title: 'Leave the path', desc: 'Exec-ready strategy, the agreed path, and monitoring live — your team can run with it.' },
 ];
@@ -52,12 +52,14 @@ const weeks = [
         <p class="subhead">what you walk away with</p>
         <h2>One month. The strategy and the buy-in.</h2>
       </div>
-      <div class="cards">
+      <div class="delivs">
         {deliverables.map((d, i) => (
-          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
-            <span class="card__n">{d.n}</span>
-            <h3>{d.t}</h3>
-            <p>{d.d}</p>
+          <div class="deliv" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="deliv__check" aria-hidden="true">✓</span>
+            <div>
+              <h3>{d.t}</h3>
+              <p>{d.d}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -94,3 +96,12 @@ const weeks = [
     </div>
   </section>
 </EngagementLayout>
+
+<style>
+  .delivs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-4); margin-top: var(--space-4); }
+  .deliv { display: flex; gap: var(--space-2); align-items: flex-start; }
+  .deliv__check { flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; display: grid; place-items: center; background: var(--peach); color: var(--brown); font-weight: 700; }
+  .deliv h3 { color: var(--peach); margin: 0 0 0.2rem; font-size: var(--text-lg); }
+  .deliv p { margin: 0; font-size: var(--text-sm); color: var(--cream); opacity: 0.92; }
+  @media (max-width: 680px) { .delivs { grid-template-columns: 1fr; } }
+</style>

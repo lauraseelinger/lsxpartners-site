@@ -45,7 +45,8 @@ const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
   .cal__day { flex: 1; aspect-ratio: 1; display: grid; place-items: center; border-radius: 8px; background: var(--cream-deep); color: var(--brown); font-size: var(--text-sm); }
   .cal__week:hover .cal__day, .cal__week.is-active .cal__day { background: var(--rust); color: var(--cream); }
 
-  .cal__panel { background: var(--cream); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 11rem; }
+  .cal__panel { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 11rem; }
+  .cal__detail .subhead { color: var(--olive); opacity: 1; }
   .cal__detail { display: none; }
   .cal__detail.is-active { display: block; }
   .cal__detail h3 { color: var(--rust); margin: 0.2rem 0; }

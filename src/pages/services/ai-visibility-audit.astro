@@ -15,25 +15,31 @@ const lenses = [
 <EngagementLayout
   title="AI Visibility Audit"
   eyebrow="diagnostic"
-  lede="Most brands have no idea what AI actually says about them. Start here — find out, with receipts, before you spend a dollar changing anything."
-  heroImage="/images/laura-laptop-wide.jpg"
+  lede="The honest baseline: what AI actually says about a brand, with receipts. It’s how agencies scope a client engagement before quoting, and how any team gets a clear read before the bigger work."
+  heroImage="/images/audit-hero.jpg"
   heroRatio="4 / 3"
-  description="A manual prompt audit across every major AI platform plus audience intelligence: where your brand shows up in AI answers, where it doesn’t, and why."
+  description="A manual prompt audit across every major AI platform plus audience intelligence: where a brand shows up in AI answers, where it doesn’t, and why — the gap-check agencies use to scope, and the baseline before a Blueprint or Intensive."
 >
   <section class="band">
-    <div class="container measure" data-reveal style="margin-bottom: var(--space-3)">
-      <p class="subhead">the starting point</p>
-      <h2>How do you find out what AI says about your brand?</h2>
-      <AnswerBlock>
-        You run the real situations your buyers describe through every major AI engine —
-        ChatGPT, Claude, Gemini, Perplexity, Google AI — and record what each one says
-        about you and which sources it cites. That’s an AI visibility audit, and it’s the
-        honest baseline you need before changing anything.
-      </AnswerBlock>
-      <p>And no — a single “score” isn’t that baseline:</p>
-    </div>
-    <div class="container" data-reveal>
-      <ScoreTicker />
+    <div class="container start-split">
+      <div data-reveal="left">
+        <ScoreTicker />
+      </div>
+      <div data-reveal="right">
+        <p class="subhead">the starting point</p>
+        <h2>How do you find out what AI says about your brand?</h2>
+        <AnswerBlock>
+          You run the real situations your buyers describe through every major AI engine —
+          ChatGPT, Claude, Gemini, Perplexity, Google AI — and record what each one says
+          about you and which sources it cites. That’s an AI visibility audit.
+        </AnswerBlock>
+        <p>
+          A single “score” isn’t that baseline. <strong>Agencies</strong> use the audit to
+          find the gaps in a client’s strategy and scope the work accurately.
+          <strong>Brands</strong> serious about fixing it usually fold the audit into the
+          month-long Intensive, where it comes with the plan.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -61,3 +67,8 @@ const lenses = [
     </div>
   </section>
 </EngagementLayout>
+
+<style>
+  .start-split { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-4); align-items: center; }
+  @media (max-width: 760px) { .start-split { grid-template-columns: 1fr; } }
+</style>

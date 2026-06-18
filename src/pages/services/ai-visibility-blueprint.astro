@@ -13,7 +13,7 @@ const deliverables = [
 <EngagementLayout
   title="AI Visibility Blueprint"
   eyebrow="project"
-  lede="Building or rebuilding your site? Do it structurally optimized for AI from the ground up — instead of bolting on fixes across a finished site later."
+  lede="Building or rebuilding a site — your brand’s, or a client’s? Do it structurally optimized for AI from the ground up, instead of bolting fixes onto a finished site later."
   heroImage="/images/laura-3.jpg"
   heroRatio="4 / 5"
   description="The strategy layer for a website redesign or new build: architecture and page-type decisions mapped to your brand, a build-ready spec, and a prioritized list of where your AI visibility opportunities are."
@@ -54,6 +54,27 @@ const deliverables = [
         competitors can’t, once AI optimization is as documented as SEO is today.
         A Blueprint during a redesign means you’re optimized from the ground up.
       </p>
+      <div class="payoff-contrast">
+        <div class="pc pc--old">
+          <span class="pc__lbl">patching tires roadside</span>
+          <p>Fix-by-fix on a finished site. Endless little updates, always a step behind.</p>
+        </div>
+        <div class="pc pc--new">
+          <span class="pc__lbl">on the railway</span>
+          <p>Built right once — then implementing at a speed competitors can’t touch.</p>
+        </div>
+      </div>
     </div>
   </section>
 </EngagementLayout>
+
+<style>
+  .payoff-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); max-width: 640px; }
+  .pc { border-radius: 14px; padding: var(--space-3); }
+  .pc__lbl { display: block; font-family: var(--font-sub); font-weight: 800; font-style: italic; margin-bottom: var(--space-1); }
+  .pc p { margin: 0; font-size: var(--text-sm); }
+  .pc--old { border: 2px dashed rgba(252, 245, 229, 0.55); color: var(--cream); opacity: 0.85; }
+  .pc--new { background: var(--cream); color: var(--brown); box-shadow: var(--shadow-card); }
+  .pc--new .pc__lbl { color: var(--rust); }
+  @media (max-width: 600px) { .payoff-contrast { grid-template-columns: 1fr; } }
+</style>
