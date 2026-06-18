@@ -8,9 +8,9 @@
     <span class="ticker__den">/ 100</span>
   </div>
   <p class="ticker__cap">
-    Your “AI visibility score.” A tool will happily spit out a number — and it’ll
-    keep changing. What it never tells you: what AI actually says about you, which
-    sources it’s citing, or what to do about any of it.
+    Your “AI visibility score.” A tool will happily land on a number and call it a day.
+    What it never tells you: what AI actually says about you, which sources it’s citing,
+    or what to do about any of it.
   </p>
 </div>
 
@@ -35,12 +35,15 @@
 <script>
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll<HTMLElement>('[data-ticker]').forEach((el) => {
-    if (reduce) { el.textContent = '??'; return; }
-    let last = 63;
-    setInterval(() => {
-      // jitter around, never resting on a "real" number
-      last = Math.max(11, Math.min(98, last + Math.round((Math.random() - 0.5) * 34)));
-      el.textContent = String(last);
-    }, 140);
+    if (reduce) { el.textContent = '74'; return; }
+    let val = 63;
+    let delay = 90;
+    const tick = () => {
+      val = Math.max(11, Math.min(98, val + Math.round((Math.random() - 0.5) * 36)));
+      el.textContent = String(val);
+      delay *= 1.18; // decelerate, like a slowing wheel
+      if (delay < 750) setTimeout(tick, delay); // then it just... stops on a number
+    };
+    setTimeout(tick, delay);
   });
 </script>

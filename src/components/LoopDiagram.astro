@@ -23,7 +23,7 @@ const stages = [
 ---
 <div class="loop">
   <div class="loop__visual">
-    <div class="loop__ring" aria-hidden="true"><span>↻</span></div>
+    <div class="loop__ring" aria-hidden="true"><img src="/brand/logo/monogram-rust.svg" alt="" /></div>
     <ol class="loop__nodes">
       {stages.map((s, i) => (
         <li class={`loop__node loop__node--${i + 1} ${i === 0 ? 'is-active' : ''}`}>
@@ -55,7 +55,7 @@ const stages = [
     border: 2px dashed var(--olive); border-radius: 50%;
     display: grid; place-items: center;
   }
-  .loop__ring span { font-size: 2rem; color: var(--olive); }
+  .loop__ring img { width: 56%; height: auto; opacity: 0.9; }
   .loop__nodes { list-style: none; margin: 0; padding: 0; }
   .loop__node { position: absolute; width: 40%; }
   .loop__node button {

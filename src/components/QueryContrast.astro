@@ -14,14 +14,16 @@ const examples = [
     ai: 'my dad was just diagnosed <mark>type 2 diabetic</mark> and he’s not great with tech — is there a <mark>glucose monitor</mark> that skips the <mark>finger pricks</mark> and just shows readings on his <mark>phone</mark>?',
   },
   {
-    tag: 'home building',
-    google: 'custom home builders near me',
-    ai: 'we just bought a <mark>lot</mark> outside the city and want to <mark>build</mark> something <mark>energy efficient</mark> for a family of five — who actually does <mark>custom homes</mark> around here and won’t blow the timeline?',
+    tag: 'home & hardware',
+    google: 'best smart lock for front door',
+    ai: 'we just renovated and i want a <mark>front door lock</mark> that works with <mark>our phones</mark>, but my husband keeps getting locked out — something with a <mark>keypad</mark> the kids can use too, that doesn’t look cheap?',
   },
 ];
 ---
 <div class="qc">
-  <div class="qc__slides">
+  <div class="qc__viewport">
+    <button type="button" class="qc__nav" data-dir="-1" aria-label="Previous example">‹</button>
+    <div class="qc__slides">
     {examples.map((ex, i) => (
       <div class:list={['qc__slide', i === 0 && 'is-active']} data-i={i}>
         <span class="qc__cat">{ex.tag}</span>
@@ -41,6 +43,8 @@ const examples = [
         </div>
       </div>
     ))}
+    </div>
+    <button type="button" class="qc__nav" data-dir="1" aria-label="Next example">›</button>
   </div>
 
   <p class="qc__cap">
@@ -57,8 +61,11 @@ const examples = [
 </div>
 
 <style>
-  .qc { max-width: 780px; }
-  .qc__slides { position: relative; }
+  .qc { max-width: 980px; margin-inline: auto; }
+  .qc__viewport { display: flex; align-items: center; gap: var(--space-2); }
+  .qc__slides { position: relative; flex: 1; min-width: 0; }
+  .qc__nav { flex: none; width: 2.8rem; height: 2.8rem; border-radius: 50%; border: 2px solid var(--brown); background: var(--cream); color: var(--brown); font-size: 1.5rem; line-height: 1; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .qc__nav:hover { background: var(--rust); color: var(--cream); border-color: var(--rust); }
   .qc__slide { display: none; }
   .qc__slide.is-active { display: grid; gap: var(--space-3); }
   .qc__cat { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--rust); font-size: var(--text-sm); }
@@ -71,8 +78,8 @@ const examples = [
   .qc__bar--g { color: var(--color-text-muted); }
   .qc__bar--g span { color: var(--brown); }
   .qc__icon { width: 1.2rem; height: 1.2rem; flex: none; }
-  .qc__bar--ai { border-radius: 20px; align-items: flex-start; }
-  .qc__prompt { margin: 0; flex: 1; line-height: 1.55; color: var(--brown); }
+  .qc__bar--ai { border-radius: 22px; align-items: flex-start; padding: var(--space-3); }
+  .qc__prompt { margin: 0; flex: 1; line-height: 1.55; color: var(--brown); font-size: var(--text-lg); }
   .qc__prompt :global(mark) { background: color-mix(in srgb, var(--amber) 55%, var(--cream)); color: var(--brown); padding: 0 0.15em; border-radius: 4px; font-weight: 600; }
   .qc__send { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--rust); color: var(--cream); font-size: 0.9rem; }
   .qc__cap { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 60ch; margin: var(--space-3) 0 var(--space-2); }
@@ -93,7 +100,11 @@ const examples = [
       dots.forEach((d, j) => d.classList.toggle('is-active', j === i));
     };
     const start = () => { timer = setInterval(() => show((idx + 1) % slides.length), 5500); };
-    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); if (timer) clearInterval(timer); start(); }));
+    const restart = () => { if (timer) clearInterval(timer); start(); };
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); restart(); }));
+    qc.querySelectorAll('.qc__nav').forEach((n) =>
+      n.addEventListener('click', () => { show((idx + Number(n.getAttribute('data-dir')) + slides.length) % slides.length); restart(); })
+    );
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) start();
   });
 </script>
