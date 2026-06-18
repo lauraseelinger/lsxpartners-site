@@ -43,7 +43,11 @@ const RECS = {
   </div>
   <div class="finder__q finder__q--goal" hidden>
     <p class="finder__label">…and</p>
-    <div class="finder__chips" data-group="goal"></div>
+    {Object.entries(GOALS).map(([org, gs]) => (
+      <div class="finder__chips" data-goals-for={org} hidden>
+        {gs.map((g) => <button type="button" data-val={g.id}>{g.label}</button>)}
+      </div>
+    ))}
   </div>
 
   <div class="finder__result" hidden>
@@ -81,11 +85,11 @@ const RECS = {
   .finder__note { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); }
 </style>
 
-<script define:vars={{ RECS, GOALS }}>
+<script define:vars={{ RECS }}>
   document.querySelectorAll('.finder').forEach((finder) => {
     const state = { org: null, goal: null };
     const goalQ = finder.querySelector('.finder__q--goal');
-    const goalChips = finder.querySelector('[data-group="goal"]');
+    const goalGroups = finder.querySelectorAll('[data-goals-for]');
     const result = finder.querySelector('.finder__result');
     const calendly = finder.getAttribute('data-calendly');
 
@@ -110,23 +114,15 @@ const RECS = {
       track(rec);
     };
 
-    const renderGoals = (org) => {
-      goalChips.innerHTML = '';
-      (GOALS[org] || []).forEach((g) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.setAttribute('data-val', g.id);
-        btn.textContent = g.label;
-        btn.addEventListener('click', () => {
-          goalChips.querySelectorAll('button').forEach((b) => b.classList.remove('is-selected'));
-          btn.classList.add('is-selected');
-          state.goal = g.id;
-          showResult();
-        });
-        goalChips.appendChild(btn);
+    // Goal buttons (all server-rendered & styled); only the active org's group shows.
+    finder.querySelectorAll('[data-goals-for] button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        finder.querySelectorAll('[data-goals-for] button').forEach((b) => b.classList.remove('is-selected'));
+        btn.classList.add('is-selected');
+        state.goal = btn.getAttribute('data-val');
+        showResult();
       });
-      goalQ.hidden = false;
-    };
+    });
 
     finder.querySelectorAll('[data-group="org"] button').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -135,7 +131,13 @@ const RECS = {
         state.org = btn.getAttribute('data-val');
         state.goal = null;
         result.hidden = true;
-        renderGoals(state.org);
+        // Show this org's goal group, hide the others, clear prior selection.
+        goalGroups.forEach((g) => {
+          const match = g.getAttribute('data-goals-for') === state.org;
+          g.hidden = !match;
+          if (!match) g.querySelectorAll('button').forEach((b) => b.classList.remove('is-selected'));
+        });
+        goalQ.hidden = false;
       });
     });
   });
