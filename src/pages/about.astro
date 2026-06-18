@@ -1,18 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
 import StitchDivider from '../components/StitchDivider.astro';
 import { faqSchema } from '../lib/schema';
 import { PERSON, CTA } from '../consts';
 
 // ABOUT — the entity anchor. Person schema is emitted site-wide (BaseLayout);
 // this page is its canonical home (rel=author points here). Image-forward,
-// color-blocked, with movement: split pattern/photo hero, floating monitored
-// signals, a scrolling toolkit, counting creds. Full LinkedIn Laura voice.
-// Backstory facts are real (Libbey, regulated healthcare, 15+ yrs, MBA, Cincy).
+// color-blocked, with movement. Full LinkedIn Laura voice. Backstory facts are
+// real (Libbey, regulated healthcare, 15+ yrs agency+corporate, MBA, Cincy).
 const monitors = ['ChatGPT', 'Perplexity', 'Claude', 'Gemini', 'Google AI Overviews', 'Reddit threads', 'your reviews', 'buyer questions'];
-const stack = ['ChatGPT', 'Claude', 'Gemini', 'Perplexity', 'Google AI Overviews', 'Copilot', 'Grok', 'Semrush', 'Ahrefs', 'Reddit', '…and three I’m testing this week'];
-const offclock = ['writing Cited 📨', 'Cincy AI Week 🎤', 'my cats 🐈', 'wood-stove fires 🔥', 'Friday audits, for fun'];
+const industries = ['⚙️ Manufacturing', '🚗 Automotive', '🛒 E-commerce', '💊 Pharma', '⚕️ MedTech', '🥃 CPG & glassware'];
+const plays = [
+  { t: 'ChatGPT', x: '8%', y: '20%' },
+  { t: 'Claude', x: '34%', y: '10%' },
+  { t: 'Perplexity', x: '63%', y: '14%' },
+  { t: 'Gemini', x: '12%', y: '64%' },
+  { t: 'Semrush', x: '44%', y: '70%' },
+  { t: '+ 3 new this week', x: '70%', y: '60%', neu: true },
+];
+const offclock = ['🐈 my cats', '🥾 walks & hikes', '📔 junk journaling', '🗺️ our next adventure', '☕ slow mornings'];
 const faqs = [
   {
     question: 'Who is Laura Seelinger?',
@@ -36,30 +42,25 @@ const faqs = [
   description="Laura Seelinger is an AI visibility expert and founder of LSX Partners, helping brands and agencies get cited by AI — 15+ years in agency and corporate marketing, much of it in regulated industries."
   schemas={[faqSchema(faqs)]}
 >
-  <!-- HERO — diagonal split: pattern panel + playful floor photo -->
-  <section class="ahero">
-    <div class="ahero__photo">
-      <img src="/images/laura-floor-phone.jpg" alt="Laura Seelinger laughing on the floor with her phone" />
-    </div>
-    <div class="container ahero__inner">
-      <div class="ahero__text">
-        <p class="subhead">ai visibility expert · founder, lsx partners</p>
-        <h1>Hi, I'm Laura.</h1>
-        <p class="ahero__lede">
-          I'm the AI marketing nerd who actually looks forward to the monthly
-          reporting. I help brands and agencies get <strong>cited by AI</strong> —
-          and I'm in this every single day.
-        </p>
-        <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
-      </div>
+  <!-- HERO -->
+  <section class="hero media-overlay media-overlay--hero">
+    <img class="bg" src="/images/about-hero.jpg" alt="" aria-hidden="true" style="object-position: 70% 28%;" />
+    <div class="container hero__inner">
+      <p class="subhead">ai visibility expert · founder, lsx partners</p>
+      <h1>Hi, I'm Laura.</h1>
+      <p class="hero__lede">
+        I'm the AI marketing nerd who actually looks forward to the monthly
+        reporting. I help brands and agencies get <strong>cited by AI</strong> —
+        and I'm in this every single day.
+      </p>
+      <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
     </div>
   </section>
 
   <!-- THE GAP — signals I monitor float around me -->
-  <StitchDivider bg="cream" stitch="rust" />
   <section class="band section--cream">
     <div class="container gap-grid">
-      <div class="orbit" data-reveal aria-hidden="false">
+      <div class="orbit" data-reveal>
         <img class="orbit__me" src="/images/laura-kitchen.jpg" alt="Laura Seelinger" />
         {monitors.map((m, i) => (
           <span class={`float float--${i % 4}`} style={`--i:${i}`}>{m}</span>
@@ -79,38 +80,52 @@ const faqs = [
     </div>
   </section>
 
-  <!-- BACKGROUND — counting creds -->
+  <!-- BACKGROUND — corporate + agency, across industries -->
   <StitchDivider bg="forest" stitch="yellow" />
   <section class="band section--forest">
     <div class="container">
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">where i come from</p>
         <h2>I've lived both sides of the work</h2>
-      </div>
-      <div class="measure" data-reveal>
         <p>
-          I've spent 15+ years across agency and corporate marketing. Four of them
-          were at Libbey, the glassware company in Toledo — I genuinely loved the
-          products and the people (I even wrote some of the Amazon copy I now roast
-          in my case studies). Most of my family works in healthcare, my husband
-          included, so I spent years deep in regulated marketing, where the simplest
-          copy change needs sign-off from medical, legal, compliance, and brand.
-        </p>
-        <p>
-          That background is exactly why I'm useful now. The content side is the
-          easy part — getting it through a real organization is where the work
-          actually happens, and I've lived both sides.
+          Fifteen-plus years across agency and corporate marketing — four of them
+          at Libbey, the glassware company in Toledo (I even wrote some of the
+          Amazon copy I now roast in my case studies). Most of my family works in
+          healthcare, my husband included, so I went deep in regulated marketing,
+          where the simplest copy change needs sign-off from medical, legal,
+          compliance, and brand. That's exactly why I'm useful now: the content is
+          the easy part — getting it through a real organization is the work.
         </p>
       </div>
-      <div class="creds">
-        <div class="cred" data-reveal><span class="cred__big"><span data-count="15" data-suffix="+">15+</span></span><span>years across agency &amp; corporate marketing</span></div>
-        <div class="cred" data-reveal data-reveal-delay="1"><span class="cred__big">Regulated</span><span>healthcare &amp; MedTech — medical, legal &amp; brand sign-off</span></div>
-        <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">MBA</span><span>plus a marketer's instinct for what actually moves</span></div>
+
+      <div class="sides">
+        <div class="side" data-reveal>
+          <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="6" width="28" height="38" rx="2" /><line x1="6" y1="44" x2="42" y2="44" />
+            <line x1="17" y1="14" x2="20" y2="14" /><line x1="28" y1="14" x2="31" y2="14" />
+            <line x1="17" y1="22" x2="20" y2="22" /><line x1="28" y1="22" x2="31" y2="22" />
+            <line x1="17" y1="30" x2="20" y2="30" /><line x1="28" y1="30" x2="31" y2="30" />
+          </svg>
+          <h3>Corporate</h3>
+          <p>Fortune-scale brand and marketing teams — process, approvals, and getting things shipped at scale.</p>
+        </div>
+        <div class="side" data-reveal data-reveal-delay="1">
+          <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M26 4 L12 26 L23 26 L20 44 L36 20 L25 20 Z" />
+          </svg>
+          <h3>Agency</h3>
+          <p>Fast, creative, juggling a dozen clients at once — and white-labeling the deep work behind the scenes.</p>
+        </div>
+      </div>
+
+      <p class="ind-cap" data-reveal>across a lot of rooms:</p>
+      <div class="industries">
+        {industries.map((s, i) => <span class="ind" data-reveal data-reveal-delay={i % 3}>{s}</span>)}
       </div>
     </div>
   </section>
 
-  <!-- HOW I WORK — the stack keeps moving -->
+  <!-- HOW I WORK — the coach's playbook -->
   <StitchDivider bg="cream" stitch="rust" />
   <section class="band tex-cream">
     <div class="container">
@@ -125,36 +140,42 @@ const faqs = [
           standard agency cycle, because I'm in this every single day.
         </p>
       </div>
-      <p class="stack-cap" data-reveal>the stack, give or take — it changes constantly →</p>
-      <div class="marquee" data-reveal aria-hidden="true">
-        <div class="marquee__track">
-          {[...stack, ...stack].map((s) => <span class="tool">{s}</span>)}
-        </div>
+
+      <div class="playboard" data-reveal>
+        <span class="playboard__tag">the play, this round</span>
+        <svg class="playboard__diagram" viewBox="0 0 600 300" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M70 250 C 70 170 180 190 200 110" stroke="var(--rust)" stroke-width="3" stroke-dasharray="2 9" />
+          <path d="M300 255 C 300 200 360 200 430 130" stroke="var(--olive)" stroke-width="3" stroke-dasharray="2 9" />
+          <path d="M470 250 C 470 200 500 190 520 150" stroke="var(--brown)" stroke-width="3" stroke-dasharray="2 9" />
+          <g stroke="var(--brown)" stroke-width="3" opacity="0.85">
+            <circle cx="70" cy="258" r="11" fill="none" /><circle cx="300" cy="262" r="11" fill="none" /><circle cx="470" cy="258" r="11" fill="none" />
+            <path d="M156 252 l16 16 M172 252 l-16 16" /><path d="M384 256 l16 16 M400 256 l-16 16" />
+          </g>
+        </svg>
+        {plays.map((p, i) => (
+          <span class={`play-chip${p.neu ? ' play-chip--new' : ''}`} style={`left:${p.x};top:${p.y}`} data-reveal="scale" data-reveal-delay={(i % 4) + 1}>{p.t}</span>
+        ))}
       </div>
-      <div class="marquee marquee--rev" aria-hidden="true">
-        <div class="marquee__track">
-          {[...stack.slice().reverse(), ...stack.slice().reverse()].map((s) => <span class="tool tool--ghost">{s}</span>)}
-        </div>
-      </div>
+      <p class="playboard__cap" data-reveal>The stack is never finished. Every round, I run the next tests on my own work before yours.</p>
     </div>
   </section>
 
-  <!-- OFF THE CLOCK — playful floating life -->
+  <!-- OFF THE CLOCK -->
   <StitchDivider bg="olive" stitch="ivory" />
   <section class="band section--olive">
     <div class="container gap-grid gap-grid--rev">
       <div data-reveal="left">
         <p class="subhead">off the clock</p>
-        <h2>Running audits on a Friday, for fun</h2>
+        <h2>What I'm into when I log off</h2>
         <p>
-          When I'm not running audits on a Friday afternoon for fun, I'm probably
-          writing my newsletter (<a href={CTA.newsletter}>Cited</a>), speaking at
-          events like Cincy AI Week, hanging out with my cats, or asking Claude how
-          to start a fire in a wood stove. I'm 100% myself here — em dashes and all.
+          When I'm not mapping a strategy or down an AI visibility research rabbit
+          hole, I'm probably hanging with my cats, going on a walk or hike, junk
+          journaling (it's my new creative outlet), or mapping out my husband and
+          my next adventure. I'm 100% myself here — em dashes and all.
         </p>
       </div>
       <div class="orbit orbit--life" data-reveal>
-        <img class="orbit__me" src="/images/laura-phone.jpg" alt="Laura at her desk" />
+        <img class="orbit__me" src="/images/laura-floor-phone.jpg" alt="Laura laughing" />
         {offclock.map((m, i) => (
           <span class={`float float--${i % 4}`} style={`--i:${i}`}>{m}</span>
         ))}
@@ -162,22 +183,31 @@ const faqs = [
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ — with a stack of brand stickers -->
   <StitchDivider bg="cream" stitch="green" />
   <section class="band tex-cream">
-    <div class="container">
-      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
-        <p class="subhead">questions i get</p>
-        <h2>A few things people ask</h2>
+    <div class="container faq-grid">
+      <div>
+        <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+          <p class="subhead">questions i get</p>
+          <h2>A few things people ask</h2>
+        </div>
+        <dl class="faq">
+          {faqs.map((f, i) => (
+            <div class="faq__item" data-reveal data-reveal-delay={i}>
+              <dt>{f.question}</dt>
+              <dd>{f.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
-      <dl class="faq">
-        {faqs.map((f, i) => (
-          <div class="faq__item" data-reveal data-reveal-delay={i}>
-            <dt>{f.question}</dt>
-            <dd>{f.answer}</dd>
-          </div>
-        ))}
-      </dl>
+      <div class="stickers" data-reveal aria-hidden="true">
+        <img class="stk stk--1" src="/brand/logo/badge-rust.svg" alt="" />
+        <img class="stk stk--2" src="/brand/logo/badge-green.svg" alt="" />
+        <img class="stk stk--3" src="/brand/assets/sticker-locally-sourced.png" alt="" />
+        <img class="stk stk--4" src="/brand/logo/badge-pink.svg" alt="" />
+        <img class="stk stk--5" src="/brand/assets/sticker-certified-organic.svg" alt="" />
+      </div>
     </div>
   </section>
 
@@ -196,35 +226,10 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  /* ---- Diagonal-split hero: pattern panel + playful floor photo ---- */
-  .ahero {
-    position: relative; isolation: isolate; min-height: clamp(420px, 56vh, 580px);
-    display: flex; align-items: center;
-    background:
-      linear-gradient(rgba(252, 245, 229, 0.72), rgba(252, 245, 229, 0.72)),
-      url('/brand/patterns/pattern-2.jpg') center / 300px repeat,
-      var(--cream);
-  }
-  /* photo occupies the right, cut on a diagonal */
-  .ahero__photo {
-    position: absolute; inset: 0; z-index: 0; overflow: hidden;
-    clip-path: polygon(46% 0, 100% 0, 100% 100%, 26% 100%);
-  }
-  .ahero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
-  /* soft warm wash to unify */
-  .ahero__photo::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(115deg, rgba(180, 96, 60, 0.1), transparent 50%);
-  }
-  .ahero__inner { position: relative; z-index: 1; }
-  .ahero__text {
-    max-width: 30rem;
-    padding: var(--space-4); margin: calc(-1 * var(--space-4));
-    border-radius: 16px;
-    background: linear-gradient(105deg, var(--cream) 62%, rgba(252, 245, 229, 0));
-  }
-  .ahero__text h1 { font-size: clamp(2.6rem, 1.8rem + 3.5vw, 4.4rem); margin-block: var(--space-1) var(--space-2); }
-  .ahero__lede { font-size: var(--text-lg); max-width: 34ch; margin-bottom: var(--space-3); }
+  .hero { display: flex; align-items: center; min-height: clamp(420px, 62vh, 600px); padding-block: var(--space-6); --hero-fade-to: var(--cream); }
+  .hero__inner { max-width: 700px; }
+  .hero h1 { font-size: clamp(2.8rem, 1.9rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 46ch; margin-bottom: var(--space-3); }
 
   .band { padding-block: var(--space-6); }
   .measure { max-width: 44rem; }
@@ -234,7 +239,7 @@ const faqs = [
   .gap-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-5); align-items: center; }
   .gap-grid > div:last-child { max-width: 52ch; }
 
-  /* ---- Orbit: photo with floating signals drifting around it ---- */
+  /* ---- Orbit: photo with floating chips drifting around it ---- */
   .orbit { position: relative; width: min(360px, 92%); aspect-ratio: 1; margin-inline: auto; }
   .orbit__me {
     position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: cover; border-radius: 50%;
@@ -249,7 +254,6 @@ const faqs = [
     box-shadow: var(--shadow-card); animation: floatA 6s ease-in-out infinite;
     animation-delay: calc(var(--i, 0) * -0.8s);
   }
-  /* scatter the chips around the ring */
   .orbit .float:nth-child(2) { top: 2%; left: 8%; }
   .orbit .float:nth-child(3) { top: 0%; right: 4%; }
   .orbit .float:nth-child(4) { top: 38%; left: -6%; }
@@ -261,54 +265,74 @@ const faqs = [
   .float--1 { animation-name: floatB; }
   .float--2 { animation-name: floatC; }
   .float--3 { animation-name: floatA; animation-duration: 7.5s; }
-  /* off-the-clock chips read olive/cream */
-  .orbit--life .float { color: var(--olive); }
-
+  .orbit--life .float { color: var(--olive); font-size: 0.95rem; }
   @keyframes floatA { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
   @keyframes floatB { 0%,100% { transform: translate(0,0) } 50% { transform: translate(7px, 9px) } }
   @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(-3deg) } 50% { transform: translate(-8px,-7px) rotate(3deg) } }
 
-  /* ---- Credential strip (forest) ---- */
-  .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
-  .cred { display: flex; flex-direction: column; gap: 0.3rem; }
-  .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
-
-  /* ---- Moving toolkit marquee ---- */
-  .stack-cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); margin: var(--space-4) 0 var(--space-2); }
-  .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-  .marquee + .marquee { margin-top: var(--space-1); }
-  .marquee__track { display: flex; gap: var(--space-2); width: max-content; animation: scroll-x 26s linear infinite; }
-  .marquee--rev .marquee__track { animation-direction: reverse; animation-duration: 32s; }
-  .marquee:hover .marquee__track { animation-play-state: paused; }
-  .tool {
-    flex: none; font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-lg);
-    color: var(--brown); background: var(--cream); border: 1.5px solid var(--color-border);
-    padding: 0.5rem 1rem; border-radius: 12px; box-shadow: var(--shadow-card);
+  /* ---- Both sides + industries (forest) ---- */
+  .sides { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4); }
+  .side { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); }
+  .side svg { width: 40px; height: 40px; color: var(--rust); }
+  .side h3 { margin: var(--space-1) 0 0.2rem; color: var(--rust); }
+  .side p { margin: 0; font-size: var(--text-sm); }
+  .ind-cap { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--peach); margin: var(--space-4) 0 var(--space-2); }
+  .industries { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+  .ind {
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
+    color: var(--cream); border: 1.5px solid rgba(252,245,229,0.4); padding: 0.4rem 0.85rem; border-radius: 999px;
   }
-  .tool--ghost { color: var(--color-text-muted); background: transparent; box-shadow: none; opacity: 0.8; }
-  @keyframes scroll-x { from { transform: translateX(0) } to { transform: translateX(-50%) } }
 
-  /* ---- FAQ ---- */
+  /* ---- Coach's playbook (how I work) ---- */
+  .playboard {
+    position: relative; margin-top: var(--space-4); border-radius: 16px; aspect-ratio: 2 / 1;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 31px, rgba(58,42,30,0.05) 31px 32px),
+      repeating-linear-gradient(90deg, transparent 0 31px, rgba(58,42,30,0.05) 31px 32px),
+      #fbf7ee;
+    border: 3px solid var(--brown); box-shadow: var(--shadow-card); overflow: hidden;
+  }
+  .playboard__tag {
+    position: absolute; top: 10px; left: 14px; z-index: 3;
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm);
+  }
+  .playboard__diagram { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+  .play-chip {
+    position: absolute; z-index: 2; white-space: nowrap;
+    font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: var(--text-sm);
+    background: var(--cream); color: var(--brown); border: 2px solid var(--rust);
+    padding: 0.3rem 0.7rem; border-radius: 10px; box-shadow: var(--shadow-card);
+  }
+  .play-chip--new { border-style: dashed; border-color: var(--olive); color: var(--olive); background: transparent; }
+  .playboard__cap { margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+
+  /* ---- FAQ + sticker stack ---- */
+  .faq-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-5); align-items: center; }
   .faq { display: grid; gap: var(--space-3); margin: 0; }
   .faq__item { border-left: 3px solid var(--rust); padding-left: var(--space-2); }
   .faq dt { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--brown); margin-bottom: 0.3rem; }
-  .faq dd { margin: 0; max-width: 62ch; }
+  .faq dd { margin: 0; max-width: 56ch; }
+  .stickers { position: relative; height: 320px; }
+  .stk { position: absolute; width: 130px; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.22)); animation: floatA 7s ease-in-out infinite; }
+  .stk--1 { top: 6%; left: 18%; transform: rotate(-9deg); width: 150px; z-index: 4; }
+  .stk--2 { top: 30%; left: 48%; transform: rotate(7deg); z-index: 3; animation-name: floatB; animation-delay: -1.5s; }
+  .stk--3 { top: 2%; left: 52%; transform: rotate(11deg); width: 120px; z-index: 5; animation-name: floatC; animation-delay: -0.7s; }
+  .stk--4 { top: 52%; left: 14%; transform: rotate(6deg); width: 120px; z-index: 2; animation-delay: -2.2s; }
+  .stk--5 { top: 56%; left: 50%; transform: rotate(-8deg); width: 128px; z-index: 3; animation-name: floatB; animation-delay: -3s; }
 
   .about-ctas { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
 
   @media (prefers-reduced-motion: reduce) {
-    .float, .marquee__track { animation: none; }
+    .float, .stk { animation: none; }
   }
   @media (max-width: 860px) {
-    .ahero { display: block; min-height: 0; }
-    .ahero__photo { position: relative; inset: auto; height: 44vh; clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
-    .ahero__photo img { object-position: 50% 32%; }
-    .ahero__inner { padding-block: var(--space-4) var(--space-5); }
-    .ahero__text { max-width: none; margin: 0; padding: 0; background: none; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .stickers { height: 260px; max-width: 360px; margin-inline: auto; }
   }
   @media (max-width: 760px) {
     .gap-grid { grid-template-columns: 1fr; }
     .gap-grid--rev .orbit { order: -1; }
-    .creds { grid-template-columns: 1fr; }
+    .sides { grid-template-columns: 1fr; }
+    .playboard { aspect-ratio: 3 / 2; }
   }
 </style>
