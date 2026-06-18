@@ -1,75 +1,136 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import FAQ from '../components/FAQ.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
 import { serviceSchema } from '../lib/schema';
-import { CTA } from '../consts';
+import { ENGAGEMENTS, CTA } from '../consts';
 
-// SERVICES — AI visibility + strategy ONLY (no fractional marketing).
-// Voice: Full LinkedIn Laura.
+// SERVICES HUB — premium, big-brand-first. Full-bleed hero, flagship feature,
+// engagement grid linking to sub-pages, the Loop, FAQ. No pricing (by scope).
+const flagship = ENGAGEMENTS.find((e) => e.flagship)!;
+const others = ENGAGEMENTS.filter((e) => !e.flagship);
 const faqs = [
-  { question: 'What is an AI visibility audit?', answer: 'It maps where your brand shows up — and gets cited — across AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews, and diagnoses why. Not a single "score," but what AI actually says about you and where the gaps are.' },
-  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They overlap and have to run in the same strategy — you can rank #1 on Google and still be invisible (or uncited) in AI answers.' },
-  { question: 'Is it too early to invest in this?', answer: 'No. Brands cited in AI Overviews already earn 35% more organic clicks and 91% more paid clicks than uncited brands on the same query (Seer Interactive, Sept 2025). And AI citations can shift far faster than SEO rankings — the ones you own today can be gone in six weeks.' },
-  { question: 'Do you do the implementation?', answer: 'Engagements range from a one-time audit to embedded strategy and content activation. I work directly with brands and as an embedded strategy partner inside agency teams. We scope what you need on a call.' },
-  { question: 'Who do you work with?', answer: 'Brands and agencies — including regulated industries like healthcare and MedTech, where I spent years and know the approval chain cold.' },
+  { question: 'Do you work with brands or agencies?', answer: 'Both. Brands hire me directly to come in and get their AI visibility together; agencies bring me in as an embedded, often white-labeled, strategy partner. The work is the same caliber either way.' },
+  { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links. AI visibility gets you quoted in the answer. They run in the same strategy — you can rank #1 on Google and still be invisible (or uncited) in AI answers.' },
+  { question: 'What does it cost?', answer: 'Engagements are scoped to the brand and the goal, from a one-time audit to the one-month Intensive. The fastest way to a real number is a short call.' },
+  { question: 'Can you move fast?', answer: 'That’s the whole point of the Intensive — one month, in and out, with the foundation built. No year-long agency cycle.' },
 ];
 ---
-<PageLayout
+<BaseLayout
   title="Services"
-  description="AI visibility audits and strategy: get your brand cited by AI engines, not just ranked on Google."
+  description="AI visibility audits, strategy, and a one-month intensive to get your brand cited by AI — for brands and agencies."
   schemas={[serviceSchema()]}
 >
-  <p class="subhead">ai visibility &amp; strategy</p>
-  <FramedPhoto class="img-right" src="/images/laura-laptop-site.jpg" alt="Laura reviewing a website" shape="feather" ratio="4 / 3" reveal />
-  <p class="prose">
-    The goal is simple: when someone asks AI a question in your category, your
-    brand is the answer it gives — and the source it actually cites. Here's the
-    catch most people miss: being the answer and being the cited source are two
-    different things. I work on both.
-  </p>
+  <!-- HERO -->
+  <section class="hero media-overlay media-overlay--hero">
+    <img class="bg" src="/images/laura-desk-wide.jpg" alt="" aria-hidden="true" style="object-position: 60% center;" />
+    <div class="container hero__inner">
+      <p class="subhead">ai visibility &amp; strategy</p>
+      <h1>Bring me in. I’ll get your AI visibility together.</h1>
+      <p class="hero__lede">
+        Whether you need a one-month intensive to fix it now, a blueprint for a
+        rebuild, or an ongoing partner — the goal is the same: when AI talks about
+        your category, your brand is the answer it cites. For brands and agencies.
+      </p>
+      <a class="button" href={CTA.calendly}>Book a call</a>
+    </div>
+  </section>
 
-  <h2>AI Visibility Audit</h2>
-  <p class="prose">
-    Where you show up — and don't — across ChatGPT, Claude, Perplexity, and Google
-    AI, plus the real reason why. I run a manual prompt audit, check your site for
-    AI extractability, and map where your brand exists outside your own website
-    (because AI builds your identity from the ENTIRE internet, not your homepage).
-  </p>
+  <!-- FLAGSHIP FEATURE -->
+  <section class="split-feature">
+    <img class="split-feature__img" src={flagship.image} alt="Laura Seelinger" />
+    <div class="container">
+      <div class="split-feature__text" data-reveal="left">
+        <p class="subhead">{flagship.eyebrow}</p>
+        <h2>{flagship.name}</h2>
+        <p>{flagship.tagline}</p>
+        <p>{flagship.summary}</p>
+        <a class="button" href={`/services/${flagship.slug}`}>Explore the Intensive →</a>
+      </div>
+    </div>
+  </section>
 
-  <h2>AI Visibility Strategy</h2>
-  <p class="prose">
-    The plan to get cited — built on what your audience actually asks, not a list
-    of prompts crowdsourced in a Teams thread. SEO + AEO + GEO in one strategy, not
-    three separate workstreams. We fix the existing content before chasing shiny
-    new pages.
-  </p>
+  <!-- ENGAGEMENT GRID -->
+  <section class="band tex-cream">
+    <div class="container">
+      <div class="measure" data-reveal>
+        <p class="subhead">ways to work together</p>
+        <h2>Pick your entry point</h2>
+      </div>
+      <div class="eng-grid">
+        {others.map((e, i) => (
+          <a class="eng-card" href={`/services/${e.slug}`} data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <p class="subhead">{e.eyebrow}</p>
+            <h3>{e.name}</h3>
+            <p class="eng-card__sum">{e.summary}</p>
+            <span class="eng-card__go">Learn more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  <h2>Audience Intelligence</h2>
-  <p class="prose">
-    The real language buyers use, mined from where they talk when no one's watching.
-    The most important thing about your audience won't show up in a keyword tool —
-    and it's both your creative brief and your AI visibility strategy.
-  </p>
+  <!-- THE LOOP -->
+  <section class="band section--forest">
+    <div class="container measure" data-reveal>
+      <p class="subhead">how the work runs</p>
+      <h2>The AI Intelligence Loop</h2>
+      <p>
+        Every engagement runs the same loop: audience intelligence and brand-identity
+        analysis as parallel inputs → a strategy built for AI visibility → content
+        activation → monitoring that feeds back in. It compounds. That’s the point.
+      </p>
+    </div>
+  </section>
 
-  <h2>Content Activation</h2>
-  <p class="prose">
-    Content engineered to be extracted and quoted by AI — structured so the dice
-    are loaded in your favor. In regulated industries, that includes mapping the
-    approval chain so the work actually ships instead of dying in legal review.
-  </p>
+  <!-- FAQ -->
+  <section class="band">
+    <div class="container">
+      <FAQ items={faqs} />
+      <p style="margin-top: var(--space-4)"><a class="button" href={CTA.calendly}>Let’s talk AI visibility</a></p>
+    </div>
+  </section>
+</BaseLayout>
 
-  <h2>The AI Intelligence Loop</h2>
-  <p class="prose">
-    It all runs as a loop: audience intelligence and brand-identity analysis as
-    parallel inputs → a strategy built for AI visibility → content activation →
-    monitoring that feeds right back into the intelligence. It compounds. That's
-    the point.
-  </p>
+<style>
+  .hero { display: flex; align-items: center; min-height: 78vh; padding-block: var(--space-6); }
+  .hero__inner { max-width: 780px; }
+  .hero h1 { font-size: clamp(2.6rem, 1.8rem + 4.5vw, 5rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__lede { font-size: var(--text-lg); max-width: 52ch; margin-bottom: var(--space-3); }
 
-  <FAQ items={faqs} />
+  .band { padding-block: var(--space-6); }
+  .measure { max-width: 60ch; }
 
-  <p style="margin-top: var(--space-4)">
-    <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
-  </p>
-</PageLayout>
+  /* Flagship split (reuses .split-feature from home) */
+  .split-feature { position: relative; overflow: hidden; background: var(--cream-deep); }
+  .split-feature__img {
+    position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+    object-fit: cover; object-position: center 30%;
+    -webkit-mask-image: linear-gradient(to left, #000 58%, transparent 100%);
+    mask-image: linear-gradient(to left, #000 58%, transparent 100%);
+  }
+  .split-feature .container { position: relative; z-index: 2; }
+  .split-feature__text { max-width: 46ch; padding-block: var(--space-6); }
+
+  /* Engagement cards */
+  .eng-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+  .eng-card {
+    display: block; text-decoration: none; color: var(--brown);
+    background: var(--cream); border-radius: 16px; padding: var(--space-3);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .eng-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+  .eng-card h3 { color: var(--rust); margin: 0.2rem 0 0.4rem; }
+  .eng-card__sum { font-size: var(--text-sm); }
+  .eng-card__go { color: var(--olive); font-weight: 600; font-size: var(--text-sm); }
+
+  @media (max-width: 760px) {
+    .split-feature__img {
+      position: relative; width: 100%; height: 260px;
+      -webkit-mask-image: linear-gradient(to top, #000 62%, transparent 100%);
+      mask-image: linear-gradient(to top, #000 62%, transparent 100%);
+    }
+    .split-feature__text { padding-block: var(--space-4); }
+    .hero { min-height: 64vh; }
+  }
+</style>

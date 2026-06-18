@@ -1,0 +1,46 @@
+---
+import EngagementLayout from '../../layouts/EngagementLayout.astro';
+
+const items = [
+  { n: '01', t: 'Audience intelligence', d: 'Ongoing mining of what your market actually says and asks — the input most strategies never get.' },
+  { n: '02', t: 'Strategy + activation', d: 'AEO/GEO and SEO in one strategy, turned into content engineered to be cited — not three disconnected workstreams.' },
+  { n: '03', t: 'Monitoring + reporting', d: 'Monthly tracking of what AI says and whether citations are turning into real traffic and demand.' },
+  { n: '04', t: 'Invisible if you need it', d: 'For agencies, I run behind your brand — your client never has to know the AI visibility lane is outsourced.' },
+];
+---
+<EngagementLayout
+  title="Embedded Partner"
+  eyebrow="ongoing · agencies + in-house"
+  lede="The AI visibility expertise your team isn’t staffed for — embedded with you on a monthly cadence, for agencies and in-house teams alike."
+  heroImage="/images/laura-writing.jpg"
+  description="An ongoing monthly AI visibility partner for agencies and in-house teams: audience intelligence, strategy, content activation and monitoring — can run fully behind your brand."
+>
+  <section class="band">
+    <div class="container measure" data-reveal>
+      <p class="subhead">who this is for</p>
+      <h2>Agencies and brand teams who want the lane covered, properly</h2>
+      <p>
+        Most agency teams aren’t staffed for AI visibility, and most in-house teams
+        are stretched too thin to go deep on it. I embed as your strategy partner —
+        bringing the audience intelligence and AI visibility work that compounds
+        across a portfolio. For agencies, that’s often fully white-labeled: I’m the
+        expertise, you’re the face to the client.
+      </p>
+    </div>
+  </section>
+
+  <section class="band section--forest">
+    <div class="container">
+      <div class="measure" data-reveal><p class="subhead">what the cadence covers</p><h2>The loop, run every month</h2></div>
+      <div class="cards">
+        {items.map((it, i) => (
+          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="card__n">{it.n}</span>
+            <h3>{it.t}</h3>
+            <p>{it.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</EngagementLayout>

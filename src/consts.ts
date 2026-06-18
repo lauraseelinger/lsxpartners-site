@@ -51,6 +51,50 @@ export const SERVICES = [
   'Content Activation',
 ] as const;
 
+// Engagement types — Services hub cards + sub-pages.
+// NOTE: the flagship name "The AI Visibility Intensive" is a PLACEHOLDER —
+// final name to come from the CMO/brand-marketer audience-intelligence work
+// (name it in the language buyers actually use). Pricing is intentionally
+// omitted everywhere: premium, "by scope," routes to a call.
+export const ENGAGEMENTS = [
+  {
+    slug: 'ai-visibility-intensive',
+    name: 'The AI Visibility Intensive',
+    flagship: true,
+    eyebrow: 'the flagship · one month',
+    tagline: 'I come in, and in one month your brand goes from invisible to cited.',
+    summary: 'A one-month, all-in engagement for brands that need to move now — full audit, audience intelligence, and the foundation to flip how AI talks about you.',
+    image: '/images/hero-standing.jpg',
+  },
+  {
+    slug: 'ai-visibility-blueprint',
+    name: 'AI Visibility Blueprint',
+    flagship: false,
+    eyebrow: 'project',
+    tagline: 'Build (or rebuild) your site structurally optimized for AI from the ground up.',
+    summary: 'The foundation for a website redesign or new build: navigation, sitemap, page templates and schema — plus an ongoing recommendations list to seed what comes next.',
+    image: '/images/laura-laptop-site.jpg',
+  },
+  {
+    slug: 'ai-visibility-audit',
+    name: 'AI Visibility Audit',
+    flagship: false,
+    eyebrow: 'diagnostic',
+    tagline: 'Find out exactly what AI says about your brand — and where the gaps are.',
+    summary: 'A manual prompt audit across every major AI platform, paired with audience intelligence, so you know where you show up, where you don’t, and why.',
+    image: '/images/laura-desk-wide.jpg',
+  },
+  {
+    slug: 'embedded-partner',
+    name: 'Embedded Partner',
+    flagship: false,
+    eyebrow: 'ongoing · agencies + in-house',
+    tagline: 'The AI visibility expertise your team isn’t staffed for — embedded with you.',
+    summary: 'An ongoing monthly partner for agencies and in-house teams: audience intelligence, strategy, content activation and monitoring on a cadence. Can run fully behind your brand.',
+    image: '/images/laura-writing.jpg',
+  },
+] as const;
+
 // Primary nav. Every node must trace to an audience signal and resolve to a
 // real retrievable destination (no dead/placeholder links in nav).
 export const NAV = [

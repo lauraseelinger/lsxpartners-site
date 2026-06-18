@@ -1,0 +1,60 @@
+---
+import EngagementLayout from '../../layouts/EngagementLayout.astro';
+
+const deliverables = [
+  { n: '01', t: 'Navigation & sitemap', d: 'An information architecture where every node traces to a real audience signal and resolves to a retrievable destination AI can actually use.' },
+  { n: '02', t: 'Page templates', d: 'Distinct, AI-extractable templates for the page types that matter — product/detail, category, and hub — not one generic shell.' },
+  { n: '03', t: 'Schema & structure', d: 'The machine-readable layer baked into the templates: Organization, Person, Article, FAQ, Service — so content is built to be cited, not retrofitted later.' },
+  { n: '04', t: 'Ongoing recommendations', d: 'A prioritized list that seeds the next phase of work, whether your team runs it or it rolls into a retainer.' },
+];
+---
+<EngagementLayout
+  title="AI Visibility Blueprint"
+  eyebrow="project"
+  lede="Building or rebuilding your site? Do it structurally optimized for AI from the ground up — instead of bolting on fixes across a finished site later."
+  heroImage="/images/laura-laptop-site.jpg"
+  description="The foundation for a website redesign or new build: navigation, sitemap, AI-ready page templates and schema, plus an ongoing recommendations list."
+>
+  <section class="band">
+    <div class="container measure" data-reveal>
+      <p class="subhead">who this is for</p>
+      <h2>Brands (and the agencies rebuilding their sites)</h2>
+      <p>
+        A redesign is the cheapest time to get AI visibility right — because
+        you’re building the structure anyway. The Blueprint is the strategy layer
+        that rides alongside the rebuild so the new site is extractable, schema-rich
+        and citation-ready on launch day, not three quarters of patches later. I
+        work directly with brands and as the embedded strategy lane inside agency
+        redesign teams.
+      </p>
+    </div>
+  </section>
+
+  <section class="band section--forest">
+    <div class="container">
+      <div class="measure" data-reveal><p class="subhead">what’s in it</p><h2>The website foundation</h2></div>
+      <div class="cards">
+        {deliverables.map((d, i) => (
+          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="card__n">{d.n}</span>
+            <h3>{d.t}</h3>
+            <p>{d.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band tex-cream">
+    <div class="container measure" data-reveal="left">
+      <p class="subhead">the payoff</p>
+      <h2>Build the railway while everyone else patches tires on the side of the road</h2>
+      <p>
+        The brands that get the structure right now will implement at a speed their
+        competitors can’t once AI optimization is as documented as SEO is today.
+        A Blueprint during a redesign means you’re optimized from the ground up —
+        not making little updates across a site that was never built for it.
+      </p>
+    </div>
+  </section>
+</EngagementLayout>

@@ -1,0 +1,99 @@
+---
+import EngagementLayout from '../../layouts/EngagementLayout.astro';
+import { CTA } from '../../consts';
+
+// FLAGSHIP — the $70–100k one-month intensive (big-brand hero offer).
+// Name is a PLACEHOLDER pending the CMO audience-intel naming work.
+// No pricing — premium, by scope.
+const deliverables = [
+  { n: '01', t: 'The full picture', d: 'A manual prompt audit across ChatGPT, Claude, Perplexity and Google AI, merged with a Spyglasses report — exactly what AI says about you on every query that matters.' },
+  { n: '02', t: 'Audience intelligence', d: 'The real language your buyers use, mined from where they actually talk — the foundation most brand audits skip entirely.' },
+  { n: '03', t: 'Your AI brand identity', d: 'What the entire internet has decided you are, where that diverges from how you see yourself, and the third-party sources writing your story for you.' },
+  { n: '04', t: 'The prioritized fix list', d: 'Not a 90-page report that sits on a desk. A ranked, do-this-next plan your team (or mine) can execute — built for your approval chain, not against it.' },
+  { n: '05', t: 'The foundation, started', d: 'Content and schema work begun on the highest-impact pages, so you leave the month with momentum, not just a document.' },
+  { n: '06', t: 'Monitoring, set up', d: 'The system to watch what AI says next — so the gains compound instead of fading.' },
+];
+const weeks = [
+  { t: 'Week 1 — See', d: 'Audit + audience intelligence. We establish the truth: what AI says, what buyers ask, where you’re absent.' },
+  { t: 'Week 2 — Diagnose', d: 'Map owning-the-answer vs. owning-the-citation, the approval chain, and the highest-leverage gaps.' },
+  { t: 'Week 3 — Build', d: 'Start the fixes on the pages that move the needle, structured so they survive legal/brand review.' },
+  { t: 'Week 4 — Hand off', d: 'Exec-ready findings, the prioritized roadmap, and monitoring live — your team can run with it.' },
+];
+---
+<EngagementLayout
+  title="The AI Visibility Intensive"
+  eyebrow="the flagship · one month"
+  lede="When a big brand needs to go from invisible to cited — fast — I come in for one month and get it together. No year-long agency crawl. No 90-page report nobody reads."
+  heroImage="/images/hero-standing.jpg"
+  description="A one-month, all-in AI visibility engagement for brands that need to move now: full audit, audience intelligence, and the foundation to flip how AI talks about you."
+>
+  <!-- WHO IT'S FOR -->
+  <section class="band">
+    <div class="container measure" data-reveal>
+      <p class="subhead">who this is for</p>
+      <h2>The brand that can’t wait a year to find out what AI is saying about them</h2>
+      <p>
+        You’re a known name. You rank fine on Google. But when someone asks
+        ChatGPT or Perplexity about your category, you’re either missing, wrong,
+        or getting credit handed to a competitor and a Reddit thread. You don’t
+        need another dashboard or a slow retainer to ease into it. You need
+        someone who’s done this every day to come in, find the truth, and build
+        the fix — in weeks, not quarters.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET (forest) -->
+  <section class="band section--forest">
+    <div class="container">
+      <div class="measure" data-reveal>
+        <p class="subhead">what you walk away with</p>
+        <h2>One month. The whole foundation.</h2>
+      </div>
+      <div class="cards">
+        {deliverables.map((d, i) => (
+          <div class="card" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="card__n">{d.n}</span>
+            <h3>{d.t}</h3>
+            <p>{d.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THE MONTH WORKS (cream texture) -->
+  <section class="band tex-cream">
+    <div class="container">
+      <div class="measure" data-reveal>
+        <p class="subhead">how the month works</p>
+        <h2>Four weeks, four moves</h2>
+      </div>
+      <div class="steps">
+        {weeks.map((w, i) => (
+          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="step__n">{i + 1}</span>
+            <h3>{w.t}</h3>
+            <p>{w.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT WORKS (rust) -->
+  <section class="band section--rust">
+    <div class="container measure" data-reveal="left">
+      <p class="subhead">why it works</p>
+      <h2>I’m not reading about this. I’m in it every day.</h2>
+      <p>
+        I test the tools myself and run this process across real client work —
+        so you get learnings months before the standard agency cycle would surface
+        them. I’ve spent 15+ years across agency and corporate, including regulated
+        industries where nothing ships without medical, legal and brand sign-off.
+        That’s why the foundation I build actually gets approved and goes live.
+      </p>
+      <a class="button" href={CTA.calendly}>See if it’s a fit</a>
+    </div>
+  </section>
+</EngagementLayout>

@@ -1,0 +1,46 @@
+---
+import EngagementLayout from '../../layouts/EngagementLayout.astro';
+
+const steps = [
+  { t: 'Prompt audit', d: 'The real questions your buyers ask, run across ChatGPT, Claude, Perplexity and Google AI — with every source each one cites captured.' },
+  { t: 'Extractability check', d: 'Whether your own pages are even structured for AI to read and quote you in the first place.' },
+  { t: 'Off-site map', d: 'Where your brand exists beyond your website — reviews, Reddit, comparisons — because that’s where AI builds your identity.' },
+  { t: 'Findings + gaps', d: 'A clear read on where you show up, where you don’t, and the difference between owning the answer and owning the citation.' },
+];
+---
+<EngagementLayout
+  title="AI Visibility Audit"
+  eyebrow="diagnostic"
+  lede="Most brands have no idea what AI actually says about them. Start here — find out, with receipts, before you spend a dollar changing anything."
+  heroImage="/images/laura-desk-wide.jpg"
+  description="A manual prompt audit across every major AI platform plus audience intelligence: where your brand shows up in AI answers, where it doesn’t, and why."
+>
+  <section class="band">
+    <div class="container measure" data-reveal>
+      <p class="subhead">the starting point</p>
+      <h2>You can’t fix what you can’t see</h2>
+      <p>
+        An AI visibility “score” from a tool won’t tell you what AI says about you
+        across a million different questions, or which sources it trusts to answer
+        them. This audit does — manually, the way I run it for every client — so
+        you have an honest baseline and a clear next move. It’s also the natural
+        on-ramp to a Blueprint or the Intensive.
+      </p>
+    </div>
+  </section>
+
+  <section class="band section--forest">
+    <div class="container">
+      <div class="measure" data-reveal><p class="subhead">what i look at</p><h2>Four lenses, one set of findings</h2></div>
+      <div class="steps">
+        {steps.map((s, i) => (
+          <div class="step" data-reveal data-reveal-delay={String((i % 3) + 1)}>
+            <span class="step__n">{i + 1}</span>
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</EngagementLayout>
