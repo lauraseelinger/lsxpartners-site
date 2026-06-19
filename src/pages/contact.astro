@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FramedPhoto from '../components/FramedPhoto.astro';
 import StitchDivider from '../components/StitchDivider.astro';
 import { PERSON, CTA } from '../consts';
 
 // CONTACT — image-forward, color-blocked. Primary = Calendly; also email,
 // LinkedIn, and the Cited newsletter. Voice: Full LinkedIn Laura.
+// (No marketing-guru fluff — see laura-no-guru-fluff memory.)
 const methods = [
   {
-    key: 'call', label: 'Book a call', value: '20 minutes · Zoom · no pitch deck',
+    key: 'call', label: 'Book a call', value: '20 minutes · Zoom · no slides',
     href: CTA.calendly,
     icon: '<rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>',
   },
@@ -40,14 +40,23 @@ const methods = [
         <p class="subhead">let's talk</p>
         <h1>Let's find out what AI says about your brand</h1>
         <p class="contact__lede">
-          Want to know what AI is actually telling people about your brand — and
-          how to become the source it cites? The fastest way is to grab 20 minutes
-          on my calendar. No pitch deck, no fluff. Whether you're a brand or an
-          agency, we'll figure out where you stand and where I'd start.
+          Want to know what AI is telling people about your brand — and how to
+          become the source it cites? Grab 20 minutes on my calendar. On the call
+          we'll pull up what ChatGPT, Claude, Gemini and Perplexity actually say
+          about you, and I'll tell you what I'd do about it. Brands and agencies
+          both.
         </p>
         <a class="button" href={CTA.calendly}>Book a call</a>
       </div>
-      <FramedPhoto src="/images/laura-phone.jpg" alt="Laura Seelinger" shape="feather" ratio="3 / 4" reveal delay="1" />
+
+      <div class="ccluster" data-reveal>
+        <div class="ccluster__pat ccluster__pat--back" aria-hidden="true"></div>
+        <div class="ccluster__pat ccluster__pat--front" aria-hidden="true"></div>
+        <img class="ccluster__photo" src="/images/laura-phone.jpg" alt="Laura Seelinger" />
+        <img class="cstk cstk--1" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" />
+        <img class="cstk cstk--2" src="/brand/assets/sticker-team.png" alt="" aria-hidden="true" />
+        <img class="cstk cstk--3" src="/brand/assets/sticker-tailored.png" alt="" aria-hidden="true" />
+      </div>
     </div>
   </section>
 
@@ -80,8 +89,8 @@ const methods = [
   <StitchDivider bg="rust" stitch="yellow" />
   <section class="band section--rust">
     <div class="container measure measure--center" data-reveal="scale">
-      <h2>Curious what your AI visibility looks like right now?</h2>
-      <p>That's the best first conversation we can have. Let's find out together.</p>
+      <h2>Want to see what AI says about you right now?</h2>
+      <p>Book a call and I'll pull it up live.</p>
       <a class="button button--ghost" href={CTA.calendly}>Book a call</a>
     </div>
   </section>
@@ -92,9 +101,25 @@ const methods = [
   .measure { max-width: 44rem; }
   .measure--center { margin-inline: auto; text-align: center; }
   .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
-  .split > div { max-width: 56ch; }
-  .split :global(.framed) { max-width: 320px; justify-self: center; }
+  .split > div:first-child { max-width: 56ch; }
   .contact__lede { font-size: var(--text-lg); margin-bottom: var(--space-3); }
+
+  /* photo + stacked pattern + stickers cluster */
+  .ccluster { position: relative; width: min(380px, 100%); aspect-ratio: 4 / 5; margin-inline: auto; }
+  .ccluster__pat { position: absolute; border-radius: 20px; box-shadow: var(--shadow-card); }
+  .ccluster__pat--back { inset: 0 0 12% 14%; transform: rotate(6deg); z-index: 0;
+    background: linear-gradient(rgba(163,187,195,0.55), rgba(163,187,195,0.55)), url('/brand/patterns/pattern-2.jpg') center / 200px repeat, var(--blue); }
+  .ccluster__pat--front { inset: 8% 12% 2% 2%; transform: rotate(-4deg); z-index: 1;
+    background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 200px repeat, var(--peach); }
+  .ccluster__photo {
+    position: absolute; inset: 4% 10% 0 6%; width: auto; height: 96%; object-fit: cover; border-radius: 18px; z-index: 2;
+    -webkit-mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
+    mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
+  }
+  .cstk { position: absolute; z-index: 3; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); }
+  .cstk--1 { top: -7%; left: -8%; width: 106px; transform: rotate(-10deg); }
+  .cstk--2 { bottom: -6%; right: -8%; width: 114px; transform: rotate(8deg); }
+  .cstk--3 { top: 8%; right: -10%; width: 82px; transform: rotate(-5deg); }
 
   .cmethods { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
   .cmethod {
@@ -112,7 +137,7 @@ const methods = [
 
   @media (max-width: 760px) {
     .split { grid-template-columns: 1fr; }
-    .split :global(.framed) { order: -1; }
+    .ccluster { order: -1; width: min(320px, 82%); }
     .cmethods { grid-template-columns: 1fr; }
   }
 </style>
