@@ -1,0 +1,36 @@
+---
+// Radial "web" of the off-site sources AI pulls from to build a brand's
+// identity — your brand at the center, the source pool around it. Used in the
+// audit guide (Step 3). Static, brand-styled SVG.
+const cx = 300, cy = 240, R = 178;
+const sources = ['Reddit & forums', 'Product reviews', 'YouTube', 'Wikipedia', 'Press & news', 'Podcasts', 'Newsletters', 'Directories'];
+const nodes = sources.map((s, i) => {
+  const a = (-90 + i * 45) * Math.PI / 180;
+  return { s, x: Math.round(cx + R * Math.cos(a)), y: Math.round(cy + R * Math.sin(a)) };
+});
+---
+<figure class="sweb">
+  <svg viewBox="0 0 600 500" role="img" aria-label="The off-site sources AI pulls from to build your brand identity">
+    {nodes.map((n) => (
+      <line x1={cx} y1={cy} x2={n.x} y2={n.y} stroke="var(--olive)" stroke-width="2" stroke-dasharray="2 6" opacity="0.6" />
+    ))}
+    {nodes.map((n) => (
+      <g transform={`translate(${n.x}, ${n.y})`}>
+        <rect x="-66" y="-17" width="132" height="34" rx="17" fill="var(--cream)" stroke="var(--olive)" stroke-width="1.5" />
+        <text x="0" y="5" text-anchor="middle" class="sweb__label">{n.s}</text>
+      </g>
+    ))}
+    <circle cx={cx} cy={cy} r="58" fill="var(--rust)" />
+    <text x={cx} y={cy - 4} text-anchor="middle" class="sweb__center">YOUR</text>
+    <text x={cx} y={cy + 16} text-anchor="middle" class="sweb__center">BRAND</text>
+  </svg>
+  <figcaption>AI builds your brand identity from the whole pool — not just your website.</figcaption>
+</figure>
+
+<style>
+  .sweb { margin: var(--space-4) 0; }
+  .sweb svg { width: 100%; height: auto; display: block; }
+  .sweb__label { font-family: var(--font-sub); font-weight: 800; font-style: italic; font-size: 14px; fill: var(--brown); }
+  .sweb__center { font-family: var(--font-heading); font-size: 20px; fill: var(--cream); letter-spacing: 0.04em; }
+  .sweb figcaption { text-align: center; font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-1); }
+</style>

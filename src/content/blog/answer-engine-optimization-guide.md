@@ -56,6 +56,12 @@ One of the biggest misconceptions about AI visibility is that “optimizing for 
 
 **Google AI Overviews and AI Mode** run on a hybrid system that combines traditional Google search signals with AI processing. This is the critical detail: Google requires existing organic ranking, typically top 20, before content is even considered for AI citation. Brand-owned websites make up 52% of Google AI citations, which means traditional SEO directly impacts whether you show up in Google’s AI-generated answers. If you don’t rank organically, Google’s AI won’t cite you.
 
+| Platform | How it finds sources | What wins the citation |
+|---|---|---|
+| **ChatGPT** | Training data, with newer info layered on via Bing-powered web search | Third-party validation — reviews, industry publications, expert roundups, directories (Wikipedia and Reddit are the top sources) |
+| **Perplexity** | Searches the live web on every query (~13 sources per answer) | Freshness + structure — consistent, well-structured publishing; Reddit is the #1 cited source, and it's the most generous platform for niche brands |
+| **Google AI Overviews / AI Mode** | Hybrid: Google ranking + AI processing | Organic ranking first (typically top 20) — brand-owned sites are 52% of citations, so SEO directly gates whether you're cited |
+
 ### The 11% overlap problem
 
 An analysis of 6.8 million citations found that only 11% of domains receive citations from both ChatGPT and Perplexity. Add Google AI Overviews, Claude and Gemini into the mix and the overlap shrinks further. Each platform prioritizes different content signals and draws from different source pools.
