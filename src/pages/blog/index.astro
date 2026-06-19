@@ -104,12 +104,12 @@ const cover = (p: typeof posts[number], i: number) => {
   .has-img::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
     background-image: var(--pat); background-size: 190px; background-repeat: repeat;
-    --m: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
+    --m: linear-gradient(to bottom, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%);
     -webkit-mask-image: var(--m); mask-image: var(--m);
   }
-  .from-bottom::before { --m: linear-gradient(to top, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
-  .from-left::before { --m: linear-gradient(to right, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
-  .from-right::before { --m: linear-gradient(to left, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
+  .from-bottom::before { --m: linear-gradient(to top, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
+  .from-left::before { --m: linear-gradient(to right, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
+  .from-right::before { --m: linear-gradient(to left, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
   .feat__body { padding: var(--space-4); align-self: center; }
   .feat__body h2 { margin: 0 0 var(--space-1); }
   .feat__body p { max-width: 52ch; }

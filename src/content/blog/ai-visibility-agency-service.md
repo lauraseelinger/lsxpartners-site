@@ -111,3 +111,15 @@ The window for being ahead of this is not unlimited — right now, most agencies
 The agencies that build this capability over the next 12 months are going to own a real advantage in both retention conversations and new business pitches. Once AI visibility becomes a standard expectation in agency reporting, it stops being a differentiator and starts being table stakes — the same way content marketing and SEO reporting became table stakes after enough agencies started offering them.
 
 The first-mover advantage is real here. An agency that can walk into a quarterly review and show AI share of voice alongside traditional metrics, explain why the numbers look the way they do and outline a concrete plan to improve them, is a very different kind of partner than one that's still reporting on rankings and clicks and hoping nobody asks about the rest.
+
+## Where to start with AI visibility as an agency service
+
+If you haven't already opened ChatGPT and searched your clients' product categories just to see what comes back, do that today. Pick your three most at-risk clients — the ones with research-heavy buyers, the ones showing unexplained traffic shifts or the ones in categories where AI adoption is highest — and run a quick informal audit to see who gets named, how they're described and whether your client appears in the answer at all.
+
+That gut check is usually enough to make the conversation with your client feel urgent rather than hypothetical. And the agency that's bringing that conversation proactively is always in a stronger position than the one that's reacting to it after the client brings it up first.
+
+For a deeper look at how AI systems decide what to cite and what content structure drives AI visibility, the [AEO guide for 2026](/blog/answer-engine-optimization-guide) covers the full landscape. And if you want to talk through what adding this looks like for your specific agency and client mix, [reach out](/contact) — it's a conversation worth having before your clients bring it to you.
+
+### Ready to see what this looks like for one of your clients?
+
+Most engagements start with a single audit on one brand. You see the full process and output, and we go from there. No big commitment, no long onboarding. [**Schedule a consult call**](/contact)**.**

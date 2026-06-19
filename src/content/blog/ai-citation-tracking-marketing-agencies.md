@@ -51,3 +51,9 @@ What makes ai citation tracking particularly important for agency owners right n
 The window for being ahead of this is not unlimited. Once AI visibility becomes a standard expectation in agency reporting, it stops being a differentiator and starts being table stakes. Right now, it’s still a differentiator, and the gap between agencies that understand it and agencies that don’t is wide enough to matter when a client is deciding whether to stay or go.
 
 There’s also a version of this that’s a direct competitive threat. If your client’s competitor is consistently appearing in AI-generated answers in their category and your client isn’t, and you can’t explain why or outline a concrete plan to change it, that’s not a future problem — that’s a current one.
+
+## What to do with this information
+
+If you’ve never opened ChatGPT and searched your client’s product category or treatment area just to see what comes back, do it today. It doesn’t have to be a formal audit, just do it as a gut check. See who gets named and how they’re described. See whether your client is in that answer at all, then ask yourself whether you’d know what to do if they weren’t.
+
+That’s the starting point. For a deeper look at how AI visibility works — from how different platforms decide what to cite to what agencies and their clients need to have in place to show up consistently — the [complete AI visibility guide for 2026](/blog/answer-engine-optimization-guide) covers the full picture. If you're ready to take the next step and build this into your agency's services, [here's how to do it practically](/blog/ai-visibility-agency-service). And if you want to talk through what this means for your specific client mix, reach out, it’s a conversation worth having before your clients bring it to you.
