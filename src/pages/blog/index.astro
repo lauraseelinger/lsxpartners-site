@@ -1,39 +1,122 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import StitchDivider from '../../components/StitchDivider.astro';
+import { CTA } from '../../consts';
 
-// Blog index — lists current, listed posts only (unlisted legacy posts keep
-// their URLs but don't appear here). Newest first.
+// Blog index — image-forward, branded. Lists current, listed posts (unlisted
+// legacy posts keep their URLs but stay off the index). Newest first.
 const posts = (await getCollection('blog', ({ data }) => !data.draft && !data.unlisted))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const [featured, ...rest] = posts;
+const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').replace(/-/g, ' ');
 ---
 <BaseLayout
   title="Blog"
-  description="AI visibility, GEO, and AEO — how to get your brand cited by AI, written plainly."
+  description="AI visibility, GEO, and AEO — how to get your brand cited by AI, written plainly by Laura Seelinger."
 >
-  <div class="container prose blog-index">
-    <h1>Blog</h1>
-    <p>AI visibility, GEO &amp; AEO — written so you can actually use it.</p>
-    <ul class="post-list">
-      {
-        posts.map((post) => (
-          <li>
-            <a href={`/blog/${post.id}`}>{post.data.title}</a>
-            <p>{post.data.description}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+  <!-- HEADER -->
+  <section class="band tex-cream blogx__head">
+    <div class="container measure" data-reveal>
+      <p class="subhead">the cited blog</p>
+      <h1>Getting cited by AI, in plain English</h1>
+      <p>AI visibility, GEO &amp; AEO — what I'm learning in the work, written so you can actually use it Monday morning.</p>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band section--cream">
+    <div class="container">
+      {featured && (
+        <a class="feat" href={`/blog/${featured.id}`} data-reveal>
+          <div class="feat__cover" style={featured.data.heroImage ? `background-image:url(${featured.data.heroImage})` : `background-image: linear-gradient(rgba(181,84,52,0.12), rgba(181,84,52,0.12)), url('/brand/patterns/${covers[0]}.jpg')`}></div>
+          <div class="feat__body">
+            <p class="pcard__meta">latest · {tagOf(featured)} · {fmt(featured.data.pubDate)}</p>
+            <h2>{featured.data.title}</h2>
+            <p>{featured.data.description}</p>
+            <span class="pcard__go">Read it →</span>
+          </div>
+        </a>
+      )}
+
+      {rest.length > 0 && (
+        <div class="pgrid">
+          {rest.map((post, i) => (
+            <a class="pcard" href={`/blog/${post.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
+              <div class="pcard__cover" style={post.data.heroImage ? `background-image:url(${post.data.heroImage})` : `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('/brand/patterns/${covers[(i + 1) % covers.length]}.jpg')`}>
+                <span class="pcard__tag">{tagOf(post)}</span>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__meta">{fmt(post.data.pubDate)}</p>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <span class="pcard__go">Read →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <StitchDivider bg="rust" stitch="yellow" />
+  <section class="band section--rust">
+    <div class="container measure measure--center" data-reveal="scale">
+      <p class="subhead">the newsletter</p>
+      <h2>Get it in your inbox: <em>Cited</em></h2>
+      <p>The same no-fluff takes on AI visibility, before they’re anywhere else.</p>
+      <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  .blog-index { padding-block: var(--space-4); }
-  .post-list { list-style: none; padding: 0; }
-  .post-list li {
-    padding-block: var(--space-2);
-    border-bottom: 1px solid var(--color-border);
+  .band { padding-block: var(--space-6); }
+  .blogx__head { padding-block: var(--space-6); }
+  .measure { max-width: 44rem; }
+  .measure--center { margin-inline: auto; text-align: center; }
+  .measure--center em { font-style: italic; }
+
+  .pcard__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 0.3rem; }
+  .pcard__go { display: inline-block; margin-top: var(--space-1); font-weight: 700; color: var(--rust); }
+
+  /* featured */
+  .feat {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; text-decoration: none; color: inherit;
+    background: var(--cream); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-card);
+    border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease; margin-bottom: var(--space-5);
   }
-  .post-list a { font-size: var(--text-lg); font-weight: 600; }
-  .post-list p { color: var(--color-text-muted); margin: var(--space-1) 0 0; }
+  .feat:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .feat__cover { min-height: 280px; background-size: cover; background-position: center; }
+  .feat__body { padding: var(--space-4); align-self: center; }
+  .feat__body h2 { margin: 0 0 var(--space-1); }
+  .feat__body p { max-width: 52ch; }
+
+  /* grid of cards */
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .pcard {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    background: var(--cream); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card);
+    border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .pcard:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; }
+  .pcard__tag {
+    position: absolute; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
+    font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px; text-transform: capitalize;
+  }
+  .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }
+  .pcard__body h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }
+  .pcard__body p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+
+  @media (max-width: 860px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) {
+    .feat { grid-template-columns: 1fr; }
+    .feat__cover { min-height: 200px; }
+    .pgrid { grid-template-columns: 1fr; }
+  }
 </style>

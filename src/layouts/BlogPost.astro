@@ -1,10 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import StitchDivider from '../components/StitchDivider.astro';
 import { articleSchema } from '../lib/schema';
-import { PERSON } from '../consts';
+import { PERSON, CTA } from '../consts';
 
 // Blog post template. Article/BlogPosting + (site-wide) Person+Org schema.
 // Author byline on every post — the verified-author signal AI uses for trust.
+// Branded header band + feathered hero + readable body + author/subscribe foot.
 interface Props {
   title: string;
   description: string;
@@ -29,27 +31,81 @@ const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <BaseLayout title={title} description={description} type="article" schemas={[article]}>
-  <article class="container post">
-    <header class="post__header prose">
-      <h1>{title}</h1>
-      <p class="post__meta">
-        By <a href="/about" rel="author">{PERSON.name}</a>
-        · <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
-        {updatedDate && (
-          <> · Updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>
-        )}
-      </p>
+  <article class="post">
+    <header class="post__head tex-cream">
+      <div class="container measure">
+        <p class="subhead"><a href="/blog">the cited blog</a></p>
+        <h1>{title}</h1>
+        <p class="post__meta">
+          By <a href="/about" rel="author">{PERSON.name}</a>
+          · <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
+          {updatedDate && (
+            <> · Updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>
+          )}
+        </p>
+      </div>
     </header>
-    {heroImage && <img class="post__hero" src={heroImage} alt="" />}
-    <div class="prose post__body">
-      <slot />
+
+    {heroImage && (
+      <div class="container">
+        <img class="post__hero" src={heroImage} alt="" />
+      </div>
+    )}
+
+    <div class="container">
+      <div class="prose post__body measure">
+        <slot />
+      </div>
     </div>
+
+    <StitchDivider bg="olive" stitch="ivory" />
+    <footer class="band section--olive post__foot">
+      <div class="container post__footgrid">
+        <div class="author" data-reveal>
+          <img class="author__img" src="/images/laura-cutout.png" alt={PERSON.name} />
+          <div>
+            <p class="author__name">{PERSON.name}</p>
+            <p class="author__bio">AI visibility expert & founder of LSX Partners. I help brands and agencies get cited by AI — and I'm in it every day. <a href="/about">More about me →</a></p>
+          </div>
+        </div>
+        <div class="post__cta" data-reveal>
+          <p class="subhead">keep reading</p>
+          <a class="button" href={CTA.newsletter}>Subscribe to <em>Cited</em></a>
+          <a class="post__back" href="/blog">← All posts</a>
+        </div>
+      </div>
+    </footer>
   </article>
 </BaseLayout>
 
 <style>
-  .post { padding-block: var(--space-4); }
+  .post__head { padding-block: var(--space-5) var(--space-4); }
+  .measure { max-width: 44rem; margin-inline: auto; }
+  .post__head .subhead a { color: var(--olive); }
+  .post__head h1 { margin: var(--space-1) 0 var(--space-2); }
   .post__meta { color: var(--color-text-muted); font-size: var(--text-sm); }
-  .post__hero { border-radius: var(--radius); margin-block: var(--space-3); }
-  .post__body { margin-top: var(--space-3); }
+  .post__hero {
+    display: block; width: 100%; max-height: 460px; object-fit: cover; border-radius: 16px;
+    margin-block: var(--space-4);
+    -webkit-mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
+    mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
+  }
+  .post__body { padding-block: var(--space-4); }
+  /* body measure ~ comfortable reading line length */
+  .post__body { max-width: 42rem; }
+
+  .post__foot { padding-block: var(--space-5); }
+  .post__footgrid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: var(--space-4); align-items: center; }
+  .author { display: flex; gap: var(--space-2); align-items: center; }
+  .author__img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); flex: none; background: var(--cream); }
+  .author__name { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--cream); margin: 0 0 0.2rem; }
+  .author__bio { color: rgba(252,245,229,0.9); font-size: var(--text-sm); margin: 0; max-width: 52ch; }
+  .author__bio a { color: var(--cream); text-decoration: underline; }
+  .post__cta .subhead { color: var(--peach); }
+  .post__cta em { font-style: italic; }
+  .post__back { display: block; margin-top: var(--space-2); color: var(--cream); font-weight: 600; }
+
+  @media (max-width: 760px) {
+    .post__footgrid { grid-template-columns: 1fr; }
+  }
 </style>
