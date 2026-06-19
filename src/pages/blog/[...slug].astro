@@ -6,13 +6,19 @@ import BlogPost from '../../layouts/BlogPost.astro';
 // controlled by file naming → lets us preserve every legacy /blog/<slug>.
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }));
+  const listed = posts.filter((p) => !p.data.unlisted);
+  return posts.map((post) => {
+    // internal linking: other listed posts sharing a tag, newest first
+    const related = listed
+      .filter((p) => p.id !== post.id && p.data.tags.some((t) => post.data.tags.includes(t)))
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+      .slice(0, 3)
+      .map((p) => ({ id: p.id, title: p.data.title, heroImage: p.data.heroImage }));
+    return { params: { slug: post.id }, props: { post, related } };
+  });
 }
 
-const { post } = Astro.props;
+const { post, related } = Astro.props;
 const { Content } = await render(post);
 ---
 <BlogPost
@@ -22,6 +28,8 @@ const { Content } = await render(post);
   updatedDate={post.data.updatedDate}
   heroImage={post.data.heroImage}
   register={post.data.register}
+  faqs={post.data.faqs}
+  related={related}
 >
   <Content />
 </BlogPost>

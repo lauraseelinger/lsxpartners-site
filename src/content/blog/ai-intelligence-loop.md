@@ -5,6 +5,15 @@ pubDate: 2026-03-26
 register: punchy-personal
 tags: ["ai-visibility"]
 heroImage: "/images/blog/ai-intelligence-loop.jpg"
+faqs:
+  - question: "What makes it a loop and not a process?"
+    answer: "Most marketing processes are linear. 1) Research 2) Build strategy 3) Create content and publish and 4) Measure results. The loop structure is different because the last step feeds back into the first. AI visibility monitoring surfaces the gaps that exist for your brand — the questions going unanswered in your category, competitors being recommended instead of you, brand descriptions AI creates from internet-wide information that doesn't match what your marketing department is including in messaging."
+  - question: "What the loop looks like in practice?"
+    answer: "The Libbey audit I recently published is a clear example of what the loop surfaces when you run it on a brand that hasn't been running one. Audience intelligence research across nearly 1,000 conversations in the categories AI says Libbey wins — budget glassware, durable everyday glass, first apartment setup, wedding registry — returned zero organic mentions. Not low mention rates...zilch, nada, nothin'."
+  - question: "Who the AI Intelligence Loop is built for?"
+    answer: "The loop is relevant for any brand or agency that is investing in content and wants to know whether that investment is building the right signal — not just ranking on the right keywords, but being cited when buyers ask AI for recommendations in their category. Agencies that want to offer AI visibility as a real service offering should be using the loop as the framework for how that service gets structured and delivered."
+  - question: "Ready to run the loop on your brand?"
+    answer: "This post covers the AI Intelligence Loop at the concept level. The full methodology — including how each step gets executed, the tools used, how to structure reporting and what the output looks like for a real brand — is something I work through with clients directly."
 ---
 
 Audience intelligence research gives you insight on what your audience is actually saying — the gritty language, their frustrations, the 'help me decide!' questions they're asking in communities where they won't be retargeted by Meta ads. It's the most honest data available, and the scale is much larger than the focus group structure from 2019.

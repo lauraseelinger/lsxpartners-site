@@ -5,6 +5,15 @@ pubDate: 2026-06-08
 register: punchy-personal
 tags: ["ai-visibility"]
 heroImage: "/images/blog/how-to-audit-ai-visibility.jpg"
+faqs:
+  - question: "How to run a basic prompt audit?"
+    answer: "Open ChatGPT, Perplexity and Gemini. To run your prompt audit, enter the same set of queries across all three and document what comes back. You’re looking for:"
+  - question: "What are grounding searches and why do they matter?"
+    answer: "When you run a prompt audit manually, as I laid out above, you’re seeing the surface of AI search. What you can’t see without a dedicated tool are grounding searches. These are not search terms that any human would type in, so they haven’t been on the radar of your content strategy, but now they’re incredibly important because they directly determine whether AI cites you."
+  - question: "What AI extractability actually means?"
+    answer: "When AI reads your site, it looks for self-contained answer blocks it can pull and cite. Unfortunately, the human-centered narrative that takes three paragraphs to make a single point is hard for AI to use, as depressing as that sounds for copywriters. A 50-100 word passage that completely answers one specific question is exactly what it’s looking for."
+  - question: "How to think about monitoring going forward?"
+    answer: "The Spyglasses visibility report you run today becomes your AI visibility baseline. Then set up a cadence of running a new audit — when you’ve made significant changes like new content is published, the site is restructured or you’ve expanded your presence to new platforms."
 ---
 
 I’m going to walk you through exactly how I’d audit a brand’s AI visibility from scratch as an AI visibility expert. Not the theory — the actual process, the tools I’m using right now (June 2026) and what to do with what you find.

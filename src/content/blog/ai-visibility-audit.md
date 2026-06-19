@@ -5,6 +5,15 @@ pubDate: 2026-03-16
 register: measured-pillar
 tags: ["ai-visibility"]
 heroImage: "/images/blog/ai-visibility-audit.jpg"
+faqs:
+  - question: "What is an AI visibility audit?"
+    answer: "An AI visibility audit is a systematic process of testing how AI search platforms respond to queries about a brand, its category and its competitors. That means ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude and others — each of which has different citation behavior, different training data and different trust signals."
+  - question: "Why this is now an agency problem?"
+    answer: "AI search isn’t coming. It’s here. The average ChatGPT prompt is 23 words — not the 4-word search query Google trained everyone to optimize for. Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves."
+  - question: "What the audit actually covers?"
+    answer: "A thorough AI visibility audit has several layers, and each one requires different work:"
+  - question: "Can your team do this?"
+    answer: "Yes, and understanding the process is valuable regardless of who runs it. But agencies considering adding this to their service offering should go in with clear eyes about what it actually requires per client, on an ongoing basis."
 ---
 
 Your client’s SEO is solid, they rank on page one, and the monthly reports you send have all markers of SEO with green arrows pointing up. The work is delivering what traditional metrics say it should, but somewhere right now, one of the client’s best prospects is typing a question into ChatGPT or Perplexity and getting an answer that recommends three brands in the category — and your client isn’t one of them.

@@ -5,6 +5,9 @@ pubDate: 2026-04-25
 register: punchy-personal
 tags: ["ai-visibility"]
 heroImage: "/images/blog/ai-visibility-american-greetings.jpg"
+faqs:
+  - question: "What legacy brands can learn from American Greetings' analog moment?"
+    answer: "American Greetings doesn't have bad marketing — they have typical marketing. But their brand isn't in a typical situation with this societal shift."
 ---
 
 I don't work with [American Greetings](https://www.americangreetings.com/) and nobody asked for my opinion, but I loooove where we are right now with the pendulum swing of social content and analog connection (or [what Gary Vaynerchuk calls the barbell effect](https://www.youtube.com/watch?v=VMumHwVEfFs)), so this "marketing strategy disguised as a blog post" is literally what I like to do in my free time.

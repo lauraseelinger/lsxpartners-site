@@ -5,6 +5,15 @@ pubDate: 2026-03-21
 register: punchy-personal
 tags: ["ai-visibility"]
 heroImage: "/images/blog/what-your-ai-visibility-score-cant-tell-you.jpg"
+faqs:
+  - question: "What does an AI visibility score actually measure?"
+    answer: "Okay, bossman asked me to run a competitive AI visibility check for our Signature line of premium products. What I would have done is Google, \"how to do an AI visibility audit\" and see a guide from SEMrush — perfect! I already have an account for keyword research, so now that they have the AI visibility scores, it's easy-peasy."
+  - question: "How I run an AI visibility audit that goes beyond the score?"
+    answer: "The first step is finding out what the target audience is actually saying in the communities where purchase decisions get made — in their own words, in the behind-closed-door kind of conversations they have with their friends. It's like being a fly on the wall for your entire target persona. Pretty helpful, wouldn't you say?!"
+  - question: "What audience intelligence reveals that an AI visibility score misses?"
+    answer: "I pulled two years of community data across three areas where Libbey has made real investments: the tiki category, the Signature wine glass line and its registry positioning, and how AI describes the brand overall. Here's what I found in each one."
+  - question: "What does the tiki community actually talk about — and is your glassware brand part of that conversation?"
+    answer: "Libbey made a real and visible commitment to the tiki category. The Kahiko collection was designed by Daniele Dalla Pola, a tiki bartender with serious credibility — the kind of name that means something to people who know what a proper Zombie glass setup looks like. This wasn't a product line slapped with a tiki label. It was a genuine category investment with a credentialed collaborator behind it, and the Kahiko Zombie Glass Set is still a featured collection on their Amazon storefront today."
 ---
 
 Let's do an [AI visibility audit](/blog/ai-visibility-audit) together. To do this, I'm going to use a brand I used to work for,[Libbey Glass](http://libbey.com/)in Toledo, Ohio. I spent four years in digital marketing there and left more because of Covid's impact and uncertainty than any feeling of "Ugh, I need a new job." I loved the products and my coworkers, the history is endearing, and we had just completed a successful direct-to-consumer transformation.

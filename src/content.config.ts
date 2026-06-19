@@ -17,6 +17,8 @@ const blog = defineCollection({
     register: z.enum(['punchy-personal', 'measured-pillar']).default('punchy-personal'),
     // Tags drive the category/tag routes (e.g. ai-visibility).
     tags: z.array(z.string()).default([]),
+    // FAQ pairs — rendered as a visible Q&A block + FAQPage JSON-LD (AEO).
+    faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
     // Set true to keep a URL live but hide from nav/index (unlisted old posts).
     unlisted: z.boolean().default(false),
     draft: z.boolean().default(false),
