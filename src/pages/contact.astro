@@ -50,8 +50,6 @@ const methods = [
       </div>
 
       <div class="ccluster" data-reveal>
-        <div class="ccluster__pat ccluster__pat--back" aria-hidden="true"></div>
-        <div class="ccluster__pat ccluster__pat--front" aria-hidden="true"></div>
         <img class="ccluster__photo" src="/images/contact-laura.jpg" alt="Laura Seelinger" />
         <div class="ccluster__wash" aria-hidden="true"></div>
         <img class="cstk cstk--1" src="/brand/assets/sticker-locally-sourced.png" alt="" aria-hidden="true" />
@@ -105,30 +103,23 @@ const methods = [
   .split > div:first-child { max-width: 56ch; }
   .contact__lede { font-size: var(--text-lg); margin-bottom: var(--space-3); }
 
-  /* photo + stacked pattern + stickers cluster (landscape) */
-  .ccluster { position: relative; width: min(540px, 100%); aspect-ratio: 3 / 2; margin-inline: auto; }
-  .ccluster__pat { position: absolute; border-radius: 20px; box-shadow: var(--shadow-card); }
-  .ccluster__pat--back { inset: 0 0 16% 16%; transform: rotate(5deg); z-index: 0;
-    background: linear-gradient(rgba(163,187,195,0.55), rgba(163,187,195,0.55)), url('/brand/patterns/pattern-2.jpg') center / 200px repeat, var(--blue); }
-  .ccluster__pat--front { inset: 11% 14% 4% 2%; transform: rotate(-3deg); z-index: 1;
-    background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 200px repeat, var(--peach); }
+  /* photo card with a pattern overlay fading down from the top, + stickers
+     (the blog-card treatment — no stacked panels) */
+  .ccluster { position: relative; width: min(560px, 100%); aspect-ratio: 3 / 2; margin-inline: auto; }
   .ccluster__photo {
-    position: absolute; inset: 6% 9% 9% 6%; object-fit: cover; border-radius: 16px; z-index: 2;
-    -webkit-mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
-    mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    border-radius: 18px; box-shadow: var(--shadow-card); z-index: 1;
   }
-  /* brand pattern over the boring top of the photo, fading down into it
-     (like the blog card covers) */
   .ccluster__wash {
-    position: absolute; inset: 6% 9% 9% 6%; z-index: 2; border-radius: 16px; pointer-events: none;
-    background: linear-gradient(rgba(255,190,159,0.35), rgba(255,190,159,0.35)), url('/brand/patterns/pattern-5.jpg') center / 170px repeat;
-    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 18%, rgba(0,0,0,0.45) 40%, transparent 60%);
-    mask-image: linear-gradient(to bottom, #000 0, #000 18%, rgba(0,0,0,0.45) 40%, transparent 60%);
+    position: absolute; inset: 0; border-radius: 18px; z-index: 2; pointer-events: none; overflow: hidden;
+    background: linear-gradient(rgba(255,190,159,0.4), rgba(255,190,159,0.4)), url('/brand/patterns/pattern-5.jpg') center / 180px repeat;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 20%, rgba(0,0,0,0.5) 42%, transparent 62%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 20%, rgba(0,0,0,0.5) 42%, transparent 62%);
   }
   .cstk { position: absolute; z-index: 3; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); }
-  .cstk--1 { top: -10%; left: -6%; width: 104px; transform: rotate(-10deg); }
-  .cstk--2 { bottom: -10%; right: -5%; width: 112px; transform: rotate(8deg); }
-  .cstk--3 { top: -8%; right: -7%; width: 80px; transform: rotate(-5deg); }
+  .cstk--1 { top: -9%; left: -5%; width: 104px; transform: rotate(-10deg); }
+  .cstk--2 { bottom: -9%; right: -4%; width: 112px; transform: rotate(8deg); }
+  .cstk--3 { top: -8%; right: -6%; width: 80px; transform: rotate(-5deg); }
 
   .cmethods { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
   .cmethod {
