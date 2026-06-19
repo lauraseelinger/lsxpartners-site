@@ -19,6 +19,9 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     // FAQ pairs — rendered as a visible Q&A block + FAQPage JSON-LD (AEO).
     faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
+    // Which edge the brand-pattern overlay comes from on the card cover, so it
+    // never lands on a face. Default top.
+    coverFrom: z.enum(['top', 'bottom', 'left', 'right']).default('top'),
     // Set true to keep a URL live but hide from nav/index (unlisted old posts).
     unlisted: z.boolean().default(false),
     draft: z.boolean().default(false),

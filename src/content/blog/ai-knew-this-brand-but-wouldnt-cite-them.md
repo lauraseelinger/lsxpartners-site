@@ -4,6 +4,8 @@ description: "Being the AI answer and being the cited source are two different t
 pubDate: 2026-06-08
 register: punchy-personal
 tags: ["ai-visibility"]
+coverFrom: top
+heroImage: "/images/blog/ai-knew-this-brand-but-wouldnt-cite-them.jpg"
 ---
 
 I'm the AI marketing nerd who looks forward to the monthly reporting to see what's happened across my clients. 🤓

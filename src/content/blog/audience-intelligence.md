@@ -4,6 +4,7 @@ description: "LSX Partners audience intelligence process analyzes thousands of r
 pubDate: 2026-03-17
 register: measured-pillar
 tags: ["ai-visibility"]
+coverFrom: bottom
 heroImage: "/images/blog/audience-intelligence.jpg"
 faqs:
   - question: "What audience intelligence is?"

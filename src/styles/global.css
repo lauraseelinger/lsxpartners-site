@@ -72,6 +72,47 @@ strong { font-weight: 600; }
 .prose > * + * { margin-top: var(--space-2); }
 .prose h2, .prose h3 { margin-top: var(--space-3); }
 
+/* ---- Blog post body — designed, not a plain journal ---- */
+.post__body { font-size: 1.12rem; line-height: 1.75; color: var(--brown); }
+.post__body > * + * { margin-top: var(--space-3); }
+/* lead paragraph */
+.post__body > p:first-of-type { font-size: 1.28rem; line-height: 1.6; color: color-mix(in srgb, var(--brown) 88%, #000); }
+.post__body h2 {
+  font-family: var(--font-heading); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.1rem);
+  color: var(--brown); margin-top: var(--space-5); padding-top: var(--space-2);
+  border-top: 2px solid color-mix(in srgb, var(--rust) 30%, transparent); line-height: 1.2;
+}
+.post__body h2 strong, .post__body h3 strong { font-weight: inherit; }
+.post__body h3 { font-family: var(--font-heading); font-size: 1.35rem; color: var(--rust); margin-top: var(--space-4); }
+.post__body a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.post__body a:hover { text-decoration-thickness: 2px; }
+.post__body strong { color: color-mix(in srgb, var(--brown) 92%, #000); }
+.post__body ul, .post__body ol { padding-left: 1.4em; }
+.post__body li { margin-top: 0.4rem; }
+.post__body li::marker { color: var(--rust); font-weight: 700; }
+/* pull-quote / callout from blockquotes */
+.post__body blockquote {
+  margin: var(--space-4) 0; padding: var(--space-2) var(--space-3);
+  border-left: 4px solid var(--rust); background: var(--cream-deep); border-radius: 0 12px 12px 0;
+  font-family: var(--font-sub); font-style: italic; font-weight: 800;
+  font-size: 1.3rem; line-height: 1.45; color: var(--brown);
+}
+.post__body blockquote p { margin: 0; }
+/* tables */
+.post__body table { width: 100%; border-collapse: collapse; font-size: 0.98rem; margin: var(--space-3) 0; }
+.post__body th, .post__body td { padding: 0.6rem 0.8rem; border: 1px solid var(--color-border); text-align: left; vertical-align: top; }
+.post__body thead th { background: var(--cream-deep); font-family: var(--font-sub); font-style: italic; color: var(--brown); }
+.post__body tbody tr:nth-child(even) { background: color-mix(in srgb, var(--cream-deep) 50%, transparent); }
+/* in-body images */
+.post__body img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-card); margin-block: var(--space-3); }
+/* stitched divider for <hr> */
+.post__body hr {
+  border: 0; height: 14px; margin: var(--space-5) 0;
+  background: repeating-linear-gradient(90deg, var(--rust) 0 9px, transparent 9px 18px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
 /* Shared layout utilities — used across pages incl. the engagement sub-pages,
    which have no scoped styles of their own, so these MUST be global. */
 .band { padding-block: var(--space-6); }

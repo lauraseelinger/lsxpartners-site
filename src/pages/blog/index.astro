@@ -17,7 +17,7 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
 const cover = (p: typeof posts[number], i: number) => {
   const pat = `/brand/patterns/${covers[i % covers.length]}.jpg`;
   return p.data.heroImage
-    ? { cls: 'has-img', style: `background-image:url(${p.data.heroImage}); --pat:url('${pat}')` }
+    ? { cls: `has-img from-${p.data.coverFrom}`, style: `background-image:url(${p.data.heroImage}); --pat:url('${pat}')` }
     : { cls: '', style: `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('${pat}')` };
 };
 ---
@@ -104,9 +104,12 @@ const cover = (p: typeof posts[number], i: number) => {
   .has-img::before {
     content: ''; position: absolute; inset: 0; z-index: 1;
     background-image: var(--pat); background-size: 190px; background-repeat: repeat;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
+    --m: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
+    -webkit-mask-image: var(--m); mask-image: var(--m);
   }
+  .from-bottom::before { --m: linear-gradient(to top, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
+  .from-left::before { --m: linear-gradient(to right, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
+  .from-right::before { --m: linear-gradient(to left, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%); }
   .feat__body { padding: var(--space-4); align-self: center; }
   .feat__body h2 { margin: 0 0 var(--space-1); }
   .feat__body p { max-width: 52ch; }
