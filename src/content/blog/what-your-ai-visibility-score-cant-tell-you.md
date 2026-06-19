@@ -135,7 +135,3 @@ In Libbey's case, the data points to five questions their content should be answ
 ## **This is what I do on a random Friday afternoon…**
 
 The process I outlined above isn’t even a full engagement — that's a Friday afternoon for me. Imagine what my full AI Intelligence Loop surfaces when it's a paying client with a real content strategy attached to it. If you're a brand or an agency working with brands, you'd want to talk to me yesterday. ;)
-
-## **About the Author**
-
-Laura Seelinger is the founder of LSX Partners, a marketing strategy firm that helps agencies and businesses build strategy on real audience data and show up where buyers are actually searching, especially AI. She works with agencies as an embedded strategic partner and with businesses ready to stop guessing and start building on evidence. To implement this model into your marketing, [let’s chat](/contact).

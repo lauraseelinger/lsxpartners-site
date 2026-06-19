@@ -107,7 +107,3 @@ That’s not a full audit, but it’s a fast way to understand whether this is u
 If what you find warrants a deeper look, or if you want to add AI visibility as a service without building the internal infrastructure from scratch, that’s exactly how LSX Partners works with agencies — embedded alongside your team, running the audit and strategy so you can deliver it to clients without adding headcount.
 
 **Ready to find out where your clients stand?**[Get in touch at lsxpartners.com/contact.](/contact)
-
-## **About the author**
-
-[Laura Seelinger](https://www.linkedin.com/in/lseelinger/) is the founder of LSX Partners, a marketing strategy firm based in Columbus, Ohio. She works as an embedded AI visibility strategist for agencies, bringing 15 years of experience across agency and corporate marketing to client engagements in healthcare, manufacturing, building products, hospitality and CPG. Her cross-industry work gives her a view of how AI citation patterns are evolving before they’re widely documented.

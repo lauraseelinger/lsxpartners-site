@@ -66,7 +66,3 @@ I work with two types of clients on these engagements, and both come to me becau
 **Businesses**that already know something isn't clicking — they've refreshed the website, posted consistently and invested in content, and the foundation of what to say and how to say it was just never built on what the customer actually needs to hear.
 
 **If you're ready to stop building strategy on assumptions and start building it on real audience data,**[**let's talk**](/contact)**.**
-
-## **About the author**
-
-[Laura Seelinger](https://www.linkedin.com/in/lseelinger/) is the founder of LSX Partners, a marketing strategy firm that helps agencies and businesses build strategy on real audience data and show up where buyers are actually searching — including AI. After 15 years in marketing, she left corporate in 2025 to autonomously make creative marketing decisions. She works with agencies as an embedded strategic partner and with businesses ready to stop guessing and start building on evidence.

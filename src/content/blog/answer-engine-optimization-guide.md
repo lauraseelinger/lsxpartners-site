@@ -191,7 +191,3 @@ The brands that build AEO into their content process now are the ones that will 
 This doesn’t require tearing down what you’ve already built. It requires adding structure, building depth and showing up consistently in the places where AI systems look for trustworthy answers.
 
 **Ready to run the audit yourself? Here's the step-by-step process I use with clients:**[**How to audit your AI visibility: a step-by-step guide**](/blog/answer-engine-optimization-guide)
-
-## [About the author](/blog/how-to-audit-ai-visibility)
-
-[Laura Seelinger is the founder of](/blog/how-to-audit-ai-visibility) LSX Partners, a marketing strategy firm based in Columbus, Ohio. With 15 years of marketing leadership experience across agency and corporate marketing in manufacturing, healthcare and CPG, she helps brands and agencies build the marketing systems and AI visibility strategies that drive measurable results. She works with companies navigating the shift from traditional SEO to answer engine optimization and AI-first visibility.

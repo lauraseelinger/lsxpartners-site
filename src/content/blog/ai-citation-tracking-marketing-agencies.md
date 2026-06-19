@@ -51,35 +51,3 @@ What makes ai citation tracking particularly important for agency owners right n
 The window for being ahead of this is not unlimited. Once AI visibility becomes a standard expectation in agency reporting, it stops being a differentiator and starts being table stakes. Right now, it’s still a differentiator, and the gap between agencies that understand it and agencies that don’t is wide enough to matter when a client is deciding whether to stay or go.
 
 There’s also a version of this that’s a direct competitive threat. If your client’s competitor is consistently appearing in AI-generated answers in their category and your client isn’t, and you can’t explain why or outline a concrete plan to change it, that’s not a future problem — that’s a current one.
-
-## Frequently asked questions about AI citations
-
-### What are AI citations in marketing?
-
-AI citations are the mentions, references and recommendations that AI tools like ChatGPT, Perplexity and Google AI include when they generate answers to user questions. When someone asks an AI for recommendations in your client’s category — whether that’s a product comparison, a treatment option or a vendor evaluation — the brands and solutions the AI names are being cited. It’s the AI-era equivalent of showing up in search results, except the selection process is driven by different signals than traditional SEO, and the stakes of being excluded from an answer are higher because there’s no page two for users to scroll to.
-
-### Do AI citations affect SEO performance?
-
-They’re related but distinct. Strong traditional SEO, particularly top-20 organic rankings, matters for Google’s AI products because those systems use existing search authority as a filter before surfacing content in AI-generated answers. But platforms like ChatGPT and Perplexity use a different set of signals, including third-party mentions across trusted sources, the structure and clarity of your content and how consistently your brand information appears across the web. Optimizing for traditional search does not automatically handle AI visibility, and vice versa — both matter, and the strategy for each has meaningful overlap but isn’t identical.
-
-### How do marketing agencies track AI citations for clients?
-
-The starting point is a prompt audit, which means systematically testing how AI systems respond to the questions your client’s actual customers or patients would ask, then documenting whether and how the client is mentioned, how they’re described and how that compares to competitors. From there you can calculate an AI Share of Voice figure — what percentage of relevant AI-generated answers include your client — and track it over time. There are tools emerging that automate parts of this process, but the methodology and the prompt set you design matter more than which tool you use.
-
-### Why do some brands show up in AI answers and others don’t?
-
-The factors vary by platform, but the common threads are third-party mentions across sources that AI systems trust, content that’s structured to directly answer the kinds of questions users are actually asking AI, consistent and accurate brand information across the web and schema markup that helps AI understand what a brand does and who it serves. For clients with dual audiences, like a medical device that needs to be adopted by clinicians and requested by patients, the content strategy for each audience needs to be distinct enough that AI can surface the right version depending on who’s asking.
-
-### Is AI citation optimization something marketing agencies should be offering?
-
-If your clients’ customers, patients or purchasing decision-makers are using AI to research options — and across medical technology, automotive, B2B manufacturing and most other industries, they are — then yes. It addresses a real gap in how agencies currently measure and report on visibility, and the agencies adding it to their service mix now are ahead of a client conversation that’s coming regardless. For a full breakdown of how to add it, deliver it and sell it, [AI visibility as an agency service](/blog/ai-visibility-agency-service) covers the whole process.
-
-## What to do with this information
-
-If you’ve never opened ChatGPT and searched your client’s product category or treatment area just to see what comes back, do it today. It doesn’t have to be a formal audit, just do it as a gut check. See who gets named and how they’re described. See whether your client is in that answer at all, then ask yourself whether you’d know what to do if they weren’t.
-
-That’s the starting point. For a deeper look at how AI visibility works — from how different platforms decide what to cite to what agencies and their clients need to have in place to show up consistently — the [complete AI visibility guide for 2026](/blog/answer-engine-optimization-guide) covers the full picture. If you're ready to take the next step and build this into your agency's services, [here's how to do it practically](/blog/ai-visibility-agency-service). And if you want to talk through what this means for your specific client mix, reach out, it’s a conversation worth having before your clients bring it to you.
-
-## **About the author**
-
-[Laura Seelinger](https://www.linkedin.com/in/lseelinger/) is the founder of LSX Partners, a marketing strategy firm based in Columbus, Ohio. With 15 years of marketing leadership experience across agency and corporate roles in manufacturing, healthcare and CPG, she helps marketing agencies build the strategy and measurement frameworks to stay ahead of the shift to AI-first search. She works with agencies navigating what AI visibility means for their clients and how to turn it into a service their clients are already starting to ask for.
