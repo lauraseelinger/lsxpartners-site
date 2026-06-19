@@ -102,7 +102,7 @@ const cover = (p: typeof posts[number], i: number) => {
   .feat__cover { position: relative; min-height: 280px; background-size: cover; background-position: center; overflow: hidden; }
   /* brand pattern blended over the top of the topic photo */
   .has-img::before {
-    content: ''; position: absolute; inset: 0; z-index: 1;
+    content: ''; position: absolute; inset: 0; z-index: 1; opacity: 0.55;
     background-image: var(--pat); background-size: 190px; background-repeat: repeat;
     --m: linear-gradient(to bottom, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%);
     -webkit-mask-image: var(--m); mask-image: var(--m);

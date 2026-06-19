@@ -2,7 +2,11 @@
 // The AI Intelligence Loop — interactive. The loop visual sits on the left;
 // hovering (or tapping/focusing) a stage reveals its explanation on the right.
 // Desktop: 4 nodes around a ring. Mobile: ring stacks above the panel; tap a node.
-const stages = [
+// `stages` can be overridden per-use (e.g. the blog post passes its own copy so
+// it isn't duplicate content of the homepage).
+interface Stage { t: string; b: string }
+const { stages: stagesProp } = Astro.props as { stages?: Stage[] };
+const stages = stagesProp ?? [
   {
     t: 'Audience intelligence',
     b: 'It begins with listening in the right places — where your buyers talk when no one’s selling to them. The craft is knowing which signals actually matter, separating them from a lot of noise, and distilling what’s left into something the rest of the strategy can stand on. Skip it, and everything downstream is just a well-produced guess.',
