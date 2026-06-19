@@ -1,0 +1,35 @@
+---
+// A prominent, numbered step index for guide posts. Each card jumps to its
+// section (anchor = the section heading's slug). Used in MDX blog posts.
+interface Step { n: number; title: string; blurb: string; href: string }
+const { steps } = Astro.props as { steps: Step[] };
+---
+<nav class="stepnav" aria-label="What you'll learn in this guide">
+  {steps.map((s) => (
+    <a class="stepnav__card" href={s.href}>
+      <span class="stepnav__n">{s.n}</span>
+      <span class="stepnav__body">
+        <span class="stepnav__title">{s.title}</span>
+        <span class="stepnav__blurb">{s.blurb}</span>
+      </span>
+    </a>
+  ))}
+</nav>
+
+<style>
+  .stepnav { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); margin-block: var(--space-3); }
+  .stepnav__card {
+    display: flex; gap: var(--space-2); align-items: flex-start; text-decoration: none; color: inherit;
+    background: var(--cream); border: 2px solid var(--color-border); border-radius: 14px; padding: var(--space-2);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .stepnav__card:hover { border-color: var(--rust); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+  .stepnav__n {
+    flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%;
+    background: var(--rust); color: var(--cream); font-family: var(--font-heading);
+    display: grid; place-items: center; font-size: 1.15rem; line-height: 1;
+  }
+  .stepnav__title { display: block; font-family: var(--font-heading); color: var(--brown); font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.2rem; }
+  .stepnav__blurb { display: block; font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.4; }
+  @media (max-width: 600px) { .stepnav { grid-template-columns: 1fr; } }
+</style>
