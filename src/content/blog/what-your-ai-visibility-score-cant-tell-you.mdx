@@ -16,6 +16,9 @@ faqs:
     answer: "Libbey made a real and visible commitment to the tiki category. The Kahiko collection was designed by Daniele Dalla Pola, a tiki bartender with serious credibility — the kind of name that means something to people who know what a proper Zombie glass setup looks like. This wasn't a product line slapped with a tiki label. It was a genuine category investment with a credentialed collaborator behind it, and the Kahiko Zombie Glass Set is still a featured collection on their Amazon storefront today."
 ---
 
+import PromptShowcase from '../../components/PromptShowcase.astro';
+
+
 Let's do an [AI visibility audit](/blog/ai-visibility-audit) together. To do this, I'm going to use a brand I used to work for,[Libbey Glass](http://libbey.com/)in Toledo, Ohio. I spent four years in digital marketing there and left more because of Covid's impact and uncertainty than any feeling of "Ugh, I need a new job." I loved the products and my coworkers, the history is endearing, and we had just completed a successful direct-to-consumer transformation.
 
 But let's act like I never left for a second. So now it's 2026 and my boss asks me to run a report for them.
@@ -78,11 +81,11 @@ Libbey has an active Zola partnership. Couples building registries can find and 
 
 **So I ran three ChatGPT prompts to see what a bride actually gets when she asks AI for help:**
 
-**Prompt one:** "What are the best wine glasses to register for my wedding? I want something that looks fancy but is durable and dishwasher safe." Libbey: not mentioned once. Schott Zwiesel dominates every tier of the response — overall best, upgrade pick, honest recommendation. ChatGPT's own summary: "They basically dominate this exact niche."
-
-**Prompt two:** "What are the best wine glasses under $60 for a set of four that are dishwasher safe and don't look cheap?" Libbey Signature Kentfield appears — priced at $52.64, more expensive than the Spiegelau at $36.99 shown in the same response — and still gets labeled "best value." 🤔 Spiegelau costs less and wins "best overall." ChatGPT's quick summary: best overall Spiegelau Style, best value Libbey Signature Kentfield.
-
-**Prompt three:** "Compare Libbey Signature wine glasses to Riedel and Spiegelau for a wedding registry." This one is the most interesting. ChatGPT gave Libbey Signature a five-star registry practicality rating — highest of the three brands, with Riedel at three stars. The recommendation for a practical couple: Libbey Signature. But when it showed product images to illustrate the pick, it pulled the $24.99 Classic line from Walmart instead of the Signature Kentfield that earned the rating. The analysis was right. But the brand signal is so cemented as budget-conscious that it doesn't surface the premium product even to support its own conclusion.
+<PromptShowcase prompts={[
+    {"label": "Prompt one", "prompt": "What are the best wine glasses to register for my wedding? I want something that looks fancy but is durable and dishwasher safe.", "finding": "Libbey: not mentioned once. Schott Zwiesel dominates every tier of the response — overall best, upgrade pick, honest recommendation. ChatGPT's own summary: \"They basically dominate this exact niche.\""},
+    {"label": "Prompt two", "prompt": "What are the best wine glasses under $60 for a set of four that are dishwasher safe and don't look cheap?", "finding": "Libbey Signature Kentfield appears — priced at $52.64, more expensive than the Spiegelau at $36.99 shown in the same response — and still gets labeled \"best value.\" 🤔 Spiegelau costs less and wins \"best overall.\" ChatGPT's quick summary: best overall Spiegelau Style, best value Libbey Signature Kentfield."},
+    {"label": "Prompt three", "prompt": "Compare Libbey Signature wine glasses to Riedel and Spiegelau for a wedding registry.", "finding": "This one is the most interesting. ChatGPT gave Libbey Signature a five-star registry practicality rating — highest of the three brands, with Riedel at three stars. The recommendation for a practical couple: Libbey Signature. But when it showed product images to illustrate the pick, it pulled the $24.99 Classic line from Walmart instead of the Signature Kentfield that earned the rating. The analysis was right. But the brand signal is so cemented as budget-conscious that it doesn't surface the premium product even to support its own conclusion."}
+]} />
 
 That's not a problem — it’s an opening. Schott Zwiesel owns the aspirational registry query right now. Libbey has the stronger practical case — five stars for registry practicality, commercially proven durability, made in the USA, active Zola partnership — and zero content that makes AI connect those specs to the registry conversation. The brand that writes that content specifically and credibly enough for AI to cite owns that query. That content doesn't exist yet.
 

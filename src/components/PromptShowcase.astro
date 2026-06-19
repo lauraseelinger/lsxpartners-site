@@ -1,0 +1,32 @@
+---
+// Showcases real AI prompts in the styled prompt-bar treatment (like the audit
+// service page), with what AI returned underneath. Used in MDX blog posts.
+interface Item { label?: string; prompt: string; finding: string }
+const { prompts } = Astro.props as { prompts: Item[] };
+---
+<div class="ps">
+  {prompts.map((p) => (
+    <div class="ps__item">
+      {p.label && <span class="ps__label">{p.label}</span>}
+      <div class="ps__bar">
+        <p class="ps__q">{p.prompt}</p>
+        <span class="ps__send" aria-hidden="true">➤</span>
+      </div>
+      <p class="ps__finding"><span class="ps__what">What AI returned</span> {p.finding}</p>
+    </div>
+  ))}
+</div>
+
+<style>
+  .ps { display: grid; gap: var(--space-3); margin-block: var(--space-4); }
+  .ps__label { display: inline-block; font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--rust); font-size: var(--text-sm); margin-bottom: 0.4rem; }
+  .ps__bar {
+    display: flex; align-items: flex-start; gap: var(--space-2);
+    background: var(--cream); border: 2px solid var(--brown); border-radius: 20px;
+    padding: var(--space-2) var(--space-3); box-shadow: var(--shadow-card);
+  }
+  .ps__q { margin: 0; flex: 1; color: var(--brown); font-size: var(--text-lg); line-height: 1.5; }
+  .ps__send { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--rust); color: var(--cream); font-size: 0.9rem; }
+  .ps__finding { margin: 0.7rem 0 0; font-size: 0.98rem; line-height: 1.6; color: var(--color-text-muted); }
+  .ps__what { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); margin-right: 0.4rem; }
+</style>
