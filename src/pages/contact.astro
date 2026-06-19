@@ -117,13 +117,13 @@ const methods = [
     -webkit-mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
     mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
   }
-  /* brand pattern washed across the whole photo (subtle, feathered to match) */
+  /* brand pattern over the boring top of the photo, fading down into it
+     (like the blog card covers) */
   .ccluster__wash {
     position: absolute; inset: 6% 9% 9% 6%; z-index: 2; border-radius: 16px; pointer-events: none;
-    background: url('/brand/patterns/pattern-5.jpg') center / 170px repeat;
-    mix-blend-mode: multiply; opacity: 0.32;
-    -webkit-mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
-    mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
+    background: linear-gradient(rgba(255,190,159,0.35), rgba(255,190,159,0.35)), url('/brand/patterns/pattern-5.jpg') center / 170px repeat;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 18%, rgba(0,0,0,0.45) 40%, transparent 60%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 18%, rgba(0,0,0,0.45) 40%, transparent 60%);
   }
   .cstk { position: absolute; z-index: 3; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); }
   .cstk--1 { top: -10%; left: -6%; width: 104px; transform: rotate(-10deg); }
