@@ -105,6 +105,12 @@ strong { font-weight: 600; }
 .post__body tbody tr:nth-child(even) { background: color-mix(in srgb, var(--cream-deep) 50%, transparent); }
 /* in-body images */
 .post__body img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-card); margin-block: var(--space-3); }
+/* embedded interactive diagrams break out of the reading measure for room */
+.post-loop {
+  color: var(--brown); margin-block: var(--space-5);
+  position: relative; left: 50%; transform: translateX(-50%); width: min(880px, 92vw);
+}
+@media (max-width: 760px) { .post-loop { left: 0; transform: none; width: 100%; } }
 /* stitched divider for <hr> */
 .post__body hr {
   border: 0; height: 14px; margin: var(--space-5) 0;
