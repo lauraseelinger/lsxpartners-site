@@ -104,22 +104,22 @@ const methods = [
   .split > div:first-child { max-width: 56ch; }
   .contact__lede { font-size: var(--text-lg); margin-bottom: var(--space-3); }
 
-  /* photo + stacked pattern + stickers cluster */
-  .ccluster { position: relative; width: min(380px, 100%); aspect-ratio: 4 / 5; margin-inline: auto; }
+  /* photo + stacked pattern + stickers cluster (landscape) */
+  .ccluster { position: relative; width: min(540px, 100%); aspect-ratio: 3 / 2; margin-inline: auto; }
   .ccluster__pat { position: absolute; border-radius: 20px; box-shadow: var(--shadow-card); }
-  .ccluster__pat--back { inset: 0 0 12% 14%; transform: rotate(6deg); z-index: 0;
+  .ccluster__pat--back { inset: 0 0 16% 16%; transform: rotate(5deg); z-index: 0;
     background: linear-gradient(rgba(163,187,195,0.55), rgba(163,187,195,0.55)), url('/brand/patterns/pattern-2.jpg') center / 200px repeat, var(--blue); }
-  .ccluster__pat--front { inset: 8% 12% 2% 2%; transform: rotate(-4deg); z-index: 1;
+  .ccluster__pat--front { inset: 11% 14% 4% 2%; transform: rotate(-3deg); z-index: 1;
     background: linear-gradient(rgba(255,190,159,0.42), rgba(255,190,159,0.42)), url('/brand/patterns/pattern-5.jpg') center / 200px repeat, var(--peach); }
   .ccluster__photo {
-    position: absolute; inset: 4% 10% 0 6%; width: auto; height: 96%; object-fit: cover; border-radius: 18px; z-index: 2;
-    -webkit-mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
-    mask-image: radial-gradient(125% 115% at 50% 42%, #000 74%, transparent 100%);
+    position: absolute; inset: 6% 9% 9% 6%; object-fit: cover; border-radius: 16px; z-index: 2;
+    -webkit-mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
+    mask-image: radial-gradient(130% 130% at 50% 45%, #000 76%, transparent 100%);
   }
   .cstk { position: absolute; z-index: 3; height: auto; filter: drop-shadow(0 6px 12px rgba(58,42,30,0.25)); }
-  .cstk--1 { top: -7%; left: -8%; width: 106px; transform: rotate(-10deg); }
-  .cstk--2 { bottom: -6%; right: -8%; width: 114px; transform: rotate(8deg); }
-  .cstk--3 { top: 8%; right: -10%; width: 82px; transform: rotate(-5deg); }
+  .cstk--1 { top: -10%; left: -6%; width: 104px; transform: rotate(-10deg); }
+  .cstk--2 { bottom: -10%; right: -5%; width: 112px; transform: rotate(8deg); }
+  .cstk--3 { top: -8%; right: -7%; width: 80px; transform: rotate(-5deg); }
 
   .cmethods { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
   .cmethod {
