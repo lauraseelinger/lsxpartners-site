@@ -1,28 +1,118 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FramedPhoto from '../components/FramedPhoto.astro';
+import StitchDivider from '../components/StitchDivider.astro';
 import { PERSON, CTA } from '../consts';
 
-// CONTACT. Voice: Full LinkedIn Laura. Primary = Calendly; also email + LinkedIn.
+// CONTACT — image-forward, color-blocked. Primary = Calendly; also email,
+// LinkedIn, and the Cited newsletter. Voice: Full LinkedIn Laura.
+const methods = [
+  {
+    key: 'call', label: 'Book a call', value: '20 minutes · Zoom · no pitch deck',
+    href: CTA.calendly,
+    icon: '<rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>',
+  },
+  {
+    key: 'email', label: 'Email me', value: PERSON.email,
+    href: `mailto:${PERSON.email}`,
+    icon: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/>',
+  },
+  {
+    key: 'linkedin', label: 'Connect on LinkedIn', value: '@lseelinger',
+    href: PERSON.sameAs[0],
+    icon: '<rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="10" x2="8" y2="16"/><circle cx="8" cy="7" r="1"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/><line x1="12" y1="10" x2="12" y2="16"/>',
+  },
+  {
+    key: 'cited', label: 'Subscribe to Cited', value: 'the AI-visibility newsletter',
+    href: CTA.newsletter,
+    icon: '<path d="M4 19V5a1 1 0 0 1 1-1h11l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><line x1="8" y1="9" x2="14" y2="9"/><line x1="8" y1="13" x2="16" y2="13"/>',
+  },
+];
 ---
-<PageLayout
+<BaseLayout
   title="Contact"
-  description="Work with LSX Partners on AI visibility and strategy. Book a call with Laura Seelinger."
+  description="Work with LSX Partners on AI visibility and strategy. Book a call with Laura Seelinger, or reach out by email or LinkedIn."
 >
-  <p class="subhead">let's talk</p>
-  <p class="prose">
-    Want to know what AI is actually saying about your brand — and how to become
-    the source it cites? The fastest way is to grab 20 minutes on my calendar. No
-    pitch deck, no fluff.
-  </p>
+  <!-- HEADER -->
+  <section class="band tex-cream">
+    <div class="container split">
+      <div data-reveal="left">
+        <p class="subhead">let's talk</p>
+        <h1>Let's find out what AI says about your brand</h1>
+        <p class="contact__lede">
+          Want to know what AI is actually telling people about your brand — and
+          how to become the source it cites? The fastest way is to grab 20 minutes
+          on my calendar. No pitch deck, no fluff. Whether you're a brand or an
+          agency, we'll figure out where you stand and where I'd start.
+        </p>
+        <a class="button" href={CTA.calendly}>Book a call</a>
+      </div>
+      <FramedPhoto src="/images/laura-phone.jpg" alt="Laura Seelinger" shape="feather" ratio="3 / 4" reveal delay="1" />
+    </div>
+  </section>
 
-  <p>
-    <a class="button" href={CTA.calendly}>Book a call</a>
-    <a class="button button--ghost" href={CTA.newsletter} style="margin-left: var(--space-1)">Subscribe to Cited</a>
-  </p>
+  <!-- WAYS TO REACH -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band section--cream">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">pick your lane</p>
+        <h2>Four ways to reach me</h2>
+      </div>
+      <div class="cmethods">
+        {methods.map((m, i) => (
+          <a class="cmethod" href={m.href} data-reveal data-reveal-delay={(i % 4) + 1}>
+            <span class="cmethod__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={m.icon}></svg>
+            </span>
+            <span class="cmethod__body">
+              <span class="cmethod__label">{m.label}</span>
+              <span class="cmethod__value">{m.value}</span>
+            </span>
+            <span class="cmethod__go" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  <h2>Other ways to reach me</h2>
-  <ul class="prose">
-    <li>Email: <a href={`mailto:${PERSON.email}`}>{PERSON.email}</a></li>
-    <li>LinkedIn: <a href={PERSON.sameAs[0]}>{PERSON.name}</a></li>
-  </ul>
-</PageLayout>
+  <!-- CTA -->
+  <StitchDivider bg="rust" stitch="yellow" />
+  <section class="band section--rust">
+    <div class="container measure measure--center" data-reveal="scale">
+      <h2>Curious what your AI visibility looks like right now?</h2>
+      <p>That's the best first conversation we can have. Let's find out together.</p>
+      <a class="button button--ghost" href={CTA.calendly}>Book a call</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .band { padding-block: var(--space-6); }
+  .measure { max-width: 44rem; }
+  .measure--center { margin-inline: auto; text-align: center; }
+  .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-5); align-items: center; }
+  .split > div { max-width: 56ch; }
+  .split :global(.framed) { max-width: 320px; justify-self: center; }
+  .contact__lede { font-size: var(--text-lg); margin-bottom: var(--space-3); }
+
+  .cmethods { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .cmethod {
+    display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: inherit;
+    background: var(--cream); border: 2px solid transparent; border-radius: 16px; padding: var(--space-3);
+    box-shadow: var(--shadow-card); transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .cmethod:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .cmethod__icon { flex: none; display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--rust); color: var(--cream); }
+  .cmethod__icon svg { width: 1.5rem; height: 1.5rem; }
+  .cmethod__body { display: flex; flex-direction: column; flex: 1; }
+  .cmethod__label { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--brown); }
+  .cmethod__value { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .cmethod__go { color: var(--rust); font-weight: 700; flex: none; }
+
+  @media (max-width: 760px) {
+    .split { grid-template-columns: 1fr; }
+    .split :global(.framed) { order: -1; }
+    .cmethods { grid-template-columns: 1fr; }
+  }
+</style>
