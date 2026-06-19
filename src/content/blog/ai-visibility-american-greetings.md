@@ -4,6 +4,7 @@ description: "What I'd do if I ran marketing at American Greetings: AI visibilit
 pubDate: 2026-04-25
 register: punchy-personal
 tags: ["ai-visibility"]
+heroImage: "/images/blog/ai-visibility-american-greetings.jpg"
 ---
 
 I don't work with [American Greetings](https://www.americangreetings.com/) and nobody asked for my opinion, but I loooove where we are right now with the pendulum swing of social content and analog connection (or [what Gary Vaynerchuk calls the barbell effect](https://www.youtube.com/watch?v=VMumHwVEfFs)), so this "marketing strategy disguised as a blog post" is literally what I like to do in my free time.

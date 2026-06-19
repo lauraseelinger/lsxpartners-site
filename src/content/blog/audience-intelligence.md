@@ -4,6 +4,7 @@ description: "LSX Partners audience intelligence process analyzes thousands of r
 pubDate: 2026-03-17
 register: measured-pillar
 tags: ["ai-visibility"]
+heroImage: "/images/blog/audience-intelligence.jpg"
 ---
 
 There was a time when marketing worked by telling customers what they wanted before they knew it themselves — Don Draper on Mad Men made it look glamorous, and it worked because audiences couldn't see it coming.

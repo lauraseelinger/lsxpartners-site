@@ -4,6 +4,7 @@ description: "Your agency tracks rankings. But if you're not tracking AI citatio
 pubDate: 2026-03-08
 register: measured-pillar
 tags: ["ai-visibility"]
+heroImage: "/images/blog/ai-citation-tracking-marketing-agencies.jpg"
 ---
 
 The standard agency reporting process is built around the things you can measure: organic traffic, keyword rankings, click-through rates. Clients see those numbers, they nod, and the retainer renews. That rhythm works until what clients’ customers are actually doing stops matching the metrics the team is tracking.

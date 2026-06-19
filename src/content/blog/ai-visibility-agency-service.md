@@ -4,6 +4,7 @@ description: "Learn how marketing agencies can add AI visibility as a service �
 pubDate: 2026-03-11
 register: measured-pillar
 tags: ["ai-visibility"]
+heroImage: "/images/blog/ai-visibility-agency-service.jpg"
 ---
 
 Agencies are on borrowed time when it comes to leaving AI visibility out of their client strategies. Any day now, they will start to receive emails from clients — even the long-time reliable ones — asking "when I ask ChatGPT [insert question related to the product or service they sell], they mention our competitor but not us. Why?" Or they'll have to explain why keyword rankings are holding steady but site traffic keeps declining with no obvious cause.

@@ -4,6 +4,7 @@ description: "Learn what answer engine optimization is, how AI decides what to c
 pubDate: 2026-03-02
 register: measured-pillar
 tags: ["ai-visibility"]
+heroImage: "/images/blog/answer-engine-optimization-guide.jpg"
 ---
 
 The average Google search is 4.2 words. The average ChatGPT prompt is 23 words.

@@ -12,6 +12,14 @@ const [featured, ...rest] = posts;
 const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').replace(/-/g, ' ');
+// Card cover: topic photo with a brand pattern blended over the top, or a
+// pattern fallback when a post has no image.
+const cover = (p: typeof posts[number], i: number) => {
+  const pat = `/brand/patterns/${covers[i % covers.length]}.jpg`;
+  return p.data.heroImage
+    ? { cls: 'has-img', style: `background-image:url(${p.data.heroImage}); --pat:url('${pat}')` }
+    : { cls: '', style: `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('${pat}')` };
+};
 ---
 <BaseLayout
   title="Blog"
@@ -20,9 +28,9 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
   <!-- HEADER -->
   <section class="band tex-cream blogx__head">
     <div class="container measure" data-reveal>
-      <p class="subhead">the cited blog</p>
-      <h1>Getting cited by AI, in plain English</h1>
-      <p>AI visibility, GEO &amp; AEO — what I'm learning in the work, written so you can actually use it Monday morning.</p>
+      <p class="subhead">the blog</p>
+      <h1>Field notes on AI visibility</h1>
+      <p>The strategy, the data, and the receipts — pulled straight from real client work in AEO, GEO, audience intelligence, and getting brands cited by AI.</p>
     </div>
   </section>
 
@@ -32,7 +40,7 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
     <div class="container">
       {featured && (
         <a class="feat" href={`/blog/${featured.id}`} data-reveal>
-          <div class="feat__cover" style={featured.data.heroImage ? `background-image:url(${featured.data.heroImage})` : `background-image: linear-gradient(rgba(181,84,52,0.12), rgba(181,84,52,0.12)), url('/brand/patterns/${covers[0]}.jpg')`}></div>
+          <div class:list={['feat__cover', cover(featured, 0).cls]} style={cover(featured, 0).style}></div>
           <div class="feat__body">
             <p class="pcard__meta">latest · {tagOf(featured)} · {fmt(featured.data.pubDate)}</p>
             <h2>{featured.data.title}</h2>
@@ -46,7 +54,7 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
         <div class="pgrid">
           {rest.map((post, i) => (
             <a class="pcard" href={`/blog/${post.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
-              <div class="pcard__cover" style={post.data.heroImage ? `background-image:url(${post.data.heroImage})` : `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('/brand/patterns/${covers[(i + 1) % covers.length]}.jpg')`}>
+              <div class:list={['pcard__cover', cover(post, i + 1).cls]} style={cover(post, i + 1).style}>
                 <span class="pcard__tag">{tagOf(post)}</span>
               </div>
               <div class="pcard__body">
@@ -91,7 +99,14 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
     border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease; margin-bottom: var(--space-5);
   }
   .feat:hover { transform: translateY(-3px); border-color: var(--rust); }
-  .feat__cover { min-height: 280px; background-size: cover; background-position: center; }
+  .feat__cover { position: relative; min-height: 280px; background-size: cover; background-position: center; overflow: hidden; }
+  /* brand pattern blended over the top of the topic photo */
+  .has-img::before {
+    content: ''; position: absolute; inset: 0; z-index: 1;
+    background-image: var(--pat); background-size: 190px; background-repeat: repeat;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.92) 0, rgba(0,0,0,0.5) 24%, transparent 60%);
+  }
   .feat__body { padding: var(--space-4); align-self: center; }
   .feat__body h2 { margin: 0 0 var(--space-1); }
   .feat__body p { max-width: 52ch; }
@@ -104,9 +119,9 @@ const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').r
     border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease;
   }
   .pcard:hover { transform: translateY(-3px); border-color: var(--rust); }
-  .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; }
+  .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; overflow: hidden; }
   .pcard__tag {
-    position: absolute; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
+    position: absolute; z-index: 2; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
     font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px; text-transform: capitalize;
   }
   .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }

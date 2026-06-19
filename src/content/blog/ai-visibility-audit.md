@@ -4,6 +4,7 @@ description: "An AI visibility audit reveals how AI systems describe your client
 pubDate: 2026-03-16
 register: measured-pillar
 tags: ["ai-visibility"]
+heroImage: "/images/blog/ai-visibility-audit.jpg"
 ---
 
 Your client’s SEO is solid, they rank on page one, and the monthly reports you send have all markers of SEO with green arrows pointing up. The work is delivering what traditional metrics say it should, but somewhere right now, one of the client’s best prospects is typing a question into ChatGPT or Perplexity and getting an answer that recommends three brands in the category — and your client isn’t one of them.

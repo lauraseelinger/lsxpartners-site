@@ -4,6 +4,7 @@ description: "Audience intelligence isn't a one-time project — it's a loop tha
 pubDate: 2026-03-26
 register: punchy-personal
 tags: ["ai-visibility"]
+heroImage: "/images/blog/ai-intelligence-loop.jpg"
 ---
 
 Audience intelligence research gives you insight on what your audience is actually saying — the gritty language, their frustrations, the 'help me decide!' questions they're asking in communities where they won't be retargeted by Meta ads. It's the most honest data available, and the scale is much larger than the focus group structure from 2019.

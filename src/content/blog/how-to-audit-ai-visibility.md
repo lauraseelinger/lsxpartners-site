@@ -4,6 +4,7 @@ description: "How to audit your AI visibility from scratch: the actual process, 
 pubDate: 2026-06-08
 register: punchy-personal
 tags: ["ai-visibility"]
+heroImage: "/images/blog/how-to-audit-ai-visibility.jpg"
 ---
 
 I’m going to walk you through exactly how I’d audit a brand’s AI visibility from scratch as an AI visibility expert. Not the theory — the actual process, the tools I’m using right now (June 2026) and what to do with what you find.
