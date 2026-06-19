@@ -6,13 +6,13 @@ register: measured-pillar
 tags: ["ai-visibility"]
 heroImage: "/images/blog/ai-visibility-agency-service.jpg"
 faqs:
-  - question: "Why AI visibility gaps are already showing up in your client data?"
+  - question: "Why are AI visibility gaps already showing up in your client data?"
     answer: "The standard agency reporting stack was built for a version of search that's changing fast. Organic rankings, click-through rates, keyword positions — those metrics still matter, but they don't tell the whole story anymore and the gap between what they measure and what's actually happening to client visibility is getting wider."
-  - question: "What AI visibility as an agency service actually means?"
+  - question: "What does AI visibility as an agency service actually mean?"
     answer: "Before you can sell this or deliver it, you need a clean definition of what it is. AI visibility is how consistently and favorably a brand appears in AI-generated answers across platforms like ChatGPT, Perplexity and Google AI when users ask questions in that brand's category."
   - question: "Which clients should you prioritize for AI visibility work?"
     answer: "You don't need to roll this out to every client at once. Start by identifying the clients where AI visibility is already affecting them, even if they don't know it yet."
-  - question: "What a basic AI visibility audit looks like in practice?"
+  - question: "What does a basic AI visibility audit look like in practice?"
     answer: "An AI visibility audit doesn't require expensive tooling to get started — the methodology matters far more than which platform you use to run it."
 ---
 

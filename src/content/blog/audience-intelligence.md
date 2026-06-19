@@ -7,13 +7,13 @@ tags: ["ai-visibility"]
 coverFrom: bottom
 heroImage: "/images/blog/audience-intelligence.jpg"
 faqs:
-  - question: "What audience intelligence is?"
+  - question: "What is audience intelligence?"
     answer: "Audience intelligence is the practice of analyzing real, unscripted conversations happening in the places your audience actually talks — online communities, forums, review platforms and social channels — to understand what they need, how they describe their problems and what language they use when no one from your marketing department is in the room."
-  - question: "How I apply it?"
+  - question: "How do I apply audience intelligence?"
     answer: "What I've built at LSX Partners isn't a tool purchase or a dashboard subscription — it's a research process I've developed and refined across client engagements in industries including healthcare, automotive, CPG and professional services."
-  - question: "What it surfaces that traditional research misses?"
+  - question: "What does it surface that traditional research misses?"
     answer: "For a healthcare client navigating a heavily regulated space, audience intelligence research revealed a gap that compliance-driven messaging had been quietly creating for years. Regulatory constraints had shaped their communications to be technically accurate but practically inaccessible — and patients, who were already overwhelmed by the complexity of their own healthcare decisions, were tuning it out entirely. The research showed that the audience wasn't looking for more information; they were looking for someone to help them understand what came next and feel confident in the path they'd already chosen."
-  - question: "Who audience intelligence is built for?"
+  - question: "Who is audience intelligence built for?"
     answer: "I work with two types of clients on these engagements, and both come to me because they've hit the same wall — they've been doing the work, but the messaging still isn't landing the way it should."
 ---
 

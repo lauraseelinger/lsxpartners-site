@@ -8,7 +8,7 @@ heroImage: "/images/blog/what-your-ai-visibility-score-cant-tell-you.jpg"
 faqs:
   - question: "What does an AI visibility score actually measure?"
     answer: "Okay, bossman asked me to run a competitive AI visibility check for our Signature line of premium products. What I would have done is Google, \"how to do an AI visibility audit\" and see a guide from SEMrush — perfect! I already have an account for keyword research, so now that they have the AI visibility scores, it's easy-peasy."
-  - question: "How I run an AI visibility audit that goes beyond the score?"
+  - question: "How do I run an AI visibility audit that goes beyond the score?"
     answer: "The first step is finding out what the target audience is actually saying in the communities where purchase decisions get made — in their own words, in the behind-closed-door kind of conversations they have with their friends. It's like being a fly on the wall for your entire target persona. Pretty helpful, wouldn't you say?!"
   - question: "What audience intelligence reveals that an AI visibility score misses?"
     answer: "I pulled two years of community data across three areas where Libbey has made real investments: the tiki category, the Signature wine glass line and its registry positioning, and how AI describes the brand overall. Here's what I found in each one."

@@ -6,9 +6,9 @@ register: measured-pillar
 tags: ["ai-visibility"]
 heroImage: "/images/blog/ai-citation-tracking-marketing-agencies.jpg"
 faqs:
-  - question: "What AI citations actually are?"
+  - question: "What do AI citations look like in practice?"
     answer: "When someone types a detailed question into ChatGPT, something like “what continuous glucose monitors do endocrinologists recommend for type 2 patients who don’t want to calibrate manually, and does insurance typically cover them?”, the AI generates an answer. That answer pulls from sources it trusts, names specific devices or brands, describes them and, in many cases, recommends some over others."
-  - question: "What your clients are about to start asking you?"
+  - question: "What are your clients about to start asking you?"
     answer: "It’s already happening in some verticals — a client notices their competitor showing up in a ChatGPT answer when they search their own category and asks their agency why. The agency doesn’t have a clean explanation for why that happened or a clear path to changing it, and that conversation gets uncomfortable fast."
   - question: "What are AI citations in marketing?"
     answer: "AI citations are the mentions, references and recommendations that AI tools like ChatGPT, Perplexity and Google AI include when they generate answers to user questions. When someone asks an AI for recommendations in your client’s category — whether that’s a product comparison, a treatment option or a vendor evaluation — the brands and solutions the AI names are being cited."
