@@ -22,6 +22,9 @@ const blog = defineCollection({
     // Which edge the brand-pattern overlay comes from on the card cover, so it
     // never lands on a face. Default top.
     coverFrom: z.enum(['top', 'bottom', 'left', 'right']).default('top'),
+    // Opt-in: render each section as an alternating tinted block (good for
+    // step-by-step guides). Off elsewhere — headers alone do the breaking up.
+    sectioned: z.boolean().default(false),
     // Set true to keep a URL live but hide from nav/index (unlisted old posts).
     unlisted: z.boolean().default(false),
     draft: z.boolean().default(false),

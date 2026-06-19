@@ -82,16 +82,17 @@ strong { font-weight: 600; }
   color: var(--brown); margin-top: var(--space-5); padding-top: var(--space-2);
   border-top: 2px solid color-mix(in srgb, var(--rust) 30%, transparent); line-height: 1.2;
 }
-/* each H2 section gets its own subtle block (alternating tints) */
-.post__body .post-section {
+/* sections are neutral by default — the H2 header treatment does the breaking up */
+.post__body .post-section { margin-block: var(--space-3); }
+.post__body .post-section > * + * { margin-top: var(--space-3); }
+/* opt-in (frontmatter sectioned: true) — alternating tinted blocks, e.g. guides */
+.post--sectioned .post-section {
   border-radius: 16px; padding: 0.4rem var(--space-3) var(--space-3);
   margin-block: var(--space-4); border-left: 3px solid transparent;
 }
-.post__body .post-section > * + * { margin-top: var(--space-3); }
-.post__body .post-section:nth-of-type(odd) { background: color-mix(in srgb, var(--cream-deep) 55%, transparent); border-left-color: color-mix(in srgb, var(--rust) 35%, transparent); }
-.post__body .post-section:nth-of-type(even) { background: color-mix(in srgb, var(--blue) 14%, transparent); border-left-color: color-mix(in srgb, var(--olive) 45%, transparent); }
-/* the section's own heading shouldn't re-draw the top rule */
-.post__body .post-section > h2:first-child { border-top: 0; margin-top: 0; padding-top: 0.3rem; }
+.post--sectioned .post-section:nth-of-type(odd) { background: color-mix(in srgb, var(--cream-deep) 55%, transparent); border-left-color: color-mix(in srgb, var(--rust) 35%, transparent); }
+.post--sectioned .post-section:nth-of-type(even) { background: color-mix(in srgb, var(--blue) 14%, transparent); border-left-color: color-mix(in srgb, var(--olive) 45%, transparent); }
+.post--sectioned .post-section > h2:first-child { border-top: 0; margin-top: 0; padding-top: 0.3rem; }
 .post__body h2 strong, .post__body h3 strong { font-weight: inherit; }
 .post__body h3 { font-family: var(--font-heading); font-size: 1.35rem; color: var(--rust); margin-top: var(--space-4); }
 .post__body a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
