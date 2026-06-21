@@ -73,11 +73,12 @@ const weeks = [
     <div class="container">
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">how the month works</p>
-        <h2>Four weeks, four moves</h2>
+        <h2>Four weeks, four moves<span class="asterisk">*</span></h2>
       </div>
       <div data-reveal>
         <MonthTimeline weeks={weeks} />
       </div>
+      <p class="disclaimer" data-reveal>*Scoped as one month. A project can run up to 5–6 weeks depending on stakeholder availability and scheduling.</p>
     </div>
   </section>
 
@@ -118,4 +119,7 @@ const weeks = [
   .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
   .cred span:last-child { font-size: var(--text-sm); color: var(--cream); opacity: 0.9; }
   @media (max-width: 680px) { .creds { grid-template-columns: 1fr; } }
+
+  .asterisk { color: var(--rust); }
+  .disclaimer { margin-top: var(--space-3); font-size: var(--text-sm); font-style: italic; color: var(--color-text-muted); max-width: 60ch; }
 </style>

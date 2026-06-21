@@ -82,6 +82,16 @@ const { title, description, image, type = 'website', schemas = [] } = Astro.prop
       } else {
         nums.forEach((el) => runCount(el));
       }
+
+      // External links (Calendly, Cited, LinkedIn, etc.) open in a new tab.
+      document.querySelectorAll('a[href^="http"]').forEach((a) => {
+        try {
+          if (new URL(a.href).hostname !== location.hostname) {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+          }
+        } catch {}
+      });
     </script>
   </body>
 </html>
