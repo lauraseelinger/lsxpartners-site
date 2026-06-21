@@ -2,7 +2,33 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import StitchDivider from '../../../components/StitchDivider.astro';
+import FAQ from '../../../components/FAQ.astro';
+import type { FaqItem } from '../../../lib/schema';
 import { CTA, BLOG_CATEGORIES, catLabel } from '../../../consts';
+
+// Per-category Q&A — renders a visible FAQ block AND FAQPage JSON-LD (AEO), so
+// each category page can itself get surfaced/cited for these buyer questions.
+const categoryFaqs: Record<string, FaqItem[]> = {
+  'ai-visibility': [
+    { question: 'What is AI visibility?', answer: 'AI visibility is whether AI tools — ChatGPT, Claude, Gemini, Perplexity, Google’s AI Overviews — mention your brand when someone asks about your category, and whether they credit you as the source. It’s the new version of showing up on page one, except there’s often one answer and you’re either in it or you’re not.' },
+    { question: 'How is AI visibility different from SEO?', answer: 'SEO gets you into a ranked list of links a person clicks through. AI visibility gets you named inside the answer the AI writes — frequently with no click at all. They share fundamentals (clear, trustworthy, well-structured content wins both), but optimizing for a list and optimizing to be quoted are different jobs.' },
+    { question: 'How do I find out if AI mentions my brand?', answer: 'Run the real questions your buyers ask through each major AI engine and record what it says and which sources it cites. That’s an AI visibility audit — and the catch is testing the language buyers actually use, not the wording your marketing team has documented, or you get a confident-looking false positive.' },
+  ],
+  guides: [
+    { question: 'How do I get my brand cited by AI?', answer: 'Be the clearest, most trustworthy answer to the question your buyer is actually asking. In practice that means content structured so AI can extract it, the answer front-loaded in the first lines, and a presence on the third-party sources AI leans on — not just your own site.' },
+    { question: 'What is answer engine optimization (AEO)?', answer: 'AEO is optimizing your content to be the answer an AI engine gives, not just a link it lists. It’s the close cousin of GEO (generative engine optimization) — same goal of getting quoted by AI, with the emphasis on directly answering the questions people ask.' },
+    { question: 'Can I audit my own AI visibility?', answer: 'Yes — the mechanics are simple: run your buyers’ real questions through ChatGPT, Claude, Gemini and Perplexity and log what they say and cite. The hard part is knowing which questions to test; the wrong prompt set gives you a false positive that looks like good news.' },
+  ],
+  'audience-intelligence': [
+    { question: 'What is audience intelligence?', answer: 'Audience intelligence is a clear read on how your buyers actually talk about their problem — the words, questions, and objections in their own language, pulled from where they really discuss it. It’s the input most strategies skip, and the thing AI visibility depends on.' },
+    { question: 'Why don’t keyword tools capture how buyers really talk?', answer: 'Keyword tools show the short, typed phrases people once used in a search box. Buyers describe their problem to AI in full sentences, with context and frustration — language that never shows up in a volume report. You have to go where they actually talk to hear it.' },
+    { question: 'Where does real buyer language live?', answer: 'In reviews, community and industry forums, Reddit threads, comment sections, and your own sales calls and DMs — anywhere people describe the problem before they’ve picked a solution. That’s the raw material for both content and AI visibility strategy.' },
+  ],
+  'marketing-pov': [
+    { question: 'Where does AI visibility sit in the bigger marketing picture?', answer: 'It’s a high-leverage channel, not the whole strategy. The audience intelligence behind it — how your buyers actually talk — feeds everything else too: positioning, content, social, experiential. The smart move is to treat AI visibility as the lead, not the limit.' },
+    { question: 'Should small and mid-size brands care about AI visibility yet?', answer: 'Yes, and earlier than the big players assume. AI answers surface only a handful of sources per question, and the ones that get cited tend to keep getting cited — so getting in while your category is still uncrowded is the cheap moment to do it.' },
+  ],
+};
 
 // Tag/category pages at clean kebab-case URLs, e.g. /blog/category/ai-visibility
 // (the legacy /blog/category/AI+visibility 301s here — see redirect-map.md).
@@ -24,6 +50,7 @@ export async function getStaticPaths() {
 
 const { tag, posts, presentCats } = Astro.props;
 const label = catLabel(tag);
+const faqs = categoryFaqs[tag] ?? [];
 const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 const cover = (p: typeof posts[number], i: number) => {
@@ -70,6 +97,12 @@ const cover = (p: typeof posts[number], i: number) => {
           </a>
         ))}
       </div>
+
+      {faqs.length > 0 && (
+        <div class="measure faqwrap" data-reveal>
+          <FAQ items={faqs} heading={`Questions about ${label}`} />
+        </div>
+      )}
     </div>
   </section>
 
@@ -131,6 +164,8 @@ const cover = (p: typeof posts[number], i: number) => {
   .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }
   .pcard__body h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }
   .pcard__body p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+
+  .faqwrap { max-width: 44rem; margin: var(--space-5) auto 0; }
 
   @media (max-width: 860px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 680px) { .pgrid { grid-template-columns: 1fr; } }

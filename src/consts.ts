@@ -116,7 +116,7 @@ export const BLOG_CATEGORIES = [
   { slug: 'ai-visibility', label: 'AI Visibility' },
   { slug: 'guides', label: 'Guides' },
   { slug: 'audience-intelligence', label: 'Audience Intelligence' },
-  { slug: 'brand-strategy', label: 'Brand Strategy' },
+  { slug: 'marketing-pov', label: 'Marketing POV' },
 ] as const;
 export const catLabel = (slug: string) =>
   BLOG_CATEGORIES.find((c) => c.slug === slug)?.label ??
