@@ -47,6 +47,16 @@ const talks = [
     url: 'https://www.eiu.edu/calendar/event.php?id=15665',
   },
   {
+    event: 'Bowling Green State University',
+    title: 'Guest session',
+    track: 'Guest speaker',
+    dateDisplay: 'February 2026',
+    startISO: '2026-02-01T00:00:00-05:00',
+    venue: '', city: 'Bowling Green, OH',
+    description: 'A guest session with BGSU students and founders on getting found — and cited — by AI.',
+    url: '',
+  },
+  {
     event: 'Great Lakes AI Week',
     title: 'Implementing AI into your processes — for real',
     track: 'Workshop',
@@ -56,18 +66,7 @@ const talks = [
     description: 'I reviewed how marketers can begin to implement AI into their processes in a real, meaningful way.',
     url: '',
   },
-  {
-    event: 'Bowling Green State University',
-    title: 'Guest session',
-    track: 'Guest speaker',
-    dateDisplay: '',
-    startISO: '',
-    venue: '', city: 'Bowling Green, OH',
-    description: 'A guest session with BGSU students and founders on getting found — and cited — by AI.',
-    url: '',
-  },
 ];
-const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
 ---
 <BaseLayout
   title="Speaking"
@@ -81,7 +80,7 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
       <p class="subhead">speaking &amp; workshops</p>
       <h1>Talks people can actually act on</h1>
       <p class="hero__lede">
-        My pet peeve is leaving a session fired up with no real plan. So I don’t
+        My pet peeve is leaving a session fired up with no real plan — so I don’t
         do that to a room. I speak on AI visibility, GEO and AEO — what AI thinks
         about your brand, and exactly what to do about it.
       </p>
@@ -162,7 +161,7 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
           </article>
         ))}
       </div>
-      <p class="also" data-reveal>Also: {alsoSeen.join(' · ')}</p>
+      <p class="also" data-reveal>Also: Private brand &amp; agency workshops · podcasts &amp; panels, including <a href="https://podcasts.apple.com/us/podcast/chamber-amplified/id1612666890">Chamber Amplified</a> (Findlay Chamber of Commerce).</p>
     </div>
   </section>
 
@@ -245,6 +244,7 @@ const alsoSeen = ['Private brand & agency workshops', 'Podcasts & panels'];
   .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
   .talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--olive); }
   .also { margin-top: var(--space-4); font-size: var(--text-sm); }
+  .also a { color: var(--cream); text-decoration: underline; font-weight: 600; }
 
   @media (max-width: 760px) {
     .intro-split { grid-template-columns: 1fr; }
