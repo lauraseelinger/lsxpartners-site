@@ -83,9 +83,9 @@ export const ENGAGEMENTS = [
     flagship: false,
     eyebrow: 'diagnostic',
     tagline: 'Find out exactly what AI says about your brand — and where the gaps are.',
-    summary: 'A manual prompt audit across every major AI platform, paired with audience intelligence, so you know where you show up, where you don’t, and why.',
+    summary: 'Knowing what to test is the hard part. I build the prompt set from real buyer language and audience intelligence, run it across every major AI platform, and show you where you show up, where you don’t, and why — the real read, not a false positive.',
     image: '/images/laura-desk-wide.jpg',
-    topics: ['Manual prompt audit across the major AI platforms', 'Whether your site is even extractable by AI', 'Where your brand lives off your own website', 'Clear findings and the gaps that actually matter'],
+    topics: ['A prompt set built from real buyer language — not guesswork — across the major AI platforms', 'Whether your site is even extractable by AI', 'Where your brand lives off your own website', 'Clear findings and the gaps that actually matter'],
   },
   {
     slug: 'embedded-partner',
