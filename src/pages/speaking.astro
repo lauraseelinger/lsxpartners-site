@@ -69,13 +69,14 @@ const talks = [
   {
     event: 'Chamber Amplified',
     title: 'Findlay Chamber of Commerce podcast',
+    titleUrl: 'https://www.findlayhancockchamber.com/',
     track: 'Podcast',
     dateDisplay: '',
     startISO: '',
     venue: '', city: 'Findlay, OH',
     description: 'A conversation on AI visibility — what it means for local businesses and the chambers that serve them.',
     url: 'https://podcasts.apple.com/us/podcast/chamber-amplified/id1612666890',
-    linkLabel: 'Listen →',
+    linkLabel: 'Listen to the episode →',
   },
 ];
 ---
@@ -95,7 +96,7 @@ const talks = [
         do that to a room. I speak on AI visibility, GEO and AEO — what AI thinks
         about your brand, and exactly what to do about it.
       </p>
-      <a class="button" href="/contact">Invite me to speak</a>
+      <a class="button" href="/contact?topic=speaking#note">Invite me to speak</a>
     </div>
   </section>
 
@@ -163,7 +164,7 @@ const talks = [
         {talks.map((t) => (
           <article class="talk">
             <h3>{t.event}</h3>
-            <p class="talk__title">{t.title}</p>
+            <p class="talk__title">{t.titleUrl ? <a class="talk__titlelink" href={t.titleUrl}>{t.title}</a> : t.title}</p>
             {(t.dateDisplay || t.city) && (
               <p class="talk__meta">{[t.dateDisplay, t.city].filter(Boolean).join(' · ')}</p>
             )}
@@ -194,7 +195,7 @@ const talks = [
     <div class="container measure measure--center" data-reveal="scale">
       <h2>Got a stage? Let’s talk.</h2>
       <p>Events, team workshops, podcasts — if your audience needs to get AI visibility, I’m in.</p>
-      <a class="button" href="/contact">Invite me to speak</a>
+      <a class="button" href="/contact?topic=speaking#note">Invite me to speak</a>
     </div>
   </section>
 </BaseLayout>
@@ -251,6 +252,8 @@ const talks = [
   .talk__track { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin-bottom: var(--space-1); }
   .talk h3 { color: var(--rust); margin: 0 0 0.1rem; font-size: var(--text-lg); }
   .talk__title { font-weight: 600; color: var(--brown); margin: 0 0 var(--space-1); }
+  .talk__titlelink { color: inherit; text-decoration: underline; text-decoration-color: var(--rust); text-underline-offset: 2px; }
+  .talk__titlelink:hover { color: var(--rust); }
   .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--olive); margin-bottom: var(--space-1); }
   .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
   .talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--olive); }

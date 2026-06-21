@@ -3,6 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import StitchDivider from '../components/StitchDivider.astro';
 import { PERSON, CTA } from '../consts';
 
+// Web3Forms handles the form POST (no backend on a static site). Get a free
+// access key at https://web3forms.com (enter laura@lsxpartners.com — the key is
+// tied to that inbox; submissions email straight there). Paste it below.
+const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+
 // CONTACT — image-forward, color-blocked. Primary = Calendly; also email,
 // LinkedIn, and the Cited newsletter. Voice: Full LinkedIn Laura.
 // (No marketing-guru fluff — see laura-no-guru-fluff memory.)
@@ -53,6 +58,59 @@ const methods = [
     </div>
   </section>
 
+  <!-- SEND A NOTE (form) -->
+  <StitchDivider bg="peach" stitch="rust" />
+  <section class="band section--peach" id="note">
+    <div class="container fsplit">
+      <div class="measure" data-reveal="left">
+        <p class="subhead">or send a note</p>
+        <h2>Tell me what you're working on</h2>
+        <p>
+          A speaking invite, a brand that's invisible in AI, or an agency that wants
+          the lane covered — give me the gist and I'll come back to you, usually
+          within a day or two.
+        </p>
+      </div>
+
+      <form class="cform" id="contact-form" data-reveal="right">
+        <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+        <input type="hidden" name="subject" value="New inquiry from lsxpartners.com" />
+        <input type="hidden" name="from_name" value="LSX Partners site" />
+        <input type="checkbox" name="botcheck" class="cform__bot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <label class="cfield">
+          <span class="cfield__label">Name</span>
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label class="cfield">
+          <span class="cfield__label">Email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label class="cfield cfield--full">
+          <span class="cfield__label">Company / organization <span class="cfield__opt">(optional)</span></span>
+          <input type="text" name="company" autocomplete="organization" />
+        </label>
+        <label class="cfield cfield--full">
+          <span class="cfield__label">What's this about?</span>
+          <select name="topic" id="cform-topic">
+            <option value="AI visibility for my brand">AI visibility for my brand</option>
+            <option value="AI visibility for my agency's clients">AI visibility for my agency's clients</option>
+            <option value="Speaking or workshop">Speaking or workshop</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </label>
+        <label class="cfield cfield--full">
+          <span class="cfield__label">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="cform__foot cfield--full">
+          <button type="submit" class="button">Send it</button>
+          <p class="cform__status" id="cform-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <!-- WAYS TO REACH -->
   <StitchDivider bg="cream" stitch="rust" />
   <section class="band section--cream">
@@ -87,6 +145,50 @@ const methods = [
       <a class="button button--ghost" href={CTA.calendly}>Book a call</a>
     </div>
   </section>
+
+  <script>
+    // Preselect the topic when arriving from a "Invite me to speak" link.
+    const params = new URLSearchParams(window.location.search);
+    const sel = document.getElementById('cform-topic') as HTMLSelectElement | null;
+    if (sel && params.get('topic') === 'speaking') {
+      for (const o of Array.from(sel.options)) {
+        if (/speaking/i.test(o.value)) { o.selected = true; break; }
+      }
+    }
+
+    // Submit to Web3Forms via fetch so we can show an inline thank-you.
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const status = document.getElementById('cform-status');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      if (data.get('botcheck')) return; // honeypot tripped
+      const btn = form.querySelector('button[type=submit]') as HTMLButtonElement | null;
+      if (status) { status.textContent = 'Sending…'; status.classList.remove('is-error'); }
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: data,
+        });
+        const json = await res.json();
+        if (json.success) {
+          form.innerHTML =
+            '<div class="cform__done"><h3>Got it — thank you.</h3>' +
+            '<p>Your note landed in my inbox. I’ll get back to you, usually within a day or two.</p></div>';
+        } else {
+          throw new Error(json.message || 'failed');
+        }
+      } catch (err) {
+        if (status) {
+          status.textContent = 'Something went wrong — please try again, or reach me on LinkedIn.';
+          status.classList.add('is-error');
+        }
+        if (btn) { btn.disabled = false; btn.textContent = 'Send it'; }
+      }
+    });
+  </script>
 </BaseLayout>
 
 <style>
@@ -115,6 +217,28 @@ const methods = [
   .cstk--2 { bottom: -9%; right: -4%; width: 112px; transform: rotate(8deg); }
   .cstk--3 { top: -8%; right: -6%; width: 80px; transform: rotate(-5deg); }
 
+  /* send-a-note form */
+  .fsplit { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--space-5); align-items: start; }
+  .fsplit .measure { max-width: 38ch; }
+  .cform { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); position: relative; }
+  .cfield { display: flex; flex-direction: column; gap: 0.4rem; }
+  .cfield--full { grid-column: 1 / -1; }
+  .cfield__label { font-family: var(--font-sub); font-style: italic; font-weight: 700; font-size: var(--text-sm); color: var(--brown); }
+  .cfield__opt { font-style: normal; font-weight: 400; color: var(--color-text-muted); }
+  .cform input, .cform select, .cform textarea {
+    font: inherit; font-size: var(--text-base); color: var(--brown);
+    background: #fffdf8; border: 2px solid rgba(58, 42, 30, 0.18); border-radius: 12px;
+    padding: 0.7rem 0.85rem; width: 100%;
+  }
+  .cform input:focus, .cform select:focus, .cform textarea:focus { outline: none; border-color: var(--rust); }
+  .cform textarea { resize: vertical; min-height: 7rem; }
+  .cform__bot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .cform__foot { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .cform__status { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+  .cform__status.is-error { color: var(--rust); }
+  .cform__done h3 { font-family: var(--font-heading); color: var(--rust); margin: 0 0 var(--space-1); }
+  .cform__done p { margin: 0; }
+
   .cmethods { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-3); }
   .cmethod {
     display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: inherit;
@@ -132,6 +256,8 @@ const methods = [
   @media (max-width: 760px) {
     .split { grid-template-columns: 1fr; }
     .ccluster { order: -1; width: min(320px, 82%); }
+    .fsplit { grid-template-columns: 1fr; }
+    .cform { grid-template-columns: 1fr; }
     .cmethods { grid-template-columns: 1fr; }
   }
 </style>
