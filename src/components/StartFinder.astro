@@ -5,9 +5,9 @@ import { CTA } from '../consts';
 // drives Step 2 (situation) — agencies get client-centric phrasing. Selections
 // fire an anonymous analytics event and ride into Calendly as UTM params if booked.
 const orgs = [
-  { id: 'brand', label: 'In-house brand team' },
-  { id: 'agency', label: 'Agency or consultancy' },
-  { id: 'founder', label: 'Founder or small team' },
+  { id: 'brand', label: 'An in-house brand team' },
+  { id: 'agency', label: 'An agency or consultancy' },
+  { id: 'founder', label: 'A founder or small team' },
 ];
 const brandGoals = [
   { id: 'invisible', label: 'We’re missing (or wrong) in AI answers' },
@@ -42,7 +42,7 @@ const RECS = {
 ---
 <div class="finder" data-calendly={CTA.calendly}>
   <div class="finder__q">
-    <p class="finder__label">I’m a…</p>
+    <p class="finder__label">I’m…</p>
     <div class="finder__chips" data-group="org">
       {orgs.map((o) => <button type="button" data-val={o.id}>{o.label}</button>)}
     </div>
