@@ -252,8 +252,9 @@ const talks = [
   .talk__track { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin-bottom: var(--space-1); }
   .talk h3 { color: var(--rust); margin: 0 0 0.1rem; font-size: var(--text-lg); }
   .talk__title { font-weight: 600; color: var(--brown); margin: 0 0 var(--space-1); }
-  .talk__titlelink { color: inherit; text-decoration: underline; text-decoration-color: var(--rust); text-underline-offset: 2px; }
-  .talk__titlelink:hover { color: var(--rust); }
+  /* override the section--olive "links go cream" rule — these sit on a cream card */
+  .talk a.talk__titlelink { color: var(--brown); text-decoration: underline; text-decoration-color: var(--rust); text-underline-offset: 2px; }
+  .talk a.talk__titlelink:hover { color: var(--rust); }
   .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--olive); margin-bottom: var(--space-1); }
   .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
   .talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--olive); }
