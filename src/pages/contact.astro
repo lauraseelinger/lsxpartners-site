@@ -13,11 +13,6 @@ const methods = [
     icon: '<rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>',
   },
   {
-    key: 'email', label: 'Email me', value: PERSON.email,
-    href: `mailto:${PERSON.email}`,
-    icon: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/>',
-  },
-  {
     key: 'linkedin', label: 'Connect on LinkedIn', value: '@lseelinger',
     href: PERSON.sameAs[0],
     icon: '<rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="10" x2="8" y2="16"/><circle cx="8" cy="7" r="1"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/><line x1="12" y1="10" x2="12" y2="16"/>',
@@ -64,7 +59,7 @@ const methods = [
     <div class="container">
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">pick your lane</p>
-        <h2>Four ways to reach me</h2>
+        <h2>Ways to reach me</h2>
       </div>
       <div class="cmethods">
         {methods.map((m, i) => (
@@ -120,7 +115,7 @@ const methods = [
   .cstk--2 { bottom: -9%; right: -4%; width: 112px; transform: rotate(8deg); }
   .cstk--3 { top: -8%; right: -6%; width: 80px; transform: rotate(-5deg); }
 
-  .cmethods { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .cmethods { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-3); }
   .cmethod {
     display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: inherit;
     background: var(--cream); border: 2px solid transparent; border-radius: 16px; padding: var(--space-3);
