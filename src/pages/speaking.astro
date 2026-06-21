@@ -66,6 +66,17 @@ const talks = [
     description: 'I reviewed how marketers can begin to implement AI into their processes in a real, meaningful way.',
     url: '',
   },
+  {
+    event: 'Chamber Amplified',
+    title: 'Findlay Chamber of Commerce podcast',
+    track: 'Podcast',
+    dateDisplay: '',
+    startISO: '',
+    venue: '', city: 'Findlay, OH',
+    description: 'A conversation on AI visibility — what it means for local businesses and the chambers that serve them.',
+    url: 'https://podcasts.apple.com/us/podcast/chamber-amplified/id1612666890',
+    linkLabel: 'Listen →',
+  },
 ];
 ---
 <BaseLayout
@@ -141,7 +152,7 @@ const talks = [
       <div class="talks-head" data-reveal>
         <div class="measure">
           <p class="subhead">on stage, on the road</p>
-          <h2>Where I’ve been on stage</h2>
+          <h2>Where I’ve been on the mic</h2>
         </div>
         <div class="talks-nav">
           <button type="button" class="tnav" data-dir="-1" aria-label="Previous">‹</button>
@@ -157,11 +168,11 @@ const talks = [
               <p class="talk__meta">{[t.dateDisplay, t.city].filter(Boolean).join(' · ')}</p>
             )}
             <p class="talk__desc">{t.description}</p>
-            {t.url && <a class="talk__link" href={t.url}>Event details →</a>}
+            {t.url && <a class="talk__link" href={t.url}>{t.linkLabel ?? 'Event details →'}</a>}
           </article>
         ))}
       </div>
-      <p class="also" data-reveal>Also: Private brand &amp; agency workshops · podcasts &amp; panels, including <a href="https://podcasts.apple.com/us/podcast/chamber-amplified/id1612666890">Chamber Amplified</a> (Findlay Chamber of Commerce).</p>
+      <p class="also" data-reveal>Also: private brand &amp; agency workshops, panels, and more.</p>
     </div>
   </section>
 
