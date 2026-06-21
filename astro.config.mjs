@@ -46,5 +46,8 @@ export default defineConfig({
     '/blog/fractional-marketing-directors-dental-practices': '/services',
     '/blog/marketing-consultant-for-small-business-what-to-look-forand-what-you-really-need': '/services',
     '/blog/small-business-social-media-content-not-working': '/blog',
+    // Prospect-specific Hub Plastics report pages — retired; send to home.
+    '/hub-plastics-marketing-audit-report': '/',
+    '/access-hub-plastics-report': '/',
   },
 });
