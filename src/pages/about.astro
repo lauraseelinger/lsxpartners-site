@@ -10,7 +10,7 @@ import { PERSON, CTA } from '../consts';
 // 15+ yrs agency+corporate, MBA, Cincy).
 const monitors = ['LLMs', 'audience intelligence', 'third-party data', 'AI brand identity', 'citation sources', 'entity consistency', 'answer engines'];
 const sides = [
-  { key: 'corp', name: 'Corporate', blurb: 'Fortune-scale brand and marketing teams — process, approvals, and getting things shipped at scale.' },
+  { key: 'corp', name: 'Corporate', blurb: 'Fortune-scale brand and marketing teams — process, approvals, and getting real work done at scale.' },
   { key: 'agency', name: 'Agency', blurb: 'Fast, creative, juggling a dozen clients at once — and white-labeling the deep work behind the scenes.' },
 ];
 const verticals = [
@@ -18,9 +18,9 @@ const verticals = [
   { name: 'Automotive', d: 'Brand-and-dealer tension, and a lot of compliance.' },
   { name: 'E-commerce', d: 'Marketplace copy, reviews, and conversion.' },
   { name: 'Pharma & MedTech', d: 'Medical, legal, and regulatory sign-off on every word.' },
-  { name: 'CPG & glassware', d: 'The Libbey years — retail, Amazon, and brand.' },
+  { name: 'CPG', d: 'Retail, Amazon, and brand.' },
 ];
-const offclock = ['🐈 my cats', '🥾 hiking', '📔 junk journaling', '🌬️ breathwork', '🧘 meditation', '🎧 podcasts', '🚗 road trips'];
+const offclock = ['🐈 my cats', '🥾 hiking', '🌬️ breathwork', '📔 junk journaling', '🧘 meditation', '🎧 podcasts', '🚗 road trips'];
 const stickers = [
   { src: '/brand/assets/sticker-locally-sourced.png', cls: 'stk--1', rot: -8, depth: 26 },
   { src: '/brand/assets/sticker-tailored.png', cls: 'stk--2', rot: 7, depth: 40 },
@@ -56,11 +56,11 @@ const faqs = [
       <p class="subhead">ai visibility expert · founder, lsx partners</p>
       <h1>Hi, I'm Laura.</h1>
       <p class="ahero__lede">
-        I'm the AI marketing nerd who actually looks forward to the monthly
-        reporting. I help brands and agencies get <strong>cited by AI</strong> —
-        and I'm in this every single day.
+        I help brands and agencies get <strong>cited by AI</strong> — and I'm the
+        rare marketer who actually looks forward to the monthly reporting. I'm in
+        this every single day.
       </p>
-      <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+      <a class="button" href={CTA.calendly}>Book a call</a>
     </div>
     <div class="ahero__photo">
       <img src="/images/about-hero.jpg" alt="Laura Seelinger" />
@@ -97,13 +97,13 @@ const faqs = [
         <p class="subhead">where i come from</p>
         <h2>I've lived both sides of the work</h2>
         <p>
-          Fifteen-plus years across agency and corporate marketing — four of them
-          at Libbey, the glassware company in Toledo (I even wrote some of the
-          Amazon copy I now roast in my case studies). Most of my family works in
-          healthcare, so I went deep in regulated marketing, where the simplest copy
-          change needs sign-off from medical, legal, compliance, and brand. That's
-          exactly why I'm useful now: the content is the easy part — getting it
-          through a real organization is the work.
+          My path ran through both sides — corporate marketing teams and agencies,
+          B2B and B2C, a lot of it in heavily regulated work (most of my family's in
+          healthcare, so I learned early what medical, legal, and brand sign-off
+          really takes). That mix is the point: I've watched good ideas live or die
+          inside real companies. The idea is rarely the hard part — getting it
+          through the org is. And I'd always rather build and test something than
+          sit in a deck theorizing about it.
         </p>
       </div>
 
@@ -145,12 +145,11 @@ const faqs = [
         <p class="subhead">how i actually work</p>
         <h2>I test it on myself first</h2>
         <p>
-          I don't half-a** things. I test the tools myself — I've swapped my toolkit
-          more than once in six months because this space moves that fast — and I
-          run my process on real products and real client work before I ever
-          recommend it. My clients get the learnings months before they'd hit the
-          standard agency cycle, because I'm in this every single day. The stack is
-          never finished; every round, I run the next play on my own work first.
+          I don't half-a** things. I test the tools myself and run the whole process
+          on my own brand first — so by the time it reaches you it's proven, not an
+          experiment on your dime. I'm also not precious about my methods: when the
+          space shifts, I shift with it. The playbook's never finished, and every
+          new test runs on my own work before yours.
         </p>
       </div>
       <figure class="playbook" data-reveal aria-hidden="true">
@@ -190,9 +189,9 @@ const faqs = [
         <h2>What I'm into when I log off</h2>
         <p>
           When I'm not mapping a strategy or down an AI visibility research rabbit
-          hole, I'm probably hanging with my cats, going on a walk or hike, junk
-          journaling (it's my new creative outlet), or mapping out my husband and
-          my next adventure. I'm 100% myself here — em dashes and all.
+          hole, I'm probably hanging with my cats, going on a hike, junk journaling
+          (it's my new creative outlet), or mapping out my husband and my next
+          adventures. I'm 100% myself here — em dashes and all.
         </p>
       </div>
       <div class="orbit orbit--life" data-reveal>
@@ -238,7 +237,7 @@ const faqs = [
       <h2>Want to know what AI says about you?</h2>
       <p>Book a call and we'll talk through where you stand — the major engines, your category, your competitors.</p>
       <p class="about-ctas">
-        <a class="button" href={CTA.calendly}>Let's talk AI visibility</a>
+        <a class="button" href={CTA.calendly}>Book a call</a>
         <a class="button button--ghost" href={PERSON.sameAs[0]}>Find me on LinkedIn</a>
       </p>
     </div>
