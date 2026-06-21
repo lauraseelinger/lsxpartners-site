@@ -37,13 +37,12 @@
   document.querySelectorAll<HTMLElement>('[data-ticker]').forEach((el) => {
     if (reduce) { el.textContent = '47'; return; }
     let val = 41;
-    let delay = 90;
+    // never settles — a single score never lands on the truth
     const tick = () => {
-      val = Math.max(18, Math.min(64, val + Math.round((Math.random() - 0.5) * 30)));
+      val = Math.max(18, Math.min(64, val + Math.round((Math.random() - 0.5) * 26)));
       el.textContent = String(val);
-      delay *= 1.18; // decelerate, like a slowing wheel
-      if (delay < 750) setTimeout(tick, delay); // then it just... stops on a number
     };
-    setTimeout(tick, delay);
+    tick();
+    setInterval(tick, 850);
   });
 </script>

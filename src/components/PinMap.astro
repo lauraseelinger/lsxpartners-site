@@ -1,7 +1,7 @@
 ---
 // Four audit "lenses" shown as pins dropped on a map; hover/tap a pin to read
 // that lens. The map is an abstract brand-colored terrain, not a real geography.
-interface Item { t: string; d: string }
+interface Item { t: string; d: string; hard?: boolean }
 interface Props { items: Item[] }
 const { items } = Astro.props;
 const pos = [
@@ -17,7 +17,7 @@ const pos = [
       <polyline points="16,20 64,32 34,64 78,74" fill="none" stroke="var(--brown)" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.45" />
     </svg>
     {items.map((it, i) => (
-      <button type="button" class:list={['pin', i === 0 && 'is-active']} data-i={i} style={`top:${pos[i].top};left:${pos[i].left}`} aria-label={it.t}>
+      <button type="button" class:list={['pin', i === 0 && 'is-active', it.hard && 'is-hard']} data-i={i} style={`top:${pos[i].top};left:${pos[i].left}`} aria-label={it.t}>
         <span class="pin__dot">{i + 1}</span>
       </button>
     ))}
@@ -25,7 +25,7 @@ const pos = [
   <div class="pinmap__panel">
     {items.map((it, i) => (
       <div class:list={['pinmap__detail', i === 0 && 'is-active']} data-i={i}>
-        <p class="subhead">Checkpoint {i + 1}</p>
+        <p class="subhead">Checkpoint {i + 1}{it.hard && <span class="pin__hard">the hardest part</span>}</p>
         <h3>{it.t}</h3>
         <p>{it.d}</p>
       </div>
@@ -66,6 +66,13 @@ const pos = [
 
   .pinmap__panel { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-3); box-shadow: var(--shadow-card); min-height: 10rem; }
   .pinmap__detail .subhead { color: var(--olive); opacity: 1; }
+  .pin__hard { margin-left: 0.5rem; font-style: italic; font-weight: 800; font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.1rem 0.55rem; border-radius: 999px; text-transform: none; }
+  .pin.is-hard .pin__dot { animation: pinpulse 2.2s ease-in-out infinite; }
+  @keyframes pinpulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(181,84,52,0.4), var(--shadow-card); }
+    50% { box-shadow: 0 0 0 10px rgba(181,84,52,0), var(--shadow-card); }
+  }
+  @media (prefers-reduced-motion: reduce) { .pin.is-hard .pin__dot { animation: none; box-shadow: 0 0 0 3px rgba(181,84,52,0.4), var(--shadow-card); } }
   .pinmap__detail { display: none; }
   .pinmap__detail.is-active { display: block; }
   .pinmap__detail h3 { color: var(--rust); margin: 0.2rem 0; }
