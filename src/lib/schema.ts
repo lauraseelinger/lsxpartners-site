@@ -15,7 +15,7 @@ export function organizationSchema() {
     name: SITE.name,
     description: SITE.description,
     url: SITE.url,
-    logo: `${SITE.url}/logo.png`, // TODO: add logo asset (A5)
+    logo: `${SITE.url}/brand/logo/primary-rust.svg`,
     foundingDate: SITE.founded,
     founder: { '@id': PERSON_ID },
     sameAs: PERSON.sameAs,
@@ -38,6 +38,16 @@ export function personSchema() {
     image: PERSON.image,
     email: PERSON.email,
     worksFor: { '@id': ORG_ID },
+    // Topical authority — the entities AI associates Laura with.
+    knowsAbout: [
+      'AI visibility',
+      'Answer engine optimization (AEO)',
+      'Generative engine optimization (GEO)',
+      'Audience intelligence',
+      'Search engine optimization',
+      'Content strategy',
+      'Brand marketing',
+    ],
     sameAs: PERSON.sameAs,
   };
 }
@@ -81,7 +91,7 @@ export function articleSchema(a: ArticleInput) {
     '@type': 'BlogPosting',
     headline: a.title,
     description: a.description,
-    image: a.image ? `${SITE.url}${a.image}` : `${SITE.url}/logo.png`,
+    image: a.image ? `${SITE.url}${a.image}` : `${SITE.url}/og-default.png`,
     author: { '@id': PERSON_ID },
     publisher: { '@id': ORG_ID },
     mainEntityOfPage: a.url,

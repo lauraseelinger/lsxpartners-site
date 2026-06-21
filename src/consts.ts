@@ -25,7 +25,7 @@ export const PERSON = {
   description:
     'AI visibility expert helping brands get cited by AI. Founder of LSX Partners.',
   credentials: 'MBA',
-  image: `${SITE.url}/laura-seelinger.jpg`, // TODO: add headshot asset (A5)
+  image: `${SITE.url}/images/hero-portrait.jpg`,
   email: 'laura@lsxpartners.com',
   sameAs: [
     'https://www.linkedin.com/in/lseelinger',
