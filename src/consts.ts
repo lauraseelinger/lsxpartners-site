@@ -29,7 +29,9 @@ export const PERSON = {
   email: 'laura@lsxpartners.com',
   sameAs: [
     'https://www.linkedin.com/in/lseelinger',
-    // Add: newsletter, YouTube, other verified profiles as the media engine grows.
+    'https://www.instagram.com/laura_seelinger_/',
+    'https://www.youtube.com/@LSXPartners',
+    // Add more verified profiles (newsletter/Substack, X, TikTok) as they launch.
   ],
 } as const;
 
