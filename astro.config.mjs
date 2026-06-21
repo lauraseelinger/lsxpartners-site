@@ -34,11 +34,17 @@ export default defineConfig({
   site: 'https://lsxpartners.com',
   markdown: { rehypePlugins: [rehypeSectionize] },
   integrations: [sitemap(), mdx()],
-  // The only two real 301s from redirect-map.md. GitHub Pages is static, so
-  // Astro emits meta-refresh + canonical redirect pages. Every other legacy
-  // URL is preserved 1:1 by matching the file/slug name.
+  // GitHub Pages is static, so Astro emits meta-refresh + canonical redirect
+  // pages. The 9 proven pillar posts are preserved 1:1 (200, no redirect).
   redirects: {
     '/home': '/',
     '/blog/category/AI+visibility': '/blog/category/ai-visibility',
+    // Retired fractional-marketing posts (LSX is AI-visibility-only now).
+    // 301 to the closest live page so equity carries over and nothing 404s.
+    '/blog/what-is-fractional-marketing': '/services',
+    '/blog/fractional-marketing-team-small-business': '/services',
+    '/blog/fractional-marketing-directors-dental-practices': '/services',
+    '/blog/marketing-consultant-for-small-business-what-to-look-forand-what-you-really-need': '/services',
+    '/blog/small-business-social-media-content-not-working': '/blog',
   },
 });
