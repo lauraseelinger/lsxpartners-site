@@ -1,5 +1,5 @@
 ---
-import { SITE } from '../consts';
+import { SITE, GA_ID } from '../consts';
 import '../styles/global.css';
 
 interface Props {
@@ -42,9 +42,12 @@ const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<!-- Plausible analytics (privacy-first, no cookies). Ignores localhost automatically.
-     TODO(Laura): create a Plausible account and add the lsxpartners.com site to start recording. -->
-<script defer data-domain="lsxpartners.com" src="https://plausible.io/js/script.js"></script>
-<script is:inline>
-  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+<!-- Google Analytics 4 (gtag). Loaded site-wide; the Start Finder + counters
+     already emit gtag events, so they'll track automatically. -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+<script is:inline define:vars={{ GA_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_ID);
 </script>

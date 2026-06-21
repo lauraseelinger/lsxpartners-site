@@ -103,6 +103,9 @@ export const ENGAGEMENTS = [
 
 // Primary nav. Every node must trace to an audience signal and resolve to a
 // real retrievable destination (no dead/placeholder links in nav).
+// Google Analytics 4 measurement ID (tag loaded site-wide in BaseHead).
+export const GA_ID = 'G-21639NRGBM';
+
 export const NAV = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
