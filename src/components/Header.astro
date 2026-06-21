@@ -196,13 +196,26 @@ const isActive = (href: string) =>
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
 
-  // Services caret toggles its submenu open/closed (mobile).
+  // On mobile the whole Services row expands the submenu (caret OR label),
+  // instead of navigating to /services — "All services" inside still links there.
+  function toggleServices(li: Element | null, caret: Element | null) {
+    const open = li?.classList.toggle('is-open');
+    caret?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
   document.querySelectorAll('.dd-toggle').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const li = btn.closest('.has-dropdown');
-      const open = li?.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggleServices(btn.closest('.has-dropdown'), btn);
+    });
+  });
+  document.querySelectorAll('.has-dropdown > a').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const caret = link.parentElement?.querySelector('.dd-toggle') as HTMLElement | null;
+      // caret is only visible in mobile mode; if so, expand rather than navigate
+      if (caret && caret.offsetParent !== null) {
+        e.preventDefault();
+        toggleServices(link.closest('.has-dropdown'), caret);
+      }
     });
   });
 

@@ -109,3 +109,15 @@ export const NAV = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ] as const;
+
+// Blog categories. The `slug` matches a post's first tag (the post's primary
+// category) and drives /blog/category/<slug>. Order here = chip order.
+export const BLOG_CATEGORIES = [
+  { slug: 'ai-visibility', label: 'AI Visibility' },
+  { slug: 'guides', label: 'Guides' },
+  { slug: 'audience-intelligence', label: 'Audience Intelligence' },
+  { slug: 'brand-strategy', label: 'Brand Strategy' },
+] as const;
+export const catLabel = (slug: string) =>
+  BLOG_CATEGORIES.find((c) => c.slug === slug)?.label ??
+  slug.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());

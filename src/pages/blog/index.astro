@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StitchDivider from '../../components/StitchDivider.astro';
-import { CTA } from '../../consts';
+import { CTA, BLOG_CATEGORIES, catLabel } from '../../consts';
 
 // Blog index — image-forward, branded. Lists current, listed posts (unlisted
 // legacy posts keep their URLs but stay off the index). Newest first.
@@ -11,7 +11,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft && !data.un
 const [featured, ...rest] = posts;
 const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-const tagOf = (p: typeof posts[number]) => (p.data.tags[0] ?? 'ai visibility').replace(/-/g, ' ');
+const tagOf = (p: typeof posts[number]) => catLabel(p.data.tags[0] ?? 'ai-visibility');
+// Only show category chips that actually have posts, in defined order.
+const presentCats = BLOG_CATEGORIES.filter((c) => posts.some((p) => p.data.tags.includes(c.slug)));
 // Card cover: topic photo with a brand pattern blended over the top, or a
 // pattern fallback when a post has no image.
 const cover = (p: typeof posts[number], i: number) => {
@@ -31,6 +33,12 @@ const cover = (p: typeof posts[number], i: number) => {
       <p class="subhead">the blog</p>
       <h1>Field notes on AI visibility</h1>
       <p>The strategy, the data, and the receipts — pulled straight from real client work in AEO, GEO, audience intelligence, and getting brands cited by AI.</p>
+      <nav class="blogcats" aria-label="Blog categories">
+        <a class="chip is-current" href="/blog">All</a>
+        {presentCats.map((c) => (
+          <a class="chip" href={`/blog/category/${c.slug}`}>{c.label}</a>
+        ))}
+      </nav>
     </div>
   </section>
 
@@ -89,6 +97,17 @@ const cover = (p: typeof posts[number], i: number) => {
   .measure--center { margin-inline: auto; text-align: center; }
   .measure--center em { font-style: italic; }
 
+  /* category chips */
+  .blogcats { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--space-3); }
+  .chip {
+    text-decoration: none; font-family: var(--font-sub); font-style: italic; font-weight: 800;
+    font-size: var(--text-sm); padding: 0.35rem 0.95rem; border-radius: 999px;
+    border: 2px solid var(--rust); color: var(--rust); background: transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover { background: var(--rust); color: var(--cream); }
+  .chip.is-current { background: var(--rust); color: var(--cream); }
+
   .pcard__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 0.3rem; }
   .pcard__go { display: inline-block; margin-top: var(--space-1); font-weight: 700; color: var(--rust); }
 
@@ -125,7 +144,7 @@ const cover = (p: typeof posts[number], i: number) => {
   .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; overflow: hidden; }
   .pcard__tag {
     position: absolute; z-index: 2; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
-    font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px; text-transform: capitalize;
+    font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px;
   }
   .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }
   .pcard__body h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }

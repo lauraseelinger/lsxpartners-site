@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import StitchDivider from '../../../components/StitchDivider.astro';
+import { CTA, BLOG_CATEGORIES, catLabel } from '../../../consts';
 
 // Tag/category pages at clean kebab-case URLs, e.g. /blog/category/ai-visibility
 // (the legacy /blog/category/AI+visibility 301s here — see redirect-map.md).
@@ -14,25 +16,122 @@ export async function getStaticPaths() {
       posts: posts
         .filter((p) => p.data.tags.includes(tag))
         .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+      // categories that have at least one post (for the chip row)
+      presentCats: BLOG_CATEGORIES.filter((c) => posts.some((p) => p.data.tags.includes(c.slug))),
     },
   }));
 }
 
-const { tag, posts } = Astro.props;
-const label = tag.replace(/-/g, ' ');
+const { tag, posts, presentCats } = Astro.props;
+const label = catLabel(tag);
+const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const cover = (p: typeof posts[number], i: number) => {
+  const pat = `/brand/patterns/${covers[i % covers.length]}.jpg`;
+  return p.data.heroImage
+    ? { cls: `has-img from-${p.data.coverFrom}`, style: `background-image:url(${p.data.heroImage}); --pat:url('${pat}')` }
+    : { cls: '', style: `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('${pat}')` };
+};
 ---
-<BaseLayout title={`${label} articles`} description={`LSX Partners articles tagged ${label}.`}>
-  <div class="container prose" style="padding-block: var(--space-4)">
-    <h1 style="text-transform: capitalize">{label}</h1>
-    <ul class="post-list" style="list-style:none;padding:0">
-      {
-        posts.map((post) => (
-          <li style="padding-block:var(--space-2);border-bottom:1px solid var(--color-border)">
-            <a href={`/blog/${post.id}`} style="font-weight:600">{post.data.title}</a>
-            <p style="color:var(--color-text-muted);margin:var(--space-1) 0 0">{post.data.description}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+<BaseLayout
+  title={`${label} — LSX Partners blog`}
+  description={`${label} articles by Laura Seelinger — AI visibility, GEO, AEO, and getting your brand cited by AI.`}
+>
+  <!-- HEADER -->
+  <section class="band tex-cream blogx__head">
+    <div class="container measure" data-reveal>
+      <p class="subhead">the blog</p>
+      <h1>{label}</h1>
+      <nav class="blogcats" aria-label="Blog categories">
+        <a class="chip" href="/blog">All</a>
+        {presentCats.map((c) => (
+          <a class:list={['chip', c.slug === tag && 'is-current']} href={`/blog/category/${c.slug}`}>{c.label}</a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band section--cream">
+    <div class="container">
+      <div class="pgrid">
+        {posts.map((post, i) => (
+          <a class="pcard" href={`/blog/${post.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
+            <div class:list={['pcard__cover', cover(post, i).cls]} style={cover(post, i).style}>
+              <span class="pcard__tag">{label}</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__meta">{fmt(post.data.pubDate)}</p>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <span class="pcard__go">Read →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <StitchDivider bg="rust" stitch="yellow" />
+  <section class="band section--rust">
+    <div class="container measure measure--center" data-reveal="scale">
+      <p class="subhead">the newsletter</p>
+      <h2>Get it in your inbox: <em>Cited</em></h2>
+      <p>The same no-fluff takes on AI visibility, before they’re anywhere else.</p>
+      <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .band { padding-block: var(--space-6); }
+  .blogx__head { padding-block: var(--space-6); }
+  .measure { max-width: 44rem; }
+  .measure--center { margin-inline: auto; text-align: center; }
+  .measure--center em { font-style: italic; }
+
+  /* category chips */
+  .blogcats { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--space-3); }
+  .chip {
+    text-decoration: none; font-family: var(--font-sub); font-style: italic; font-weight: 800;
+    font-size: var(--text-sm); padding: 0.35rem 0.95rem; border-radius: 999px;
+    border: 2px solid var(--rust); color: var(--rust); background: transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover { background: var(--rust); color: var(--cream); }
+  .chip.is-current { background: var(--rust); color: var(--cream); }
+
+  .pcard__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 0.3rem; }
+  .pcard__go { display: inline-block; margin-top: var(--space-1); font-weight: 700; color: var(--rust); }
+
+  /* grid of cards (matches the blog index) */
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .pcard {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    background: var(--cream); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card);
+    border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .pcard:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; overflow: hidden; }
+  .has-img::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; opacity: 0.55;
+    background-image: var(--pat); background-size: 190px; background-repeat: repeat;
+    --m: linear-gradient(to bottom, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%);
+    -webkit-mask-image: var(--m); mask-image: var(--m);
+  }
+  .from-bottom::before { --m: linear-gradient(to top, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
+  .from-left::before { --m: linear-gradient(to right, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
+  .from-right::before { --m: linear-gradient(to left, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%); }
+  .pcard__tag {
+    position: absolute; z-index: 2; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
+    font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px;
+  }
+  .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }
+  .pcard__body h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }
+  .pcard__body p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+
+  @media (max-width: 860px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) { .pgrid { grid-template-columns: 1fr; } }
+</style>
