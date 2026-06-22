@@ -14,7 +14,9 @@ const { title, description, image = '/og-default.png', type = 'website' } = Astr
 // migration's "preserve every URL" rule). Astro.url + site handles it.
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const ogImage = new URL(image, SITE.url).href;
-const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
+// Append the brand suffix unless the title already contains the brand name
+// (e.g. the homepage title leads with "LSX Partners — …").
+const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
