@@ -1,9 +1,9 @@
 ---
-title: "Audience intelligence: what it is and how LSX Partners uses it to build better marketing strategy"
-description: "LSX Partners audience intelligence process analyzes thousands of real customer conversations to uncover what your audience actually needs — not what your marketing team assumes. Here's how it works."
+title: "Audience intelligence: what it is and why strategy needs it"
+description: "LSX Partners' audience intelligence process analyzes real customer conversations at scale to uncover what your audience actually needs — not what your marketing team assumes. Here's how it works."
 pubDate: 2026-03-17
 register: measured-pillar
-tags: ["audience-intelligence"]
+tags: ["audience-intelligence", "ai-visibility"]
 coverFrom: right
 heroImage: "/images/blog/audience-intelligence.jpg"
 faqs:

@@ -1,9 +1,9 @@
 ---
 title: "What is an AI visibility audit and does your brand need one?"
-description: "An AI visibility audit reveals how AI systems describe your clients’ brands, who gets recommended instead, and what it takes to fix it. Here’s what the process involves"
+description: "An AI visibility audit reveals how AI systems describe your brand, who gets recommended instead, and what it takes to fix it. Here’s what the process involves."
 pubDate: 2026-03-16
 register: measured-pillar
-tags: ["guides"]
+tags: ["guides", "ai-visibility"]
 heroImage: "/images/blog/ai-visibility-audit.jpg"
 faqs:
   - question: "What is an AI visibility audit?"

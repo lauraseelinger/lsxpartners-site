@@ -3,7 +3,7 @@ title: "American Greetings: AI Visibility Audit & Strategy"
 description: "What I'd do if I ran marketing at American Greetings: AI visibility audit results, Gen Z analog data and a creator series called Stamp'd."
 pubDate: 2026-04-25
 register: punchy-personal
-tags: ["marketing-pov"]
+tags: ["marketing-pov", "ai-visibility"]
 heroImage: "/images/blog/ai-visibility-american-greetings.jpg"
 faqs:
   - question: "What legacy brands can learn from American Greetings' analog moment?"

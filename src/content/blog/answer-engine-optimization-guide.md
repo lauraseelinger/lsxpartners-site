@@ -3,7 +3,7 @@ title: "Answer engine optimization: how to get cited by AI in 2026"
 description: "Learn what answer engine optimization is, how AI decides what to cite & how to optimize your content for ChatGPT, Perplexity & Google AI Overviews."
 pubDate: 2026-03-02
 register: measured-pillar
-tags: ["guides"]
+tags: ["guides", "ai-visibility"]
 heroImage: "/images/blog/answer-engine-optimization-guide.jpg"
 faqs:
   - question: "What is answer engine optimization?"
