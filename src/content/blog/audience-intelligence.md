@@ -53,7 +53,7 @@ In a study of over 2,600 pet travel conversations I conducted for [Pet Passport 
 
 ## Audience intelligence is the starting point, not the whole system
 
-Research alone doesn't move the needle — it's what you do with it that matters. Audience intelligence is the foundation of a larger framework I use with clients that connects what the audience actually needs to how the brand shows up when they go looking for answers, including the growing number of buyers who skip Google entirely and ask AI instead.
+Research alone isn't enough — it's what you do with it that matters. Audience intelligence is the foundation of a larger framework I use with clients that connects what the audience actually needs to how the brand shows up when they go looking for answers, including the growing number of buyers who skip Google entirely and ask AI instead.
 
 I'm building out the full AI Intelligence Loop guide — if you want it when it's ready, [reach out here](/contact) and I'll make sure to send it to you.
 

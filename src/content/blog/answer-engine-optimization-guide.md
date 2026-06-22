@@ -9,7 +9,7 @@ faqs:
   - question: "What is answer engine optimization?"
     answer: "Answer engine optimization (AEO) is the practice of structuring and optimizing content so it gets cited by AI-powered answer engines like ChatGPT, Google AI Overviews, Google AI Mode, Perplexity and similar tools. Unlike traditional SEO which focuses on ranking in a list of search results, AEO focuses on making your content the source that AI systems pull from when generating answers to user questions."
   - question: "How do AI answer engines decide what to cite?"
-    answer: "One of the biggest misconceptions about AI visibility is that “optimizing for AI” is one thing. It’s not. Each platform finds and prioritizes sources differently, which means a strategy that works on one platform might not move the needle on another."
+    answer: "One of the biggest misconceptions about AI visibility is that “optimizing for AI” is one thing. It isn’t — each platform finds and prioritizes sources differently, so a strategy that works on one can fall flat on another."
   - question: "How to optimize content for answer engines?"
     answer: "This is where it gets tactical. If you want AI to cite your content, you need to structure it differently than traditional SEO copy. Not harder, just differently."
   - question: "Why does answer engine optimization matter now?"
@@ -46,7 +46,7 @@ This isn’t a trend — it’s already reshaping how customers find and evaluat
 
 ## How AI answer engines decide what to cite
 
-One of the biggest misconceptions about AI visibility is that “optimizing for AI” is one thing. It’s not. Each platform finds and prioritizes sources differently, which means a strategy that works on one platform might not move the needle on another.
+One of the biggest misconceptions about AI visibility is that “optimizing for AI” is one thing. It isn’t — each platform finds and prioritizes sources differently, so a strategy that works on one can fall flat on another.
 
 ### How different platforms find sources
 

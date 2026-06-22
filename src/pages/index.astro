@@ -272,7 +272,9 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   @media (max-width: 820px) {
     .hero__grid { grid-template-columns: 1fr; min-height: 0; gap: var(--space-4); }
     .hero__text { max-width: none; }
-    .hero__cluster { width: min(360px, 82%); order: -1; }
+    /* Hide the photo/sticker cluster on the stacked layout so the headline
+       leads on mobile (it was appearing above the H1 and crowding the top). */
+    .hero__cluster { display: none; }
   }
   @media (max-width: 760px) {
     .split-feature__img {

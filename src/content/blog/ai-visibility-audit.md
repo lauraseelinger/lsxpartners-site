@@ -64,7 +64,7 @@ AI doesn’t read a page the way a human does. It extracts specific passages tha
 
 ### **6. Technical and schema review**
 
-Schema markup is the machine-readable layer that tells AI systems exactly what content is about — Organization schema, Person schema, FAQPage schema, Article schema. Most sites have none of it or have it only partially implemented, and the audit identifies what’s present, what’s missing and what would move the needle most.
+Schema markup is the machine-readable layer that tells AI systems exactly what content is about — Organization schema, Person schema, FAQPage schema, Article schema. Most sites have none of it or have it only partially implemented, and the audit identifies what’s present, what’s missing and what would make the biggest difference.
 
 ### **7. Competitive benchmarking**
 

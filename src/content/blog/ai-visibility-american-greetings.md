@@ -98,7 +98,7 @@ The estranged-parent moment is even more underserved, which you might think "WTF
 
 And in r/CasualConversation, a 364-upvote post: "Are you old enough to remember when Hallmark Greeting Cards had full sized stores in the mall?" People are openly nostalgic for the analog retail experience of buying cards. The conversation is happening, but American Greetings isn't in them. WOMP WOMP.
 
-THIS is what audience intelligence looks like. It's not just "Gen Z wants tactile experiences." It's outlining that the moments are HERE, the conversations are HAPPENING, and the brand built for them is invisible.
+THIS is what audience intelligence looks like. It goes past "Gen Z wants tactile experiences" to the real signal: the moments are HERE, the conversations are HAPPENING, and the brand built for them is invisible.
 
 ### Step 2: Strategic translation
 
