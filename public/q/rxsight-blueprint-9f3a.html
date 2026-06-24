@@ -61,10 +61,26 @@
   .done{display:none;background:#fff;color:var(--ink);border-radius:14px;padding:30px;margin-top:30px;border-top:6px solid var(--olive);}
   .done.show{display:block;} .done ol{padding-left:20px;} .done li{font-size:14px;margin-bottom:8px;}
   footer{text-align:center;color:var(--muted);font-size:12px;padding:24px;}
+  .gate{position:fixed;inset:0;z-index:9999;background:var(--green);color:var(--cream);display:flex;align-items:center;justify-content:center;padding:24px;}
+  .gatecard{max-width:380px;width:100%;text-align:center;}
+  .gatecard .gbrand{color:var(--sand);font-size:13px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:18px;}
+  .gatecard h2{color:#fff;font-size:25px;margin-bottom:6px;}
+  .gatecard p{color:var(--sand);font-size:14px;margin:0 0 18px;}
   @media(max-width:680px){.twocol{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<iframe name="pingframe" style="display:none" title=""></iframe>
+<div id="gate" class="gate">
+  <div class="gatecard">
+    <div class="gbrand">LSX Partners · Proposal</div>
+    <h2>Prepared for Concentrek</h2>
+    <p>Enter your name and email to view this proposal.</p>
+    <input class="field" id="gName" placeholder="Your name" autocomplete="name">
+    <input class="field" id="gEmail" placeholder="Your email" type="email" autocomplete="email">
+    <button class="btn" onclick="unlock()">View proposal</button>
+  </div>
+</div>
 <header>
   <div class="brand">LSX Partners <span class="ptag">Proposal</span></div>
   <h1>RxSight Website — AI Visibility Blueprint</h1>
@@ -150,14 +166,31 @@
 <script>
   var ENDPOINT = "https://script.google.com/macros/s/AKfycbxxh2tqzJ4d2-c1qH5VwmbDseH21S2xbtMs1aatKu-GJmdG0qlgJxEA9B-3frBhLbAY/exec";
   var QUOTE_ID = "rxsight-blueprint";
-  function ping(params){ try{ (new Image()).src = ENDPOINT+'?'+params+'&_='+(new Date()).getTime(); }catch(e){} }
-  if(ENDPOINT.indexOf('PASTE_')!==0){ ping('event=view&quote='+encodeURIComponent(QUOTE_ID)); }
+  // reliable cross-origin ping: real form submit into a hidden iframe (not blocked like background images)
+  function ping(obj){
+    try{
+      obj.quote = QUOTE_ID;
+      var f=document.createElement('form');
+      f.method='GET'; f.action=ENDPOINT; f.target='pingframe';
+      for(var k in obj){ var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=obj[k]; f.appendChild(i); }
+      document.body.appendChild(f); f.submit(); document.body.removeChild(f);
+    }catch(e){}
+  }
+  function unlock(){
+    var name=document.getElementById('gName').value.trim();
+    var email=document.getElementById('gEmail').value.trim();
+    if(!name||!email){ alert('Please enter your name and email to view the proposal.'); return; }
+    ping({event:'view', name:name, email:email});
+    document.getElementById('gate').style.display='none';
+    document.getElementById('acName').value=name;
+    document.getElementById('acEmail').value=email;
+  }
   function accept(){
     var name=document.getElementById('acName').value.trim();
     var email=document.getElementById('acEmail').value.trim();
     if(!name||!email){ alert('Please add your name and email so we can send the confirmation.'); return; }
     document.getElementById('acBtn').disabled=true;
-    ping('event=accept&quote='+encodeURIComponent(QUOTE_ID)+'&name='+encodeURIComponent(name)+'&email='+encodeURIComponent(email));
+    ping({event:'accept', name:name, email:email});
     document.getElementById('acceptBox').style.display='none';
     document.getElementById('doneBox').classList.add('show');
     document.getElementById('doneBox').scrollIntoView({behavior:'smooth'});
