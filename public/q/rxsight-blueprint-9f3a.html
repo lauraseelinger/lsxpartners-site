@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>RxSight — Website AI Visibility Blueprint · LSX Partners</title>
+<style>
+  :root{--green:#21362c;--green2:#2f4a3c;--rust:#b55434;--olive:#8b8c4a;--cream:#f7f1e3;--cream2:#ece4d3;--sand:#e6d6ad;--ink:#2c2418;--muted:#7a705f;--line:#d8cdb4;--inret:#3f6b54;}
+  *{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;line-height:1.6;}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--green);margin:0 0 .3em;}
+  header{background:var(--green);color:var(--cream);padding:36px 40px;border-bottom:6px solid var(--rust);}
+  header .brand{color:var(--sand);font-size:13px;letter-spacing:.09em;text-transform:uppercase;}
+  .ptag{background:var(--rust);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:3px 11px;border-radius:12px;margin-left:8px;}
+  header h1{color:#fff;font-size:30px;margin:12px 0 4px;line-height:1.15;}
+  main{max-width:820px;margin:0 auto;padding:36px 24px 80px;}
+  section{margin-bottom:38px;}
+  h2{font-size:22px;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:16px;}
+  p{font-size:15px;} .muted{color:var(--muted);}
+  /* two-audience callout */
+  .callout{background:var(--green);color:var(--cream);border-radius:12px;padding:22px 24px;border-left:6px solid var(--rust);}
+  .callout h3{color:#fff;font-size:18px;} .callout p{color:var(--sand);font-size:14px;margin:.4em 0 0;}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+  .aud{background:rgba(255,255,255,.09);border-radius:9px;padding:14px;}
+  .aud .at{color:#fff;font-weight:700;font-size:14px;} .aud .ad{color:var(--sand);font-size:12.5px;margin-top:5px;}
+  .aud .tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:10px;margin-top:8px;}
+  .tag.done{background:var(--sand);color:var(--green);} .tag.build{background:var(--rust);color:#fff;}
+  /* process steps */
+  .step{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:10px;}
+  .stepnum{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--green);color:#fff;font-family:Georgia,serif;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .step h3{font-size:15.5px;margin-bottom:3px;} .step p{font-size:13.5px;margin:0;} .step .data{font-size:12px;color:var(--rust);font-weight:600;margin-top:6px;}
+  /* deliverables / data table */
+  .drow{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
+  .drow .dn{font-weight:700;color:var(--green);font-size:14.5px;} .drow .dd{font-size:13px;margin-top:3px;}
+  .drow .db{font-size:12px;color:var(--muted);margin-top:6px;border-top:1px dashed var(--line);padding-top:6px;}
+  .drow .db b{color:var(--rust);}
+  /* pricing */
+  .ptable{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .prow{display:flex;justify-content:space-between;padding:13px 18px;border-bottom:1px solid var(--cream2);font-size:14px;}
+  .prow:last-child{border:none;} .prow .pv{font-weight:700;color:var(--green);white-space:nowrap;}
+  .prow.base .pv{color:var(--muted);text-decoration:line-through;}
+  .prow.final{background:var(--sand);} .prow.final .pl{font-family:Georgia,serif;font-size:17px;color:var(--green);} .prow.final .pv{font-size:20px;color:var(--green);}
+  .prow .ic{display:inline-block;width:20px;margin-right:5px;text-align:center;}
+  .ic.ok{color:var(--inret);font-weight:700;}
+  .prow.chk .pv{color:var(--inret);font-weight:600;}
+  .prow.waive .pv{color:var(--rust);text-decoration:line-through;font-weight:700;}
+  .ic.star{color:var(--rust);font-weight:700;}
+  .turnaround{display:flex;align-items:center;gap:18px;background:var(--rust);color:#fff;border-radius:12px;padding:18px 22px;margin-top:16px;box-shadow:0 5px 16px rgba(181,84,52,.30);}
+  .ta-badge{flex-shrink:0;background:#fff;color:var(--rust);font-family:Georgia,serif;font-weight:700;font-size:17px;border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.05;}
+  .ta-text{font-size:14px;color:#fff;} .ta-text b{color:#fff;}
+  .pnote{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic;}
+  .scope{background:var(--cream2);border-radius:10px;padding:16px 18px;font-size:13.5px;}
+  /* accept */
+  .accept{background:var(--green);color:var(--cream);border-radius:14px;padding:28px;margin-top:34px;text-align:center;}
+  .accept h2{color:#fff;border:none;} .accept p{color:var(--sand);font-size:14px;margin:.4em 0 16px;}
+  .field{display:block;width:100%;max-width:340px;margin:8px auto;padding:11px 13px;border-radius:8px;border:1px solid var(--olive);font-size:14px;}
+  .btn{background:var(--rust);color:#fff;border:none;border-radius:8px;padding:13px 30px;font-size:15px;font-weight:700;cursor:pointer;}
+  .btn:disabled{opacity:.6;cursor:default;}
+  .done{display:none;background:#fff;color:var(--ink);border-radius:14px;padding:30px;margin-top:30px;border-top:6px solid var(--olive);}
+  .done.show{display:block;} .done ol{padding-left:20px;} .done li{font-size:14px;margin-bottom:8px;}
+  footer{text-align:center;color:var(--muted);font-size:12px;padding:24px;}
+  @media(max-width:680px){.twocol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">LSX Partners <span class="ptag">Proposal</span></div>
+  <h1>RxSight Website — AI Visibility Blueprint</h1>
+</header>
+<main>
+
+  <section>
+    <h2>What I bring to the build</h2>
+    <p>The AI-visibility foundation that goes <em>underneath</em> the new site — the audience intelligence and architecture strategy that shapes how it's built (navigation, site map, page structure, schema) so AI search can find, parse, and accurately represent RxSight from launch, not after.</p>
+    <p class="muted">A different layer than the optimizations already running on the current site: those improve what's there now; this sets how the new one is built.</p>
+  </section>
+
+  <section>
+    <h2>Why this build is bigger than most</h2>
+    <div class="callout">
+      <h3>RxSight speaks to two audiences — so it needs two sets of audience intelligence</h3>
+      <p>Patients and eye-care professionals search differently, use different language, and get sourced differently by AI. Both audiences feed the architecture — but the research underneath it is built twice.</p>
+      <div class="twocol">
+        <div class="aud"><div class="at">B2C — patients</div><div class="ad">The language, fears, and questions patients actually use, mined from open communities and forums. The audience-intelligence system and AI results baseline are already running in the retainer.</div><span class="tag done">Already running in the retainer</span></div>
+        <div class="aud"><div class="at">B2B — eye-care professionals</div><div class="ad">Built by listening to where professionals actually talk — LinkedIn and the other forums and communities this audience uses.</div><span class="tag build">Listening to build</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The process</h2>
+    <div class="step"><div class="stepnum">1</div><div><h3>Audience intelligence — both audiences</h3><p>Establish what each audience searches, asks, and decides on. B2C is refreshed from the audience-intelligence system already running in the retainer. B2B is built by listening to where professionals talk — LinkedIn and the other forums this audience uses.</p><div class="data">Data: conversation mining (B2C communities) + professional listening across LinkedIn &amp; relevant forums (B2B)</div></div></div>
+    <div class="step"><div class="stepnum">2</div><div><h3>AI results baseline</h3><p>Where RxSight shows up in AI answers vs. competitors. The B2C baseline is already running in the retainer; the B2B baseline is built here.</p><div class="data">Data: prompt audits across ChatGPT, Gemini, Perplexity &amp; Claude · Answer Share · competitive benchmark</div></div></div>
+    <div class="step"><div class="stepnum">3</div><div><h3>Analyze &amp; synthesize</h3><p>This is where my strategic input does the work — reading the audience signal against the AI-results gaps and weighing it alongside everything else the site has to do (user experience, brand, conversion, traditional search) to surface the patterns, priorities, and content opportunities that drive the build. The data is raw material; the direction is the judgment I bring to it.</p><div class="data">Strategy + inputs: my analysis of the audience intelligence (both audiences) + AI results baseline</div></div></div>
+    <div class="step"><div class="stepnum">4</div><div><h3>Content architecture</h3><p>My strategic read turns the synthesis into a site map and navigation recommendation — what to surface, how to structure it as hubs and clusters, and why, so it serves both audiences and the answers AI needs. From there I work with the team to land the final architecture, folding in their input and constraints so the plan holds up technically and structurally — not just for AI.</p><div class="data">Strategy + collaboration: my AI-visibility read of the synthesis + grounding audit, finalized with the team</div></div></div>
+    <div class="step"><div class="stepnum">5</div><div><h3>Structured-data templates</h3><p>Strategically organized structured-data templates, provided by page type, so the new site is machine-readable and AI can extract the right facts.</p><div class="data">Data: content architecture + technical AI-readiness check</div></div></div>
+    <div class="step"><div class="stepnum">6</div><div><h3>The Blueprint, delivered</h3><p>Everything synthesized into one plan, with a short walkthrough so the team builds against it.</p></div></div>
+  </section>
+
+  <section>
+    <h2>What you get — and the data behind it</h2>
+    <div class="drow"><div class="dn">Site map + content architecture</div><div class="dd">Navigation, primary content areas, and a hub/cluster structure, shaped by both audiences.</div><div class="db"><b>Backed by:</b> deep AI-visibility expertise, applied to the audience intelligence (both audiences), grounding search audit, and prompt audits</div></div>
+    <div class="drow"><div class="dn">AI results baseline</div><div class="dd">Where RxSight stands in AI answers vs. competitors — the line we measure the rebuild against. B2C established; B2B built here.</div><div class="db"><b>Backed by:</b> prompt audits + Answer Share + competitive benchmark</div></div>
+    <div class="drow"><div class="dn">Structured-data templates</div><div class="dd">Strategically organized templates, provided by page type for the build team to implement.</div><div class="db"><b>Backed by:</b> content architecture + AI-readiness check</div></div>
+    <div class="drow"><div class="dn">Content roadmap</div><div class="dd">Pillar topics, clusters, and brief direction so the team knows what to produce and why.</div><div class="db"><b>Backed by:</b> audience intelligence + topic-cluster analysis</div></div>
+    <div class="drow"><div class="dn">Findings presentation</div><div class="dd">A walkthrough of the Blueprint for the team to build from.</div><div class="db"><b>Backed by:</b> the full engagement, synthesized</div></div>
+  </section>
+
+  <section>
+    <h2>Investment</h2>
+    <p>A site serving both B2B and B2C audiences typically starts at $9,000 — both sets of audience intelligence have to be built, and the whole site balanced across them.</p>
+    <p>RxSight has a head start, and I'm turning the first deliverable — site map and navigation recommendations — around by <b>Wednesday, July 1</b>. Here's what's folded into the rate:</p>
+    <div class="ptable">
+      <div class="prow base"><span class="pl">Typical for a site serving both B2B and B2C audiences</span><span class="pv">$9,000</span></div>
+      <div class="prow chk"><span class="pl"><span class="ic ok">✓</span> B2C audience intelligence already running in the retainer</span><span class="pv">included</span></div>
+      <div class="prow chk"><span class="pl"><span class="ic ok">✓</span> Client knowledge in place — I already know where to start on B2B</span><span class="pv">included</span></div>
+      <div class="prow chk waive"><span class="pl"><span class="ic star">★</span> Rush fee for the expedited turnaround — waived as partner goodwill</span><span class="pv">$1,500</span></div>
+      <div class="prow final"><span class="pl">Your rate</span><span class="pv">$5,850</span></div>
+    </div>
+    <div class="turnaround">
+      <div class="ta-badge">BY<br>JULY 1</div>
+      <div class="ta-text">I'm delivering the site map and navigation recommendations by <b>Wednesday, July 1</b> — ahead of the July 7 client deadline, so the team has room to review before it goes out.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scope &amp; timeline</h2>
+    <div class="scope">
+      First deliverable — the site map and navigation recommendations — to you by <b>Wednesday, July 1</b>, ahead of the July 7 client deadline so the team has time to review. I'll be out from July 2 through the holiday weekend, so the July 1 delivery puts everything in the team's hands ahead of the break. The full Blueprint follows over the weeks after, sequenced with the build. Engagements like this typically include 30- and 60-day post-project check-ins — for RxSight, that follow-up folds into the retainer.<br><br>
+      <b>Payment:</b> typically 50% at signing and 50% on delivery. With Pam out, full payment will follow on her return. Final figure confirmed at sign-off.
+    </div>
+  </section>
+
+  <div class="accept" id="acceptBox">
+    <h2>Ready to move forward?</h2>
+    <p>Accepting approves this scope and the $5,850 partner rate, with payment as noted above — a simple sign-off, no separate contract needed. I'll follow up to get started. Questions first? Just reply to the email this came from.</p>
+    <input class="field" id="acName" placeholder="Your name" autocomplete="name">
+    <input class="field" id="acEmail" placeholder="Your email" type="email" autocomplete="email">
+    <button class="btn" id="acBtn" onclick="accept()">Accept &amp; approve</button>
+  </div>
+  <div class="done" id="doneBox">
+    <h2 style="color:var(--green)">Great — thank you!</h2>
+    <p>Your approval is recorded. I'll follow up to confirm details and get started — site map and navigation recommendations to you by Wednesday, July 1.</p>
+  </div>
+</main>
+<footer>LSX Partners</footer>
+
+<script>
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbxxh2tqzJ4d2-c1qH5VwmbDseH21S2xbtMs1aatKu-GJmdG0qlgJxEA9B-3frBhLbAY/exec";
+  var QUOTE_ID = "rxsight-blueprint";
+  function ping(params){ try{ (new Image()).src = ENDPOINT+'?'+params+'&_='+(new Date()).getTime(); }catch(e){} }
+  if(ENDPOINT.indexOf('PASTE_')!==0){ ping('event=view&quote='+encodeURIComponent(QUOTE_ID)); }
+  function accept(){
+    var name=document.getElementById('acName').value.trim();
+    var email=document.getElementById('acEmail').value.trim();
+    if(!name||!email){ alert('Please add your name and email so we can send the confirmation.'); return; }
+    document.getElementById('acBtn').disabled=true;
+    ping('event=accept&quote='+encodeURIComponent(QUOTE_ID)+'&name='+encodeURIComponent(name)+'&email='+encodeURIComponent(email));
+    document.getElementById('acceptBox').style.display='none';
+    document.getElementById('doneBox').classList.add('show');
+    document.getElementById('doneBox').scrollIntoView({behavior:'smooth'});
+  }
+</script>
+</body>
+</html>
