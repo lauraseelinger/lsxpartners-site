@@ -35,6 +35,18 @@ export const PERSON = {
   ],
 } as const;
 
+// "Cited" — the Q&A micro-podcast. Name is provisional (Laura to confirm).
+export const PODCAST = {
+  name: 'Cited',
+  tagline: 'AI visibility, one question at a time.',
+  description: 'A short Q&A podcast on AI visibility (AEO/GEO) — real questions marketers and brand leaders ask, answered straight. Hosted by Laura Seelinger, founder of LSX Partners.',
+  // Directory + channel links — fill in after distribution is approved.
+  apple: '',
+  spotify: '',
+  youtube: 'https://www.youtube.com/@LSXPartners',
+  rss: '',
+} as const;
+
 // Calls-to-action. TODO(Laura): confirm these.
 // - Calendly link (MCP token expired at build time — placeholder below).
 // - "Cited" newsletter subscribe URL (LinkedIn newsletter, or native later).
@@ -110,6 +122,7 @@ export const NAV = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Podcast', href: '/podcast' },
   { label: 'Speaking', href: '/speaking' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

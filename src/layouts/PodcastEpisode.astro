@@ -1,0 +1,201 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import StitchDivider from '../components/StitchDivider.astro';
+import FAQ from '../components/FAQ.astro';
+import AnswerBlock from '../components/AnswerBlock.astro';
+import { podcastEpisodeSchema, faqSchema, type FaqItem } from '../lib/schema';
+import { PERSON, CTA } from '../consts';
+
+// "Cited" podcast episode template. PodcastEpisode + (site-wide) Person+Org
+// schema, plus FAQPage when the episode has a real Q&A section.
+// Branded header band + feathered hero + answer-first lead + Listen block +
+// readable body + author/subscribe foot — mirrors the blog post template.
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  episode: number;
+  duration?: string;
+  youtubeId?: string;
+  buzzsproutEmbed?: string;
+  heroImage?: string;
+  faqs?: FaqItem[];
+  related?: { id: string; title: string; heroImage?: string }[];
+}
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  episode,
+  duration,
+  youtubeId,
+  buzzsproutEmbed,
+  heroImage,
+  faqs = [],
+  related = [],
+} = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+
+const episodeSchema = podcastEpisodeSchema({
+  title,
+  description,
+  url,
+  episode,
+  datePublished: pubDate,
+  duration,
+  image: heroImage,
+});
+const schemas = faqs.length > 0 ? [episodeSchema, faqSchema(faqs)] : [episodeSchema];
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title={title} description={description} type="article" schemas={schemas}>
+  <article class="post">
+    <header class="post__head tex-cream">
+      <div class="container measure">
+        <p class="subhead"><a href="/podcast">the Cited podcast</a></p>
+        <h1>{title}</h1>
+        <p class="post__meta">
+          Episode {episode}
+          · By <a href="/about" rel="author">{PERSON.name}</a>
+          · <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
+          {updatedDate && (
+            <> · Updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>
+          )}
+        </p>
+      </div>
+    </header>
+
+    {heroImage && (
+      <div class="container">
+        <img class="post__hero" src={heroImage} alt="" />
+      </div>
+    )}
+
+    <div class="container">
+      <div class="measure">
+        <AnswerBlock>
+          <p>{description}</p>
+        </AnswerBlock>
+
+        <div class="post__listen">
+          {youtubeId ? (
+            <div class="post__video">
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}`}
+                title={title}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          ) : buzzsproutEmbed ? (
+            <div class="post__audio" set:html={buzzsproutEmbed}></div>
+          ) : (
+            <p class="post__soon">🎧 Audio + video dropping shortly — the full written version is below.</p>
+          )}
+        </div>
+      </div>
+
+      <div class:list={['prose', 'post__body', 'measure']}>
+        <slot />
+      </div>
+      {faqs.length > 0 && (
+        <div class="post__faq measure">
+          <FAQ items={faqs} heading="Questions I get about this" />
+        </div>
+      )}
+    </div>
+
+    {related.length > 0 && (
+      <>
+        <StitchDivider bg="cream" stitch="rust" />
+        <section class="band section--cream post__related">
+          <div class="container">
+            <p class="subhead" data-reveal>keep listening</p>
+            <div class="rel-grid">
+              {related.map((r, i) => (
+                <a class="rel" href={`/podcast/${r.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
+                  {r.heroImage && <div class="rel__img" style={`background-image:url(${r.heroImage})`}></div>}
+                  <h3>{r.title}</h3>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
+    )}
+
+    <StitchDivider bg="olive" stitch="ivory" />
+    <footer class="band section--olive post__foot">
+      <div class="container post__footgrid">
+        <div class="author" data-reveal>
+          <img class="author__img" src="/images/laura-cutout.png" alt={PERSON.name} />
+          <div>
+            <p class="author__name">{PERSON.name}</p>
+            <p class="author__bio">AI visibility expert & founder of LSX Partners. I help brands and agencies get cited by AI — and I'm in it every day. <a href="/about">More about me →</a></p>
+          </div>
+        </div>
+        <div class="post__cta" data-reveal>
+          <p class="subhead">keep listening</p>
+          <a class="button" href={CTA.newsletter}>Subscribe to <em>Cited</em></a>
+          <a class="post__back" href="/podcast">← All episodes</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .post__head { padding-block: var(--space-5) var(--space-4); }
+  .measure { max-width: 46rem; margin-inline: auto; }
+  .post__head .subhead a { color: var(--olive); }
+  .post__head h1 { margin: var(--space-1) 0 var(--space-2); }
+  .post__meta { color: var(--color-text-muted); font-size: var(--text-sm); }
+  .post__hero {
+    display: block; width: 100%; max-height: 460px; object-fit: cover; border-radius: 16px;
+    margin-block: var(--space-4);
+    -webkit-mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
+    mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
+  }
+  .post__body { padding-block: var(--space-4); }
+  /* body measure — wide enough to use the space, capped for readability */
+  .post__body { max-width: 46rem; }
+
+  .post__listen { margin-block: var(--space-3); }
+  .post__video { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; }
+  .post__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .post__soon { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0; }
+
+  .post__faq { max-width: 46rem; margin: var(--space-4) auto 0; border-top: 1px solid var(--color-border); }
+
+  .band { padding-block: var(--space-6); }
+  .post__related .subhead { color: var(--olive); margin-bottom: var(--space-3); }
+  .rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .rel {
+    text-decoration: none; color: inherit; background: var(--cream); border-radius: 14px; overflow: hidden;
+    box-shadow: var(--shadow-card); border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .rel:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .rel__img { aspect-ratio: 16 / 9; background-size: cover; background-position: center; }
+  .rel h3 { margin: 0; padding: var(--space-2) var(--space-2) var(--space-3); font-size: var(--text-md, 1.05rem); }
+  @media (max-width: 760px) { .rel-grid { grid-template-columns: 1fr; } }
+
+  .post__foot { padding-block: var(--space-5); }
+  .post__footgrid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: var(--space-4); align-items: center; }
+  .author { display: flex; gap: var(--space-2); align-items: center; }
+  .author__img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); flex: none; background: var(--cream); }
+  .author__name { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--cream); margin: 0 0 0.2rem; }
+  .author__bio { color: rgba(252,245,229,0.9); font-size: var(--text-sm); margin: 0; max-width: 52ch; }
+  .author__bio a { color: var(--cream); text-decoration: underline; }
+  .post__cta .subhead { color: var(--peach); }
+  .post__cta em { font-style: italic; }
+  .post__back { display: block; margin-top: var(--space-2); color: var(--cream); font-weight: 600; }
+
+  @media (max-width: 760px) {
+    .post__footgrid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -31,4 +31,26 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+// "Cited" Q&A micro-podcast. Each episode is one buyer question (= the title /
+// grounding term), an answer-first description, and the written long-form below.
+const podcast = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/podcast' }),
+  schema: z.object({
+    title: z.string(),              // the episode question (= grounding term)
+    description: z.string(),        // front-loaded answer-first summary (also the AnswerBlock lead + meta)
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    episode: z.number(),
+    duration: z.string().optional(),       // e.g. "PT4M12S" ISO8601, optional
+    youtubeId: z.string().optional(),      // YouTube video id for the video version
+    buzzsproutEmbed: z.string().optional(),// full Buzzsprout iframe embed html, optional
+    heroImage: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
+    related: z.array(z.string()).default([]),
+    unlisted: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, podcast };

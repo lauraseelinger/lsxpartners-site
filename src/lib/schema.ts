@@ -1,7 +1,7 @@
 // JSON-LD builders. Schema = machine-readable trust; baked into templates,
 // never hand-rolled per page (ai-site-foundation.md step 3). Shapes adapted
 // from clients/kwikset/assets/AI_GEO_implementation.md.
-import { SITE, PERSON, SERVICES } from '../consts';
+import { SITE, PERSON, SERVICES, PODCAST } from '../consts';
 
 const ORG_ID = `${SITE.url}/#organization`;
 const PERSON_ID = `${SITE.url}/#person`;
@@ -97,6 +97,31 @@ export function articleSchema(a: ArticleInput) {
     mainEntityOfPage: a.url,
     datePublished: iso(a.datePublished),
     dateModified: iso(a.dateModified ?? a.datePublished),
+  };
+}
+
+type PodcastInput = {
+  title: string; description: string; url: string; episode: number;
+  datePublished: string | Date; duration?: string; audioUrl?: string; image?: string;
+};
+
+// PodcastEpisode — each "Cited" episode. Author = verified Person by @id,
+// publisher = Org by @id, nested in the PodcastSeries the hub represents.
+export function podcastEpisodeSchema(p: PodcastInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastEpisode',
+    url: p.url,
+    name: p.title,
+    episodeNumber: p.episode,
+    description: p.description,
+    datePublished: iso(p.datePublished),
+    ...(p.duration ? { timeRequired: p.duration } : {}),
+    ...(p.image ? { image: `${SITE.url}${p.image}` } : {}),
+    ...(p.audioUrl ? { associatedMedia: { '@type': 'MediaObject', contentUrl: p.audioUrl } } : {}),
+    partOfSeries: { '@type': 'PodcastSeries', name: PODCAST.name, url: `${SITE.url}/podcast` },
+    author: { '@id': PERSON_ID },
+    publisher: { '@id': ORG_ID },
   };
 }
 

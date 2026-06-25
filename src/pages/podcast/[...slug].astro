@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import PodcastEpisode from '../../layouts/PodcastEpisode.astro';
+
+// One static page per episode. Slug = the markdown filename, so URLs are
+// controlled by file naming.
+export async function getStaticPaths() {
+  const episodes = await getCollection('podcast', ({ data }) => !data.draft);
+  const listed = episodes.filter((e) => !e.data.unlisted);
+  return episodes.map((episode) => {
+    // internal linking: other listed episodes sharing a tag, by episode order
+    const related = listed
+      .filter((e) => e.id !== episode.id && e.data.tags.some((t) => episode.data.tags.includes(t)))
+      .sort((a, b) => a.data.episode - b.data.episode)
+      .slice(0, 3)
+      .map((e) => ({ id: e.id, title: e.data.title, heroImage: e.data.heroImage }));
+    return { params: { slug: episode.id }, props: { episode, related } };
+  });
+}
+
+const { episode, related } = Astro.props;
+const { Content } = await render(episode);
+---
+<PodcastEpisode
+  title={episode.data.title}
+  description={episode.data.description}
+  pubDate={episode.data.pubDate}
+  updatedDate={episode.data.updatedDate}
+  episode={episode.data.episode}
+  duration={episode.data.duration}
+  youtubeId={episode.data.youtubeId}
+  buzzsproutEmbed={episode.data.buzzsproutEmbed}
+  heroImage={episode.data.heroImage}
+  faqs={episode.data.faqs}
+  related={related}
+>
+  <Content />
+</PodcastEpisode>

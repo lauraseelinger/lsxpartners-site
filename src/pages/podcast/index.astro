@@ -1,0 +1,137 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StitchDivider from '../../components/StitchDivider.astro';
+import { CTA, PODCAST } from '../../consts';
+
+// "Cited" podcast hub — a learning path, so episodes run oldest/first → newest.
+// Lists current, listed episodes (unlisted ones keep their URLs, off the index).
+const episodes = (await getCollection('podcast', ({ data }) => !data.draft && !data.unlisted))
+  .sort((a, b) => a.data.episode - b.data.episode);
+const [first, ...rest] = episodes;
+const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-peach'];
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+// Card cover: topic photo with a brand pattern blended over the top, or a
+// pattern fallback when an episode has no image.
+const cover = (e: typeof episodes[number], i: number) => {
+  const pat = `/brand/patterns/${covers[i % covers.length]}.jpg`;
+  return e.data.heroImage
+    ? { cls: `has-img`, style: `background-image:url(${e.data.heroImage}); --pat:url('${pat}')` }
+    : { cls: '', style: `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('${pat}')` };
+};
+---
+<BaseLayout
+  title={PODCAST.name}
+  description={PODCAST.description}
+>
+  <!-- HEADER -->
+  <section class="band tex-cream blogx__head">
+    <div class="container measure" data-reveal>
+      <p class="subhead">the podcast</p>
+      <h1>{PODCAST.name}</h1>
+      <p>{PODCAST.tagline}</p>
+      <p>{PODCAST.description}</p>
+    </div>
+  </section>
+
+  <!-- EPISODES -->
+  <StitchDivider bg="cream" stitch="rust" />
+  <section class="band section--cream">
+    <div class="container">
+      {first && (
+        <a class="feat" href={`/podcast/${first.id}`} data-reveal>
+          <div class:list={['feat__cover', cover(first, 0).cls]} style={cover(first, 0).style}></div>
+          <div class="feat__body">
+            <p class="pcard__meta">start here · episode {first.data.episode} · {fmt(first.data.pubDate)}</p>
+            <h2>{first.data.title}</h2>
+            <p>{first.data.description}</p>
+            <span class="pcard__go">Listen + read →</span>
+          </div>
+        </a>
+      )}
+
+      {rest.length > 0 && (
+        <div class="pgrid">
+          {rest.map((ep, i) => (
+            <a class="pcard" href={`/podcast/${ep.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
+              <div class:list={['pcard__cover', cover(ep, i + 1).cls]} style={cover(ep, i + 1).style}>
+                <span class="pcard__tag">Episode {ep.data.episode}</span>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__meta">{fmt(ep.data.pubDate)}</p>
+                <h3>{ep.data.title}</h3>
+                <p>{ep.data.description}</p>
+                <span class="pcard__go">Listen + read →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <StitchDivider bg="rust" stitch="yellow" />
+  <section class="band section--rust">
+    <div class="container measure measure--center" data-reveal="scale">
+      <p class="subhead">the newsletter</p>
+      <h2>Get it in your inbox: <em>Cited</em></h2>
+      <p>My takes on AI visibility, straight from the work — before they’re anywhere else.</p>
+      <a class="button button--ghost" href={CTA.newsletter}>Subscribe to Cited</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .band { padding-block: var(--space-6); }
+  .blogx__head { padding-block: var(--space-6); }
+  .measure { max-width: 44rem; }
+  .measure--center { margin-inline: auto; text-align: center; }
+  .measure--center em { font-style: italic; }
+
+  .pcard__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 0.3rem; }
+  .pcard__go { display: inline-block; margin-top: var(--space-1); font-weight: 700; color: var(--rust); }
+
+  /* featured */
+  .feat {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; text-decoration: none; color: inherit;
+    background: var(--cream); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-card);
+    border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease; margin-bottom: var(--space-5);
+  }
+  .feat:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .feat__cover { position: relative; min-height: 280px; background-size: cover; background-position: center; overflow: hidden; }
+  /* brand pattern blended over the top of the topic photo */
+  .has-img::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; opacity: 0.55;
+    background-image: var(--pat); background-size: 190px; background-repeat: repeat;
+    --m: linear-gradient(to bottom, rgba(0,0,0,0.82) 0, rgba(0,0,0,0.42) 34%, rgba(0,0,0,0.12) 64%, transparent 90%);
+    -webkit-mask-image: var(--m); mask-image: var(--m);
+  }
+  .feat__body { padding: var(--space-4); align-self: center; }
+  .feat__body h2 { margin: 0 0 var(--space-1); }
+  .feat__body p { max-width: 52ch; }
+
+  /* grid of cards */
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .pcard {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    background: var(--cream); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card);
+    border: 2px solid transparent; transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .pcard:hover { transform: translateY(-3px); border-color: var(--rust); }
+  .pcard__cover { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; overflow: hidden; }
+  .pcard__tag {
+    position: absolute; z-index: 2; bottom: 8px; left: 8px; font-family: var(--font-sub); font-weight: 800; font-style: italic;
+    font-size: var(--text-sm); color: var(--cream); background: var(--rust); padding: 0.2rem 0.6rem; border-radius: 999px;
+  }
+  .pcard__body { padding: var(--space-3); display: flex; flex-direction: column; }
+  .pcard__body h3 { margin: 0 0 0.3rem; font-size: var(--text-lg); }
+  .pcard__body p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0; }
+
+  @media (max-width: 860px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) {
+    .feat { grid-template-columns: 1fr; }
+    .feat__cover { min-height: 200px; }
+    .pgrid { grid-template-columns: 1fr; }
+  }
+</style>
