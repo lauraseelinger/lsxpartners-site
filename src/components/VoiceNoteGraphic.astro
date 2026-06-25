@@ -1,0 +1,32 @@
+---
+// On-brand cover art for podcast episodes with no hero photo: an iMessage-style
+// voice-note bubble (play button + waveform) — the show's whole concept, drawn
+// in brand colors. The waveform is seeded by episode number so every card looks
+// a little different instead of identical.
+interface Props { episode?: number; class?: string; }
+const { episode = 1, class: className = '' } = Astro.props;
+
+const BARS = 26;
+const seed = episode + 2;
+const bars = Array.from({ length: BARS }, (_, i) => {
+  const n = Math.sin((i + 1) * seed * 12.9898) * 43758.5453;
+  const f = n - Math.floor(n);                 // 0..1 pseudo-random
+  return Math.round((8 + f * 34) * 10) / 10;   // bar height 8..42
+});
+const BAR_W = 4, GAP = 2, START_X = 104, MID_Y = 90;
+---
+<svg class:list={['vng', className]} viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Voice note">
+  <!-- speech bubble: rounded, with a sharp bottom-left "tail" corner -->
+  <path d="M62 52 H258 A22 22 0 0 1 280 74 V106 A22 22 0 0 1 258 128 H40 V74 A22 22 0 0 1 62 52 Z" fill="var(--rust)" />
+  <!-- play button -->
+  <circle cx="72" cy="90" r="17" fill="var(--cream)" />
+  <path d="M67 81 L82 90 L67 99 Z" fill="var(--rust)" />
+  <!-- waveform -->
+  {bars.map((h, i) => (
+    <rect x={START_X + i * (BAR_W + GAP)} y={MID_Y - h / 2} width={BAR_W} height={h} rx="2" fill="var(--cream)" opacity={0.6 + (i % 3) * 0.13} />
+  ))}
+</svg>
+
+<style>
+  .vng { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; display: block; }
+</style>

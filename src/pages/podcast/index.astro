@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StitchDivider from '../../components/StitchDivider.astro';
+import VoiceNoteGraphic from '../../components/VoiceNoteGraphic.astro';
 import { CTA, PODCAST } from '../../consts';
 
 // "Cited" podcast hub — a learning path, so episodes run oldest/first → newest.
@@ -40,7 +41,9 @@ const cover = (e: typeof episodes[number], i: number) => {
     <div class="container">
       {first && (
         <a class="feat" href={`/podcast/${first.id}`} data-reveal>
-          <div class:list={['feat__cover', cover(first, 0).cls]} style={cover(first, 0).style}></div>
+          <div class:list={['feat__cover', cover(first, 0).cls]} style={cover(first, 0).style}>
+            {!first.data.heroImage && <VoiceNoteGraphic episode={first.data.episode} />}
+          </div>
           <div class="feat__body">
             <p class="pcard__meta">start here · episode {first.data.episode} · {fmt(first.data.pubDate)}</p>
             <h2>{first.data.title}</h2>
@@ -55,6 +58,7 @@ const cover = (e: typeof episodes[number], i: number) => {
           {rest.map((ep, i) => (
             <a class="pcard" href={`/podcast/${ep.id}`} data-reveal data-reveal-delay={(i % 3) + 1}>
               <div class:list={['pcard__cover', cover(ep, i + 1).cls]} style={cover(ep, i + 1).style}>
+                {!ep.data.heroImage && <VoiceNoteGraphic episode={ep.data.episode} />}
                 <span class="pcard__tag">Episode {ep.data.episode}</span>
               </div>
               <div class="pcard__body">
