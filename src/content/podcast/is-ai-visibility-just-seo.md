@@ -1,47 +1,42 @@
 ---
 title: "Is AI visibility just SEO with a fancy name?"
-description: "It's not SEO rebranded, but it's not a new religion either. AI visibility (GEO/AEO) builds on SEO — most content AI cites already ranks page one — then adds a layer SEO doesn't cover: structuring content so an answer engine can extract it, and earning mentions on the sources each engine trusts. How different it is depends on how tightly an engine leans on its search index."
+description: "No — AI visibility (AEO/GEO) isn't just SEO with a new name, but SEO isn't dead either. You run them in parallel and merge the two systems: keep doing SEO (keyword rankings, blog optimization) while overlaying AI-visibility practices like definition blocks, far more FAQs, and restructured product and category pages — plus the big lift, earning third-party citations on the sources AI trusts (Reddit, reviews, industry publications)."
 pubDate: 2026-06-25
 episode: 1
 tags: ["ai-visibility", "geo", "seo"]
 faqs:
-  - question: "Does good SEO automatically mean good AI visibility?"
-    answer: "Not automatically. Strong SEO gives you a big head start — most AI-cited pages already rank well — but looser engines like ChatGPT also weigh whether your content is structured for extraction and whether trusted third-party sites mention you. SEO is necessary, not always sufficient."
-  - question: "What's the difference between SEO, AEO, and GEO?"
-    answer: "SEO optimizes to rank in search results. AEO (answer engine optimization) and GEO (generative engine optimization) optimize to be the source an AI answer quotes. They overlap heavily with SEO but add extraction-readiness and earned authority across the sources each engine trusts."
-  - question: "Do I need a different strategy for ChatGPT vs. Google vs. Claude?"
-    answer: "Somewhat, yes. Engines lean on their underlying index to different degrees — Claude is tight to Brave's index, Google AI Overviews rewards Google SEO, and ChatGPT runs looser and weighs structure plus third-party mentions. The fundamentals are shared; the emphasis shifts per engine."
+  - question: "Is AI visibility (GEO/AEO) just SEO with a new name?"
+    answer: "No, but they're not opposites either. SEO isn't dead — you keep doing it (keyword rankings, blog optimization) and run AI visibility in parallel, overlaying practices like definition blocks, more FAQs, and restructured pages on top."
+  - question: "Do I still need SEO if I'm doing AI visibility?"
+    answer: "Yes. You don't throw SEO out — you merge the two systems. SEO best practices stay; the AI-visibility principles get layered over them across all your content planning."
+  - question: "What does AI visibility add that SEO doesn't cover?"
+    answer: "Definition blocks, far more FAQs than content marketers are used to, restructured product and category pages, and the big one — third-party citations on sources AI trusts like Reddit, product reviews, and industry publications, often by activating your PR arm. Plus technical work like schema and llms.txt."
+  - question: "Why do AI engines care about Reddit and third-party mentions?"
+    answer: "AI platforms lean on sources like Reddit, product reviews, and industry publications when they generate answers. You can't really 'own' those, but you can enter the conversation and earn mentions — something your SEO alone won't put you into."
 ---
 
-## Short answer
+## In this episode
 
-It's not SEO with a new coat of paint — but it's not a brand-new religion either. AI visibility (a.k.a. GEO/AEO) sits on top of SEO and adds a layer: structuring your content so an answer engine can lift it, and getting mentioned on the sources each engine already trusts.
-
-## The "it's just SEO" crowd isn't entirely wrong
-
-Most of the content AI engines cite is already ranking on page one — often top three. Clear, structured, authoritative pages win in both search and AI answers. So if anyone tells you to throw out SEO for a shiny new "GEO" trick, run. Your fundamentals still do most of the heavy lifting.
-
-## Where it's actually different
-
-Here's the part the "fancy name" people miss: every engine leans on its search index differently.
-
-- **Claude** pulls heavily from Brave's index — tight to search, so good SEO ≈ good visibility there.
-- **Google AI Overviews** rewards the Google SEO you're already doing.
-- **ChatGPT** runs looser. It wants your content structured for extraction (question-led headings, schema, answer-first) *and* your brand mentioned on third-party sites it trusts.
-
-There's no single playbook across engines. Knowing where each one leans is the actual skill.
-
-## What I'd actually do
-
-1. Nail the SEO fundamentals — they're the price of entry, not the enemy.
-2. Structure every page answer-first: question as the heading, the answer in the first sentence under it.
-3. Earn third-party mentions on the sources AI already trusts in your category.
-4. Test your own brand in each engine and watch what it cites — or you're just guessing.
-
-## The honest part
-
-Nobody's fully cracked this. Anyone selling you a single "AI visibility score" or a one-size-fits-all playbook is selling you something. The durable move is the audience-and-authority layer — and it works right now, no waiting for the models to "mature."
+- Why SEO and AI visibility aren't the same thing — but SEO isn't dead
+- Running SEO and AEO/GEO **in parallel**, and merging the two systems
+- The AI-visibility practices you overlay: definition blocks, way more FAQs, restructured product and category pages
+- The big lift — third-party citations and activating your PR arm (Reddit, reviews, industry publications)
+- The technical plumbing nobody saw coming: schema and llms.txt
 
 ## Transcript
 
-_Full episode transcript posts here once the audio is live._
+_Recorded as a voice note — lightly cleaned for readability._
+
+They're not the same thing. But, like, SEO isn't dead — like you see some people post. It's now run in parallel with AEO and GEO.
+
+So the AI visibility — for example, we're still implementing SEO best practices into my clients' work. We're still monitoring keyword rankings and optimizing blog posts and things like that. But we're overlaying the best practices and principles of AI visibility on top.
+
+So that means we're adding in the definition blocks I've talked about in my blogs before. We're adding in more FAQs than any content marketer thought was normal before. And then revisiting how we have different pages structured — like your product pages or your category pages.
+
+And then the big part — the big piece that I think is kind of the "how am I gonna find time to do all of this?" — is implementing more of the third-party citations. Or, like, owning those in a way, even though you can't really own them. Because AI platforms love to use sites like Reddit, or product reviews, or industry publications and things like that.
+
+So really activating your PR arm if you have one in your company — or just kind of putting that cap on and starting to think: how can we be included in these publications? How can we enter the conversation and share about our product and service there? That's a big part of AEO/GEO that you're not going to bring your SEO into.
+
+So I kind of rambled there for a bit, but — TL;DR — they are not the same thing. However, you're not just throwing your SEO out the window. What I do is run them in parallel and merge the two systems in all of the content planning, and when I do AI visibility blueprints for new sites. So it's really run in parallel — which marketers probably don't like to hear, because that means, "oh, I have to run an entirely different system in parallel with what I already do."
+
+So yeah, I hope that helps. I feel like this is opening a different can of worms, or it's an entirely different question — but there's also a list of things I personally never thought I'd be doing as a marketer that I would've handed a developer a few years ago. That's optimizing your schema, your llms.txt, and things like that — the more technical "plumbing" stuff that helps AI platforms read what you have and understand it so they can cite it accurately. So that's further away from your question about SEO, but it's a very important piece of AI visibility.
