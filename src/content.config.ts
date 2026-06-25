@@ -44,6 +44,7 @@ const podcast = defineCollection({
     duration: z.string().optional(),       // e.g. "PT4M12S" ISO8601, optional
     youtubeId: z.string().optional(),      // YouTube video id for the video version
     buzzsproutEmbed: z.string().optional(),// full Buzzsprout iframe embed html, optional
+    buzzsproutUrl: z.string().optional(),  // Buzzsprout episode page URL (Listen link)
     heroImage: z.string().optional(),
     tags: z.array(z.string()).default([]),
     faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),

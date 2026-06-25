@@ -3,6 +3,8 @@ title: "Is AI visibility just SEO with a fancy name?"
 description: "No — AI visibility (AEO/GEO) isn't just SEO with a new name, but SEO isn't dead either. You run them in parallel and merge the two systems: keep doing SEO (keyword rankings, blog optimization) while overlaying AI-visibility practices like definition blocks, far more FAQs, and restructured product and category pages — plus the big lift, earning third-party citations on the sources AI trusts (Reddit, reviews, industry publications)."
 pubDate: 2026-06-25
 episode: 1
+youtubeId: "pV22Ta-t95c"
+buzzsproutUrl: "https://www.buzzsprout.com/2626619/episodes/19401506"
 tags: ["ai-visibility", "geo", "seo"]
 faqs:
   - question: "Is AI visibility (GEO/AEO) just SEO with a new name?"

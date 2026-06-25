@@ -4,7 +4,7 @@ import StitchDivider from '../components/StitchDivider.astro';
 import FAQ from '../components/FAQ.astro';
 import AnswerBlock from '../components/AnswerBlock.astro';
 import { podcastEpisodeSchema, faqSchema, type FaqItem } from '../lib/schema';
-import { PERSON, CTA } from '../consts';
+import { PERSON, CTA, PODCAST } from '../consts';
 
 // "Cited" podcast episode template. PodcastEpisode + (site-wide) Person+Org
 // schema, plus FAQPage when the episode has a real Q&A section.
@@ -19,6 +19,7 @@ interface Props {
   duration?: string;
   youtubeId?: string;
   buzzsproutEmbed?: string;
+  buzzsproutUrl?: string;
   heroImage?: string;
   faqs?: FaqItem[];
   related?: { id: string; title: string; heroImage?: string }[];
@@ -32,6 +33,7 @@ const {
   duration,
   youtubeId,
   buzzsproutEmbed,
+  buzzsproutUrl,
   heroImage,
   faqs = [],
   related = [],
@@ -96,6 +98,15 @@ const fmt = (d: Date) =>
             <div class="post__audio" set:html={buzzsproutEmbed}></div>
           ) : (
             <p class="post__soon">🎧 Audio + video dropping shortly — the full written version is below.</p>
+          )}
+          {(buzzsproutUrl || PODCAST.apple || PODCAST.spotify || youtubeId) && (
+            <p class="post__platforms">
+              <span>Listen &amp; subscribe:</span>
+              {PODCAST.apple && <a href={PODCAST.apple}>Apple Podcasts</a>}
+              {PODCAST.spotify && <a href={PODCAST.spotify}>Spotify</a>}
+              {buzzsproutUrl && <a href={buzzsproutUrl}>Buzzsprout</a>}
+              {youtubeId && <a href={`https://youtu.be/${youtubeId}`}>YouTube</a>}
+            </p>
           )}
         </div>
       </div>
@@ -169,6 +180,10 @@ const fmt = (d: Date) =>
   .post__video { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; }
   .post__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .post__soon { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0; }
+  .post__platforms { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin: var(--space-3) 0 0; font-size: var(--text-sm); }
+  .post__platforms span { color: var(--color-text-muted); }
+  .post__platforms a { color: var(--rust); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; }
+  .post__platforms a:hover { border-bottom-color: var(--rust); }
 
   .post__faq { max-width: 46rem; margin: var(--space-4) auto 0; border-top: 1px solid var(--color-border); }
 
