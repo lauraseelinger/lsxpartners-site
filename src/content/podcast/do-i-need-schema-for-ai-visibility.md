@@ -3,6 +3,7 @@ title: "Do I actually need schema markup for AI visibility?"
 description: "Mostly yes — but not for the reason most people think. Schema labels your content so search engines understand it, and Google's AI Overviews pull from Google search, so it helps there. But AI engines mostly read your visible text, not the schema code — so the structure underneath (answer-first, FAQ formatting) is what actually makes you quotable. Schema labels it; structure makes it liftable. Do both."
 pubDate: 2026-06-26
 episode: 2
+buzzsproutUrl: "https://www.buzzsprout.com/2626619/episodes/19407657"
 tags: ["ai-visibility", "schema", "aeo"]
 faqs:
   - question: "Does schema markup actually help with AI visibility?"
