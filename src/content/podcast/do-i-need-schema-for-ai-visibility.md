@@ -28,4 +28,28 @@ faqs:
 
 ## Transcript
 
-_Recorded as a voice note — the full transcript posts here once the audio's live._
+_Recorded as a voice note — lightly cleaned for readability._
+
+The question is: do I actually need schema markup for AI visibility, or is it just another buzzword right now?
+
+My short answer is — yeah, it helps, but it's probably not the thing that's actually getting you cited. It's just a piece of the puzzle. I'll also say it's one of the things I never thought I'd actually touch as a marketer, and here I am talking about it.
+
+So what schema actually is: it's structured data — bits of code that tell search and AI engines what your content is. Examples: "this is an FAQ," "this is the author," "this is a definition," "this is a product."
+
+Why AI cares — and how it actually works: engines cite content they can clearly understand. But what most people get wrong is that AI engines mostly read your visible text, not the schema code itself. So it's not that schema is a cheat sheet the LLM reads to skip all the other work. That's a myth.
+
+Where schema actually helps: it's been a Google thing for years. It powers the search results — the FAQ dropdowns, the star ratings, the fancier kinds of results on Google. And Google's AI answers, the AI Overviews we're seeing, are pulled straight from Google search. So if your schema is helping your Google ranking, it's also going to help you show up in Google's AI answers. Outside of Google — ChatGPT, Perplexity, Claude — it's a little less clear how much schema helps. But I'm of the stance that you should be adding it pretty much right now; it's just accepted as best practice.
+
+So essentially, what schema does is ride along with the clean structure of your content on-site. What humans read, the AI is still going to read. With that, you want to do the best practices for AI optimization: have your answer first, use your headings appropriately with questions and answers — I pull all of that from my audience intelligence — layered on all the other best practices we content marketers have been doing for ages. You also want your FAQ formatting. That structure is the one that's going to make the impact for your AI visibility. The schema labels it; the schema's doing a label behind it.
+
+So how much each engine uses schema is still not concrete — but what we do know is that Google rewards it more than others. Keep that in mind.
+
+The schemas that matter most: FAQ schema (your Q&As); Article schema (author and date — that's a trust signal, and AI loves a trust signal); Organization and Person schema (this is your entity, and entity consistency is another really important thing for your AI brand identity); and Product/Service schema.
+
+The catch is that your schema has to match what's actually on the page. What humans read and your AI-optimized content — your schema must match that. You can't just do schema and think it's going to help, because you don't have time to redo the copy and get it approved for the page.
+
+So the takeaway: schema is not going to save bad content. If what you have on the page is weak in terms of AI optimization, schema is not going to be your savior. But for good content, it's the difference between AI guessing what your page is and knowing for sure — because schema labels it. But the answer-first structure underneath is really what does the heavy lifting for the LLM.
+
+And like I said, it's basically expected now that you're doing schema if you're following best practices. The wonderful part is you don't have to hand-code it yourself — there are tons of plugins and tools that generate it for you, or if you have your own AI project or Claude Code or something, that can help out.
+
+So in closing, the bottom line: do your general structure first. Get your site optimized, get your content optimized, then add the schema on top of that. And don't let anyone sell you that schema is some magic citation button — because it's not. It's a signal, not a shortcut.
