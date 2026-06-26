@@ -41,7 +41,7 @@ export const PODCAST = {
   tagline: 'AI visibility, one voice note at a time.',
   description: 'A short Q&A podcast on AI visibility (AEO/GEO) — real questions marketers and brand leaders ask, answered straight. Hosted by Laura Seelinger, founder of LSX Partners.',
   // Directory + channel links — fill in after distribution is approved.
-  apple: '',
+  apple: 'https://podcasts.apple.com/us/podcast/cited-voice-notes/id6784310397',
   spotify: '',
   youtube: 'https://www.youtube.com/@LSXPartners',
   rss: '',
