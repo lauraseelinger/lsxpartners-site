@@ -35,7 +35,7 @@ For a recent example of audience intelligence applied to a category-leader brand
 
 ## How I apply it
 
-[What I've built at L](URL)SX Partners isn't a tool purchase or a dashboard subscription — it's a research process I've developed and refined across client engagements in industries including healthcare, automotive, CPG and professional services.
+What I've built at LSX Partners isn't a tool purchase or a dashboard subscription — it's a research process I've developed and refined across client engagements in industries including healthcare, automotive, CPG and professional services.
 
 It starts with identifying where the audience actually lives online, because the platform changes everything about the quality and candor of the data. For some industries that's Reddit, where people ask questions and share experiences with a level of honesty you almost never see on brand-owned channels. For others it's Google reviews, industry forums or app store comments — wherever the real conversations are happening without a PR filter.
 

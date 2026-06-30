@@ -46,6 +46,9 @@ export default defineConfig({
     '/blog/fractional-marketing-directors-dental-practices': '/services',
     '/blog/marketing-consultant-for-small-business-what-to-look-forand-what-you-really-need': '/services',
     '/blog/small-business-social-media-content-not-working': '/blog',
+    // Other retired old-site paths SEMrush still has cached (no internal links).
+    '/blog/our-consulting-process': '/services',
+    '/cart': '/',
     // Prospect-specific Hub Plastics report pages — retired; send to home.
     '/hub-plastics-marketing-audit-report': '/',
     '/access-hub-plastics-report': '/',
