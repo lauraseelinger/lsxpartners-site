@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwikset AI-Visibility Blueprint</title>
+<style>
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e4e4e4;--bg:#fafafa;--card:#fff;--accent:#7a1f1f;--add:#b54708;--win:#15803d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:30px 26px 80px}
+h1{font-size:24px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:13.5px;margin:0 0 20px;max-width:960px}
+.sub a{color:var(--accent);font-weight:600}
+.term{font-weight:700;color:var(--accent)}
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:0 0 22px;flex-wrap:wrap}
+.tab{padding:11px 14px;font-weight:700;font-size:13px;color:#888;cursor:pointer;border:0;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;gap:7px;align-items:center}
+.tab:hover{color:var(--ink)}.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab .n{display:inline-flex;width:19px;height:19px;border-radius:50%;background:#eee;color:#777;font-size:10.5px;align-items:center;justify-content:center;font-weight:800}
+.tab.active .n{background:var(--accent);color:#fff}
+.panel{display:none;animation:fade .2s ease}.panel.active{display:block}
+@keyframes fade{from{opacity:.3}to{opacity:1}}
+.lead-h{background:#1a1a1a;color:#fff;border-radius:12px;padding:15px 19px;margin:0 0 16px}
+.lead-h .k{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#ffb877;font-weight:700}
+.lead-h .t{font-size:17px;font-weight:700;margin:4px 0 6px;letter-spacing:-.01em}
+.lead-h .d{font-size:13.5px;color:#e2e2e2}.lead-h .term{color:#ffd9a8}
+.mock-cap{font-size:11px;color:var(--muted);margin:16px 0 7px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.why{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#ffd84d;color:#3d2f00;font-size:10px;font-weight:800;font-style:normal;cursor:help;margin-left:5px;position:relative;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.why:hover{background:#ffc91f}
+.why::after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:165%;z-index:30;background:#fff7d6;color:#1a1a1a;border:1px solid #e6cf63;font-weight:500;font-size:11.5px;line-height:1.45;text-align:left;padding:9px 11px;border-radius:8px;width:240px;white-space:normal;box-shadow:0 8px 22px rgba(0,0,0,.32);opacity:0;visibility:hidden;transition:opacity .12s;text-transform:none;letter-spacing:0}
+.why:hover::after{opacity:1;visibility:visible}
+.claim{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:4px;background:#d99a2b;color:#fff;font-size:11px;font-weight:800;font-style:normal;cursor:help;margin-left:5px;position:relative;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.claim:hover{background:#c8891d}
+.claim::after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:165%;z-index:30;background:#fff3e0;color:#5a3d0a;border:1px solid #e0c08a;font-weight:500;font-size:11.5px;line-height:1.45;text-align:left;padding:9px 11px;border-radius:8px;width:220px;white-space:normal;box-shadow:0 8px 22px rgba(0,0,0,.32);opacity:0;visibility:hidden;transition:opacity .12s;text-transform:none;letter-spacing:0}
+.claim:hover::after{opacity:1;visibility:visible}
+table.map{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0}
+table.map th,table.map td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+table.map th{background:#1a1a1a;color:#fff;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+table.map td:first-child{width:22%}
+table.map tr:nth-child(even) td{background:#fbfbfb}
+.fine{font-size:11.5px;color:var(--muted);margin:6px 0 0}
+.acard{border:1px solid var(--line);border-left:3px solid var(--accent);background:#fff;border-radius:9px;padding:13px 15px;font-size:13px;margin:0 0 12px}
+.ugrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 12px}
+.ugrid .acard{margin:0}
+@media(max-width:760px){.ugrid{grid-template-columns:1fr}}
+.seclabel{font:800 12px/1 -apple-system,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:24px 0 8px}
+.bplist div{border-left:3px solid var(--line);padding:7px 0 7px 13px;font-size:13px;margin:9px 0;line-height:1.5}
+.bplist b{color:#1a1a1a}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:4px}
+.fgrid>div{margin:0}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+.note{color:var(--muted);font-size:12px;margin-top:22px}
+.code{background:#f6f6f6;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#1a1a1a;white-space:pre-wrap;overflow-x:auto;margin:7px 0}
+.chk{list-style:none;padding:0;margin:7px 0}
+.chk li{font-size:12.5px;padding:3px 0 3px 20px;position:relative;line-height:1.45}
+.chk li::before{content:"✓";position:absolute;left:0;color:var(--win);font-weight:800}
+.faqlist{list-style:none;padding:0;margin:6px 0}
+.faqlist li{font-size:12px;padding:3px 0 3px 18px;position:relative;line-height:1.4;color:#333}
+.faqlist li::before{content:"?";position:absolute;left:0;color:#1d4ed8;font-weight:800}
+.artlist{list-style:none;padding:0;margin:6px 0}
+.artlist li{font-size:12px;padding:3px 0 3px 20px;position:relative;line-height:1.4;color:#333}
+.artlist li::before{content:"✎";position:absolute;left:0;color:#b55434;font-weight:800}
+.tag{font-size:8px;font-weight:800;border-radius:4px;padding:1px 6px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+.tag.locked{background:#eaf0ff;color:#1d4ed8;border:1px solid #c9d6f5}
+.tag.open{background:#fff5ec;color:#b54708;border:1px solid #ffd5b0}
+.tag.gap{background:#fdeaea;color:#b00020;border:1px solid #f3c4c4}
+.tag.comp{background:#e8f5ec;color:#15803d;border:1px solid #bfe3cb}
+.tag.nocomp{background:#f1f1f1;color:#777;border:1px solid #ddd}
+.tmpl .th{font-weight:800;font-size:15px;margin-bottom:6px}
+.tmpl .r{font-size:12.5px;margin:5px 0;line-height:1.5}.tmpl .r b{color:#1a1a1a}
+/* template sidebar */
+.tlayout{display:flex;gap:18px;align-items:flex-start}
+.tside{flex:none;width:230px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff;position:sticky;top:10px}
+.tside .stitle{font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin:2px 2px 6px}
+.tside .grp{font-weight:800;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#aaa;margin:11px 0 3px;padding-left:2px}
+.tside a{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 9px;border-radius:7px;font-size:12px;color:#333;cursor:pointer;border:1px solid transparent;margin:1px 0;line-height:1.2}
+.tside a:hover{background:#f4f4f4}
+.tside a.on{background:#fbeaea;border-color:#e7b9b9;color:#7a1f1f;font-weight:700}
+.tside a em{font-style:normal;font-size:7.5px;font-weight:800;color:#bbb;flex:none}
+.tside a.on em{color:#b07}
+.tmain{flex:1;min-width:0}
+/* page mock */
+.mk{border:1px solid #ccc;border-radius:10px;overflow:hidden;margin:10px 0;box-shadow:0 6px 22px rgba(0,0,0,.13)}
+.mk-nav{background:#111;color:#fff;display:flex;align-items:center;gap:13px;padding:9px 14px;font-size:11px}
+.mk-nav .lg{font-weight:800;font-style:italic;font-size:15px}.mk-nav .sp{flex:1}.mk-nav .it{color:#ccc}
+.mk-crumb{background:#fafafa;border-bottom:1px solid var(--line);padding:6px 14px;font-size:10.5px;color:#999}
+.mk-body{padding:18px;background:#fff}
+.mk-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.mk-fpo{background:repeating-linear-gradient(45deg,#eee,#eee 9px,#e6e6e6 9px,#e6e6e6 18px);border:1px solid #dbdbdb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-size:10px;font-weight:700;letter-spacing:.04em;text-align:center;padding:8px;min-height:108px}
+.mk-gal{min-height:260px}
+.mk-thumbs{display:flex;gap:7px;margin-top:9px}.mk-thumbs .mk-fpo{min-height:46px;width:46px;flex:none;padding:2px}
+.mk-title{font-size:19px;font-weight:800;margin:2px 0}
+.mk-h1{font-size:22px;font-weight:800;margin:2px 0 6px}
+.mk-stars{color:#e0a200;font-size:12px}.mk-stars span{color:#999}
+.mk-price{font-size:21px;font-weight:800;margin:8px 0}
+.mk-swatch{display:flex;gap:7px;margin:9px 0}.mk-swatch i{width:20px;height:20px;border-radius:50%;border:1px solid #bbb;display:inline-block}
+.mk-sel{border:1px solid var(--line);border-radius:6px;padding:9px 10px;font-size:11px;color:#888;margin:7px 0}
+.mk-cta{background:#d81f26;color:#fff;text-align:center;font-weight:800;font-size:12.5px;padding:13px;border-radius:6px;margin-top:10px;letter-spacing:.03em}
+.mk-acc div{border:1px solid var(--line);border-bottom:0;padding:11px 12px;font-size:12px;font-weight:600;display:flex;justify-content:space-between;color:#333}
+.mk-acc div:last-child{border-bottom:1px solid var(--line)}
+.mk-h{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#222;margin:18px 0 10px;border-top:2px solid #111;padding-top:9px}
+.mk-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.mk-cards .mk-fpo{min-height:150px;flex-direction:column;gap:6px}
+.mk-cards.lg .mk-fpo{min-height:200px}
+.mk-chips{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.mk-chips span{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:10.5px;color:#777}
+.mk-ans{background:#fff7d6;border:1px solid #e6cf63;border-radius:7px;padding:14px 15px;font-size:12px;color:#5a4a00;margin:10px 0;min-height:66px}
+.mk-ans b{display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.mk-hero{min-height:230px}
+.mk-tbl{width:100%;border-collapse:collapse;font-size:11px;margin:8px 0}.mk-tbl td,.mk-tbl th{border:1px solid var(--line);padding:7px 9px;text-align:left}.mk-tbl th{background:#faf6f6}
+.mk-add{outline:2px solid #d81f26;outline-offset:3px;border-radius:7px;position:relative}.mk-add::before{content:"ADD";position:absolute;top:-9px;left:9px;background:#d81f26;color:#fff;font-size:7.5px;font-weight:800;letter-spacing:.05em;padding:1px 6px;border-radius:3px;z-index:2}
+.mk-ready{outline:2px solid #1d4ed8;outline-offset:3px;border-radius:7px;position:relative}.mk-ready::before{content:"AI OPTIMIZED";position:absolute;top:-9px;left:9px;background:#1d4ed8;color:#fff;font-size:7.5px;font-weight:800;letter-spacing:.05em;padding:1px 6px;border-radius:3px;z-index:2}
+.mk-rec{outline:2px solid #b54708;outline-offset:3px;border-radius:7px;position:relative}.mk-rec::before{content:"RECOMMEND";position:absolute;top:-9px;left:9px;background:#b54708;color:#fff;font-size:7.5px;font-weight:800;letter-spacing:.05em;padding:1px 6px;border-radius:3px;z-index:2}
+.pin{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#d81f26;color:#fff;font-size:10px;font-weight:800;vertical-align:middle;flex:none}
+.anno{background:#fff;border:1px solid var(--line);border-left:3px solid #d81f26;border-radius:8px;padding:8px 12px;font-size:12.5px;margin:8px 0;display:flex;gap:10px;align-items:baseline;line-height:1.45}
+.anno .pn{flex:none;width:18px;height:18px;border-radius:50%;background:#d81f26;color:#fff;font-size:10px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.keybar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 13px;margin:0 0 14px}
+.dlbtn{display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12.5px;font-weight:700;cursor:pointer;margin:0 0 14px}
+.dlbtn:hover{opacity:.9}
+.dlnote{font-size:11px;color:var(--muted);margin:-8px 0 14px}
+.kdot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+/* universal-rule mini diagrams */
+.uviz{border:1px solid var(--line);border-radius:8px;padding:11px;background:#fafafa;margin-top:9px}
+.utop{background:#fff7d6;border:1px solid #e6cf63;border-radius:4px;padding:6px 9px;color:#5a4a00;font-weight:700;font-size:10.5px;margin-bottom:7px}
+.uline{height:7px;background:#e3e3e3;border-radius:3px;margin:5px 0}.uline.s{width:72%}.uline.xs{width:48%}
+.urow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ubad{display:inline-block;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:800;margin-bottom:5px}
+.ubad.no{background:#fdeaea;color:#b00020}.ubad.yes{background:#e8f5ec;color:#15803d}
+.uh{font-size:11px;font-weight:800}.uh.h2{font-size:12.5px;margin-left:12px}.uh.h3{font-size:11px;color:#777;margin-left:26px;font-weight:600}
+.hubviz{text-align:center;padding:4px 0}
+.hubviz .hub{display:inline-block;background:#7a1f1f;color:#fff;font-size:11px;font-weight:700;padding:7px 16px;border-radius:8px}
+.hubviz .arr{font-size:13px;color:#cbb;letter-spacing:14px;margin:6px 0 2px;padding-left:14px}
+.hubviz .spokes{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.hubviz .sp{background:#fff;border:1px solid var(--line);border-radius:7px;font-size:10.5px;color:#555;padding:6px 11px}
+@media(max-width:860px){.tlayout{flex-direction:column}.tside{width:100%;position:static}}
+@media(max-width:820px){.tab{padding:9px 11px;font-size:12.5px}.mk-row{grid-template-columns:1fr}.mk-cards{grid-template-columns:1fr 1fr}.urow{grid-template-columns:1fr}}
+.qa{border-left:3px solid var(--accent);background:#faf4f4;border-radius:0 8px 8px 0;padding:9px 12px;margin:7px 0}
+.qa .q{font-weight:700;font-size:13px;color:var(--accent)}
+.qa .a{font-size:12.7px;margin-top:4px;color:var(--ink)}
+.qa.lead{background:#fbf1ec;border-left-color:var(--add)}
+.qa.pend{background:#fdf3e0;border-left-color:#d99a2b}
+.qa.pend .q{color:#9a6212}.qa.pend .a{color:#6b4d14}
+.pendlab{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;background:#d99a2b;border-radius:4px;padding:1px 6px;margin-right:6px}
+.h2list{margin:4px 0 2px;padding-left:20px}.h2list li{font-size:13px;margin:3px 0;font-weight:600;color:var(--ink)}
+.subtabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:4px 0 14px;background:#faf3f3;border:1px solid #e8d6d6;border-radius:10px;padding:6px}
+.subtab{background:#fff;border:1px solid var(--line);border-radius:7px;font-size:12.5px;font-weight:700;color:var(--accent);padding:7px 13px;cursor:pointer}
+.subtab.on{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 1px 3px rgba(122,31,31,.3)}
+.subtab:hover{border-color:var(--accent)}
+.subgrp{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin:12px 0 5px}
+.subpanel{display:none}.subpanel.show{display:block}
+.insight{font-size:13px;background:#fbf3e6;border:1px solid #ecd9b0;border-left:4px solid #b54708;border-radius:8px;padding:11px 14px;margin-top:10px}
+.insight b{color:#8a4b08}
+.insight>b:first-child{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#b54708;margin-bottom:3px}
+.tside a.util{color:#9b9b9b;background:#f4f4f4}
+.tside a.util:hover{background:#ececec;color:#777}
+.tside a.util.on{background:#8a8a8a;color:#fff}
+.acard.tmpl{background:#f7eded;border-color:#ecd9d9;border-left-width:4px}
+.acard.tmpl .th{border-bottom:1px solid #e8d0d0;padding-bottom:8px;margin-bottom:9px}
+.optplay{font-size:12.5px;background:#eef6ef;border:1px solid #cfe3d4;border-left:4px solid #2e7d4f;border-radius:8px;padding:10px 13px;margin-top:10px}
+.optplay b{color:#1f5a37}
+.optplay>b:first-child{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#2e7d4f;margin-bottom:3px}
+.tl{display:flex;align-items:stretch;gap:0;margin:6px 0 20px}
+.tl-step{flex:1;border:1px solid var(--line);border-radius:10px;padding:11px 14px;background:#faf7f4}
+.tl-step .sn{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.tl-step .st{font-weight:800;font-size:13.5px;margin-top:2px}
+.tl-step .sd{font-size:11.5px;color:#555;margin-top:3px;line-height:1.4}
+.tl-step.active{background:#fff3e0;border-color:#d99a2b;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.tl-arrow{display:flex;align-items:center;padding:0 10px;color:#b55434;font-weight:800;font-size:20px}
+.eco{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0 4px;align-items:start}
+.eco-node{border:1px solid var(--line);border-radius:9px;background:#fff;font-size:11px;line-height:1.35;overflow:hidden;transition:border-color .12s,box-shadow .12s}
+.eco-node summary{list-style:none;cursor:pointer;padding:9px 10px;position:relative}
+.eco-node summary::-webkit-details-marker{display:none}
+.eco-node summary::after{content:"▾";position:absolute;right:9px;top:9px;color:#b55434;font-size:11px;font-weight:800}
+.eco-node[open] summary::after{content:"▴"}
+.eco-node[open]{box-shadow:0 3px 12px rgba(0,0,0,.08)}
+.eco-node:hover{border-color:#d99a2b}
+.eco-seed{padding:0 10px 10px;font-size:11px;line-height:1.45;color:#444}
+.eco-node.lsx{border-color:#9cc4a6;background:#f3f9f4}
+.eco-flag{display:inline-block;font-size:10px;font-weight:700;color:#2e6b3f;background:#e6f4ea;border:1px solid #bfe0c8;border-radius:5px;padding:2px 7px;margin-bottom:6px;line-height:1.3}
+.bplist .cand{border-left-color:#4e9e68;background:#f3f9f4}
+.mapfrom{display:inline-block;font-size:10px;font-weight:700;color:#2e6b3f;background:#e6f4ea;border:1px solid #bfe0c8;border-radius:4px;padding:1px 6px;margin-left:2px;vertical-align:middle}
+.offsite-block{background:#f7f4ef;border:1px solid #e7ddd0;border-radius:12px;padding:12px 16px 16px;margin:8px 0 6px}
+.eco-seed a{color:#b55434;font-weight:700;text-decoration:none;border-bottom:1px solid #d9b4a6}
+.cand:target{outline:2px solid #4e9e68;outline-offset:2px}
+.cand-help{margin-top:8px;background:#eaf5ee;border:1px solid #c8e3d1;border-radius:6px;padding:7px 9px;font-size:12px;line-height:1.45}
+.cand-help b{color:#2e6b3f}
+.cand-cred{margin-top:6px;padding-top:6px;border-top:1px dashed #c8e3d1;font-size:11px;color:#4a6a54;font-style:italic}
+.ong-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 0}
+.ong-card{border:1px solid #e2e6e7;border-top:3px solid #a3bbc3;border-radius:9px;padding:10px 12px;background:#fbfcfc;font-size:12px;line-height:1.45}
+.ong-card b{font-size:12.5px}
+.eco-node b{font-size:12px;display:block;padding-right:16px}
+.eco-node .pg{display:block;margin-top:4px;color:#b55434;font-weight:700}
+.eco-ai{border:2px solid #d99a2b;border-radius:12px;background:#fff3e0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;min-height:82px}
+.eco-ai b{font-size:13px;color:#7a4a12;line-height:1.2}
+.eco-ai span{font-size:10.5px;color:#8a6a3a;margin-top:3px;line-height:1.25}
+</style><meta name="robots" content="noindex,nofollow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-21639NRGBM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-21639NRGBM");</script>
+<style>#lsxgate{position:fixed;inset:0;z-index:99999;background:#f4efe8;display:flex;align-items:center;justify-content:center;font-family:-apple-system,Segoe UI,Roboto,sans-serif}#lsxgate.hidden{display:none}#lsxgate .gb{background:#fff;border:1px solid #e3d8c9;border-radius:14px;padding:30px 34px;max-width:360px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.12)}#lsxgate .lg{font-weight:800;letter-spacing:.04em;color:#b55434;font-size:13px;text-transform:uppercase}#lsxgate .tt{font-weight:800;font-size:18px;margin:8px 0 2px;color:#2b2b2b}#lsxgate .sb{color:#666;font-size:13px;margin-bottom:16px}#lsxgate input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #d8ccbb;border-radius:8px;font-size:14px}#lsxgate button{margin-top:10px;width:100%;padding:10px;border:none;border-radius:8px;background:#b55434;color:#fff;font-weight:700;font-size:14px;cursor:pointer}#lsxgate .er{color:#b00020;font-size:12px;margin-top:8px;min-height:14px}</style>
+</head>
+<body>
+<div id="lsxgate"><div class="gb"><div class="lg">LSX Partners</div><div class="tt">Kwikset AI-Visibility Blueprint</div><div class="sb">Enter the password to view.</div><input id="lsxpw" type="password" placeholder="Password" autocomplete="off" autofocus><button id="lsxgo">View</button><div class="er" id="lsxerr"></div></div></div><div class="wrap">
+  <h1>Kwikset AI-Visibility Blueprint</h1>
+  <p class="sub">The page-level foundation that turns the agreed sitemap into pages AI can read and cite. Pairs with the <a href="https://lsxpartners.com/kwikset/sitemap/">sitemap deliverable →</a>. Hover the yellow ⓘ for the why. (LSX Partners)</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab(0)"><span class="n">1</span> Overview</button>
+    <button class="tab" onclick="showTab(1)"><span class="n">2</span> Universal page rules</button>
+    <button class="tab" onclick="showTab(2)"><span class="n">3</span> Foundation</button>
+    <button class="tab" onclick="showTab(3)"><span class="n">4</span> Page templates</button>
+    <button class="tab" onclick="showTab(4)"><span class="n">5</span> Rollout</button>
+    <button class="tab" onclick="showTab(5)"><span class="n">6</span> Additional strategies</button>
+  </div>
+
+  <!-- TAB 1 — OVERVIEW -->
+  <div class="panel active">
+    <div class="lead-h"><div class="k">The Blueprint</div><div class="t">The foundation that makes Kwikset's own pages the source AI cites.</div><div class="d">The sitemap fixed <span class="term">where</span> things live. This fixes <span class="term">how each page is built</span> so AI can read it and pull from it. The same structuring also feeds <span class="term">Kai</span>.</div></div>
+    <div class="acard"><div style="font-weight:800;font-size:13.5px;margin-bottom:5px">How this pairs with the sitemap</div>The sitemap is the IA layer — the nav tree, what's a page vs. a filter. This Blueprint is the layer underneath: the <b>foundation</b> (site-wide), the <b>universal page rules</b>, and a <b>template per page type</b>. Two linked deliverables, not one.</div>
+    <div class="acard"><div style="font-weight:800;font-size:13.5px;margin-bottom:5px">How to read it</div>
+      <ul class="chk" style="margin-top:4px"><li><b>Universal page rules</b> — the rules every page follows, each with a diagram.</li><li><b>Foundation</b> — the site-wide work the templates sit on.</li><li><b>Page templates</b> — the sidebar lists every page type (the work map). Pick one → its spec + FAQ checklist + a visual of where the work goes.</li><li><b>Rollout</b> sequences the build.</li><li><b>Additional strategies</b> — off-site / earned-presence and ongoing moves to consider, beyond the on-site build.</li></ul></div>
+    <div class="acard"><div style="font-weight:800;font-size:13.5px;margin-bottom:5px">What's "new" vs. "AI optimized"</div>Most of what's needed isn't net-new. The shells exist in the Figma/plan (Works-With, FAQ blocks, variants, Complete the Look), and the page types Hanson has presented to the client — Security hub, ecosystem "works with" pages, by-need / "best [lock] for" guides, multifamily/UNITE. The Blueprint’s job is <b>AI-optimizing them</b>: extractable text, schema, and the front-loaded answer copy. The few genuinely net-new pieces are the curated comparison content and two foundation items the latest sitemap surfaced — canonical strategy and llms.txt. The legend on each template marks which is which.</div>
+  </div>
+
+  <!-- TAB 2 — UNIVERSAL PAGE RULES -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Universal page rules</div><div class="t">The rules every page follows — before any template-specific work.</div><div class="d">Get these seven right on every page and you've fixed most of the retrieval gap. The templates assume all of this is in place.</div></div>
+
+    <div class="ugrid">
+    <div class="acard"><b>1 · Front-load the answer.</b> The first ~100–200 words carry the citation weight — write a self-contained <b>50–100-word answer</b> to the exact question the audience is asking — straight from the audience intelligence — at the very top. <span class="why" data-tip="AI Overviews and chat answers quote the top of the page. Buried under a hero + marketing, AI grabs a competitor's cleaner page.">i</span>
+      <div class="uviz"><div class="utop">◤ ANSWER — the audience’s question, answered in the first 100 words</div><div class="uline"></div><div class="uline"></div><div class="uline s"></div><div class="fine" style="margin-top:6px">↑ answer up top · marketing depth below</div></div></div>
+
+    <div class="acard"><b>2 · Make it extractable.</b> Real text in HTML — never lock the answer, specs, or guides in PDFs/images. <span class="why" data-tip="AI can't read a PDF or an image of text. Kwikset's install/spec PDFs are invisible until they're real pages.">i</span>
+      <div class="uviz"><div class="urow"><div><span class="ubad no">✗ PDF / image of specs</span><div class="mk-fpo" style="min-height:44px">spec-sheet.pdf</div></div><div><span class="ubad yes">✓ real HTML text</span><div class="uline"></div><div class="uline"></div><div class="uline s"></div></div></div></div></div>
+
+    <div class="acard"><b>3 · Headings = the questions people ask.</b> H2s phrased as the real buyer questions; H3s for subtopics. <span class="why" data-tip="AI matches the question it was asked to the headings on the page. Phrasing H2s as the actual question makes the page an obvious answer.">i</span>
+      <div class="uviz"><div class="uh">H1 · Casey Round Lever</div><div class="uh h2">H2 · Is the Casey lever secure?</div><div class="uh h3">H3 · ANSI/BHMA grade</div><div class="uh h2">H2 · Does it work without a hub?</div></div></div>
+
+    <div class="acard"><b>4 · Internal linking, hub-and-spoke.</b> Descriptive keyword anchors; the hub links down to its products &amp; guides, and every spoke links back up. <span class="why" data-tip="Internal links are how AI maps the site into entities it can cite — and how Support Q&A gets pulled up into the shopping pages.">i</span>
+      <div class="uviz"><div class="hubviz"><span class="hub">Security hub</span><div class="arr">↓↓↓↓</div><div class="spokes"><span class="sp">PDPs</span><span class="sp">Guides</span><span class="sp">FAQ</span><span class="sp">Solutions</span></div><div class="fine" style="margin-top:9px">Hub links down to each; every spoke links back up — the structure AI follows.</div></div></div></div>
+
+    <div class="acard"><b>5 · Schema on every page.</b> A base set plus the per-type schema — mark the answer, specs, FAQs, author, org. <span class="why" data-tip="Schema (JSON-LD) tells AI exactly what each block is — the answer, the price, the rating, the FAQ. The difference between 'mentioned' and 'cited.'">i</span>
+      <div class="uviz"><div class="uline" style="background:#dfe7ff"></div><div class="fine" style="margin:4px 0">&lt;script type="application/ld+json"&gt; { "@type":"Product", "aggregateRating":… }</div><div class="uline xs" style="background:#dfe7ff"></div></div></div>
+
+    <div class="acard"><b>6 · Scannable.</b> Short paragraphs, bullets, and a real comparison table where relevant.
+      <div class="uviz"><div class="urow"><div><span class="ubad no">✗ wall of text</span><div class="uline"></div><div class="uline"></div><div class="uline"></div><div class="uline"></div></div><div><span class="ubad yes">✓ scannable</span><div class="uline s"></div><div class="uline xs"></div><div class="uline s"></div></div></div></div></div>
+
+    <div class="acard"><b>7 · SEO and AEO, balanced.</b> The classic SEO fundamentals still do real work — primary term in the H1, title (&lt;60), meta description (120–155), URL, and topical depth — because that’s what ranks the page and gets it into the search index AI pulls from. AEO layers on top, it doesn’t replace them: the front-loaded answer, schema, and question-headings turn a ranked page into a <i>cited</i> one. They reinforce each other when the copy uses the buyer’s real language (one main entity per page + 3–5 supporting). The one real tension — never bury the answer to chase keywords or marketing; answer first, depth below. <span class="why" data-tip="SEO gets the page found and ranked; AEO gets it cited once AI retrieves it. Same page, two jobs — they only conflict if keyword/marketing copy pushes the answer down.">i</span>
+      <div class="uviz" style="background:#fff"><div style="color:#1a0dab;font-size:13px">Casey Round Lever | Kwikset</div><div style="color:#006621;font-size:10.5px">kwikset.com › security-series › casey-round-lever</div><div class="fine" style="margin-top:2px;color:#444">A Grade-2 keyed entry lever, rekeyable with SmartKey — finishes, specs, where to buy.</div></div></div>
+
+    </div>
+    <div class="seclabel">Schema building blocks (reused across templates)</div>
+    <div class="acard"><b>Product</b> (PDPs) · <b>FAQPage</b> (any Q&amp;A) · <b>Article</b> (guides, verified author) · <b>Organization</b> (homepage + About) · <b>DefinedTerm</b> (SmartKey, ANSI Grade) · <b>BreadcrumbList</b> + <b>ItemList</b> (catalog).
+      <div class="code">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Does Kwikset work with Apple Home?",
+  "acceptedAnswer":{"@type":"Answer","text":"Yes — Kwikset's Halo and Aura lines …"}}]}</div></div>
+  </div>
+
+  <!-- TAB 3 — FOUNDATION -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Foundation</div><div class="t">The site-wide work the templates sit on.</div><div class="d">The site-wide work every page template depends on. Easiest to stand up early so it’s in place at launch rather than retrofitted later.</div></div>
+    <div class="seclabel">Structured data &amp; extractability</div>
+    <div class="bplist fgrid">
+      <div><b>Schema / structured-data strategy</b> — the per-template schema set applied site-wide; certification (ANSI/BHMA Grade) and awards as structured data, not badge images.
+        <div class="uviz" style="margin-top:7px"><div class="urow"><div><span class="ubad no">✗ award = image badge</span><div class="mk-fpo" style="min-height:40px">award.png</div></div><div><span class="ubad yes">✓ award in text + schema</span><div class="code" style="margin:0">"award":"IoT Breakthrough 2026"</div></div></div></div></div>
+      <div><b>Technical extractability</b> — convert PDFs (install/spec) to real pages; text not image; semantic HTML5; clean sitemap.xml + robots + Search Console; and put the <b>llms.txt</b> already in the 6/19 sitemap to work — point AI crawlers at the priority answer pages (emerging signal, low cost, not a silver bullet).
+        <div class="uviz" style="margin-top:7px"><span class="ubad no">✗ install-guide.pdf</span> &nbsp;→&nbsp; <span class="ubad yes">✓ /support/install/halo (real page)</span></div></div>
+      <div><b>Canonical &amp; filter-URL strategy</b> — a product surfaces across multiple categories, rooms, and guides but resolves to <b>one canonical page</b>. The high-value filtered views ("smart locks for the front door," "Apple Home compatible") earn their own indexable URL + a short answer-first intro + schema; everything else canonicalizes back, so AI cites the real page, not a thin filter state. <span class="why" data-tip="Hanson's deck introduced the products-in-multiple-categories model. Canonicalization — plus selectively indexing the valuable filter views — is what makes it safe for SEO/AEO: one source of truth, no duplicate/thin pages, and the lucrative facet queries get a real destination.">i</span></div>
+      <div><b>Data layer (high level)</b> — product data has to be structured and extractable so AI (and Kai) can read it: specs, grade, and finish/use-case as real fields, with each meaningful variant resolvable to a citable page. The deeper field-by-field restructuring is a <b>separate data review</b>, scoped with Hanson's data/PIM team. <span class="why" data-tip="The Blueprint sets the high-level requirement; the exact Salsify field mapping needs Hanson's input on the live data and is scoped as its own review.">i</span></div>
+    </div>
+    <div class="seclabel">Linking &amp; brand entity</div>
+    <div class="bplist fgrid">
+      <div><b>Crosslinking / internal-link map</b> — concept pillars (security, ecosystem, move-in/rekey, multifamily) linking down to products &amp; guides and back up; pull Support Q&amp;A up-funnel into Solutions + category.
+        <div class="uviz" style="margin-top:7px"><div class="hubviz"><span class="hub">Ecosystem pillar</span><div class="arr">↓↓↓</div><div class="spokes"><span class="sp">"Works with Alexa"</span><span class="sp">Halo PDP</span><span class="sp">Setup FAQ</span></div></div></div></div>
+      <div><b>Brand-signal hygiene</b> — the About/Organization entity page corrects what AI has wrong (ownership ASSA ABLOY/HHI; missing SmartKey/Matter) and surfaces awards.</div>
+      <div><b>Awards surfacing</b> — Halo Select Plus (IoT Breakthrough 2026), Halifax (Good Housekeeping 2026), KwikSlide (Golden Hammer) — on security/comparison/product pages + in schema.</div>
+    </div>
+    <div class="seclabel">Governance &amp; measurement</div>
+    <div class="bplist fgrid">
+      <div><b>Comparison governance</b> — keep competitor specs accurate as the catalog changes; a check so a CMS/data update doesn't silently break the comparison schema (legal review on competitor claims).</div>
+      <div><b>Measurement loop</b> — track AI visibility across the full report set, not one tool: SEMrush for demand, the 5-engine audit + Spyglass for who's actually cited in live answers, and Brave for the third-party source set AI draws on. The metric is citation share vs third-party and answer share across engines — not Google rank. Each cycle re-prioritizes. <span class="why" data-tip="The game is citation share across AI engines, not ranking. The third-party source set AI pulls from shifts before live citations do — a leading indicator.">i</span></div>
+    </div>
+  </div>
+
+  <!-- TAB 4 — PAGE TEMPLATES -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Page templates</div><div class="t">Every page type — its spec, the questions + answers it must surface, and a visual of where the work goes.</div><div class="d">The sidebar is the full map of templates — use it to divvy up and assign the build. Pick a type: you get the spec, the audience-sourced questions + answers it must surface, and the page with the moves pinned on.</div></div>
+    <div class="keybar"><b>Legend:</b>
+      <span><span class="kdot" style="background:#d81f26"></span>ADD = net-new</span>
+      <span><span class="kdot" style="background:#1d4ed8"></span>AI OPTIMIZED = exists in the plan; needs the 5 moves below to get cited</span>
+      <span><span class="kdot" style="background:#b54708"></span>RECOMMEND = a push on an open item</span>
+      <span><span class="pin" style="width:14px;height:14px;font-size:8px">#</span> numbered pins mark each change on the mockup</span>
+    </div>
+    <div class="keybar" style="display:block;line-height:1.8;border-left:3px solid #1d4ed8;background:#f5f8ff"><b style="color:#1d4ed8">What "AI optimized" means</b> — apply these five to a block that already exists in the plan: &nbsp;<b>1</b>&nbsp;front-load a short answer to the buyer&#39;s question &nbsp;·&nbsp; <b>2</b>&nbsp;real, extractable text (not an image or PDF) &nbsp;·&nbsp; <b>3</b>&nbsp;the heading phrased as that question &nbsp;·&nbsp; <b>4</b>&nbsp;the right schema on it (FAQPage for Q&amp;A, Article for guides/editorial, Product for a PDP) &nbsp;·&nbsp; <b>5</b>&nbsp;a descriptive internal link in &amp; out.</div>
+    <div class="keybar"><b>Status:</b>
+      <span><span class="tag locked" style="margin:0">Presented</span> in the direction Hanson presented to the client; the work is the AI content inside it</span>
+      <span><span class="tag open" style="margin:0">OPEN</span> still in play / live input</span>
+      <span><span class="tag gap" style="margin:0">GAP</span> not in the plan yet — the Blueprint adds it</span>
+    </div>
+
+    <button class="dlbtn" onclick="exportSpecs()">&#11015;&nbsp; Download all page specs (Excel)</button>
+    <div class="dlnote">Every page type in one sheet — FAQs to answer, answer block, schema, content blocks, and the AI-optimized checklist, each tagged by page, with blank Owner / Done columns to divvy up the build.</div>
+
+    <div class="tlayout">
+      <div class="tside">
+        <div class="stitle">Pages</div>
+        <div class="grp">Products</div>
+        <a class="on" onclick="selectTpl('cat',this)">Category / PCP</a>
+        <a onclick="selectTpl('subcat',this)">Sub-category / room</a>
+        <a onclick="selectTpl('pdp',this)">PDP (+ variants)</a>
+        <a class="util" onclick="selectTpl('util',this)">All Products</a>
+        <a class="util" onclick="selectTpl('util',this)">Shop By Type / Room</a>
+        <a class="util" onclick="selectTpl('util',this)">Replacement Parts</a>
+        <div class="grp">Smart &amp; Keyless</div>
+        <a onclick="selectTpl('ecosystem',this)">Integrations &amp; Platforms</a>
+        <a class="util" onclick="selectTpl('util',this)">Control / Interface</a>
+        <a class="util" onclick="selectTpl('util',this)">Connectivity</a>
+        <a class="util" onclick="selectTpl('util',this)">Compare Smart Locks</a>
+        <a class="util" onclick="selectTpl('util',this)">Kwikset App</a>
+        <a class="util" onclick="selectTpl('util',this)">Unite</a>
+        <div class="grp">Help Me Choose</div>
+        <a onclick="selectTpl('innovation',this)">Innovation / feature</a>
+        <a onclick="selectTpl('guides',this)">Buying guides</a>
+        <a onclick="selectTpl('solutions',this)">Solutions</a>
+        <a onclick="selectTpl('security',this)">Security hub</a>
+        <div class="grp">Tools for Pros</div>
+        <a onclick="selectTpl('multifamily',this)">Multifamily / UNITE</a>
+        <a class="util" onclick="selectTpl('util',this)">Single Family</a>
+        <a class="util" onclick="selectTpl('util',this)">Literature</a>
+        <a class="util" onclick="selectTpl('util',this)">Contact &amp; Service</a>
+        <a class="util" onclick="selectTpl('util',this)">Find a Distributor</a>
+        <a class="util" onclick="selectTpl('util',this)">Pro Programs &amp; Tools</a>
+        <a class="util" onclick="selectTpl('util',this)">Order Status / B2B Portal</a>
+        <div class="grp">Support</div>
+        <a onclick="selectTpl('support',this)">Support / FAQ / KB</a>
+        <a class="util" onclick="selectTpl('util',this)">Installation &amp; Manuals</a>
+        <a class="util" onclick="selectTpl('util',this)">Warranty</a>
+        <a class="util" onclick="selectTpl('util',this)">Contact Us</a>
+        <a class="util" onclick="selectTpl('util',this)">Register Your Product</a>
+        <div class="grp">About</div>
+        <a onclick="selectTpl('about',this)">About / Brand entity</a>
+        <a class="util" onclick="selectTpl('util',this)">Sustainability</a>
+        <a class="util" onclick="selectTpl('util',this)">History</a>
+        <a class="util" onclick="selectTpl('util',this)">Community</a>
+        <a class="util" onclick="selectTpl('util',this)">News &amp; Press</a>
+        <a class="util" onclick="selectTpl('util',this)">Careers</a>
+        <div class="grp">Blog</div>
+        <a onclick="selectTpl('blog',this)">Blog / article</a>
+        <a class="util" onclick="selectTpl('util',this)">Blog category</a>
+        <div class="grp">Home</div>
+        <a onclick="selectTpl('homepage',this)">Homepage</a>
+        <div class="grp">Comparison</div>
+        <a onclick="selectTpl('comparison',this)">Comparison</a>
+        <div class="grp">Standard &amp; Utility</div>
+        <a class="util" onclick="selectTpl('util',this)">Cart &amp; Checkout</a>
+        <a class="util" onclick="selectTpl('util',this)">Search results</a>
+        <a class="util" onclick="selectTpl('util',this)">Where to Buy</a>
+        <a class="util" onclick="selectTpl('util',this)">Landing pages</a>
+        <a class="util" onclick="selectTpl('util',this)">Legal &amp; Standard</a>
+      </div>
+
+      <div class="tmain">
+        <div class="tpl" id="tpl-util">
+          <div class="acard tmpl"><div class="th">Filter, listing &amp; utility pages</div>
+            <div class="r">The greyed pages in the nav don't get their own page template — they're handled by the Foundation. Three kinds:</div>
+            <div class="r"><b>Filter / listing pages</b> (All Products, Shop By Type/Room, Control/Interface, Connectivity, the Compare tools) &rarr; the <b>canonical &amp; filter-URL strategy</b>: the high-value filtered views earn their own indexable URL + a short answer-first intro + schema; the rest canonicalize back, so AI cites the real page, not a thin filter state.</div>
+            <div class="r"><b>Literature / downloads</b> (Sell Sheets, Data Sheets, Manuals, Installation guides, Price Guides) &rarr; <b>technical extractability</b>: convert the high-intent PDFs to real HTML pages so AI can read them; the rest stay as downloads.</div>
+            <div class="r"><b>Standard / utility</b> (Cart, Search, Where to Buy, Legal, the About sub-pages, the Pro tools) &rarr; standard schema + clean crawlability. These aren't AI-citation targets, so no template — just keep them indexable and correct.</div>
+            <div class="fine">Full treatment in the <b>Foundation</b> tab.</div>
+          </div>
+        </div>
+
+        <!-- CATEGORY -->
+        <div class="tpl" id="tpl-cat">
+          <div class="acard tmpl"><div class="th">Category / PCP <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the highest-demand pages on the site (door knob 18,100/mo, deadbolt 14,800) — the catalog entry AI reaches for on product-type queries.</div>
+            <div class="r"><b>Hierarchy &amp; facets:</b> sits in the Shop By Type / Shop By Room structure over an All-Products filterable hub (family &rarr; category &rarr; type). The high-value facet views (room, finish, feature, platform, connectivity, security grade) earn real indexable URLs + intro copy per the canonical strategy — not just filter states.</div>
+            <div class="r"><b>Shared by every category page:</b> a front-loaded answer block, ItemList + BreadcrumbList + FAQPage schema, Article-schema&#39;d editorial blocks, and one canonical URL even when reached by type / room / Smart &amp; Keyless.</div>
+            <div class="fine"><b>Moves:</b> citation share on category + "best [type]" queries.</div>
+          </div>
+          <div class="seclabel">By category page — the content &amp; questions each one must surface <span class="fine" style="font-weight:400;text-transform:none;letter-spacing:0">(one shell, a different question set per category — drawn from the audience intelligence)</span></div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="catSub(0,this)">Deadbolts</button>
+            <button class="subtab" onclick="catSub(1,this)">Smart &amp; Keyless</button>
+            <button class="subtab" onclick="catSub(2,this)">Knobs &amp; Levers</button>
+            <button class="subtab" onclick="catSub(3,this)">Handlesets</button>
+            <button class="subtab" onclick="catSub(4,this)">Finish &amp; Style</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What deadbolt should I get for my front door?</div><div class="a">A: For a main entrance, choose ANSI/BHMA Grade 1 — the highest residential rating — for forced-entry resistance. Then pick how you want to lock it (keyed, keypad, or smart), and a SmartKey model to rekey it yourself in seconds. Grade 2 is fine for lighter-duty exterior doors.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>ANSI/BHMA grade for a front door</li>
+              <li>smart vs. regular deadbolt — more secure?</li>
+              <li>are keypad deadbolts safe</li>
+              <li>rekey to my existing key</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Kwikset makes Grade-1 deadbolts — the same top residential rating Schlage carries — but AI answers rarely credit it, and competitors own “high-security lock.” Stating the grade plainly, up top, is how the page closes that gap.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Deadbolts</div><div class="mk-body"><div class="mk-h1">Deadbolts</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b>For a front door, a Grade-1 deadbolt gives the most forced-entry resistance. Choose keyed, keypad, or smart — and SmartKey to rekey it yourself.</div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Editorial: ANSI/BHMA grades explained</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:56px">What the grades mean</div><div class="mk-fpo mk-ready" style="min-height:56px">Keyed vs keypad vs smart</div></div><div class="mk-h">Crosslink</div><div class="mk-fpo" style="min-height:38px;text-align:left">&rarr; the "Front Door" Solutions / by-need page — one canonical destination</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: How do I choose a smart lock?</div><div class="a">A: Pick by how you want to unlock (keypad, app, or fingerprint), your smart-home platform (Matter / Apple Home / Alexa / Google), whether you want no-hub Wi-Fi, and whether you need a physical-key backup. The deadbolt grade still sets the physical security.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what is a smart lock / how keyless entry works</li>
+              <li>Wi-Fi vs Bluetooth vs Z-Wave vs Matter</li>
+              <li>are smart locks secure enough for a main entrance?</li>
+              <li>what happens if the Wi-Fi or power goes out?</li>
+              <li>most reliable / do they drain batteries?</li>
+              <li>will it fit my door / does it need a hub?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Reliability and battery life are the top objections in the audience data — meet them at the top of the page, and state no-hub Wi-Fi plainly.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless</div><div class="mk-body"><div class="mk-h1">Smart &amp; Keyless Locks</div><div class="mk-chips"><span>All</span><span>Platform ▾</span><span>Interface ▾</span><span>No Hub</span><span>Finish ▾</span></div><div class="mk-ans mk-rec" style="margin-top:14px"><b>Answer block</b> Choose a smart lock by how you unlock it, your smart-home platform, no-hub Wi-Fi vs a hub, and key backup. Here&#39;s how to decide.</div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Editorial: connectivity + reliability</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:56px">Wi-Fi vs Z-Wave vs Matter</div><div class="mk-fpo mk-ready" style="min-height:56px">Battery life &amp; power-out</div></div><div class="mk-h">Crosslink</div><div class="mk-fpo" style="min-height:38px;text-align:left">&rarr; the Integrations &amp; Platforms pages (Apple Home, Alexa, Matter…)</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Knob or lever — and which function do I need?</div><div class="a">A: Knobs and levers are the latching hardware — pick by function first: keyed entry (exterior), privacy (bed/bath), passage (halls/closets, no lock), or dummy (pull-only). Levers are easier to operate. If the door already has a deadbolt, the knob or lever can be non-locking; then choose finish and grade.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>passage, privacy, or keyed — which do I need for which door?</li>
+              <li>can I use an interior knob or lever on an exterior door?</li>
+              <li>do I need a locking knob if the door already has a deadbolt?</li>
+              <li>what lever or knob pairs with a smart lock / keypad deadbolt?</li>
+              <li>how do I match the knob and deadbolt — same brand, keyed alike?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The recurring confusion isn't products, it's function — which lock type goes on which door (passage / privacy / keyed), whether an interior knob can go on an exterior door, and whether a knob even needs to lock when there's a deadbolt. Answer the function question first.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Door Levers</div><div class="mk-body"><div class="mk-h1">Door Levers</div><div class="mk-chips"><span>All</span><span>Function ▾</span><span>Finish ▾</span></div><div class="mk-ans mk-rec" style="margin-top:14px"><b>Answer block</b> Pick a lever by function — keyed entry, privacy, passage, or dummy — then finish and grade. Here&#39;s which goes on which door.</div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Editorial: function explainer</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:56px">Keyed / privacy / passage / dummy</div><div class="mk-fpo mk-ready" style="min-height:56px">Knob vs lever (accessibility)</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Passage vs privacy vs keyed — which per room? ▾</div><div>Can I use an interior knob on an exterior door? ▾</div><div>Do I need a knob lock if I have a deadbolt? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Do I need a handleset, or a deadbolt and knob?</div><div class="a">A: A handleset combines a deadbolt with a gripping handle for a front door. The thing to get right is fit — match your door's hole spacing (the center-to-center measurement) — plus the finish, and keep it keyed alike with your other locks so one key works everywhere.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>do I need a handleset, or just a deadbolt and knob?</li>
+              <li>how do I find a replacement handleset that fits my door's hole spacing (center-to-center)?</li>
+              <li>can it be keyed alike to my existing deadbolt and other locks?</li>
+              <li>can I get a keypad handleset with a matching keyed handle?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The loudest — and most ownable — pain is replacement fit: buyers can't find a handleset that matches their door's hole spacing (the center-to-center / 11-inch measurement). A fit + keyed-alike guide is the real content gap.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Handlesets</div><div class="mk-body"><div class="mk-h1">Front Door Handlesets</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> A handleset pairs a deadbolt with a gripping handle for the front door. Choose cylinder type, finish, and keyed-alike with your other locks.</div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Do I need a handleset, or a deadbolt and knob? ▾</div><div>How do I find one that fits my door's hole spacing? ▾</div><div>Can it be keyed alike to my other locks? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What finish should I choose, and does it all have to match?</div><div class="a">A: Finish is about your home&#39;s look — matte black, satin nickel, brass, and more. You don&#39;t have to match everything; you can mix intentionally as long as it&#39;s consistent within a sightline (a room or a clear view). Here&#39;s how the finishes read, wear, and pair.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does all my hardware (knobs, hinges, faucets) have to match, or can I mix?</li>
+              <li>does matte black show fingerprints or scratch — how does it hold up?</li>
+              <li>can I mix finishes between rooms or floors?</li>
+              <li>do the hinges need to match the knobs?</li>
+              <li>should the front-door finish match the interior hardware?</li>
+              <li>is a finish like satin nickel becoming dated?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> One question dominates: does it all have to match, or can I mix? — plus matte-black durability (fingerprints, scratches). A mix-and-match finish guide, by room and across floors, is exactly what buyers search for, and it's designer/remodeler territory worth owning.</div><div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: an interior designer or remodeler on mixing finishes by room and across floors. A named design voice (Person / Review schema) is the authority signal for a style question.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Shop by Finish</div><div class="mk-body"><div class="mk-h1">Shop by Finish</div><div class="mk-chips"><span>Matte Black</span><span>Satin Nickel</span><span>Venetian Bronze</span><span>Brass</span></div><div class="mk-ans mk-rec" style="margin-top:14px"><b>Answer block</b> Choose a finish for the look you want — and decide whether to match everything or mix intentionally. Here&#39;s how each finish reads.</div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Editorial: mix-and-match finish guide</div><div class="mk-fpo mk-ready" style="min-height:40px">Do your hardware finishes have to match — or can you mix?</div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Does it all have to match, or can I mix? ▾</div><div>Does matte black show fingerprints? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- SUB-CATEGORY -->
+        <div class="tpl" id="tpl-subcat">
+          <div class="acard tmpl"><div class="th">Sub-category / by-room <span class="tag open">OPEN</span></div>
+            <div class="r"><b>For:</b> the room-scoped cuts of the catalog — a filtered product listing per room, plus true subcategories (deadbolts, electronic/keyless, levers).</div>
+            <div class="r"><b>Page vs. filter:</b> high-demand rooms (front door, garage, interior — 4,400–5,400/mo) get a standalone page with an intro + schema; low-demand (halls/closets) stay filtered views.</div>
+            <div class="r"><b>Shared by every room page:</b> a short room-specific answer above the grid, ItemList + BreadcrumbList schema, and <b>one canonical destination</b> — the room listing and the matching Solutions by-need page must not compete (the room page is the product listing; Solutions is the editorial answer; cross-link them).</div>
+            <div class="fine"><b>Moves:</b> room/use-case demand without thin duplicate pages.</div>
+          </div>
+          <div class="seclabel">By room — the high-traffic ones, each with its audience questions</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="roomSub(0,this)">Front Door</button>
+            <button class="subtab" onclick="roomSub(1,this)">Garage &amp; Side</button>
+            <button class="subtab" onclick="roomSub(2,this)">Interior</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What lock should I get for my front door?</div><div class="a">A: For a front door — the highest-security door — list Grade-1 deadbolts and Grade-1 smart locks with a key or backup-power option first. Then filter by finish and how you want to unlock; SmartKey if they want to rekey it themselves.</div></div>
+            <div class="r" style="margin-top:8px"><b>This page is the listing, not the Q&amp;A.</b> Short answer + product grid (ItemList + BreadcrumbList). The how-to-choose questions and the definition blocks (what a Grade-1 rating means, smart vs. deadbolt) live once on the <b>Front Door by-need page</b>, linked below &mdash; so the listing and the editorial page don&rsquo;t compete for the same answer.</div>
+            <div class="insight"><b>Audience intelligence insight</b> Front-door is the highest-intent room and where Kwikset is most absent in AI answers — lead the listing with a Grade-1 recommendation, not just a product grid.</div></div>
+          <div class="mock-cap">The page (layout) — a room-scoped product listing</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Front Door</div><div class="mk-body"><div class="mk-h1">Front Door Locks</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For a front door, go Grade-1 — a deadbolt or a smart lock with key backup. Filter by finish and how you unlock.</div><div class="mk-chips" style="margin-top:10px"><span>All</span><span>Finish ▾</span><span>Smart ▾</span></div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Crosslink</div><div class="mk-fpo" style="min-height:38px;text-align:left">&rarr; the "Front Door" Solutions / by-need page — one canonical destination</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What lock should I get for a garage or side door?</div><div class="a">A: For a garage entry or side door, list keyless / keypad options for hands-free access plus solid Grade-2 deadbolts. A detached garage may need a no-hub Wi-Fi lock for range from the house.</div></div>
+            <div class="r" style="margin-top:8px"><b>This page is the listing, not the Q&amp;A.</b> Short answer + product grid (ItemList + BreadcrumbList). The how-to-choose questions and the definition blocks (hub-for-range, Grade-2 vs. Grade-1) live once on the <b>Garage &amp; Side Door by-need page</b>, linked below &mdash; so the listing and the editorial page don&rsquo;t compete for the same answer.</div>
+            <div class="insight"><b>Audience intelligence insight</b> Lower volume than the front door but a real entry point — keep it a standalone listing cross-linked from Smart &amp; Keyless, not buried in a filter.</div></div>
+          <div class="mock-cap">The page (layout) — a room-scoped product listing</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Garage & Side Door</div><div class="mk-body"><div class="mk-h1">Garage & Side Door Locks</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Keyless or keypad for hands-free access, or a Grade-2 deadbolt. Detached garage? Consider no-hub Wi-Fi for range.</div><div class="mk-chips" style="margin-top:10px"><span>All</span><span>Finish ▾</span><span>Keyless ▾</span></div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Crosslink</div><div class="mk-fpo" style="min-height:38px;text-align:left">&rarr; the "Garage & Side Door" Solutions / by-need page — one canonical destination</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What locks do interior doors need?</div><div class="a">A: For interior doors, organize by function: privacy sets (bed/bath), passage sets (halls/closets, no lock), and dummy/pull. Filter by finish and lever vs. knob — security grade matters less here.</div></div>
+            <div class="r" style="margin-top:8px"><b>This page is the listing, not the Q&amp;A.</b> Short answer + product grid (ItemList + BreadcrumbList). The how-to-choose questions and the definition blocks (privacy vs. passage vs. dummy) live once on the <b>Interior Doors by-need page</b>, linked below &mdash; so the listing and the editorial page don&rsquo;t compete for the same answer.</div>
+            <div class="insight"><b>Audience intelligence insight</b> Buyers shop interior by function and finish, not security — the captured questions cluster on privacy-vs-passage and matching finishes. (See the Knobs &amp; Levers and Finish tabs for the full set.)</div></div>
+          <div class="mock-cap">The page (layout) — a room-scoped product listing</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Door Hardware / Interior Doors</div><div class="mk-body"><div class="mk-h1">Interior Door Locks & Hardware</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Shop interior by function — privacy (bed/bath), passage (halls/closets), or dummy — then finish.</div><div class="mk-chips" style="margin-top:10px"><span>All</span><span>Function ▾</span><span>Finish ▾</span></div><div class="mk-cards" style="margin-top:12px"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">Crosslink</div><div class="mk-fpo" style="min-height:38px;text-align:left">&rarr; the "Interior Door &" Solutions / by-need page — one canonical destination</div></div></div>
+        </div>
+        </div>
+
+        <!-- PDP -->
+        <div class="tpl" id="tpl-pdp">
+          <div class="acard tmpl"><div class="th">PDP — product detail <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the product page — conversion + the canonical product entity AI cites on "is [model] good" / "[model] vs [competitor]."</div>
+            <div class="r"><b>Shared by every PDP:</b> a front-loaded "what it is / who it's for" answer above the specs, Product schema (price, SKU/GTIN, rating, award) + BreadcrumbList + FAQPage, specs &amp; grade in extractable text (not a spec image/PDF), and each meaningful variant resolvable to one citable page.</div>
+            <div class="r"><b>One template per product type</b> — the PDP isn't one template, because the content differs. Each tab below is a template; the product shown is a worked example, with the answer block for a few siblings so the pattern is clear. Compatible Tech / Works-With only applies to connected products.</div>
+            <div class="r"><b>Which questions, which product:</b> the tabs give you the <b>question bank per product type</b>, and each question maps to a <b>product attribute</b> — so the FAQ gets built once as a template that surfaces a question only when the product has that feature. It scales to every SKU automatically; no writing each by hand. For example: <i>&ldquo;How many user codes?&rdquo;</i> shows on keypad models &middot; <i>&ldquo;Does it need a hub?&rdquo;</i> on smart models &middot; <i>&ldquo;Can I rekey it?&rdquo;</i> on SmartKey models &middot; <i>&ldquo;What ANSI grade is it?&rdquo;</i> on all. Those attributes come from the product data (the Salsify review below).</div>
+            <div class="insight"><b>Note:</b> the field-level product data (Salsify) that feeds these specs &amp; variants is a separate data review, scoped with Hanson's data/PIM team — not specced here.</div>
+          </div>
+          <div class="seclabel">By product type — each is a template; the product shown is the worked example</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="pdpSub(0,this)">Mechanical</button>
+            <button class="subtab" onclick="pdpSub(1,this)">Electronic / Keypad</button>
+            <button class="subtab" onclick="pdpSub(2,this)">Smart</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard">
+            <div class="r"><b>Template for:</b> deadbolts, levers, knobs, and handlesets — the mechanical (non-electronic) hardware.</div>
+            <div class="r" style="margin-top:6px"><b>The answer block — every one of these leads with:</b> what it is + its ANSI/BHMA grade + SmartKey rekey + finish (and function for knobs/levers — keyed / privacy / passage), in plain language above the specs.</div>
+            <div class="qa lead" style="margin:6px 0 0"><div class="q">660 Single Cylinder Deadbolt — the worked example below</div><div class="a">A Grade-1 single-cylinder deadbolt, SmartKey re-keyable — strong forced-entry resistance, and you can rekey it to your existing key yourself.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">Casey Keyed Entry Lever</div><div class="a">A keyed-entry lever, SmartKey re-keyable — for a secondary exterior door that needs a latch and a lock.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">Avalon Handleset</div><div class="a">A front-door handleset — a deadbolt plus a gripping handle in one coordinated finish, SmartKey re-keyable.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">Tylo Passage Knob</div><div class="a">A passage knob for an interior door — it latches but doesn't lock; chosen on finish and function.</div></div>
+            <p class="fine" style="margin:4px 0 0">Product names &amp; specs illustrative — confirm at build.</p>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>will this fit my door / standard prep?</li>
+              <li>what ANSI/BHMA grade is it?</li>
+              <li>can I rekey it to my existing key?</li>
+              <li>what finishes does it come in?</li>
+              <li>single vs double cylinder?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The win is stating grade + SmartKey + finish as extractable text, since AI rarely credits Kwikset's Grade-1 rating the way it does Schlage's.</div>
+            <div class="r" style="margin-top:8px"><b>AI-optimize focus:</b> the answer block (state the Grade-1 rating), the Specifications (real text, not a spec image/PDF), and the FAQ. No Compatible Tech on a mechanical product.</div></div>
+          <div class="mock-cap">Worked example — 660 Single Cylinder Deadbolt</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="sp"></span><span class="it">Search</span><span class="it">Cart</span></div><div class="mk-crumb">Home / Deadbolts / 660 Single Cylinder Deadbolt</div><div class="mk-body"><div class="mk-row"><div><div class="mk-fpo mk-gal">Product gallery</div><div class="mk-thumbs"><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div></div></div><div><div class="mk-title">660 Single Cylinder Deadbolt</div><div class="mk-stars">★★★★½ <span>(120 reviews)</span></div><div class="mk-ans mk-rec" style="margin:11px 0"><b>Answer block</b> A Grade-1 single-cylinder deadbolt with SmartKey re-keyable security — strong forced-entry resistance, and you can rekey it to your existing key yourself.</div><div class="mk-price">$28</div><div class="mk-swatch"><i style="background:#111"></i><i style="background:#caa14a"></i><i style="background:#b8b8b8"></i></div><div class="mk-sel">Finish ▾</div><div class="mk-sel" style="color:#333">ANSI/BHMA <b>Grade 1</b> · SmartKey</div><div class="mk-cta">ADD TO CART</div></div></div><div class="mk-acc" style="margin-top:18px"><div>Product Details</div><div>Specifications</div><div>Replacement Parts</div><div>Installation &amp; Support</div><div class="mk-ready">FAQ — common questions</div></div><div class="mk-h">Complete the Look</div><div class="mk-cards"><div class="mk-fpo">Handleset</div><div class="mk-fpo">Knob</div><div class="mk-fpo">Lever</div><div class="mk-fpo">Pull</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard">
+            <div class="r"><b>Template for:</b> keypad deadbolts and locks — the SmartCode line and similar code-access products.</div>
+            <div class="r" style="margin-top:6px"><b>The answer block — every one of these leads with:</b> what it is + “code access, no phone or hub” + grade + SmartKey + backup key (add the Z-Wave / hub note only on the models that have it).</div>
+            <div class="qa lead" style="margin:6px 0 0"><div class="q">SmartCode 260 Keypad Deadbolt — the worked example below</div><div class="a">A keypad deadbolt — code access, no phone or hub. Grade-1, SmartKey re-keyable, with a backup key.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">SmartCode 270 (Z-Wave)</div><div class="a">The same keypad deadbolt plus Z-Wave, so it can join a SmartThings or Ring hub — the one model where a Works-With story applies.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">SmartCode Keypad Lever</div><div class="a">A keypad lever for a secondary or interior door — code access, no hub, SmartKey re-keyable.</div></div>
+            <p class="fine" style="margin:4px 0 0">Product names &amp; specs illustrative — confirm at build.</p>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>how many user codes can it hold?</li>
+              <li>how long does the battery last / how to replace?</li>
+              <li>does it need a hub or Wi-Fi?</li>
+              <li>will it fit my door?</li>
+              <li>can I still use a physical key?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The questions that matter here are codes and battery life. Works-With applies only to the Z-Wave models — surface the ecosystem there, and leave it off the standalone keypads.</div>
+            <div class="r" style="margin-top:8px"><b>AI-optimize focus:</b> the answer block, the Codes &amp; Battery content, and the FAQ. Surface Works-With only on the Z-Wave models.</div></div>
+          <div class="mock-cap">Worked example — SmartCode 260 Keypad Deadbolt</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span><span class="it">Cart</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / SmartCode 260 Keypad Deadbolt</div><div class="mk-body"><div class="mk-row"><div><div class="mk-fpo mk-gal">Product gallery</div><div class="mk-thumbs"><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div></div></div><div><div class="mk-title">SmartCode 260 Keypad Deadbolt</div><div class="mk-stars">★★★★½ <span>(86 reviews)</span></div><div class="mk-ans mk-rec" style="margin:11px 0"><b>Answer block</b> A keypad deadbolt — lock and unlock with a code, no phone or hub required. Grade-1, SmartKey re-keyable, with a backup key.</div><div class="mk-price">$89</div><div class="mk-swatch"><i style="background:#111"></i><i style="background:#caa14a"></i><i style="background:#b8b8b8"></i></div><div class="mk-sel">Finish ▾</div><div class="mk-sel" style="color:#333">ANSI/BHMA <b>Grade 1</b> · SmartKey</div><div class="mk-cta">ADD TO CART</div></div></div><div class="mk-acc" style="margin-top:18px"><div>Product Details</div><div class="mk-ready">Programming &amp; User Codes</div><div>Specifications</div><div class="mk-ready">Battery</div><div>Installation &amp; Support</div><div class="mk-ready">FAQ — common questions</div></div><div class="mk-h" style="color:#6b6b6b">Works With <span class="fine">(Z-Wave models only)</span></div><div class="mk-cards" style="grid-template-columns:repeat(3,1fr);opacity:.7"><div class="mk-fpo">Z-Wave</div><div class="mk-fpo">SmartThings</div><div class="mk-fpo">Ring</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard">
+            <div class="r"><b>Template for:</b> Wi-Fi and connected smart locks — the Halo and Aura lines.</div>
+            <div class="r" style="margin-top:6px"><b>The answer block — every one of these leads with:</b> what it is + its connectivity (Wi-Fi / no hub, or Bluetooth) + the platforms it works with + grade + how you unlock (code, app, key).</div>
+            <div class="qa lead" style="margin:6px 0 0"><div class="q">Halo Select Plus Touchscreen — the worked example below</div><div class="a">A Grade-1 Wi-Fi smart deadbolt, touchscreen, no hub — works with Apple Home, Alexa, and Google.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">Aura Bluetooth Smart Lock</div><div class="a">A Bluetooth smart deadbolt — app and keypad control in range, no hub; for a door that doesn't need remote-from-anywhere access.</div></div>
+            <div class="qa" style="margin:6px 0 0"><div class="q">Halo Smart Lock with Fingerprint</div><div class="a">A Wi-Fi smart deadbolt that adds fingerprint unlock — same no-hub ecosystem support, with a faster way in.</div></div>
+            <p class="fine" style="margin:4px 0 0">Product names &amp; specs illustrative — confirm at build.</p>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does it work with Apple Home / Matter?</li>
+              <li>does it need a hub for remote access?</li>
+              <li>how's the battery life — does it drain?</li>
+              <li>is it secure for a main entrance?</li>
+              <li>will it fit my door?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> “Does Kwikset work with [Apple Home / Matter]” is a top buyer query, and a filtered link can't be cited — so the Compatible Tech accordion as extractable text + schema is the highest-value optimize here. Battery-life worry shows up too; meet it head-on.</div>
+            <div class="r" style="margin-top:8px"><b>AI-optimize focus:</b> the Compatible Tech (Works-With) accordion, the answer block, and the FAQ.</div></div>
+          <div class="mock-cap">Worked example — Halo Select Plus</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span><span class="it">Cart</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Halo Select Plus Touchscreen</div><div class="mk-body"><div class="mk-row"><div><div class="mk-fpo mk-gal">Product gallery</div><div class="mk-thumbs"><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div><div class="mk-fpo">▢</div></div></div><div><div class="mk-title">Halo Select Plus Touchscreen</div><div class="mk-stars">★★★★½ <span>(48 reviews)</span></div><div class="mk-ans mk-rec" style="margin:11px 0"><b>Answer block</b> A Grade-1 Wi-Fi smart deadbolt with touchscreen keypad and built-in Wi-Fi — no hub, works with Apple Home, Alexa &amp; Google. Award: IoT Breakthrough 2026.</div><div class="mk-price">$309</div><div class="mk-swatch"><i style="background:#111"></i><i style="background:#caa14a"></i><i style="background:#b8b8b8"></i></div><div class="mk-sel">Finish ▾ &nbsp; Handing ▾</div><div class="mk-sel" style="color:#333">ANSI/BHMA <b>Grade 1</b> · award badge</div><div class="mk-cta">ADD TO CART</div></div></div><div class="mk-acc" style="margin-top:18px"><div>Product Details / Features</div><div class="mk-ready">Compatible Tech (Works With)</div><div>Specifications</div><div>Replacement Parts</div><div>Installation &amp; Support</div><div class="mk-ready">FAQ — common questions</div></div><div class="mk-h">Complete the Look</div><div class="mk-cards"><div class="mk-fpo">Handleset</div><div class="mk-fpo">Knob</div><div class="mk-fpo">Deadbolt</div><div class="mk-fpo">Pull</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- SOLUTIONS -->
+        <div class="tpl" id="tpl-solutions">
+          <div class="acard tmpl"><div class="th">Solutions <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> how people shop — by the job, not the product. Mirrors Hanson's 4.3 Solutions: two groups — <b>By Need</b> and <b>Best Smart Lock For</b>. (Nested under Help Me Choose.)</div>
+            <div class="r"><b>Shared by every Solutions page:</b> a front-loaded answer to the job, Article + FAQPage schema, recommended products, and crosslinks to the matching category + PDPs.</div>
+            <div class="r"><b>One query, one owner (don&rsquo;t self-compete):</b> a by-need page is the <b>editorial answer</b> (owns the how-to-choose Q&amp;A + definitions); the matching Products room/category page is the <b>listing</b> (answer + grid); a &ldquo;Best Smart Lock For&rdquo; page is <b>the pick</b> (names a model). Each targets a different query and cross-links the others &mdash; the definitions are written once.</div>
+            <p class="fine" style="margin:2px 0 0">"Best Smart Lock For" picks name a specific current model — confirm the lineup before publishing.</p>
+          </div>
+          <div class="seclabel">Solutions pages — the exact questions each must surface (from the audience intelligence)</div>
+          <div class="subgrp">By Need</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="solSub(0,this)">Front Door</button>
+            <button class="subtab" onclick="solSub(1,this)">Moving In / Replace</button>
+            <button class="subtab" onclick="solSub(2,this)">Rental &amp; Multifamily</button>
+            <button class="subtab" onclick="solSub(3,this)">Garage &amp; Side Door</button>
+            <button class="subtab" onclick="solSub(4,this)">Interior Doors</button>
+          </div>
+          <div class="subgrp">Best Smart Lock For</div>
+          <div class="fine" style="margin:0 0 6px">Each of these recommends <b>a specific model</b> — the pick — for a given need. (By Need is the &ldquo;how do I choose&rdquo; guide; Integrations &amp; Platforms is the &ldquo;does it work with ___&rdquo; page.)</div>
+          <div class="subtabs">
+            <button class="subtab" onclick="solSub(5,this)">Front Door</button>
+            <button class="subtab" onclick="solSub(6,this)">No Hub</button>
+            <button class="subtab" onclick="solSub(7,this)">Apple Home</button>
+            <button class="subtab" onclick="solSub(8,this)">First-Time</button>
+            <button class="subtab" onclick="solSub(9,this)">Shared Access</button>
+            <button class="subtab" onclick="solSub(10,this)">Rekeying</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What lock should I get for my front door?</div><div class="a">A: For a front door — the most security-sensitive door — go Grade-1: a Grade-1 deadbolt, or a Grade-1 smart/keypad lock with a key or backup-power option. Choose how you want to get in (key, code, app), and SmartKey if you want to rekey it yourself.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best lock for a front door?</li>
+              <li>what ANSI/BHMA grade should a front-door deadbolt be?</li>
+              <li>smart lock vs. a regular deadbolt — which is more secure?</li>
+              <li>can I rekey it to my existing key?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Front-door is where Kwikset is most absent in AI answers (purchase-intent ~78% absent) and where security trust is decided — lead with the grade and a clear recommendation.</div></div><div class="r" style="margin-top:6px"><b>This page is the answer, not the listing.</b> It owns the how-to-choose Q&amp;A and the definition blocks; the room listing links here for them, and this links back to the listing for the products.</div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Solutions / Front Door</div><div class="mk-body"><div class="mk-h1">Front Door Locks</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For a front door, go Grade-1 — a deadbolt or a smart lock with key backup. Here are our picks by how you want to unlock.</div><div class="mk-h">Recommended for this need</div><div class="mk-cards"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best lock for a front door? ▾</div><div>what ANSI/BHMA grade should a front-door deadbolt be? ▾</div><div>smart lock vs. a regular deadbolt — which is more secure? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: I just moved in — should I rekey or replace my locks?</div><div class="a">A: Just moved in? Rekey if the locks are in good shape — with SmartKey you can do it yourself in seconds, no locksmith — or replace if they're worn or you want to upgrade to keyless or smart. Either way, the point is making sure old keys no longer work.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>I just moved in — should I rekey or replace?</li>
+              <li>how do I rekey a Kwikset lock myself?</li>
+              <li>keyed-alike for the whole house — what are my options?</li>
+              <li>my lock broke — should I repair or replace it?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Move-in / replace is one of the biggest use-case searches (~9,900/mo) and Kwikset's natural territory — SmartKey rekey is a feature win AI already cites. Own it.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: a real homeowner's move-in story — rekeyed the whole house in an afternoon, no locksmith. A genuine first-person account is what AI surfaces for "just moved in."</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Solutions / Moving In</div><div class="mk-body"><div class="mk-h1">Moving In or Replacing a Lock</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Rekey if the locks are in good shape (SmartKey lets you do it yourself), or replace to upgrade. Either way, old keys stop working.</div><div class="mk-h">Recommended for this need</div><div class="mk-cards"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>I just moved in — should I rekey or replace? ▾</div><div>how do I rekey a Kwikset lock myself? ▾</div><div>keyed-alike for the whole house — what are my options? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best lock for a rental or short-term stay?</div><div class="a">A: For a rental or short-term stay, you want keyless entry with codes you can change between guests or tenants — no keys to copy or collect. A keypad or smart lock lets you issue a code per stay and delete it after.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best smart lock for an Airbnb / short-term rental?</li>
+              <li>best keypad lock for a rental — easy to change codes between tenants?</li>
+              <li>keyless entry for rentals with no hub required?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> This is the consumer / host scale. For property-manager / apartment scale (UNITE + ButterflyMX), see the Multifamily template — Kwikset is absent even on the integration query, so naming it matters.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: an Airbnb host or small landlord on managing codes between guests and tenants. A real host voice is the credible answer AI reaches for on the rental query.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Solutions / Rentals</div><div class="mk-body"><div class="mk-h1">Locks for Rentals</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Use a keypad or smart lock so you can issue a code per guest or tenant and delete it after — no keys to collect.</div><div class="mk-h">Recommended for this need</div><div class="mk-cards"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best smart lock for an Airbnb / short-term rental? ▾</div><div>best keypad lock for a rental — easy to change codes between tenants? ▾</div><div>keyless entry for rentals with no hub required? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What lock should I get for a garage or side door?</div><div class="a">A: For a garage entry or side door, match the lock to how it's used — a keypad or smart lock for keyless access, or a solid Grade-2 deadbolt. A detached garage may need a no-hub Wi-Fi lock for range from the house.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best smart lock for a detached garage?</li>
+              <li>best lock for a side or secondary door?</li>
+              <li>does it need a hub for range from the house?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Lower volume, but a real by-need entry point — keep it a standalone page cross-linked from Smart &amp; Keyless so it's findable, not buried in a filter.</div></div><div class="r" style="margin-top:6px"><b>This page is the answer, not the listing.</b> It owns the how-to-choose Q&amp;A and the definition blocks; the room listing links here for them, and this links back to the listing for the products.</div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Solutions / Garage & Side Door</div><div class="mk-body"><div class="mk-h1">Garage & Side Door Locks</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Match the lock to the door — keypad or smart for keyless access, or a Grade-2 deadbolt. Detached garage? Consider no-hub Wi-Fi for range.</div><div class="mk-h">Recommended for this need</div><div class="mk-cards"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best smart lock for a detached garage? ▾</div><div>best lock for a side or secondary door? ▾</div><div>does it need a hub for range from the house? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What locks do interior doors need?</div><div class="a">A: Interior doors usually need a privacy lock (bed/bath) or a passage set (halls/closets, no lock at all) — pick by room and finish. They don't need the security grade an exterior door does.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>do interior doors need locks, and which type?</li>
+              <li>privacy vs. passage vs. keyed — which for which room?</li>
+              <li>how do I match the finish to the rest of my home?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The audience capture confirms it — the dominant question here is function: privacy vs. passage vs. keyed per room, and whether an interior knob can go on an exterior door. Lead with that.</div></div><div class="r" style="margin-top:6px"><b>This page is the answer, not the listing.</b> It owns the how-to-choose Q&amp;A and the definition blocks; the room listing links here for them, and this links back to the listing for the products.</div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Solutions / Interior Doors</div><div class="mk-body"><div class="mk-h1">Interior Door Locks & Hardware</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Interior doors take a privacy lock (bed/bath) or a passage set (halls/closets) — pick by room and finish, not security grade.</div><div class="mk-h">Recommended for this need</div><div class="mk-cards"><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div><div class="mk-fpo">Product</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>do interior doors need locks, and which type? ▾</div><div>privacy vs. passage vs. keyed — which for which room? ▾</div><div>how do I match the finish to the rest of my home? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best smart lock for a front door?</div><div class="a">A: For most front doors, the pick is a Grade-1 smart deadbolt with a keypad, a key or backup-power option, and your smart-home platform (Matter / Apple Home / Alexa). <span class="claim" data-tip="Verify the current pick.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best smart lock for a front door?</li>
+              <li>best keypad deadbolt for reliability?</li>
+              <li>is it secure enough for a main entrance?</li>
+              <li>will it fit my existing door?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Front-door 'best smart lock for…' is the single most-absent purchase-intent query — owning it with a named pick + the criteria is the biggest citation win.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Smart Lock for a Front Door</div><div class="mk-body"><div class="mk-h1">Best Smart Lock for a Front Door</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For a front door, go Grade-1 with a keypad and key backup, on your platform. Here's the pick and why.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best smart lock for a front door? ▾</div><div>best keypad deadbolt for reliability? ▾</div><div>is it secure enough for a main entrance? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best smart lock with no hub required?</div><div class="a">A: A Wi-Fi or Matter lock connects directly — no separate hub to buy. That's the deciding criterion. <span class="claim" data-tip="Verify the current pick.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best smart lock with no hub required?</li>
+              <li>does it work over Wi-Fi without a bridge?</li>
+              <li>can I control it remotely without a hub?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> 'No hub required' is a recurring buyer filter and a Kwikset strength (built-in Wi-Fi) — name the model and say 'no hub' plainly.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Smart Lock With No Hub Required</div><div class="mk-body"><div class="mk-h1">Best Smart Lock With No Hub Required</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> The best no-hub lock has built-in Wi-Fi — no bridge. Here's the pick.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best smart lock with no hub required? ▾</div><div>does it work over Wi-Fi without a bridge? ▾</div><div>can I control it remotely without a hub? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best smart lock for an Apple Home setup?</div><div class="a">A: Look for Matter / Apple Home support, plus tap-to-unlock (home keys) if they want it. <span class="claim" data-tip="Verify the current pick.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best smart lock for an Apple Home setup?</li>
+              <li>does it support Apple home keys / tap to unlock?</li>
+              <li>does it need a hub for Apple Home?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Apple / Matter framing dominates the ecosystem answers AI gives — a named, criteria-led pick is how Kwikset gets into that answer.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Smart Lock for Apple Home</div><div class="mk-body"><div class="mk-h1">Best Smart Lock for Apple Home</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For Apple Home, look for Matter support and home keys. Here's the pick.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best smart lock for an Apple Home setup? ▾</div><div>does it support Apple home keys / tap to unlock? ▾</div><div>does it need a hub for Apple Home? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best lock for a first-time homeowner?</div><div class="a">A: Easy install, SmartKey rekey (reset it to your key after move-in), user codes so there are no keys to hand out, and a key backup. <span class="claim" data-tip="Verify the current pick.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best lock for a first-time homeowner?</li>
+              <li>best smart lock for a home with kids?</li>
+              <li>should I rekey or replace when I move in?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> First-time buyers over-index on simplicity + the move-in rekey — SmartKey is the Kwikset feature win to lead with here.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Lock for a First-Time Homeowner</div><div class="mk-body"><div class="mk-h1">Best Lock for a First-Time Homeowner</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For a first home: easy install, SmartKey rekey, and user codes. Here's the pick.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best lock for a first-time homeowner? ▾</div><div>best smart lock for a home with kids? ▾</div><div>should I rekey or replace when I move in? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best lock for sharing access with family or guests?</div><div class="a">A: Use a keypad or smart lock with guest / temporary codes you can issue and delete — no copied keys. <span class="claim" data-tip="Verify the current pick.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best lock for sharing access with family or roommates?</li>
+              <li>best way to give guests access without a key?</li>
+              <li>can I give a temporary code and delete it later?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Shared-access is a real use-case query Kwikset is absent from — codes you can issue and revoke is the answer.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Lock for Sharing Access</div><div class="mk-body"><div class="mk-h1">Best Lock for Sharing Access</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For shared access, use codes you can issue and delete — no keys to copy. Here's the pick.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best lock for sharing access with family or roommates? ▾</div><div>best way to give guests access without a key? ▾</div><div>can I give a temporary code and delete it later? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the best lock for easy rekeying?</div><div class="a">A: SmartKey lets you reset the lock to a new key yourself in seconds — no locksmith. Any SmartKey model qualifies. <span class="claim" data-tip="Verify the current SmartKey lineup.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>best lock that can be rekeyed to my existing key?</li>
+              <li>how does SmartKey rekeying work?</li>
+              <li>can I rekey it myself without a locksmith?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Rekey / SmartKey is the one category Kwikset already WINS in AI answers (0% absent) — this page reinforces and extends a proven strength.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Best Lock for Easy Rekeying</div><div class="mk-body"><div class="mk-h1">Best Lock for Easy Rekeying</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> For easy rekeying, SmartKey resets to your key in seconds — no locksmith. Here's the pick.</div><div class="mk-h">Top picks</div><div class="mk-cards"><div class="mk-fpo">Top pick</div><div class="mk-fpo">Runner-up</div><div class="mk-fpo">Budget pick</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>best lock that can be rekeyed to my existing key? ▾</div><div>how does SmartKey rekeying work? ▾</div><div>can I rekey it myself without a locksmith? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- ECOSYSTEM -->
+        <div class="tpl" id="tpl-ecosystem">
+          <div class="acard tmpl"><div class="th">Integrations &amp; Platforms <span class="tag open">OPEN</span></div>
+            <div class="r"><b>For:</b> the #1 way buyers shop a smart lock — by platform. One page per platform; <b>content pages, not filter links</b> (a filter can't be cited; the page that answers the question is what AI quotes).</div>
+            <div class="r"><b>Shared by every platform page:</b> lead with "Yes — Kwikset works with [platform] on these models," FAQPage + Article schema, and link to the filtered product set.</div>
+            <p class="fine" style="margin:2px 0 0">Model lists need current-state verification. ButterflyMX (multifamily) is covered in the Multifamily template. These platform pages own the compatibility answer (&ldquo;does Kwikset work with __&rdquo;); the &ldquo;best smart lock for [platform]&rdquo; pick lives under Solutions and links here.</p>
+          </div>
+          <div class="seclabel">By platform — each "works with" page, with its audience questions</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="ecoSub(0,this)">Apple Home</button>
+            <button class="subtab" onclick="ecoSub(1,this)">Alexa</button>
+            <button class="subtab" onclick="ecoSub(2,this)">Google Home</button>
+            <button class="subtab" onclick="ecoSub(3,this)">Z-Wave</button>
+            <button class="subtab" onclick="ecoSub(4,this)">Matter</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Does Kwikset work with Apple Home?</div><div class="a">A: Yes — Kwikset's Matter-capable smart locks connect to Apple Home, and some support home keys (tap to unlock). <span class="claim" data-tip="Verify the current Apple Home models.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does Kwikset work with Apple Home / Matter?</li>
+              <li>does it support Apple home keys / tap to unlock?</li>
+              <li>how do I add it to Apple Home?</li>
+              <li>does it need a hub?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Apple / Matter is the dominant ecosystem framing in AI answers and a top buyer filter — a verbatim 'yes + models' page is the citation play.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Integrations &amp; Platforms / Apple Home</div><div class="mk-body"><div class="mk-h1">Does Kwikset Work With Apple Home?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Yes — Kwikset's Matter-capable locks work with Apple Home; here are the models and setup.</div><div class="mk-h">Compatible models</div><div class="mk-cards"><div class="mk-fpo">Halo</div><div class="mk-fpo">Aura</div><div class="mk-fpo">Halo Touch</div><div class="mk-fpo">&rarr; all compatible</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>does Kwikset work with Apple Home / Matter? ▾</div><div>does it support Apple home keys / tap to unlock? ▾</div><div>how do I add it to Apple Home? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Does Kwikset work with Amazon Alexa?</div><div class="a">A: Yes — Kwikset's Wi-Fi / Matter smart locks work with Alexa for voice lock/unlock, status, and routines. <span class="claim" data-tip="Verify the current Alexa models.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does Kwikset work with Amazon Alexa?</li>
+              <li>can I lock and unlock by voice?</li>
+              <li>do I need a hub for Alexa?</li>
+              <li>which models support Alexa?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Voice-assistant compatibility is a top 'will this work with my…' query — answer it verbatim, by model.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Integrations &amp; Platforms / Amazon Alexa</div><div class="mk-body"><div class="mk-h1">Does Kwikset Work With Amazon Alexa?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Yes — Kwikset's Wi-Fi / Matter locks work with Alexa for voice control; here are the models.</div><div class="mk-h">Compatible models</div><div class="mk-cards"><div class="mk-fpo">Halo</div><div class="mk-fpo">Aura</div><div class="mk-fpo">Halo Touch</div><div class="mk-fpo">&rarr; all compatible</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>does Kwikset work with Amazon Alexa? ▾</div><div>can I lock and unlock by voice? ▾</div><div>do I need a hub for Alexa? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Does Kwikset work with Google Home?</div><div class="a">A: Yes — Kwikset's Wi-Fi / Matter smart locks work with Google Home for voice control and remote access. <span class="claim" data-tip="Verify the current Google Home models.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does Kwikset work with Google Home?</li>
+              <li>can I control it with Google Assistant?</li>
+              <li>does it need a hub?</li>
+              <li>which models support Google Home?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Same as Alexa — buyers filter by their assistant; a per-platform yes-answer page wins the cite a filter link can't.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Integrations &amp; Platforms / Google Home</div><div class="mk-body"><div class="mk-h1">Does Kwikset Work With Google Home?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Yes — Kwikset's Wi-Fi / Matter locks work with Google Home; here are the models.</div><div class="mk-h">Compatible models</div><div class="mk-cards"><div class="mk-fpo">Halo</div><div class="mk-fpo">Aura</div><div class="mk-fpo">Halo Touch</div><div class="mk-fpo">&rarr; all compatible</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>does Kwikset work with Google Home? ▾</div><div>can I control it with Google Assistant? ▾</div><div>does it need a hub? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Which Kwikset locks work with Z-Wave (SmartThings &amp; Ring)?</div><div class="a">A: Select Kwikset models include Z-Wave to join a SmartThings or Ring hub for whole-home automation. <span class="claim" data-tip="Verify the current Z-Wave models.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>which Kwikset locks support Z-Wave?</li>
+              <li>does it work with SmartThings / Ring?</li>
+              <li>do I need the hub?</li>
+              <li>Z-Wave vs Wi-Fi — which should I get?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Z-Wave buyers are hub households (SmartThings / Ring) — name the specific Z-Wave SKUs so the page is retrievable for those queries.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Integrations &amp; Platforms / Z-Wave</div><div class="mk-body"><div class="mk-h1">Which Kwikset Locks Work With Z-Wave?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Select Kwikset models include Z-Wave for SmartThings and Ring; here are the models.</div><div class="mk-h">Compatible models</div><div class="mk-cards"><div class="mk-fpo">SmartCode 914</div><div class="mk-fpo">SmartCode 916</div><div class="mk-fpo">Obsidian Z-Wave</div><div class="mk-fpo">&rarr; all Z-Wave</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>which Kwikset locks support Z-Wave? ▾</div><div>does it work with SmartThings / Ring? ▾</div><div>do I need the hub? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Does Kwikset work with Matter?</div><div class="a">A: Yes — Kwikset's Matter models work across Apple Home, Google Home, Alexa, and SmartThings over one standard, many without a separate hub. <span class="claim" data-tip="Verify the current Matter models.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>does Kwikset work with Matter?</li>
+              <li>what does Matter mean for my lock?</li>
+              <li>does Matter need a hub?</li>
+              <li>which models are Matter?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Matter is the rising cross-platform standard and a future-proofing question — a clear Matter explainer + model list gets ahead of the demand.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Smart &amp; Keyless</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Smart &amp; Keyless / Integrations &amp; Platforms / Matter</div><div class="mk-body"><div class="mk-h1">Does Kwikset Work With Matter?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Yes — Kwikset's Matter locks work across the major platforms over one standard; here are the models.</div><div class="mk-h">Compatible models</div><div class="mk-cards"><div class="mk-fpo">Halo Select</div><div class="mk-fpo">Halo Select Plus</div><div class="mk-fpo">Aura</div><div class="mk-fpo">&rarr; all Matter</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>does Kwikset work with Matter? ▾</div><div>what does Matter mean for my lock? ▾</div><div>does Matter need a hub? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- SECURITY HUB -->
+        <div class="tpl" id="tpl-security">
+          <div class="acard tmpl"><div class="th">Security hub <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the trust gap — Kwikset <b>absent from ~80% of trust/security AI answers</b>; AI leans on Schlage/Medeco. One owned hub, entrances from Solutions + Pro (one canonical URL).</div>
+            <div class="r"><b>① Opening answer block:</b> <span class="fine" style="font-weight:400">"Are smart locks secure? / Is SmartKey secure?" answered head-on, grade-first — the ~100-word answer AI cites.</span></div>
+            <div class="qa lead"><div class="q">Q: Are Kwikset locks secure?</div><div class="a">A: Kwikset makes deadbolts certified to ANSI/BHMA grades, including Grade 1 — the highest residential rating — tested for strength, durability, and forced-entry resistance. SmartKey Security models are designed to resist bumping and picking and let you rekey the lock yourself. The right level depends on the door: Grade 1 for main entrances, Grade 2–3 for lighter-duty.</div></div>
+            <div class="r"><b>Schema:</b> FAQPage + Article + DefinedTerm (ANSI/BHMA grade, bump/pick).</div>
+            <div class="r" style="margin-top:8px"><b>③ FAQ block — questions + answers to draft</b> <span class="fine" style="font-weight:400">(FAQPage schema). <span style="color:#9a6212;font-weight:600">The ! icon marks a claim Kwikset confirms.</span></span></div>
+            <div class="qa"><div class="q">Q: Are smart locks secure enough for a main entrance?</div><div class="a">A: Yes, when the deadbolt is rated Grade 1 — the smart features sit on top of the same physical lock. Choose a Grade-1 smart deadbolt and you get code/remote access and forced-entry resistance.</div></div>
+            <div class="qa"><div class="q">Q: Is SmartKey secure against bumping and picking?<span class="claim" data-tip="Bump/pick-resistance claim — confirm with Kwikset.">!</span></div><div class="a">SmartKey Security is designed to resist bump attacks and picking, and lets you rekey it yourself — the page should counter the "SmartKey is vulnerable" narrative AI repeats.</div></div>
+            <div class="qa"><div class="q">Q: Which is more secure: a smart lock or a regular deadbolt?</div><div class="a">A: Security comes from the deadbolt grade, not the electronics — a Grade-1 smart deadbolt and a Grade-1 mechanical deadbolt resist force the same way. The smart lock just adds access control.</div></div>
+            <div class="qa"><div class="q">Q: What ANSI grade should a front-door deadbolt be?</div><div class="a">A: Grade 1 is the highest residential rating and the right target for a main entrance; Grade 2 suits lighter-duty exterior doors.</div></div>
+            <div class="qa"><div class="q">Q: What do locksmiths look for in a secure lock?</div><div class="a">A: The ANSI/BHMA grade, a 1-inch deadbolt throw, and a reinforced strike plate matter more than the brand — a Grade-1 deadbolt with a solid strike is the baseline. (Reframed from "what locks do locksmiths recommend" so the page answers the intent without speaking for third parties.)</div></div>
+            <ul class="chk"><li>Consolidates Security Grades + Home Security into one hub</li><li>States Grade-1 + bump/pick resistance in plain text</li><li>Carries the awards as trust signals</li></ul>
+            <div class="fine"><b>Moves:</b> trust/security citation; counters Schlage owning "high security lock."</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: a locksmith or independent security expert on what Grade-1 actually buys you, or a pro quote that counters the "SmartKey is vulnerable" myth. Person / Review schema — locksmith voices are exactly who AI cites on "what locks do pros recommend."</div>
+          </div>
+          <div class="mock-cap">The page (directional layout)</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Solutions</span><span class="it">Pro</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-crumb">Home / Security</div>
+            <div class="mk-body">
+              <div class="mk-h1">How Secure Are Kwikset Locks?</div>
+              <div class="mk-ans mk-add"><b>Answer block <span class="pin">1</span></b>Kwikset offers ANSI/BHMA Grade-1 deadbolts with bump- and pick-resistance. Here's what the grades mean and how SmartKey holds up against picking and bumping.</div>
+              <div class="mk-h">Grade education + SmartKey explainer <span class="pin">2</span></div>
+              <div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo" style="min-height:72px">ANSI/BHMA grades explained</div><div class="mk-fpo" style="min-height:72px">Is SmartKey secure? (counter the myth)</div></div>
+              <div class="mk-h">Awards + FAQ <span class="pin">3</span></div>
+              <div class="mk-cards"><div class="mk-fpo">Award</div><div class="mk-fpo">Cert</div><div class="mk-fpo">FAQ</div><div class="mk-fpo">FAQ</div></div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>Answer grade-first, head-on</b> (ADD — new hub) — including SmartKey (counter the "vulnerable" narrative AI repeats).</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>DefinedTerm schema</b> on grades + SmartKey so AI can cite the definitions.</div></div>
+          <div class="anno"><span class="pn">3</span><div><b>Awards as trust signals</b> in text + schema; FAQPage on the security Q&amp;A.</div></div>
+        </div>
+
+        <!-- BUYING GUIDES -->
+        <div class="tpl" id="tpl-guides">
+          <div class="acard tmpl"><div class="th">Buying guides / education <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the brand's stated goal to be the educational source for locks — the "how do I choose / what is X" content AI pulls from. Each tab is one guide.</div>
+            <div class="r"><b>Shared by every guide:</b> a retrievable content page (answer-first) with Article (verified author) + FAQPage + DefinedTerm schema, linking to a filtered product set &rarr; PDPs.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: the guides are Kwikset's own content, so the authority signal is a real named author, not an anonymous brand byline — Kwikset designates a credentialed in-house product/security expert with an author bio + Person schema. That's the E-E-A-T signal — Experience, Expertise, Authoritativeness, Trust, the credibility markers AI and search use to decide whose "how to choose" advice to trust, and a real named expert is what satisfies them. The Phase-2 lift is an outside locksmith or security pro co-signing the guide.</div>
+          </div>
+          <div class="seclabel">By guide — each educational page, with its audience questions</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="guideSub(0,this)">How to Choose</button>
+            <button class="subtab" onclick="guideSub(1,this)">Smart Locks 101</button>
+            <button class="subtab" onclick="guideSub(2,this)">Compatibility</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: How do I choose a door lock?</div><div class="a">A: Choosing a lock comes down to four things: the door and its security needs (the ANSI/BHMA grade), how you want to unlock it (key, code, app, or smart-home), whether you need a key backup, and finish. Start with the door, then narrow by feature.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>how do I choose between a deadbolt, handleset, knob, and lever?</li>
+              <li>are smart locks worth it for a regular home?</li>
+              <li>what ANSI/BHMA grade do I need?</li>
+              <li>keyed, keypad, or smart — which should I get?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Category/education queries are ~62% absent for Kwikset — a clean 'how to choose' page is the baseline just to appear in the consideration answers.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / How to Choose a Door Lock</div><div class="mk-body"><div class="mk-h1">How to Choose a Door Lock</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Choose by the door's security grade, how you want to unlock, key backup, and finish — start with the door.</div><div class="mk-h">Filtered products for this guide</div><div class="mk-cards"><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>how do I choose between a deadbolt, handleset, knob, and lever? ▾</div><div>are smart locks worth it for a regular home? ▾</div><div>what ANSI/BHMA grade do I need? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What is a smart lock and how does keyless entry work?</div><div class="a">A: A smart lock lets you unlock with a code, app, or fingerprint instead of (or alongside) a key. It sits on a standard deadbolt — the 'smart' part is the access and connectivity. Here's how keyless entry works and what to know before buying.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what is a smart lock and how does it work?</li>
+              <li>how does keyless entry work on a front door?</li>
+              <li>does a smart lock replace the whole deadbolt or just part?</li>
+              <li>are smart locks worth it?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> 'What is a smart lock / how does keyless work' is pure awareness demand AI answers with third parties today — own the explainer and route to products.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Smart Locks 101</div><div class="mk-body"><div class="mk-h1">Smart Locks 101: How Keyless Entry Works</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> A smart lock unlocks by code, app, or fingerprint on a standard deadbolt. Here's how it works.</div><div class="mk-h">Featured smart locks</div><div class="mk-cards"><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what is a smart lock and how does it work? ▾</div><div>how does keyless entry work on a front door? ▾</div><div>does a smart lock replace the whole deadbolt or just part? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What's the difference between Wi-Fi, Bluetooth, Z-Wave, and Matter locks?</div><div class="a">A: Smart locks connect over Wi-Fi, Bluetooth, Z-Wave, or Matter — and that choice decides whether you need a hub and which platforms (Apple Home, Alexa, Google) it works with. Here's the difference and how to match it to your home.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what's the difference between Wi-Fi, Bluetooth, Z-Wave, and Matter locks?</li>
+              <li>will it work with my smart-home ecosystem?</li>
+              <li>does it need a hub?</li>
+              <li>what is Matter and do I need it?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Compatibility is where buyers start ('will this work with my…') and where Apple/Matter framing dominates — a clear connectivity explainer feeds every ecosystem page.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Help Me Choose / Smart Lock Compatibility</div><div class="mk-body"><div class="mk-h1">Smart Lock Compatibility: Wi-Fi vs Bluetooth vs Z-Wave vs Matter</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Connectivity (Wi-Fi / Bluetooth / Z-Wave / Matter) decides hub-or-not and which platforms work. Here's how to match it.</div><div class="mk-h">Filtered by connectivity</div><div class="mk-cards"><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">Pick</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what's the difference between Wi-Fi, Bluetooth, Z-Wave, and Matter locks? ▾</div><div>will it work with my smart-home ecosystem? ▾</div><div>does it need a hub? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- INNOVATION -->
+        <div class="tpl" id="tpl-innovation">
+          <div class="acard tmpl"><div class="th">Innovation / feature page <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> brand-tech features — each needs one canonical "what is [feature]" page, contextually linked from the PDPs that use it.</div>
+            <div class="r"><b>Shared by every feature page:</b> a 2–3 sentence definition up top, DefinedTerm + Article schema, and a link to the products that use it.</div>
+            <p class="fine" style="margin:2px 0 0">Feature claims (e.g. SmartKey bump/pick resistance, Microban) carry a <span class="claim" data-tip="A claim to confirm with Kwikset.">!</span> marker; Kwikset confirms the wording.</p>
+          </div>
+          <div class="seclabel">By feature — each "what is…" page, with its audience questions</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="innoSub(0,this)">SmartKey</button>
+            <button class="subtab" onclick="innoSub(1,this)">KwikSlide</button>
+            <button class="subtab" onclick="innoSub(2,this)">Microban</button>
+            <button class="subtab" onclick="innoSub(3,this)">LED Levers</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What is SmartKey Security and how is it different from regular rekeying?</div><div class="a">A: SmartKey Security is Kwikset's re-keyable cylinder — reset the lock to a new key yourself in seconds, no locksmith, instead of replacing the cylinder. <span class="claim" data-tip="Bump/pick-resistance claim — confirm with Kwikset.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what is SmartKey and how is it different from regular rekeying?</li>
+              <li>how does SmartKey rekeying work?</li>
+              <li>is SmartKey secure against bumping and picking?</li>
+              <li>which Kwikset locks have SmartKey?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> SmartKey is Kwikset's clearest WIN in AI answers (rekey queries 0% absent) — a strong DefinedTerm page protects and extends it.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: a locksmith on how SmartKey rekey works and why DIY rekey matters at move-in. A pro voice on the one feature Kwikset already wins is pure reinforcement — and locksmiths are who AI cites here.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Innovation / SmartKey</div><div class="mk-body"><div class="mk-h1">What Is SmartKey Security?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> SmartKey lets you re-key the lock yourself in seconds to match an existing key — no locksmith.</div><div class="mk-h">Products with SmartKey</div><div class="mk-cards"><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what is SmartKey and how is it different from regular rekeying? ▾</div><div>how does SmartKey rekeying work? ▾</div><div>is SmartKey secure against bumping and picking? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What is KwikSlide and which products have it?</div><div class="a">A: KwikSlide is a Kwikset-coined term, so AI has no outside source to learn it from — a short definition block with DefinedTerm schema, plus the products that use it, makes Kwikset's own page the one AI cites.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what is KwikSlide and which products have it?</li>
+              <li>how does KwikSlide work?</li>
+              <li>which doors is it for?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Buyers ask 'what is KwikSlide' by name — a definitional page captures the branded-feature query, but the definition must come from Kwikset, not us.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Innovation / KwikSlide</div><div class="mk-body"><div class="mk-h1">What Is KwikSlide?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> KwikSlide — [definition to confirm from Kwikset]; here are the products that use it.</div><div class="mk-h">Products with KwikSlide</div><div class="mk-cards"><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what is KwikSlide and which products have it? ▾</div><div>how does KwikSlide work? ▾</div><div>which doors is it for? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What is Microban antimicrobial protection?</div><div class="a">A: Microban antimicrobial protection is built into the hardware to continuously inhibit the stain- and odor-causing bacteria, mold, and mildew that build up on a surface — so a high-touch piece like a door handle stays cleaner and fresher between cleanings, and the finish holds up. (It protects the product, not users from illness, and isn't a substitute for cleaning.) <span class="claim" data-tip="Antimicrobial claim — confirm with Kwikset.">!</span></div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what is Microban antimicrobial finish?</li>
+              <li>which Kwikset products have Microban?</li>
+              <li>does it protect me from germs?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Microban is a real differentiator buyers don't fully get — the honest, compliant value is a cleaner, fresher high-touch surface (a door handle people touch all day) and a longer-lasting finish, not health protection. Lead with that.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Innovation / Microban</div><div class="mk-body"><div class="mk-h1">What Is Microban Antimicrobial Protection?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> Microban is built in to keep a high-touch surface like a door handle cleaner and fresher — it inhibits stain- and odor-causing microbes.</div><div class="mk-h">Products with Microban</div><div class="mk-cards"><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what is Microban antimicrobial finish? ▾</div><div>which Kwikset products have Microban? ▾</div><div>does it protect me from germs? ▾</div></div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: What are LED Illuminated levers?</div><div class="a">A: LED Illuminated levers add a soft light to the handle so the door is easy to find and operate in the dark — useful in hallways, kids' rooms, and for nighttime navigation.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>what are LED illuminated door levers?</li>
+              <li>where are they useful?</li>
+              <li>which products have them?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Niche, but a real differentiator for hallways and kids' rooms — a short DefinedTerm page makes the branded feature findable.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program — a credible voice AI cites: a quote from an occupational therapist or aging-in-place specialist on lit levers reducing nighttime trips and falls; a parenting / family creator showing them in kids' rooms and hallways; or a caretaker testimonial from an elder-care or accessibility setting. Mark it up as Person / Review schema — for a low-awareness feature, a real expert or real-user voice is the strongest citation signal there is.</div></div>
+          <div class="mock-cap">The page (layout)</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Help Me Choose</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Innovation / LED Illuminated Levers</div><div class="mk-body"><div class="mk-h1">What Are LED Illuminated Levers?</div><div class="mk-ans mk-rec" style="margin-top:10px"><b>Answer block</b> LED Illuminated levers light the handle so it's easy to find in the dark — for hallways and kids' rooms.</div><div class="mk-h">Products with LED levers</div><div class="mk-cards"><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">Lock</div><div class="mk-fpo">&rarr; all</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>what are LED illuminated door levers? ▾</div><div>where are they useful? ▾</div><div>which products have them? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- COMPARISON -->
+        <div class="tpl" id="tpl-comparison">
+          <div class="acard tmpl"><div class="th">Comparison <span class="tag locked">tool</span> <span class="tag open">content OPEN</span></div>
+            <ul style="margin:2px 0 0 18px;padding:0;font-size:12.5px;line-height:1.55;color:#333">
+              <li><b>Two experiences</b> (6/19 deck, pp. 36 &amp; 43): <b>Curated</b> — the competitive comparison pages (static + schema, the citation play); <b>Dynamic</b> — the Kwikset-to-Kwikset selector (good UX, but AI can’t read a JS widget, so it needs a static, crawlable summary).</li>
+              <li><b>One page per matchup</b> — each comparison below is its own page, all following the same structure: a like-with-like <b>verdict answer block</b> (~100 words, the part AI cites) &rarr; a <b>comparison Table</b> &rarr; a <b>FAQPage</b>. Schema: Article + Table + FAQPage.</li>
+              <li><b>Guardrail — no competitor names.</b> Kwikset doesn’t name competitors on its own pages, so each page answers the comparison <i>intent</i> in absolute terms (Kwikset’s own facts); the named head-to-head is carried off-site by reviewers / locksmiths.</li>
+              <li><b>Attributes</b> — ANSI/BHMA grade (the differentiator), SmartKey/rekey, ecosystem, battery, price. Reframe the usual &ldquo;cons&rdquo; head-on.</li>
+            </ul>
+            <div class="fine" style="margin-top:8px"><b>Moves:</b> the &ldquo;vs&rdquo; citations competitors and Reddit own today. <span style="color:#9a6212;font-weight:600">The ! icon marks a claim to verify with Kwikset.</span></div>
+          </div>
+          <div class="seclabel">By matchup — what each addresses (internal), and how we win it inside the guardrails</div>
+          <div class="subtabs">
+            <button class="subtab on" onclick="cmpSub(0,this)">vs Schlage</button>
+            <button class="subtab" onclick="cmpSub(1,this)">vs Yale</button>
+            <button class="subtab" onclick="cmpSub(2,this)">Halo vs Encode</button>
+            <button class="subtab" onclick="cmpSub(3,this)">Which Kwikset? (selector)</button>
+          </div>
+        <div class="subpanel show">
+          <div class="acard">
+            <div class="r"><b>What we’re actually addressing:</b> the &ldquo;Kwikset vs Schlage&rdquo; query — one of the highest-intent comparisons buyers ask AI directly.</div>
+            <div class="r"><b>How we win it within Kwikset’s guardrails</b> — no competitor named on-page:</div>
+            <ul style="margin:2px 0 0 18px;padding:0;font-size:12.5px;line-height:1.5;color:#333">
+              <li><b>On-page</b> — own the answer in absolute terms — &ldquo;Kwikset makes Grade-1 deadbolts, the highest residential rating, with SmartKey rekey.&rdquo; State the attributes plainly so AI has Kwikset’s facts to drop into any comparison. <span class="claim" data-tip="Verify Kwikset's security claim.">!</span></li>
+              <li><b>Off-site</b> — the named head-to-head lives with third-party reviewers and locksmiths (the authority play) — where the comparison legitimately gets made, and what AI cites on the &ldquo;vs&rdquo; query.</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The competitor owns &ldquo;high-security lock&rdquo; in AI answers; Kwikset carries the same Grade-1 rating but rarely gets credited. Stating grade parity plainly — without naming anyone — is how the page competes.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: an independent locksmith or security expert on what Grade-1 actually buys you. A credible third-party voice can make the named comparison Kwikset can’t — and it’s the kind of source AI pulls into &ldquo;vs&rdquo; answers.</div>
+          </div>
+          <div class="mock-cap">The page (layout) — answers the comparison intent, no competitor named</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Compare</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Compare / Kwikset Smart Lock Security</div><div class="mk-body"><div class="mk-h1">Is Kwikset a High-Security Smart Lock?</div><div class="mk-ans mk-add"><b>Verdict</b> Yes — Kwikset makes Grade-1 deadbolts, the highest residential security rating, with SmartKey rekey and strong value.</div><div class="mk-h">What to state plainly (no competitor named)</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:44px">Grade-1 — highest residential rating</div><div class="mk-fpo mk-ready" style="min-height:44px">SmartKey — rekey it yourself</div><div class="mk-fpo mk-ready" style="min-height:44px">Wi-Fi / Matter, no hub</div><div class="mk-fpo mk-ready" style="min-height:44px">Value pricing</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Is Kwikset a high-security lock? ▾</div><div>How does Kwikset’s security compare? ▾</div></div><div class="mk-h">Off-site</div><div class="mk-fpo" style="min-height:30px;text-align:left">&rarr; the named head-to-head lives with reviewers / locksmiths (authority play)</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard">
+            <div class="r"><b>What we’re actually addressing:</b> the &ldquo;Kwikset vs Yale&rdquo; query — a design-vs-value comparison buyers ask directly.</div>
+            <div class="r"><b>How we win it within Kwikset’s guardrails</b> — no competitor named on-page:</div>
+            <ul style="margin:2px 0 0 18px;padding:0;font-size:12.5px;line-height:1.5;color:#333">
+              <li><b>On-page</b> — answer it absolutely — Kwikset is keyless-first with SmartKey rekey, broad platform support (Wi-Fi / Matter), and better value. State those so AI can slot Kwikset into the comparison. <span class="claim" data-tip="Verify Kwikset's platform/value claims.">!</span></li>
+              <li><b>Off-site</b> — reviewers and locksmiths carry the named head-to-head; that’s where the &ldquo;vs&rdquo; comparison gets said and cited.</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The competitor reads as design-forward in AI answers; Kwikset’s counter — rekey, value, platform breadth — is stated absolutely, no rival named.</div>
+          </div>
+          <div class="mock-cap">The page (layout) — answers the comparison intent, no competitor named</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Compare</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Compare / Kwikset Smart Locks</div><div class="mk-body"><div class="mk-h1">How Kwikset Smart Locks Stack Up</div><div class="mk-ans mk-add"><b>Verdict</b> Kwikset is keyless-first with SmartKey rekey, broad platform support, and strong value — Grade-1 security throughout.</div><div class="mk-h">What to state plainly (no competitor named)</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:44px">SmartKey — rekey it yourself</div><div class="mk-fpo mk-ready" style="min-height:44px">Wi-Fi / Matter, no hub</div><div class="mk-fpo mk-ready" style="min-height:44px">Grade-1 security</div><div class="mk-fpo mk-ready" style="min-height:44px">Value pricing</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Does Kwikset work with my smart-home platform? ▾</div><div>Is Kwikset good value? ▾</div></div><div class="mk-h">Off-site</div><div class="mk-fpo" style="min-height:30px;text-align:left">&rarr; the named head-to-head lives with reviewers / locksmiths (authority play)</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard">
+            <div class="r"><b>What we’re actually addressing:</b> the &ldquo;Halo vs Encode&rdquo; query — a specific model matchup buyers ask AI directly.</div>
+            <div class="r"><b>How we win it within Kwikset’s guardrails</b> — no competitor named on-page:</div>
+            <ul style="margin:2px 0 0 18px;padding:0;font-size:12.5px;line-height:1.5;color:#333">
+              <li><b>On-page</b> — own the Halo’s facts absolutely — Grade-1, Wi-Fi (no hub), SmartKey rekey, value. A page that states the Halo’s spec plainly gives AI what it needs for the matchup, without naming the rival model. <span class="claim" data-tip="Verify the Halo's current spec.">!</span></li>
+              <li><b>Off-site</b> — an independent review of the head-to-head is what AI cites on a model-vs-model query; that named comparison lives off-site.</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> Model-vs-model is a high-intent &ldquo;vs&rdquo; query. Kwikset can’t name the rival model, so the play is to own the Halo’s spec absolutely and let third-party voices make the direct comparison.</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: an independent reviewer or locksmith on the head-to-head. A credible third-party voice makes the named model comparison Kwikset can’t — the kind of source AI pulls into &ldquo;vs&rdquo; answers.</div>
+          </div>
+          <div class="mock-cap">The page (layout) — answers the comparison intent, no competitor named</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Compare</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Compare / Kwikset Halo</div><div class="mk-body"><div class="mk-h1">The Kwikset Halo — Grade-1 Wi-Fi Smart Lock</div><div class="mk-ans mk-add"><b>Verdict</b> The Halo is a Grade-1 Wi-Fi smart deadbolt — no hub, SmartKey rekey, and a lower price than premium rivals.</div><div class="mk-h">What to state plainly (no competitor named)</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo mk-ready" style="min-height:44px">Grade-1 security</div><div class="mk-fpo mk-ready" style="min-height:44px">Wi-Fi — no hub</div><div class="mk-fpo mk-ready" style="min-height:44px">SmartKey rekey</div><div class="mk-fpo mk-ready" style="min-height:44px">Lower price than premium</div></div><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Is the Halo secure enough for a front door? ▾</div><div>Does the Halo need a hub? ▾</div></div><div class="mk-h">Off-site</div><div class="mk-fpo" style="min-height:30px;text-align:left">&rarr; the named head-to-head lives with reviewers / locksmiths (authority play)</div></div></div>
+        </div>
+        <div class="subpanel">
+          <div class="acard"><div class="qa lead" style="margin-top:0"><div class="q">Q: Which Kwikset smart lock is right for me?<span class="claim" data-tip="Verify the current pick.">!</span></div><div class="a">A: This is the Dynamic selector — it narrows Kwikset models (Halo, Halo Touch, Aura…) by how you unlock, your ecosystem, and budget. Because AI can’t read a JS selector, the page also needs a static, crawlable summary that compares the models in plain text + a table — that’s the version that gets cited.</div></div>
+            <div class="r" style="margin-top:8px"><b>Questions to surface:</b></div>
+            <ul class="faqlist">
+              <li>which Kwikset smart lock should I get?</li>
+              <li>Halo vs Halo Touch vs Aura — what’s the difference?</li>
+              <li>which Kwikset lock is best for no-hub / Apple Home / a budget?</li>
+            </ul>
+            <div class="insight"><b>Audience intelligence insight</b> The selector is good UX but invisible to AI. A static Kwikset-vs-Kwikset comparison (text + table) is the AEO fallback that makes the tool’s logic citable. This one is safe — it’s Kwikset-to-Kwikset, no competitor named.</div></div>
+          <div class="mock-cap">The page (layout) — the Dynamic tool + its static fallback</div>
+          <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Compare</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Compare / Which Kwikset Smart Lock</div><div class="mk-body"><div class="mk-h1">Which Kwikset Smart Lock Is Right for You?</div><div class="mk-fpo" style="min-height:32px">Dynamic selector (JS) — AI can’t read this</div><div class="mk-ans mk-add" style="margin-top:10px"><b>Static summary (ADD)</b> A plain-text + table comparison of Halo, Halo Touch, and Aura by unlock, ecosystem, and price — the crawlable version.</div><table class="mk-tbl mk-add" style="margin-top:12px"><tr><th></th><th>Halo</th><th>Halo Touch</th><th>Aura</th></tr><tr><td>Unlock</td><td>Keypad</td><td>Fingerprint</td><td>Keypad</td></tr><tr><td>Hub</td><td>No hub</td><td>No hub</td><td>Bluetooth</td></tr></table><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Halo vs Halo Touch — what’s the difference? ▾</div></div></div></div>
+        </div>
+        </div>
+
+        <!-- BLOG -->
+        <div class="tpl" id="tpl-blog">
+          <div class="acard tmpl"><div class="th">Blog / article <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the educational, upper-funnel articles AI pulls into "how do I…" and "what's the best…" answers. New page type in the 6/19 sitemap (8 - Blog &rarr; Category &rarr; Detail); the retired Smart Security Blog migrates in as a category.</div>
+            <div class="r"><b>Build:</b> every article answer-first; cluster articles into the concept pillars (security, ecosystem, move-in/rekey, multifamily) and link down to Solutions / category / PDPs and back up — the articles are spokes, the pillars the hubs.</div>
+            <div class="r"><b>Schema:</b> Article + verified-author Person + BreadcrumbList (FAQPage if the article carries Q&amp;A).</div>
+            <div class="r" style="margin-top:8px"><b>Article topics to seed (audience + audit):</b></div>
+            <ul class="artlist"><li>How to choose a smart lock (by ecosystem, install, key backup)</li><li>Are smart locks secure? what the grades actually mean</li><li>Smart lock buying guide for renters &amp; first-time buyers</li><li>Matter &amp; the smart home — what it means for your lock</li></ul>
+            <ul class="chk"><li>Answer-first intro; the takeaway up top, not buried</li><li>Article + author Person schema on every post</li><li>Clustered + cross-linked into Solutions / category, not a content island</li></ul>
+            <div class="fine"><b>Moves:</b> upper-funnel educational citations + feeds the internal-link graph.</div>
+          </div>
+          <div class="mock-cap">The page (directional layout) — a single article</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Blog</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-crumb">Home / Blog / Security / Are Smart Locks Secure?</div>
+            <div class="mk-body">
+              <div class="mk-h1">Are Smart Locks Secure?</div>
+              <div class="mk-fpo mk-ready" style="min-height:20px;text-align:left">By [verified author] · updated 2026 — Person schema</div>
+              <div class="mk-ans mk-ready" style="margin-top:10px"><b>Answer first <span class="pin">1</span></b>Yes — a Grade-1 smart lock is as secure as a traditional Grade-1 deadbolt; the bolt mechanism is the same, and encryption protects the wireless side. Here's what to check.</div>
+              <div class="mk-fpo" style="min-height:64px;margin-top:12px">Article body — grades, encryption, SmartKey</div>
+              <div class="mk-h">Cluster + crosslink <span class="pin">2</span></div>
+              <div class="mk-fpo" style="min-height:42px">&rarr; Security hub · "best smart lock for front door" · Halo PDP</div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>Answer-first + Article/author schema (AI OPTIMIZED)</b> — lead with the verdict; the author Person markup is the credibility signal AI weighs.</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>Cluster into a pillar + crosslink (RECOMMEND)</b> — articles are spokes feeding the Security/ecosystem hubs and Solutions/PDPs; an unlinked post earns nothing.</div></div>
+        </div>
+
+        <!-- SUPPORT -->
+        <div class="tpl" id="tpl-support">
+          <div class="acard tmpl"><div class="th">Support / FAQ / knowledge base <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> Kwikset's <b>most-cited owned content</b> already — its biggest AI strength. Structure it + pull it up-funnel.</div>
+            <div class="r"><b>Build:</b> high-demand questions become their own answer pages (what AI quotes); the rest stay clean categorical listings. Convert PDF manuals to pages.</div>
+            <div class="r"><b>Schema:</b> FAQPage (or QAPage for single-question answer pages) on every Q&amp;A page.</div>
+            <div class="r" style="margin-top:8px"><b>High-demand Q&amp;A to build out (audience intel):</b></div>
+            <ul class="faqlist"><li>How do I rekey my Kwikset SmartKey lock?</li><li>How do I reset / re-pair my Kwikset smart lock?</li><li>How do I replace the batteries in a Kwikset Halo?</li><li>Will a Kwikset smart lock fit my existing door?</li></ul>
+            <ul class="chk"><li>High-demand Q&amp;A = individually-addressable pages</li><li>FAQPage schema everywhere</li><li>Linked up-funnel into Solutions + category, not siloed</li></ul>
+            <div class="fine"><b>Moves:</b> defend + extend the citations Kwikset already wins.</div>
+          </div>
+          <div class="mock-cap">The page (directional layout) — a single Q&amp;A answer page</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Support</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-crumb">Home / Support / SmartKey / How do I rekey my lock?</div>
+            <div class="mk-body">
+              <div class="mk-h1">How Do I Rekey My Kwikset SmartKey Lock?</div>
+              <div class="mk-ans mk-ready"><b>Answer first <span class="pin">1</span></b>Insert your working key, turn ¼ turn, insert the SmartKey tool, remove the key, insert the new key, turn back. Five steps, no locksmith. (full steps below)</div>
+              <div class="mk-fpo" style="min-height:80px;margin-top:12px">Step-by-step + short how-to video</div>
+              <div class="mk-h">Crosslink up-funnel <span class="pin">2</span></div>
+              <div class="mk-fpo" style="min-height:42px">→ "Moving In / Rekey" Solutions page · related SmartKey products</div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>Each high-demand Q is its own page</b> (AI OPTIMIZED — the content exists; structure it), answer-first, FAQPage schema — the format AI already cites Kwikset for.</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>Crosslink up-funnel</b> into Solutions + category so Support feeds the shopping journey.</div></div>
+        </div>
+
+        <!-- MULTIFAMILY -->
+        <div class="tpl" id="tpl-multifamily">
+          <div class="acard tmpl"><div class="th">Multifamily / UNITE <span class="tag locked">Presented</span></div>
+            <div class="r"><b>For:</b> the high-value B2B gap — Kwikset <b>absent from AI answers even on the integration query</b>; "butterflymx" 9,900/mo &amp; rising.</div>
+            <div class="r"><b>① Opening answer block:</b> <span class="fine" style="font-weight:400">name the integration explicitly in the first sentence (AI omits it until it's stated on the page) — the answer AI cites.</span></div>
+            <div class="qa lead"><div class="q">Q: Does Kwikset UNITE work with ButterflyMX?<span class="claim" data-tip="Integration claim — confirm scope with Kwikset.">!</span></div><div class="a">Yes — Kwikset UNITE integrates with ButterflyMX, so a property's smart locks work with the building's video-intercom and access system.</div></div>
+            <div class="r"><b>Schema:</b> FAQPage + Article + Product (UNITE).</div>
+            <div class="r" style="margin-top:8px"><b>③ FAQ block — questions + answers to draft (audience intel):</b></div>
+            <div class="qa"><div class="q">Q: Best keyless access control for an apartment building?</div><div class="a">A: What property managers look for: central code management (issue and revoke per unit and per turnover, no rekeying), no per-unit hub, and intercom/access integration — UNITE is built for this. <span class="claim" data-tip="Verify the current UNITE feature set.">!</span></div></div>
+            <div class="qa"><div class="q">Q: Keyless entry for rentals with no hub required?</div><div class="a">A: Wi-Fi or Matter locks connect each unit without its own hub; UNITE manages them centrally. <span class="claim" data-tip="Verify which models + the platform.">!</span></div></div>
+            <div class="qa"><div class="q">Q: How do property managers manage lock codes across many units?</div><div class="a">A: Through one platform — issue, change, and revoke codes per unit and per resident without rekeying between tenants. <span class="claim" data-tip="Verify UNITE's management scope.">!</span></div></div>
+            <div class="qa"><div class="q">Q: What is Kwikset UNITE for multifamily?</div><div class="a">A: UNITE is Kwikset's multifamily access platform — centrally-managed smart locks for apartments and student housing, with the ButterflyMX integration for building entry. <span class="claim" data-tip="Verify the current description.">!</span></div></div>
+            <ul class="chk"><li>Names ButterflyMX (and other integrations) in text + schema</li><li>Property-manager language ("keyless access control"); frame vs Latch</li></ul>
+            <div class="fine"><b>Moves:</b> the multifamily/access-control citations (competitor-owned today).</div>
+            <div class="optplay"><b>Authority play</b> Ideal for launch or a Phase 2 program: a property manager or facilities director case study on managing codes across units and the ButterflyMX integration. A named operator's real results beat a spec sheet for the citation.</div>
+          </div>
+          <div class="mock-cap">The page (directional layout)</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Pro</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-crumb">Home / Pro / Multifamily / UNITE</div>
+            <div class="mk-body">
+              <div class="mk-fpo mk-hero">Hero — UNITE in a multifamily building</div>
+              <div class="mk-h1" style="margin-top:14px">Kwikset UNITE — Multifamily Access Control</div>
+              <div class="mk-ans mk-add"><b>Integration answer <span class="pin">1</span></b>Kwikset UNITE integrates with ButterflyMX: one app for building entry and the apartment door, no separate hub. Built for property managers.</div>
+              <div class="mk-h">Use cases + vs Latch <span class="pin">2</span></div>
+              <div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo" style="min-height:66px">Property-manager use cases</div><div class="mk-fpo" style="min-height:66px">UNITE vs Latch</div></div>
+              <div class="mk-h">FAQ <span class="pin">3</span></div>
+              <div class="mk-acc mk-add"><div>Does UNITE work with ButterflyMX? ▾</div><div>Do units need a hub? ▾</div></div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>Name the ButterflyMX integration in text + schema</b> (ADD — new content) — it's absent-until-named.</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>Frame vs Latch</b>, in property-manager language.</div></div>
+          <div class="anno"><span class="pn">3</span><div><b>FAQPage</b> on the integration/access-control questions.</div></div>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="tpl" id="tpl-about">
+          <div class="acard tmpl"><div class="th">About / Brand entity <span class="tag open">OPEN</span></div>
+            <div class="r"><b>For:</b> the page AI grounds on for "who is Kwikset / who owns it / is it good." Footer/utility placement, built as a structured entity page.</div>
+            <div class="r"><b>Schema:</b> Organization — with the facts AI gets wrong: ownership <b>ASSA ABLOY / HHI</b> (not Spectrum Brands), #1 US residential lock brand, SmartKey, Matter, awards, sameAs.</div>
+            <div class="code">{"@context":"https://schema.org","@type":"Organization","name":"Kwikset",
+ "parentOrganization":{"@type":"Organization","name":"ASSA ABLOY (HHI)"},
+ "sameAs":["https://en.wikipedia.org/wiki/Kwikset","https://www.linkedin.com/company/kwikset"]}</div>
+            <ul class="chk"><li>Organization schema with correct, current facts</li><li>Crosslinked to the Security hub + awards</li></ul>
+            <div class="fine"><b>Moves:</b> brand-fact accuracy in how AI describes Kwikset.</div>
+          </div>
+          <div class="mock-cap">The page (directional layout)</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-crumb">Home / About Kwikset</div>
+            <div class="mk-body">
+              <div class="mk-h1">About Kwikset</div>
+              <div class="mk-ans mk-add"><b>Entity statement <span class="pin">1</span></b>Kwikset is the #1 residential lock brand in the U.S., a division of ASSA ABLOY (HHI), known for SmartKey re-keying and Matter-compatible smart locks.</div>
+              <div class="mk-h">Facts + awards <span class="pin">2</span></div>
+              <div class="mk-cards"><div class="mk-fpo">Ownership</div><div class="mk-fpo">Founded</div><div class="mk-fpo">Awards</div><div class="mk-fpo">Leadership</div></div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>State entity facts in plain text + Organization schema</b> (ADD) — the source AI re-learns Kwikset from (corrects ownership, surfaces SmartKey/Matter/awards).</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>Awards + crosslink to Security hub</b> — trust signals reinforce each other.</div></div>
+        </div>
+
+        <!-- HOMEPAGE -->
+        <div class="tpl" id="tpl-homepage">
+          <div class="acard tmpl"><div class="th">Homepage <span class="tag locked">baseline</span></div>
+            <div class="r"><b>For:</b> the top entity signal + the routes into the hubs.</div>
+            <div class="r"><b>Schema:</b> Organization + WebSite with SearchAction (ties to on-site search / Kai) + SiteNavigationElement.</div>
+            <ul class="chk"><li>States what Kwikset is in plain text, not just imagery</li><li>Links into Products, Solutions, Security hub, Pro</li></ul>
+          </div>
+          <div class="mock-cap">The page (annotated) — off the homepage comp</div>
+          <div class="mk">
+            <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="it">Smart &amp; Keyless</span><span class="it">Solutions</span><span class="it">Help Me Choose</span><span class="it">Pro</span><span class="sp"></span><span class="it">Search</span></div>
+            <div class="mk-body">
+              <div class="mk-fpo mk-hero" style="min-height:120px">Hero — "Secure Your Home. Simplify Your Entry." <span class="pin">1</span></div>
+              <div class="mk-h">Living / rooms · Bundles · Series</div>
+              <div class="mk-cards"><div class="mk-fpo">Bundles</div><div class="mk-fpo">Living</div><div class="mk-fpo">Signature</div><div class="mk-fpo">Meet Kai</div></div>
+              <div class="mk-ans mk-add" style="margin-top:14px"><b>Entity line <span class="pin">2</span></b>One plain-text sentence on what Kwikset is, for the Organization signal.</div>
+            </div>
+          </div>
+          <div class="anno"><span class="pn">1</span><div><b>Hero headline in real text</b> (not baked into an image) so the brand statement is readable.</div></div>
+          <div class="anno"><span class="pn">2</span><div><b>Entity sentence + Organization/WebSite schema</b> — top-level "what Kwikset is" signal; SearchAction wires on-site search/Kai.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 5 — ROLLOUT -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Rollout</div><div class="t">What to build first.</div><div class="d">Sequenced by where AI is hurting Kwikset most, against what's buildable. Foundation runs underneath the whole time.</div></div>
+    <table class="map">
+      <tr><th>Phase</th><th>Build</th><th>Why first</th></tr>
+      <tr><td><b>P1 — close the gaps</b></td><td>Security hub · ecosystem "works with" pages · "best [lock] for X" guides · Multifamily/UNITE. Plus the answer-block + schema on the highest-demand templates (Category, PDP), and PDFs → pages for high-intent guides.</td><td>Where Kwikset is <b style="color:#7a1f1f">most absent in AI answers</b> (78% purchase-intent, 80% trust, multifamily) — fastest citation wins, on the highest-demand pages.</td></tr>
+      <tr><td><b>P2 — own the narrative</b></td><td>Comparison content (vs Schlage/Yale, static + schema) · Support knowledge-base build-out · the full crosslink map.</td><td>Builds on P1 — once destinations exist, comparison + Support pull citations from the third-party pages winning today.</td></tr>
+      <tr><td><b>Foundation — throughout</b></td><td>Schema strategy, extractability (PDFs, semantic HTML), brand-signal/About entity, data-layer/Salsify, measurement loop.</td><td>Every page sits on it; stand it up early so P1/P2 pages launch citable, not retrofitted.</td></tr>
+    </table>
+    <div class="fine"><b>Off-site earned presence</b> runs in parallel as the ongoing program — it's the lever that moves AI visibility off-site, where the on-site build alone can't reach. Sequence assumes Joe's content audit confirms how much current content needs a home; re-prioritize once that lands. Demand/absence figures: SEMrush US June 2026 + the 5-engine audit (directional; rerun before locking).</div>
+  </div>
+
+  <!-- TAB 6 — ADDITIONAL STRATEGIES -->
+  <div class="panel">
+    <div style="max-width:880px;margin:0 auto">
+      <div class="lead-h"><div class="k">Additional strategies to consider</div><div class="t">Step 2 — the continued programs that compound on the launch.</div><div class="d">The Blueprint provided is the website itself (Step 1, live at launch) — it makes Kwikset’s own pages citable. These build on it: earning presence in the off-site sources AI <i>also</i> draws on, so Kwikset shows up across the whole answer set. Ideas to pitch Kwikset for the next phase.</div></div>
+      <div class="tl">
+        <div class="tl-step"><div class="sn">Step 1 · The launch</div><div class="st">The website itself</div><div class="sd">The Blueprint provided — templates, foundation, rollout. Live at launch.</div></div>
+        <div class="tl-arrow">&rarr;</div>
+        <div class="tl-step active"><div class="sn">Step 2</div><div class="st">Post-launch strategies</div><div class="sd">What to run after launch to compound the site — the next-phase pitch.</div></div>
+      </div>
+      <div class="seclabel">Off-site — where AI actually builds its answers</div>
+      <p class="fine" style="margin:2px 0 12px;font-size:12.5px">When a buyer asks an AI assistant to recommend a lock, the answer is assembled from a whole set of sources — Kwikset’s own pages <i>plus</i> review roundups, Reddit, locksmith and comparison blogs, retailers, and video. The on-site Blueprint makes Kwikset’s own pages citable; this next layer is earning presence in the off-site sources AI also draws on, so Kwikset appears across more of those answers. The same pattern holds across all five engines — ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude. <b>Click any source below for why AI pulls from it, and which elements are primed for a Hanson-recommended program.</b></p>
+      <div class="offsite-block">
+      <div class="eco">
+        <details class="eco-node"><summary><b>Review publishers</b>CNET, Wirecutter, Consumer Reports, PCMag…<span class="pg">&rarr; Review-relations / product-seeding (PR)</span></summary><div class="eco-seed">Why: AI quotes these roundups almost verbatim on “best smart lock” — outsized citation weight.</div></details>
+        <details class="eco-node lsx"><summary><span class="eco-flag">✓ Candidate for a Hanson-recommended program</span><b>Community — Reddit</b>r/smarthome, r/homeautomation<span class="pg">&rarr; Community / advocate program</span></summary><div class="eco-seed">Why: real buyer threads are among the most-cited sources on recommendation queries. <a href="#prog-community">see the community &amp; advocate program ↓</a></div></details>
+        <details class="eco-node lsx"><summary><span class="eco-flag">✓ Candidate for a Hanson-recommended program</span><b>Q&amp;A / forums</b>Quora, niche DIY forums<span class="pg">&rarr; Community answers</span></summary><div class="eco-seed">Why: Q&amp;A pages match buyer questions almost word-for-word, so AI pulls them. <a href="#prog-community">see the community &amp; advocate program ↓</a></div></details>
+        <details class="eco-node lsx"><summary><span class="eco-flag">✓ Candidate for a Hanson-recommended program</span><b>Locksmith &amp; comparison blogs</b>the ranked how-to / “vs” sites<span class="pg">&rarr; KOL / earned-content program</span></summary><div class="eco-seed">Why: locksmiths are the expert authority AI trusts on locks, and these blogs already rank for the “vs” and how-to queries. <a href="#prog-kol">see the KOL / earned-content program ↓</a></div></details>
+        <div class="eco-ai"><b>AI assembles the answer</b><span>from Kwikset’s pages and the sources around them</span></div>
+        <details class="eco-node lsx"><summary><span class="eco-flag">✓ Candidate for a Hanson-recommended program</span><b>Retailers</b>Home Depot, Lowe’s, Amazon<span class="pg">&rarr; Product-data &amp; agentic-commerce program</span></summary><div class="eco-seed">Why: listings and reviews are read by AI and by agentic checkout — and Kwikset routes purchase to retailers, so this is the agentic-commerce surface. <a href="#prog-retail">see the product-data &amp; agentic-commerce program ↓</a></div></details>
+        <details class="eco-node lsx"><summary><span class="eco-flag">✓ Candidate for a Hanson-recommended program</span><b>Video</b>YouTube reviews &amp; explainers<span class="pg">&rarr; Video program (transcripted)</span></summary><div class="eco-seed">Why: AI reads the transcript, so a well-built YouTube library becomes an evergreen citation source. <a href="#prog-video">see the video program ↓</a></div></details>
+        <details class="eco-node"><summary><b>News / PR</b>announcements, awards<span class="pg">&rarr; Earned media</span></summary><div class="eco-seed">Why: awards and announcements in indexed outlets become durable mentions.</div></details>
+        <details class="eco-node"><summary><b>Owned — kwikset.com</b>the slice AI actually quotes<span class="pg">&rarr; the on-site Blueprint (provided)</span></summary><div class="eco-seed">Why: the pages you just built — the citable slice you fully control.</div></details>
+      </div>
+      <p class="fine" style="margin:8px 0 2px">Each flagged source maps to a candidate program below — click a source above to jump straight to it.</p>
+            <div class="seclabel" style="margin-top:22px">Candidate programs — the Step-2 pitch, and how LSX can help</div>
+      <div class="bplist">
+        <div class="cand" id="prog-community"><b>Community &amp; advocate program</b> <span class="mapfrom">Reddit + Q&amp;A / forums</span> — a KOL program in the communities AI actually reads — the Reddit threads and Q&amp;A / forum pages cited on recommendation queries.
+          <div class="cand-help"><b>How LSX can help</b> — we build and run it end-to-end — identify the right KOL candidates with Kwikset (locksmiths, installers, trusted enthusiasts), enroll and brief them to engage naturally and genuinely, never fake or planted, and power it with a proprietary system of thread triggers that surface the right conversations, notifications routed to each KOL by cadence and specialty, and tracking on every answer and its engagement. Results fold back into the AI-visibility audit — a closed loop where engagement goes in, citation lift comes out, and the next targets are set.</div></div>
+        <div class="cand" id="prog-kol"><b>KOL / earned-content program</b> <span class="mapfrom">locksmith &amp; comparison blogs</span> — locksmiths are the authoritative expert voice AI leans on for locks — real E-E-A-T (Experience, Expertise, Authoritativeness, Trust) — and these blogs already rank for the &ldquo;vs&rdquo; and how-to queries.
+          <div class="cand-help"><b>How LSX can help</b> — we set the strategy — identify the target blogs and pro voices from the retrieval data, design the earned-content program and the outreach angle so Kwikset lands in the comparison answers AI cites, and guide Hanson&rsquo;s team as they build and run the relationships. The strategy is LSX&rsquo;s; the day-to-day influencer relationships run through Hanson and Kwikset.</div></div>
+        <div class="cand" id="prog-video"><b>Video program</b> <span class="mapfrom">video</span> — the specific video types Kwikset should own — install how-tos, &ldquo;which lock for…&rdquo; explainers, feature demos, comparisons, and YouTube Shorts. The long-form builds an evergreen library that powers citations; the Shorts feed social; both run off one content calendar.
+          <div class="cand-help"><b>How LSX can help</b> — define the video strategy and formats, then re-map the content plan each quarter against the latest AI-visibility audit so the library keeps targeting what AI is actually citing. Every video goes live with an AI-readable transcript, so it powers citations, not just views.</div></div>
+        <div class="cand" id="prog-retail"><b>Product-data &amp; agentic-commerce program</b> <span class="mapfrom">Retailers</span> — a full product-data assessment — the on-site PDP fields, attributes, and variants that make every SKU citable and feed Kai, plus the Home Depot / Lowe&rsquo;s / Amazon listings — with a strategy to make them all agentic-commerce ready, since Kwikset routes checkout to retailers and AI agents need clean, structured data to compare and transact.
+          <div class="cand-help"><b>How LSX can help</b> — LSX sets the strategy and guides the build — recommend the attribute model and controlled vocabularies (function, room, finish, ANSI grade, compatibility), the variant and packaging structure so every SKU has one citable identity, and how the on-site fields align with the retailer feeds so one clean data set powers kwikset.com, the listings, and agentic checkout. LSX guides the Hanson and Kwikset team; the hands-on data build runs through them.<div class="cand-cred">Laura brings extensive experience in product-data strategy, including catalogs of 100,000+ SKUs, and folds that into the agentic-commerce guidance — so the recommendations are grounded in having done it at scale.</div></div></div>
+      </div>
+      </div>
+      <div class="seclabel">Ongoing programs &amp; separate reviews</div>
+      <div class="ong-grid">
+        <div class="ong-card"><b>Ongoing AI-visibility tracking &amp; measurement loop</b> — re-run the audit on a cadence and track citation share vs third-party, grounding coverage, and answer share across the five engines — not Google rank. Each cycle re-prioritizes the program set.</div>
+        <div class="ong-card"><b>Content activation</b> — turn priority topics into published pages, guides, and third-party content in buyer language, one Content Activation Brief at a time.</div>
+        <div class="ong-card"><b>On-site AEO upkeep</b> — hold every new product and content page to the Blueprint standard (front-loaded answer, schema, FAQs), so the site keeps growing its citable footprint instead of drifting.</div>
+        <div class="ong-card"><b>Solutions nav promotion (phase 2)</b> — once the by-need and &ldquo;best [lock] for&rdquo; content is built and pulling traffic, promote Solutions to its own nav spot.</div>
+      </div>
+      <p class="fine">A starting list, not the full set — more surfaces as the audit re-runs and the market shifts.</p>
+    </div>
+  </div>
+
+  <p class="note">Pairs with the Kwikset sitemap deliverable. Schema examples are illustrative; final values come from the CMS/data layer. Demand/CPC figures are SEMrush (US, June 2026); AI-absence figures from the 5-engine audit (directional — rerun before locking). AI-surfaced stats (e.g. the SmartKey "vulnerability" narrative) are what AI says today, flagged for correction — not asserted as Kwikset claims. Category, PDP, Comparison &amp; Homepage mocks mirror the 6/22 + May Figma; other page visuals are directional layouts pending comps. FAQ checklists are sourced from the audience-intelligence prompt set. Salsify/data-layer guidance is directional pending the team's field structure.</p>
+</div>
+<script>
+function showTab(i){
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('active',j===i));
+  document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('active',j===i));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function selectTpl(k,el){
+  document.querySelectorAll('.tpl').forEach(t=>t.style.display='none');
+  var p=document.getElementById('tpl-'+k); if(p) p.style.display='block';
+  document.querySelectorAll('.tside a').forEach(a=>a.classList.remove('on'));
+  if(el) el.classList.add('on');
+}
+function exportSpecs(){
+  var rows=[["Page type","Status","Section","Detail","Owner","Done"]];
+  document.querySelectorAll('.tpl').forEach(function(tpl){
+    var card=tpl.querySelector('.tmpl'); if(!card) return;
+    var th=card.querySelector('.th'); if(!th) return;
+    var status=''; var st=th.querySelector('.tag.locked,.tag.open,.tag.gap'); if(st) status=st.textContent.trim();
+    var page=th.textContent.replace(/\s+/g,' ').trim();
+    th.querySelectorAll('.tag').forEach(function(t){page=page.replace(t.textContent.trim(),'').trim();});
+    card.querySelectorAll(':scope > .r').forEach(function(r){
+      var b=r.querySelector('b'); var sec=b?b.textContent.replace(/:\s*$/,'').trim():'Note';
+      var det=r.textContent.trim(); if(b) det=det.replace(b.textContent,'').trim();
+      det=det.replace(/^[:\u2014\-\s]+/,'').trim();
+      if(det) rows.push([page,status,sec,det,"",""]);
+    });
+    card.querySelectorAll('.faqlist li').forEach(function(li){rows.push([page,status,"FAQ to answer",li.textContent.trim(),"",""]);});
+    card.querySelectorAll('.chk li').forEach(function(li){rows.push([page,status,"AI-optimized checklist",li.textContent.trim(),"",""]);});
+    var mv=card.querySelector('.fine'); if(mv){var m=mv.textContent.trim(); var mb=mv.querySelector('b'); if(mb) m=m.replace(mb.textContent,'').trim(); m=m.replace(/^[:\u2014\-\s]+/,'').trim(); if(m) rows.push([page,status,"Metric it moves",m,"",""]);}
+  });
+  var csv=rows.map(function(r){return r.map(function(c){c=(c||'').replace(/"/g,'""'); return '"'+c+'"';}).join(',');}).join('\r\n');
+  var blob=new Blob(["\ufeff"+csv],{type:'text/csv;charset=utf-8;'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='Kwikset-AI-Blueprint-page-specs.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+function pdpSub(i,el){document.querySelectorAll('#tpl-pdp .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-pdp .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function solSub(i,el){document.querySelectorAll('#tpl-solutions .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-solutions .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function roomSub(i,el){document.querySelectorAll('#tpl-subcat .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-subcat .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function bestSub(i,el){document.querySelectorAll('#tpl-bestfor .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-bestfor .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function ecoSub(i,el){document.querySelectorAll('#tpl-ecosystem .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-ecosystem .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function cmpSub(i,el){document.querySelectorAll('#tpl-comparison .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-comparison .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function guideSub(i,el){document.querySelectorAll('#tpl-guides .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-guides .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function innoSub(i,el){document.querySelectorAll('#tpl-innovation .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-innovation .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+function catSub(i,el){document.querySelectorAll('#tpl-cat .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-cat .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
+selectTpl('cat');
+</script>
+<script>(function(){var HASH="4a8f6c314006d46e6f0a3b62296d0ca117529e0a75fd1c56adaae308bd6f4ebf",KEY="lsx_kwikset_unlocked";document.body.classList.add("lsxlocked");var st=document.createElement("style");st.textContent="body.lsxlocked{overflow:hidden}";document.head.appendChild(st);function unlock(){var g=document.getElementById("lsxgate");if(g)g.classList.add("hidden");document.body.classList.remove("lsxlocked");if(window.gtag)gtag("event","unlock",{page:document.title});}try{if(localStorage.getItem(KEY)==="1")unlock();}catch(e){}async function chk(){var pw=document.getElementById("lsxpw").value;var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(pw));var hex=[].map.call(new Uint8Array(b),function(x){return x.toString(16).padStart(2,"0")}).join("");if(hex===HASH){try{localStorage.setItem(KEY,"1")}catch(e){}unlock();}else{document.getElementById("lsxerr").textContent="Incorrect password.";}}var go=document.getElementById("lsxgo");if(go)go.addEventListener("click",chk);var inp=document.getElementById("lsxpw");if(inp)inp.addEventListener("keydown",function(e){if(e.key==="Enter")chk();});})();</script>
+</body></html>
