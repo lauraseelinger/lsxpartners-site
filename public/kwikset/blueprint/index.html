@@ -112,9 +112,6 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
 .anno{background:#fff;border:1px solid var(--line);border-left:3px solid #d81f26;border-radius:8px;padding:8px 12px;font-size:12.5px;margin:8px 0;display:flex;gap:10px;align-items:baseline;line-height:1.45}
 .anno .pn{flex:none;width:18px;height:18px;border-radius:50%;background:#d81f26;color:#fff;font-size:10px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
 .keybar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 13px;margin:0 0 14px}
-.dlbtn{display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:12.5px;font-weight:700;cursor:pointer;margin:0 0 14px}
-.dlbtn:hover{opacity:.9}
-.dlnote{font-size:11px;color:var(--muted);margin:-8px 0 14px}
 .kdot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
 /* universal-rule mini diagrams */
 .uviz{border:1px solid var(--line);border-radius:8px;padding:11px;background:#fafafa;margin-top:9px}
@@ -293,9 +290,6 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
       <span><span class="tag open" style="margin:0">OPEN</span> still in play / live input</span>
       <span><span class="tag gap" style="margin:0">GAP</span> not in the plan yet — the Blueprint adds it</span>
     </div>
-
-    <button class="dlbtn" onclick="exportSpecs()">&#11015;&nbsp; Download all page specs (Excel)</button>
-    <div class="dlnote">Every page type in one sheet — FAQs to answer, answer block, schema, content blocks, and the AI-optimized checklist, each tagged by page, with blank Owner / Done columns to divvy up the build.</div>
 
     <div class="tlayout">
       <div class="tside">
@@ -1266,29 +1260,6 @@ function selectTpl(k,el){
   var p=document.getElementById('tpl-'+k); if(p) p.style.display='block';
   document.querySelectorAll('.tside a').forEach(a=>a.classList.remove('on'));
   if(el) el.classList.add('on');
-}
-function exportSpecs(){
-  var rows=[["Page type","Status","Section","Detail","Owner","Done"]];
-  document.querySelectorAll('.tpl').forEach(function(tpl){
-    var card=tpl.querySelector('.tmpl'); if(!card) return;
-    var th=card.querySelector('.th'); if(!th) return;
-    var status=''; var st=th.querySelector('.tag.locked,.tag.open,.tag.gap'); if(st) status=st.textContent.trim();
-    var page=th.textContent.replace(/\s+/g,' ').trim();
-    th.querySelectorAll('.tag').forEach(function(t){page=page.replace(t.textContent.trim(),'').trim();});
-    card.querySelectorAll(':scope > .r').forEach(function(r){
-      var b=r.querySelector('b'); var sec=b?b.textContent.replace(/:\s*$/,'').trim():'Note';
-      var det=r.textContent.trim(); if(b) det=det.replace(b.textContent,'').trim();
-      det=det.replace(/^[:\u2014\-\s]+/,'').trim();
-      if(det) rows.push([page,status,sec,det,"",""]);
-    });
-    card.querySelectorAll('.faqlist li').forEach(function(li){rows.push([page,status,"FAQ to answer",li.textContent.trim(),"",""]);});
-    card.querySelectorAll('.chk li').forEach(function(li){rows.push([page,status,"AI-optimized checklist",li.textContent.trim(),"",""]);});
-    var mv=card.querySelector('.fine'); if(mv){var m=mv.textContent.trim(); var mb=mv.querySelector('b'); if(mb) m=m.replace(mb.textContent,'').trim(); m=m.replace(/^[:\u2014\-\s]+/,'').trim(); if(m) rows.push([page,status,"Metric it moves",m,"",""]);}
-  });
-  var csv=rows.map(function(r){return r.map(function(c){c=(c||'').replace(/"/g,'""'); return '"'+c+'"';}).join(',');}).join('\r\n');
-  var blob=new Blob(["\ufeff"+csv],{type:'text/csv;charset=utf-8;'});
-  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='Kwikset-AI-Blueprint-page-specs.csv';
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
 }
 function pdpSub(i,el){document.querySelectorAll('#tpl-pdp .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-pdp .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
 function solSub(i,el){document.querySelectorAll('#tpl-solutions .subpanel').forEach(function(p,j){p.classList.toggle('show',j===i)});document.querySelectorAll('#tpl-solutions .subtab').forEach(function(b){b.classList.remove('on')});el.classList.add('on');}
