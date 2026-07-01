@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>RxSight AI-Visibility Blueprint</title>
+<style>
+  :root{--ink:#1c2b30;--muted:#5d6f72;--line:#dfe3e0;--bg:#f5f4f0;--card:#fff;--teal:#1f5d6b;--teal2:#2c7a8c;--sky:#a3bbc3;--sand:#e9e0cf;--rust:#b55434;--p1:#1f5d6b;--p2:#7fa6ad;--fnd:#9a8f7a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.5;font-size:15px}
+  .wrap{max-width:1180px;margin:0 auto;padding:26px 20px 70px}
+  h1{font-size:26px;margin:0} .sub{color:var(--muted);font-size:13.5px;margin:6px 0 16px;max-width:840px}
+  a{color:var(--teal)}
+  /* tabs */
+  .tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin-bottom:20px}
+  .tab{background:none;border:none;color:var(--muted);font-size:13.5px;font-weight:700;padding:11px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .tab .n{display:inline-block;width:19px;height:19px;line-height:19px;text-align:center;background:var(--bg);border-radius:50%;font-size:11px;margin-right:5px}
+  .tab.active{color:var(--teal);border-bottom-color:var(--rust)} .tab.active .n{background:var(--teal);color:#fff}
+  .panel{display:none} .panel.active{display:block}
+  .lead-h{background:var(--teal);color:#fff;border-radius:12px;padding:16px 20px;margin-bottom:16px}
+  .lead-h .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+  .lead-h .t{font-size:18px;font-weight:700;margin:4px 0 5px} .lead-h .d{font-size:13px;color:#dce9eb}
+  .acard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:13.7px}
+  .term{color:var(--sand);font-weight:700} .seclabel{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:20px 0 9px}
+  ul.chk{margin:4px 0;padding-left:20px} ul.chk li{margin:4px 0}
+  /* why tooltip */
+  .why{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#ffd84d;color:#3d2f00;font-size:10px;font-weight:800;font-style:normal;cursor:help;margin-left:5px;position:relative;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+  .why::after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:165%;z-index:30;background:#fff7d6;color:#1a1a1a;border:1px solid #e6cf63;font-weight:500;font-size:11.5px;line-height:1.45;text-align:left;padding:9px 11px;border-radius:8px;width:250px;white-space:normal;box-shadow:0 8px 22px rgba(0,0,0,.32);opacity:0;visibility:hidden;transition:opacity .12s;text-transform:none;letter-spacing:0}
+  .why:hover::after{opacity:1;visibility:visible}
+  /* universal rules */
+  .ugrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .uviz{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;margin-top:9px}
+  .utop{background:#e9f1f1;border-left:3px solid var(--teal);font-size:11px;font-weight:700;padding:5px 8px;border-radius:3px;color:var(--teal)}
+  .uline{height:7px;background:#e2e6e3;border-radius:3px;margin:5px 0} .uline.s{width:70%} .uline.xs{width:40%}
+  .uh{font-size:11px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:3px 7px;margin:4px 0} .uh.h2{margin-left:14px;color:var(--teal2)} .uh.h3{margin-left:28px;color:var(--muted)}
+  .urow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .ubad{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;margin-bottom:4px} .ubad.no{background:#fbe4e4;color:#a12} .ubad.yes{background:#e3f1e7;color:#1a6b39}
+  .mk-fpo{background:#eef0ec;border:1px dashed #c4ccc6;border-radius:5px;font-size:10.5px;color:#7a857f;display:flex;align-items:center;justify-content:center;min-height:30px;text-align:center;padding:4px}
+  .hubviz{text-align:center} .hub{display:inline-block;background:var(--teal);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:7px} .arr{color:var(--muted);font-size:12px;margin:4px 0}
+  .spokes{display:flex;justify-content:center;gap:8px;flex-wrap:wrap} .sp{background:#fff;border:1px solid var(--line);border-radius:6px;font-size:10px;color:#555;padding:5px 9px}
+  .fine{font-size:11.5px;color:var(--muted)} .code{background:#0f2228;color:#cfe7ea;font-family:ui-monospace,Menlo,monospace;font-size:11px;border-radius:7px;padding:9px 11px;margin-top:7px;white-space:pre-wrap;line-height:1.5}
+  /* foundation */
+  .blogfilter{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 12px}
+  .blogfilter .ff{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .blogfilter .fb{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:20px;padding:4px 12px;cursor:pointer;color:var(--ink)}
+  .blogfilter .fb.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .blogfilter select{font-size:12px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;background:#fff}
+  .bcat{border:1px solid var(--line);border-radius:9px;margin:8px 0;background:var(--card)}
+  .bcat>summary{cursor:pointer;font-weight:800;font-size:13.3px;padding:11px 14px;color:var(--teal);list-style:none}
+  .bcat>summary::-webkit-details-marker{display:none} .bcat>summary::before{content:"▸";margin-right:9px;font-size:10px;color:var(--muted)} .bcat[open]>summary::before{content:"▾"}
+  .bcatbody{padding:2px 13px 9px}
+  .bart{border-top:1px solid var(--line)} .bart>summary{cursor:pointer;padding:9px 2px;font-size:12.6px;list-style:none;display:flex;align-items:center;gap:8px}
+  .bart>summary::-webkit-details-marker{display:none} .bart>summary::before{content:"+";color:var(--muted);font-weight:700} .bart[open]>summary::before{content:"–"}
+  .bart .bt{font-weight:600} .bbrief{font-size:12px;background:var(--bg);border-radius:7px;padding:10px 12px;margin:0 0 9px;line-height:1.7} .bbrief b{color:var(--ink)}
+  .bplist{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px;align-items:start}
+  .bplist>div{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:8px;padding:12px 14px;font-size:13px}
+  /* page templates */
+  .keybar{background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin-bottom:9px;font-size:11.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .kdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .tag{font-size:10px;font-weight:800;letter-spacing:.03em;padding:2px 7px;border-radius:5px;text-transform:uppercase}
+  .tag.new{background:#fbe4e4;color:#a12} .tag.exist{background:#dfe7ff;color:#1d4ed8} .tag.fnd{background:#efe7d0;color:#6b5a36} .tag.add{background:#fbe4e4;color:#a12} .tag.aiopt{background:#dfe7ff;color:#1d4ed8} .tag.rec{background:#e6efe0;color:#4a6b2f} .tag.fw{background:var(--sand);color:#6b5a36}
+  .tag.p1{background:var(--p1);color:#fff} .tag.p2{background:#fff;color:var(--p2);border:1px solid var(--p2)}
+  .dlbtn{background:var(--teal);color:#fff;border:none;border-radius:8px;padding:11px 18px;font-size:13.5px;font-weight:700;cursor:pointer;margin:4px 0 4px}
+  .dlnote{font-size:11.5px;color:var(--muted);margin-bottom:12px}
+  .tlayout{display:flex;gap:18px;align-items:flex-start} .tside{width:248px;flex-shrink:0;position:sticky;top:10px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px;max-height:calc(100vh - 20px);overflow:auto}
+  .stitle{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:8px 9px 4px}
+  .tside .grp{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--teal2);padding:11px 9px 3px}
+  .tside a{display:block;padding:7px 9px;border-radius:7px;font-size:12.7px;color:var(--ink);cursor:pointer}
+  .tside a:hover{background:var(--bg)} .tside a.on{background:var(--teal);color:#fff} .tside a em{font-style:normal;font-size:9px;font-weight:800;color:var(--muted);float:right;margin-top:2px} .tside a.on em{color:#cfe0e4}
+  .tmain{flex:1;min-width:0}
+  .tpl{display:none} .tpl.show{display:block}
+  .tmpl{padding:16px 18px} .th{font-size:18px;font-weight:700;margin-bottom:10px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+  .tmpl .r{font-size:13.5px;margin:7px 0} .tmpl .r b{color:var(--teal)}
+  .faqlist{margin:5px 0;padding-left:20px} .faqlist li{margin:4px 0;font-size:13.3px}
+  .h2list{margin:4px 0 2px;padding-left:20px} .h2list li{font-size:13px;margin:3px 0;font-weight:600;color:var(--ink)}
+  .qa{border-left:3px solid var(--teal);background:#f0f5f5;border-radius:0 8px 8px 0;padding:9px 12px;margin:7px 0}
+  .qa .q{font-weight:700;font-size:13px;color:var(--teal)} .qa .a{font-size:12.7px;margin-top:4px;color:var(--ink)}
+  .qa.lead{background:#f3efe3;border-left-color:var(--rust)} .qa .src{font-size:10.5px;color:var(--muted);margin-top:4px}
+  .qa.pend{background:#fdf3e0;border-left-color:#d99a2b} .qa.pend .q{color:#9a6212} .qa.pend .a{color:#6b4d14}
+  .pendlab{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;background:#d99a2b;border-radius:4px;padding:1px 6px;margin-right:6px}
+  .insight{font-size:12.5px;background:#fbf1e8;border:1px solid #ecd2bf;border-left:4px solid var(--rust);border-radius:8px;padding:10px 13px;margin:9px 0} .insight b{color:#8a3f24}
+  .authority{font-size:12.5px;background:#eef4f4;border:1px solid #cfe0e0;border-left:4px solid var(--teal);border-radius:8px;padding:10px 13px;margin:9px 0} .authority b{color:var(--teal)}
+  .iolab{display:block;font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px} .insight .iolab{color:var(--rust)} .authority .iolab{color:var(--teal)}
+  .anno{display:flex;gap:10px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font-size:12.7px}
+  .pn{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--rust);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  /* mockup */
+  .mock-cap{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 7px}
+  .mk{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .mk-nav{display:flex;align-items:center;gap:10px;padding:9px 13px;border-bottom:1px solid var(--line);font-size:11.5px;color:var(--muted)} .mk-nav .lg{font-weight:800;color:var(--teal);font-size:14px} .mk-nav .sp{flex:1} .mk-nav .cta{background:var(--rust);color:#fff;padding:3px 9px;border-radius:5px}
+  .mk-crumb{font-size:10.5px;color:var(--muted);padding:7px 14px} .mk-body{padding:4px 16px 16px}
+  .mk-h1{font-size:21px;font-weight:800;margin:6px 0} .mk-h{font-size:12px;font-weight:800;color:var(--teal2);margin:13px 0 6px}
+  .mk-ans{background:#eef5f5;border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:10px 13px;font-size:12.7px} .mk-ans.rec{background:#f3efe3;border-left-color:var(--rust)}
+  .mk-cards{display:flex;flex-direction:column;gap:8px}
+  .mk-cards .mk-fpo{text-align:left}
+  .mk-sec{margin:9px 0 11px} .mk-sh{font-weight:700;font-size:12.7px;color:#222;margin-bottom:6px}
+  .mk-line{height:7px;background:#e7e9e4;border-radius:3px;margin:5px 0}
+  .mk-acc>div{background:#f4f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 11px;font-size:12px;margin-bottom:6px}
+  .mk-chips{display:flex;gap:6px;flex-wrap:wrap} .mk-chips span{background:var(--bg);border:1px solid var(--line);border-radius:20px;font-size:11px;padding:4px 11px}
+  .mk-tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:4px} .mk-tbl th,.mk-tbl td{border:1px solid var(--line);padding:6px 8px;text-align:left} .mk-tbl th{background:var(--bg)} .mk-tbl .yes{color:#1a6b39;font-weight:700} .mk-tbl .no{color:#a12}
+  .pin{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--rust);color:#fff;font-size:10px;font-weight:800;margin-left:5px}
+  .mk-rec{box-shadow:0 0 0 2px rgba(181,84,52,.25)}
+  /* rollout */
+  table.map{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px} table.map th,table.map td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top} table.map th{background:var(--teal);color:#fff;font-size:12px}
+  .note{font-size:11px;color:var(--muted);margin-top:22px;border-top:1px solid var(--line);padding-top:12px}
+  /* embedded findings viz */
+  .vcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+  .vcard .vh{font-size:16px;font-weight:800;margin-bottom:3px} .vcard .vs{font-size:12.5px;color:var(--muted);margin-bottom:13px}
+  .vbar{display:flex;align-items:center;gap:12px;margin:7px 0}
+  .vbar .lbl{width:215px;flex-shrink:0;font-size:12.5px;text-align:right;color:var(--ink)}
+  .vbar .tr{flex:1;background:#eef0ec;border-radius:6px;height:27px;overflow:hidden}
+  .vbar .f{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-weight:800;font-size:12.5px;white-space:nowrap}
+  .vshelf{display:flex;gap:7px;border-bottom:5px solid var(--teal);padding-bottom:9px;margin-top:12px;flex-wrap:wrap}
+  .vlens{flex:1;min-width:92px;background:var(--bg);border:1px solid var(--line);border-radius:8px 8px 0 0;padding:11px 8px;text-align:center;font-size:12px;font-weight:700;color:var(--muted)}
+  .vlens.add{background:var(--teal);color:#fff;border-color:var(--teal)} .vlens.add small{display:block;color:var(--sand);font-size:9.5px;font-weight:800;margin-top:3px}
+  /* current-state note on foundation items */
+  .bplist>div>b:first-child{color:var(--teal);font-size:14px}
+  .cur{font-size:12px;background:#eef5f0;border-left:3px solid #2e8b6a;border-radius:0 6px 6px 0;padding:8px 11px;margin-top:9px;color:#1c4a35} .cur b{color:#143a28}
+  .todo{font-size:12px;background:#fdf3e0;border-left:3px solid #d99a2b;border-radius:0 6px 6px 0;padding:8px 11px;margin-top:6px;color:#6b4d14} .todo b{color:#4d3809}
+  /* org-chart sitemap (boxes + connector lines) */
+  .smwrap{overflow-x:auto;padding:8px 2px 18px}
+  .smbox{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:12px;font-weight:600;color:var(--ink)}
+  .smbox.root{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:800;font-size:14px}
+  .smbox.branch{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:800;font-size:13px;width:100%;justify-content:flex-start}
+  .smbox.hub{background:#e7eef7;border-color:#b9c6e0;font-weight:700;font-size:12.3px;width:100%;justify-content:flex-start}
+  .smbox.cat{background:#eff3f9;border-color:#c8d2e6;font-weight:700;font-size:12px;width:100%;justify-content:flex-start}
+  .smbox.pg{background:#fff;font-weight:500;width:100%;justify-content:flex-start}
+  .smtop{display:flex;justify-content:center;position:relative;padding-bottom:18px}
+  .smtop::after{content:"";position:absolute;left:50%;bottom:0;height:18px;border-left:2px solid #b9c6e0}
+  .smcols{display:flex;gap:16px;align-items:flex-start;border-top:2px solid #b9c6e0;padding-top:18px;position:relative}
+  .smcol{flex:0 0 auto;width:252px;position:relative}
+  .smcol::before{content:"";position:absolute;left:50%;top:-18px;height:18px;border-left:2px solid #b9c6e0}
+  .ctree,.ctree ul{list-style:none;margin:0;padding:0} .ctree{margin-top:11px} .ctree ul{margin-left:20px}
+  .ctree li{position:relative;padding:0 0 0 22px;margin-top:9px}
+  .ctree li::before{content:"";position:absolute;left:0;top:-9px;height:100%;border-left:2px solid #b9c6e0}
+  .ctree li::after{content:"";position:absolute;left:0;top:16px;width:20px;border-top:2px solid #b9c6e0}
+  .ctree li:last-child::before{height:25px}
+  .pgs{width:8px;height:8px;border-radius:50%;flex-shrink:0} .pgs.st-ex{background:#1a6b39} .pgs.st-up{background:#c77d1e} .pgs.st-new{background:#b5443a}
+  .stb{font-size:9.5px;font-weight:800;letter-spacing:.02em;padding:2px 7px;border-radius:20px;text-transform:uppercase}
+  .stb.st-ex{background:#e3f1e7;color:#1a6b39;border:1px solid #b9ddc6} .stb.st-up{background:#fbeede;color:#9a5a13;border:1px solid #eccfa3} .stb.st-new{background:#fbe4e4;color:#a12;border:1px solid #ecc0c0}
+  .stb.tog{background:#e3eef1;color:#1f5d6b;border:1px solid #b9cdd6} .stb.tcl{background:#fdf3e0;color:#9a6212;border:1px solid #e0c98f}
+  @media(max-width:880px){.ugrid,.urow{grid-template-columns:1fr}.tlayout{flex-direction:column}.tside{width:100%;position:static;max-height:none}.vbar .lbl{width:120px}}
+</style><meta name="robots" content="noindex,nofollow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-21639NRGBM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-21639NRGBM');</script>
+</head>
+<body>
+<div id="gate" style="position:fixed;inset:0;z-index:99999;background:#faf8f6;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <div style="max-width:370px;width:88%;text-align:center;padding:34px 30px;border:1px solid #e6e3df;border-radius:14px;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.06)">
+    <div style="font-weight:800;color:#b55434;font-size:19px;margin-bottom:4px">RxSight — Website AI-Visibility Blueprint</div>
+    <div style="color:#6a7076;font-size:13px;margin-bottom:18px">Confidential. Enter the access password to continue.</div>
+    <input id="gp" type="password" placeholder="Password" autofocus style="width:100%;padding:10px 12px;border:1px solid #cfcac4;border-radius:8px;font-size:14px;box-sizing:border-box" onkeydown="if(event.key==='Enter')gateGo()">
+    <div id="gerr" style="color:#a12;font-size:12px;height:15px;margin:6px 0"></div>
+    <button onclick="gateGo()" style="width:100%;padding:10px;background:#b55434;color:#fff;border:0;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer">Enter</button>
+  </div>
+</div>
+<script>
+const GATE_HASH="05be06ccc9b0c7fa376f72176fd92c7c36da85bdb074452b3bfae6af253120a1";
+async function _sha(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function gateGo(){const h=await _sha(document.getElementById('gp').value);if(h===GATE_HASH){localStorage.setItem('rxbp_unlock','1');var g=document.getElementById('gate');if(g)g.remove();if(window.gtag)gtag('event','unlock',{content:'rxsight_blueprint'});}else{document.getElementById('gerr').textContent='Incorrect password.';}}
+if(localStorage.getItem('rxbp_unlock')==='1'){var _g=document.getElementById('gate');if(_g)_g.remove();}
+</script><div class="wrap">
+  <h1>RxSight AI-Visibility Blueprint</h1>
+  <p class="sub">The page-level foundation that turns the recommended sitemap into pages AI can read and cite — built around how patients decide on a cataract lens. Hover the yellow ⓘ for the why. Prepared by Concentrek Group · June 2026 · draft for review.</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab(0)"><span class="n">1</span>Sitemap</button>
+    <button class="tab" onclick="showTab(1)"><span class="n">2</span>Overview</button>
+    <button class="tab" onclick="showTab(2)"><span class="n">3</span>Universal page rules</button>
+    <button class="tab" onclick="showTab(3)"><span class="n">4</span>Foundation</button>
+    <button class="tab" onclick="showTab(4)"><span class="n">5</span>Page templates</button>
+    <button class="tab" onclick="showTab(5)"><span class="n">6</span>Blog</button>
+  </div>
+
+  <!-- TAB 1 — SITEMAP -->
+  <div class="panel active">
+    <div class="lead-h"><div class="k">Sitemap &amp; navigation</div><div class="t">Organized around how patients decide on a lens — not around the brand.</div><div class="d">Top level: <span class="term">Patients</span> · <span class="term">Eye Care Professionals</span> (built from the June 2026 professional pull) · <span class="term">Find a Doctor</span> · <span class="term">About</span>. Every node traces to an audience signal + demand + priority.</div></div>
+    <div class="vcard">
+      <div class="vh">Patients have no “adjustable lens” shelf</div>
+      <div class="vs">They name lenses by optical class — there’s no “adjustable” category for the LAL to live in, so they reach for the brand as the noun.</div>
+      <div class="vbar"><div class="lbl">Optical-class words<br><span style="color:var(--muted);font-size:11px">monofocal · toric · multifocal · EDOF</span></div><div class="tr"><div class="f" style="width:100%;background:linear-gradient(90deg,var(--teal),var(--teal2))">4,232 mentions</div></div></div>
+      <div class="vbar"><div class="lbl">“adjustable lens / adjustable IOL”</div><div class="tr"><div class="f" style="width:1.6%;background:var(--rust);min-width:42px;justify-content:center;padding:0">68</div></div></div>
+      <div style="font-size:12px;color:var(--rust);font-weight:800;text-align:center;margin:9px 0 0">62× more often by optical class than as “adjustable” — so they say “LAL” 662× as a bare noun (“the LAL” 303×) for the missing category word</div>
+      <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--teal2);margin:14px 0 7px">The fix → build the shelf and seat LAL on it</div>
+      <div class="vshelf"><div class="vlens">Monofocal</div><div class="vlens">Toric</div><div class="vlens">Multifocal</div><div class="vlens">EDOF</div><div class="vlens add">Light Adjustable<small>↑ seat LAL here</small></div></div>
+      <div style="font-size:10.5px;color:var(--muted);margin-top:9px">Source: Patient Language Research — 8,889 Reddit posts/comments, Jan 2025–May 2026 (mention counts).</div>
+    </div>
+    <div class="vcard">
+      <div class="vh">AI is the decision surface — and it doesn’t credit RxSight</div>
+      <div class="vs">Across 80 patient-decision prompts on all five AI engines (June 2026 audit), the lens is in the answer — the maker, only half the time. It’s mentioned, not credited.</div>
+      <div class="vbar"><div class="lbl">names the <b>Light Adjustable Lens</b></div><div class="tr"><div class="f" style="width:85%;background:var(--teal2)">68 of 80</div></div></div>
+      <div class="vbar"><div class="lbl">names <b>RxSight</b> (the maker)</div><div class="tr"><div class="f" style="width:49%;background:var(--rust)">39 of 80</div></div></div>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:10px">Mirrors the patient research: RxSight in 28 of 326 threads; ActivShield ~0. Engines: ChatGPT · Perplexity · Google AI Overview · Gemini · Claude.</div>
+    </div>
+    <div class="fine" style="margin:4px 0 14px"><b>Priority key:</b> <span class="tag p1">P1</span> = Priority 1, highest retrieval + conversion · <span class="tag p2">P2</span> = Priority 2, real but narrower · <span class="tag fnd">FND</span> = Foundation, site-wide work under everything. Demand figures: SEMrush US, Jan 2026.</div>
+    <div class="seclabel" style="margin-top:18px">Recommended site tree — every node tagged by what’s live today vs net-new</div>
+    <div class="fine" style="margin:0 0 12px"><b>Current-site key:</b> <span class="stb st-ex">Live · maintain</span> already on rxsight.com today · <span class="stb st-up">Live · update</span> exists, make it AI-ready · <span class="stb st-new">New</span> net-new page · <span class="stb tog">↻ ongoing</span> a continuously published stream, not a fixed page set (full list in the Blog tab) · <span class="stb tcl">⚠ verbiage TBD</span> wording/claims to be determined before build — e.g. competitor comparisons + clinical/efficacy claims (regulated). <i>Much of the structure already exists — the work is adding the gaps and making the rest AI-readable, not rebuilding from zero.</i> Top level reads left-to-right like the nav; scroll right for all branches.</div>
+    <div id="tree"></div>
+  </div>
+
+  <!-- TAB 2 — OVERVIEW -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">The Blueprint</div><div class="t">The foundation that makes RxSight’s own pages the source AI cites.</div><div class="d">The sitemap fixed <span class="term">where</span> things live. This fixes <span class="term">how each page is built</span> so AI can read it and pull from it.</div></div>
+    <div class="acard"><div style="font-weight:800;margin-bottom:5px">How this pairs with the sitemap</div>The sitemap is the IA layer — the nav tree, what’s a page vs. a spoke. This Blueprint is the layer underneath: the <b>foundation</b> (site-wide), the <b>universal page rules</b>, and a <b>template per page type</b>.</div>
+    <div class="acard"><div style="font-weight:800;margin-bottom:5px">How to read it</div>
+      <ul class="chk"><li><b>Universal page rules</b> — the rules every page follows, each with a diagram.</li><li><b>Foundation</b> — the site-wide work the templates sit on.</li><li><b>Page templates</b> — the sidebar lists every page type. Pick one → its spec + the patient questions it must answer + a layout mockup of where the work goes.</li><li><b>Blog</b> — the Patient Resources content: the article template, the live/planned/backlog library, and the launch bucket.</li></ul></div>
+    <div class="acard"><div style="font-weight:800;margin-bottom:5px">What’s “new” vs. “make AI-ready”</div>Some pages exist today (Homepage, Patients landing, How the LAL Works, Post-op guide, FAQ) — the work is making them <b>AI-readable</b>: front-loaded answers, extractable text, schema. The genuinely net-new pieces are the lens-decision shelf, the comparison content, the problem-aware symptom cluster, and the maker/entity page. Each template is tagged <span class="tag add">ADD</span>, <span class="tag aiopt">AI OPTIMIZED</span>, or <span class="tag rec">RECOMMEND</span>.</div>
+  </div>
+
+  <!-- TAB 3 — UNIVERSAL PAGE RULES -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Universal page rules</div><div class="t">The rules every page follows — before any template-specific work.</div><div class="d">Get these right on every page and you’ve fixed most of the retrieval gap. The templates assume all of this is in place.</div></div>
+    <div class="ugrid">
+      <div class="acard"><b>1 · Front-load the answer.</b> The first ~100–200 words carry the citation weight — write a self-contained <b>50–100-word answer</b> to the page’s primary patient question at the very top. <span class="why" data-tip="AI Overviews and chat answers quote the top of the page. Buried under a hero + marketing, AI grabs a third-party page instead.">i</span>
+        <div class="uviz"><div class="utop">◤ ANSWER — the patient’s question, answered in the first 100 words</div><div class="uline"></div><div class="uline"></div><div class="uline s"></div><div class="fine" style="margin-top:6px">↑ answer up top · brand depth below</div></div></div>
+      <div class="acard"><b>2 · Make it extractable.</b> Real text in HTML — never lock the answer, the how-it-works steps, or claims in PDFs/images. <span class="why" data-tip="AI can’t read a PDF or an image of text. Patient guides and claim sheets are invisible to AI until they’re real pages.">i</span>
+        <div class="uviz"><div class="urow"><div><span class="ubad no">✗ PDF / image</span><div class="mk-fpo" style="min-height:44px">patient-guide.pdf</div></div><div><span class="ubad yes">✓ real HTML text</span><div class="uline"></div><div class="uline"></div><div class="uline s"></div></div></div></div></div>
+      <div class="acard"><b>3 · Headings = the questions patients ask.</b> One H1; H2s phrased as the real patient question (“Why is my vision blurry after cataract surgery?”), H3s for subtopics. <span class="why" data-tip="AI matches the question it was asked to the headings on the page. Phrasing H2s as the actual patient question makes the page an obvious answer.">i</span>
+        <div class="uviz"><div class="uh">H1 · Life After Cataract Surgery</div><div class="uh h2">H2 · Why is my vision blurry after surgery?</div><div class="uh h3">H3 · When does it improve?</div><div class="uh h2">H2 · Can it be corrected?</div></div></div>
+      <div class="acard"><b>4 · Internal linking, hub-and-spoke.</b> Descriptive anchors (never “click here”). The hub links down to its spokes; every spoke links back up; symptom pages route to the lens that can be adjusted. <span class="why" data-tip="Internal links are how AI maps the site into entities it can cite — and how problem-aware pages route patients toward the LAL.">i</span>
+        <div class="uviz"><div class="hubviz"><span class="hub">Choosing Your Lens</span><div class="arr">↓↓↓</div><div class="spokes"><span class="sp">Lens Options</span><span class="sp">Comparison</span><span class="sp">Find a Doctor</span></div></div></div></div>
+      <div class="acard"><b>5 · Schema on every page.</b> Base set + per-type schema — mark the answer, the FAQs, the device, the author, the org. <span class="why" data-tip="Schema (JSON-LD) tells AI exactly what each block is. The difference between “mentioned” and “cited,” and how engines attribute the LAL to RxSight.">i</span>
+        <div class="uviz"><div class="uline" style="background:#dfe7ff"></div><div class="fine" style="margin:4px 0">&lt;script type="application/ld+json"&gt; { "@type":"MedicalDevice", "manufacturer":"RxSight" }</div><div class="uline xs" style="background:#dfe7ff"></div></div></div>
+      <div class="acard"><b>6 · Scannable.</b> Short paragraphs, bullets, and a real comparison table where relevant (the lens-options shelf and LAL-vs pages).
+        <div class="uviz"><div class="urow"><div><span class="ubad no">✗ wall of text</span><div class="uline"></div><div class="uline"></div><div class="uline"></div></div><div><span class="ubad yes">✓ scannable</span><div class="uline s"></div><div class="uline xs"></div><div class="uline s"></div></div></div></div></div>
+      <div class="acard"><b>7 · Patient language, not brand language.</b> Primary term in H1, first 100 words, URL, meta title (&lt;60), description (120–155). Pages target what patients <i>say</i> (“blurry vision after cataract surgery”), not only “LAL.” <span class="why" data-tip="Patients search symptoms and plain words, not the brand. Optimizing only branded terms misses the demand — and AI omits LAL where patients never name it.">i</span>
+        <div class="uviz" style="background:#fff"><div style="color:#1a0dab;font-size:13px">Blurry Vision After Cataract Surgery | RxSight</div><div style="color:#006621;font-size:10.5px">rxsight.com › life-after-surgery › blurry-vision</div><div class="fine" style="margin-top:2px;color:#444">Why vision can be blurry after surgery, what’s normal, and how a Light Adjustable Lens can be fine-tuned after surgery.</div></div></div>
+      <div class="acard"><b>8 · Earn trust — transparent, non-promotional voice.</b> Patients arrive braced against an upsell. Plain, honest, expectation-realistic copy; real patient/clinician voices over claims; no satisfaction-stat absolutes. <span class="why" data-tip="Surgeon/upsell distrust is a top signal in the research. A page that reads like marketing loses the patient; transparent education wins the citation and the trust.">i</span>
+        <div class="uviz"><div class="urow"><div><span class="ubad no">✗ “99% satisfied!”</span><div class="fine">reads as a pitch</div></div><div><span class="ubad yes">✓ honest tradeoffs</span><div class="fine">earns trust + the cite</div></div></div></div></div>
+    </div>
+    <div class="seclabel">Schema building blocks (reused across templates)</div>
+    <div class="acard"><b>MedicalDevice</b> + <b>Organization</b> (the LAL ↔ RxSight entity) · <b>FAQPage</b> (any Q&amp;A) · <b>Article</b> / <b>MedicalWebPage</b> (guides, verified author) · <b>DefinedTerm</b> (“Light Adjustable Lens,” “lock-in”) · <b>Physician</b> / <b>LocalBusiness</b> (Find a Doctor) · <b>Review</b> / <b>Person</b> (patient stories) · <b>BreadcrumbList</b>.
+      <div class="code">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Can a cataract lens be adjusted after surgery?",
+  "acceptedAnswer":{"@type":"Answer","text":"Yes — the Light Adjustable Lens …"}}]}</div></div>
+  </div>
+
+  <!-- TAB 4 — FOUNDATION -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Foundation</div><div class="t">The site-wide work the templates sit on.</div><div class="d">Get these wrong and the per-page work leaks. Stand them up early so pages launch citable, not retrofitted.</div></div>
+    <div class="bplist">
+      <div><b>Schema / structured-data strategy</b> — the per-template schema set applied site-wide; the LAL described as a <b>MedicalDevice</b> with <b>RxSight</b> as manufacturer everywhere it appears.<div class="cur"><b>✓ Already in place (rxsight.com, Jun 2026):</b> Organization, WebSite, WebPage, BreadcrumbList + SearchAction run site-wide, and <b>FAQPage schema is already live on the Healthcare Professionals page</b> — maintain these.</div><div class="todo"><b>→ To add:</b> <b>MedicalDevice</b> (LAL ↔ RxSight as manufacturer), FAQPage extended to the patient pages, and Article / verified-author Person / DefinedTerm.</div></div>
+      <div><b>Entity / brand-signal hygiene</b> — the About / Organization page makes AI attribute the Light Adjustable Lens to RxSight. Patients know the product, not the maker (named in 28 of 326 captured threads) — this closes that gap so engines stop confusing or omitting it. <span class="why" data-tip="When AI can’t resolve the maker entity, it miscategorizes the LAL or omits it. A clear Organization entity is how RxSight gets attributed and cited.">i</span><div class="cur"><b>✓ Already in place:</b> /about/ exists with Organization schema — so this is a <b>refine, not a from-scratch build</b>.</div><div class="todo"><b>→ To do:</b><br>• <b>AI names the LAL but credits RxSight as the maker in only 39 of 80 answers.</b> → State plainly on /about/ + product pages that “RxSight manufactures the Light Adjustable Lens,” with Organization + manufacturer schema and <code>sameAs</code> links (LinkedIn, the RXST investor page, and any authoritative directories where RxSight is listed).<br>• <b>The former name “Calhoun Vision” still surfaces.</b> → Make the current RxSight entity unambiguous so engines resolve to it, not the old name.<br>• <b>The LAL gets miscategorized as “a monofocal you pay to adjust.”</b> → Define it correctly as an adjustable IOL (DefinedTerm) on the entity + how-it-works pages.<br>• <b>ActivShield is rarely tied to RxSight.</b> → Name it on the entity / product pages.<br><i>Re-verify each against live AI answers at build.</i></div></div>
+      <div><b>Technical extractability</b> — keep every answer page as crawlable, semantic HTML (no text-in-images); clean sitemap.xml + robots + Search Console; add an <b>llms.txt</b> pointing AI crawlers at the priority answer pages (emerging signal, low cost).<div class="cur"><b>✓ Already in place:</b> sitemap.xml is live and the site is already HTML-based — the <b>only PDF is the regulatory SSED</b> (fine to leave). No patient or clinical guides are locked in PDFs, so there’s nothing to convert.</div><div class="todo"><b>→ To add:</b> an <b>llms.txt</b> (currently returns 404). That’s it on extractability — the content is already HTML.</div></div>
+      <div><b>Migration discipline / canonical</b> — preserve the <b>~1,248 organic keyword rankings</b> (Semrush US, Jun 2026) through the rebuild: 301-redirect every changed URL and keep the on-page content that earns each ranking. <b>One canonical URL per topic</b> — where two pages target the same query (e.g. a blog post and a hub section both on “LAL cost”), set <code>rel=canonical</code> on the secondary → primary or merge them, so engines don’t split the signal or cite a thin duplicate; give the /de/ /es/ /ja/ etc. versions <code>hreflang</code> so they read as translations, not duplicates. <span class="why" data-tip="rxsight.com ranks for ~1,248 organic keywords (Semrush US, Jun 2026) — verified real LAL/brand terms, mostly positions 1–3. A careless migration forfeits that equity — the single biggest avoidable risk in the rebuild.">i</span></div>
+      <div><b>Find-a-Doctor structured data</b> — Physician / LocalBusiness schema so engines answer “LAL near me,” and the locator stays the conversion surface; protect the existing local-ranking strength.<div class="cur"><b>✓ Already in place:</b> the provider locator and strong local rankings exist — not a build from scratch.</div><div class="todo"><b>→ To do:</b> mark up <b>each provider in the locator</b> with Physician/LocalBusiness structured data (name, full address, geo-coordinates, specialty, offers-LAL) so engines can read each location and answer “LAL doctor near me.” In the rebuild, keep the locator’s existing URLs (301 any that change) so the local rankings don’t drop.</div></div>
+      <div><b>Data layer</b> — store the <b>doctor-locator entries</b> (name, address, city/state) and the core <b>LAL facts</b> (FDA-approved adjustable IOL, made by RxSight, the LDD, ActivShield) as real CMS fields, so the schema pulls from them directly. <span class="why" data-tip="Structured fields are one source of truth the page and the schema both read from — more reliable than re-typing the same facts into each page.">i</span>
+        <div class="cur"><b>✓ Already in place:</b> the locator already stores structured provider entries.</div><div class="todo"><b>→ To do:</b> make sure those fields + the core LAL facts feed the schema — a small task scoped with Kelsey/dev.</div></div>
+    </div>
+    <div class="seclabel" style="margin-top:16px">Representative schema (examples — the full per-type set is execution)</div>
+    <pre style="background:#10222a;color:#d5e6e6;font-size:11px;line-height:1.55;padding:13px 15px;border-radius:9px;overflow-x:auto;margin:0"><code>// MedicalDevice — ties the LAL to RxSight everywhere it appears
+{ "@context":"https://schema.org", "@type":"MedicalDevice",
+  "name":"Light Adjustable Lens (LAL)",
+  "manufacturer":{ "@type":"Organization","name":"RxSight, Inc." } }
+
+// FAQPage — on every page with an FAQ block
+{ "@context":"https://schema.org", "@type":"FAQPage",
+  "mainEntity":[{ "@type":"Question",
+    "name":"Why is my vision blurry after cataract surgery?",
+    "acceptedAnswer":{ "@type":"Answer","text":"Some blur is normal while the eye heals..." } }] }
+
+// Organization — the maker entity AI attributes the LAL to
+{ "@context":"https://schema.org", "@type":"Organization",
+  "name":"RxSight, Inc.",
+  "sameAs":["https://www.linkedin.com/company/rxsight",
+            "https://investors.rxsight.com"] }</code></pre>
+  </div>
+
+  <!-- TAB 5 — PAGE TEMPLATES -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Page templates</div><div class="t">Every page type — its spec, the patient questions it must answer, and a visual of where the work goes.</div><div class="d">The sidebar is the full map of page types — use it to divvy up and assign the build. Pick a type: you get the spec, the audience-sourced question checklist, and the page with the moves pinned on.</div></div>
+    <div class="keybar"><b>Legend:</b>
+      <span><span class="tag add">ADD</span> net-new page</span>
+      <span><span class="tag aiopt">AI OPTIMIZED</span> existing page, made AI-citable</span>
+      <span><span class="tag rec">RECOMMEND</span> a proposed addition</span>
+    </div>
+
+    <div class="tlayout">
+      <div class="tside">
+        <div class="stitle">Page types — the work map</div>
+        <div id="tnav"></div>
+      </div>
+      <div class="tmain" id="tmain"></div>
+    </div>
+  </div>
+
+  <!-- TAB 6 — BLOG -->
+  <div class="panel">
+    <div class="lead-h"><div class="k">Blog — Patient Resources</div><div class="t">The AEO capture layer: problem-aware + up-funnel articles that win the AI citation and route readers to the decision hubs + Find a Doctor.</div><div class="d">Already running — <b>8 patient articles live</b>. This is the full inventory + pipeline. Every article follows the same structure; the day-to-day operating tool is <b>blog-content-tracker.xlsx</b>. <b>The topics and timing below are the best map as of June 30, 2026 — not set in stone; they shift each month with new audience intelligence and AI-audit findings.</b></div></div>
+    <div class="seclabel" style="margin-top:6px">Blog article — the build template (every post follows this)</div>
+    <div id="blogtpl"></div>
+    <div class="fine" style="margin:14px 0 6px"><b>Status key:</b> <span class="stb st-ex">Live</span> published on rxsight.com · <span class="stb st-up">Planned</span> scheduled (incl. the Sept/Oct articles built alongside the site) · <span class="stb st-new">Backlog</span> strategy-identified, not yet scheduled.</div>
+    <div class="fine" style="margin:0 0 6px;color:var(--teal2)"><b>Two birds:</b> the Sept + Oct articles the content plan already calls for are being built into the site launching Oct/Nov — the monthly blog work doubles as launch content.</div>
+    <div class="seclabel" style="margin-top:14px">The blog library — filter by status or category</div>
+    <div class="fine" style="margin:0 0 10px"><b>How the pipeline works:</b> the retainer builds one blog per month, proactively — <b>November is the exception (two, to cover the launch topics).</b> The backlog isn’t a fixed list: each month’s AI-visibility audit re-scores which topic is the priority to publish next.</div>
+    <div class="todo" style="margin:0 0 10px"><b>★ Launch-priority bucket (5):</b> the decision / cost / outcome posts the AI audit shows driving lens choices — built to ship with the Oct/Nov launch: <b>Cataract Lens Options &amp; Costs (Aug) · Visual Phenomena / Halos &amp; Glare (Sept) · Will I Still Need Glasses (Oct) · Is the LAL Worth It? (Nov) · LAL Cost &amp; Insurance (Nov).</b> Filter to <b>★ Launch</b> to see just these.</div>
+    <div id="blogfilter" class="blogfilter"></div>
+    <div id="blogwrap"></div>
+    <div class="seclabel" style="margin-top:18px">Governance &amp; lifecycle</div>
+    <p class="fine" style="font-size:12.5px">Claims review on clinical / timeline / outcome lines (amber in the template above); a named medical reviewer per article (Person schema); a scheduled freshness re-review. Full lifecycle in <b>blog-hub-plan.md</b>; the day-to-day operating tool is <b>blog-content-tracker.xlsx</b>.</p>
+  </div>
+
+  <p class="note">Pairs with the recommended sitemap. Schema examples are illustrative; final values come from the CMS/data layer. Demand figures are SEMrush (US, Jan 2026 baseline); Reddit counts are a separate measure (capture-window time bases) and are never summed. AI-surfaced stats are what AI says today, flagged for verification — not asserted as RxSight claims; all regulated claims route through the claims chain. Patient-page mocks are directional layouts pending design comps. Question checklists are sourced from the audience-intelligence research. The Eye Care Professionals templates are built from the June 2026 professional listening pull (ophthalmology/optometry trade press, LinkedIn &amp; YouTube; ~690 LAL-relevant items). · Concentrek Group · June 2026.</p>
+</div>
+
+<script>
+/* ---------- SITEMAP tree (tab 1) ---------- */
+const SITETREE=[
+ {n:"Patients",st:"exists",k:[
+   {n:"Choosing Your Lens",st:"new",pr:"p1",k:[{n:"Cataract Lens Options",st:"new",pr:"p1"},{n:"LAL vs Other Lenses",st:"new",pr:"p1",cl:1},{n:"How to Choose Your Lens",st:"new",pr:"p1"},{n:"Adjust vs. Exchange",st:"new",pr:"p1"},{n:"Cost &amp; Insurance",st:"new",pr:"p2"}]},
+   {n:"How the Light Adjustable Lens Works",st:"update",pr:"p1",k:[{n:"The Adjustment Process",st:"update",pr:"p1"},{n:"What to Expect",st:"new",pr:"p1"},{n:"UV Protection &amp; ActivShield",st:"new",pr:"p1"},{n:"LAL vs LAL+",st:"new",pr:"p2"}]},
+   {n:"Patient Stories",st:"exists",pr:"p2"},
+   {n:"Patient Resources (Blog)",st:"new",pr:"p1",og:1,k:[
+     {n:"Life After Cataract Surgery",st:"new"},
+     {n:"Understanding Cataracts &amp; Your Eyes",st:"new"},
+     {n:"Choosing &amp; Comparing Lenses",st:"new"},
+     {n:"The LAL Journey",st:"new"},
+     {n:"Cost, Insurance &amp; Value",st:"new"},
+     {n:"→ 8 live + a monthly pipeline · full list in the Blog tab",st:"exists"}
+   ]}
+ ]},
+ {n:"Eye Care Professionals",st:"exists",k:[
+   {n:"For Surgeons",st:"new",k:[{n:"Why the LAL",st:"new"},{n:"Complex &amp; Post-Refractive Eyes",st:"new",cl:1},{n:"LAL vs Other Premium IOLs",st:"new",cl:1},{n:"Adjustment Workflow &amp; Chair-Time",st:"new"},{n:"Clinical Evidence &amp; Expectations",st:"new",cl:1}]},
+   {n:"For Optometrists",st:"new",k:[{n:"The OD's Role in LAL Care",st:"new"},{n:"Becoming a Certified Light Adjuster",st:"new"},{n:"Patient Selection &amp; Ocular Surface",st:"new"},{n:"Setting Patient Expectations",st:"new"}]},
+   {n:"For Practices — Bring LAL to Your Practice",st:"new",k:[{n:"The LDD Decision (Buy / Lease / Refer-Out)",st:"new"},{n:"ROI &amp; Volume Break-Even",st:"new"},{n:"Premium-Channel Economics &amp; Conversion",st:"new"},{n:"Workflow &amp; Staffing",st:"new"}]}
+ ]},
+ {n:"Find a Doctor",st:"update",pr:"p1"},
+ {n:"About RxSight",st:"exists",pr:"fnd"}
+];
+function chip(pr){const m={p1:["p1","P1"],p2:["p2","P2"],fnd:["fnd","FND"]}[pr];return m?`<span class="tag ${m[0]}">${m[1]}</span>`:""}
+function stbadge(st){const m={exists:["st-ex","Live · maintain"],update:["st-up","Live · update"],new:["st-new","New"]}[st];return m?`<span class="stb ${m[0]}">${m[1]}</span>`:""}
+function stdot(st){const m={exists:["st-ex","Live · maintain"],update:["st-up","Live · update"],new:["st-new","New"]}[st];return m?`<span class="pgs ${m[0]}" title="${m[1]}"></span>`:""}
+function treeLi(node,depth){
+  const leaf=!(node.k&&node.k.length);
+  const cls=leaf?'pg':(depth===1?'hub':'cat');
+  const kids=leaf?'':`<ul>${node.k.map(c=>treeLi(c,depth+1)).join("")}</ul>`;
+  const flags=`${node.og?' <span class="stb tog">↻ ongoing</span>':''}${node.cl?' <span class="stb tcl">⚠ verbiage TBD</span>':''}`;
+  const inner=leaf?`${stdot(node.st)}${node.n} ${chip(node.pr)}${flags}`:`${node.n} ${stbadge(node.st)} ${chip(node.pr)}${flags}`;
+  return `<li><div class="smbox ${cls}">${inner}</div>${kids}</li>`;
+}
+function branchCol(b){const inner=b.k?`<ul class="ctree">${b.k.map(c=>treeLi(c,1)).join("")}</ul>`:"";return `<div class="smcol"><div class="smbox branch">${b.n} ${stbadge(b.st)}</div>${inner}</div>`}
+function renderTree(){
+  document.getElementById("tree").innerHTML=`<div class="smwrap"><div class="smtop"><div class="smbox root">rxsight.com</div></div><div class="smcols">${SITETREE.map(branchCol).join("")}</div></div>`;
+}
+
+/* ---------- PAGE TEMPLATES (tab 5) ---------- */
+const TPLS=[
+ {grp:"Patients — Choosing Your Lens", items:[
+  {id:"hub-decide",name:"Choosing Your Lens",tag:"new",badge:"Decision hub",
+   For:"The entry to the lens decision — patients overwhelmed by choice. Routes to the shelf, the comparison, and Find a Doctor.",
+   insight:"Decision paralysis is the #2 patient signal — “the most excruciating decision nobody tells you you'll have to make,” “this is forever.” Surgeons won't advise lens choice (liability), so patients are forced to become the expert. Answer the fear with transparent, non-sales education.",
+   authority:"On-page authority: feature a named cataract surgeon or OD walking through the lens decision (a quoted voice + Person schema). A credible clinician voice earns citations on “how do I choose a lens” that the brand’s own copy can’t.",
+   h2s:["What are my cataract lens options?","Monofocal, toric, multifocal, EDOF, or Light Adjustable — what’s the difference?","How do I choose the right lens for my eyes and lifestyle?","What if my vision isn’t right after surgery — can it be corrected?","How much do premium lenses cost, and does insurance cover them?"],
+   aq:"What are my cataract lens options, and how do I choose?",
+   aa:"Cataract lenses come in a few types — monofocal, toric, multifocal, EDOF, and the Light Adjustable Lens (LAL), the only one your surgeon can fine-tune after surgery. The right choice depends on how you use your eyes and your eye history. This guide walks each option and how the LAL lets you and your surgeon dial in the result after your eye heals, instead of committing to a fixed result on the day of surgery.",
+   schema:"Article + BreadcrumbList + FAQPage",
+   faq:[["Do I have to choose my lens before surgery?","Yes — you decide with your surgeon beforehand, but the Light Adjustable Lens is the one option you can still fine-tune afterward."],["Why does the Light Adjustable Lens cost more?","It’s an out-of-pocket premium lens — you’re paying to fine-tune your vision after surgery and lock it in, instead of being stuck with a fixed result. Coverage specifics: ask your provider."],["Is the Light Adjustable Lens better than a multifocal lens?","Different trade-offs: multifocals build in a range of focus; the LAL lets you fine-tune your result after surgery. Your surgeon helps weigh which fits your eyes."],["Will I still need glasses with the LAL?","The goal is to dial in your target vision, but some tasks may still need glasses.",1]],
+   chk:["Answer the decision question in the first 100 words","Routes down to the shelf + comparison + Find a Doctor","Transparent, non-sales voice (patients arrive skeptical)"],
+   moves:"Be the source AI &amp; search cite for “cataract lens options” and lens-decision questions",
+   mock:"hub"},
+  {id:"shelf",name:"Cataract Lens Options",tag:"new",badge:"The lens shelf",
+   For:"The shelf patients are missing — a card per optical class (monofocal · toric · multifocal · EDOF · Light Adjustable) so they find the LAL where they already shop.",
+   insight:"Patients have no “adjustable” shelf — they name lenses by optical class (~4,232 mentions) and use “LAL” as a bare noun (662×) because there's nowhere to put it. Build the shelf so they find the LAL where they already shop.",
+   h2s:["What are my cataract lens options?","Monofocal vs toric vs multifocal vs EDOF vs adjustable — what’s the difference?","What is an “adjustable” lens?","Which type is right for me?"],
+   aq:"What are my cataract lens options?",
+   aa:"Cataract lenses come in a few types — monofocal, toric, multifocal, EDOF — and the Light Adjustable Lens, the one type that can be fine-tuned after surgery. “Adjustable” isn’t a brand; it’s a feature, and the Light Adjustable Lens is how you get it.",
+   schema:"Article + DefinedTerm + FAQPage",
+   faq:[["What types of cataract lenses are there?","Monofocal (one distance), toric (astigmatism), multifocal and EDOF (a range of focus), and the Light Adjustable Lens — adjustable after surgery."],["What is an adjustable lens or adjustable IOL?","A lens whose power can be changed after it’s implanted — today that’s the Light Adjustable Lens, fine-tuned with light once your eye heals."],["Which lens is right for me?","It depends on how you use your eyes and your eye history; the LAL lets you fine-tune the result after surgery rather than commit up front."]],
+   chk:["A clear card per optical class, LAL seated among them","Define “adjustable” as a cross-cutting feature (DefinedTerm)","Each card links to deeper content; LAL → How the LAL Works"],
+   moves:"own the “adjustable lens / adjustable IOL” category — currently no shelf",
+   mock:"shelf"},
+  {id:"comparison",name:"LAL vs Other Lenses",tag:"new",badge:"Comparison",
+   For:"The decision patients agonize over — adjustable vs fixed. A machine-readable table only RxSight can frame.",
+   insight:"Comparison-vs-fixed-lenses is the spine — ~85% of threads. The value prop comes from patients, not RxSight: “with a fixed lens, if it's off you're stuck; at least [with LAL] you can dial it in.” Meet “essentially a monofocal you pay to adjust” head-on.",
+   authority:"On-page authority: a named surgeon’s take on adjustable-vs-fixed tradeoffs (quote + Person schema) — an independent clinical voice AI trusts on comparison queries more than brand copy.",
+   h2s:["How does the Light Adjustable Lens compare to other lenses?","What’s the difference between adjustable and fixed lenses?","What happens if a fixed-lens result is off?","Which lens has the fewest tradeoffs for me?"],
+   aq:"How does the Light Adjustable Lens compare to other lenses?",
+   aa:"Most premium lenses are set during surgery — if the result is off, you’re stuck or face a lens exchange. The Light Adjustable Lens is the exception: after your eye heals, your surgeon fine-tunes it with light, then locks it in.",
+   schema:"Article + Table + FAQPage",
+   faq:[["How is the Light Adjustable Lens different from other premium lenses?","Fixed premium lenses are set during surgery; the Light Adjustable Lens can be fine-tuned afterward. Each has tradeoffs your surgeon can walk through."],["What’s the difference between an adjustable and a fixed lens?","A fixed lens’s power is final once implanted; the LAL’s can be adjusted with light after surgery, before lock-in."],["What if my premium-lens result isn’t right?","With a fixed lens: glasses, a touch-up, or an exchange. With the LAL, the lens itself is adjusted — no exchange."]],
+   chk:["Machine-readable table: attribute × lens (no named-competitor column)","Adjustable-vs-fixed frame; honest tradeoffs, no superlatives","<b>Competitor guardrail:</b> don’t name PanOptix / Vivity / other IOLs in comparative claims on-page (regulated) — answer the intent in absolute terms (own the LAL’s adjustability). The named head-to-head belongs off-site (third-party reviews / KOL)."],
+   moves:"Be the answer AI gives on “LAL vs [other lens]” comparisons",
+   mock:"comparison"},
+  {id:"how-choose",name:"How to Choose Your Lens",tag:"new",badge:"Decision help",
+   For:"The decision-help spoke — a framework for weighing lens options against your eyes and lifestyle. Routes to the shelf, comparison, Find a Doctor.",
+   insight:"Patients are forced to “become an expert in everything” because surgeons won't advise (liability). Give them a clear framework to have the conversation, not a sales pitch — it also disarms the upsell-distrust signal.",
+   authority:"On-page authority: a surgeon or OD framing the decision (quote + Person schema) — a trusted voice on “how to choose a lens.”",
+   h2s:["How do I choose the right cataract lens?","What questions should I ask my surgeon?","How do my lifestyle and eye history affect the choice?","What if I’m not sure — can I change my mind?"],
+   aq:"How do I choose the right cataract lens?",
+   aa:"Start with how you use your eyes — distance, reading, screens, night driving — and your eye history (prior LASIK, astigmatism, dry eye). Bring those to your surgeon. The Light Adjustable Lens is the one option that lets you fine-tune the result after surgery, so you’re not committing to a fixed outcome before you can see it.",
+   schema:"HowTo + FAQPage",
+   faq:[["What should I ask my surgeon about lenses?","Ask which lenses fit your eyes, the trade-offs, the cost, and whether the result can be adjusted after surgery."],["Does my lifestyle affect the lens choice?","Yes — night driving, screen time and reading habits point toward different lenses; share them with your surgeon."],["Can I change my lens choice after surgery?","A fixed lens would need an exchange; the Light Adjustable Lens can be fine-tuned with light after surgery."]],
+   chk:["Give a decision framework, not a sales pitch","Route to Cataract Lens Options + LAL vs Other Lenses + Find a Doctor"],
+   moves:"own “how to choose a cataract lens”",
+   mock:"guide"},
+  {id:"adjust-exchange",name:"Adjust vs. Exchange",tag:"new",badge:"The regret answer",
+   For:"Answers the regret / exchange fear — the difference between adjusting a lens and exchanging it (a second surgery).",
+   insight:"Regret + IOL exchange is a strong signal (“don’t get YAG before exchange,” explant stories). The LAL’s adjustability is the direct answer — position it against the exchange fear without disparaging exchange.",
+   h2s:["What if my lens result isn’t right — can it be fixed?","What’s the difference between adjusting and exchanging a lens?","When is a lens exchange needed?","How the Light Adjustable Lens avoids the exchange"],
+   aq:"What if my cataract lens result isn’t right — can it be fixed?",
+   aa:"It depends on the lens. A fixed lens that’s off may need glasses, a laser touch-up, or a lens exchange (a second surgery). The Light Adjustable Lens is different — your surgeon fine-tunes the lens itself with light after your eye heals, then locks it in, without an exchange.",
+   schema:"Article + FAQPage",
+   faq:[["What is a lens exchange?","A second surgery to remove and replace an implanted lens; it carries more risk than the first."],["Can the Light Adjustable Lens be adjusted instead of exchanged?","Yes — that’s the point: it’s fine-tuned with light after surgery, before lock-in, with no exchange."],["What if I’ve already had a fixed lens?","Options depend on your eye; discuss glasses, a touch-up, or exchange with your surgeon."]],
+   chk:["Answer the exchange fear directly","Position LAL adjustability as the alternative to exchange","Frame exchange honestly, don’t disparage it"],
+   moves:"own “IOL exchange / adjust vs exchange” queries",
+   mock:"guide"},
+  {id:"cost",name:"Cost &amp; Insurance",tag:"new",badge:"Cost / value",
+   For:"Meets the cost objection with the why-behind-the-cost value, and the coverage picture.",
+   insight:"Cost is a top decision query (“$3,500–7,200/eye” cited) and “I’ll need readers anyway” is a common rebuttal. Answer with the de-risking value, not just the number.",
+   h2s:["How much does the Light Adjustable Lens cost?","What does insurance / Medicare cover?","Why does the LAL cost more than a standard lens?","Is it worth the out-of-pocket cost?"],
+   aq:"How much does the Light Adjustable Lens cost, and what does insurance cover?",
+   aa:"Standard cataract surgery and a basic monofocal lens are typically covered; premium options like the Light Adjustable Lens carry an out-of-pocket upcharge — you’re paying to fine-tune your vision after surgery instead of being stuck with a fixed result. Ask your provider for specifics.",
+   schema:"Article + FAQPage",
+   faq:[["Does Medicare cover the Light Adjustable Lens?","Medicare covers standard cataract surgery + a basic lens; the premium LAL upgrade is out-of-pocket. Confirm with your provider."],["Why does the LAL cost more?","You’re paying for the ability to fine-tune your vision after surgery and lock it in — de-risking the result."],["Is the Light Adjustable Lens worth it?","That’s personal, but the value is the after-surgery adjustability; patient stories show the range."]],
+   chk:["Cost answers carry the WHY (adjustability / de-risking value)","No invented figures; coverage specifics route to the provider","Frame value, not just price"],
+   moves:"own “light adjustable lens cost” with the value framing",
+   mock:"guide"}
+ ]},
+ {grp:"Patients — How the Light Adjustable Lens Works", items:[
+  {id:"hub-works",name:"How the Light Adjustable Lens Works",tag:"exist",badge:"How-it-works hub",
+   For:"Explains the photosensitive lens + light treatment; sets the “fine-tuning, not one-shot” model. Page exists — make it AI-ready.",
+   insight:"This is the topic with the most RxSight-specific patient questions — and objections: the appointment burden, the UV-glasses regimen, lock-in and adjustment fears. UV only ever comes up as a burden (“even in the shower”); patients almost never mention ActivShield, the LAL’s built-in UV protection that eases that requirement — an advantage no one talks about, so a page explaining it can own the answer AI gives. (Exact ActivShield claim → claims.)",
+   authority:"On-page authority: a Light Adjuster surgeon or OD explaining the mechanism in their own words (quote + Person schema) — first-hand expertise AI cites on “how does the LAL work.”",
+   h2s:["How does the Light Adjustable Lens work?","What makes it “adjustable”?","What happens after the lens is implanted?","How are the light treatments done, and what is lock-in?","Do I have to wear UV-protective glasses?"],
+   aq:"How does the Light Adjustable Lens work?",
+   aPend:1,
+   aa:"The Light Adjustable Lens is made of a light-sensitive material. After your eye heals from cataract surgery, your doctor uses light treatments to fine-tune the lens to your vision, then locks in the result so it stays — it’s designed to be adjusted after it’s implanted.",
+   schema:"Article + MedicalWebPage + DefinedTerm",
+   faq:[["Does the adjustment hurt?","The light treatments are quick and done in the office.",1],["When do the adjustments start?","Adjustments begin once your eye has healed; your surgeon sets the timing.",1],["What if I don’t wear the UV-protective glasses?","Wear them as directed during the adjustment period to protect the lens; your doctor explains when.",1],["Can the lens be adjusted again years later?","No — once locked in, the lens is set and no longer changes."]],
+   chk:["Front-loaded mechanism answer (claims-checked)","Routes to process, what-to-expect, UV/ActivShield"],
+   moves:"protect the category win; clean LAL↔RxSight entity",
+   mock:"guide"},
+  {id:"process",name:"The Adjustment Process",tag:"update",badge:"The process spoke",
+   For:"The core process explainer — reframe the follow-up visits as fine-tuning, the point of the lens, not a burden.",
+   insight:"The appointment burden is a top objection (14 appointments / 11 dilations cited). Reframe the visits as fine-tuning — that’s the value, not a burden.",
+   authority:"On-page authority: a surgeon or OD walking the adjustment process step by step (quote + Person schema).",
+   h2s:["What is the Light Adjustable Lens adjustment process?","Why are there follow-up visits, and what happens at them?","What is lock-in?","How long does the process take?"],
+   aq:"What is the Light Adjustable Lens adjustment process?",
+   aPend:1,
+   aa:"After surgery your eye heals, then a short series of in-office light treatments fine-tune your vision before a final lock-in. Those visits are the point — they’re how your vision gets tailored to you, not set once and hoped for.",
+   schema:"HowTo + FAQPage",
+   faq:[["Why are there so many appointments?","Each visit is a fine-tuning step, not a complication — it’s how your vision gets dialed in.",1],["What is lock-in?","Once you and your doctor are happy with your vision, a final step sets the lens so it no longer changes."],["How long does the process take?","Plan for a few weeks of adjustments after healing, then lock-in; your surgeon confirms your schedule.",1]],
+   chk:["Front-load the process answer","Visits reframed as fine-tuning, not burden","Timing/counts route through the claims chain"],
+   moves:"own “lock-in,” “fine-tuning,” adjustment-process queries",
+   mock:"guide"},
+  {id:"expect",name:"What to Expect",tag:"new",badge:"Expectations spoke",
+   For:"Sets patient expectations across the LAL adjustment journey — the calm, realistic walk-through.",
+   insight:"Un-set expectations drive regret. Walk the journey plainly so patients know the visit cadence, the UV-glasses period, and that vision improves over the treatments.",
+   h2s:["What should I expect with the Light Adjustable Lens?","What happens right after surgery?","What are the light treatments like?","When will my vision settle?"],
+   aq:"What should I expect with the Light Adjustable Lens?",
+   aPend:1,
+   aa:"After surgery your eye heals, then you return for a series of quick, in-office light treatments that fine-tune your vision, followed by a lock-in that makes the result permanent. Your vision is dialed in over the treatments toward your target.",
+   schema:"FAQPage + MedicalWebPage",
+   faq:[["What happens right after LAL surgery?","Your eye heals before the light treatments begin; wear your UV-protective glasses as directed.",1],["What are the light treatments like?","Quick, in-office sessions; your doctor describes what to expect.",1],["When does my vision settle?","It’s dialed in over the treatments and set at lock-in; your surgeon confirms the timeline.",1]],
+   chk:["Calm, realistic walk-through","Route to The Adjustment Process + UV/ActivShield + Find a Doctor","Timelines route through the claims chain"],
+   moves:"own “what to expect with the light adjustable lens”",
+   mock:"guide"},
+  {id:"uv-activ",name:"UV Protection &amp; ActivShield",tag:"new",badge:"Claim the ActivShield story",
+   For:"Answers the UV-glasses objection and claims the unclaimed ActivShield story.",
+   insight:"UV only comes up as a burden (“even in the shower”); patients almost never mention ActivShield — the LAL’s built-in UV protection that answers the single most-repeated objection. It has no patient mindshare, so a clear page can own the answer AI gives.",
+   authority:"On-page authority: a surgeon/OD explaining the UV period and ActivShield in plain terms (quote + Person schema).",
+   h2s:["Do I have to wear UV-protective glasses with the LAL?","What is ActivShield?","How long do I wear the glasses?","Why is UV protection needed?"],
+   aq:"Do I have to wear UV-protective glasses with the Light Adjustable Lens?",
+   aPend:1,
+   aa:"During the adjustment period you wear UV-protective glasses to shield the lens from stray light until it’s locked in. ActivShield is a built-in protection layer in the lens that reduces everyday UV exposure. Your doctor explains exactly when the glasses are needed.",
+   schema:"FAQPage + MedicalWebPage",
+   faq:[["What is ActivShield?","A protection layer built into the Light Adjustable Lens that reduces UV exposure between treatments.",1],["How long do I wear the UV glasses?","Through the adjustment period, until your doctor confirms lock-in.",1],["Why is UV protection needed?","The lens is light-sensitive, so stray UV could change it before lock-in.",1]],
+   chk:["Reframe the UV requirement honestly","Make ActivShield explicit and retrievable","UV / ActivShield claims route through the claims chain"],
+   moves:"own the UV-glasses objection; put ActivShield on the map",
+   mock:"guide"},
+  {id:"lal-plus",name:"LAL vs LAL+",tag:"new",badge:"Product variants",
+   For:"Explains the difference between the Light Adjustable Lens and LAL+.",
+   insight:"LAL+ had a rough launch and carries some negative perception — but if the site doesn’t define how LAL and LAL+ differ, AI can’t tell them apart when patients ask, so any confusion or negativity attaches to the whole line. A plain, factual page lets the engines separate them. (41 threads name “LAL+” without knowing the difference.)",
+   h2s:["What’s the difference between the LAL and LAL+?","Which one is right for me?","Do both get adjusted the same way?"],
+   aq:"What’s the difference between the Light Adjustable Lens and LAL+?",
+   aPend:1,
+   aa:"The LAL and LAL+ are both Light Adjustable Lenses your surgeon fine-tunes after surgery; they differ in optical design. Which one fits depends on your eyes and goals — your surgeon explains the difference for your situation.",
+   schema:"Article + FAQPage",
+   faq:[["Is LAL+ better than the original LAL?","They’re different designs; the right one depends on your eyes. Your surgeon advises.",1],["Do both get adjusted with light?","Yes — both are fine-tuned after surgery and locked in."]],
+   chk:["Clarify the difference plainly","Product/design specifics route through the claims chain"],
+   moves:"own “LAL vs LAL+”",
+   mock:"guide"}
+ ]},
+ {grp:"Patients — Stories &amp; Resources", items:[
+  {id:"stories",name:"Patient Stories",tag:"exist",badge:"Trust &amp; convert",
+   For:"Real voices = AI authority + the trust answer to skepticism. Honest range, not just glowing.",
+   insight:"Stories run both ways — “life changing” and “living nightmare.” Honest range disarms the upsell-distrust pattern (“felt like being sold a used car”). Real voices = AI authority, not marketing claims.",
+   authority:"On-page authority — this page IS the play: real, verifiable patient and clinician voices with Review / Person schema (E-E-A-T: Experience, Expertise, Authoritativeness, Trust).",
+   h2s:["What do real Light Adjustable Lens patients say?","What was choosing the lens like?","What is the adjustment process like for patients?","What’s life like after the LAL?"],
+   aq:"What do real patients say about the Light Adjustable Lens?",
+   aPend:1,
+   aa:"Real patients describe what choosing, adjusting, and living with the Light Adjustable Lens was actually like — in their own words. Individual results vary.",
+   schema:"Review + Person",
+   faq:[["Are Light Adjustable Lens patients happy with their results?","Experiences vary — real stories show the range, from the adjustment journey to the final result.",1],["What is the LAL experience really like?","Patients describe the light treatments, the UV-glasses period, and seeing their vision dialed in over the visits."],["Where can I read real LAL reviews?","Patient stories on this page, plus your surgeon can connect you with others."]],
+   chk:["Structured stories (Review/Person where claims allow)","Honest range builds trust vs. skepticism","Tie to journey stages; on-site counterpart to the KOL program"],
+   moves:"Get real patient voices cited by AI; build trust",
+   mock:"stories"},
+  {id:"blog",name:"Patient Resources (Blog)",tag:"new",badge:"8 live + pipeline → see the Blog tab",callout:true}
+ ]},
+ {grp:"Eye Care Professionals", items:[
+  {id:"pro-surg",name:"For Surgeons",tag:"new",badge:"Built from the June 2026 professional pull",
+   For:"The ~7,500 cataract surgeons not yet using the LAL. The decision is clinical-credibility-led with a financial undercurrent — and the wedge, corroborated across the whole research, is complex / post-refractive eyes where biometry fails.",
+   insight:"From the June 2026 professional research (mostly ophthalmology/optometry trade press, plus LinkedIn and YouTube; ~690 LAL-relevant): the adoption wedge is complex / post-refractive eyes where biometry fails — “refractive-surprise insurance.” Pro-LAL voices are RxSight-consultant-heavy, so weight independent barriers over enthusiasm.",
+   authority:"On-page authority: a peer KOL surgeon’s clinical take featured on the page (quote + Person schema) — surgeon-to-surgeon credibility AI and peers weight over brand claims.",
+   h2s:["Why offer the Light Adjustable Lens?","Which patients get the LAL vs a trifocal / EDOF / IC-8?","How does the LAL perform in post-LASIK / post-RK / irregular corneas?","What does the adjustment workflow and chair-time involve?","What’s the clinical evidence, and how do I set expectations?"],
+   aq:"Why should a cataract surgeon offer the Light Adjustable Lens?",
+   aPend:1,
+   aa:"The Light Adjustable Lens is the only IOL you can fine-tune after surgery — refractive-surprise insurance for the eyes where your formulas are least reliable. Postop becomes the new preop: you and the patient dial in the result instead of hoping the pre-op measurements were perfect.",
+   schema:"Article + MedicalWebPage + MedicalDevice",
+   faq:[["Which patients get the LAL vs a trifocal / EDOF / IC-8?","Best fit: patients prioritizing a dialed-in result, and complex eyes where biometry is unreliable. Name honestly where multifocal/EDOF/IC-8 fit.",1],["How does the LAL perform in post-LASIK / post-RK / irregular corneas?","This is the wedge — post-refractive eyes where formulas miss. Present the evidence honestly.",1],["How much chair time and how many visits does it add?","A series of adjustment visits plus lock-in; sharing the adjustment work with optometrists absorbs much of it.",1],["What can the LAL not do?","It doesn’t correct higher-order aberrations — set expectations accordingly.",1],["How do I avoid the unhappy premium patient?","Patient selection, ocular-surface prep, and clear expectation-setting."]],
+   chk:["Pages: Why the LAL · Complex &amp; Post-Refractive Eyes (the wedge) · LAL vs Other Premium IOLs · Adjustment Workflow &amp; Chair-Time · Clinical Evidence &amp; Expectations","Lead the comparison honestly — name where IC-8/others fit (credibility is the point)","Chair-time page routes to the For Optometrists branch as the workflow answer","Efficacy / 'LASIK-like' / satisfaction stats route through the claims chain"],
+   moves:"adoption among non-LAL surgeons; citation on 'best IOL for post-LASIK/RK eyes'", mock:"guide"},
+  {id:"pro-od",name:"For Optometrists",tag:"new",badge:"Priority segment · built from the pull",
+   For:"ODs are central to LAL care — they own the refractions, the light adjustments and the lock-ins, and the patient takes the OD's lens recommendation >95% of the time. The compliant angle is the clinical Light Adjuster role — NOT referral or billing arrangements.",
+   insight:"ODs are the priority segment and the richest LAL signal — they own the refractions, adjustments and lock-ins, and patients take the OD's recommendation >95% of the time. Clinical Light-Adjuster framing only (no co-management/billing).",
+   authority:"On-page authority: a practicing certified Light Adjuster OD featured on the page (quote + Person schema) — peer credibility for the OD audience.",
+   h2s:["What is the optometrist’s role in Light Adjustable Lens care?","How do I become a certified Light Adjuster?","How do I select candidates and optimize the ocular surface?","How do I set patient expectations for the adjustment journey?"],
+   aq:"What is the optometrist’s role in Light Adjustable Lens care?",
+   aa:"Optometrists are central to the Light Adjustable Lens result — the refractions, the light treatments, and the lock-in that dial in a patient’s vision. This is where an OD’s refractive expertise becomes indispensable to the outcome.",
+   schema:"Article + MedicalWebPage",
+   faq:[["How do I become a Light Adjuster?","Through RxSight’s training on the adjustment workflow — the clinical skill of performing the light treatments."],["What is the OD’s role in the adjustment process?","Refractions between treatments, performing the light adjustments, and the final lock-in, alongside the surgeon."],["How do I select candidates and prep the ocular surface?","Patient selection and ocular-surface optimization before the measurements are taken."],["How do I set expectations for the adjustment journey?","Explain the visit cadence, the UV-glasses period, and that vision is dialed in over the treatments."]],
+   chk:["Pages: The OD's Role in LAL Care · Becoming a Certified Light Adjuster · Patient Selection &amp; Ocular Surface · Setting Patient Expectations","Clinical / educational framing only — the Light Adjuster role, NOT “co-management,” referral, or billing language (anti-kickback)","Reimbursement is real OD demand but OFF-LIMITS for the manufacturer to publish — leave it to associations / third parties","Feeds the off-site community/KOL program (Nick Bruns / Peer-to-Peer Academy)"],
+   moves:"OD adoption of the Light Adjuster role; clinical authority with optometrists", mock:"guide"},
+  {id:"pro-practice",name:"For Practices — Bring LAL to Your Practice",tag:"new",badge:"Whitespace · built from the pull",
+   For:"Practice managers / COO / administrators — the LDD capital-purchase decision-maker. The research's single biggest content gap: the trade press names the LDD economics question repeatedly and models it nowhere.",
+   insight:"The research's single biggest content gap: the trade press names the LDD economics question (buy/lease/refer, break-even) repeatedly and models it nowhere. Sticker shock is the #1 conversion barrier (~68%).",
+   authority:"On-page authority: a practice administrator’s real ROI experience featured (quote + Person schema) — a peer’s numbers land harder than a vendor’s model. (Plus the ROI / break-even tool itself as a citable asset.)",
+   h2s:["Should we buy, lease, or refer out the Light Delivery Device?","What patient volume justifies the LDD — what’s the break-even?","How do we bill it (Medicare cataract fee + the patient upcharge)?","How do we beat sticker shock?","How do we staff and schedule the adjustment workflow?"],
+   aq:"How do we bring the Light Adjustable Lens to our practice?",
+   aa:"Bringing the Light Adjustable Lens to your practice is a capital and workflow decision before it’s a clinical one. Here’s the straight math on the Light Delivery Device — buy, lease, or refer out — the volume to break even, and how the premium (cash-pay) channel adds to practice revenue.",
+   schema:"Article + FAQPage",
+   faq:[["Should we buy the LDD, lease it, or refer out?","Three models — buy (most control), lease (lower upfront), or refer out (open-access). The right one depends on your volume."],["What volume justifies the LDD?","Build the break-even from your premium-conversion rate and per-case margin.",1],["How do we bill it?","Medicare cataract fee + the patient-pay upcharge for the premium lens. Confirm current coding.",1],["How do we beat sticker shock?","Sticker shock is the top conversion barrier; frame the value (de-risking) and offer financing."],["How do we staff the adjustment workflow?","Schedule the adjustment visits and lock-ins; sharing the adjustment work with optometrists absorbs chair-time."]],
+   chk:["Pages: The LDD Decision (Buy / Lease / Refer-Out) · ROI &amp; Volume Break-Even (tool opportunity) · Premium-Channel Economics &amp; Conversion · Workflow &amp; Staffing","Build the ROI / break-even tool (a real app/tool opportunity)","Frame the premium cash-pay channel as added practice revenue","No invented economics; figures route through finance / the claims chain"],
+   moves:"LDD capital adoption; own 'LDD cost / ROI / break-even' — uncontested", mock:"guide"}
+ ]},
+ {grp:"Find a Doctor &amp; About", items:[
+  {id:"locator",name:"Find a Doctor",tag:"exist",badge:"Provider locator",
+   For:"Where pull-through converts + an AI-visible “LAL near me” surface. Make it AI-ready + protect local rankings.",
+   insight:"Access is a real pain — patients can't find or reach an LAL provider (“Kaiser not equipped,” Canada not approved → medical tourism). An availability problem, not a product one — it argues hard for Find-a-Doctor prominence.",
+   h2s:["Where can I find a doctor who offers the Light Adjustable Lens?","How do I search for an LAL provider near me?","What should I ask a provider?"],
+   aq:"Where can I find a Light Adjustable Lens doctor near me?",
+   aa:"Find a doctor near you who offers the Light Adjustable Lens. Search by location to see providers in your area.",
+   schema:"Physician + LocalBusiness + ItemList",
+   faq:[["Which doctors offer the Light Adjustable Lens?","Use the locator to find providers near you who offer the LAL."],["How do I find an LAL surgeon near me?","Search by your city or ZIP in the locator above."],["What should I ask an LAL provider?","Ask about their LAL experience, the adjustment schedule, and cost."]],
+   chk:["Structured locator (map + list), searchable","Physician/LocalBusiness schema for “near me” answers","Clear conversion path from every hub"],
+   moves:"convert pull-through; own “LAL near me”",
+   mock:"locator"},
+  {id:"about",name:"About RxSight",tag:"new",badge:"The maker entity",
+   For:"The maker entity AI needs. Patients know the product, not the company (28/326). Organization + MedicalDevice schema fixes attribution.",
+   insight:"Patients know the product, not the maker — RxSight named in 28 of 326 threads; the former name “Calhoun” still floats; AI credits RxSight in only 39 of 80 audit answers. The entity is what fixes attribution.",
+   h2s:["What is RxSight?","Who makes the Light Adjustable Lens?","What are the Light Adjustable Lens and the Light Delivery Device?","Is the Light Adjustable Lens FDA-approved?"],
+   aq:"Who is RxSight, and what is the Light Adjustable Lens?",
+   aPend:1,
+   aa:"RxSight is the company behind the Light Adjustable Lens — an FDA-approved intraocular lens that can be adjusted after cataract surgery using the Light Delivery Device.",
+   schema:"Organization + MedicalDevice",
+   faq:[["Who makes the Light Adjustable Lens?","RxSight (Nasdaq: RXST) makes the Light Adjustable Lens and the Light Delivery Device used to adjust it."],["Is the Light Adjustable Lens FDA-approved?","Yes — it’s an FDA-approved intraocular lens.",1],["What is the Light Delivery Device?","The in-office device your doctor uses to deliver the light treatments that adjust the lens."]],
+   chk:["Clear maker entity (RxSight, LAL/LDD, FDA status)","Organization + MedicalDevice schema for attribution","Authoritative, citable facts (claims-checked)"],
+   moves:"fix the maker-attribution gap so AI credits RxSight",
+   mock:"guide"}
+ ]}
+];
+function tagMap(t){return {new:["add","ADD"],add:["add","ADD"],exist:["aiopt","AI OPTIMIZED"],update:["aiopt","AI OPTIMIZED"],rec:["rec","RECOMMEND"],recommend:["rec","RECOMMEND"],fnd:["fnd","FOUNDATION"],fw:["fw","FRAMEWORK"]}[t]||["add","ADD"];}
+function tagEl(t){const m=tagMap(t);return `<span class="tag ${m[0]}">${m[1]}</span>`}
+function tagTxt(t){return tagMap(t)[1];}
+/* mockups by type */
+function mock(it){
+  const kind=it.mock;
+  const faqQs=(it.faq||[]).map(f=>Array.isArray(f)?f[0]:f);
+  const acc=faqQs.length?`<div class="mk-acc">${faqQs.map(q=>`<div>${q} ▾</div>`).join("")}</div>`:"";
+  const aQ=it.aq||(it.h2s&&it.h2s[0])||"";
+  const aA=it.aa||it.answer||"";
+  const ansBlock=`<div class="mk-ans rec mk-rec"><b>Answer block <span class="pin">1</span></b>${aQ?`<div style="font-weight:700;margin:3px 0 4px">${aQ}</div>`:""}${aA}</div>`;
+  const h2body=(it.h2s||[]).map(h=>`<div class="mk-sec"><div class="mk-sh">${h}</div><div class="mk-line"></div><div class="mk-line" style="width:92%"></div><div class="mk-line" style="width:78%"></div></div>`).join("");
+  const nav=`<div class="mk-nav"><span class="lg">RxSight</span><span>Choosing Your Lens</span><span>How the LAL Works</span><span>Patient Resources</span><span class="sp"></span><span class="cta">Find a Doctor</span></div>`;
+  if(kind==="hub")return nav+`<div class="mk-crumb">Home / Choosing Your Lens</div><div class="mk-body"><div class="mk-h1">Choosing Your Lens</div>${ansBlock}<div class="mk-h">Body — the H2 sections <span class="pin">2</span></div>${h2body}<div class="mk-h">FAQ block <span class="pin">3</span></div>${acc}</div>`;
+  if(kind==="shelf")return nav+`<div class="mk-crumb">Home / Choosing Your Lens / Cataract Lens Options</div><div class="mk-body"><div class="mk-h1">Cataract Lens Options</div>${ansBlock}<div class="mk-h">The shelf — a card per type <span class="pin">2</span></div><div class="mk-cards" style="grid-template-columns:repeat(5,1fr)"><div class="mk-fpo">Monofocal</div><div class="mk-fpo">Toric</div><div class="mk-fpo">Multifocal</div><div class="mk-fpo">EDOF</div><div class="mk-fpo" style="background:#f3efe3;border-color:var(--rust)">Light Adjustable</div></div><div class="fine" style="margin-top:7px"><span class="pin">3</span> “Adjustable” defined as a feature (DefinedTerm), LAL seated among the classes.</div></div>`;
+  if(kind==="comparison")return nav+`<div class="mk-crumb">Home / Choosing Your Lens / LAL vs Other Lenses</div><div class="mk-body"><div class="mk-h1">Light Adjustable Lens vs Other Lenses</div>${ansBlock}<div class="mk-h">Machine-readable table <span class="pin">2</span></div><table class="mk-tbl"><tr><th>Attribute</th><th>Light Adjustable</th><th>Fixed premium</th></tr><tr><td>Adjustable after surgery</td><td class="yes">Yes</td><td class="no">No</td></tr><tr><td>Corrects a refractive miss without exchange</td><td class="yes">Yes</td><td class="no">No</td></tr><tr><td>Night-vision tradeoffs</td><td>Lower</td><td>Varies</td></tr></table></div>`;
+  if(kind==="symptom")return nav+`<div class="mk-crumb">Home / Patient Resources / ${it.cat||"Life After Surgery"} / ${it.name}</div><div class="mk-body"><div class="mk-h1">${it.name}</div>${ansBlock}<div class="mk-h">Body — the H2 sections <span class="pin">2</span></div>${h2body}<div class="mk-h">Cross-link block — route the reader onward</div><div class="mk-fpo" style="text-align:left">In-body + end CTA, descriptive anchors → “<u>how the Light Adjustable Lens works</u>” · “<u>find a doctor who offers the LAL near you</u>”</div><div class="mk-h">FAQ block <span class="pin">3</span></div>${acc}</div>`;
+  if(kind==="locator")return nav+`<div class="mk-crumb">Home / Find a Doctor</div><div class="mk-body"><div class="mk-h1">Find a Doctor</div>${ansBlock}<div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo" style="min-height:120px">🗺 Map</div><div><div class="mk-fpo" style="min-height:34px;margin-bottom:7px">Provider · city <span class="pin">2</span></div><div class="mk-fpo" style="min-height:34px;margin-bottom:7px">Provider · city</div><div class="mk-fpo" style="min-height:34px">Provider · city</div></div></div><div class="fine" style="margin-top:7px"><span class="pin">2</span> Each provider = Physician/LocalBusiness schema → engines answer “LAL near me.”</div></div>`;
+  if(kind==="guide")return nav+`<div class="mk-crumb">Home / ${it.name}</div><div class="mk-body"><div class="mk-h1">${it.name}</div>${ansBlock}<div class="mk-h">Body — the H2 sections <span class="pin">2</span></div>${h2body}<div class="mk-h">FAQ block <span class="pin">3</span></div>${acc}</div>`;
+  if(kind==="stories")return nav+`<div class="mk-crumb">Home / Patient Stories</div><div class="mk-body"><div class="mk-h1">Patient Stories</div><div class="mk-cards" style="grid-template-columns:1fr 1fr"><div class="mk-fpo" style="min-height:70px">“Story” · Review/Person schema <span class="pin">1</span></div><div class="mk-fpo" style="min-height:70px">“Story”</div></div></div>`;
+  return `<div class="fine" style="padding:14px">Directional layout — mockup pending design comps.</div>`;
+}
+function answerHtml(it){
+  if(it.aq){const p=it.aPend;return `<div class="r"><b>① Opening answer block:</b> <span class="fine" style="font-weight:400">the ~100-word answer to the page’s main question (what AI cites). Write this first.</span></div><div class="qa lead${p?' pend':''}"><div class="q">Q: ${it.aq}</div><div class="a">${p?`<span class="pendlab">needs claims wording</span>`:"A: "}${it.aa||""}</div></div>`;}
+  return it.answer?`<div class="r"><b>① Opening answer block:</b> ${it.answer}</div>`:"";
+}
+function h2Html(it){return it.h2s?`<div class="r"><b>② Body — the H2 sections:</b> <span class="fine" style="font-weight:400">the page copy under the answer block — each H2 is a question, answered in plain language beneath it.</span></div><ul class="h2list">${it.h2s.map(h=>`<li>${h}</li>`).join("")}</ul>`:"";}
+function faqHtml(it){
+  if(!it.faq||!it.faq.length) return "";
+  if(Array.isArray(it.faq[0])){
+    const hasPend=it.aPend||it.faq.some(f=>f[2]);
+    const amber=hasPend?` <span style="color:#9a6212;font-weight:600">Amber = the answer needs claims-approved wording.</span>`:"";
+    return `<div class="r"><b>③ FAQ block at the end</b> <span class="fine" style="font-weight:400">— additional quick Q&amp;As (FAQPage schema), not repeats of the H2s.${amber}</span></div>`+it.faq.map(qa=>{const p=qa[2];return `<div class="qa${p?' pend':''}"><div class="q">Q: ${qa[0]}</div><div class="a">${p?`<span class="pendlab">needs claims wording</span>`:"A: "}${qa[1]}</div></div>`;}).join("");
+  }
+  return `<div class="r"><b>③ FAQ — questions to answer:</b></div><ul class="faqlist">${it.faq.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+}
+function renderTnav(){
+  let h="";
+  TPLS.forEach(g=>{h+=`<div class="grp">${g.grp}</div>`;g.items.forEach(it=>{h+=`<a id="tn-${it.id}" onclick="selectTpl('${it.id}',this)">${it.name} <em>${tagTxt(it.tag)}</em></a>`;});});
+  document.getElementById("tnav").innerHTML=h;
+  let m="";
+  TPLS.forEach(g=>g.items.forEach(it=>{
+    if(it.callout){m+=`<div class="tpl" id="tpl-${it.id}"><div class="acard tmpl"><div class="th">${it.name} ${tagEl(it.tag)} <span class="fine" style="font-weight:600">${it.badge}</span></div>
+        <div class="r">The blog isn’t listed page-by-page here — it’s already <b>8 articles live</b> plus a growing pipeline, managed in its own tab.</div>
+        <button class="dlbtn" onclick="showTab(5)">📝 Open the Blog tab →</button>
+        <div class="r" style="margin-top:12px"><b>Every blog article follows the same structure:</b></div>
+        <ul class="chk"><li>① Opening answer block — the ~100-word answer AI cites</li><li>② Body — H2 sections (each a question, answered in plain language)</li><li>③ FAQ block (FAQPage schema)</li><li>+ Cross-link block → How the LAL Works + Find a Doctor</li></ul></div></div>`;return;}
+    const chk=it.chk.map(x=>`<li>${x}</li>`).join("");
+    m+=`<div class="tpl" id="tpl-${it.id}">
+      <div class="acard tmpl"><div class="th">${it.name} ${tagEl(it.tag)} <span class="fine" style="font-weight:600">${it.badge}</span></div>
+        <div class="r"><b>For:</b> ${it.For}</div>
+        ${it.insight?`<div class="insight"><span class="iolab">Audience insight</span>${it.insight}</div>`:""}
+        ${answerHtml(it)}
+        ${h2Html(it)}
+        ${faqHtml(it)}
+        <div class="r"><b>Schema:</b> ${it.schema}</div>
+        <div class="r"><b>AI-ready checklist:</b></div><ul class="chk">${chk}</ul>
+        ${it.authority?`<div class="authority"><span class="iolab">Authority play · on-page voice</span>${it.authority}</div>`:""}
+        <div class="fine"><b>What this page should win:</b> ${it.moves}</div>
+      </div>
+      <div class="mock-cap">The page (layout)</div>
+      <div class="mk">${mock(it)}</div>
+    </div>`;
+  }));
+  document.getElementById("tmain").innerHTML=m;
+}
+function selectTpl(id,el){
+  document.querySelectorAll(".tpl").forEach(t=>t.classList.remove("show"));
+  const p=document.getElementById("tpl-"+id); if(p)p.classList.add("show");
+  document.querySelectorAll(".tside a").forEach(a=>a.classList.remove("on"));
+  (el||document.getElementById("tn-"+id)).classList.add("on");
+}
+
+const BLOGDATA=[
+ {cat:"Patient · Life After Cataract Surgery", rows:[
+   ["What to Expect After Cataract Surgery","Live","https://rxsight.com/blog/what-to-expect-after-cataract-surgery/","what to expect after cataract surgery (1,900/mo)","Set recovery expectations stage by stage; introduce LAL adjustability for any residual error."],
+   ["Why Is My Vision Blurry After Cataract Surgery?","Planned · Jul","","blurry vision after cataract surgery (1,000/mo)","Reassure (healing vs refractive miss / dry eye / PCO); route to LAL fine-tuning. Already delivered to write."],
+   ["Visual Phenomena (Halos, Glare, Starbursts)","Planned · Sept","","halos after cataract surgery (600/mo)","Reassure visual phenomena often ease; honest on lens-type tradeoffs; route to LAL. Split out of the July blurry blog. Un-owned problem-aware demand.",true],
+   ["Will I Still Need Glasses After Surgery?","Planned · Oct","","glasses after cataract surgery (1,000/mo)","Tie glasses-dependence to lens choice; the LAL dials in the result. High-demand decision query.",true]
+ ]},
+ {cat:"Patient · Understanding Cataracts & Your Eyes", rows:[
+   ["Cataracts 101","Live","https://rxsight.com/blog/understanding-cataract-surgery/","what is a cataract","Define cataracts + symptoms; set up the lens decision."],
+   ["Dry Eye & Cataract Surgery","Live","https://rxsight.com/blog/cataract-surgery-dry-eye/","dry eye cataract surgery","Dry eye blurs vision and skews measurements; manage it; LAL helps when measurements are tricky."],
+   ["Astigmatism After Cataract Surgery","Live","https://rxsight.com/blog/astigmatism-after-cataract-surgery/","astigmatism after cataract surgery (170/mo)","Yes, surgery can correct astigmatism — toric vs LAL after-surgery fine-tuning."],
+   ["Do I Have Cataracts?","Backlog","","signs of cataracts","Early-sign checklist then route to an exam (strong Find-a-Doctor CTA)."]
+ ]},
+ {cat:"Patient · Choosing & Comparing Lenses", rows:[
+   ["Cataract Lens Options & Costs: How to Choose","Planned · Aug","","cataract lens options (1,000/mo)","The category + cost decision; seat the LAL among the options. rxsight.com does NOT rank for this today — biggest AI-audit category gap.",true],
+   ["LAL vs Monofocal / Multifocal / EDOF","Live","https://rxsight.com/blog/fixed-and-adjustable-lens-designs/","light adjustable lens vs panoptix","Adjustable-vs-fixed comparison; honest tradeoffs. (Live as fixed-and-adjustable-lens-designs.)"],
+   ["Monovision Explained","Backlog","","mini monovision cataract","Explain monovision; trial before commit; LAL as adjustable monovision."],
+   ["Questions to Ask Your Surgeon","Backlog","","questions to ask cataract surgeon","Arm the patient with the right questions (counters upsell distrust)."]
+ ]},
+ {cat:"Patient · The LAL Journey", rows:[
+   ["How the Light Adjustable Lens Is Adjusted","Live","https://rxsight.com/blog/how-light-adjustable-lens-works/","light adjustable lens procedure","Mechanism + light treatments + lock-in."],
+   ["Test Drive Your Vision","Live","https://rxsight.com/blog/test-drive-your-vision/","test drive your vision","The 'try before you commit' value prop."],
+   ["UV Glasses & ActivShield","Live","https://rxsight.com/blog/uv-protective-glasses-faqs/","light adjustable lens uv glasses (590/mo)","Answer the UV-glasses objection; introduce ActivShield."],
+   ["What to Expect: Your LAL Timeline","Backlog","","fine-tuning vision after cataract surgery","What to expect across the adjustment journey."]
+ ]},
+ {cat:"Patient · Cost, Insurance & Value", rows:[
+   ["Is the Light Adjustable Lens Worth It?","Planned · Nov","","is the light adjustable lens worth it","Rebuts the AI miscategorization (“a monofocal you pay to adjust”) with de-risking value + real patient voices.",true],
+   ["Light Adjustable Lens Cost & Insurance","Planned · Nov","","light adjustable lens cost","What's covered, what's out-of-pocket, and why (the adjustability value). Cost is a top decision query.",true]
+ ]},
+ {cat:"Professional · Eye Care Professionals (pipeline — backlog)", rows:[
+   ["Clinical & Case-Based — post-LASIK/RK · LAL vs IC-8 · refractive surprise","Backlog","","surgeon","The clinical adoption wedge: complex / post-refractive eyes where biometry fails."],
+   ["Practice Adoption & Workflow — chair-time · ActivShield/UV window","Backlog","","surgeon","Meet the workflow friction; reframe visits as fine-tuning."],
+   ["The OD's LAL Role — clinical role · becoming a certified Light Adjuster","Backlog","","optometrist","The OD owns the adjustment; how to become a Light Adjuster (clinical, not billing)."],
+   ["OD Patient Care — selection · ocular surface · expectation-setting","Backlog","","optometrist","Clinical OD education. (Note: reimbursement is real demand but off-limits for the manufacturer — anti-kickback.)"],
+   ["Practice Economics — LDD buy/lease/refer · ROI · sticker shock","Backlog","","admin · white space","The LDD capital decision + break-even — the biggest unanswered B2B question."]
+ ]}
+];
+function blogBadge(s){const k=s.indexOf("Live")===0?"st-ex":s.indexOf("Planned")===0?"st-up":"st-new";return `<span class="stb ${k}">${s}</span>`;}
+const BLOGTPL={mock:"symptom",cat:"Choosing & Comparing Lenses",name:"Cataract Lens Options & Costs",
+ aq:"What are my cataract lens options, and what do they cost?",
+ aa:"Cataract lenses fall into a few types — monofocal, toric, multifocal, EDOF, and the Light Adjustable Lens (LAL). Standard surgery with a basic monofocal is typically covered; premium options carry an out-of-pocket cost. The LAL is the one you can fine-tune after surgery, so you're paying to dial in your result rather than commit to a fixed outcome on the day of surgery.",
+ h2s:["What are my cataract lens options?","Monofocal vs toric vs multifocal vs EDOF vs Light Adjustable — what's the difference?","How much do cataract lenses cost?","What does insurance / Medicare cover?","How do I choose the right lens for me?"],
+ faq:[["Are premium lenses covered by insurance?","Standard surgery and a basic lens are usually covered; premium options like the LAL cost extra out of pocket. Ask your provider for specifics."],["Why does the Light Adjustable Lens cost more?","You're paying to fine-tune your vision after surgery and lock it in, instead of being stuck with a fixed result."],["Is there a single best cataract lens?","No — it depends on your eyes and how you use them; the LAL adds the ability to adjust after surgery."],["Can I change my lens later?","Fixed lenses require an exchange; the LAL is adjusted with light after surgery, no exchange."]]};
+let blogFS="all";
+function blogStatus(b,s){blogFS=s;document.querySelectorAll("#blogfilter .fb").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderBlog();}
+function renderBlog(){
+  document.getElementById("blogtpl").innerHTML=`<div class="ugrid" style="align-items:start">
+    <div class="acard tmpl"><div class="th">Blog Article ${tagEl("new")} <span class="fine" style="font-weight:600">worked example — “Cataract Lens Options &amp; Costs” (the Aug post, next to publish)</span></div>
+      <div class="r"><b>For:</b> a problem-aware or up-funnel question patients actually search — answer it, then route to the LAL hub + Find a Doctor. Every blog post is built this way.</div>
+      <div class="insight"><span class="iolab">Audience insight</span>Lens-options + cost is the category decision where rxsight.com doesn't rank today and AI miscategorizes the LAL (“a monofocal you pay to adjust”) — the highest-impact blog to own.</div>
+      ${answerHtml(BLOGTPL)}${h2Html(BLOGTPL)}${faqHtml(BLOGTPL)}
+      <div class="r"><b>Schema:</b> Article + FAQPage (+ MedicalWebPage on clinical topics) · author / medical-reviewer Person</div>
+      <div class="r"><b>Cross-link block:</b> in-body + end CTA → “how the Light Adjustable Lens works” · “find a doctor near you” (descriptive anchors)</div>
+      <div class="authority"><span class="iolab">Authority play · on-page voice</span>On-page authority: a named medical reviewer (MD/OD, Person schema — “medically reviewed by”) and, where it fits, a quoted clinician — the E-E-A-T signal AI rewards on health content.</div>
+    </div>
+    <div><div class="mock-cap">The page (layout)</div><div class="mk">${mock(BLOGTPL)}</div></div>
+  </div>`;
+  if(!document.getElementById("catsel")){
+    document.getElementById("blogfilter").innerHTML=`<span class="ff">Status:</span>`+
+      [["all","All"],["launch","★ Launch"],["live","Live"],["planned","Planned"],["backlog","Backlog"]].map(a=>`<button class="fb${a[0]==="all"?" active":""}" onclick="blogStatus(this,'${a[0]}')">${a[1]}</button>`).join("")+
+      `<span class="ff" style="margin-left:12px">Category:</span><select id="catsel" onchange="renderBlog()"><option value="all">All categories</option>`+BLOGDATA.map(g=>`<option value="${g.cat}">${g.cat}</option>`).join("")+`</select>`;
+  }
+  const fc=document.getElementById("catsel")?document.getElementById("catsel").value:"all";
+  let live=0,plan=0,back=0,laun=0;
+  BLOGDATA.forEach(g=>g.rows.forEach(r=>{const st=r[1];if(st.indexOf("Live")===0)live++;else if(st.indexOf("Planned")===0)plan++;else back++;if(r[5])laun++;}));
+  let h="";
+  BLOGDATA.forEach(g=>{
+    if(fc!=="all"&&g.cat!==fc)return;
+    const rows=g.rows.filter(r=>{const st=r[1];
+      if(blogFS==="all")return true; if(blogFS==="launch")return !!r[5];
+      if(blogFS==="live")return st.indexOf("Live")===0; if(blogFS==="planned")return st.indexOf("Planned")===0;
+      if(blogFS==="backlog")return st==="Backlog"; return true;});
+    if(!rows.length)return;
+    h+=`<details class="bcat" open><summary>${g.cat} · ${rows.length}</summary><div class="bcatbody">`;
+    rows.forEach(r=>{const st=r[1];const urlline=r[2]?` · <a href="${r[2]}" target="_blank">live page ↗</a>`:"";
+      const lc=r[5]?` <span class="stb" style="background:#f3e4c2;color:#6b4d14;border:1px solid #e0c98f">★ Launch</span>`:"";
+      h+=`<details class="bart"><summary><span class="bt">${r[0]}</span> ${blogBadge(st)}${lc}</summary><div class="bbrief"><b>Angle:</b> ${r[4]||"—"}<br><b>Target query:</b> ${r[3]}<br><b>Status:</b> ${st}${r[5]?" · ★ launch-priority":""}${urlline}<br><b>Structure:</b> follows the build template above · <b>Schema:</b> Article + FAQPage</div></details>`;});
+    h+=`</div></details>`;
+  });
+  if(!h)h=`<p class="fine" style="margin:8px 2px">No posts match this filter.</p>`;
+  document.getElementById("blogwrap").innerHTML=`<div class="fine" style="margin:0 0 8px"><b>${live} live · ${plan} planned · ${back} backlog</b> · <b style="color:#9a6212">${laun} ★ launch-priority</b></div>`+h;
+}
+function showTab(i){document.querySelectorAll(".tab").forEach((t,j)=>t.classList.toggle("active",j===i));document.querySelectorAll(".panel").forEach((p,j)=>p.classList.toggle("active",j===i));window.scrollTo({top:0,behavior:"smooth"});}
+renderTree(); renderTnav(); renderBlog(); selectTpl("hub-decide");
+</script>
+</body></html>
