@@ -77,16 +77,14 @@ Not technical? Send that line to whoever manages your site and ask them to run i
 
 ## Should you block AI crawlers? Publisher vs. brand
 
-The answer splits cleanly:
-
 - **If your content IS your product** — a publisher, a news site, a research shop — blocking or charging AI can make sense. Your words are the asset, and you're protecting it. This is who Cloudflare built the default for.
 - **If your content is marketing FOR your product** — basically every brand — being cited by AI is free distribution at the exact moment someone is deciding what to buy. You want the Search and Agent bots wide open. Blocking them is lighting your own visibility on fire.
 
-If you're a brand and you're nervous about AI using your content, the lever to reach for isn't the block — it's those new content signals. Set them to let AI *reference and cite* you. That's not the thing to fear. That's the goal.
+If you're a brand and you're nervous about AI using your content, the lever to reach for isn't the block — it's those new content signals. Set them to let AI *reference and cite* you — because getting cited is the entire point.
 
 ## Bottom line
 
-AI visibility isn't only a content game anymore — it's a tech-and-plumbing game too. The switches that decide whether AI can even see you now live in DNS records and CDN dashboards, and they're easy to flip without noticing. So if you've rebuilt, migrated, or spun up a new site on Cloudflare recently, run the two-minute check above before you assume the coast is clear. Getting the door open is step one; [what AI actually says about you once it's inside](/blog/what-your-ai-visibility-score-cant-tell-you) is the next question worth asking.
+So much of AI visibility now comes down to plumbing — the settings that decide whether AI can even see you live in DNS records and CDN dashboards, and they're easy to flip without noticing. So if you've rebuilt, migrated, or spun up a new site on Cloudflare recently, run the two-minute check above before you assume the coast is clear. Getting the door open is step one; [what AI actually says about you once it's inside](/blog/what-your-ai-visibility-score-cant-tell-you) is the next question worth asking.
 
 I'm Laura Seelinger, founder of LSX Partners. I help brands make sure AI can find, read, and cite them — starting with making sure the door's actually open. If you're not sure whether AI can see your site, [let's check it together](/contact). We should chat.
 
