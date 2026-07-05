@@ -15,7 +15,7 @@ faqs:
   - question: "What does a basic AI visibility audit look like in practice?"
     answer: "An AI visibility audit doesn't require expensive tooling to get started — the methodology matters far more than which platform you use to run it."
 ---
-Agencies are running out of runway on this one. Pretty soon you're going to get an email from a client — probably one of your good, long-standing ones — that says something like: "I asked ChatGPT about [the thing they sell] and it recommended our competitor, not us. Why?" Or they'll want to know why the rankings are holding steady but traffic keeps sliding with no obvious reason.
+Agencies are running out of runway on AI visibility — whether your clients even show up when their customers ask ChatGPT, Perplexity, or Google for a recommendation. And here's how you'll find out you're behind: pretty soon a client, probably one of your good, long-standing ones, emails you — "I asked ChatGPT about [the thing they sell] and it recommended our competitor, not us. Why?" Or they want to know why the rankings are holding steady but traffic keeps sliding with no obvious reason.
 
 That conversation is coming whether you're ready for it or not, and the agencies that are ready keep the client — and usually grow the account. So let's get you ready: what AI visibility actually is, how to audit it, how to sell it, and how to fold it into the reporting you already send.
 
