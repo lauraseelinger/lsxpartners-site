@@ -4,7 +4,7 @@ description: "Cloudflare's Content Independence Day update makes blocking AI cra
 pubDate: 2026-07-05
 register: punchy-personal
 tags: ["ai-visibility", "marketing-pov"]
-# heroImage: "/images/blog/cloudflare-blocking-ai-crawlers.jpg"  # uncomment once you add the image to public/images/blog/
+heroImage: "/images/blog/cloudflare-blocking-ai-crawlers.jpg"
 faqs:
   - question: "What is Cloudflare's Content Independence Day update?"
     answer: "Cloudflare now sorts AI bots into three types — Search, Agent, and Training — and starting September 15, 2026, new domains block Training and Agent by default on ad-supported pages while allowing Search. Every site owner gets a switch for each type."
