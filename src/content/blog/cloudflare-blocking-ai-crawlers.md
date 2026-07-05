@@ -84,7 +84,7 @@ If you're a brand and you're nervous about AI using your content, the lever to r
 
 ## Bottom line
 
-So much of AI visibility now comes down to plumbing — the settings that decide whether AI can even see you live in DNS records and CDN dashboards, and they're easy to flip without noticing. So if you've rebuilt, migrated, or spun up a new site on Cloudflare recently, run the two-minute check above before you assume the coast is clear. Getting the door open is step one; [what AI actually says about you once it's inside](/blog/what-your-ai-visibility-score-cant-tell-you) is the next question worth asking.
+So much of AI visibility now comes down to plumbing — the settings that decide whether AI can even see you live in DNS records and CDN dashboards, and they're easy to flip without noticing. So if you've rebuilt, migrated, or spun up a new site on Cloudflare recently, run the two-minute check above before you assume the coast is clear. Then go find out [what AI actually says about you](/blog/what-your-ai-visibility-score-cant-tell-you) once it's actually inside.
 
 I'm Laura Seelinger, founder of LSX Partners. I help brands make sure AI can find, read, and cite them — starting with making sure the door's actually open. If you're not sure whether AI can see your site, [let's check it together](/contact). We should chat.
 
