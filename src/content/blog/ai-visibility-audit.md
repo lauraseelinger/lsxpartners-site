@@ -34,7 +34,7 @@ The results tend to surprise agency owners more than anyone. Clients with strong
 
 AI search isn’t coming. It’s here. The average ChatGPT prompt is 23 words — not the 4-word search query Google trained everyone to optimize for. Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves.
 
-Server logs are already showing AI bots crawling client sites across industries. Those bots aren’t browsing — they’re researching, indexing and deciding what to cite. Most brands have no idea this is happening, and most of their agencies don’t either.
+Server logs are already showing AI bots crawling client sites across industries — assuming they can get in, which [more sites are blocking than you'd expect](/blog/cloudflare-blocking-ai-crawlers). Those bots aren’t browsing — they’re researching, indexing and deciding what to cite. Most brands have no idea this is happening, and most of their agencies don’t either.
 
 The agencies that get ahead of this are the ones that bring AI visibility into the conversation before a client notices the gap. The ones that wait are going to be in a reactive conversation explaining why a competitor is showing up in ChatGPT answers and their client isn’t — and that’s a much harder conversation to have from behind.
 

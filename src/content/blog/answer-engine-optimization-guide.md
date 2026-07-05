@@ -70,7 +70,7 @@ What this means practically: you can’t optimize for “AI” as a single thing
 
 ## Answer engine optimization vs traditional SEO: what’s actually different
 
-Traditional SEO optimizes content to rank in a list of search results. Answer engine optimization structures content to be extracted and cited in AI-generated answers. Both matter. SEO gets your page indexed and ranked so AI can find it, and AEO gets specific passages extracted and cited so AI actually uses it.
+Traditional SEO optimizes content to rank in a list of search results. Answer engine optimization structures content to be extracted and cited in AI-generated answers. Both matter. SEO gets your page indexed and ranked so AI can find it, and AEO gets specific passages extracted and cited so AI actually uses it. And none of that counts if your site is [blocking the AI crawlers outright](/blog/cloudflare-blocking-ai-crawlers) — check that first.
 
 But the mechanics are different in ways that affect how you create and structure content.
 
