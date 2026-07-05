@@ -42,7 +42,7 @@ And it's easy to get wrong in a way that hurts twice. Googlebot does *two* jobs 
 
 ## Whoops — I did this to my own site
 
-Quick confession — and it doubles as the warning. Over the past year, this work has pulled me way deeper into the technical, plumbing side of marketing than I ever expected to go: DNS records, robots.txt, CDN dashboards, edge rules. I'm a strategist at heart, but AI visibility *lives* in that plumbing now, so that's where I've been living too. And the plumbing is exactly where this kind of thing hides.
+Quick confession — and it doubles as the warning. Over the past year, this work has pulled me way deeper into the technical, plumbing side of marketing than I ever expected to go: DNS records, robots.txt, CDN dashboards, edge rules. I'm a strategist, but AI visibility *lives* in that plumbing now, so I guess I'm grabbing my toolbelt and getting under the sink.
 
 So: last weekend I had a surge of creativity, rebuilt lsxpartners.com from scratch, and moved it over to Cloudflare. Felt great about it. Then, reading this very announcement a few days later — right after an email thread with Jim Wrubel, founder of the AI-crawler tracking platform [Spyglasses](https://www.spyglasses.io/en) — I realized the AI visibility expert had left AI crawlers blocked on her own website. FACE PALM.
 
