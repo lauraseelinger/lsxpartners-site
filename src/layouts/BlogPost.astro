@@ -18,8 +18,9 @@ interface Props {
   faqs?: FaqItem[];
   related?: { id: string; title: string; heroImage?: string }[];
   sectioned?: boolean;
+  hideHero?: boolean;
 }
-const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
 const article = articleSchema({
@@ -50,7 +51,7 @@ const fmt = (d: Date) =>
       </div>
     </header>
 
-    {heroImage && (
+    {heroImage && !hideHero && (
       <div class="container">
         <img class="post__hero" src={heroImage} alt="" />
       </div>
