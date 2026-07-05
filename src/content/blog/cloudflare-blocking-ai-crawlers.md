@@ -3,6 +3,7 @@ title: "Cloudflare is blocking AI crawlers by default — how to check your site
 description: "Cloudflare's Content Independence Day update makes blocking AI crawlers nearly one click, and new sites inherit it. Here's how to check yours in two minutes."
 pubDate: 2026-07-05
 register: punchy-personal
+hideHero: true
 tags: ["ai-visibility", "marketing-pov"]
 heroImage: "/images/blog/cloudflare-blocking-ai-crawlers.jpg"
 faqs:
