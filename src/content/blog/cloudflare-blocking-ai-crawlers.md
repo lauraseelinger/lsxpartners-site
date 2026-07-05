@@ -3,7 +3,7 @@ title: "Cloudflare is blocking AI crawlers by default — how to check your site
 description: "Cloudflare's Content Independence Day update makes blocking AI crawlers nearly one click, and new sites inherit it. Here's how to check yours in two minutes."
 pubDate: 2026-07-05
 register: punchy-personal
-tags: ["marketing-pov", "ai-visibility"]
+tags: ["ai-visibility", "marketing-pov"]
 # heroImage: "/images/blog/cloudflare-blocking-ai-crawlers.jpg"  # uncomment once you add the image to public/images/blog/
 faqs:
   - question: "What is Cloudflare's Content Independence Day update?"
@@ -18,7 +18,7 @@ faqs:
 
 Cloudflare just made it easier than ever to block AI crawlers from your website — so easy that I accidentally did it to my own site (more on that below).
 
-As of their "Content Independence Day" announcement, Cloudflare gives every site owner one-click control over which AI bots can reach their content, and for new sites, some of that blocking is on by default. That's great news if you're a publisher trying to stop AI from scraping you for free. It's potentially terrible news if you're a brand that *wants* AI to find, read, and cite you — and you don't realize a switch got flipped.
+As of their "Content Independence Day" announcement, Cloudflare gives every site owner one-click control over which AI bots can reach their content, and for new sites, some of that blocking is on by default. That helps a publisher trying to keep AI from scraping their content for free — but for a brand that *wants* AI to find, read, and cite it, it can tank your visibility before you even notice the switch got flipped.
 
 **TLDR:** Cloudflare now sorts AI bots into three types — Search, Agent, and Training — and lets you block each one, with some blocking defaulting to "on" for new sites. If you're a brand, blocking the AI Search crawlers means you disappear from ChatGPT, Perplexity, and Claude answers, even while you still rank fine on Google. Your robots.txt won't warn you, because the block happens at the CDN. Here's how to check your site in two minutes, and how to decide whether you should block AI at all.
 
