@@ -18,8 +18,9 @@ interface Props {
   faqs?: FaqItem[];
   related?: { id: string; title: string; heroImage?: string }[];
   sectioned?: boolean;
+  hideHero?: boolean;
 }
-const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
 const article = articleSchema({
@@ -34,11 +35,11 @@ const article = articleSchema({
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
-<BaseLayout title={title} description={description} type="article" schemas={[article]}>
+<BaseLayout title={title} description={description} image={heroImage} type="article" schemas={[article]}>
   <article class="post">
     <header class="post__head tex-cream">
       <div class="container measure">
-        <p class="subhead"><a href="/blog">the cited blog</a></p>
+        <p class="subhead"><a href="/blog">the LSX blog</a></p>
         <h1>{title}</h1>
         <p class="post__meta">
           By <a href="/about" rel="author">{PERSON.name}</a>
@@ -50,7 +51,7 @@ const fmt = (d: Date) =>
       </div>
     </header>
 
-    {heroImage && (
+    {heroImage && !hideHero && (
       <div class="container">
         <img class="post__hero" src={heroImage} alt="" />
       </div>
