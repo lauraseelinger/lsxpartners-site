@@ -15,111 +15,108 @@ faqs:
   - question: "What does a basic AI visibility audit look like in practice?"
     answer: "An AI visibility audit doesn't require expensive tooling to get started — the methodology matters far more than which platform you use to run it."
 ---
+Agencies are running out of runway on AI visibility — whether your clients even show up when their customers ask ChatGPT, Perplexity, or Google for a recommendation. And here's how you'll find out you're behind: pretty soon a client, probably one of your good, long-standing ones, emails you — "I asked ChatGPT about [the thing they sell] and it recommended our competitor, not us. Why?" Or they want to know why the rankings are holding steady but traffic keeps sliding with no obvious reason.
 
-Agencies are on borrowed time when it comes to leaving AI visibility out of their client strategies. Any day now, they will start to receive emails from clients — even the long-time reliable ones — asking "when I ask ChatGPT [insert question related to the product or service they sell], they mention our competitor but not us. Why?" Or they'll have to explain why keyword rankings are holding steady but site traffic keeps declining with no obvious cause.
+That conversation is coming whether you're ready for it or not, and the agencies that are ready keep the client — and usually grow the account. So let's get you ready: what AI visibility actually is, how to audit it, how to sell it, and how to fold it into the reporting you already send.
 
-That conversation is coming regardless of whether agencies are ready for it, and the ones that are ready will keep the client, probably expand the engagement and position themselves ahead of a shift that most of their competition hasn't caught up to yet. The agencies that aren't ready will spend that meeting scrambling to explain something they don't fully understand, and that's a hard position to recover from in a retainer relationship.
-
-AI visibility as an agency service is not a new product line that requires a new team, a new tech stack or a complete overhaul of how you work — it's a layer you add to what you're already doing, one that addresses a real gap in how agencies currently measure and report on client performance and one that your clients are going to start asking about whether you offer it or not.
-
-This post covers what AI visibility actually means as a service, how to figure out which clients need it first, what an AI visibility audit looks like in practice and how to position it in client conversations and new business pitches without overcomplicating it.
+And the good news — this isn't a new product line that needs a new team or a new tech stack. It's a layer you add to what you already do, one your clients are going to start asking about whether you offer it or not.
 
 ## Why AI visibility gaps are already showing up in your client data
 
-The standard agency reporting stack was built for a version of search that's changing fast. Organic rankings, click-through rates, keyword positions — those metrics still matter, but they don't tell the whole story anymore and the gap between what they measure and what's actually happening to client visibility is getting wider.
+Your reporting stack was built for a version of search that's changing fast. Organic rankings, click-through rates, keyword positions — all still useful, but they don't tell the whole story anymore, and the gap between what they measure and what's actually happening to your clients keeps getting wider.
 
-A client can hold the number one organic ranking for their top keyword and still see traffic from that keyword drop significantly, because AI started answering the question before anyone needed to click through. That's not a hypothetical. It's showing up in real client data right now. If you are delivering metrics reports, I know you're seeing this.
+Here's the version you've probably already seen: a client holds the number one organic ranking for their top keyword, and the traffic from that keyword still drops. Not because the ranking slipped — because AI started answering the question before anyone needed to click. If you send monthly reports, I know you're seeing this.
 
-The more important shift for agency owners is this: the questions your clients' customers are asking have changed. The average Google search is 4.2 words, but the average ChatGPT prompt is 23 words, because people are typing in a problem they're navigating, not a keyword phrase. Someone typing a 23-word problem into an AI tool is not doing the same thing as someone typing a keyword into Google — they're describing a situation, asking for a recommendation and expecting a synthesized answer, not a list of links to sort through. And that AI is going to name names in its answer — specific brands, specific products, specific providers. The ones it names got cited because they have content that clearly states questions, answers and is optimized for AI crawlers, while others are invisible to the customer for the entire interaction.
+But the bigger shift is what your clients' customers are even asking. The average Google search is 4.2 words. The average ChatGPT prompt is 23. People aren't typing keywords anymore — they're describing a whole situation and expecting one synthesized answer back, not a page of links to dig through. And that answer names names: specific brands, specific products, specific providers — and if your client isn't one of them, they were invisible for the entire conversation.
 
-Your clients are in one of two positions right now: they're being cited in AI answers, or they're not — and the agencies that can tell the difference and do something about it are the ones that will win the next round of retention conversations and new business pitches.
+So your clients are in one of two spots right now: getting cited in AI answers, or not. And the agencies that can tell which, and actually do something about it, are the ones winning the next round of renewals and pitches.
 
 ## What AI visibility as an agency service actually means
 
-Before you can sell this or deliver it, you need a clean definition of what it is. AI visibility is how consistently and favorably a brand appears in AI-generated answers across platforms like ChatGPT, Perplexity and Google AI when users ask questions in that brand's category.
+Before you sell it or deliver it, you need a clean definition. AI visibility is how consistently and favorably a brand shows up in AI-generated answers — ChatGPT, Perplexity, Google AI — when people ask questions in that brand's category.
 
-Unlike SEO, which is about earning a position in a ranked list of results, AI visibility is about being the source an AI chooses to cite when it generates a single synthesized answer — and there's no page two, no list, no second chance if you don't make it into that answer. The AI surfaces a handful of options and moves on, and whether your client is in that handful depends on signals that are meaningfully different from what's been driving organic rankings.
+It's a different game than SEO. Where SEO is about earning a spot in a ranked list, AI visibility is about being the one source the AI picks when it writes a single synthesized answer — no page two, no list, no second chance. It surfaces a handful of options and moves on, and whether your client is in that handful comes down to signals that are pretty different from what's been driving their rankings. (And step zero, before any of it: the AI has to be able to read the client's site at all — [more sites are blocking the crawlers than you'd think](/blog/cloudflare-blocking-ai-crawlers).)
 
-As an agency service, AI visibility breaks into three components:
+As a service, it breaks into three pieces.
 
 ### The AI visibility audit
 
-An AI visibility audit is the diagnostic. You test how AI systems currently describe your client's brand, products or services by running a set of high-intent prompts across multiple platforms and documenting what comes back. Is the client mentioned? How are they described? Are those descriptions accurate? How do they compare to competitors? What sources are the AI platforms citing when they do or don't mention your client?
+The audit is the diagnostic. You test how AI systems describe your client right now — running a set of high-intent prompts across a few platforms and writing down what comes back. Is the client mentioned? Where in the answer? Is the description accurate? How do they stack up against competitors? And what sources is the AI citing when it does (or doesn't) name them?
 
-That last question matters more than most agencies realize, because being cited isn't the finish line — it's the starting point for a more important question, which is whether your client actually controls the narrative. An audit of a med tech client uncovered that they were showing up in AI answers, but the source being cited was a random practice website that happens to mention their product. That's better than nothing, but the client doesn't own that content, can't update it and has no control over what that practice says next month or whether they switch vendors and scrub the reference entirely. The audit surfaces exactly this kind of vulnerability alongside the more obvious gaps.
+That last one matters more than most agencies realize, because getting cited isn't the finish line — it's the start of a bigger question: does your client actually control the narrative? I ran an audit for a med-tech client who was showing up in AI answers, which sounds like a win — until you saw the source being cited was a random practice's website that happened to mention their product. Better than nothing, sure. But the client doesn't own that page, can't update it, and has zero say over what that practice writes next month or whether they drop the product entirely. The audit surfaces exactly that kind of soft spot, right alongside the obvious gaps.
 
-This is the starting point for every engagement because you can't optimize what you haven't measured. It also tends to be the conversation-starter with clients because seeing their own brand get skipped by ChatGPT in favor of a competitor — or realizing their visibility depends entirely on a third party they've never spoken to — is more motivating than any deck you could put together.
+This is where every engagement starts, because you can't optimize what you haven't measured. It's also the best conversation-starter you'll find — watching their own brand get skipped by ChatGPT in favor of a competitor lands harder than any deck you could build.
 
 ### Ongoing AI visibility monitoring
 
-AI answers aren't static — platforms update their training data, new content gets crawled and citation patterns shift, which means ongoing monitoring is how you track your client's AI share of voice over time: what percentage of relevant AI-generated answers mention their brand, how that changes month over month and what's driving those changes.
+AI answers aren't static. Platforms update their training data, new content gets crawled, citation patterns shift — so monitoring is how you track your client's AI share of voice over time: what percent of the relevant answers name them, how that moves month to month, and what's driving it.
 
-Part of what makes monitoring meaningful is understanding that not all AI platforms behave the same way. Some, like ChatGPT, are primarily training-based, which means they draw on data that may be months old and updates propagate slowly. Others, like Perplexity, operate more like real-time search engines and can surface new content within days of it being published. Google AI Overviews sit somewhere in between, layering live search signals on top of existing authority. Knowing which platforms your client is visible on — and which ones update fast enough to respond to optimization work quickly — shapes how you prioritize and report.
+And here's what makes monitoring actually useful: the platforms don't all behave the same. ChatGPT is mostly training-based, so it leans on data that can be months old and updates slowly. Perplexity runs more like a live search engine and can pick up new content within days. Google AI Overviews sit in between, layering live search on top of existing authority. Knowing which platforms your client shows up on — and which ones update fast enough to actually reward the work — is what shapes how you prioritize and report.
 
-For a useful framework on how different AI tools are positioned across the retrieval and reasoning spectrum, [this AI SEO tool quadrant from Duane Forrester](https://www.duaneforrester.com/ai-seo-tool-quadrant/)is a helpful reference. And for the full measurement framework on what to track and how to report on it, the [AI citation tracking guide for agencies](/blog/ai-citation-tracking-marketing-agencies) covers that in detail.
+For a solid framework on how the different tools line up across retrieval and reasoning, [this AI SEO tool quadrant from Duane Forrester](https://www.duaneforrester.com/ai-seo-tool-quadrant/) is worth a look. And for the full measurement side — what to track and how to report it — my [AI citation tracking guide for agencies](/blog/ai-citation-tracking-marketing-agencies) goes deep.
 
 ### AI visibility optimization
 
-This is where you make changes based on what the audit and monitoring reveal. Content restructuring, schema markup implementation, third-party authority building and entity consistency are the levers that move AI visibility over time. The specifics depend on where the gaps are for each client, which is why the audit has to come first.
+This is where you actually make changes based on what the audit and monitoring turn up. Content restructuring, schema markup, third-party authority building, entity consistency — those are the levers that move AI visibility over time. Which ones you pull depends entirely on where each client's gaps are, which is exactly why the audit comes first.
 
 ## Which clients should you prioritize for AI visibility work
 
-You don't need to roll this out to every client at once. Start by identifying the clients where AI visibility is already affecting them, even if they don't know it yet.
+You don't have to roll this out to every client at once. Start with the ones where AI visibility is already hitting them — even if they have no idea yet.
 
-Look for clients whose customers are research-heavy buyers. B2B companies where procurement decisions involve multiple stakeholders doing independent research. Healthcare and med tech clients are a particularly strong fit because they often have both a B2B audience — providers on an adoption timeline — and a B2C audience of patients researching options before their first appointment, and AI is influencing both conversations simultaneously. Professional services firms where referral partners are evaluating options before making a recommendation. Any client whose buyers are using AI tools to understand their options before they get on a call or walk in the door.
+Look for research-heavy buyers. B2B companies where procurement means multiple stakeholders each doing their own digging. Healthcare and med-tech are an especially strong fit, because they usually have both a B2B audience (providers on an adoption timeline) and a B2C one (patients researching before their first appointment) — and AI is shaping both conversations at once. Professional services firms where referral partners are sizing up options before they make a recommendation. Basically any client whose buyers are asking AI about their options before they ever get on a call or walk in.
 
-Then look at the data you already have. Are any of your clients seeing organic traffic decline despite stable or improving rankings? That's a signal that AI is answering queries before users click through. Is direct traffic up in ways that don't correlate with any campaign you ran? That's often AI-referred traffic appearing as direct because the user saw the brand name in an AI answer and typed the URL directly.
+Then look at the data you already have. Any clients with organic traffic sliding while rankings hold steady? That's AI answering the question before the click. Direct traffic climbing with no campaign to explain it? That's often AI-referred traffic showing up as direct — someone saw the brand name in an answer and typed the URL straight in.
 
-The clients where those patterns are already visible are the ones where you can have the most concrete conversation, because you're not selling them on a future possibility. You're showing them something that's already happening to their numbers.
+The clients where those patterns are already visible are where you'll have the most concrete conversation, because you're not selling a someday-maybe. You're showing them something that's already happening to their numbers.
 
 ## What a basic AI visibility audit looks like in practice
 
-An AI visibility audit doesn't require expensive tooling to get started — the methodology matters far more than which platform you use to run it.
+You don't need expensive tooling to start — the methodology matters way more than the platform you run it on.
 
-Start by building a prompt set of 20 to 30 high-intent questions that represent what your client's actual customers or patients would ask an AI. These are full-sentence, problem-describing questions that people type into ChatGPT — not keyword searches — things like: what are my options for X, compare these two solutions, who do specialists recommend for Y, what should I know about Z before I make a decision.
+Start by building a prompt set of 20–30 high-intent questions that sound like what your client's actual customers would ask an AI. Full-sentence, problem-describing questions — not keywords — things like "what are my options for X," "compare these two solutions," "who do specialists recommend for Y," "what should I know about Z before I decide."
 
-Run those prompts across ChatGPT, Perplexity and Google AI Overviews at a minimum. Capture the full responses — screenshot or copy them verbatim — and date them. AI answers shift over time as platforms update their training data and new content gets indexed, so having a timestamped record of what the AI said and which sources it cited on a given date is what makes month-over-month comparison possible. Document the results for each: whether your client is mentioned, where in the answer they appear, how they're described, whether that description is accurate and what competitors show up alongside them or instead of them.
+Run them across ChatGPT, Perplexity, and Google AI Overviews at a minimum. Capture the full responses — screenshot or copy them word for word — and date them. AI answers move as platforms update and new content gets indexed, so a timestamped record of what the AI said and which sources it cited on a given day is what makes month-over-month comparison possible. For each one, write down: is the client mentioned, where in the answer, how are they described, is it accurate, and who shows up next to them (or instead of them).
 
-From there you can calculate an AI share of voice figure: what percentage of relevant answers include your client. That becomes your baseline and your benchmark going forward.
+From there you can pull an AI share-of-voice number — what percent of the relevant answers include your client. That's your baseline and your benchmark going forward.
 
-What you find in that audit tells you where to focus. A client getting skipped entirely has a different problem than a client being mentioned inaccurately. A client showing up on Perplexity but not ChatGPT has a different fix than a client absent from both. And a client who appears to be cited may still have a narrative control problem, as covered above. The audit gives you the specifics you need to make a recommendation that's actually tailored to what's happening, not a generic optimization checklist.
+What you find points you where to focus. A client getting skipped entirely has a different problem than one getting described inaccurately. A client showing up on Perplexity but not ChatGPT needs a different fix than one that's missing from both. And a client who looks cited might still have that narrative-control problem from earlier. The audit hands you the specifics, so your recommendation is actually tailored to what's happening — not a generic checklist.
 
-For the full framework on what AI systems are looking for and how each platform decides what to cite, the [AEO guide for 2026](/blog/answer-engine-optimization-guide) covers platform-specific signals in detail.
+For the full picture of what AI systems look for and how each platform decides what to cite, [the AEO guide for 2026](/blog/answer-engine-optimization-guide) breaks down the platform-specific signals.
 
 ## How to add AI visibility to your agency reporting without overhauling your process
 
-The goal is not to create a separate AI visibility reporting track that lives alongside your existing reports. That's more work for your team and more slides for your client to sit through. The goal is to add AI visibility as a layer within the reporting framework you already have.
+Skip the idea of a separate AI-visibility report living next to your existing one — that's just more work for your team and more slides for the client to sit through. Fold it into the report you already send.
 
-In practice that means adding two things to your monthly or quarterly reporting. First, an AI share of voice figure alongside traditional share of voice. Second, a prompt audit snapshot that shows a handful of representative AI answers in the client's category — who gets cited, how they're described and how that changed from the last period.
+In practice, that's two additions to your monthly or quarterly report. First, an AI share-of-voice number next to traditional share of voice. Second, a prompt-audit snapshot — a handful of representative AI answers in the client's category showing who's cited, how they're described, and what changed since last time.
 
-That second piece is the one that tends to land hardest in client meetings, because it's visual and concrete. Showing a client a screenshot of ChatGPT recommending a competitor in response to a question their best customer would ask is more clarifying than any metric you can put on a slide.
+That second piece is the one that lands hardest in meetings, because it's visual and concrete. Showing a client a screenshot of ChatGPT recommending a competitor to a question their best customer would ask does more than any metric on a slide ever will.
 
-The reporting addition doesn't have to be elaborate to start. A one-page AI visibility snapshot that shows current share of voice, how it trended and what's driving changes is enough to make the conversation meaningful and to differentiate your agency from the ones that still aren't measuring this.
+And it doesn't have to be elaborate to start. A one-page AI-visibility snapshot — current share of voice, how it trended, what's driving it — is enough to make the conversation matter, and enough to set you apart from every agency still not measuring this at all.
 
 ## How to position AI visibility in client conversations and new business pitches
 
-The framing that works is not "here's a new thing we're going to add to your marketing." That sounds like scope expansion and budget conversation before it sounds like value.
+The framing that flops is "here's a new thing we want to add to your marketing." That reads as scope creep and a budget ask before it reads as value.
 
-The framing that works is: your customers are changing how they research decisions, and the way we're measuring your visibility hasn't caught up yet. AI citation tracking and optimization closes that gap. It's not a replacement for what we're doing — it's making sure we're measuring and building visibility in every place your buyers are actually looking.
+What works instead: your customers have changed how they research, and the way we measure your visibility hasn't caught up. AI citation tracking and optimization closes that gap — it just makes sure we're measuring and building visibility everywhere your buyers are actually looking.
 
-For new business conversations, AI visibility is a legitimate differentiator right now because most agencies aren't talking about it, don't measure it and can't explain it clearly when a prospect asks. Being the agency that walks in with an AI visibility audit of a prospect's brand — showing them exactly how they appear (or don't) when their customers ask AI for recommendations — positions you as the agency that already understands where search is going, not the one that will figure it out eventually, and that's a very different kind of first conversation than a capabilities deck.
+For new business, this is a genuine differentiator right now, because most agencies aren't talking about it, don't measure it, and fumble it when a prospect asks. Walk into a pitch with an AI-visibility audit of the prospect's own brand — showing them exactly how they show up (or don't) when their customers ask AI for a recommendation — and you're the agency that already gets where search is going. That's a very different first conversation than a capabilities deck.
 
 ## Why agencies that add AI visibility now will have a real competitive advantage
 
-The window for being ahead of this is not unlimited — right now, most agencies aren't offering AI visibility as a service and most clients aren't demanding it yet, but that gap is closing faster than most people expect.
+The window for being early on this isn't open forever. Right now most agencies aren't offering AI visibility as a service and most clients aren't demanding it yet — but that gap is closing faster than people expect.
 
-The agencies that build this capability over the next 12 months are going to own a real advantage in both retention conversations and new business pitches. Once AI visibility becomes a standard expectation in agency reporting, it stops being a differentiator and starts being table stakes — the same way content marketing and SEO reporting became table stakes after enough agencies started offering them.
+The agencies that build the capability over the next 12 months are going to own a real edge in both retention and new business. Once AI visibility becomes a standard expectation in reporting, it stops being a differentiator and just becomes the baseline — the same way SEO reporting and content marketing did once enough agencies offered them.
 
-The first-mover advantage is real here. An agency that can walk into a quarterly review and show AI share of voice alongside traditional metrics, explain why the numbers look the way they do and outline a concrete plan to improve them, is a very different kind of partner than one that's still reporting on rankings and clicks and hoping nobody asks about the rest.
+The first-mover advantage is real. An agency that can sit in a quarterly review and show AI share of voice next to the traditional metrics, explain why the numbers look the way they do, and lay out a concrete plan to move them, is a very different partner than the one still reporting on rankings and clicks and hoping nobody asks about the rest.
 
 ## Where to start with AI visibility as an agency service
 
-If you haven't already opened ChatGPT and searched your clients' product categories just to see what comes back, do that today. Pick your three most at-risk clients — the ones with research-heavy buyers, the ones showing unexplained traffic shifts or the ones in categories where AI adoption is highest — and run a quick informal audit to see who gets named, how they're described and whether your client appears in the answer at all.
+If you haven't already opened ChatGPT and searched your clients' categories just to see what comes back — do that today. Pick your three most at-risk clients (research-heavy buyers, unexplained traffic shifts, or categories where AI adoption is highest) and run a quick, informal audit: who gets named, how they're described, and whether your client is in the answer at all.
 
-That gut check is usually enough to make the conversation with your client feel urgent rather than hypothetical. And the agency that's bringing that conversation proactively is always in a stronger position than the one that's reacting to it after the client brings it up first.
+That gut check is usually all it takes to make the client conversation feel urgent instead of hypothetical. And bringing that conversation to them proactively always beats reacting to it after they bring it to you.
 
-For a deeper look at how AI systems decide what to cite and what content structure drives AI visibility, the [AEO guide for 2026](/blog/answer-engine-optimization-guide) covers the full landscape. And if you want to talk through what adding this looks like for your specific agency and client mix, [reach out](/contact) — it's a conversation worth having before your clients bring it to you.
+For a deeper look at how AI decides what to cite and what content structure actually drives visibility, [the AEO guide for 2026](/blog/answer-engine-optimization-guide) covers it. And if you want to talk through what adding this looks like for your specific agency and client mix, [reach out](/contact) — it's worth having before your clients bring it to you.
 
 ### Ready to see what this looks like for one of your clients?
 
-Most engagements start with a single audit on one brand. You see the full process and output, and we go from there. No big commitment, no long onboarding. [**Schedule a consult call**](/contact)**.**
+Most engagements start with a single audit on one brand. You see the whole process and the output, and we take it from there — no big commitment, no long onboarding. [Schedule a consult call](/contact).
