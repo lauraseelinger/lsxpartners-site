@@ -196,6 +196,13 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
 .themecard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 9px}
 .themecard .tn{font-weight:800;font-size:14px}
 .tierlbl.a{background:#2e6b3f}.tierlbl.b{background:#d99a2b}.tierlbl.c{background:#8a8a8a}
+.droporder{font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:11px 13px;margin:10px 0 0}
+.droprow{display:flex;gap:9px;align-items:baseline;margin:5px 0;line-height:1.5}
+.dropn{flex:0 0 auto;display:inline-flex;width:17px;height:17px;border-radius:50%;background:#eee;color:#666;font-size:10px;font-weight:800;align-items:center;justify-content:center}
+.droprow.keep .dropn{background:#2e6b3f;color:#fff}
+.droprow.keep{font-weight:600}
+.fallback{font-size:12.5px;background:#f6f7f9;border:1px solid #dfe3e8;border-left:4px solid #8a8a8a;border-radius:8px;padding:10px 13px;margin:0 0 12px;line-height:1.5}
+.fallback b{color:#1a1a1a}
 .tierex{margin:5px 0 10px 0;padding:8px 10px;background:#fff;border:1px solid #dbe7ef;border-radius:6px;font-size:12px;line-height:1.5;color:#333}
 .tierex b{color:#2f6f9f}
 .tierfail{margin:8px 0 0 0;padding:8px 10px;background:#fdf4f2;border:1px solid #e8cfc7;border-radius:6px;font-size:12px;line-height:1.5;color:#333}
@@ -263,6 +270,15 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
       <div class="tierrow"><span class="tierlbl b">Tier B · constrained hero</span> The hero/intro text <b>written as the answer</b> rather than a marketing tagline, plus the page-level schema block. It doesn&rsquo;t have to be in literal question format — it has to answer the question.</div>
       <div class="tierrow"><span class="tierlbl c">Tier C · minimum</span> The answer stated plainly in the intro, without schema. Still extractable — the schema strengthens it, but the text is what gets quoted.<div class="tierex" style="margin-top:8px"><b>Worked example —</b> the answer stays the same; only what wraps it changes.<div style="margin:7px 0;padding:8px 10px;background:#f7fafc;border-left:3px solid #2f6f9f;border-radius:4px"><i>&ldquo;For a front door, a Grade-1 deadbolt gives the most forced-entry resistance — choose keyed, keypad, or smart, and SmartKey to rekey it yourself.&rdquo;</i></div><div style="margin-top:5px"><span class="tierlbl a">A</span> sits under an H2 reading <i>&ldquo;What deadbolt should I get for my front door?&rdquo;</i>, marked up as FAQPage.</div><div style="margin-top:4px"><span class="tierlbl b">B</span> runs as the hero paragraph on a filter-first page — no question heading — with the page-level schema block.</div><div style="margin-top:4px"><span class="tierlbl c">C</span> runs as the hero paragraph, nothing else.</div></div><div class="tierfail">A hero written as a tagline — <i>&ldquo;Security that fits your style&rdquo;</i> — has no answer in it. There is nothing to quote at any tier, with or without schema.</div></div>
       <div class="r" style="margin-top:8px"><b>Either way —</b> the deeper buyer questions go in the page&rsquo;s <b>FAQ module</b>, so a filter-first page with a thin hero still carries the full Q&amp;A weight.</div>
+      <div class="r" style="margin-top:12px"><b>What survives when something has to give.</b> Tier A is the spec. B and C are what you fall back to on a page that genuinely can&rsquo;t carry it, not what you plan for. Where a page is constrained, drop in this order and stop as soon as it fits.</div>
+      <div class="droporder">
+        <div class="droprow"><span class="dropn">1</span><span><b>The mockup treatment.</b> Where the block sits visually is the most negotiable thing on the page.</span></div>
+        <div class="droprow"><span class="dropn">2</span><span><b>The question-phrased H2.</b> Helpful for matching, but the answer beneath it still gets read.</span></div>
+        <div class="droprow"><span class="dropn">3</span><span><b>The page-level schema.</b> It strengthens retrieval, it doesn&rsquo;t create it. Backfill it later.</span></div>
+        <div class="droprow"><span class="dropn">4</span><span><b>The FAQ module.</b> Load-bearing &mdash; it&rsquo;s what lets a thin hero still carry the deeper questions. Cut it only if nothing else is left.</span></div>
+        <div class="droprow keep"><span class="dropn">5</span><span><b>The extractable answer text &mdash; this one never goes.</b> Plain language, in the HTML, answering the page&rsquo;s lead question. It is the only element that earns a citation on its own.</span></div>
+      </div>
+      <div class="fine" style="margin-top:8px">Every template inherits this order. The templates that carry a <b>Fallback</b> note are the ones where the constraint is likely and the call isn&rsquo;t obvious &mdash; everywhere else, this rule is the answer.</div>
     </div>
     <div class="seclabel">Schema building blocks (reused across templates)</div>
     <div class="acard"><b>Product</b> (PDPs) · <b>FAQPage</b> (any Q&amp;A) · <b>Article</b> (guides, verified author) · <b>Organization</b> (homepage + About) · <b>DefinedTerm</b> (SmartKey, ANSI Grade) · <b>BreadcrumbList</b> + <b>ItemList</b> (catalog).
@@ -407,6 +423,7 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
             <div class="r"><b>Shared by every category page:</b> a front-loaded answer block, ItemList + BreadcrumbList + FAQPage schema, Article-schema&#39;d editorial blocks, and one canonical URL even when reached by type / room / Smart &amp; Keyless.</div>
             <div class="fine"><b>Moves:</b> citation share on category + "best [type]" queries.</div>
           </div>
+          <div class="fallback"><b>Fallback</b> These are the filter-first pages the tiering exists for. Where the grid leaves no room above the fold, go <b>Tier B</b> &mdash; write the intro as the answer rather than a tagline, keep ItemList + BreadcrumbList, and move the deeper questions to the FAQ module at the bottom. The plain-text answer to the category&rsquo;s lead question is the one thing that can&rsquo;t be cut.</div>
           <div class="seclabel">By category page — the content &amp; questions each one must surface <span class="fine" style="font-weight:400;text-transform:none;letter-spacing:0">(one shell, a different question set per category — drawn from the audience intelligence)</span></div>
           <div class="subtabs">
             <button class="subtab on" onclick="catSub(0,this)">Deadbolts</button>
@@ -495,6 +512,7 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
             <div class="r"><b>Shared by every room page:</b> a short room-specific answer above the grid, ItemList + BreadcrumbList schema, and <b>one canonical destination</b> — the room listing and the matching Solutions by-need page must not compete (the room page is the product listing; Solutions is the editorial answer; cross-link them).</div>
             <div class="fine"><b>Moves:</b> room/use-case demand without thin duplicate pages.</div>
           </div>
+          <div class="fallback"><b>Fallback</b> Same constraint as the category pages at lower stakes. Where a room listing can&rsquo;t carry editorial, <b>Tier C</b> is acceptable here &mdash; the answer stated plainly in the intro, schema backfilled later. Keep the cross-link to the matching Solutions page; that page is carrying the citation weight for this need.</div>
           <div class="seclabel">By room — the high-traffic ones, each with its audience questions</div>
           <div class="subtabs">
             <button class="subtab on" onclick="roomSub(0,this)">Front Door</button>
@@ -537,6 +555,7 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
             <div class="r"><b>Which questions, which product:</b> the tabs give you the <b>question bank per product type</b>, and each question maps to a <b>product attribute</b> — so the FAQ gets built once as a template that surfaces a question only when the product has that feature. It scales to every SKU automatically; no writing each by hand. For example: <i>&ldquo;How many user codes?&rdquo;</i> shows on keypad models &middot; <i>&ldquo;Does it need a hub?&rdquo;</i> on smart models &middot; <i>&ldquo;Can I rekey it?&rdquo;</i> on SmartKey models &middot; <i>&ldquo;What ANSI grade is it?&rdquo;</i> on all. Those attributes come from the product data (the Salsify review below).</div>
             <div class="insight"><b>Note:</b> the field-level product data (Salsify) that feeds these specs &amp; variants is a separate data review, scoped with Hanson's data/PIM team — not specced here.</div>
           </div>
+          <div class="fallback"><b>Fallback</b> This template depends on what the data layer actually returns. Where a field isn&rsquo;t in Salsify yet, state the attribute in the plain-language answer block rather than waiting on the structured field &mdash; the text earns the citation and the schema can be backfilled. Grade, SmartKey and finish have to appear as text on every mechanical PDP regardless.</div>
           <div class="seclabel">By product type — each is a template; the product shown is the worked example</div>
           <div class="subtabs">
             <button class="subtab on" onclick="pdpSub(0,this)">Mechanical</button>
@@ -1080,7 +1099,7 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
               <li>Halo vs Halo Touch vs Aura — what’s the difference?</li>
               <li>which Kwikset lock is best for no-hub / Apple Home / a budget?</li>
             </ul>
-            <div class="insight"><b>Audience intelligence insight</b> The selector is good UX but invisible to AI. A static Kwikset-vs-Kwikset comparison (text + table) is the AEO fallback that makes the tool’s logic citable. This one is safe — it’s Kwikset-to-Kwikset, no competitor named.</div></div>
+            <div class="insight"><b>Audience intelligence insight</b> The selector is good UX but invisible to AI. A static Kwikset-vs-Kwikset comparison (text + table) is the AEO fallback that makes the tool’s logic citable. This one is safe — it’s Kwikset-to-Kwikset, no competitor named.</div><div class="fallback"><b>Fallback</b> The inversion of the usual case &mdash; here the fallback is the deliverable. The selector can stay exactly as designed; what can&rsquo;t be dropped is the static text-and-table version of the same logic sitting on the page beneath it, because a JS tool returns nothing for AI to quote. If the static version is cut for scope, this page stops earning citations entirely, however good the tool is.</div></div>
           <div class="mock-cap">The page (layout) — the Dynamic tool + its static fallback</div>
           <div class="mk"><div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Compare</span><span class="sp"></span><span class="it">Search</span></div><div class="mk-crumb">Home / Compare / Which Kwikset Smart Lock</div><div class="mk-body"><div class="mk-h1">Which Kwikset Smart Lock Is Right for You?</div><div class="mk-fpo" style="min-height:32px">Dynamic selector (JS) — AI can’t read this</div><div class="mk-ans mk-add" style="margin-top:10px"><b>Static summary (ADD)</b> A plain-text + table comparison of Halo, Halo Touch, and Aura by unlock, ecosystem, and price — the crawlable version.</div><table class="mk-tbl mk-add" style="margin-top:12px"><tr><th></th><th>Halo</th><th>Halo Touch</th><th>Aura</th></tr><tr><td>Unlock</td><td>Keypad</td><td>Fingerprint</td><td>Keypad</td></tr><tr><td>Hub</td><td>No hub</td><td>No hub</td><td>Bluetooth</td></tr></table><div class="mk-h">FAQ</div><div class="mk-acc mk-ready"><div>Halo vs Halo Touch — what’s the difference? ▾</div></div></div></div>
         </div>
@@ -1210,6 +1229,7 @@ table.map tr:nth-child(even) td{background:#fbfbfb}
             <div class="r"><b>Schema:</b> Organization + WebSite with SearchAction (ties to on-site search / Kai) + SiteNavigationElement.</div>
             <ul class="chk"><li>States what Kwikset is in plain text, not just imagery</li><li>Links into Products, Solutions, Security hub, Pro</li></ul>
           </div>
+          <div class="fallback"><b>Fallback</b> The homepage is hero-first by design, so Tier A rarely fits it. <b>Tier B</b> is the target &mdash; the hero written as an answer to what Kwikset makes and who it&rsquo;s for, plus Organization + WebSite schema. If the hero is locked to a campaign message, the answer moves to the first content block beneath it rather than being dropped.</div>
           <div class="mock-cap">The page (annotated) — off the homepage comp</div>
           <div class="mk">
             <div class="mk-nav"><span class="lg">Kwikset</span><span class="it">Products</span><span class="it">Smart &amp; Keyless</span><span class="it">Solutions</span><span class="it">Help Me Choose</span><span class="it">Pro</span><span class="sp"></span><span class="it">Search</span></div>
