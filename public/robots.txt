@@ -1,42 +1,55 @@
 # LSX Partners — allow AI crawlers; they feed AI citations.
 User-agent: *
 Allow: /
+Disallow: /q/
 
 # Named AI/search crawlers (explicit allow — clarity over relying on wildcard).
 User-agent: GPTBot
 Allow: /
+Disallow: /q/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /q/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /q/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /q/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /q/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /q/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /q/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /q/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /q/
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /q/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /q/
 
 User-agent: CCBot
 Allow: /
+Disallow: /q/
 
 Sitemap: https://lsxpartners.com/sitemap-index.xml
