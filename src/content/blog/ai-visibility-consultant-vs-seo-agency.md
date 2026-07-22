@@ -20,17 +20,15 @@ faqs:
     answer: "Yes, to a point — ask AI about your category, see what it cites, and start showing up there. You hire a strategist for speed, deeper audience intelligence, and the judgment to know which fixes actually matter for your brand."
 ---
 
-I'm getting my house ready to sell — and my husband and I are putting everything in storage because we're about to travel for a year or two. So for the last few weeks I've been running the entire project through AI to help with my Type-A timeline planning.
+I'm getting my house ready to sell — and my husband and I are putting everything in storage because we're about to travel for a year or two. So for the last few weeks I've been running the entire project through AI to handle my Type-A timeline planning, and I don't think I opened Google once.
 
-And I mean the *entire* project. I don't think I opened Google once, except maybe to find where to actually buy something AI recommended.
+If I was going through this process two years ago, I'd have a home-grown Excel spreadsheet and tons of saved Google links. Today, I have an AI chat window.
 
-First I needed faucets, so I described the bathrooms and asked for midrange options that'd look good without costing much (I'm selling, not renovating for the next owner). Then carpet — where cleaning fit in the timeline before showings, and which companies actually handle pet stains, because, well, three cats. Then packing — I asked about bins for long-term storage, and AI recommended Sterilite gasket bins. I found the size I wanted at Costco, grabbed the rest at Walmart, done.
+That shift is what makes "AI visibility consultant" and "SEO agency" two different jobs. An SEO agency optimizes your website to rank for keywords so someone clicks through. An AI visibility consultant makes sure your brand shows up and gets cited when your buyer describes their whole situation to AI and never types a keyword at all. The foundations overlap, but most of the work doesn't — and you probably need both.
 
-Not once did I type a keyword. Not once did I "search." I described my situation, one problem at a time, and followed the thread.
+The whole move ran through AI. I described the bathrooms and asked for midrange faucets that'd look good without costing much (I'm selling, not renovating for the next owner). I asked where carpet cleaning fit in the timeline before showings, and which companies handle pet stains, because — three cats. When I needed bins for long-term storage, AI recommended Sterilite gasket bins; I found the size at Costco and grabbed the rest at Walmart.
 
-A storage brand got recommended to me and bought by me. The only time I touched Google was to find where to buy it, and I never landed on the brand's own website at all. That's the whole reason "AI visibility consultant" and "SEO agency" are two different jobs.
-
-So what actually separates the two? An SEO agency optimizes your website to rank for keywords so someone clicks through to you. As an AI visibility consultant, my job is making sure your brand shows up and gets cited when your buyer describes their whole situation to AI and never types a keyword at all. The foundations overlap, but most of the work doesn't — and you probably need both.
+Not once did I type a keyword. A storage brand got recommended to me and bought by me — the only time I touched Google was to find where to buy it, and I never landed on the brand's website. That's what AI visibility is built for, and it's not what an SEO plan is measuring.
 
 ## AEO vs SEO: is AI visibility just SEO with a new name?
 
