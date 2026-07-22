@@ -54,11 +54,11 @@ Roughly: the SEO agency's world is your website. The AI visibility consultant's 
 
 Your website should be the foundation. Get it optimized, get it clean, check that box. But AI builds its answer from everywhere — Reddit, YouTube, LinkedIn, industry publications, review sites. The brands that get cited are the ones showing up clearly and consistently across every place AI pulls from. A flashy homepage alone doesn't get you there.
 
-So a big part of my job that an SEO agency usually doesn't touch: figuring out how you become part of those third-party conversations instead of letting the entire internet write your story for you.
+So a big part of my job is figuring out how you become part of those third-party conversations, instead of letting the entire internet write your story for you. Most SEO agencies never touch that.
 
 ## Can't my SEO agency just add an "AI visibility" report?
 
-A lot of them are, and here's where I'll push back — because I've watched those add-on scores mislead people.
+A lot of them are, and I've watched those add-on scores mislead plenty of people.
 
 I had a client whose SEO tool showed an AI visibility score of 85% — "leading across platforms." Looked fantastic. You'd screenshot that into a deck and feel great. But when I clicked into the individual platforms, a competitor was clearly ahead on Perplexity, and that "leading" headline read the same on every tab, including the one we were losing on.
 
@@ -70,7 +70,7 @@ That's the gap. An add-on gives you a number. A strategist tells you whether the
 
 ## What does an AI visibility consultant actually do, then?
 
-Fair question — "AI visibility" can sound vague. For me it's an ongoing loop, not a thing you do once and walk away from. It runs in a few stages:
+"AI visibility" can sound vague. For me it's an ongoing loop, not a thing you do once and walk away from, and it runs in a few stages:
 
 - **An audit first** — what AI actually says about your brand right now, across ChatGPT, Gemini, Perplexity, Claude, and Google's AI, and where the gaps are. You can't fix what you haven't measured, and most brands are guessing. (Here's [how I run one from scratch](/blog/how-to-audit-ai-visibility).)
 - **Audience intelligence** — the real questions and the real words your buyers use, so we optimize for what they actually ask instead of a list your team brainstormed in a meeting.
