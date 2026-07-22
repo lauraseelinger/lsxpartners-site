@@ -18,13 +18,11 @@ faqs:
     answer: "Both, plus whether either sends traffic. One number in isolation will mislead you — mentions and citations tell different parts of the story."
 ---
 
-I was going through a client's monthly report and their AI mentions had dropped 26%. On its own, that's the kind of number that makes a client think "wait — what am I paying you for?"
+I was going through a client's monthly report and their AI mentions had dropped 26%. On its own, that's the kind of number that makes a client think "wait — what am I paying you for?" But right next to it, their citations had gone up.
 
-But mentions were only one line on the page. Right next to them, citations and cited pages had both gone *up* — for the second month running. What looked like a decline was actually a consolidation: AI was name-dropping the brand less and citing it as a source more. That move — from getting named in passing to getting quoted as the source — is the whole difference between an AI mention and an AI citation, and it's the difference between AI knowing you exist and AI trusting you enough to build its answer on you.
+A mention is when AI names your brand in its answer. A citation is when AI uses your content as the source — quoting it, linking it, pulling the answer straight from your page. Mentions falling while citations climb isn't a loss of visibility. It's a consolidation toward the signal that actually matters — the difference between AI knowing you exist and AI trusting you enough to build its answer on you.
 
-If you're measuring your AI visibility at all, this is the distinction that keeps you from panicking over the wrong number.
-
-A mention is when a model names your brand in its response. A citation is when the model actually uses your content as its source — quoting it, linking it, pulling the answer straight from your page. A mention gets you on the radar. Being cited goes further: the model read your stuff, decided it was worth using, and made you part of the answer. You want both, but citations are what move the needle.
+That's why you can't read the mentions number alone. For that client, mentions were only one line on the page — citations and cited pages had both gone *up*, for the second month running. What looked like a decline was AI name-dropping the brand less and citing it as a source more. A mention gets you on the radar; being cited means the model read your stuff, decided it was worth using, and made you part of the answer. You want both, but citations are what move the needle.
 
 ## What's the difference between an AI mention and an AI citation?
 
@@ -36,7 +34,7 @@ The reason the gap matters: mentions and citations come from different places. M
 
 ## Why fewer AI mentions can be good news
 
-Back to that report. For two straight months, the raw mention count fell while citations and cited pages climbed. Stop reading at the mentions line and you'd think visibility was slipping. Read all three together and the opposite was true.
+Stop reading at the mentions line and you'd think visibility was slipping. Read the citations right next to it and the opposite was true.
 
 Early on, AI would name the brand in a list of options and move on. As the work compounded — clearer answer-first content, getting the brand into the sources AI actually reads — the model started pulling from its pages as *the* source instead of listing it as one of many. A citation is the higher-value event: it's an authority signal and a path back to you. A bare mention is neither.
 
