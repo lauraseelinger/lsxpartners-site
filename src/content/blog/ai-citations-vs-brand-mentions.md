@@ -26,9 +26,15 @@ That's why you can't read the mentions number alone. For that client, mentions w
 
 ## What's the difference between an AI mention and an AI citation?
 
-A mention is a name-drop. You ask ChatGPT about running shoes and it says "brands like Brooks, Hoka, and New Balance are popular." Those brands got named. Nobody's content got cited — the model pulled the names from memory.
+Picture someone asking AI, "what's the best project management tool for a small team?"
 
-A citation is when the model goes and reads a page and uses it — quotes it, footnotes it, or clearly builds the answer from it. That page got cited. It's the source.
+A **mention** is a name-drop. The model answers something like "popular options include Asana, Trello, and Monday," then moves on. Those brands got named, but nobody's content got used — the model pulled the names from what it already knows.
+
+A **citation** is when the model reads an actual page and builds the answer from it. Same question, but now the answer looks like this:
+
+> For small teams, Trello is often recommended for how simple it is to set up. [1]
+
+That little [1] links straight to a source — a page the model read, quoted, and credited. That page is the citation. The brand didn't just get named; its content *became* the answer. (This is illustrative — the point is the shape: a mention names you, a citation footnotes you.)
 
 The reason the gap matters: mentions and citations come from different places. Mentions often come from the model's training data — what it already "knows" about you. Citations come from what the model retrieves and reads in the moment, which is the part you can actually influence.
 
