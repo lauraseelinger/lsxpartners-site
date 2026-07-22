@@ -66,7 +66,7 @@ Then I ran the actual questions AI asks about the problem that brand exists to s
 
 I saw it from the other direction with a different client. One month their AI mentions dropped, and if you only looked at that number you'd assume something broke. But their citations went up at the same time — AI had stopped just name-dropping them and started pulling them in as the actual cited source, which is exactly what you want. A number going down that was actually great news. Someone has to know the difference, or you'll optimize away from the thing that's working.
 
-That's the gap. An add-on gives you a number. A strategist tells you whether the number means anything, and what to do next.
+An add-on report hands you a number. Knowing whether that number is good news, a false alarm, or a real problem — and what to actually do about it — is the job, and no dashboard does that part for you.
 
 ## What does an AI visibility consultant actually do, then?
 
