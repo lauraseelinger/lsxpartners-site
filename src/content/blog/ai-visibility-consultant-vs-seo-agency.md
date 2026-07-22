@@ -4,7 +4,7 @@ description: "SEO optimizes your website to rank for keywords. AI visibility is 
 pubDate: 2026-07-22
 register: punchy-personal
 tags: ["ai-visibility", "aeo", "geo", "hiring"]
-# heroImage: "/images/blog/ai-visibility-consultant-vs-seo-agency.jpg"
+heroImage: "/images/blog/ai-visibility-consultant-vs-seo-agency.jpg"
 faqs:
   - question: "Is AI visibility just SEO with a new name?"
     answer: "No. They share a foundation — your site still needs to be crawlable and ranked — but SEO optimizes to rank a page for a click, while AI visibility optimizes to get your brand cited in the AI answer itself, often with no click at all. They should run in parallel."
