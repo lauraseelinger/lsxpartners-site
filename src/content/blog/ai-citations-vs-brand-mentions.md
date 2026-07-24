@@ -30,11 +30,15 @@ Picture someone asking AI, "what's the best project management tool for a small 
 
 A **mention** is a name-drop. The model answers something like "popular options include Asana, Trello, and Monday," then moves on. Those brands got named, but nobody's content got used — the model pulled the names from what it already knows.
 
-A **citation** is when the model reads an actual page and builds the answer from it. Same question, but now the answer looks like this:
+A **citation** is when the model reads an actual page and builds the answer from it. Same question, but now the answer comes back like this:
 
-> For small teams, Trello is often recommended for how simple it is to set up. [1]
+<div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:16px 18px;margin:1.6rem 0;font-size:0.97rem;line-height:1.55;color:#2b2622;">
+<div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:10px;">✦&nbsp; AI answer</div>
+For small teams, <strong>Trello</strong> is often recommended for how simple it is to set up.<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:600;">[1]</a>
+<div style="border-top:1px solid #ece3d6;margin-top:12px;padding-top:9px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:600;">[1]</span>&nbsp; trello.com — "Trello for small teams"</div>
+</div>
 
-That little [1] links straight to a source — a page the model read, quoted, and credited. That page is the citation. The brand didn't just get named; its content *became* the answer. (This is illustrative — the point is the shape: a mention names you, a citation footnotes you.)
+That superscript number is the citation — a link to the page the model read, quoted, and credited. The brand didn't just get named; its content *became* the answer. (This is illustrative — the point is the shape: a mention names you, a citation footnotes you.)
 
 The reason the gap matters: mentions and citations come from different places. Mentions often come from the model's training data — what it already "knows" about you. Citations come from what the model retrieves and reads in the moment, which is the part you can actually influence.
 
