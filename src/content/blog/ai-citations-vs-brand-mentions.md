@@ -30,11 +30,16 @@ Picture someone asking AI, "what's the best project management tool for a small 
 
 A **mention** is a name-drop. The model answers something like "popular options include Asana, Trello, and Monday," then moves on. Those brands got named, but nobody's content got used — the model pulled the names from what it already knows.
 
-A **citation** is when the model reads an actual page and builds the answer from it. Same question, but now the answer looks like this:
+A **citation** is when the model reads an actual page and builds the answer from it. Ask that same question and part of a longer answer might come back like this (the cited line is highlighted):
 
-> For small teams, Trello is often recommended for how simple it is to set up. [1]
+<div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
+<div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI answer</div>
+<div style="color:#9a8f80;">…the best project management tool for a small team really depends on how much structure you want.</div>
+<div style="margin-top:6px;">Asana and Monday come up a lot for teams that need detailed workflows and reporting. <span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">For small teams that just want to get moving fast, <strong>Trello</strong> is often recommended for how simple it is to set up.<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> ClickUp is another flexible pick if you expect to scale…</div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; trello.com — "Trello for small teams"</div>
+</div>
 
-That little [1] links straight to a source — a page the model read, quoted, and credited. That page is the citation. The brand didn't just get named; its content *became* the answer. (This is illustrative — the point is the shape: a mention names you, a citation footnotes you.)
+The highlighted line is the citation. Trello didn't just get named in a list — the model pulled from a specific page and credited it, and that [1] is a real link to the source. The brand's content *became* part of the answer. (This is illustrative — the point is the shape: a mention names you, a citation footnotes you.)
 
 The reason the gap matters: mentions and citations come from different places. Mentions often come from the model's training data — what it already "knows" about you. Citations come from what the model retrieves and reads in the moment, which is the part you can actually influence.
 
