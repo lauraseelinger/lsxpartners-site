@@ -18,7 +18,9 @@ faqs:
     answer: "Fast. Which engine leads, how it picks sources, and what it trusts all shift month to month, so a playbook from six months ago is already partly stale."
 ---
 
-Preparing for a quarterly business review is stressful enough on its own. Your team is already stretched keeping the current strategy moving — the campaigns, the rankings, the reports everyone's watching. And now there's a new question sitting on top of all of it, one nobody has a clean answer to yet. When someone turns to AI to research your category, do you even come up?
+Preparing for a quarterly business review is stressful enough on its own. Your team is already stretched keeping the current strategy moving — the campaigns, the rankings, the reports everyone's watching. And now there's a new question sitting on top of all of it, one nobody has a clean answer to yet.
+
+<p style="font-size:1.5rem;line-height:1.35;font-weight:600;color:#b55434;margin:1.6rem 0;">When someone turns to AI to research your category, do you even come up?</p>
 
 That question is AI visibility — whether your brand shows up, and shows up right, when someone asks an AI tool instead of Googling. Most big brands have no idea what the answer is, and their analytics were never built to tell them.
 
