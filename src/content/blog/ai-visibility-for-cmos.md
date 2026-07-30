@@ -111,7 +111,7 @@ Without giving away the whole method: it starts with getting deep on the busines
 
 The brands that get ahead here aren't the ones with the biggest budgets. They're the ones that started asking the five questions while their competitors were still admiring their green arrows.
 
-I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the whole thing I do. If reading this made you realize you can't actually answer those five questions yet — [that's exactly the conversation to have](/contact). ;)
+I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the whole thing I do. If reading this made you realize you can't actually answer those five questions yet — [that's exactly the conversation to have](/contact).
 
 ## Sources
 
