@@ -26,7 +26,7 @@ That question is AI visibility — whether your brand shows up, and shows up rig
 
 I spent years in big-brand marketing before I went out on my own, so I've been the one presenting the green-arrow report — and I know how little it can tell you about where buyers are actually making up their minds. More and more, that's happening inside AI. Let me walk through what it means for you, your team, and your next twelve months.
 
-## Why this has to start now, not next planning cycle
+## Why does AI visibility have to start now?
 
 Adoption is compounding fast, and it doesn't matter whether you sell to consumers or to other businesses — your buyers are already doing this. L.E.K. Consulting found 46% of consumers now start product research on a standalone AI tool like ChatGPT or Perplexity, up from 25% in 2024. That's the first impression of your brand forming for half your buyers before your website, your ads, or your sales team get a word in.
 
@@ -40,7 +40,7 @@ The reason timing matters this much is that there's no settled playbook yet. The
 
 It overlaps, and a good SEO foundation still helps. But no, it's a different game. SEO gets a page of yours to rank. AI visibility gets your brand named and recommended inside an answer the AI writes — which means it has to know who you are, trust what it knows, and decide you're relevant to that exact question. It assembles that from your site, but also from [third-party sources](/blog/ai-citations-vs-brand-mentions) across the whole web. A brand can dominate organic search and still be invisible in AI, because the AI is reading the internet's whole opinion of you, not just the page you optimized. (If you're weighing who should own this, I wrote a [full breakdown of AEO vs. SEO here](/blog/ai-visibility-consultant-vs-seo-agency).)
 
-## The five questions every CMO has to be able to answer
+## What are the five questions every CMO should be able to answer?
 
 You don't need to know the mechanics of fixing each one. You need to be able to ask them and not get a blank stare back. If your team can't answer these today, that's the gap.
 
@@ -76,7 +76,7 @@ For most categories, the third-party sources AI trusts most aren't your website 
 
 That last one is where most brands stall, so let's sit on it.
 
-## What AI visibility does to your team and your org chart
+## What does AI visibility do to your team and org chart?
 
 This doesn't map cleanly onto any one seat you already have. It's not "give it to SEO," and it's not PR's or social's either. AI reads across all of them at once, so the work cuts across all of them — which in most orgs means it belongs to everyone, and so it belongs to no one.
 
