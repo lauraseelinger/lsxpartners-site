@@ -4,7 +4,7 @@ description: "AI visibility is whether your brand gets named when buyers ask Cha
 pubDate: 2026-07-29
 register: measured-pillar
 tags: ["ai-visibility", "generative engine optimization", "answer engine optimization", "ai search optimization", "cmo", "marketing-pov"]
-heroImage: "/images/blog/ai-visibility-for-cmos.jpg"
+heroImage: "/images/blog/ai-visibility-for-cmos-dotted.jpg"
 faqs:
   - question: "Is AI visibility just SEO?"
     answer: "It overlaps, but it's a different game. SEO gets a page of yours to rank. AI visibility gets your brand named and recommended inside the answer an AI writes—which it assembles from your site plus third-party sources across the web, not just the page you optimized."
