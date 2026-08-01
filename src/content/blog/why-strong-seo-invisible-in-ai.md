@@ -16,7 +16,7 @@ faqs:
     answer: "Keep the SEO, then add what it misses: audit where you stand across the engines, optimize for the real questions buyers ask AI, make content answer-first so it's extractable, get into the third-party sources AI trusts, and measure citations instead of rankings."
 ---
 
-[A TikTok of mine](https://www.tiktok.com/@lauradoesaisearch/video/7668797486357679374) landed on the FYP of an SEO marketer, and he could *not* let it go — comment after comment insisting AI visibility is "just SEO."
+[A TikTok of mine](https://www.tiktok.com/@lauradoesaisearch/video/7668797486357679374) landed on the FYP of an SEO marketer who was NOT having it — comment after comment insisting AI visibility is "just SEO."
 
 But if it were all just SEO, I don't know how my business would be this slammed right now. Your own brand's analytics probably prove my point — your traditional search traffic is sliding, and you've got no real read on how you show up in AI. The content marketing teams who will be successful during this shift in search aren't the ones who will die on the "it's still SEO" hill — they're taking the "yes, and" route. Yes, SEO still matters, and there's a new layer on top of it. The ones insisting nothing changed are the ones about to watch their clients go invisible in AI.
 
