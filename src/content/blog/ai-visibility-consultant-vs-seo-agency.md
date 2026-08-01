@@ -34,7 +34,7 @@ Not once did I type a keyword. A storage brand got recommended to me and bought 
 
 This is the objection I see and hear most, and I think it's mostly a defense mechanism. Maybe this will help: SEO isn't dead. SEO and AEO/GEO should be run in parallel.
 
-People love to frame it as SEO vs GEO, like you have to pick one. You don't. Picture a Venn diagram: SEO is one circle, AI visibility is a much bigger circle, and SEO only overlaps a slice of it. That slice is real and it matters — you can't get cited by AI if your site can't be crawled or ranked in the first place. But everything outside the overlap — the third-party sources AI trusts, the language your buyers actually use, the way AI reads the entire internet to build its answer — is ground SEO was never built to cover.
+People love to frame it as SEO vs GEO, like you have to pick one. You don't. Picture a Venn diagram: SEO is one circle, AI visibility is a much bigger circle, and SEO only overlaps a slice of it. That slice is real and it matters — you can't get cited by AI if your site can't be crawled or ranked in the first place. But everything outside the overlap — the third-party sources AI trusts, the language your buyers actually use, the way AI reads the entire internet to build its answer — is ground SEO was never built to cover. It's why [brands with strong SEO can still go invisible in AI](/blog/why-strong-seo-invisible-in-ai) — everything outside that overlap is where they lose the answer.
 
 ## What are you actually optimizing for?
 
