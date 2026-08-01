@@ -4,7 +4,7 @@ description: "You can rank #1 on Google and still not show up when someone asks 
 pubDate: 2026-08-01
 register: punchy-personal
 tags: ["ai-visibility", "seo", "aeo", "ai-search"]
-# heroImage: "/images/blog/why-strong-seo-invisible-in-ai.jpg"
+heroImage: "/images/blog/why-strong-seo-invisible-in-ai.jpg"
 faqs:
   - question: "Does strong SEO help AI visibility?"
     answer: "It's the foundation — AI often pulls from what already ranks — but it's not enough on its own. AI cites sources, grounds differently per engine, and answers conversational prompts, so a strong-SEO brand can still be absent from AI answers."
