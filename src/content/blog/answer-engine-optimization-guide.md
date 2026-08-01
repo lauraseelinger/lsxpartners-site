@@ -16,7 +16,7 @@ faqs:
     answer: "Answer engine optimization isn’t optional anymore. It’s the layer between your content strategy and where your customers are actually searching for answers. The shift from typing keywords into Google to describing problems to AI tools isn’t slowing down. It’s accelerating."
 ---
 
-The average Google search is 4.2 words. The average ChatGPT prompt is 23 words.
+The average Google search is 3.4 words. The average ChatGPT prompt is 23 words.
 
 That difference tells you everything about where search is heading. People aren’t typing fragmented keywords into a search bar anymore. They’re describing full problems, with details and specifics, to AI tools that give them one synthesized answer instead of a page of links to sort through.
 
@@ -24,7 +24,7 @@ And when that AI delivers its answer, it cites a handful of sources. Not a page 
 
 Answer engine optimization is how you become one of those citations.
 
-If you’ve been doing SEO for years and seeing solid results, this isn’t about scrapping what works. It’s about adding a layer that most brands and most marketing teams haven’t built yet. The traffic patterns are already shifting in ways you can see in real data. One of my clients still holds the number one organic ranking for a keyword that has historically been one of their strongest traffic drivers. Over the course of 2025, referred clicks from that single keyword dropped 67%. Same ranking, same position — but the clicks disappeared because AI started answering the question before anyone needed to click through to their site.
+If you’ve been doing SEO for years and seeing solid results, this isn’t about scrapping what works. It’s about adding a layer that most brands and most marketing teams haven’t built yet. The traffic patterns are already shifting in ways you can see in real data. One of my clients still holds the number one organic ranking for a keyword that has historically been one of their strongest traffic drivers. Over the course of 2025, referred clicks from that single keyword dropped 67%. Same ranking, same position — but the clicks disappeared because AI started answering the question before anyone needed to click through to their site. ([Why brands with strong SEO go invisible in AI](/blog/why-strong-seo-invisible-in-ai) is its own whole problem.)
 
 This guide covers what answer engine optimization actually is, how AI systems decide what to cite, what makes it different from traditional SEO and how to start structuring your content so AI tools pull from it when your customers ask questions.
 
