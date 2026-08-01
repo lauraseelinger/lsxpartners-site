@@ -38,7 +38,7 @@ The reason timing matters this much is that there's no settled playbook yet. The
 
 ## Isn't this just SEO with a new name?
 
-It overlaps, and a good SEO foundation still helps. But no, it's a different game. SEO gets a page of yours to rank. AI visibility gets your brand named and recommended inside an answer the AI writes — which means it has to know who you are, trust what it knows, and decide you're relevant to that exact question. It assembles that from your site, but also from [third-party sources](/blog/ai-citations-vs-brand-mentions) across the whole web. A brand can dominate organic search and still be invisible in AI, because the AI is reading the internet's whole opinion of you, not just the page you optimized. (If you're weighing who should own this, I wrote a [full breakdown of AEO vs. SEO here](/blog/ai-visibility-consultant-vs-seo-agency).)
+It overlaps, and a good SEO foundation still helps. But no, it's a different game. SEO gets a page of yours to rank. AI visibility gets your brand named and recommended inside an answer the AI writes — which means it has to know who you are, trust what it knows, and decide you're relevant to that exact question. It assembles that from your site, but also from [third-party sources](/blog/ai-citations-vs-brand-mentions) across the whole web. A brand can dominate organic search and [still be invisible in AI](/blog/why-strong-seo-invisible-in-ai), because the AI is reading the internet's whole opinion of you, not just the page you optimized. (If you're weighing who should own this, I wrote a [full breakdown of AEO vs. SEO here](/blog/ai-visibility-consultant-vs-seo-agency).)
 
 ## What are the five questions every CMO should be able to answer?
 
