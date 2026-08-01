@@ -16,11 +16,11 @@ faqs:
     answer: "Keep the SEO, then add what it misses: audit where you stand across the engines, optimize for the real questions buyers ask AI, make content answer-first so it's extractable, get into the third-party sources AI trusts, and measure citations instead of rankings."
 ---
 
-Last week a TikTok of mine landed on the FYP of an SEO marketer, and he could *not* let it go — comment after comment insisting AI visibility is "just SEO."
+A TikTok of mine landed on the FYP of an SEO marketer, and he could *not* let it go — comment after comment insisting AI visibility is "just SEO."
 
-But if it were all just SEO, I don't know how my business would be this slammed right now. Your own analytics probably prove my point — your traditional search traffic is sliding, and you've got no real read on how you show up in AI. The marketers who'll win aren't dying on this hill — they're taking the "yes, and" route: yes, SEO still matters, AND there's a new layer on top of it. The ones insisting nothing changed are the ones about to watch their clients go invisible in AI.
+But if it were all just SEO, I don't know how my business would be this slammed right now. Your own brand's analytics probably prove my point — your traditional search traffic is sliding, and you've got no real read on how you show up in AI. The marketing teams getting this right aren't dying on this hill — they're taking the "yes, and" route: yes, SEO still matters, AND there's a new layer on top of it. The ones insisting nothing changed are the ones about to watch their clients go invisible in AI.
 
-Because brands with strong traditional search go invisible in AI even when their SEO is great — and it comes down to three shifts: people describe whole situations to AI instead of typing keywords, AI cites *sources* instead of ranking *pages*, and each engine pulls from a different set of places. You can own page one of Google and still be missing from the answer AI hands your buyer.
+Because brands with strong traditional search go invisible in AI even when their SEO is great. People describe whole situations to AI instead of typing keywords, AI cites *sources* instead of ranking *pages*, and each engine pulls from a different set of places — so a brand can own page one of Google and still be missing from the answer AI hands your buyer.
 
 ## How does a brand rank #1 and still not show up in AI?
 
