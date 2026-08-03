@@ -95,9 +95,9 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 </ul>
 </div>
 
-<div style="background:#eef3f4;border:1px solid #cdd9dc;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.6rem 0 1.1rem;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#5a7d86;margin-bottom:0.45rem;">After launch · Measuring AI visibility</strong>
-<p style="margin:0;">This one isn't a build requirement — it's what comes next. AI visibility won't move on launch day; the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</p>
+<div style="background:#f3f4e9;border:1px solid #d4d6b0;border-left:6px solid #8b8c4a;border-radius:8px;padding:1.1rem 1.35rem;margin:1.6rem 0 1.1rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#6f7139;margin-bottom:0.45rem;">After launch · Measuring AI visibility</strong>
+<p style="margin:0;">This one isn't a build requirement — it's what comes next. AI visibility won't move on launch day; the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. My <a href="/blog/how-to-audit-ai-visibility">step-by-step guide to auditing AI visibility</a> walks through exactly how to check. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</p>
 </div>
 
 ## Isn't this just the SEO my agency already does?
@@ -113,6 +113,8 @@ That's what a strategist is for. I build the AI-visibility strategy — the blue
 That blueprint is a prioritized, page-by-page plan for how the site should be built and structured to get cited in AI — and I build it for whoever's doing the redesign. If you're hiring an agency, I work alongside them so they build the AI-visibility layer from it. If your team is building in-house, it's the spec they build to. Either way, you don't need to know every technical answer — you need someone making sure the site gets built to be found in AI.
 
 The best time to bake AI visibility into your website is while you're already rebuilding it. The worst time is six months after launch, when you're paying to retrofit the thing that should've been a line in the RFP.
+
+---
 
 I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the whole thing I do. If you've got a redesign coming — as the brand planning it or the agency running it — and you want the AI-visibility requirements mapped before the build starts, [that's exactly the conversation to have](/contact).
 
