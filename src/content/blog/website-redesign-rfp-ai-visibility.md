@@ -76,9 +76,9 @@ Here's the checklist. Put these in the requirements section of the RFP so they g
 </div>
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 · The migration redirect map — the one people forget</strong>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 · A migration plan that protects your current visibility</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Require a full crawl of the current site, a URL-by-URL map, and 301 redirects in place at launch, plus rankings <em>and</em> AI-citation monitoring after. It's one of the most common ways a redesign wrecks visibility, and one of the easiest to write into a contract.</li>
+<li>A redesign changes your URLs, templates, and structure all at once — and the ranking and citation equity you've built can go with them if the move isn't handled carefully. This is coordination work between strategy and the dev team: a full crawl of the current site, a URL-by-URL map, 301 redirects in place at launch, and rankings-and-AI-citation monitoring after.</li>
 </ul>
 </div>
 
@@ -90,37 +90,23 @@ Here's the checklist. Put these in the requirements section of the RFP so they g
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · The emerging, low-cost stuff</strong>
-<ul style="margin:0;padding-left:1.15rem;">
-<li>Ask about an <code>llms.txt</code> file — an emerging, low-cost file meant to flag your canonical content to AI crawlers. Adoption is still early and the payoff is unproven, but it costs almost nothing to include, so it's worth putting on the table.</li>
-</ul>
-</div>
-
-<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">8 · Separate AI-visibility measurement</strong>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · Separate AI-visibility measurement</strong>
 <ul style="margin:0;padding-left:1.15rem;">
 <li>Make "measure AI-answer visibility, separately from classic rankings" a named deliverable. You can't manage what you don't measure, and you can't fully control what AI says about you — so you budget to <em>watch</em> it. If the agency only reports Google rankings, you'll have no idea whether the AI work worked.</li>
 </ul>
 </div>
 
-## What should you actually ask the agency in the pitch?
-
-A few questions separate the agencies who do this from the ones who'll nod and hope:
-
-- **How will you protect our rankings and citations through migration?** (If there's no crawl-and-301 plan, that's your answer.)
-- **How will you measure AI-answer visibility, separately from rankings?**
-- **Is schema and AEO in scope as acceptance criteria, or assumed?**
-- **Show us the content model** — how does a non-developer publish a new answer-first page and add structured data?
-
-Then score the proposals on their SEO/AEO answers, not just how the mockups look. The prettiest deck and the site that shows up in AI are not always the same vendor.
-
 ## Isn't this just the SEO my agency already does?
 
 It overlaps, and a good agency's SEO foundation genuinely helps. But "we do SEO" is not the same promise as "we'll make you show up in AI answers," and if you leave AEO/GEO unstated, you'll get the first one and assume you got the second. [The consultant-vs-agency breakdown](/blog/ai-visibility-consultant-vs-seo-agency) goes deeper on where that line sits — but for the RFP, the fix is simple: name it, so it gets built and measured on purpose instead of skipped by accident.
 
-## Where the blueprint comes in
+## You don't have to know how to build any of this
 
-Everything above is what I map in an AI visibility blueprint — a prioritized, page-by-page plan for exactly how a site should be built and structured to get cited in AI. I deliver it two ways. To **brands**, so the requirements are locked *before* the RFP goes out and you're briefing agencies from a real spec instead of a wish list. And to the **agencies** themselves, who bring me in to build the AI-visibility layer of a redesign they're already running for their client. Either way, the redesign gets built against a plan — not a hope that AEO shows up on its own.
+Reading that list, you might be thinking you can't personally verify half of it. You don't have to. Putting it in the RFP isn't about you policing schema or checking redirects yourself — it's about making sure the work is scoped and owned so it actually gets built instead of skipped.
+
+That's what the strategist is for, and it's how I work: I sit between the strategy and the web development team, translating what AI visibility needs into what the developers actually build — from the sitemap and site architecture through the templates, the structured data, the migration, and the measurement. You bring the business goals, the dev team builds the site, and I make sure the AI-visibility best practices get woven in between the two so nothing on this list falls through the cracks.
+
+That's exactly what an AI visibility blueprint is — a prioritized, page-by-page plan for how the site should be built and structured to get cited in AI. I deliver it two ways: to **brands**, so the requirements are locked *before* the RFP goes out and you're briefing your agency from a real spec instead of a wish list; and to the **agencies** themselves, who bring me in to build the AI-visibility layer of a redesign they're already running. Either way, you don't need to know every technical answer — you need someone making sure the site gets built to be found in AI.
 
 The best time to bake AI visibility into your website is while you're already rebuilding it. The worst time is six months after launch, when you're paying to retrofit the thing that should've been a line in the RFP.
 
