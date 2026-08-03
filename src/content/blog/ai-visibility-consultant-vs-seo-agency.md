@@ -50,7 +50,7 @@ So the work isn't "what keywords do we rank for." It's "what is my buyer actuall
 
 Roughly: the SEO agency's world is your website. The AI visibility consultant's world is the whole internet — because that's where AI reads.
 
-Your website should be the foundation. Get it optimized, get it clean, check that box. But AI builds its answer from everywhere — Reddit, YouTube, LinkedIn, industry publications, review sites. The brands that get cited are the ones showing up clearly and consistently across every place AI pulls from. A flashy homepage alone doesn't get you there.
+Your website should be the foundation. Get it optimized, get it clean, check that box — and if a redesign's coming, [put AI visibility in the RFP](/blog/website-redesign-rfp-ai-visibility) so it's built in from the start. But AI builds its answer from everywhere — Reddit, YouTube, LinkedIn, industry publications, review sites. The brands that get cited are the ones showing up clearly and consistently across every place AI pulls from. A flashy homepage alone doesn't get you there.
 
 So a big part of my job is figuring out how you become part of those third-party conversations, instead of letting the entire internet write your story for you. Most SEO agencies never touch that.
 
