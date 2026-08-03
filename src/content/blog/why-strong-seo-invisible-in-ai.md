@@ -40,7 +40,7 @@ No — and that's why "I rank on Google" only gets you part of the way. ChatGPT 
 
 ## So how do you get your brand into AI answers?
 
-Keep your SEO — it's the foundation, and AI often pulls from what already ranks. Then layer on what it misses — audit where you actually stand across the engines ([here's how](/blog/how-to-audit-ai-visibility)), dig into the real questions your buyers ask AI, make your content answer-first so it's extractable, get into the third-party sources each engine trusts, and measure citations instead of rankings. The full playbook is in my [answer engine optimization guide](/blog/answer-engine-optimization-guide) — and if you're a big brand, [here's what that looks like at your scale](/blog/ai-visibility-for-cmos).
+Keep your SEO — it's the foundation, and AI often pulls from what already ranks. Then layer on what it misses — audit where you actually stand across the engines ([here's how](/blog/how-to-audit-ai-visibility)), dig into the real questions your buyers ask AI, make your content answer-first so it's extractable, get into the third-party sources each engine trusts, and measure citations instead of rankings. The full playbook is in my [answer engine optimization guide](/blog/answer-engine-optimization-guide) — and if you're a big brand, [here's what that looks like at your scale](/blog/ai-visibility-for-cmos). If a redesign's on the table, [here's how to bake it into the RFP](/blog/website-redesign-rfp-ai-visibility).
 
 Strong SEO got you to page one. It won't get you into the answer on its own — and that gap is exactly where I see brands losing ground right now.
 
