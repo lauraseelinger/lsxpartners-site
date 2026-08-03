@@ -41,10 +41,17 @@ It means turning AI visibility into specific, checkable requirements — the kin
 
 ## What AI-visibility requirements should go in your website RFP?
 
-Here's the checklist. Put these in the requirements section of the RFP so they get built on purpose, then go back down the list at launch to confirm each one is actually there.
+Here's the checklist. It starts with the foundation that shapes everything else, then the build requirements you hand to the agency and verify at launch.
+
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.45rem;">The foundation · Audience intelligence</strong>
+<p style="margin:0 0 0.6rem;">Before a single page gets designed, you need to know what your buyers actually ask AI about your category — in their real words, not the terms your team assumes. That's <strong>audience intelligence</strong>, and it's a discipline within a discipline — its own research practice that sits under AI visibility and drives everything downstream.</p>
+<p style="margin:0 0 0.6rem;">It's what tells you which pages need to exist, what question each one has to answer, and how the whole site should be structured — so your sitemap is built around real demand instead of guesswork. Every requirement below only pays off when it's built on top of this.</p>
+<p style="margin:0;"><a href="/blog/audience-intelligence">More on what audience intelligence is and why strategy needs it →</a></p>
+</div>
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · A crawlable, extractable foundation</strong>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · A crawlable, extractable site</strong>
 <ul style="margin:0;padding-left:1.15rem;">
 <li>Clean semantic HTML, fast Core Web Vitals, logical URL structure — the stuff AI reads through, not around.</li>
 <li>Confirmation that <strong>AI crawlers can actually reach the site</strong> (plenty of brands are <a href="/blog/cloudflare-blocking-ai-crawlers">blocking the AI bots at the CDN</a> without realizing it).</li>
