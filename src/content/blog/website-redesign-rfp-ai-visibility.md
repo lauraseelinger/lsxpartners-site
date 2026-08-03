@@ -27,7 +27,7 @@ Even better. Your clients pay you to be the expert — and AI visibility is one 
 
 ## Why does AI visibility fall out of a website redesign?
 
-Because it's an emerging space, and the understanding of it is uneven. Not every agency — or even every seasoned SEO — is deep on all of it yet, or prioritizes it, because the ground is still moving. So it's easy for AI visibility to get underweighted or skipped, not out of neglect but because it's genuinely new.
+Because it's an emerging space, and the understanding of it is uneven. Not every agency — or even every seasoned SEO — has gone deep on all of it or made it a priority yet, because the ground is still shifting under everyone. So it's easy for AI visibility to get underweighted or skipped, not out of neglect but because it's genuinely new.
 
 And here's the part that makes it different from a normal requirement: AI visibility isn't another line item you add to the site. It's woven in from the sitemap and information-architecture phase — how the site is structured, how your entities relate, how content is templated. Bolt it on at the end and you're retrofitting; build it in from the sitemap and it's part of the foundation. That's why it belongs in the RFP up front, not raised after the wireframes are already approved.
 
