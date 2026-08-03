@@ -1,0 +1,124 @@
+---
+title: "How to Build AI Visibility Into Your Website Redesign RFP (AEO/GEO Checklist)"
+description: "Your website redesign RFP needs an AI visibility section. Here's the AEO/GEO checklist to include — so you pick the right agency and don't launch invisible in AI."
+pubDate: 2026-08-03
+register: punchy-personal
+tags: ["ai-visibility", "aeo", "geo", "website-redesign", "rfp", "marketing-pov"]
+heroImage: "/images/blog/website-redesign-rfp-ai-visibility.jpg"
+faqs:
+  - question: "Why does AI visibility get left out of a website redesign?"
+    answer: "Because it's easy to assume 'SEO' already covers it. AEO/GEO is a newer, separate layer, so if it isn't named specifically in the RFP, there's no guarantee it gets scoped, quoted, or built — and it's the first thing to fall out when timelines and budgets tighten. You launch a gorgeous new site that's invisible in AI the day it goes live."
+  - question: "What does it mean to put AEO/GEO in a website RFP?"
+    answer: "It means writing AI visibility in as explicit, measurable acceptance criteria the agency is graded and paid against — structured data on templates, answer-first content structure, a full migration redirect map, and separate AI-answer measurement — not as assumed deliverables you hope come along with 'good SEO.'"
+  - question: "Isn't AI visibility just the SEO my agency already does?"
+    answer: "It overlaps, but it isn't the same, and 'we do SEO' is not the same as 'we'll make you show up in AI answers.' Specify AEO/GEO explicitly in the RFP so it's built and measured on purpose, rather than assumed and skipped."
+  - question: "What's the biggest AI-visibility risk in a redesign?"
+    answer: "The migration. If the agency doesn't crawl the current site, map every URL, and put 301 redirects in place at launch, you lose the ranking and citation equity you spent years building — and both your search and AI visibility crater overnight. Require a full redirect map and post-launch monitoring in writing."
+  - question: "How do I know if an agency can actually deliver AI visibility?"
+    answer: "Ask them, in the pitch, how they'll protect rankings through migration, how they'll measure AI-answer visibility separately from classic rankings, and whether schema and AEO are in scope as acceptance criteria. Score the proposal on SEO/AEO coverage, not just how the mockups look."
+---
+
+If you're in the RFP phase for a new website, there's a new section to include that you haven't before — AI visibility. It shapes which agency you choose and what they build, and leaving it out is how brands end up launching a beautiful new site with AI blinders on — great-looking, ranking fine, and still invisible the second a buyer asks AI about their category. Here's exactly what to include — the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
+
+<aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
+<strong style="display:block;font-size:1.2rem;color:#b55434;margin-bottom:0.5rem;">If you're the agency reading this 👀 — even better.</strong>
+Your clients pay you to be the expert — and AI visibility is one you can't fake-it-till-you-make-it your way through. It's starting to show up in RFPs, and when it lands on your desk, "we'll figure it out" isn't what they hired you for. So get ahead of it: build these requirements into your redesign process now, or bring me in to build the AI-visibility layer with you.
+</aside>
+
+## Why does AI visibility fall out of a website redesign?
+
+Because it's an emerging space, and the understanding of it is uneven. Not every agency — or even every seasoned SEO — has gone deep on all of it or made it a priority yet, because the ground is still shifting under everyone. So it's easy for AI visibility to get underweighted or skipped, not out of neglect but because it's genuinely new.
+
+And here's the part that makes it different from a normal requirement: AI visibility isn't another line item you add to the site. It's woven in from the sitemap and information-architecture phase — how the site is structured, how your entities relate, how content is templated. Add it at the end and you're retrofitting; build it in from the sitemap and it's part of how the site is made. That's why it belongs in the RFP up front, not raised after the wireframes are already approved.
+
+A redesign is also the riskiest time to leave it unnamed, because it's when your existing visibility is most exposed. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
+
+## What does "put AEO in the RFP" actually mean?
+
+It means turning AI visibility into specific, checkable requirements — the kind you can confirm were actually delivered — instead of a general ask you assume is handled.
+
+## What AI-visibility requirements should go in your website RFP?
+
+Here's the checklist. It starts with the foundation that shapes everything else, then the build requirements you hand to the agency, and one thing to keep watching after launch.
+
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.45rem;">The foundation · Audience intelligence</strong>
+<p style="margin:0 0 0.6rem;">Before a single page gets designed, you need to know what your buyers actually ask AI about your category — in their real words, not the terms your team assumes. That's <strong>audience intelligence</strong>, and it's a discipline within a discipline — its own research practice that sits under AI visibility and drives everything downstream.</p>
+<p style="margin:0 0 0.6rem;">This is what separates it from traditional SEO. Keyword research captured the short phrases people typed into Google — the average search is about 3.4 words. People describe whole situations to AI in full sentences, around 23 words on average, so an old keyword list misses how buyers actually ask now.</p>
+<p style="margin:0 0 0.6rem;">Audience intelligence is what tells you which pages need to exist, what question each one has to answer, and how the whole site should be structured — so your sitemap is built around real demand instead of guesswork. Every requirement below only pays off when it's built on top of this.</p>
+<p style="margin:0;"><a href="/blog/audience-intelligence">More on what audience intelligence is and why strategy needs it →</a></p>
+</div>
+
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · A crawlable, extractable site</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Clean semantic HTML, fast Core Web Vitals, logical URL structure — the stuff AI reads through, not around.</li>
+<li>Confirmation that <strong>AI crawlers can actually reach the site</strong> (plenty of brands are <a href="/blog/cloudflare-blocking-ai-crawlers">blocking the AI bots at the CDN</a> without realizing it).</li>
+<li><strong>Answer-first content structure</strong>: question-based headings followed by a concise, liftable answer, with the depth for humans below it — what makes a page extractable into an AI answer.</li>
+</ul>
+</div>
+
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Structured data at the template level</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Schema built into the templates, not added page by page: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.</li>
+<li>Validated before launch — "structured data present and error-free," checked, not assumed.</li>
+</ul>
+</div>
+
+<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 · Entity hubs and consistent entity data</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Your key products, services, and topics get reusable reference pages that act as entity hubs AI can anchor to.</li>
+<li>The same name, description, and core facts about your brand appear consistently across the site <em>and</em> your third-party listings — AI trusts a brand it can recognize as one clear entity.</li>
+</ul>
+</div>
+
+<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 · E-E-A-T signals built into the template</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>E-E-A-T — experience, expertise, authoritativeness, and trustworthiness — is how both search and AI judge whether your content is credible enough to cite. Show it with author credentials, a real byline (and an expert-review byline where credibility matters), published and updated dates, and citations to primary sources, all built into the article template so every piece of content carries them by default.</li>
+</ul>
+</div>
+
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 · A migration plan that protects your current visibility</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>A redesign changes your URLs, templates, and structure all at once — and the ranking and citation equity you've built can go with them if the move isn't handled carefully. This is coordination work between strategy and the dev team: a full crawl of the current site, a URL-by-URL map, 301 redirects in place at launch, and rankings-and-AI-citation monitoring after.</li>
+</ul>
+</div>
+
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">6 · AEO structure built into the authoring tools</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Your content team should be able to keep the AEO structure intact without pulling in a developer every time. Give them templates with the answer-first format built in and building blocks — like an FAQ module — that output the right structured data on their own, so when a marketer adds or updates a page, the question-headings, schema, and extractable answers come along with it automatically.</li>
+</ul>
+</div>
+
+<div style="background:#f3f4e9;border:1px solid #d4d6b0;border-left:6px solid #8b8c4a;border-radius:8px;padding:1.1rem 1.35rem;margin:1.6rem 0 1.1rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#6f7139;margin-bottom:0.45rem;">After launch · Measuring AI visibility</strong>
+<p style="margin:0;">This one isn't a build requirement — it's what comes next. AI visibility won't move on launch day; the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. My <a href="/blog/how-to-audit-ai-visibility">step-by-step guide to auditing AI visibility</a> walks through exactly how to check. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</p>
+</div>
+
+## Isn't this just the SEO my agency already does?
+
+It overlaps, and a good agency's SEO work genuinely helps. But "we do SEO" is not the same promise as "we'll make you show up in AI answers," and if you leave AEO/GEO unstated, you may get the first and assume you got the second. [I go deeper on the difference between an SEO agency and AI-visibility work here](/blog/ai-visibility-consultant-vs-seo-agency) — but for the RFP, the fix is simple. Name AEO/GEO explicitly, so it gets built on purpose instead of skipped by accident.
+
+## You don't have to know how to build any of this
+
+Reading that list, you might be thinking you can't personally verify half of it. You don't have to. Putting it in the RFP isn't about you policing schema or checking redirects yourself — it's about making sure the work is scoped and owned so it actually gets built instead of skipped.
+
+That's what a strategist is for. I build the AI-visibility strategy — the blueprint — and work directly with the web development team so what's mapped actually makes it into the site, from the sitemap and architecture through the templates, structured data, migration, and measurement. You bring the business goals, the devs build the site, and I make sure the AI-visibility best practices get woven in so nothing on this list falls through the cracks.
+
+That blueprint is a prioritized, page-by-page plan for how the site should be built and structured to get cited in AI — and I build it for whoever's doing the redesign. If you're hiring an agency, I work alongside them so they build the AI-visibility layer from it. If your team is building in-house, it's the spec they build to. Either way, you don't need to know every technical answer — you need someone making sure the site gets built to be found in AI.
+
+The best time to bake AI visibility into your website is while you're already rebuilding it. The worst time is six months after launch, when you're paying to retrofit the thing that should've been a line in the RFP.
+
+---
+
+I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the whole thing I do. If you've got a redesign coming — as the brand planning it or the agency running it — and you want the AI-visibility requirements mapped before the build starts, [that's exactly the conversation to have](/contact).
+
+## Sources
+
+- Average Google search query ~3.4 words (US): Growth Memo, 2025.
+- Average AI/LLM prompt ~23 words: SOCi 2026 Visibility Index.
