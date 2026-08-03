@@ -46,7 +46,8 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.45rem;">The foundation · Audience intelligence</strong>
 <p style="margin:0 0 0.6rem;">Before a single page gets designed, you need to know what your buyers actually ask AI about your category — in their real words, not the terms your team assumes. That's <strong>audience intelligence</strong>, and it's a discipline within a discipline — its own research practice that sits under AI visibility and drives everything downstream.</p>
-<p style="margin:0 0 0.6rem;">It's what tells you which pages need to exist, what question each one has to answer, and how the whole site should be structured — so your sitemap is built around real demand instead of guesswork. Every requirement below only pays off when it's built on top of this.</p>
+<p style="margin:0 0 0.6rem;">This is what separates it from traditional SEO. Keyword research captured the short phrases people typed into Google — the average search is about 3.4 words. People describe whole situations to AI in full sentences, around 23 words on average, so an old keyword list misses how buyers actually ask now.</p>
+<p style="margin:0 0 0.6rem;">Audience intelligence is what tells you which pages need to exist, what question each one has to answer, and how the whole site should be structured — so your sitemap is built around real demand instead of guesswork. Every requirement below only pays off when it's built on top of this.</p>
 <p style="margin:0;"><a href="/blog/audience-intelligence">More on what audience intelligence is and why strategy needs it →</a></p>
 </div>
 
@@ -118,3 +119,8 @@ That blueprint is a prioritized, page-by-page plan for how the site should be bu
 The best time to bake AI visibility into your website is while you're already rebuilding it. The worst time is six months after launch, when you're paying to retrofit the thing that should've been a line in the RFP.
 
 I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the whole thing I do. If you've got a redesign coming — as the brand planning it or the agency running it — and you want the AI-visibility requirements mapped before the build starts, [that's exactly the conversation to have](/contact).
+
+## Sources
+
+- Average Google search query ~3.4 words (US): Growth Memo, 2025.
+- Average AI/LLM prompt ~23 words: SOCi 2026 Visibility Index.
