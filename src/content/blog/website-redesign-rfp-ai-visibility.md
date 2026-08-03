@@ -18,7 +18,7 @@ faqs:
     answer: "Ask them, in the pitch, how they'll protect rankings through migration, how they'll measure AI-answer visibility separately from classic rankings, and whether schema and AEO are in scope as acceptance criteria. Score the proposal on SEO/AEO coverage, not just how the mockups look."
 ---
 
-An agency builds and bills what you asked for. So if you're redesigning your website and you want to still show up when your buyers ask AI about your category, AI visibility has to be written into the RFP as real, measurable requirements the agency gets graded and paid against — not assumed deliverables you hope ride along with "good SEO." Here's exactly what to include. It's the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
+If your brand is redesigning its website, the RFP is where AI visibility gets built in — or left out. Leave it out and the site launches with AI blinders on: it'll look great, rank fine, and still be invisible the second a buyer asks AI about your category. So before that RFP goes out, fold AEO/GEO into the checklist as real, measurable requirements — not something you assume rides along with "good SEO." Here's exactly what to include. It's the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;color:#b55434;margin-bottom:0.4rem;">If you're the agency reading this 👀</strong>
