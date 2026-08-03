@@ -91,16 +91,16 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">6 · A CMS your team can actually publish in</strong>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">6 · AEO structure built into the authoring tools</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>AEO isn't a one-time setup; it needs ongoing, answer-first content. So the platform has to let non-technical marketers publish and update content on a cadence, with a review workflow — not file a developer ticket every time.</li>
+<li>Your content team should be able to keep the AEO structure intact without pulling in a developer every time. Give them templates with the answer-first format built in, ready-made FAQ blocks, and schema fields right in the editor — so when a marketer builds or updates a page, the question-headings, structured data, and extractable answers come along with it automatically.</li>
 </ul>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · Separate AI-visibility measurement</strong>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · A plan to measure AI visibility over time</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Make "measure AI-answer visibility, separately from classic rankings" a named deliverable. You can't manage what you don't measure, and you can't fully control what AI says about you — so you budget to <em>watch</em> it. If the agency only reports Google rankings, you'll have no idea whether the AI work worked.</li>
+<li>AI visibility won't move on launch day — the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</li>
 </ul>
 </div>
 
