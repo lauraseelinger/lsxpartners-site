@@ -18,7 +18,7 @@ faqs:
     answer: "Ask them, in the pitch, how they'll protect rankings through migration, how they'll measure AI-answer visibility separately from classic rankings, and whether schema and AEO are in scope as acceptance criteria. Score the proposal on SEO/AEO coverage, not just how the mockups look."
 ---
 
-If your brand is redesigning its website, the RFP is where AI visibility gets built in — or left out. Leave it out and the site launches with AI blinders on: it'll look great, rank fine, and still be invisible the second a buyer asks AI about your category. So before that RFP goes out, fold AEO/GEO into the checklist as real, measurable requirements — not something you assume rides along with "good SEO." Here's exactly what to include. It's the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
+If your brand is redesigning its website, the RFP is where AI visibility gets built in — or left out. Leave it out and you may unknowingly launch a beautiful new site with AI blinders on — it'll look great, rank fine, and still be invisible the second a buyer asks AI about your category. So before that RFP goes out, fold AEO/GEO into the checklist as real, measurable requirements — not something you assume rides along with "good SEO." Here's exactly what to include. It's the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;color:#b55434;margin-bottom:0.4rem;">If you're the agency reading this 👀</strong>
@@ -27,9 +27,11 @@ Even better. Your clients pay you to be the expert — and AI visibility is one 
 
 ## Why does AI visibility fall out of a website redesign?
 
-Usually because everyone assumes it's already covered. "SEO best practices" is on every RFP, and AI visibility sounds close enough that it's easy to figure it's baked in. But AEO/GEO is a newer, separate layer, and if it isn't named specifically, there's no guarantee it lands in the scope, the quote, or the build.
+Because it's an emerging space, and the understanding of it is uneven. Not every agency — or even every seasoned SEO — is deep on all of it yet, or prioritizes it, because the ground is still moving. So it's easy for AI visibility to get underweighted or skipped, not out of neglect but because it's genuinely new.
 
-And a redesign is the riskiest time to leave it unnamed, because it's when your existing visibility is most exposed. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
+And here's the part that makes it different from a normal requirement: AI visibility isn't another line item you add to the site. It's woven in from the sitemap and information-architecture phase — how the site is structured, how your entities relate, how content is templated. Bolt it on at the end and you're retrofitting; build it in from the sitemap and it's part of the foundation. That's why it belongs in the RFP up front, not raised after the wireframes are already approved.
+
+A redesign is also the riskiest time to leave it unnamed, because it's when your existing visibility is most exposed. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
 
 ## What does "put AEO in the RFP" actually mean?
 
@@ -76,7 +78,7 @@ Here's the checklist. Put these in the requirements section of the RFP so they g
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 · The migration redirect map — the one people forget</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Require a full crawl of the current site, a URL-by-URL map, and 301 redirects in place at launch, plus rankings <em>and</em> AI-citation monitoring after. It's the most common way a redesign wrecks visibility, and the easiest one to write into a contract.</li>
+<li>Require a full crawl of the current site, a URL-by-URL map, and 301 redirects in place at launch, plus rankings <em>and</em> AI-citation monitoring after. It's one of the most common ways a redesign wrecks visibility, and one of the easiest to write into a contract.</li>
 </ul>
 </div>
 
@@ -90,7 +92,7 @@ Here's the checklist. Put these in the requirements section of the RFP so they g
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · The emerging, low-cost stuff</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Ask for an <code>llms.txt</code> file. It's cheap, it's new, and it points AI crawlers at your canonical content. No reason not to.</li>
+<li>Ask about an <code>llms.txt</code> file — an emerging, low-cost file meant to flag your canonical content to AI crawlers. Adoption is still early and the payoff is unproven, but it costs almost nothing to include, so it's worth putting on the table.</li>
 </ul>
 </div>
 
