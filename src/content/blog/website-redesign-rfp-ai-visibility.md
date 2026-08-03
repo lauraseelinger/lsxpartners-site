@@ -27,15 +27,15 @@ Even better. Your clients pay you to be the expert — and AI visibility is one 
 
 ## Why does AI visibility fall out of a website redesign?
 
-Because a redesign runs on the RFP, and most RFPs still read like it's 2018 — responsive design, a CMS the marketing team can use, "SEO best practices," done. AEO and GEO aren't in there, so they're not in the scope, the quote, or the build.
+Usually because everyone assumes it's already covered. "SEO best practices" is on every RFP, and AI visibility sounds close enough that it's easy to figure it's baked in. But AEO/GEO is a newer, separate layer, and if it isn't named specifically, there's no guarantee it lands in the scope, the quote, or the build.
 
-And a redesign is the *worst* time to lose it, because a redesign is when your existing visibility is most at risk. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
+And a redesign is the riskiest time to leave it unnamed, because it's when your existing visibility is most exposed. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
 
 ## What does "put AEO in the RFP" actually mean?
 
-It means writing AI visibility in as **explicit, measurable acceptance criteria** — the things the agency has to deliver and prove — not as assumed deliverables you hope ride along with "good SEO."
+It means turning AI visibility into specific, checkable requirements — the kind you can confirm were actually delivered — instead of a general ask you assume is handled.
 
-There's a real difference between "the site should follow SEO best practices" (a sentence an agency can wave at) and "every content template ships with the following structured data, validated before launch" (a thing they either did or didn't do). Acceptance criteria are the second kind. They're what you grade the pitch on and what you check at launch. Vague wishes get value-engineered out; specific criteria get built.
+"Follow SEO best practices" is easy to agree to and impossible to verify. "Every content template includes validated structured data at launch" is either true or it isn't. That second kind is what belongs in your RFP: requirements concrete enough that on launch day you can go down the list and see whether each one is really there. The vague asks are the easy ones to skip; the specific ones get built.
 
 ## What AI-visibility requirements should go in your website RFP?
 
