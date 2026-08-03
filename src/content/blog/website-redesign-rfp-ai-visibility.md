@@ -21,15 +21,15 @@ faqs:
 If you're in the RFP phase for a new website, there's a new section to include that you haven't before — AI visibility. It shapes which agency you choose and what they build, and leaving it out is how brands end up launching a beautiful new site with AI blinders on — great-looking, ranking fine, and still invisible the second a buyer asks AI about their category. Here's exactly what to include — the same checklist I map in the AI visibility blueprints I build for brands and agencies, so you can pull straight from it.
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;color:#b55434;margin-bottom:0.4rem;">If you're the agency reading this 👀</strong>
-Even better. Your clients pay you to be the expert — and AI visibility is one you can't fake-it-till-you-make-it your way through. It's starting to show up in RFPs, and when it lands on your desk, "we'll figure it out" isn't what they hired you for. So get ahead of it: build these requirements into your redesign process now, or bring me in to build the AI-visibility layer with you.
+<strong style="display:block;font-size:1.2rem;color:#b55434;margin-bottom:0.5rem;">If you're the agency reading this 👀 — even better.</strong>
+Your clients pay you to be the expert — and AI visibility is one you can't fake-it-till-you-make-it your way through. It's starting to show up in RFPs, and when it lands on your desk, "we'll figure it out" isn't what they hired you for. So get ahead of it: build these requirements into your redesign process now, or bring me in to build the AI-visibility layer with you.
 </aside>
 
 ## Why does AI visibility fall out of a website redesign?
 
 Because it's an emerging space, and the understanding of it is uneven. Not every agency — or even every seasoned SEO — has gone deep on all of it or made it a priority yet, because the ground is still shifting under everyone. So it's easy for AI visibility to get underweighted or skipped, not out of neglect but because it's genuinely new.
 
-And here's the part that makes it different from a normal requirement: AI visibility isn't another line item you add to the site. It's woven in from the sitemap and information-architecture phase — how the site is structured, how your entities relate, how content is templated. Bolt it on at the end and you're retrofitting; build it in from the sitemap and it's part of the foundation. That's why it belongs in the RFP up front, not raised after the wireframes are already approved.
+And here's the part that makes it different from a normal requirement: AI visibility isn't another line item you add to the site. It's woven in from the sitemap and information-architecture phase — how the site is structured, how your entities relate, how content is templated. Add it at the end and you're retrofitting; build it in from the sitemap and it's part of how the site is made. That's why it belongs in the RFP up front, not raised after the wireframes are already approved.
 
 A redesign is also the riskiest time to leave it unnamed, because it's when your existing visibility is most exposed. You're changing URLs, templates, and structure all at once. Handled well, that's your chance to build AI visibility in from the studs. Handled badly, you torch the equity you already had — [the same way strong SEO brands go invisible in AI](/blog/why-strong-seo-invisible-in-ai) when the foundation underneath them shifts and nobody accounts for it.
 
@@ -62,7 +62,7 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Structured data at the template level</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Schema built into the templates, not bolted onto pages one at a time: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.</li>
+<li>Schema built into the templates, not added page by page: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.</li>
 <li>Validated before launch — "structured data present and error-free," checked, not assumed.</li>
 </ul>
 </div>
@@ -105,15 +105,15 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 
 ## Isn't this just the SEO my agency already does?
 
-It overlaps, and a good agency's SEO foundation genuinely helps. But "we do SEO" is not the same promise as "we'll make you show up in AI answers," and if you leave AEO/GEO unstated, you'll get the first one and assume you got the second. [The consultant-vs-agency breakdown](/blog/ai-visibility-consultant-vs-seo-agency) goes deeper on where that line sits — but for the RFP, the fix is simple: name it, so it gets built and measured on purpose instead of skipped by accident.
+It overlaps, and a good agency's SEO work genuinely helps. But "we do SEO" is not the same promise as "we'll make you show up in AI answers," and if you leave AEO/GEO unstated, you may get the first and assume you got the second. [I go deeper on the difference between an SEO agency and AI-visibility work here](/blog/ai-visibility-consultant-vs-seo-agency) — but for the RFP, the fix is simple. Name AEO/GEO explicitly, so it gets built on purpose instead of skipped by accident.
 
 ## You don't have to know how to build any of this
 
 Reading that list, you might be thinking you can't personally verify half of it. You don't have to. Putting it in the RFP isn't about you policing schema or checking redirects yourself — it's about making sure the work is scoped and owned so it actually gets built instead of skipped.
 
-That's what the strategist is for, and it's how I work: I sit between the strategy and the web development team, translating what AI visibility needs into what the developers actually build — from the sitemap and site architecture through the templates, the structured data, the migration, and the measurement. You bring the business goals, the dev team builds the site, and I make sure the AI-visibility best practices get woven in between the two so nothing on this list falls through the cracks.
+That's what a strategist is for. I build the AI-visibility strategy — the blueprint — and work directly with the web development team so what's mapped actually makes it into the site, from the sitemap and architecture through the templates, structured data, migration, and measurement. You bring the business goals, the devs build the site, and I make sure the AI-visibility best practices get woven in so nothing on this list falls through the cracks.
 
-That's exactly what an AI visibility blueprint is — a prioritized, page-by-page plan for how the site should be built and structured to get cited in AI. I deliver it two ways: to **brands**, so the requirements are locked *before* the RFP goes out and you're briefing your agency from a real spec instead of a wish list; and to the **agencies** themselves, who bring me in to build the AI-visibility layer of a redesign they're already running. Either way, you don't need to know every technical answer — you need someone making sure the site gets built to be found in AI.
+That blueprint is a prioritized, page-by-page plan for how the site should be built and structured to get cited in AI — and I build it for whoever's doing the redesign. If you're hiring an agency, I work alongside them so they build the AI-visibility layer from it. If your team is building in-house, it's the spec they build to. Either way, you don't need to know every technical answer — you need someone making sure the site gets built to be found in AI.
 
 The best time to bake AI visibility into your website is while you're already rebuilding it. The worst time is six months after launch, when you're paying to retrofit the thing that should've been a line in the RFP.
 
