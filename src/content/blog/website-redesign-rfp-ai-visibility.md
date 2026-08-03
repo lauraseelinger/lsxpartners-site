@@ -1,13 +1,13 @@
 ---
 title: "The AI-Visibility Checklist for Your Website Redesign RFP"
-description: "AI visibility quietly falls out of most website redesigns because it was never in the RFP. Here's exactly what to require — AEO/GEO as acceptance criteria — so you don't launch a beautiful site that's invisible in AI."
+description: "AI visibility falls out of a website redesign when it isn't written into the RFP. Here's exactly what to require — the AEO/GEO checklist — so you don't launch a beautiful site that's invisible in AI."
 pubDate: 2026-08-05
 register: punchy-personal
 tags: ["ai-visibility", "aeo", "geo", "website-redesign", "rfp", "marketing-pov"]
 # heroImage: "/images/blog/website-redesign-rfp-ai-visibility.jpg"
 faqs:
   - question: "Why does AI visibility get left out of a website redesign?"
-    answer: "Because agencies build and bill what the RFP asks for. If AEO/GEO isn't written in as a real, measurable requirement, it doesn't get scoped, quoted, or built — and it's the first thing to quietly fall out when timelines and budgets tighten. You launch a gorgeous new site that's invisible in AI the day it goes live."
+    answer: "Because it's easy to assume 'SEO' already covers it. AEO/GEO is a newer, separate layer, so if it isn't named specifically in the RFP, there's no guarantee it gets scoped, quoted, or built — and it's the first thing to fall out when timelines and budgets tighten. You launch a gorgeous new site that's invisible in AI the day it goes live."
   - question: "What does it mean to put AEO/GEO in a website RFP?"
     answer: "It means writing AI visibility in as explicit, measurable acceptance criteria the agency is graded and paid against — structured data on templates, answer-first content structure, a full migration redirect map, and separate AI-answer measurement — not as assumed deliverables you hope come along with 'good SEO.'"
   - question: "Isn't AI visibility just the SEO my agency already does?"
@@ -39,35 +39,67 @@ It means turning AI visibility into specific, checkable requirements — the kin
 
 ## What AI-visibility requirements should go in your website RFP?
 
-Here's the checklist. Drop these into the requirements section and the "how we'll evaluate proposals" section both — so agencies know they're being scored on it.
+Here's the checklist. Put these in the requirements section of the RFP so they get built on purpose, then go back down the list at launch to confirm each one is actually there.
 
-**A crawlable, extractable foundation**
-- Clean semantic HTML, fast Core Web Vitals, logical URL structure — the stuff AI reads through, not around.
-- Confirmation that **AI crawlers can actually reach the site** (plenty of brands are quietly [blocking the AI bots at the CDN](/blog/cloudflare-blocking-ai-crawlers) without knowing it).
-- **Answer-first content structure**: question-based headings followed by a concise, liftable answer, with the depth for humans below it. This is what makes a page extractable into an AI answer.
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · A crawlable, extractable foundation</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Clean semantic HTML, fast Core Web Vitals, logical URL structure — the stuff AI reads through, not around.</li>
+<li>Confirmation that <strong>AI crawlers can actually reach the site</strong> (plenty of brands are <a href="/blog/cloudflare-blocking-ai-crawlers">blocking the AI bots at the CDN</a> without realizing it).</li>
+<li><strong>Answer-first content structure</strong>: question-based headings followed by a concise, liftable answer, with the depth for humans below it — what makes a page extractable into an AI answer.</li>
+</ul>
+</div>
 
-**Structured data at the template level**
-- Schema built into the templates, not bolted onto pages one at a time: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.
-- Validated before launch as an acceptance criterion — "structured data present and error-free," checked, not assumed.
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Structured data at the template level</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Schema built into the templates, not bolted onto pages one at a time: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.</li>
+<li>Validated before launch — "structured data present and error-free," checked, not assumed.</li>
+</ul>
+</div>
 
-**Entity hubs and consistent entity data**
-- Your key products/services/topics get reusable reference pages that act as entity hubs AI can anchor to.
-- The same name, description, and core facts about your brand appear consistently across the site *and* your third-party listings — AI trusts a brand it can recognize as one clear entity.
+<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 · Entity hubs and consistent entity data</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Your key products, services, and topics get reusable reference pages that act as entity hubs AI can anchor to.</li>
+<li>The same name, description, and core facts about your brand appear consistently across the site <em>and</em> your third-party listings — AI trusts a brand it can recognize as one clear entity.</li>
+</ul>
+</div>
 
-**E-E-A-T signals in the template, not the afterthought**
-- Author credentials, a real byline (and expert-review byline where credibility matters), published and updated dates, and citations to primary sources — all built into the article template so every piece of content carries them by default.
+<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 · E-E-A-T signals built into the template</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Author credentials, a real byline (and an expert-review byline where credibility matters), published and updated dates, and citations to primary sources — built into the article template so every piece of content carries them by default.</li>
+</ul>
+</div>
 
-**The migration redirect map — the silent killer**
-- Require a full crawl of the current site, a URL-by-URL map, and 301 redirects in place at launch, plus rankings *and* AI-citation monitoring after. This is the single most common way a redesign nukes visibility, and it's the easiest one to write into a contract.
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 · The migration redirect map — the one people forget</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Require a full crawl of the current site, a URL-by-URL map, and 301 redirects in place at launch, plus rankings <em>and</em> AI-citation monitoring after. It's the most common way a redesign wrecks visibility, and the easiest one to write into a contract.</li>
+</ul>
+</div>
 
-**A CMS your team can actually publish in**
-- AEO isn't a one-time setup; it needs ongoing, answer-first content. So the platform has to let non-technical marketers publish and update content on a cadence, with a review workflow — not file a developer ticket every time.
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">6 · A CMS your team can actually publish in</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>AEO isn't a one-time setup; it needs ongoing, answer-first content. So the platform has to let non-technical marketers publish and update content on a cadence, with a review workflow — not file a developer ticket every time.</li>
+</ul>
+</div>
 
-**The emerging, low-cost stuff**
-- Ask for an `llms.txt` file. It's cheap, it's new, and it points AI crawlers at your canonical content. No reason not to.
+<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · The emerging, low-cost stuff</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Ask for an <code>llms.txt</code> file. It's cheap, it's new, and it points AI crawlers at your canonical content. No reason not to.</li>
+</ul>
+</div>
 
-**Separate AI-visibility measurement**
-- Make "measure AI-answer visibility, separately from classic rankings" a named deliverable. You can't manage what you don't measure, and you can't fully control what AI says about you — so you budget to *watch* it. If the agency only reports Google rankings, you'll have no idea whether the AI work worked.
+<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">8 · Separate AI-visibility measurement</strong>
+<ul style="margin:0;padding-left:1.15rem;">
+<li>Make "measure AI-answer visibility, separately from classic rankings" a named deliverable. You can't manage what you don't measure, and you can't fully control what AI says about you — so you budget to <em>watch</em> it. If the agency only reports Google rankings, you'll have no idea whether the AI work worked.</li>
+</ul>
+</div>
 
 ## What should you actually ask the agency in the pitch?
 
