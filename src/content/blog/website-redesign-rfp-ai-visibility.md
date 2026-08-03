@@ -37,11 +37,9 @@ A redesign is also the riskiest time to leave it unnamed, because it's when your
 
 It means turning AI visibility into specific, checkable requirements — the kind you can confirm were actually delivered — instead of a general ask you assume is handled.
 
-"Follow SEO best practices" is easy to agree to and impossible to verify. "Every content template includes validated structured data at launch" is either true or it isn't. That second kind is what belongs in your RFP: requirements concrete enough that on launch day you can go down the list and see whether each one is really there. The vague asks are the easy ones to skip; the specific ones get built.
-
 ## What AI-visibility requirements should go in your website RFP?
 
-Here's the checklist. It starts with the foundation that shapes everything else, then the build requirements you hand to the agency and verify at launch.
+Here's the checklist. It starts with the foundation that shapes everything else, then the build requirements you hand to the agency, and one thing to keep watching after launch.
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.45rem;">The foundation · Audience intelligence</strong>
@@ -79,7 +77,7 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 · E-E-A-T signals built into the template</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Author credentials, a real byline (and an expert-review byline where credibility matters), published and updated dates, and citations to primary sources — built into the article template so every piece of content carries them by default.</li>
+<li>E-E-A-T — experience, expertise, authoritativeness, and trustworthiness — is how both search and AI judge whether your content is credible enough to cite. Show it with author credentials, a real byline (and an expert-review byline where credibility matters), published and updated dates, and citations to primary sources, all built into the article template so every piece of content carries them by default.</li>
 </ul>
 </div>
 
@@ -93,15 +91,13 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">6 · AEO structure built into the authoring tools</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Your content team should be able to keep the AEO structure intact without pulling in a developer every time. Give them templates with the answer-first format built in, ready-made FAQ blocks, and schema fields right in the editor — so when a marketer builds or updates a page, the question-headings, structured data, and extractable answers come along with it automatically.</li>
+<li>Your content team should be able to keep the AEO structure intact without pulling in a developer every time. Give them templates with the answer-first format built in and building blocks — like an FAQ module — that output the right structured data on their own, so when a marketer adds or updates a page, the question-headings, schema, and extractable answers come along with it automatically.</li>
 </ul>
 </div>
 
-<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">7 · A plan to measure AI visibility over time</strong>
-<ul style="margin:0;padding-left:1.15rem;">
-<li>AI visibility won't move on launch day — the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</li>
-</ul>
+<div style="background:#eef3f4;border:1px solid #cdd9dc;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.6rem 0 1.1rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#5a7d86;margin-bottom:0.45rem;">After launch · Measuring AI visibility</strong>
+<p style="margin:0;">This one isn't a build requirement — it's what comes next. AI visibility won't move on launch day; the engines take weeks or months to re-crawl and re-cite, so a launch snapshot tells you almost nothing. Set the measurement up now, separate from classic rankings (your standard analytics can't see it), and plan a real check-in a quarter or two out — are you getting cited, and where. If the agency only reports Google rankings, you'll never know whether the AI work is landing.</p>
 </div>
 
 ## Isn't this just the SEO my agency already does?
