@@ -61,7 +61,7 @@ Here's the checklist. It starts with the foundation that shapes everything else,
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Structured data at the template level</strong>
 <ul style="margin:0;padding-left:1.15rem;">
-<li>Schema built into the templates, not added page by page: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages.</li>
+<li>Schema built into the templates, not added page by page: Organization, Product (or your core entity), FAQPage, Article, VideoObject, and LocalBusiness for any location/store pages. Product schema especially matters now that <a href="/blog/agentic-commerce-by-brand-type">AI agents read it to shop your catalog</a>.</li>
 <li>Validated before launch — "structured data present and error-free," checked, not assumed.</li>
 </ul>
 </div>
