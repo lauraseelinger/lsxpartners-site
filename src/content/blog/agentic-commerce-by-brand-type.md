@@ -4,7 +4,7 @@ description: "Agentic commerce is here — AI that shops and checks out for your
 pubDate: 2026-08-07
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "aeo", "ecommerce", "marketing-pov"]
-# heroImage: "/images/blog/agentic-commerce-by-brand-type.jpg"
+heroImage: "/images/blog/agentic-commerce-by-brand-type.jpg"
 faqs:
   - question: "What is agentic commerce?"
     answer: "Agentic commerce is when an AI agent doesn't just recommend products but actually shops for the buyer — comparing options, checking price and availability, and completing the purchase on their behalf. It's the shift from AI answering questions to AI doing the transaction, and major platforms (ChatGPT, Perplexity, Amazon, Google) are already building it."
