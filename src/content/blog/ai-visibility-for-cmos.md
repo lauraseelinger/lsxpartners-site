@@ -62,7 +62,7 @@ Have you noticed your top-of-funnel keywords pulling less traffic even though yo
 
 <aside style="background:#f0f3f4;border-left:4px solid #a3bbc3;border-radius:6px;padding:0.9rem 1.15rem;margin:1.1rem 0;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;color:#b55434;margin-bottom:0.35rem;">New with AI</strong>
-AI builds this from third-party sources, not your marketing — the reviews, forum threads, and comparison articles other people wrote about you. So it might still describe you by a product you discontinued, a price tier you moved off of, or a reputation from three years ago. Is that the same brand you're spending budget to build right now?
+AI builds this from third-party sources, not your marketing — the reviews, forum threads, and comparison articles other people wrote about you. So it might still describe you by a product you discontinued, a price tier you moved off of, or a reputation from three years ago. Is that the same brand you're spending budget to build right now? And once AI starts *shopping* on your buyers' behalf, that's the data it acts on — [what agentic commerce means depends on how you sell](/blog/agentic-commerce-by-brand-type).
 </aside>
 
 **4. Where does AI pull its answers from in our category, and are we present in those places?**
