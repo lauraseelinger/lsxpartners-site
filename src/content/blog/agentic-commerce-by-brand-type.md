@@ -20,7 +20,7 @@ faqs:
 
 AI is about to stop just answering questions and start doing the shopping — comparing products, filling the cart, and checking out on your buyer's behalf. It's called agentic commerce, and the money is already moving: AI platforms are projected to drive **$20.9 billion in US retail spending in 2026, nearly 4× the year before** (eMarketer, December 2025).
 
-The smart money is circling, too. Todd James of Aurora Insights, whose Cincy AI Week session was on exactly this, said that in the first part of this year alone he'd taken four calls from investor groups — one in Australia, two in the US, one in Europe — all trying to figure out how agentic commerce could *reprice the stock* of the companies exposed to it. His read: "When investors are paying attention and trying to figure it out, it's an indication the market feels it's real."
+The people closest to it are treating it as real. Todd James — a former Kroger chief data officer who now advises boards on AI — wrote in *Fast Company* that as agentic commerce matures, it "will route demand toward the retailers that deserve it by every operational measure a system can evaluate." The new question he says executives are asking is how to become the retailer an agent selects.
 
 But what you actually need to do about it depends on how your brand sells — and most of the agentic-commerce advice out there skips right over that. Whoever owns the sale — you, a retailer, or nobody — changes the entire game. There are three types of brands, and they each have a different job.
 
@@ -88,4 +88,4 @@ I'm Laura Seelinger, founder of LSX Partners, and AI visibility strategy is the 
 
 - AI platforms projected to drive ~$20.9B in US retail spending in 2026, nearly 4× 2025: eMarketer, December 2025.
 - The 2026 AI shopping-agent landscape (ChatGPT, Perplexity, Amazon, Google) and ChatGPT's Instant Checkout pullback: [Modern Retail, "Why the AI shopping agent wars will heat up in 2026."](https://www.modernretail.co/technology/why-the-ai-shopping-agent-wars-will-heat-up-in-2026/)
-- Investor interest in agentic commerce and stock repricing: Todd James (Aurora Insights), Cincy AI Week 2026 session on agentic commerce (attended).
+- Todd James (Aurora Insights; former Kroger chief data officer) on how agents route demand: [Fast Company, "In agentic commerce, the agent won't ask—it will judge."](https://www.fastcompany.com/91560422/in-agentic-commerce-the-agent-wont-ask-it-will-judge)
