@@ -52,7 +52,7 @@ If people buy on your own site — you're a DTC brand with your own product page
 <div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; northwind.com — price, availability, and specs, read straight from the brand's own product data.</div>
 </div>
 
-The whole moment happens on your turf — every field the agent trusts is one you control. Here's what to focus on:
+The whole moment happens on your turf — every field the agent trusts is one you control. So there are three things to nail:
 
 - **Structured product data on every page.** Mark up your price, availability, specs, and ratings with schema. That's the language an agent reads to understand and buy your product. No schema and you're a blur to it.
 - **Keep that data live, accurate, and actually visible to a bot.** This is where so many sites fall down — the product info shows up fine for a human but renders as a blank page to the crawler because it's injected by JavaScript. If an agent can't confirm you're in stock at the right price, it moves on.
@@ -62,39 +62,66 @@ You own the whole chain, recommendation through checkout. Use it.
 
 ## Type 2: You sell through retailers (you don't own the sale)
 
-This is the case nobody talks about, and it hits some of the biggest brands out there. You *make* the product, but people buy it at Amazon, Walmart, Target, Home Depot — wherever, not on your own site. So your job splits across two properties you don't equally control.
+Most big consumer brands live here. You *make* the product, but people buy it at Amazon, Walmart, Target, Home Depot — wherever, not on your own site. So your job splits across two properties you don't equally control, and one half of it is a lot scarier than the other.
 
 <div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
 <div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI shopping agent</div>
-<div style="color:#9a8f80;">You asked for a smart lock that's easy to install in a rental.</div>
-<div style="margin-top:6px;"><span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Northwind's Model X gets recommended for renters<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — no drilling, works with your existing deadbolt. <span style="background:rgba(44,62,80,0.10);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Buying it at Amazon: $149, in stock.<a href="#" style="color:#2c3e50;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[2]</a></span></div>
-<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; reviews &amp; expert threads — the recommendation, earned on your turf.<br><span style="color:#2c3e50;font-weight:700;">[2]</span>&nbsp; amazon.com — the price, stock, and specs, from a retailer listing you don't control.</div>
+<div style="color:#9a8f80;">You asked for an air fryer big enough for a family.</div>
+<div style="margin-top:6px;"><span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Northwind's 6-quart keeps getting recommended for families<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — cooks evenly, easy to clean. <span style="background:rgba(44,62,80,0.10);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Buying it at Walmart: $89, in stock.<a href="#" style="color:#2c3e50;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[2]</a></span></div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; reviews &amp; roundups — the recommendation, earned on your turf.<br><span style="color:#2c3e50;font-weight:700;">[2]</span>&nbsp; walmart.com — the price, stock, and specs, from a retailer listing you don't control.</div>
 </div>
 
-Two different sources, two different owners — the recommendation is yours, the transaction and its data are the retailer's. That's the split you have to manage:
+Two footnotes, two owners. And they feel completely different once you sit with them:
 
-- **The recommendation is still yours to earn.** When someone asks AI for the best option in your category, you want your name — and that comes from your content, your reviews, your authority. You can do that.
-- **But the transaction and the product data live on the retailer.** When the agent goes to actually shop, it reads the price, stock, and specs on the *retailer's* page, not yours. So the data that decides whether you get bought — and bought correctly — sits on a site you don't own.
+<div style="border:1px solid #cde5d5;border-left:4px solid #3a7d44;background:#edf6f0;border-radius:10px;padding:14px 18px;margin:1.1rem 0;">
+<div style="font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:#3a7d44;font-weight:800;margin-bottom:5px;">The good news</div>
+<div><strong>The recommendation is yours to earn.</strong> When someone asks AI for the best option in your category, you can win the name — through your content, your reviews, your authority. That part you control.</div>
+</div>
 
-That's the hard part. A direct brand fixes its data by editing its own site. You have to work *through* your retail partners to make sure your product is represented right across a dozen listings — correct title, specs, images — so when an agent shops there, it picks you and doesn't get you wrong. And you have to watch how AI describes your product across those channels, because when it's wrong, it's wrong on someone else's property.
+<div style="border:1px solid #f0cfc6;border-left:4px solid #b55434;background:#fbeee9;border-radius:10px;padding:14px 18px;margin:1.1rem 0;">
+<div style="font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:#b55434;font-weight:800;margin-bottom:5px;">⚠&nbsp; The part that should worry you</div>
+<div><strong>The transaction and the product data live on the retailer.</strong> When the agent actually shops, it reads the price, stock, and specs on the retailer's page — not yours. The data that decides whether you get bought, and bought right, sits on a site you don't own.</div>
+</div>
 
-That opens a set of problems worth getting ahead of now. The job becomes keeping your title, specs, images, and claims consistent across Amazon, Walmart, Target, and every other listing — each with its own system and its own update timeline you can't control. When those listings disagree — one spec here, a different one there — AI can't form a clean picture of what your product even is, so it hedges, or picks the option it's more sure about. Solving it usually means building one source of truth for your product data and then deciding who actually owns it internally, because right now it tends to fall between marketing, sales, and ops and land on no one. None of that gets fixed the week an agent shows up to buy — it's the kind of thing you start on a year out.
+That second box is where the real work is. Picture the same product across three retailers:
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:1.4rem 0;">
+<div style="flex:1;min-width:165px;border:1px solid #e6ded3;border-radius:10px;background:#fff;padding:12px 14px;font-size:0.84rem;line-height:1.55;color:#2b2622;">
+<div style="font-weight:800;color:#2c3e50;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Amazon</div>
+"Northwind Air Fryer XL"<br>6 qt · <strong>1700W</strong><br><strong>$89</strong> · In stock</div>
+<div style="flex:1;min-width:165px;border:1px solid #e6ded3;border-radius:10px;background:#fff;padding:12px 14px;font-size:0.84rem;line-height:1.55;color:#2b2622;">
+<div style="font-weight:800;color:#2c3e50;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Walmart</div>
+"Northwind 6-Quart Air Fryer"<br>6 qt · <strong>1500W</strong><br><strong>$79</strong> · In stock</div>
+<div style="flex:1;min-width:165px;border:1px solid #e6ded3;border-radius:10px;background:#fff;padding:12px 14px;font-size:0.84rem;line-height:1.55;color:#2b2622;">
+<div style="font-weight:800;color:#2c3e50;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Target</div>
+"Northwind AirFry Pro"<br><strong>5.8 qt</strong> · —<br><strong>$94</strong> · Ships in 1–2 wks</div>
+</div>
+
+Same product. Three names, two wattages, two capacities, three prices, and one that looks like a wait. To an AI trying to answer with confidence, that reads like three different products — so it hedges, or recommends the competitor whose data lines up.
+
+Getting ahead of it means a few things most brands haven't set up yet:
+
+- **One source of truth** for your product data, so every listing pulls from the same place.
+- **A way to push corrections** across retailers you don't control — and the patience that each one updates on its own timeline.
+- **An actual internal owner**, because right now this falls between marketing, sales, and ops and lands on no one.
+
+None of it gets fixed the week an agent shows up to buy. It's a year-out project — which is exactly why it's worth starting now.
 
 ## Type 3: You sell services or B2B (there's no cart)
 
-If there's nothing to add to a cart — you're a consultant, an agency, a firm, most B2B — the shopping-agent layer doesn't apply to you at all. No product feed, no checkout — none of that applies. Your whole game is being the name AI trusts when someone asks "who should I hire for this?"
+If there's nothing to add to a cart — you're a consultant, an agency, a contractor, most B2B and services — the shopping-agent layer doesn't apply to you at all. No product feed, no checkout — none of that applies. Your whole game is being the name AI trusts when someone asks "who should I hire for this?"
 
 <div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
 <div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI answer</div>
-<div style="color:#9a8f80;">You asked who to bring in to fix your company's AI visibility.</div>
-<div style="margin-top:6px;">A few names come up. <span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">An independent strategist keeps getting recommended for brands that want a real plan for AI visibility<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — based on her published breakdowns and the threads where people vouch for her.</div>
-<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; cited from third-party expert content and community discussion — not a product page.</div>
+<div style="color:#9a8f80;">You asked who to hire for the plumbing on a commercial office build-out.</div>
+<div style="margin-top:6px;">A few names come up. <span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Bishop Plumbing keeps getting recommended for commercial jobs<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — licensed for big builds, fast turnaround, and contractors vouch for the work.</div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; cited from reviews, directories, and community threads — not a product page.</div>
 </div>
 
 No cart, no checkout — the whole game is being the name the answer recommends, then a human reaches out. That authority comes from three moves:
 
 - **Build a clear entity** — consistent, unmistakable signals about who you are and who you're for, everywhere AI reads.
-- **Get into the third-party sources AI leans on** — expert content, community threads, industry roundups — so you're corroborated, not just self-described.
+- **Get into the third-party sources AI leans on** — expert content, community threads, industry roundups — so the recommendation is coming from more than your own marketing.
 - **Publish answer-first content for the exact questions your buyers ask AI**, so you're the source it pulls from. ([This is what an audit of where you stand looks like.](/blog/how-to-audit-ai-visibility))
 
 No cart to optimize — just whether AI trusts you enough to send someone your way.
