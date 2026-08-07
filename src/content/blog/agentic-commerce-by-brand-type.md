@@ -30,7 +30,7 @@ It's the jump from AI *recommending* a product to AI *buying* it for someone. In
 
 It's not theoretical. ChatGPT has struck deals with retailers like Target, Instacart, and DoorDash to let people buy inside the chat. Perplexity rolled out Instant Buy for its subscribers. Amazon has "Buy For Me" (shop other brands from inside Amazon's app) and a Rufus "Auto Buy" that purchases on its own when a price drops. Google and Shopify introduced a shared commerce protocol at the start of 2026.
 
-It's also early and messy right now. ChatGPT actually pulled *back* its flagship Instant Checkout in early 2026 with only about 30 merchants live. The checkout features themselves are changing month to month, so chasing whichever one is trending this quarter burns effort you won't get back. What holds no matter which agent wins is the fundamentals — the stuff that makes you readable and recommendable in the first place. And which of those fundamentals matters most depends on your type.
+It's also early and messy right now. ChatGPT actually pulled *back* its flagship Instant Checkout in early 2026 with only about 30 merchants live. The checkout features are changing month to month, so it's not worth chasing whichever one is trending — you'd just be redoing it next quarter. The part that actually lasts is the fundamentals — the things that make you readable and recommendable in the first place. And which of those matters most depends on your type.
 
 ## Why does AI visibility depend on how your brand sells?
 
@@ -43,7 +43,16 @@ Being recommended and being buyable are different jobs. Who controls each one de
 
 ## Type 1: You sell direct (you own the checkout)
 
-If people buy on your own site — you're a DTC brand with your own product pages and checkout — the agent comes to *you*, reads *your* data, and buys from *your* system. Every lever is in your hands. That's the advantage, and the responsibility. Three things to focus on:
+If people buy on your own site — you're a DTC brand with your own product pages and checkout — the agent comes to *you*, reads *your* data, and buys from *your* system. Every lever is in your hands. That's the advantage, and the responsibility.
+
+<div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
+<div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI shopping agent</div>
+<div style="color:#9a8f80;">You asked for a durable rain jacket under $150.</div>
+<div style="margin-top:6px;">Northwind's Trailshell fits your budget — $129, in stock, ships in two days. <span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Adding it to your cart and checking out at northwind.com.<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span></div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; northwind.com — price, availability, and specs, read straight from the brand's own product data.</div>
+</div>
+
+The whole moment happens on your turf — every field the agent trusts is one you control. Here's what to focus on:
 
 - **Structured product data on every page.** Mark up your price, availability, specs, and ratings with schema. That's the language an agent reads to understand and buy your product. No schema and you're a blur to it.
 - **Keep that data live, accurate, and actually visible to a bot.** This is where so many sites fall down — the product info shows up fine for a human but renders as a blank page to the crawler because it's injected by JavaScript. If an agent can't confirm you're in stock at the right price, it moves on.
@@ -54,6 +63,15 @@ You own the whole chain, recommendation through checkout. Use it.
 ## Type 2: You sell through retailers (you don't own the sale)
 
 This is the case nobody talks about, and it hits some of the biggest brands out there. You *make* the product, but people buy it at Amazon, Walmart, Target, Home Depot — wherever, not on your own site. So your job splits across two properties you don't equally control.
+
+<div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
+<div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI shopping agent</div>
+<div style="color:#9a8f80;">You asked for a smart lock that's easy to install in a rental.</div>
+<div style="margin-top:6px;"><span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Northwind's Model X gets recommended for renters<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — no drilling, works with your existing deadbolt. <span style="background:rgba(44,62,80,0.10);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">Buying it at Amazon: $149, in stock.<a href="#" style="color:#2c3e50;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[2]</a></span></div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; reviews &amp; expert threads — the recommendation, earned on your turf.<br><span style="color:#2c3e50;font-weight:700;">[2]</span>&nbsp; amazon.com — the price, stock, and specs, from a retailer listing you don't control.</div>
+</div>
+
+Two different sources, two different owners — the recommendation is yours, the transaction and its data are the retailer's. That's the split you have to manage:
 
 - **The recommendation is still yours to earn.** When someone asks AI for the best option in your category, you want your name — and that comes from your content, your reviews, your authority. You can do that.
 - **But the transaction and the product data live on the retailer.** When the agent goes to actually shop, it reads the price, stock, and specs on the *retailer's* page, not yours. So the data that decides whether you get bought — and bought correctly — sits on a site you don't own.
@@ -66,7 +84,14 @@ That opens a set of problems worth getting ahead of now. The job becomes keeping
 
 If there's nothing to add to a cart — you're a consultant, an agency, a firm, most B2B — the shopping-agent layer doesn't apply to you at all. No product feed, no checkout — none of that applies. Your whole game is being the name AI trusts when someone asks "who should I hire for this?"
 
-That's pure authority, and it comes from three moves:
+<div style="border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:18px 20px;margin:1.6rem 0;font-size:0.97rem;line-height:1.7;color:#2b2622;">
+<div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#a89a86;margin-bottom:12px;">✦&nbsp; AI answer</div>
+<div style="color:#9a8f80;">You asked who to bring in to fix your company's AI visibility.</div>
+<div style="margin-top:6px;">A few names come up. <span style="background:rgba(181,84,52,0.14);border-radius:4px;padding:2px 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone;">An independent strategist keeps getting recommended for brands that want a real plan for AI visibility<a href="#" style="color:#b55434;text-decoration:none;font-size:0.72em;vertical-align:super;font-weight:700;">[1]</a></span> — based on her published breakdowns and the threads where people vouch for her.</div>
+<div style="border-top:1px solid #ece3d6;margin-top:14px;padding-top:10px;font-size:0.76rem;color:#a89a86;"><span style="color:#b55434;font-weight:700;">[1]</span>&nbsp; cited from third-party expert content and community discussion — not a product page.</div>
+</div>
+
+No cart, no checkout — the whole game is being the name the answer recommends, then a human reaches out. That authority comes from three moves:
 
 - **Build a clear entity** — consistent, unmistakable signals about who you are and who you're for, everywhere AI reads.
 - **Get into the third-party sources AI leans on** — expert content, community threads, industry roundups — so you're corroborated, not just self-described.
