@@ -75,11 +75,22 @@ I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
-I pulled the search results for "best hiking boots for beginners."
+Worth being precise about what I'm showing you, because this is the part people conflate. I ran this on Google — not in ChatGPT. But the panel sitting at the top of a Google results page *is* an AI-generated answer, and unlike ChatGPT it shows you exactly which sources it used. That makes it the cleanest free look at what the grounding layer for a category actually is.
 
-Reddit at number one. REI's own Expert Advice article at number two — that's a competitor, ranking with content they wrote themselves. Then OutdoorGearLab, Switchback Travel, Treeline Review, Trailspace. Then Outdoor Life, Dick's, Amazon. Then a handful of individual people who test gear and write about it: Better Trail, Hiking Feet, Hiking For Her, Danielle Outdoors.
+Here's what came back for "best hiking boots for beginners" on August 25, 2026.
 
-Columbia is nowhere in the top fifteen.
+<div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
+<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
+<p style="margin:0 0 0.85rem;font-size:1.02rem;font-style:italic;">"The best hiking boots for beginners offer a blend of out-of-box comfort, reliable ankle support, and accessible pricing without needing heavy-duty break-in periods."</p>
+<p style="margin:0 0 0.4rem;"><strong>Top beginner recommendation:</strong> Merrell Moab 3 Mid &mdash; $104.95</p>
+<p style="margin:0;font-size:0.92rem;color:#5b6b70;"><strong>Sources cited:</strong> Reddit (r/CampingandHiking) &middot; REI Expert Advice</p>
+</div>
+
+Merrell gets named. Reddit and REI are what the answer was built from. Columbia is not in it.
+
+Columbia *is* on the page. Twice in the Sponsored Products carousel — the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66 — and again down in the Popular Products grid. So the brand is paying to sit next to an AI answer that recommends somebody else, which is roughly what paid placement buys you now.
+
+Below the panel, the organic results run REI's Expert Advice article first, then the Reddit thread, then independent gear testers — Switchback Travel, a Facebook group thread, mountaineerjourney. Largely the same documents the AI Overview drew from, which is the point: the grounding layer and the organic layer overlap heavily. Columbia isn't in that set either.
 
 So I went to OutdoorGearLab directly, since it's one of the properties AI engines lean on hardest, and pulled their full hiking boot award list. Editors' Choice went to Hoka and La Sportiva. The category awards went to La Sportiva four more times, Salomon twice, plus Hoka, Topo, Zamberlan, On and Scarpa. Best Buy went to the Merrell Moab.
 
@@ -91,7 +102,7 @@ Own the trail is the stated pillar. In the authoritative answer, they're the che
 
 Same exercise, different pillar. Dominate warmth.
 
-The results for "warmest winter coat" go: Reddit at number one — specifically a BuyItForLife thread titled "what is the scientifically warmest winter coat." Then OutdoorGearLab, Better Trail, Outdoors Magic, Switchback Travel. Then Dick's, Lands' End, Fjällräven, a Patagonia dealer, a style creator, YouTube.
+The results for "warmest winter coat" are a mix of Reddit — specifically a BuyItForLife thread titled "what is the scientifically warmest winter coat" — plus OutdoorGearLab, Better Trail, Outdoors Magic, Switchback Travel, Dick's, Lands' End, Fjällräven, a Patagonia dealer, a style creator, and YouTube.
 
 Columbia is absent. In the warmth query. Where warmth is the entire pitch.
 
@@ -208,6 +219,7 @@ Anyone can critique a brand from the outside. Knowing which four questions you'd
 
 - Columbia Sportswear Q2 2026 financial results and ACCELERATE strategy pillars — [Columbia investor relations press release](https://investor.columbia.com/news-events/press-releases/detail/389/columbia-sportswear-company-reports-second-quarter-2026) and [Q2 2026 earnings call transcript, August 3, 2026](https://www.fool.com/earnings/call-transcripts/2026/08/03/columbia-sportswear-colm-q2-2026-earnings-call-transcript/)
 - Q2 2026 segment detail (US −4%, international +9%, footwear +5% to $117M) — [Sporting Goods Intelligence, August 2026](https://www.sgieurope.com/financial-results/footwear-not-tariffs-is-columbias-big-q2-story/122485.article)
+- Google AI Overview, organic results and sponsored placements for "best hiking boots for beginners" — captured August 25, 2026, US, non-personalized
 - Hiking boot award list — [OutdoorGearLab, best hiking boots](https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-boots), accessed August 2026
 - Carhartt warmth rating category — [carhartt.com/c/warmest-rating](https://www.carhartt.com/c/warmest-rating), accessed August 2026
 - Shoppers using AI to research a purchase in the past year (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
