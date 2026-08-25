@@ -37,6 +37,7 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
 <p style="margin:0 0 0.7rem;"><strong>The brand:</strong> Columbia Sportswear (NASDAQ: COLM)</p>
+<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only, with search data as the proxy for AI visibility &mdash; the documents that rank are largely the documents an engine reads when it builds an answer.</p>
 <p style="margin:0 0 0.4rem;"><strong>The questions their CMO should be asking:</strong></p>
 <ul style="margin:0 0 0.8rem;padding-left:1.15rem;">
 <li>Are we visible in the categories we've told investors we're going to own?</li>
