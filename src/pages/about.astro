@@ -255,6 +255,8 @@ const faqs = [
   .ahero__text { display: flex; flex-direction: column; justify-content: center; padding: var(--space-5); }
   .ahero__text h1 { font-size: clamp(2.4rem, 1.7rem + 3vw, 4rem); margin-block: var(--space-1) var(--space-2); }
   .ahero__lede { font-size: var(--text-lg); max-width: 40ch; margin-bottom: var(--space-3); }
+  /* flex column defaults to align-items:stretch, which was forcing the CTA full-width */
+  .ahero__text .button { align-self: flex-start; }
   .ahero__photo { position: relative; }
   .ahero__photo img {
     width: 100%; height: 100%; object-fit: cover; object-position: 52% 30%;
