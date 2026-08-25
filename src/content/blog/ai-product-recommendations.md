@@ -18,7 +18,13 @@ faqs:
     answer: "No. Columbia Sportswear is not a client and I have no relationship with the company. Everything here comes from public sources — SEC filings and earnings calls, public search data, retailer pages, and review coverage. That's the same material an AI system has when it recommends a product, which is the whole point."
 ---
 
-The marketing strategy that made your brand findable in search won't make it recommendable in AI. That gap is how a household name ends up invisible in the exact category it says it wants to own, and what follows is that failure traced end to end on a real brand — plus what I'd implement to take the recommendation back.
+<div class="post-lede">
+
+The marketing strategy that made your brand findable in search won't make it recommendable in AI. That gap is how a household name ends up invisible in the exact category it says it wants to own, and what follows is that failure traced end-to-end on a real brand — plus what I'd implement to take the recommendation back.
+
+</div>
+
+<p class="subhead">Use case: researching hiking gear</p>
 
 Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — research it to death and buy what trusted sources recommend.
 
