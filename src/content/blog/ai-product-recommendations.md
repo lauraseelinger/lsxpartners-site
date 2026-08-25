@@ -62,7 +62,7 @@ Columbia appears exactly once. The Crestwood Mid, in the slot labeled "Best Wome
 
 Own the trail is the stated pillar. In the authoritative answer, they're the cheap option. And nobody at Columbia chose that position — a review site assigned it to them, and now every model reading that page inherits it.
 
-## Why do brands disappear from the category they say they own?
+## Why does a competitor's product data beat yours in AI answers?
 
 Same exercise, different pillar. Dominate warmth.
 
@@ -134,9 +134,9 @@ The consequence shows up in the same study. 31% of AI users say their purchase d
 
 Columbia is a wholesale brand. They sell through REI, Dick's, Amazon, Backcountry, Scheels, plus their own site. I've written about why [what agentic commerce means for your brand depends on how you sell](/blog/agentic-commerce-by-brand-type) — and the wholesale version is the harder one by a lot.
 
-A direct-to-consumer brand's agentic question is simple: can an agent complete checkout on my site? That's a UX problem with a known fix.
+That post breaks down the three brand types and what each one owns. Columbia is the middle case, and it's the hardest of the three.
 
-A wholesale brand doesn't own the checkout at all. The retailer does. So the only thing a wholesale brand still controls is product data, and that data has to resolve and stay consistent across every surface an agent might read — their own product page, REI's, Dick's, Amazon's, Backcountry's. Identity, attributes, price, availability, all of it matching everywhere.
+A wholesale brand doesn't own the checkout. The retailer does. So the only thing left under the brand's control is product data, and that data has to resolve and stay consistent across every surface an agent might read — their own product page, REI's, Dick's, Amazon's, Backcountry's. Identity, attributes, price, availability, all of it matching everywhere.
 
 And notice who kept turning up in both sets of results I pulled: Dick's, with purpose-built pages at `/o/warmest-winter-coats-for-women` and `/o/hiking-shoes-for-beginners`.
 
