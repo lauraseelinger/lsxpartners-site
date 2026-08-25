@@ -34,7 +34,7 @@ AI is changing the interactions we have prior to making purchases — whether th
 
 So let's walk through this with a real brand — where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert. We'll use Columbia Sportswear. They're a national brand with a retailer-reliant strategy, we know their focus areas of growth thanks to their latest earnings call, and they have a distribution network similar to brands I've already created strategies for (where you prioritize [the recommendation over the citation](/blog/ai-citations-vs-brand-mentions)).
 
-Same public-data approach I took with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
+Same public-data approach I took with [American Greetings](/blog/ai-visibility-american-greetings) back in April.
 
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
@@ -51,12 +51,10 @@ Same public-data approach I took with [American Greetings](/blog/ai-visibility-a
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
-Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, search data, and review coverage. That's deliberate. It's all an AI engine can see too.
+Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, search data, and review coverage.
 </aside>
 
 ## How do you know if a brand is visible where it says it competes?
-
-This is the part that made me want to write the whole post.
 
 Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy. In their words:
 
@@ -71,9 +69,9 @@ Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August 
 </ol>
 </div>
 
-They told the market exactly what they intend to own. Which is generous of them, because now I don't have to guess at what to measure. I can just go look at whether they show up in the places where trail and warmth actually get decided.
+They told the market exactly what they intend to own. Which is perfect, because now I don't have to guess at what to measure — I can go check whether they actually show up where each of those five gets decided.
 
-Spoiler: two of those five, they aren't there at all.
+I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
