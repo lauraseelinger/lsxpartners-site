@@ -28,11 +28,11 @@ The marketing strategy that made your brand findable in search won't make it rec
 
 Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — research it to death and buy what trusted sources recommend.
 
-So back in 2021 before our trip, we went to REI, found an associate, described the trip, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. Plenty of people already do — 48.5% of shoppers used an AI tool to research a purchase in the past year, according to Alchemer's 2026 Retail Report, a survey of 1,002 U.S. shoppers.
+So back in 2021 before our trip, we went to REI, found an associate, described the trip, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. In fact, this is what nearly half of shoppers (48.5%) do now — use an AI platform to research prior to making a purchase, according to Alchemer's 2026 Retail Report.
 
 Same job that associate used to do, except now it knows my specific situation before it answers.
 
-Which should worry every brand on that shelf, because AI product recommendations don't get assembled from marketing. They get built from what's publicly retrievable about a product — the review sites that tested it, the forums that argued about it, and the structured attribute data sitting on retailer pages. A brand can be in every store in America and still lose the recommendation, because it owns none of those three surfaces.
+AI is changing the interactions we have prior to making purchases — whether that's removing the top-of-funnel in-person interactions, or simply changing the playing field that used to be reliant on Google search rankings. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations don't get assembled from marketing. They get built from what's publicly retrievable about a product — the review sites that tested it, the forums that argued about it, and the structured attribute data sitting on retailer pages. A brand can be in every store in America and still lose the recommendation, because it owns none of those three surfaces.
 
 I'm moving to Maine in September, so I'm about to run this exact process again on winter gear, where I'm right back to being a beginner. Columbia Sportswear is going to be in that consideration set, at least in theory, so I ran the whole public data set on them — the same way I did with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
 
@@ -199,7 +199,7 @@ Anyone can critique a brand from the outside. Knowing which four questions you'd
 - Q2 2026 segment detail (US −4%, international +9%, footwear +5% to $117M) — [Sporting Goods Intelligence, August 2026](https://www.sgieurope.com/financial-results/footwear-not-tariffs-is-columbias-big-q2-story/122485.article)
 - Hiking boot award list — [OutdoorGearLab, best hiking boots](https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-boots), accessed August 2026
 - Carhartt warmth rating category — [carhartt.com/c/warmest-rating](https://www.carhartt.com/c/warmest-rating), accessed August 2026
-- Shoppers using AI to research a purchase (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
+- Shoppers using AI to research a purchase in the past year (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
 - AI shopping behavior (53% mid-funnel use, 31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026, cross-referenced against web traffic from 100+ brands and retailers across 13 categories
 - All search volumes, CPCs and results-page data — Semrush US database, pulled August 2026
 
