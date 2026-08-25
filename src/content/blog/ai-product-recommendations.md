@@ -32,9 +32,9 @@ So back in 2021, we went to REI, found an associate, described what we'd be doin
 
 AI is changing the interactions we have prior to making purchases — whether that's removing the top-of-funnel in-person interactions, or simply changing the playing field that used to be reliant on Google search rankings. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations don't get assembled from marketing. They get built from what's publicly retrievable about a product — the review sites that tested it, the forums where people who actually own it compare notes, and the structured attribute data sitting on retailer pages. A brand can be in every store in America and still lose the recommendation, because it owns none of those three surfaces.
 
-So let's walk through this with a real brand — where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert.
+So let's walk through this with a real brand — where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert. We'll use Columbia Sportswear. They're a national brand with a retailer-reliant strategy, we know their focus areas of growth thanks to their latest earnings call, and they have a distribution network similar to brands I've already created strategies for (where you prioritize [the recommendation over the citation](/blog/ai-citations-vs-brand-mentions)).
 
-Columbia Sportswear will be in that consideration set when I shop for winter gear in Maine this fall — so I ran the public data on them, the same way I did with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
+Same public-data approach I took with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
 
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
