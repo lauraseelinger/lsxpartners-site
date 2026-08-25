@@ -24,11 +24,11 @@ The marketing strategy that made your brand findable in search won't make it rec
 
 </div>
 
-<p class="subhead">Use case: researching hiking gear</p>
+### Use Case: Researching a Purchase
 
 Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — research it to death and buy what trusted sources recommend.
 
-So back in 2021 before our trip, we went to REI, found an associate, described the trip, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. A majority of consumers would do the same — in fact, 71% of consumers now use AI for travel research, the highest of any category, according to an L.E.K. Consulting survey of 2,650 U.S. consumers in April 2026.
+So back in 2021 before our trip, we went to REI, found an associate, described the trip, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. Plenty of people already do — 48.5% of shoppers used an AI tool to research a purchase in the past year, according to Alchemer's 2026 Retail Report, a survey of 1,002 U.S. shoppers.
 
 Same job that associate used to do, except now it knows my specific situation before it answers.
 
@@ -36,7 +36,10 @@ Which should worry every brand on that shelf, because AI product recommendations
 
 I'm moving to Maine in September, so I'm about to run this exact process again on winter gear, where I'm right back to being a beginner. Columbia Sportswear is going to be in that consideration set, at least in theory, so I ran the whole public data set on them — the same way I did with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
 
-**Quick disclaimer before anything else:** Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, search data, and review coverage. That's deliberate. It's all an AI engine can see too.
+<aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
+<strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
+Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, search data, and review coverage. That's deliberate. It's all an AI engine can see too.
+</aside>
 
 ## How do you know if a brand is visible where it says it competes?
 
@@ -44,11 +47,16 @@ This is the part that made me want to write the whole post.
 
 Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy. In their words:
 
-1. Own the trail
-2. Dominate warmth
-3. Power PFG
-4. Fuel outdoor lifestyle
-5. Accelerate footwear
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.55rem;">The ACCELERATE pillars · Columbia's own words</strong>
+<ol style="margin:0;padding-left:1.2rem;">
+<li>Own the trail</li>
+<li>Dominate warmth</li>
+<li>Power PFG</li>
+<li>Fuel outdoor lifestyle</li>
+<li>Accelerate footwear</li>
+</ol>
+</div>
 
 They told the market exactly what they intend to own. Which is generous of them, because now I don't have to guess at what to measure. I can just go look at whether they show up in the places where trail and warmth actually get decided.
 
@@ -134,7 +142,7 @@ If you're still measuring category demand with keyword volume, you're reading a 
 
 Everything, and this is where it stops being a visibility problem and starts being a revenue problem.
 
-Go back to that L.E.K. survey for a second. Among people using AI to shop, 53% of the primary use is comparing options and narrowing down a shortlist — well ahead of discovery at 19% or final decision-making at 21%. The middle of the funnel is where AI is doing its work, and the middle of the funnel is precisely where the store associate used to live.
+L.E.K. Consulting surveyed 2,650 U.S. shoppers this April and cross-referenced them against traffic from more than 100 brands and retailers. Among people using AI to shop, 53% of the primary use is comparing options and narrowing down a shortlist — well ahead of discovery at 19% or final decision-making at 21%. The middle of the funnel is where AI is doing its work, and the middle of the funnel is precisely where the store associate used to live.
 
 The consequence shows up in the same study. 31% of AI users say their purchase decision was largely made before they ever reached a brand or retailer site, up from 26% two years ago. So a third of your buyers are arriving having already been talked out of you, somewhere you weren't watching, by a source you've never audited.
 
@@ -152,13 +160,25 @@ The retailer captures the intent. The retailer owns the checkout. The retailer w
 
 Four things, in this order. None of them are "post more content."
 
-**Turn warmth into a number.** Carhartt already proved the format works and ranks. A temperature rating that exists as a structured, filterable, comparable field — on their own product pages and pushed through to every retailer feed. Omni-Heat can stay as the brand name. It just can't be the only thing in the field.
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · Turn warmth into a number</strong>
+<p style="margin:0;">Carhartt already proved the format works and ranks. A temperature rating that exists as a structured, filterable, comparable field — on their own product pages and pushed through to every retailer feed. Omni-Heat can stay as the brand name. It just can't be the only thing in the field.</p>
+</div>
 
-**Translate the proprietary vocabulary in the data layer.** Not in the marketing — the marketing is working, PFG has 5,400 searches a month of its own. In the structured attributes, where PFG needs to also say UPF 50, and Omni-Tech needs to also say waterproof with a rating. Keep the brand name and add the standard one beside it.
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Translate the proprietary vocabulary in the data layer</strong>
+<p style="margin:0;">Not in the marketing — the marketing is working, PFG has 5,400 searches a month of its own. In the structured attributes, where PFG needs to also say UPF 50, and Omni-Tech needs to also say waterproof with a rating. Keep the brand name and add the standard one beside it.</p>
+</div>
 
-**Audit attribute parity across retailers.** Take fifty products and compare the structured data on columbia.com against REI, Dick's, Amazon and Backcountry. Where the fields disagree, the agent picks one, and it won't be the one you'd choose. I'd expect this to be the ugliest finding of the whole engagement and the cheapest to fix.
+<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 · Audit attribute parity across retailers</strong>
+<p style="margin:0;">Take fifty products and compare the structured data on columbia.com against REI, Dick's, Amazon and Backcountry. Where the fields disagree, the agent picks one, and it won't be the one you'd choose. I'd expect this to be the ugliest finding of the whole engagement and the cheapest to fix.</p>
+</div>
 
-**Go make friends with the people who already own the answers.** Every result I pulled had the same shape — Reddit at the top, then independent gear testers, then individual creators. Those aren't influencers and they shouldn't be treated like influencers. Sponsorship buys you enthusiasm, and enthusiasm doesn't get extracted. What gets extracted is a specific reason: "the toe box runs wide, which is why it worked on a twelve-mile day." I'd find the people who genuinely already hike in this stuff, ask them what they actually think, and fix the products they complain about before asking for anything.
+<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 · Go make friends with the people who already own the answers</strong>
+<p style="margin:0;">Every result I pulled had the same shape — Reddit at the top, then independent gear testers, then individual creators. Those aren't influencers and they shouldn't be treated like influencers. Sponsorship buys you enthusiasm, and enthusiasm doesn't get extracted. What gets extracted is a specific reason: "the toe box runs wide, which is why it worked on a twelve-mile day." I'd find the people who genuinely already hike in this stuff, ask them what they actually think, and fix the products they complain about before asking for anything.</p>
+</div>
 
 That last one is slower and it's the one I'd fight for, because best-of placements get expensive fast and this compounds.
 
@@ -179,7 +199,8 @@ Anyone can critique a brand from the outside. Knowing which four questions you'd
 - Q2 2026 segment detail (US −4%, international +9%, footwear +5% to $117M) — [Sporting Goods Intelligence, August 2026](https://www.sgieurope.com/financial-results/footwear-not-tariffs-is-columbias-big-q2-story/122485.article)
 - Hiking boot award list — [OutdoorGearLab, best hiking boots](https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-boots), accessed August 2026
 - Carhartt warmth rating category — [carhartt.com/c/warmest-rating](https://www.carhartt.com/c/warmest-rating), accessed August 2026
-- Consumer AI shopping behavior (71% travel research, 53% mid-funnel use, 31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026, cross-referenced against web traffic from 100+ brands and retailers across 13 categories
+- Shoppers using AI to research a purchase (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
+- AI shopping behavior (53% mid-funnel use, 31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026, cross-referenced against web traffic from 100+ brands and retailers across 13 categories
 - All search volumes, CPCs and results-page data — Semrush US database, pulled August 2026
 
 ---
