@@ -76,9 +76,7 @@ I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
-This one I ran on Google, not in ChatGPT. The distinction matters, because the panel sitting at the top of a Google results page *is* an AI-generated answer — and unlike ChatGPT, it shows you exactly which sources it used. That makes it the cleanest free look at what the grounding layer for a category actually is.
-
-Here's what came back for "best hiking boots for beginners" on August 25, 2026.
+I ran this one on Google, where the AI Overview does the same job ChatGPT does but shows its work — you get the answer and the exact pages it was built from, side by side. This is what came back for "best hiking boots for beginners" on August 25, 2026.
 
 <div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
 <strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
