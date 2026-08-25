@@ -76,7 +76,7 @@ I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
-I ran this on Google because, no, SEO is not dead — and Google is still where the volume is. The AI Overview at the top of the page does the same job ChatGPT does, except it shows its work. You get the answer and the exact pages it was built from, side by side. This is what came back for "best hiking boots for beginners" on August 25, 2026.
+I ran this on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results. It does the same job ChatGPT does, except it shows its work. You get the answer and the exact pages it was built from, side by side. This is what came back for "best hiking boots for beginners" on August 25, 2026.
 
 <div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
 <strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
