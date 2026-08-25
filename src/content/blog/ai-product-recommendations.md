@@ -71,9 +71,11 @@ They told the market exactly what they intend to own. Which is perfect, because 
 
 I started with the first two. They're not in either one.
 
+<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#b55434;margin:2rem 0 -0.6rem;">AI Search</p>
+
 ## Who owns the answer when a beginner asks what to buy?
 
-Worth being precise about what I'm showing you, because this is the part people conflate. I ran this on Google — not in ChatGPT. But the panel sitting at the top of a Google results page *is* an AI-generated answer, and unlike ChatGPT it shows you exactly which sources it used. That makes it the cleanest free look at what the grounding layer for a category actually is.
+This one I ran on Google, not in ChatGPT. The distinction matters, because the panel sitting at the top of a Google results page *is* an AI-generated answer — and unlike ChatGPT, it shows you exactly which sources it used. That makes it the cleanest free look at what the grounding layer for a category actually is.
 
 Here's what came back for "best hiking boots for beginners" on August 25, 2026.
 
@@ -95,6 +97,8 @@ So I went to OutdoorGearLab directly, since it's one of the properties AI engine
 Columbia appears exactly once. The Crestwood Mid, in the slot labeled "Best Women's Boots Under $100."
 
 Own the trail is the stated pillar. In the authoritative answer, they're the cheap option. And nobody at Columbia chose that position — a review site assigned it to them, and now every model reading that page inherits it.
+
+<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#8b8c4a;margin:2rem 0 -0.6rem;">Traditional Search</p>
 
 ## Why does a competitor's product data beat yours in AI answers?
 
@@ -157,6 +161,8 @@ Ten searches a month at $1.68 a click. That's not advertisers being dumb. That's
 The same pattern shows up in the beginner questions. "What do I need for backpacking" gets 50 searches a month. "Beginner backpacking gear list" gets 10. Those are questions millions of people have. They just stopped typing them into Google and started asking an assistant, or watching somebody answer them on YouTube.
 
 If you're still measuring category demand with keyword volume, you're reading a gauge that's been disconnected from the engine. I wrote more about that gap in [why brands with strong SEO go invisible in AI search](/blog/why-strong-seo-invisible-in-ai).
+
+<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#b55434;margin:2rem 0 -0.6rem;">AI Search</p>
 
 ## How does an AI shopping assistant decide which brand to name?
 
