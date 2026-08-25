@@ -123,6 +123,19 @@ const fmt = (d: Date) =>
   /* body measure — wide enough to use the space, capped for readability */
   .post__body { max-width: 46rem; }
 
+  /* Opt-in summary/tease block. Wrap the answer-first paragraph in the post as
+     <div class="post-lede"> … </div> with blank lines inside so markdown still parses.
+     :global() because the body is markdown-injected, not authored in this component. */
+  .post__body :global(.post-lede) {
+    background: var(--cream);
+    border-left: 3px solid var(--rust);
+    border-radius: 0 14px 14px 0;
+    padding: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  .post__body :global(.post-lede > p) { margin: 0; font-size: var(--text-lg); }
+  .post__body :global(.post-lede > p:last-child) { margin-bottom: 0; }
+
   .post__faq { max-width: 46rem; margin: var(--space-4) auto 0; border-top: 1px solid var(--color-border); }
 
   .band { padding-block: var(--space-6); }
@@ -152,3 +165,4 @@ const fmt = (d: Date) =>
     .post__footgrid { grid-template-columns: 1fr; }
   }
 </style>
+
