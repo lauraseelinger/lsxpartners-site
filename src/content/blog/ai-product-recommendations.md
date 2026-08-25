@@ -76,7 +76,7 @@ I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
-I ran this on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results. This is what came back for "best hiking boots for beginners" on August 25, 2026.
+I ran this on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results. This is what came back for "best hiking boots for beginners."
 
 <div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
 <strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
@@ -85,11 +85,9 @@ I ran this on Google because, no, SEO is not dead — and Google's AI Overview i
 <p style="margin:0;font-size:0.92rem;color:#5b6b70;"><strong>Sources cited:</strong> Reddit (r/CampingandHiking) &middot; REI Expert Advice</p>
 </div>
 
-Merrell gets named. Reddit and REI are what the answer was built from. Columbia is not in it.
+And there you have it — Merrell is a named recommendation, which is built on top sources of Reddit and REI. Columbia didn't make the list and is only present on the page via Sponsored Products and the Popular Products grid.
 
-Columbia *is* on the page. Twice in the Sponsored Products carousel — the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66 — and again down in the Popular Products grid. So the brand is paying to sit next to an AI answer that recommends somebody else, which is roughly what paid placement buys you now.
-
-Below the panel, the organic results run REI's Expert Advice article first, then the Reddit thread, then independent gear testers — Switchback Travel, a Facebook group thread, mountaineerjourney. Largely the same documents the AI Overview drew from, which is the point: the grounding layer and the organic layer overlap heavily. Columbia isn't in that set either.
+Those sponsored slots are the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66. So the brand is paying to sit next to an AI answer that recommends somebody else, which is roughly what paid placement buys you now.
 
 So I went to OutdoorGearLab directly, since it's one of the properties AI engines lean on hardest, and pulled their full hiking boot award list. Editors' Choice went to Hoka and La Sportiva. The category awards went to La Sportiva four more times, Salomon twice, plus Hoka, Topo, Zamberlan, On and Scarpa. Best Buy went to the Merrell Moab.
 
