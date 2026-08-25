@@ -34,7 +34,20 @@ AI is changing the interactions we have prior to making purchases — whether th
 
 So let's walk through this with a real brand — where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert.
 
-I'm moving to Maine in September, so I'm about to run this exact process again on winter gear, where I'm right back to being a beginner. Columbia Sportswear is going to be in that consideration set, at least in theory, so I ran the whole public data set on them — the same way I did with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
+Columbia Sportswear will be in that consideration set when I shop for winter gear in Maine this fall — so I ran the public data on them, the same way I did with [American Greetings](/blog/ai-visibility-american-greetings), a brand nobody asked me to have an opinion about.
+
+<div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
+<p style="margin:0 0 0.7rem;"><strong>The brand:</strong> Columbia Sportswear (NASDAQ: COLM)</p>
+<p style="margin:0 0 0.4rem;"><strong>The questions their CMO should be asking:</strong></p>
+<ul style="margin:0 0 0.8rem;padding-left:1.15rem;">
+<li>Are we visible in the categories we've told investors we're going to own?</li>
+<li>When someone new to the category asks AI what to buy, who gets recommended &mdash; and why isn't it us?</li>
+<li>Can an AI shopping agent read our product data, and does it say the same thing on every retailer that sells us?</li>
+<li>Where did our category's demand go, and why can't our keyword tools see it anymore?</li>
+</ul>
+<p style="margin:0;"><strong>The goal:</strong> A conceptualized AI visibility strategy that increases recommendations in the company's stated strategic focus areas.</p>
+</div>
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
