@@ -77,6 +77,8 @@ strong { font-weight: 600; }
 .post__body > * + * { margin-top: var(--space-3); }
 /* lead paragraph */
 .post__body > p:first-of-type { font-size: 1.28rem; line-height: 1.6; color: color-mix(in srgb, var(--brown) 88%, #000); }
+/* …unless the post opens with an explicit .post-lede block, which is already doing that job. */
+.post__body:has(> .post-lede) > p:first-of-type { font-size: inherit; line-height: inherit; color: inherit; }
 .post__body h2 {
   font-family: var(--font-heading); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.1rem);
   color: var(--brown); margin-top: var(--space-5); padding-top: var(--space-2);
@@ -391,3 +393,4 @@ strong { font-weight: 600; }
 .section--olive .button--ghost:hover,
 .section--rust  .button--ghost:hover,
 .section--forest .button--ghost:hover { background: var(--cream); color: var(--brown); }
+
