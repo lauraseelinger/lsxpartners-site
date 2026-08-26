@@ -118,7 +118,7 @@ Own the trail is one of Columbia's stated growth pillars, and to AI, their autho
 
 Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva, Salomon and Lowa in the $220 to $280 range. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
 
-I've watched that mismatch up close. At Libbey we'd get written up as the affordable glassware while the brand worked hard to read as something more elevated. That gap gets expensive, because the review sites — and the AI answers built on top of them — keep assigning you the position your price implies, whatever the campaign says.
+I've seen (and lived) this marketing vs. reality matchup before. I've [written about how Libbey](/blog/what-your-ai-visibility-score-cant-tell-you) is known as the budget value brand, but their marketing copy is wannabe luxury (I can say that because I wrote some of it back in the day). While historically it hasn't been uncommon for brands to fluff up their marketing and product copy, it has the potential to cause some serious issues in their AI visibility. A brand's AI identity gets written by the entire internet, meaning those review sites have more of a say than the million-dollar campaign — and if those two aren't in sync, brands are screaming their marketing dollars into a void.
 
 <p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#8b8c4a;margin:2rem 0 -0.6rem;">Traditional Search</p>
 
