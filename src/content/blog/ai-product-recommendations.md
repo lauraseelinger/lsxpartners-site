@@ -58,14 +58,15 @@ Columbia isn't my client. I've never spoken to anyone there. Everything below co
 Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy. In their words:
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.55rem;">The ACCELERATE pillars · Columbia's own words</strong>
-<ol style="margin:0;padding-left:1.2rem;">
-<li>Own the trail</li>
-<li>Dominate warmth</li>
-<li>Power PFG</li>
-<li>Fuel outdoor lifestyle</li>
-<li>Accelerate footwear</li>
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.55rem;">The ACCELERATE pillars</strong>
+<ol style="margin:0 0 0.6rem;padding-left:1.2rem;">
+<li><strong>Own the trail</strong> &mdash; hiking and trail gear</li>
+<li><strong>Dominate warmth</strong> &mdash; the insulated outerwear line, where Omni-Heat lives</li>
+<li><strong>Power PFG</strong> &mdash; Performance Fishing Gear, their fishing sub-brand</li>
+<li><strong>Fuel outdoor lifestyle</strong> &mdash; the everyday, non-technical side</li>
+<li><strong>Accelerate footwear</strong> &mdash; shoes across all of it, and their fastest-growing segment last quarter at +5% to $117M</li>
 </ol>
+<p style="margin:0;font-size:0.86rem;color:#7a6a5c;">Their words in bold. The plain-English translation is mine.</p>
 </div>
 
 They told the market exactly what they intend to own. Which is perfect, because now I don't have to guess at what to measure — I can go check whether they actually show up where each of those five gets decided.
@@ -93,7 +94,11 @@ So I went to OutdoorGearLab directly, since it's one of the properties AI engine
 
 Columbia appears exactly once. The Crestwood Mid, in the slot labeled "Best Women's Boots Under $100."
 
-Own the trail is the stated pillar. In the authoritative answer, they're the cheap option. And nobody at Columbia chose that position — a review site assigned it to them, and now every model reading that page inherits it.
+Own the trail is the stated pillar. In the authoritative answer, they're the value pick.
+
+Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva and Salomon at $175 to $230. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
+
+I've watched that mismatch up close. At Libbey we'd get written up as the affordable glassware while the brand worked hard to read as something more elevated. That gap gets expensive, because the review sites — and the AI answers built on top of them — keep assigning you the position your price implies, whatever the campaign says.
 
 <p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#8b8c4a;margin:2rem 0 -0.6rem;">Traditional Search</p>
 
@@ -210,6 +215,7 @@ That last one is slower and it's the one I'd fight for, because best-of placemen
 Everything above came off public sources, and public sources run out. If Columbia hired me tomorrow, these are the four questions I'd walk into the kickoff with:
 
 - **Do the warmth ratings already exist internally?** If they're sitting in a product database and never surfacing publicly, this is a plumbing project. If they don't exist, it's a testing project, and that's a completely different budget and timeline.
+- **Is the value position deliberate?** OutdoorGearLab has them as the under-$100 pick and their own sponsored boots are $66 and $85. If that's the strategy, then "own the trail" means own the entry tier, and the job is to be the undisputed best value rather than to climb. If it isn't, there's a gap between where they're priced and where they're positioned, and the review layer will keep siding with the price.
 - **Which retailer's feed drives the most units?** That tells me where to fix the data first instead of fixing all five at once.
 - **What does branded versus unbranded traffic look like over the last three years?** PFG's 5,400 searches a month is people who already know them. I'd want to know whether the unbranded discovery side has been eroding underneath the branded strength.
 - **US sales were down 4% last quarter** on soft brick-and-mortar traffic and a weaker wholesale environment, against international up 9%. Has anyone tested whether any part of that domestic softness tracks with discovery moving into AI assistants? I want to be careful here — soft retail traffic has a dozen plausible causes and I'm not going to tell you AI search caused a 4% decline from the outside. But it's a testable question and I'd want to know if anyone's run it.
