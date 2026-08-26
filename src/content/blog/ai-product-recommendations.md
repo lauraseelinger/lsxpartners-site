@@ -55,18 +55,17 @@ Columbia isn't my client. I've never spoken to anyone there. Everything below co
 
 ## How do you know if a brand is visible where it says it competes?
 
-Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy. In their words:
+Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy.
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.55rem;">The ACCELERATE pillars</strong>
 <ol style="margin:0 0 0.6rem;padding-left:1.2rem;">
 <li><strong>Own the trail</strong> &mdash; hiking and trail gear</li>
-<li><strong>Dominate warmth</strong> &mdash; the insulated outerwear line, where Omni-Heat lives</li>
+<li><strong>Dominate warmth</strong> &mdash; Omni-Heat, their insulated outerwear line</li>
 <li><strong>Power PFG</strong> &mdash; Performance Fishing Gear, their fishing sub-brand</li>
-<li><strong>Fuel outdoor lifestyle</strong> &mdash; the everyday, non-technical side</li>
-<li><strong>Accelerate footwear</strong> &mdash; shoes across all of it, and their fastest-growing segment last quarter at +5% to $117M</li>
+<li><strong>Fuel outdoor lifestyle</strong> &mdash; casual apparel, fleece and everyday jackets</li>
+<li><strong>Accelerate footwear</strong> &mdash; boots and shoes across every line</li>
 </ol>
-<p style="margin:0;font-size:0.86rem;color:#7a6a5c;">Their words in bold. The plain-English translation is mine.</p>
 </div>
 
 They told the market exactly what they intend to own. Which is perfect, because now I don't have to guess at what to measure — I can go check whether they actually show up where each of those five gets decided.
