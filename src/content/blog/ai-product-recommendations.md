@@ -76,7 +76,7 @@ I started with the first two. They're not in either one.
 
 ## Who owns the answer when a beginner asks what to buy?
 
-I ran this on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results. This is what came back for "best hiking boots for beginners."
+This is what came back for "best hiking boots for beginners." I ran it on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results.
 
 <div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
 <strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
@@ -87,15 +87,33 @@ I ran this on Google because, no, SEO is not dead — and Google's AI Overview i
 
 And there you have it — Merrell is a named recommendation, which is built on top sources of Reddit and REI. Columbia didn't make the list and is only present on the page via Sponsored Products and the Popular Products grid.
 
-Those sponsored slots are the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66. So the brand is paying to sit next to an AI answer that recommends somebody else, which is roughly what paid placement buys you now.
+Those sponsored slots are the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66. So the brand is paying to sit next to an AI answer that recommends somebody else.
 
-So I went to OutdoorGearLab directly, since it's one of the properties AI engines lean on hardest, and pulled their full hiking boot award list. Editors' Choice went to Hoka and La Sportiva. The category awards went to La Sportiva four more times, Salomon twice, plus Hoka, Topo, Zamberlan, On and Scarpa. Best Buy went to the Merrell Moab.
+Next I pulled up OutdoorGearLab directly, since it's one of the third-party sources AI engines lean on in this category, and looked at their full hiking boot award list.
 
-Columbia appears exactly once. The Crestwood Mid, in the slot labeled "Best Women's Boots Under $100."
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-radius:8px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.06em;font-size:0.72rem;color:#b55434;margin-bottom:0.85rem;">OutdoorGearLab &middot; best hiking boots &middot; who won what</strong>
+<div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
+<strong style="color:#8b8c4a;">Editors' Choice</strong><br>
+<span style="font-size:0.94rem;">Hoka Kaha 3 GTX &middot; La Sportiva Ultra Raptor 3 Mid GTX</span>
+</div>
+<div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
+<strong style="color:#8b8c4a;">Top Pick &mdash; 11 category awards</strong><br>
+<span style="font-size:0.94rem;">La Sportiva &times;4 &middot; Salomon &times;2 &middot; Hoka &middot; Topo &middot; Zamberlan &middot; On &middot; Scarpa</span>
+</div>
+<div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
+<strong style="color:#8b8c4a;">Best Buy</strong><br>
+<span style="font-size:0.94rem;">Merrell Moab 3 Mid</span>
+</div>
+<div style="padding:0.75rem 0.9rem;margin-top:0.7rem;background:#ffffff;border-left:4px solid #b55434;border-radius:0 6px 6px 0;">
+<strong style="color:#b55434;">Best Women's Boots Under $100</strong><br>
+<span style="font-size:0.94rem;">Columbia Crestwood Mid &mdash; their only award on the page</span>
+</div>
+</div>
 
 Own the trail is the stated pillar. In the authoritative answer, they're the value pick.
 
-Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva and Salomon at $175 to $230. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
+Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva, Salomon and Lowa in the $220 to $280 range on that same page. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
 
 I've watched that mismatch up close. At Libbey we'd get written up as the affordable glassware while the brand worked hard to read as something more elevated. That gap gets expensive, because the review sites — and the AI answers built on top of them — keep assigning you the position your price implies, whatever the campaign says.
 
