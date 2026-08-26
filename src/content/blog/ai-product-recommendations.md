@@ -89,20 +89,20 @@ And there you have it — Merrell is a named recommendation, which is built on t
 
 Those sponsored slots are the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66. So the brand is paying to sit next to an AI answer that recommends somebody else.
 
-Next I pulled up OutdoorGearLab directly, since it's one of the third-party sources AI engines lean on in this category, and looked at their full hiking boot award list.
+Next I pulled up OutdoorGearLab, since it's the kind of third-party review site that AI engines lean on hard in this category. Their "Best Hiking Boots" article hands out awards in tiers — one top award, a run of category-specific wins, and a value award at the bottom. Here's every one of them.
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-radius:8px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.06em;font-size:0.72rem;color:#b55434;margin-bottom:0.85rem;">OutdoorGearLab &middot; best hiking boots &middot; who won what</strong>
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.06em;font-size:0.72rem;color:#b55434;margin-bottom:0.85rem;">OutdoorGearLab &middot; "Best Hiking Boots" &middot; every award on the page</strong>
 <div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
-<strong style="color:#8b8c4a;">Editors' Choice</strong><br>
+<strong style="color:#8b8c4a;">Editors' Choice</strong> <span style="font-size:0.86rem;color:#7a6a5c;">their top award</span><br>
 <span style="font-size:0.94rem;">Hoka Kaha 3 GTX &middot; La Sportiva Ultra Raptor 3 Mid GTX</span>
 </div>
 <div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
-<strong style="color:#8b8c4a;">Top Pick &mdash; 11 category awards</strong><br>
+<strong style="color:#8b8c4a;">Top Pick</strong> <span style="font-size:0.86rem;color:#7a6a5c;">11 category-specific wins &mdash; best support, widest fit, most durable, and so on</span><br>
 <span style="font-size:0.94rem;">La Sportiva &times;4 &middot; Salomon &times;2 &middot; Hoka &middot; Topo &middot; Zamberlan &middot; On &middot; Scarpa</span>
 </div>
 <div style="padding:0.55rem 0;border-bottom:1px solid #ecd9bd;">
-<strong style="color:#8b8c4a;">Best Buy</strong><br>
+<strong style="color:#8b8c4a;">Best Buy</strong> <span style="font-size:0.86rem;color:#7a6a5c;">their value award</span><br>
 <span style="font-size:0.94rem;">Merrell Moab 3 Mid</span>
 </div>
 <div style="padding:0.75rem 0.9rem;margin-top:0.7rem;background:#ffffff;border-left:4px solid #b55434;border-radius:0 6px 6px 0;">
@@ -111,9 +111,9 @@ Next I pulled up OutdoorGearLab directly, since it's one of the third-party sour
 </div>
 </div>
 
-Own the trail is the stated pillar. In the authoritative answer, they're the value pick.
+Own the trail is one of Columbia's stated growth pillars, and to AI, their authority in it falls entirely within being the value pick.
 
-Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva, Salomon and Lowa in the $220 to $280 range on that same page. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
+Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva, Salomon and Lowa in the $220 to $280 range. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words. And the company owns Mountain Hardwear, which is where the technical premium sits.
 
 I've watched that mismatch up close. At Libbey we'd get written up as the affordable glassware while the brand worked hard to read as something more elevated. That gap gets expensive, because the review sites — and the AI answers built on top of them — keep assigning you the position your price implies, whatever the campaign says.
 
