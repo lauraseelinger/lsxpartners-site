@@ -30,7 +30,18 @@ Five years ago my husband and I went on our first hiking trip and had to buy a t
 
 So back in 2021, we went to REI, found an associate, described what we'd be doing, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. In fact, this is what nearly half of shoppers (48.5%) do in 2026 — use an AI platform to research prior to making a purchase, according to Alchemer's 2026 Retail Report.
 
-AI is changing the interactions we have prior to making purchases — whether that's absorbing the mid-funnel conversation that used to happen with a store associate, or by totally switching up the playing field that used to be a heck of a lot more focused on 3-4 word keywords and phrases. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations get built from what's publicly retrievable about a product — the review sites that tested it, the forums where people who actually own it compare notes, and the structured attribute data sitting on retailer pages. A brand can be in every store in America and still lose the recommendation, because it owns none of those three surfaces.
+<div style="margin:2rem 0;padding:0 0 0 1.4rem;border-left:5px solid #b55434;">
+<p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:1.6rem;line-height:1.35;color:#b55434;font-weight:600;">Nearly half of shoppers &mdash; 48.5% &mdash; now use an AI platform to research before they buy.</p>
+<p style="margin:0.5rem 0 0;font-size:0.85rem;color:#7a6a5c;">Alchemer 2026 Retail Report &middot; 1,002 U.S. shoppers</p>
+</div>
+
+AI is changing the interactions we have prior to making purchases — whether that's absorbing the mid-funnel conversation that used to happen with a store associate, or replacing the 3-4 word keyword search that used to kick the whole thing off. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations get built from what's publicly retrievable about a product — the review sites that tested it, the forums where people who actually own it compare notes, and the structured attribute data sitting on retailer pages. A brand can be in every store in America and still lose the recommendation, because it owns none of those three surfaces.
+
+<div style="margin:3rem 0 1.6rem;padding:1.5rem 1.6rem;background:#b55434;border-radius:10px;">
+<p style="margin:0 0 0.35rem;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:#f7d9cc;font-weight:800;">Real brand case study</p>
+<p style="margin:0;font-size:1.75rem;line-height:1.2;color:#ffffff;font-weight:700;">Columbia Sportswear</p>
+<p style="margin:0.5rem 0 0;font-size:0.95rem;color:#f7d9cc;">Public data only &middot; audited September 2026</p>
+</div>
 
 So let's walk through this with a real brand — we'll see where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert. We'll use Columbia Sportswear — they're a national brand with a retailer-reliant strategy, we know their focus areas of growth thanks to their latest earnings call, and they have a distribution network similar to brands I've already created strategies for (where you prioritize [the recommendation over the citation](/blog/ai-citations-vs-brand-mentions)).
 
@@ -50,7 +61,7 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
-Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, buyer conversation, retailer listings, and what the AI engines said when I asked them.
+Columbia isn't a client and I've had no conversations with anyone there. Everything that follows is a strategy built entirely from public signal — their earnings call, their own product pages, real buyer conversation, retailer listings, and what six AI engines said when I asked them. No insider access, no internal data, no brief. Which happens to be the same position an AI system is in when it decides whether to recommend them.
 </aside>
 
 ## How do you audit whether AI recommends a brand?
