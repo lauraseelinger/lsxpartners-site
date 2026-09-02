@@ -48,7 +48,7 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
 <p style="margin:0 0 0.7rem;"><strong>The brand:</strong> Columbia Sportswear (NASDAQ: COLM)</p>
-<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only &mdash; real buyer conversation, live AI engine testing, retailer pages, and their own earnings call. No internal data, which is also what an AI system has to work with.</p>
+<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only &mdash; real buyer conversation, live AI engine testing, retailer pages, and their own earnings call.</p>
 <p style="margin:0 0 0.4rem;"><strong>The questions their CMO should be asking:</strong></p>
 <ul style="margin:0 0 0.8rem;padding-left:1.15rem;">
 <li>Are we visible in the categories we've told investors we're going to own?</li>
@@ -61,29 +61,34 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
-Columbia isn't a client and I've had no conversations with anyone there. Everything that follows is a strategy built entirely from public signal — their earnings call, their own product pages, real buyer conversation, retailer listings, and what six AI engines said when I asked them. No insider access, no internal data, no brief. Which happens to be the same position an AI system is in when it decides whether to recommend them.
+Columbia isn't a client and I've had no conversations with anyone there. Everything that follows is a strategy built entirely from public signal — their earnings call, their own product pages, real buyer conversation, retailer listings, and what six AI engines said when I asked them.
 </aside>
 
 ## How do you audit whether AI recommends a brand?
 
-Three passes, in order. The order matters — do them backwards and you end up testing your own assumptions instead of the market's.
+The AI visibility process has four major steps, and every one of them matters. Run one badly and it skews everything after it — if you don't know the topics and the actual language your audience uses, nothing downstream can save the results.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Listen to how buyers actually talk</strong>
-<p style="margin:0;">I pulled roughly 150 real buyer conversations from outdoor communities on Reddit — people arguing about boots, warmth, rain gear and what's worth the money. Not to count mentions. To learn the vocabulary, so the questions I test are the ones people actually ask rather than the ones a marketer would write.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
+<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions &mdash; for Columbia that meant roughly 150 real conversations in outdoor communities on Reddit. Not to count mentions. To learn the vocabulary.</p>
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Ask the engines, properly</strong>
-<p style="margin:0;">25 buying questions built from that language, run through six AI engines — ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. 145 captured answers. Clean sessions throughout: fixed location, logged out, memory off, a fresh chat for every single question. Skip that discipline and you're measuring somebody's browsing history.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Build the test prompts from that language</strong>
+<p style="margin:0;">The patterns and phrasing from step one become the questions. If you aren't using the actual terms and situations the buyer uses, your prompt audit is useless &mdash; you've tested your own assumptions and called it research.</p>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Check whether an agent can actually transact</strong>
-<p style="margin:0;">Recommendation is only half of it. I checked whether an AI agent can reach Columbia's product pages, read stock and size data, and get a price that matches what a buyer would actually pay at checkout.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Execute the prompt audit across every platform</strong>
+<p style="margin:0;">25 buyer questions through six engines &mdash; ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. 145 captured answers: the prompt, the engine, the full response and its cited sources, timestamped and logged. Clean sessions throughout &mdash; fixed location, logged out, memory off, a fresh chat every time. That produces the baseline of where a brand is winning, losing or nonexistent, and does the same for its competitors.</p>
 </div>
 
-Everything below came out of those three passes and public filings. Nothing came from inside the company.
+<div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Stand up the measurement baseline</strong>
+<p style="margin:0;">For a client this is where the dashboard gets built and the cadence gets set, so the baseline becomes a trend line rather than a one-off snapshot. Columbia isn't a client, so this piece isn't part of what follows &mdash; but it's the difference between knowing where you stand today and knowing whether anything you did moved it.</p>
+</div>
+
+For this one I added a fifth pass, because Columbia sells through retailers: I checked whether an AI agent can actually reach their product pages, read stock and size, and return a price that matches what a buyer would pay at checkout. That turned out to be the most damaging finding in the whole audit.
 
 ## How visible is a household name in AI answers?
 
