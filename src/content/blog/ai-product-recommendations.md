@@ -1,7 +1,7 @@
 ---
 title: "AI Product Recommendations: Why Your Brand Isn't in the Answer"
 description: "AI product recommendations decide who gets named when buyers ask what to buy. Why household names go invisible in AI, and what a CMO should do about it."
-pubDate: 2026-08-25
+pubDate: 2026-09-02
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "product-data", "ai-shopping-assistant", "ai-search-visibility"]
 # heroImage: "/images/blog/ai-product-recommendations.jpg"
@@ -9,15 +9,13 @@ faqs:
   - question: "How do AI product recommendations actually work?"
     answer: "AI product recommendations are assembled from what's publicly retrievable about a product — the review sites that tested it, the community threads where owners share what actually held up, and the structured attribute data sitting on retailer product pages. The model isn't reading your brand campaign. It's reading the sources that describe your product, most of which you don't own."
   - question: "Can a brand be sold everywhere and still lose the AI recommendation?"
-    answer: "Yes. Distribution and recommendation are separate games now. A product can sit on the shelf at REI, Dick's, Amazon and Backcountry and still never surface when someone asks an AI assistant what to buy, because the answer gets built from review coverage and structured attributes rather than shelf space. L.E.K. Consulting found 31% of AI users had largely made their purchase decision before they ever reached a brand or retailer site (survey of 2,650 U.S. consumers, April 2026)."
-  - question: "Why does proprietary product technology naming hurt AI visibility?"
-    answer: "Branded feature names like Omni-Tech or Omni-Heat work on people who already know the brand. When an AI assistant filters for a standardized attribute — waterproof, UPF 50, a temperature rating — a proprietary name only resolves if some retailer has mapped it to a standard field. Strong entity, unmatchable attributes."
-  - question: "What is the difference between search volume and real demand in AI search?"
-    answer: "Google keyword volume now undercounts demand for conversational buying questions, because those questions moved to AI assistants. You can see it in the pricing: 'best sun shirt for fishing' shows 10 searches a month in the US but carries a $1.68 CPC. Advertisers can feel demand their keyword tool can't measure."
+    answer: "Yes. Distribution and recommendation are separate games now. In an audit of Columbia Sportswear across six AI engines, the brand was named in only 11% of hiking footwear answers despite footwear being its fastest-growing segment. L.E.K. Consulting found 31% of AI users had largely made their purchase decision before they ever reached a brand or retailer site (survey of 2,650 U.S. consumers, April 2026)."
   - question: "Why does AI describe my brand differently than our marketing does?"
-    answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources. Checking what AI says about your brand is the easy part; closing the gap between that and your intended positioning is the actual work."
+    answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
+  - question: "Why would an AI assistant quote the wrong price for my product?"
+    answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colourway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
   - question: "Is this analysis based on Columbia's internal data?"
-    answer: "No. Columbia Sportswear is not a client and I have no relationship with the company. Everything here comes from public sources — SEC filings and earnings calls, public search data, retailer pages, and review coverage. That's the same material an AI system has when it recommends a product, which is the whole point."
+    answer: "No. Columbia Sportswear is not a client and I have no relationship with the company. Everything here comes from public sources — SEC filings and earnings calls, public buyer conversation, live AI engine responses, retailer pages and robots.txt. That's the same material an AI system has when it recommends a product, which is the whole point."
 ---
 
 <div class="post-lede">
@@ -39,7 +37,7 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
 <p style="margin:0 0 0.7rem;"><strong>The brand:</strong> Columbia Sportswear (NASDAQ: COLM)</p>
-<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only, with search data as the proxy for AI visibility &mdash; the documents that rank are largely the documents an engine reads when it builds an answer.</p>
+<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only &mdash; real buyer conversation, live AI engine testing, retailer pages, and their own earnings call. No internal data, which is also what an AI system has to work with.</p>
 <p style="margin:0 0 0.4rem;"><strong>The questions their CMO should be asking:</strong></p>
 <ul style="margin:0 0 0.8rem;padding-left:1.15rem;">
 <li>Are we visible in the categories we've told investors we're going to own?</li>
@@ -52,209 +50,170 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
-Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, search data, and review coverage.
+Columbia isn't my client. I've never spoken to anyone there. Everything below comes from stuff anyone can look up — their earnings call, their website, buyer conversation, retailer listings, and what the AI engines said when I asked them.
 </aside>
 
-## How do you know if a brand is visible where it says it competes?
+## How do you audit whether AI recommends a brand?
 
-Columbia is public (NASDAQ: COLM), and on their Q2 2026 earnings call in August they laid out the five pillars of their ACCELERATE growth strategy.
+Three passes, in order. The order matters — do them backwards and you end up testing your own assumptions instead of the market's.
 
-<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.55rem;">The ACCELERATE pillars</strong>
-<ol style="margin:0 0 0.6rem;padding-left:1.2rem;">
-<li><strong>Own the trail</strong> &mdash; hiking and trail gear</li>
-<li><strong>Dominate warmth</strong> &mdash; Omni-Heat, their insulated outerwear line</li>
-<li><strong>Power PFG</strong> &mdash; Performance Fishing Gear, their fishing sub-brand</li>
-<li><strong>Fuel outdoor lifestyle</strong> &mdash; casual apparel, fleece and everyday jackets</li>
-<li><strong>Accelerate footwear</strong> &mdash; boots and shoes across every line</li>
-</ol>
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Listen to how buyers actually talk</strong>
+<p style="margin:0;">I pulled roughly 150 real buyer conversations from outdoor communities on Reddit — people arguing about boots, warmth, rain gear and what's worth the money. Not to count mentions. To learn the vocabulary, so the questions I test are the ones people actually ask rather than the ones a marketer would write.</p>
 </div>
 
-They told the market exactly what they intend to own. Which is perfect, because now I don't have to guess at what to measure — I can go check whether they actually show up where each of those five gets decided.
-
-I started with the first two. They're not in either one.
-
-<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#b55434;margin:2rem 0 -0.6rem;">AI Search</p>
-
-## Who owns the answer when a beginner asks what to buy?
-
-This is what came back for "best hiking boots for beginners." I ran it on Google because, no, SEO is not dead — and Google's AI Overview is heavily influenced by the SERP results.
-
-<div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
-<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Google AI Overview &middot; "best hiking boots for beginners" &middot; Aug 25, 2026</strong>
-<p style="margin:0 0 0.85rem;font-size:1.02rem;font-style:italic;">"The best hiking boots for beginners offer a blend of out-of-box comfort, reliable ankle support, and accessible pricing without needing heavy-duty break-in periods."</p>
-<p style="margin:0 0 0.4rem;"><strong>Top beginner recommendation:</strong> Merrell Moab 3 Mid &mdash; $104.95</p>
-<p style="margin:0;font-size:0.92rem;color:#5b6b70;"><strong>Sources cited:</strong> Reddit (r/CampingandHiking) &middot; REI Expert Advice</p>
+<div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Ask the engines, properly</strong>
+<p style="margin:0;">25 buying questions built from that language, run through six AI engines — ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. 145 captured answers. Clean sessions throughout: fixed location, logged out, memory off, a fresh chat for every single question. Skip that discipline and you're measuring somebody's browsing history.</p>
 </div>
 
-And there you have it — Merrell is a named recommendation, which is built on top sources of Reddit and REI. Columbia didn't make the list and is only present on the page via Sponsored Products and the Popular Products grid.
-
-Those sponsored slots are the Women's Transverse Hike at $85 and the Men's Newton Ridge at $66. So the brand is paying to sit next to an AI answer that recommends somebody else.
-
-Next I pulled up OutdoorGearLab, since it's the kind of third-party review site that AI engines lean on hard in this category. Their "Best Hiking Boots" article gives out three tiers of award.
-
-<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-radius:8px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.06em;font-size:0.72rem;color:#b55434;margin-bottom:0.9rem;">OutdoorGearLab &middot; "Best Hiking Boots" &middot; all three award tiers</strong>
-
-<div style="padding:0 0 0.8rem;">
-<strong style="color:#8b8c4a;">1 &middot; Editors' Choice</strong><br>
-<span style="font-size:0.94rem;">Hoka Kaha 3 GTX &middot; La Sportiva Ultra Raptor 3 Mid GTX</span>
+<div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Check whether an agent can actually transact</strong>
+<p style="margin:0;">Recommendation is only half of it. I checked whether an AI agent can reach Columbia's product pages, read stock and size data, and get a price that matches what a buyer would actually pay at checkout.</p>
 </div>
 
-<div style="padding:0 0 0.8rem;">
-<strong style="color:#8b8c4a;">2 &middot; Top Pick</strong><br>
-<span style="font-size:0.94rem;">La Sportiva &times;4 &middot; Salomon &times;2 &middot; Hoka &middot; Topo &middot; Zamberlan &middot; On &middot; Scarpa</span>
-</div>
+Everything below came out of those three passes and public filings. Nothing came from inside the company.
 
-<div style="padding:0;">
-<strong style="color:#8b8c4a;">3 &middot; Best Buy</strong><br>
-<span style="font-size:0.94rem;">Merrell Moab 3 Mid</span>
-<div style="margin-top:0.5rem;padding:0.7rem 0.9rem;background:#ffffff;border-left:4px solid #b55434;border-radius:0 6px 6px 0;">
-<strong style="color:#b55434;">Columbia Crestwood Mid</strong> <span style="font-size:0.94rem;">&mdash; "Best Women's Boots Under $100"</span>
-</div>
-</div>
-</div>
-</div>
+## How visible is a household name in AI answers?
 
-Own the trail is one of Columbia's stated growth pillars, and to AI, their authority in it falls entirely within being the value pick.
+Columbia was named in **45.5% of answers** — 66 of 145.
 
-Which raises the question I'd actually want to put to them: is that on purpose? Their own sponsored listings on that same results page are $66 and $85 boots, against La Sportiva, Salomon and Lowa in the $220 to $280 range. So the pricing says value brand. The pillars say "own" and "dominate," which are leadership words.
+That number flatters them, and I'd throw it out. Thirty-nine of those questions had the word "Columbia" in them. Ask an assistant about Columbia and you get Columbia; that measures nothing.
+
+Strip those out and look only at the questions a new buyer actually asks — someone who doesn't know the brand yet:
+
+**25.5%.** Twenty-seven answers out of 106.
+
+Then it splits by category, and this is the part I'd put in front of their CMO:
+
+| Where they compete | Named in |
+|---|---|
+| PFG (fishing) | 43.5% |
+| Warmth | 37.5% |
+| Outdoor lifestyle | 40.0% |
+| **Hiking footwear** | **11.1%** |
+
+On their Q2 2026 earnings call, Columbia laid out five growth pillars. Number one is *"own the trail."* Number five is *"accelerate footwear"* — the segment that grew 5% to $117M last quarter and where the spring 2027 order book is strongest.
+
+**Hiking footwear is where they're least visible.** Eleven percent, in the category carrying two of their five stated pillars and their fastest-growing revenue line.
+
+The engines are consistent about it too. Google AI Overview and Gemini named Columbia in 52% of answers, Perplexity 48%, ChatGPT, Claude and Bing 40%. No platform is meaningfully kinder. This isn't a quirk of one model.
+
+**The buyer conversation ranks them the same way**, which is what makes this hard to argue with. Fishing is where Columbia comes up most in real threads. Hiking footwear is where they come up least. Two independent sources, same order. When the community and the machines agree, you're looking at a position, not a measurement error.
+
+## What do the engines say Columbia actually is?
+
+I asked directly. The answers were near-identical across engines:
+
+- ChatGPT: *"best known for affordable, practical outdoor clothing"*
+- Google AI Overview: *"durable, affordable outdoor apparel"*
+- On "is Columbia just a budget brand?" every engine said **no — mid-tier, value-oriented**
+- On "is it worth the money?": *"worth it, especially if you buy it on sale"*
+
+Notice the engines are *defending* them. Nobody's being unfair. It's a coherent, consistent, reasonably flattering position — accessible, functional, good value, buy it on sale.
+
+It just isn't the position the pillars claim. "Own" and "dominate" are leadership words. The answer engines have them filed as the sensible mid-tier choice, and they've filed them there unanimously.
 
 I've seen (and lived) this marketing vs. reality matchup before. I've [written about how Libbey](/blog/what-your-ai-visibility-score-cant-tell-you) is known as the budget value brand, but their marketing copy is wannabe luxury (I can say that because I wrote some of it back in the day 😜). Your product description shouldn't catfish your customers — if it does even in the slightest, you might have a brand identity tug-of-war happening. A brand's AI identity gets written by the entire internet, meaning those review sites have more of a say than the million-dollar campaign — and if those two aren't in sync, brands are screaming their marketing dollars into a void.
 
-<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#8b8c4a;margin:2rem 0 -0.6rem;">Traditional Search</p>
+## Who wins the answers a brand is losing?
 
-## Why does a competitor's product data beat yours in AI answers?
+In the 54 hiking footwear answers where Columbia appeared 11% of the time:
 
-Same exercise, different pillar. Dominate warmth.
+| Brand | Share of trail answers |
+|---|---|
+| Merrell | 48% |
+| Salomon | 33% |
+| Keen | 22% |
+| Altra | 20% |
+| Lowa | 19% |
+| **Columbia** | **11%** |
 
-The results for "warmest winter coat" are a mix of Reddit — specifically a BuyItForLife thread titled "what is the scientifically warmest winter coat" — plus OutdoorGearLab, Better Trail, Outdoors Magic, Switchback Travel, Dick's, Lands' End, Fjällräven, a Patagonia dealer, a style creator, and YouTube.
+Merrell is in nearly half of them.
 
-Columbia is absent. In the warmth query. Where warmth is the entire pitch.
+There's a second thing happening underneath that, and it's bigger than any single competitor. The most common subject in the buyer conversation I read wasn't which hiking boot to buy. It was **whether to buy boots at all**, versus trail runners. That argument came up more than any other topic in the corpus — lighter, more comfortable, often cheaper, no break-in period.
 
-And one of the results sitting in that list is `carhartt.com/c/warmest-rating`. Carhartt built a browsable category organized around a warmth rating. You can filter it. You can compare things inside it. A number that means something to a machine.
+Columbia doesn't compete in trail runners. So the fastest-moving conversation in their number-one pillar is one they're structurally absent from.
 
-Columbia expresses warmth as Omni-Heat, which is a reflective lining technology with a brand name on it. If an AI assistant is asked for a coat rated to zero degrees, it can do something with Carhartt's structure and it can do nothing with a trademark.
+**And what they're winning is worth saying plainly.** PFG is their strongest position by a distance, and it's the least contested territory in the whole audit — competitors barely get named there at all. That's the one place they have room to consolidate rather than fight, and it currently sits third on their own priority list.
 
-A competitor already shipped the fix. It's live right now, and you can go click it.
+## Why does an AI assistant quote the wrong price?
 
-## Why does proprietary product naming hurt brand visibility in AI search?
+This is where recommendation stops being a marketing problem and becomes a revenue one.
 
-I was wrong about this part and the data corrected me.
+I asked all six engines a simple transactional question: *is the Columbia Newton Ridge Plus II available in a men's 11 wide right now?*
 
-I assumed Columbia's proprietary naming — Omni-Tech, Omni-Heat, Omni-Shade — was dead weight nobody searches for. Then I pulled the numbers (US, monthly, via Semrush):
+<div style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:12px;padding:1.15rem 1.35rem;margin:1.2rem 0;">
+<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:#5b7d88;margin-bottom:0.65rem;">&#10022; Perplexity &middot; asked Sep 1, 2026</strong>
+<p style="margin:0 0 0.75rem;font-size:1.02rem;font-style:italic;">"Yes&mdash;Columbia currently lists the men's Newton Ridge Plus II Waterproof Hiking Boot in a Wide version (style 1594732) on its U.S. site for $50. <strong style="font-style:normal;">However, the page content available to me does not expose the live size-selector inventory, so I can't confirm that men's 11 Wide is in stock at this exact moment.</strong>"</p>
+<p style="margin:0;font-size:0.92rem;color:#5b6b70;"><strong>What the same question returned elsewhere the same day:</strong> ChatGPT $109.99 &middot; Google AI Overview ~$110 &middot; Gemini $110 and $77 &middot; Bing: no AI answer</p>
+</div>
 
-| Columbia's term | Volume | Generic version | Volume |
-|---|---|---|---|
-| columbia pfg | **5,400** | best fishing shirt | 140 |
-| pfg shirt | 880 | upf 50 fishing shirt | 20 |
-| omni heat | 1,000 | warmest winter coat | 1,000 |
-| omni shade | 320 | upf 50 shirt | 260 |
-| omni wick | 140 | — | — |
-| columbia turbodown | 90 | — | — |
+I opened that exact product page. Style 1594732 is **$110.00**, and 11 Wide is right there in the size selector.
 
-PFG at 5,400 a month is the strongest term in the entire set. Omni-Shade actually outdraws "upf 50 shirt." These aren't dead terms — Columbia built real brand equity in their own vocabulary, and that's genuinely hard to do.
+So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.99 and $110**. Half of them were at least 30% below what a buyer would actually pay. One was off by 55%.
 
-The problem is narrower and meaner than I expected. That vocabulary works beautifully on people who already know Columbia, and does absolutely nothing for people who don't.
+None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colourway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
 
-I'm the second group. When I ask an assistant what to wear fishing in July, I don't say PFG. I have no idea what PFG stands for. I say "something that won't cook me in the sun." If the structured attribute on the product page reads "PFG" where it could read "UPF 50, moisture-wicking, vented," then the filter has nothing to grab, and a product that would have been a perfect match never enters the running.
+The mechanism has three links in it and every one is checkable.
 
-Every new customer they want is in my group. That's what makes it expensive.
+1. **Columbia's own product pages refuse automated access.** Every request I made returned a 403 from their bot-management layer, whatever user-agent I used.
+2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/colour variants. Exactly the fields required to answer "is it in stock in an 11 wide."
+3. **So the assistants ask a retailer instead.** Backcountry, Dick's, Amazon, Zappos. And the retailers disagree with each other by more than 2x.
 
-## Why are advertisers paying more for searches almost nobody makes?
+Perplexity said the quiet part out loud: it could not see the live inventory. It still answered, using someone else's number.
 
-This is the table I'd open the boardroom presentation with, and it's just two columns of public data.
+Their competitors don't have this problem. Merrell, Salomon and Keen don't block their availability endpoints. Merrell goes further — their robots.txt explicitly names eight AI crawlers and allows every one of them. Columbia names one, with a crawl delay.
 
-| Category query | Monthly volume | CPC |
-|---|---|---|
-| best rain jacket | 4,400 | $0.65 |
-| best fleece jacket | 2,900 | $0.71 |
-| best ski jacket | 1,300 | $0.65 |
-| warmest winter coat | 1,000 | $0.57 |
-| best snow pants | 720 | $0.71 |
-| best hunting jacket | 590 | $1.02 |
-| best women's winter coat | 390 | $0.81 |
-| upf 50 shirt | 260 | $0.69 |
-| best fishing shirt | 140 | **$1.25** |
-| best sun shirt for fishing | 10 | **$1.68** |
+I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. But one of these companies has clearly sat down and made decisions about AI access, and one hasn't.
 
-Read those two columns against each other. The FEWER searches a query gets, the more advertisers are willing to pay for it.
-
-Ten searches a month at $1.68 a click. That's not advertisers being dumb. That's advertisers being able to feel demand in their revenue that their keyword tool can no longer see, and bidding accordingly.
-
-The same pattern shows up in the beginner questions. "What do I need for backpacking" gets 50 searches a month. "Beginner backpacking gear list" gets 10. Those are questions millions of people have. They just stopped typing them into Google and started asking an assistant, or watching somebody answer them on YouTube.
-
-If you're still measuring category demand with keyword volume, you're reading a gauge that's been disconnected from the engine. I wrote more about that gap in [why brands with strong SEO go invisible in AI search](/blog/why-strong-seo-invisible-in-ai).
-
-<p style="text-transform:uppercase;letter-spacing:0.07em;font-size:0.72rem;font-weight:800;color:#b55434;margin:2rem 0 -0.6rem;">AI Search</p>
-
-## How does an AI shopping assistant decide which brand to name?
-
-Everything, and this is where it stops being a visibility problem and starts being a revenue problem.
-
-L.E.K. Consulting surveyed 2,650 U.S. shoppers this April and cross-referenced them against traffic from more than 100 brands and retailers. Among people using AI to shop, 53% of the primary use is comparing options and narrowing down a shortlist — well ahead of discovery at 19% or final decision-making at 21%. The middle of the funnel is where AI is doing its work, and the middle of the funnel is precisely where the store associate used to live.
-
-The consequence shows up in the same study. 31% of AI users say their purchase decision was largely made before they ever reached a brand or retailer site, up from 26% two years ago. So a third of your buyers are arriving having already been talked out of you, somewhere you weren't watching, by a source you've never audited.
-
-Columbia is a wholesale brand. They sell through REI, Dick's, Amazon, Backcountry, Scheels, plus their own site. I've written about why [what agentic commerce means for your brand depends on how you sell](/blog/agentic-commerce-by-brand-type) — and the wholesale version is the harder one by a lot.
-
-That post breaks down the three brand types and what each one owns. Columbia is the middle case, and it's the hardest of the three.
-
-A wholesale brand doesn't own the checkout. The retailer does. So the only thing left under the brand's control is product data, and that data has to resolve and stay consistent across every surface an agent might read — their own product page, REI's, Dick's, Amazon's, Backcountry's. Identity, attributes, price, availability, all of it matching everywhere.
-
-And notice who kept turning up in both sets of results I pulled: Dick's, with purpose-built pages at `/o/warmest-winter-coats-for-women` and `/o/hiking-shoes-for-beginners`.
-
-The retailer captures the intent. The retailer owns the checkout. The retailer writes the words the agent reads. Three layers of the transaction and the brand owns none of them.
+**One more, and it's the worst of them, because nothing anywhere reports it as a failure.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
 
 ## What should a brand fix first to win AI product recommendations?
 
 Four things, in this order. None of them are "post more content."
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 · Turn warmth into a number</strong>
-<p style="margin:0;">Carhartt already proved the format works and ranks. A temperature rating that exists as a structured, filterable, comparable field — on their own product pages and pushed through to every retailer feed. Omni-Heat can stay as the brand name. It just can't be the only thing in the field.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Let the agents in, and give them stock and size</strong>
+<p style="margin:0;">Open the availability and variant endpoints, allowlist the named AI crawlers, and fix the sitemap that answers 200 with nothing in it. <strong>Why:</strong> you cannot govern a price an agent reads off someone else's page. This is the cheapest fix on the list and it's the one blocking every other fix from mattering.</p>
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 · Translate the proprietary vocabulary in the data layer</strong>
-<p style="margin:0;">Not in the marketing — the marketing is working, PFG has 5,400 searches a month of its own. In the structured attributes, where PFG needs to also say UPF 50, and Omni-Tech needs to also say waterproof with a rating. Keep the brand name and add the standard one beside it.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Govern product data across every retailer</strong>
+<p style="margin:0;">One source of truth for identity, price, availability and specs, pushed to every retailer feed and audited for drift. <strong>Why:</strong> a buyer told $50 who arrives at a $110 checkout doesn't file a complaint — they leave. And that abandonment shows up in nobody's report as an AI problem.</p>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 · Audit attribute parity across retailers</strong>
-<p style="margin:0;">Take fifty products and compare the structured data on columbia.com against REI, Dick's, Amazon and Backcountry. Where the fields disagree, the agent picks one, and it won't be the one you'd choose. I'd expect this to be the ugliest finding of the whole engagement and the cheapest to fix.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Teach your proprietary names what they mean</strong>
+<p style="margin:0;">Keep Omni-Tech and Omni-Heat — those are brand assets and abandoning them would be daft. The work is attaching the benefit identity to the name so the engines connect it to the problem it solves. <strong>Why:</strong> this one is half-built already. Google AI Overview volunteers that Omni-Tech means "waterproof breathability," so the association exists — it just doesn't fire when someone asks for a waterproof jacket without naming the brand. That's a content and structured-data job, not a rebrand.</p>
 </div>
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 · Go make friends with the people who already own the answers</strong>
-<p style="margin:0;">Every result I pulled had the same shape — Reddit at the top, then independent gear testers, then individual creators. Those aren't influencers and they shouldn't be treated like influencers. Sponsorship buys you enthusiasm, and enthusiasm doesn't get extracted. What gets extracted is a specific reason: "the toe box runs wide, which is why it worked on a twelve-mile day." I'd find the people who genuinely already hike in this stuff, ask them what they actually think, and fix the products they complain about before asking for anything.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Pick the fight you can win, and defend it</strong>
+<p style="margin:0;">PFG is the least contested ground in the entire audit and their strongest position. Hiking footwear is the most contested and their weakest, against a category migrating to a product they don't make. <strong>Why:</strong> "own the trail" as a pillar means fighting Merrell, Salomon, Keen, Altra and Lowa simultaneously in a conversation that's moving to trail runners. Consolidating fishing costs less and returns faster — and nothing stops you doing both, in that order.</p>
 </div>
 
-That last one is slower and it's the one I'd fight for, because best-of placements get expensive fast and this compounds.
+## What can't you diagnose about AI visibility from public data?
 
-## What can't you diagnose about AI search visibility from public data?
+Everything above came off public sources, and public sources run out. If Columbia hired me tomorrow, these are the questions I'd walk into the kickoff with:
 
-Everything above came off public sources, and public sources run out. If Columbia hired me tomorrow, these are the four questions I'd walk into the kickoff with:
-
-- **Do the warmth ratings already exist internally?** If they're sitting in a product database and never surfacing publicly, this is a plumbing project. If they don't exist, it's a testing project, and that's a completely different budget and timeline.
-- **Is the value position deliberate?** OutdoorGearLab has them as the under-$100 pick and their own sponsored boots are $66 and $85. If that's the strategy, then "own the trail" means own the entry tier, and the job is to be the undisputed best value rather than to climb. If it isn't, there's a gap between where they're priced and where they're positioned, and the review layer will keep siding with the price.
-- **Which retailer's feed drives the most units?** That tells me where to fix the data first instead of fixing all five at once.
-- **What does branded versus unbranded traffic look like over the last three years?** PFG's 5,400 searches a month is people who already know them. I'd want to know whether the unbranded discovery side has been eroding underneath the branded strength.
-- **US sales were down 4% last quarter** on soft brick-and-mortar traffic and a weaker wholesale environment, against international up 9%. Has anyone tested whether any part of that domestic softness tracks with discovery moving into AI assistants? I want to be careful here — soft retail traffic has a dozen plausible causes and I'm not going to tell you AI search caused a 4% decline from the outside. But it's a testable question and I'd want to know if anyone's run it.
+- **Is the value position deliberate?** The engines have them filed as mid-tier value, unanimously. If that's the strategy, then "own the trail" means own the entry tier, and the job is to be the undisputed best value rather than to climb. If it isn't, there's a gap between where they're priced and where they're positioned, and the review layer will keep siding with the price.
+- **Who owns product data across retailers?** Merchandising, e-commerce, and the channel teams all touch it. Somebody has to own the drift, and right now the answer to "what does this cost" depends on which retailer an assistant reached first.
+- **Do the specs exist internally?** Their own product page carries weight in grams and lug height in millimetres, which is better data than most brands publish. If that's already structured internally, this is a plumbing project. If it's hand-written per page, it's a different budget entirely.
+- **US sales were down 4% last quarter** on soft brick-and-mortar traffic and a weaker wholesale environment, against international up 9%. Has anyone tested whether any part of that domestic softness tracks with discovery moving into AI assistants? Soft retail traffic has a dozen plausible causes and I'm not going to tell you AI search caused a 4% decline from the outside. But it's a testable question and I'd want to know if anyone's run it.
 
 Anyone can critique a brand from the outside. Knowing which four questions you'd ask on day one is a different thing, and it's most of what I actually get paid for. If you're running marketing at a brand this size and none of the above sounds like something your team currently measures, [start here](/blog/ai-visibility-for-cmos).
 
 ## Sources
 
-- Columbia Sportswear Q2 2026 financial results and ACCELERATE strategy pillars — [Columbia investor relations press release](https://investor.columbia.com/news-events/press-releases/detail/389/columbia-sportswear-company-reports-second-quarter-2026) and [Q2 2026 earnings call transcript, August 3, 2026](https://www.fool.com/earnings/call-transcripts/2026/08/03/columbia-sportswear-colm-q2-2026-earnings-call-transcript/)
+- Columbia Sportswear Q2 2026 financial results and ACCELERATE strategy pillars — [investor relations press release](https://investor.columbia.com/news-events/press-releases/detail/389/columbia-sportswear-company-reports-second-quarter-2026) and [Q2 2026 earnings call transcript, August 3, 2026](https://www.fool.com/earnings/call-transcripts/2026/08/03/columbia-sportswear-colm-q2-2026-earnings-call-transcript/)
 - Q2 2026 segment detail (US −4%, international +9%, footwear +5% to $117M) — [Sporting Goods Intelligence, August 2026](https://www.sgieurope.com/financial-results/footwear-not-tariffs-is-columbias-big-q2-story/122485.article)
-- Google AI Overview, organic results and sponsored placements for "best hiking boots for beginners" — captured August 25, 2026, US, non-personalized
-- Hiking boot award list — [OutdoorGearLab, best hiking boots](https://www.outdoorgearlab.com/topics/shoes-and-boots/best-hiking-boots), accessed August 2026
-- Carhartt warmth rating category — [carhartt.com/c/warmest-rating](https://www.carhartt.com/c/warmest-rating), accessed August 2026
 - Shoppers using AI to research a purchase in the past year (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
-- AI shopping behavior (53% mid-funnel use, 31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026, cross-referenced against web traffic from 100+ brands and retailers across 13 categories
-- All search volumes, CPCs and results-page data — Semrush US database, pulled August 2026
+- AI shopping behavior (31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026
+- AI engine audit — 25 buyer questions × 6 engines, 145 captured answers, run September 1 2026 from a fixed US location in clean, logged-out sessions
+- Buyer conversation — approximately 150 threads from outdoor communities on Reddit, captured August 2026
+- Product page, pricing and availability — [columbia.com style 1594732](https://www.columbia.com/p/mens-newton-ridge-wide-1594732.html), `columbia.com/robots.txt`, and competitor robots.txt files, all checked September 2026
 
 ---
 
-I'm Laura Seelinger, founder of LSX Partners. This is the kind of analysis I run before a brand hires me, which should tell you something about what happens after. If you're a CMO who just read the CPC table and got a bad feeling about your own category, that feeling is worth about an hour of your time. [Come talk to me](/contact).
+I'm Laura Seelinger, founder of LSX Partners. This is the kind of analysis I run before a brand hires me, which should tell you something about what happens after. If you're a CMO who just read the price table and got a bad feeling about your own category, that feeling is worth about an hour of your time. [Come talk to me](/contact).
