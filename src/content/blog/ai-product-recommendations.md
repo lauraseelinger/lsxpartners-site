@@ -80,19 +80,19 @@ The AI visibility process has four major steps, and every one of them matters. R
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Execute the prompt audit across every platform</strong>
-<p style="margin:0;">25 buyer questions through six engines &mdash; ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. 145 captured answers: the prompt, the engine, the full response and its cited sources, timestamped and logged. Clean sessions throughout &mdash; fixed location, logged out, memory off, a fresh chat every time. That produces the baseline of where a brand is winning, losing or nonexistent, and does the same for its competitors.</p>
+<p style="margin:0;">Every question runs through every major engine &mdash; ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. For each one I log the prompt, the engine, the full response and its cited sources, timestamped. Clean sessions throughout: fixed location, logged out, memory off, a fresh chat every time. That produces the baseline of where a brand is winning, losing or nonexistent, and does the same for its competitors.</p>
 </div>
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Stand up the measurement baseline</strong>
-<p style="margin:0;">For a client this is where the dashboard gets built and the cadence gets set, so the baseline becomes a trend line rather than a one-off snapshot. Columbia isn't a client, so this piece isn't part of what follows &mdash; but it's the difference between knowing where you stand today and knowing whether anything you did moved it.</p>
+<p style="margin:0;">This is where the dashboard gets built and the measurement cadence gets set, so you can tell whether the work moved anything. I didn't do that part here &mdash; this is a one-time read, not an engagement.</p>
 </div>
 
 For this one I added a fifth pass, because Columbia sells through retailers: I checked whether an AI agent can actually reach their product pages, read stock and size, and return a price that matches what a buyer would pay at checkout. That turned out to be the most damaging finding in the whole audit.
 
 ## How visible is a household name in AI answers?
 
-Columbia was named in **45.5% of answers** — 66 of 145.
+I ran 25 buyer questions through those six engines and captured 145 answers. Columbia was named in **45.5%** of them — 66 of 145.
 
 That number flatters them, and I'd throw it out. Thirty-nine of those questions had the word "Columbia" in them. Ask an assistant about Columbia and you get Columbia; that measures nothing.
 
