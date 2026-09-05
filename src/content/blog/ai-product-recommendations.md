@@ -70,12 +70,12 @@ The AI visibility process has four steps, and each one is a strategy exercise in
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
-<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions. For Columbia that meant roughly 150 real conversations in outdoor communities on Reddit, not to count mentions but to learn the vocabulary.</p>
+<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions. For Columbia that meant going deep into outdoor communities on Reddit to learn how people actually talk about boots, warmth, and what's worth paying for.</p>
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Build the test prompts from that language</strong>
-<p style="margin:0;">The patterns and phrasing from step one become the questions within the test prompts. If you aren't using the actual terms and situations the buyer uses, your prompt audit is useless &mdash; you've tested your own assumptions and called it research.</p>
+<p style="margin:0;">The patterns and phrasing from step one become the questions within the test prompts. If you aren't using the actual terms and situations the buyer uses, your prompt audit is useless &mdash; you've just measured the marketing team's unconscious bias.</p>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
