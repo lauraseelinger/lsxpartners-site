@@ -66,7 +66,7 @@ Columbia is not an LSX Partners client. This is a case study created with public
 
 ## How do you audit whether AI recommends a brand?
 
-The AI visibility process has four major steps, and every one of them matters. Run one badly and it skews everything after it — if you don't know the topics and the actual language your audience uses, nothing downstream can save the results.
+The AI visibility process has four steps, and each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. Get the first one wrong and everything measured after it is measuring the wrong thing.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
