@@ -66,7 +66,7 @@ Columbia is not an LSX Partners client. This is a case study created with public
 
 ## How do you audit whether AI recommends a brand?
 
-The AI visibility process has four steps, and each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. Get the first one wrong and everything measured after it is measuring the wrong thing.
+The AI visibility process has four core steps, plus a fifth for any brand that sells through retailers. Each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. Get the first one wrong and everything measured after it is measuring the wrong thing.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
@@ -88,7 +88,10 @@ The AI visibility process has four steps, and each one is a strategy exercise in
 <p style="margin:0;">Build the dashboard so the baseline is established and trackable. For a retainer client the measurement goes further &mdash; more custom prompts, coverage group tracking so third-party platform content sits inside the strategy, and a set cadence.</p>
 </div>
 
-For this one I added a fifth pass, because Columbia sells through retailers: I checked whether an AI agent can actually reach their product pages, read stock and size, and return a price that matches what a buyer would pay at checkout. That turned out to be the most damaging finding in the whole audit.
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0;">
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">5 &middot; Test whether an agent can actually transact</strong>
+<p style="margin:0;">Recommendation is only half the job. For a brand that sells through retailers, I check whether an AI agent can reach the product pages at all, read stock and size, and return a price that matches what a buyer would pay at checkout &mdash; because getting named in the answer is worth very little if the agent then quotes a price you never charged. For Columbia this turned out to be the most damaging finding in the audit.</p>
+</div>
 
 ## How visible is a household name in AI answers?
 
