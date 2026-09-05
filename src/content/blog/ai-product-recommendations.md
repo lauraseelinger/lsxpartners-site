@@ -70,7 +70,7 @@ The AI visibility process has four steps, and each one is a strategy exercise in
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
-<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions. For Columbia that meant going deep into outdoor communities on Reddit to learn how people actually talk about boots, warmth, and what's worth paying for.</p>
+<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions &mdash; communities, forums, review threads, wherever they're comparing notes with each other. For Columbia that meant learning how people actually talk about boots, warmth, and what's worth paying for.</p>
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
@@ -227,7 +227,7 @@ Anyone can critique a brand from the outside. Knowing which four questions you'd
 - Shoppers using AI to research a purchase in the past year (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
 - AI shopping behavior (31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026
 - AI engine audit — 25 buyer questions × 6 engines, 145 captured answers, run September 1 2026 from a fixed US location in clean, logged-out sessions
-- Buyer conversation — approximately 150 threads from outdoor communities on Reddit, captured August 2026
+- Buyer conversation — outdoor communities on Reddit, captured August 2026
 - Product page, pricing and availability — [columbia.com style 1594732](https://www.columbia.com/p/mens-newton-ridge-wide-1594732.html), `columbia.com/robots.txt`, and competitor robots.txt files, all checked September 2026
 
 ---
