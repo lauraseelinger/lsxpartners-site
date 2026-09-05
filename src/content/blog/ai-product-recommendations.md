@@ -95,13 +95,13 @@ The AI visibility process has four core steps, plus a fifth for any brand that s
 
 ## How visible is a household name in AI answers?
 
-I ran 25 buyer questions through those six engines and captured 145 answers. Columbia was named in **45.5%** of them — 66 of 145.
+I ran 25 buyer questions across six AI engines and captured 145 answers. Columbia was named in **45.5%** of them — 66 of 145.
 
-That number flatters them, and I'd throw it out. Thirty-nine of those questions had the word "Columbia" in them. Ask an assistant about Columbia and you get Columbia; that measures nothing.
+That number is inflated, though. 39 of those questions named Columbia directly, and if you ask an assistant about Columbia it talks about Columbia. Those answers say nothing about whether a new buyer would ever find them.
 
-Strip those out and look only at the questions a new buyer actually asks — someone who doesn't know the brand yet:
+The number that matters is the other 106 — the questions someone asks when they don't know the brand yet.
 
-**25.5%.** Twenty-seven answers out of 106.
+**25.5%.** 27 answers out of 106.
 
 Then it splits by category, and this is the part I'd put in front of their CMO:
 
