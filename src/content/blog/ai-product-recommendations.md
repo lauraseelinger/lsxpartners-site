@@ -106,9 +106,7 @@ Then it splits by category, and this is the part the CMO would want to be preppe
 | Outdoor lifestyle | 40.0% |
 | **Hiking footwear** | **11.1%** |
 
-On their Q2 2026 earnings call, Columbia laid out five growth pillars. Number one is *"own the trail."* Number five is *"accelerate footwear"* — the segment that grew 5% to $117M last quarter and where the spring 2027 order book is strongest.
-
-**Hiking footwear is where they're least visible.** Eleven percent, in the category carrying two of their five stated pillars and their fastest-growing revenue line.
+On their Q2 2026 earnings call, Columbia laid out five growth pillars. Number one is *"own the trail."* Number five is *"accelerate footwear"* — and hiking footwear is where they're least visible.
 
 The engines are consistent about it too. Google AI Overview and Gemini named Columbia in 52% of answers, Perplexity 48%, ChatGPT, Claude and Bing 40%. No platform is meaningfully kinder. This isn't a quirk of one model.
 
