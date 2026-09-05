@@ -48,10 +48,10 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
 <p style="margin:0 0 0.7rem;"><strong>The brand:</strong> Columbia Sportswear (NASDAQ: COLM)</p>
-<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Public sources only &mdash; real buyer conversation, live AI engine testing, retailer pages, and their own earnings call.</p>
+<p style="margin:0 0 0.7rem;"><strong>The method:</strong> Buyer conversation, a six-engine prompt audit, retailer listings and their earnings call.</p>
 <p style="margin:0 0 0.4rem;"><strong>The questions their CMO should be asking:</strong></p>
 <ul style="margin:0 0 0.8rem;padding-left:1.15rem;">
-<li>Are we visible in the categories we've told investors we're going to own?</li>
+<li>Are we visible in the categories we've told investors we're going to own (trail, warmth, PFG, outdoor lifestyle, footwear)?</li>
 <li>When someone new to the category asks AI what to buy, who gets recommended &mdash; and why isn't it us?</li>
 <li>Can an AI shopping agent read our product data, and does it say the same thing on every retailer that sells us?</li>
 <li>Where did our category's demand go, and why can't our keyword tools see it anymore?</li>
@@ -60,8 +60,8 @@ So let's walk through this with a real brand — we'll see where their AI visibi
 </div>
 
 <aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
-<strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Quick disclaimer before anything else</strong>
-Columbia isn't a client and I've had no conversations with anyone there. Everything that follows is a strategy built entirely from public signal — their earnings call, their own product pages, real buyer conversation, retailer listings, and what six AI engines said when I asked them.
+<strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Disclaimer</strong>
+Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit.
 </aside>
 
 ## How do you audit whether AI recommends a brand?
