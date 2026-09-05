@@ -99,8 +99,6 @@ I ran 25 buyer questions across six AI engines and captured 145 answers. 39 of t
 
 The other 106 are the ones a buyer asks before they know the brand exists. There, Columbia was named in **25.5%** — 27 answers out of 106.
 
-Blend the two and you overstate discovery by 20 points. It's why I keep branded and unbranded prompts tagged separately from the design stage onward — you want both answers, you just can't average them.
-
 Then it splits by category, and this is the part I'd put in front of their CMO:
 
 | Where they compete | Named in |
