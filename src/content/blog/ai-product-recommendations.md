@@ -85,8 +85,7 @@ The AI visibility process has four steps, and each one is a strategy exercise in
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Set up the measurement baseline</strong>
-<p style="margin:0 0 0.6rem;">Build the dashboard so the baseline is established and trackable. For a retainer client the measurement goes further &mdash; more custom prompts, coverage group tracking so third-party platform content sits inside the strategy, and a set cadence.</p>
-<p style="margin:0;font-size:0.86rem;color:#7a6a5c;font-style:italic;">This is the one step I'm describing rather than doing. Columbia is a case study, not an engagement.</p>
+<p style="margin:0;">Build the dashboard so the baseline is established and trackable. For a retainer client the measurement goes further &mdash; more custom prompts, coverage group tracking so third-party platform content sits inside the strategy, and a set cadence.</p>
 </div>
 
 For this one I added a fifth pass, because Columbia sells through retailers: I checked whether an AI agent can actually reach their product pages, read stock and size, and return a price that matches what a buyer would pay at checkout. That turned out to be the most damaging finding in the whole audit.
