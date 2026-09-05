@@ -108,7 +108,7 @@ Then it splits by category, and this is the part the CMO would want to be preppe
 
 On their Q2 2026 earnings call, Columbia laid out five growth pillars. Number one is *"own the trail."* Number five is *"accelerate footwear"* — and hiking footwear is where they're least visible.
 
-The spread across engines tells its own story. Google AI Overview and Gemini name them most often, at 33%. ChatGPT and Claude sit at 17% — half as often. The two engines running on Google's index are the two where Columbia's traditional search strength still counts for something, and it stops counting the moment you leave that ecosystem.
+There's a spread across engines. Google AI Overview and Gemini name them most often at 33%; ChatGPT and Claude sit at 17%. The first two run on Google's index, so traditional Google rankings help there. The other two pull from different indexes, where those rankings don't carry over.
 
 **The buyer conversation ranks them the same way**, which is what makes this hard to argue with. Fishing is where Columbia comes up most in real threads. Hiking footwear is where they come up least. Two independent sources, same order. When the community and the machines agree, you're looking at a position, not a measurement error.
 
