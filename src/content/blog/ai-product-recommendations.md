@@ -97,11 +97,13 @@ The AI visibility process has four core steps, plus a fifth for any brand that s
 
 I ran 25 buyer questions across six AI engines and captured 145 answers. Columbia was named in **45.5%** of them — 66 of 145.
 
-That number is inflated, though. 39 of those questions named Columbia directly, and if you ask an assistant about Columbia it talks about Columbia. Those answers say nothing about whether a new buyer would ever find them.
+That's two different measurements blended into one, though. 39 of the questions named Columbia directly. Those are worth running — they tell you how a brand gets described once someone already knows it exists, and that turned out to be one of the more revealing parts of this audit. What they can't tell you is whether anyone finds the brand in the first place.
 
-The number that matters is the other 106 — the questions someone asks when they don't know the brand yet.
+The other 106 are the questions a buyer asks when they don't know the brand yet. That's the discovery number:
 
 **25.5%.** 27 answers out of 106.
+
+Blend the two and you overstate discovery by 20 points. It's why I keep branded and unbranded prompts tagged separately from the design stage onward — you want both answers, you just can't average them.
 
 Then it splits by category, and this is the part I'd put in front of their CMO:
 
