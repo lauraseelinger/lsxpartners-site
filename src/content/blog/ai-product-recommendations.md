@@ -20,7 +20,7 @@ faqs:
 
 <div class="post-lede">
 
-The marketing strategy that made your brand findable in search won't make it recommendable in AI. That gap is how a household name ends up invisible in the exact category it says it wants to own, and what follows is that failure traced end-to-end on a real brand — plus what I'd implement to take the recommendation back.
+Being found in search doesn't always translate to being included in AI recommendations. Brands need to start understanding their AI visibility within their category — and ensure they are built for agentic commerce — or they will see their share of the digital shelf dwindle to the bottom, all while tirelessly executing the same strategy that's won the category for the previous 10 years.
 
 </div>
 
