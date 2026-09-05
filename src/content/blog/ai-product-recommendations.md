@@ -70,22 +70,22 @@ The AI visibility process has four steps, and each one is a strategy exercise in
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
-<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions &mdash; for Columbia that meant roughly 150 real conversations in outdoor communities on Reddit. Not to count mentions. To learn the vocabulary.</p>
+<p style="margin:0;">Discovery taken to a whole new level. I go deep in the places the buyer actually spends time, shares opinions and asks questions. For Columbia that meant roughly 150 real conversations in outdoor communities on Reddit, not to count mentions but to learn the vocabulary.</p>
 </div>
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Build the test prompts from that language</strong>
-<p style="margin:0;">The patterns and phrasing from step one become the questions. If you aren't using the actual terms and situations the buyer uses, your prompt audit is useless &mdash; you've tested your own assumptions and called it research.</p>
+<p style="margin:0;">The patterns and phrasing from step one become the questions within the test prompts. If you aren't using the actual terms and situations the buyer uses, your prompt audit is useless &mdash; you've tested your own assumptions and called it research.</p>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">3 &middot; Execute the prompt audit across every platform</strong>
-<p style="margin:0;">Every question runs through every major engine &mdash; ChatGPT, Perplexity, Google AI Overview, Gemini, Claude and Bing. For each one I log the prompt, the engine, the full response and its cited sources, timestamped. Clean sessions throughout: fixed location, logged out, memory off, a fresh chat every time. That produces the baseline of where a brand is winning, losing or nonexistent, and does the same for its competitors.</p>
+<p style="margin:0;">Run each prompt through all AI engines &mdash; ChatGPT, Perplexity, Google AI Overview, Gemini, Claude, Bing, and Copilot if applicable. For each one I log the prompt, the engine, the full response and its cited sources, timestamped. Clean sessions throughout: fixed location, logged out, memory off, a fresh chat every time. That gives you the baseline &mdash; where the brand shows up, where it doesn't, how it gets described when it does, and the same picture for every competitor in the category.</p>
 </div>
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Stand up the measurement baseline</strong>
-<p style="margin:0;">This is where the dashboard gets built and the measurement cadence gets set, so you can tell whether the work moved anything. I didn't do that part here &mdash; this is a one-time read, not an engagement.</p>
+<p style="margin:0;">Build the dashboard so the baseline is established and trackable. For a retainer client I take the measurement further &mdash; more custom prompts, coverage group tracking so third-party platform content sits inside the strategy, and a set cadence. That step isn't part of this case study.</p>
 </div>
 
 For this one I added a fifth pass, because Columbia sells through retailers: I checked whether an AI agent can actually reach their product pages, read stock and size, and return a price that matches what a buyer would pay at checkout. That turned out to be the most damaging finding in the whole audit.
