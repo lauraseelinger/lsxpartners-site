@@ -97,7 +97,7 @@ The AI visibility process has four core steps, plus a fifth for any brand that s
 
 I ran 25 buyer questions across six AI engines and captured 145 answers. On the unbranded prompts — the ones built around the categories Columbia has stated ownership in — they were named just **25.5%** of the time.
 
-Then it splits by category, and this is the part I'd put in front of their CMO:
+Then it splits by category, and this is the part the CMO would want to be prepped on before the next business review:
 
 | Where they compete | Named in |
 |---|---|
