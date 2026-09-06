@@ -13,7 +13,7 @@ faqs:
   - question: "Why does AI describe my brand differently than our marketing does?"
     answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
   - question: "Why would an AI assistant quote the wrong price for my product?"
-    answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colourway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
+    answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
   - question: "Is this analysis based on Columbia's internal data?"
     answer: "No. Columbia Sportswear is not a client and I have no relationship with the company. Everything here comes from public sources — SEC filings and earnings calls, public buyer conversation, live AI engine responses, retailer pages and robots.txt. That's the same material an AI system has when it recommends a product, which is the whole point."
 ---
@@ -164,12 +164,12 @@ I opened that exact product page. Style 1594732 is **$110.00**, and 11 Wide is r
 
 So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.99 and $110**. Half of them were at least 30% below what a buyer would actually pay. One was off by 55%.
 
-None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colourway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
+None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colorway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
 
 The mechanism has three links in it and every one is checkable.
 
 1. **Columbia's own product pages refuse automated access.** Every request I made returned a 403 from their bot-management layer, whatever user-agent I used.
-2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/colour variants. Exactly the fields required to answer "is it in stock in an 11 wide."
+2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/color variants. Exactly the fields required to answer "is it in stock in an 11 wide."
 3. **So the assistants ask a retailer instead.** Backcountry, Dick's, Amazon, Zappos. And the retailers disagree with each other by more than 2x.
 
 Perplexity said the quiet part out loud: it could not see the live inventory. It still answered, using someone else's number.
