@@ -144,7 +144,7 @@ Merrell is in nearly half of them.
 
 There's a second thing happening underneath that, and it's bigger than any single competitor. The most common subject in the buyer conversation I read wasn't which hiking boot to buy. It was **whether to buy boots at all**, versus trail runners. That argument came up more than any other topic in the corpus — lighter, more comfortable, often cheaper, no break-in period.
 
-Columbia doesn't compete in trail runners. So the fastest-moving conversation in their number-one pillar is one they're structurally absent from.
+Columbia sells trail runners. It's a nav category under both men's and women's shoes, and again under Shop by Activity. They're just not in the conversation about them — which is a harder problem than not making the product, because there's nothing to build and everything to surface.
 
 **And what they're winning is worth saying plainly.** PFG is their strongest position by a distance, and it's the least contested territory in the whole audit — competitors barely get named there at all. That's the one place they have room to consolidate rather than fight, and it currently sits third on their own priority list.
 
@@ -201,7 +201,7 @@ Four things, in this order. None of them are "post more content."
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Pick the fight you can win, and defend it</strong>
-<p style="margin:0;">PFG is the least contested ground in the entire audit and their strongest position. Hiking footwear is the most contested and their weakest, against a category migrating to a product they don't make. <strong>Why:</strong> "own the trail" as a pillar means fighting Merrell, Salomon, Keen, Altra and Lowa simultaneously in a conversation that's moving to trail runners. Consolidating fishing costs less and returns faster — and nothing stops you doing both, in that order.</p>
+<p style="margin:0;">PFG is the least contested ground in the entire audit and their strongest position. Hiking footwear is the most contested and their weakest, in a category migrating toward a product they already sell and don't get named for. <strong>Why:</strong> "own the trail" as a pillar means fighting Merrell, Salomon, Keen, Altra and Lowa simultaneously in a conversation that's moving to trail runners. Consolidating fishing costs less and returns faster — and nothing stops you doing both, in that order.</p>
 </div>
 
 ## What can't you diagnose about AI visibility from public data?
