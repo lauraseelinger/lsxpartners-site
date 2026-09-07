@@ -14,6 +14,8 @@ faqs:
     answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
   - question: "Why would an AI assistant quote the wrong price for my product?"
     answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
+  - question: "What is agentic commerce?"
+    answer: "Agentic commerce is when an AI assistant goes past recommending a product and handles the transaction itself — finding the item, checking stock in the right size, comparing price across sellers, and completing the purchase on the shopper's behalf. To do that it needs four things: a product page it can reach, stock by size, variant options like size and width, and a price that matches checkout. Bain forecasts US agentic commerce at $300 to $500 billion by 2030, roughly 15 to 25% of all e-commerce."
   - question: "Where can I see the full AI visibility audit data?"
     answer: "The complete assessment is published at lsxpartners.com/reports/columbia-ai-visibility-assessment. It carries every prompt result by engine and category, the 149-thread buyer data set behind the prompt design, the live product-data and crawler tests, and five sequenced recommendations with the reasoning attached. It was built entirely from public sources."
   - question: "Is this analysis based on Columbia's internal data?"
@@ -161,7 +163,7 @@ In the 54 hiking footwear answers where Columbia appeared 11% of the time:
 
 Merrell is in nearly half of them.
 
-There's a second thing happening underneath that, and it's bigger than any single competitor. The most common subject in the [buyer conversation](/blog/audience-intelligence) I read wasn't which hiking boot to buy. It was **whether to buy boots at all**, versus trail runners. That argument came up more than any other topic in the corpus — lighter, more comfortable, often cheaper, no break-in period.
+The category itself is moving too, which matters more than any single competitor. The most common subject in the [buyer conversation](/blog/audience-intelligence) I read was **whether to buy boots at all**, versus trail runners. That argument came up more than any other topic in the corpus — lighter, more comfortable, often cheaper, no break-in period.
 
 Columbia sells trail runners. The Konos line was named on the same Q2 call as part of their Omni-Max technical footwear range, alongside Tellurax and Peakfreak in hiking. They were named in **none of the 12 answers** to the two prompts where that boots-or-trail-runners decision actually gets made — which is a harder problem than not making the product, because there's nothing to build and everything to surface.
 
@@ -170,6 +172,18 @@ Columbia sells trail runners. The Konos line was named on the same Q2 call as pa
 ## Why does an AI assistant quote the wrong price?
 
 This is where recommendation stops being a marketing problem and becomes a revenue one.
+
+### What is agentic commerce?
+
+Agentic commerce is when an AI assistant goes past recommending a product and handles the transaction — finding the item, checking stock in the size you need, comparing price across sellers, and completing the purchase on your behalf. Recommendation answers *what should I buy*. Agentic commerce answers *buy it for me*.
+
+Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. Bain forecasts US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**. Bain also notes adoption moves faster for spec-driven purchases than for considered ones like apparel — and "a men's 11 wide, waterproof, under $150" is a spec-driven purchase.
+
+### What does an AI agent need in order to buy something?
+
+Four things, and they are all boring: a product page it can actually reach, stock by size, the variant options (size, width, color), and a price that matches what the buyer is charged at checkout. Miss any one and the agent either skips the product or answers from somewhere else.
+
+That is what I went to test.
 
 I asked all six engines a simple transactional question: *is the Columbia Newton Ridge Plus II available in a men's 11 wide right now?*
 
@@ -239,6 +253,7 @@ Anyone can critique a brand from the outside. Knowing which four questions you'd
 - Columbia Sportswear Q2 2026 financial results and ACCELERATE strategy pillars — [investor relations press release](https://investor.columbia.com/news-events/press-releases/detail/389/columbia-sportswear-company-reports-second-quarter-2026) and [Q2 2026 earnings call transcript, August 3, 2026](https://www.fool.com/earnings/call-transcripts/2026/08/03/columbia-sportswear-colm-q2-2026-earnings-call-transcript/)
 - Q2 2026 segment detail (US −4%, international +9%, footwear +5% to $117M) — [Sporting Goods Intelligence, August 2026](https://www.sgieurope.com/financial-results/footwear-not-tariffs-is-columbias-big-q2-story/122485.article)
 - Shoppers using AI to research a purchase in the past year (48.5%) — [Alchemer 2026 Retail Report](https://www.alchemer.com/resources/benchmark-report/2026-retail-report-ai/), survey of 1,002 U.S. shoppers
+- Agentic commerce forecast ($300–500B by 2030, 15–25% of US e-commerce) — [Bain & Company, *2030 Forecast: How Agentic AI Will Reshape US Retail*, December 17, 2025](https://www.bain.com/insights/2030-forecast-how-agentic-ai-will-reshape-us-retail-snap-chart/)
 - AI shopping behavior (31% arriving pre-decided) — [L.E.K. Consulting](https://www.lek.com/insights/consumer-products/thanks-ai-consumers-are-arriving-brand-and-retailer-sites-ready-buy), survey of 2,650 U.S. consumers, April 2026
 - AI engine audit — 25 buyer questions × 6 engines, 145 captured answers, run September 1 2026 from a fixed US location in clean, logged-out sessions
 - Buyer conversation — outdoor communities on Reddit, captured August 2026
