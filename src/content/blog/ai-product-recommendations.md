@@ -17,7 +17,7 @@ faqs:
   - question: "What is agentic commerce?"
     answer: "Agentic commerce is when an AI assistant goes past recommending a product and handles the transaction itself — finding the item, checking stock in the right size, comparing price across sellers, and completing the purchase on the shopper's behalf. To do that it needs four things: a product page it can reach, stock by size, variant options like size and width, and a price that matches checkout. Bain forecasts US agentic commerce at $300 to $500 billion by 2030, roughly 15 to 25% of all e-commerce."
   - question: "Where can I see the full AI visibility audit data?"
-    answer: "The complete assessment is published at lsxpartners.com/reports/columbia-ai-visibility-assessment. It carries every prompt result by engine and category, the 149-thread buyer data set behind the prompt design, the live product-data and crawler tests, and five sequenced recommendations with the reasoning attached. It was built entirely from public sources."
+    answer: "The complete assessment is published at lsxpartners.com/reports/columbia-ai-visibility-assessment. It carries the visibility figures by engine and by category, the buyer data set behind the prompt design, the live product-data and crawler tests, and five sequenced recommendations with the reasoning attached. It was built entirely from public sources."
   - question: "Is this analysis based on Columbia's internal data?"
     answer: "No. Columbia Sportswear is not a client and I have no relationship with the company. Everything here comes from public sources — SEC filings and earnings calls, public buyer conversation, live AI engine responses, retailer pages and robots.txt. That's the same material an AI system has when it recommends a product, which is the whole point."
 ---
@@ -119,7 +119,9 @@ On their Q2 2026 earnings call, Columbia laid out five growth pillars. Number on
 
 There's a spread across engines. Google AI Overview and Gemini name them most often at 33%; ChatGPT and Claude sit at 17%. The first two run on Google's index, so traditional Google rankings help there. The other two pull from different indexes, where those rankings don't carry over.
 
-That's the part I'd want a CMO to sit with, because the obvious assumption is that ranking fixes this. It doesn't. On the same unbranded keywords, Columbia and Merrell are neck and neck on Google:
+### Can strong Google rankings fix AI visibility?
+
+Inside Google's own products, partly. Everywhere else, no — and Columbia is the clean test case, because on the same unbranded keywords they are neck and neck with Merrell on Google:
 
 | Same keyword, US organic | Columbia | Merrell |
 |---|---|---|
@@ -147,6 +149,12 @@ Notice the engines are *defending* them. Nobody's being unfair. It's a coherent,
 It just isn't the position the pillars claim. "Own" and "dominate" are leadership words. The answer engines have them filed as the sensible mid-tier choice, and they've filed them there unanimously.
 
 I've seen (and lived) this marketing vs. reality matchup before. I've [written about how Libbey](/blog/what-your-ai-visibility-score-cant-tell-you) is known as the budget value brand, but their marketing copy is wannabe luxury (I can say that because I wrote some of it back in the day 😜). Your product description shouldn't catfish your customers — if it does even in the slightest, you might have a brand identity tug-of-war happening. A brand's AI identity gets written by the entire internet, meaning those review sites have more of a say than the million-dollar campaign — and if those two aren't in sync, brands are screaming their marketing dollars into a void.
+
+### Why doesn't AI mention our proprietary product names?
+
+Because a trademark on its own describes nothing, and buyers don't type it. Columbia publishes a technology page defining Omni-Tech as waterproof, breathable and fully seam sealed, and if you ask an engine directly what Omni-Tech is, it can tell you.
+
+The problem is the connection only runs one way. In the buyer conversation I read, the waterproof layer gets named by brand **580 times, almost always Gore-Tex. Omni-Tech comes up 8 times.** So when someone asks for a waterproof hiking boot without naming a brand, nothing points the engine back to Columbia. ([The vocabulary data is in section 3.4 of the report](/reports/columbia-ai-visibility-assessment#audience-intelligence).)
 
 ## Who wins the answers a brand is losing?
 
@@ -215,7 +223,7 @@ I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. 
 
 ## What should a brand fix first to win AI product recommendations?
 
-Four things, in this order — and none of them is a content brief. I've published the [full assessment and strategy](/reports/columbia-ai-visibility-assessment) as a separate document: every prompt result, the buyer data behind it, the product-data tests, and all five recommendations with the reasoning attached.
+Four things, in this order — and none of them is a content brief. I've published the [full assessment and strategy](/reports/columbia-ai-visibility-assessment) as a separate document: the figures by engine and category, the buyer data behind the prompt design, the product-data tests, and all five recommendations with the reasoning attached.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Let the agents in, and give them stock and size</strong>
@@ -224,7 +232,7 @@ Four things, in this order — and none of them is a content brief. I've publish
 
 <div style="background:#eef3f4;border-left:5px solid #a3bbc3;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">2 &middot; Govern product data across every retailer</strong>
-<p style="margin:0;">Read back what every retailer actually published for each product, compare it against the record you sent them, and correct the gaps on a schedule. <strong>This is not a PIM project.</strong> A product information system measures what left the building. Nobody owns what each retailer published after mapping your feed into their fields, or what an assistant quotes back from those pages. <strong>Why:</strong> a buyer told $50 who arrives at a $110 checkout doesn't file a complaint — they leave. And that abandonment shows up in nobody's report as an AI problem.</p>
+<p style="margin:0;">Read back what every retailer actually published for each product, compare it against the record you sent them, and correct the gaps on a schedule. <strong>This is not a PIM project.</strong> A product information system measures what left the building. Nobody owns what each retailer published after mapping your feed into their fields, or what an assistant quotes back from those pages. <strong>Why:</strong> a buyer told $50 who arrives at a $110 checkout doesn't file a complaint — they leave. That loss lands in the conversion report with nothing on it to show that an AI answer set the price expectation, so it gets worked on as a checkout problem instead.</p>
 </div>
 
 <div style="background:#f2f2e6;border-left:5px solid #8b8c4a;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
@@ -233,8 +241,8 @@ Four things, in this order — and none of them is a content brief. I've publish
 </div>
 
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
-<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Pick the fight you can win, and defend it</strong>
-<p style="margin:0;">PFG is the least contested ground in the entire audit and their strongest position. Hiking footwear is the most contested and their weakest, in a category migrating toward a product they already sell and don't get named for. <strong>Why:</strong> "own the trail" as a pillar means fighting Merrell, Salomon, Keen, Altra and Lowa simultaneously in a conversation that's moving to trail runners. Consolidating fishing costs less and returns faster — and nothing stops you doing both, in that order.</p>
+<strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Sequence the categories by what each one costs to win</strong>
+<p style="margin:0;">Columbia will keep running all five growth pillars. The question is narrower: where the incremental AI-visibility effort lands first. PFG is their strongest position in the audit and the least contested — 43.5% of answers, with almost no rival brands named alongside it. Hiking footwear means contesting Merrell, Salomon, Keen, Altra and Lowa at once, in a conversation moving toward trail runners. <strong>Why:</strong> the fishing work is cheap, fast and defensive; the footwear work is expensive, slow and contested. Doing the cheap one first is what funds the expensive one, instead of the two competing for the same budget. <a href="/reports/columbia-ai-visibility-assessment#strategy">The full sequencing is in section 5 of the report</a>.</p>
 </div>
 
 ## What can't you diagnose about AI visibility from public data?
