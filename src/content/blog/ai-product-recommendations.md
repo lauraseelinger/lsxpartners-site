@@ -97,7 +97,7 @@ The AI visibility process has four core steps, plus a fifth for any brand that n
 
 ## How visible is a household name in AI answers?
 
-I ran 25 buyer questions across six AI engines and captured 145 answers, using [the audit method I use for clients](/blog/how-to-audit-ai-visibility). ([The full audit and strategy is here](/reports/columbia-ai-visibility-assessment) if you want the tables, the method and the buyer data rather than the highlights.) On the unbranded prompts — the ones built around the categories Columbia has stated ownership in — they were named just **25.5%** of the time.
+I ran 25 buyer questions across six AI engines and captured 145 answers, using [the audit method I use for clients](/blog/how-to-audit-ai-visibility). (You can read [the full Columbia AI visibility report](/reports/columbia-ai-visibility-assessment) if you want the tables, the method and the buyer data rather than the highlights.) On the unbranded prompts — the ones built around the categories Columbia has stated ownership in — they were named just **25.5%** of the time.
 
 *A note on scale: 25 prompts is a demonstration set, sized to show the process. A client baseline runs a larger set, weighted further toward unbranded questions, and repeats on a schedule so the figures carry a trend rather than a single point in time.*
 
