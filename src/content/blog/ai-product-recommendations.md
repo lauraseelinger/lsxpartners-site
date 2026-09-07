@@ -127,7 +127,7 @@ That's the part I'd want a CMO to sit with, because the obvious assumption is th
 | hiking boots waterproof (110,000/mo) | 14 | **6** |
 | **Named in hiking footwear AI answers** | **11%** | **48%** |
 
-They split the head terms. Columbia holds both men's, Merrell holds both women's. And Merrell gets named four times as often in the answers. Google rank and AI visibility are two different scoreboards, and the SEO program is not the thing that closes the second one.
+They split the head terms, Columbia holding both men's and Merrell both women's, and Merrell still gets named four times as often in the answers. Google rank and AI visibility are two different scoreboards, and the work that closes the second one sits outside the SEO program.
 
 **The buyer conversation ranks them the same way.** Fishing is where Columbia comes up most in real threads; hiking footwear is where they come up least. I built the two data sets separately and they came back in the same order.
 
