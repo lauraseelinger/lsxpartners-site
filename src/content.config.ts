@@ -13,6 +13,9 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
+    // Alt text for the hero. Empty alt is only correct for decorative images;
+    // heroes carrying readable content need describing.
+    heroAlt: z.string().optional(),
     // Optional separate crop for the blog card. Cards centre-crop to a squarer
     // ratio than the article hero, so a wide hero can lose the subject.
     cardImage: z.string().optional(),
