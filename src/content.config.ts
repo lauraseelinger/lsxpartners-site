@@ -25,6 +25,9 @@ const blog = defineCollection({
     // Opt-in: render each section as an alternating tinted block (good for
     // step-by-step guides). Off elsewhere — headers alone do the breaking up.
     sectioned: z.boolean().default(false),
+    // Opt-in: render the hero narrow and centred instead of full-bleed, so the
+    // page pattern shows either side. Suits portrait/vertical source photos.
+    heroNarrow: z.boolean().default(false),
     // Hide the big in-article hero banner (card thumbnail + OG image still use heroImage).
     hideHero: z.boolean().default(false),
     // Set true to keep a URL live but hide from nav/index (unlisted old posts).
