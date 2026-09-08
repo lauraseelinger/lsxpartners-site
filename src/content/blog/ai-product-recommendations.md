@@ -306,6 +306,8 @@ Everything above came off public sources, and public sources run out. If Columbi
 
 If you're running marketing at a brand this size and none of the above sounds like something your team currently measures, here's [what AI visibility means for a CMO](/blog/ai-visibility-for-cmos).
 
+All of these findings come from public data. There are organizational details I'm not privy to that would change some of the strategic recommendations, but the core would hold: the brand's stated growth areas and their performance in AI answers are not aligned. With buyer research continuing to move toward AI, the work — opening retrievability, then governing product data across every retailer that carries them — needs to start now, while footwear is still early on the adoption curve and the fixes can be made deliberately instead of under pressure.
+
 ## Sources
 
 - Columbia Sportswear Q2 2026 financial results and ACCELERATE strategy pillars — [investor relations press release](https://investor.columbia.com/news-events/press-releases/detail/389/columbia-sportswear-company-reports-second-quarter-2026) and [Q2 2026 earnings call transcript, August 3, 2026](https://www.fool.com/earnings/call-transcripts/2026/08/03/columbia-sportswear-colm-q2-2026-earnings-call-transcript/)
