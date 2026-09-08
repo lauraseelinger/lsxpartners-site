@@ -225,7 +225,7 @@ Agentic commerce is when an AI assistant goes past recommending a product and ha
 
 Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. [Bain forecasts](https://www.bain.com/insights/2030-forecast-how-agentic-ai-will-reshape-us-retail-snap-chart/) US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**.
 
-Bain also expects adoption to run faster for spec-driven buys like batteries than for considered ones like apparel and travel, which puts footwear on the slower end of that curve. That works in Columbia's favor. The fixes here — opening retrievability, governing product data across every retailer — take months, and the category timeline leaves them room to do it properly before agents are completing these purchases at volume. Brands in the faster-moving categories are building the same plumbing under real pressure.
+Bain also expects adoption to run faster for spec-driven buys than for considered ones like apparel and travel. Batteries is their example, and printer cartridges or a replacement water filter behave the same way — you know the exact spec, any compliant version will do, and there's nothing to try on. That puts footwear on the slower end of that curve. That works in Columbia's favor, and I'll come back to what they should do with the extra time once we've seen what the test actually returned.
 
 ### What does an AI agent need in order to buy something?
 
@@ -259,7 +259,7 @@ Their competitors don't have this problem. Merrell, Salomon and Keen don't block
 
 I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. But one of these companies has clearly sat down and made decisions about AI access, and one hasn't.
 
-**One more, and it's the worst of them, because nothing anywhere reports it as a failure.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
+**There's a fourth link, and it's the one nothing flags as broken.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
 
 ## What should a brand fix first to win AI product recommendations?
 
