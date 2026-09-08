@@ -225,7 +225,7 @@ Agentic commerce is when an AI assistant goes past recommending a product and ha
 
 Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. [Bain forecasts](https://www.bain.com/insights/2030-forecast-how-agentic-ai-will-reshape-us-retail-snap-chart/) US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**.
 
-Bain also expects adoption to run faster for spec-driven buys like batteries than for considered ones like apparel and travel, which puts footwear on the slower end of that curve. That is a longer runway rather than a reprieve — the wrong price is being quoted today, and retrievability and feed governance take months to fix, not weeks.
+Bain also expects adoption to run faster for spec-driven buys like batteries than for considered ones like apparel and travel, which puts footwear on the slower end of that curve. That works in Columbia's favor. The fixes here — opening retrievability, governing product data across every retailer — take months, and the category timeline leaves them room to do it properly before agents are completing these purchases at volume. Brands in the faster-moving categories are building the same plumbing under real pressure.
 
 ### What does an AI agent need in order to buy something?
 
