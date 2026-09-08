@@ -3,7 +3,7 @@ title: "AEO vs SEO: Do You Need an AI Visibility Consultant or an SEO Agency?"
 description: "AEO vs SEO, and where GEO fits: SEO ranks your site for keywords; AI visibility (AEO/GEO) gets your brand cited when buyers ask AI. Here's the real difference — and whether you need an AI visibility consultant or an SEO agency."
 pubDate: 2026-07-22
 register: punchy-personal
-tags: ["ai-visibility", "aeo", "geo", "aeo-vs-seo", "seo-vs-geo", "hiring"]
+tags: ["ai-visibility", "aeo", "geo", "aeo-vs-seo", "seo-vs-geo"]
 heroImage: "/images/blog/ai-visibility-consultant-vs-seo-agency.jpg"
 faqs:
   - question: "Is AI visibility just SEO with a new name?"
