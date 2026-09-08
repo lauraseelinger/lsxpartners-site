@@ -269,7 +269,7 @@ So Columbia is not about to lose a quarter to this. What they have is a window, 
 
 ## What should a brand fix first to win AI product recommendations?
 
-Four things, in this order — and none of them is a content brief. I've published the [full assessment and strategy](/reports/columbia-ai-visibility-assessment) as a separate document: the figures by engine and category, the buyer data behind the prompt design, the product-data tests, and all five recommendations with the reasoning attached.
+Four things, in the order they need to happen. Every one is engineering, data or positioning work, and publishing more content moves none of them. The [full assessment](/reports/columbia-ai-visibility-assessment#strategy) carries all five recommendations with the reasoning attached, alongside the figures by engine and category, the buyer data and the product-data tests.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Let the agents in, and give them stock and size</strong>
