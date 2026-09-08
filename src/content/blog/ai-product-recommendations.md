@@ -4,8 +4,7 @@ description: "AI product recommendations decide who gets named when buyers ask w
 pubDate: 2026-09-02
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "product-data", "ai-shopping-assistant", "ai-search-visibility"]
-heroImage: "/images/blog/ai-product-recommendations-narrow.jpg"
-heroNarrow: true
+heroImage: "/images/blog/ai-product-recommendations.jpg"
 faqs:
   - question: "How do AI product recommendations actually work?"
     answer: "AI product recommendations are assembled from what's publicly retrievable about a product — the review sites that tested it, the community threads where owners share what actually held up, and the structured attribute data sitting on retailer product pages. The model isn't reading your brand campaign. It's reading the sources that describe your product, most of which you don't own."
