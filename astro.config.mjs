@@ -33,7 +33,12 @@ export default defineConfig({
   // GitHub Pages serves this repo at lsxpartners.com (CNAME in public/).
   site: 'https://lsxpartners.com',
   markdown: { rehypePlugins: [rehypeSectionize] },
-  integrations: [sitemap(), mdx()],
+  // Static reports live in public/ so Astro cannot discover them; list them
+  // explicitly or they never reach the sitemap.
+  integrations: [
+    sitemap({ customPages: ['https://lsxpartners.com/reports/columbia-ai-visibility-assessment/'] }),
+    mdx(),
+  ],
   // GitHub Pages is static, so Astro emits meta-refresh + canonical redirect
   // pages. The 9 proven pillar posts are preserved 1:1 (200, no redirect).
   redirects: {
