@@ -225,7 +225,7 @@ Agentic commerce is when an AI assistant goes past recommending a product and ha
 
 Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. [Bain forecasts](https://www.bain.com/insights/2030-forecast-how-agentic-ai-will-reshape-us-retail-snap-chart/) US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**.
 
-Bain also expects adoption to run faster for spec-driven buys than for considered ones like apparel and travel. Batteries is their example, and printer cartridges or a replacement water filter behave the same way — you know the exact spec, any compliant version will do, and there's nothing to try on. That puts footwear on the slower end of that curve. That works in Columbia's favor, and I'll come back to what they should do with the extra time once we've seen what the test actually returned.
+How fast that arrives depends on what you sell, which turns out to matter here. I'll come back to it once we've seen what the test returned.
 
 ### What does an AI agent need in order to buy something?
 
@@ -260,6 +260,12 @@ Their competitors don't have this problem. Merrell, Salomon and Keen don't block
 I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. But one of these companies has clearly sat down and made decisions about AI access, and one hasn't.
 
 **There's a fourth link, and it's the one nothing flags as broken.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
+
+### How much time does a brand like this actually have?
+
+More than a spec-driven category would, which is the one piece of good news in this section. Bain expects agentic adoption to run faster for spec-driven buys than for considered ones like apparel and travel. Batteries is their example, and printer cartridges or a replacement water filter behave the same way — you know the exact spec, any compliant version will do, and there is nothing to try on. Footwear sits at the other end of that curve.
+
+So Columbia is not about to lose a quarter to this. What they have is a window, and the fixes are slow ones: opening retrievability, then governing product data across every retailer that carries them. Both take months. Brands in the faster-moving categories are building the same plumbing right now under real pressure, and Columbia gets to do it deliberately — as long as the window is treated as time to work rather than time to wait.
 
 ## What should a brand fix first to win AI product recommendations?
 
