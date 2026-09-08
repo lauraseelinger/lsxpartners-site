@@ -88,7 +88,15 @@ Columbia is not an LSX Partners client. This is a case study created with public
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.15rem 1.4rem;margin:1.7rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#1a1a1a;margin-bottom:0.5rem;">Start here: the full assessment</strong>
 <p style="margin:0 0 0.65rem;">Everything in this article comes from one audit, published in full as its own document &mdash; <a href="/reports/columbia-ai-visibility-assessment"><strong>the Columbia Sportswear AI Visibility Assessment &amp; Strategy</strong></a>. That is where the tables, the buyer data and the live product tests live.</p>
-<p style="margin:0 0 0.65rem;">It reads in six tabs: <a href="/reports/columbia-ai-visibility-assessment#overview">Overview</a> for scope and method, <a href="/reports/columbia-ai-visibility-assessment#visibility-baseline">Visibility baseline</a> for what each engine returned, <a href="/reports/columbia-ai-visibility-assessment#audience-intelligence">Audience intelligence</a> for the buyer data the prompts were built from, <a href="/reports/columbia-ai-visibility-assessment#product-data">Product data readiness</a> for the live price and crawler tests, <a href="/reports/columbia-ai-visibility-assessment#strategy">Strategy &amp; priorities</a> for the five recommendations, and <a href="/reports/columbia-ai-visibility-assessment#open-questions">Open questions</a> for what public data cannot answer.</p>
+<p style="margin:0 0 0.5rem;">It reads in six tabs:</p>
+<ul style="margin:0 0 0.75rem;padding-left:1.15rem;line-height:1.7;">
+<li><a href="/reports/columbia-ai-visibility-assessment#overview">Overview</a> &mdash; scope and method</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#visibility-baseline">Visibility baseline</a> &mdash; what each engine returned</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#audience-intelligence">Audience intelligence</a> &mdash; the buyer data the prompts were built from</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#product-data">Product data readiness</a> &mdash; the live price and crawler tests</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#strategy">Strategy &amp; priorities</a> &mdash; the five recommendations</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#open-questions">Open questions</a> &mdash; what public data cannot answer</li>
+</ul>
 <p style="margin:0;">What follows here is the summary: the findings that mattered most, and what I would do about them.</p>
 </div>
 
@@ -215,7 +223,9 @@ This is where recommendation stops being a marketing problem and becomes a reven
 
 Agentic commerce is when an AI assistant goes past recommending a product and handles the transaction — finding the item, checking stock in the size you need, comparing price across sellers, and completing the purchase on your behalf. Recommendation answers *what should I buy*. Agentic commerce answers *buy it for me*.
 
-Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. Bain forecasts US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**. Bain also notes adoption moves faster for spec-driven purchases than for considered ones like apparel — and "a men's 11 wide, waterproof, under $150" is a spec-driven purchase.
+Most assistants today stop somewhere in the middle: they will tell you what to buy and quote you a price, and a person still does the checkout. [Bain forecasts](https://www.bain.com/insights/2030-forecast-how-agentic-ai-will-reshape-us-retail-snap-chart/) US agentic commerce at **$300–500 billion by 2030, roughly 15–25% of all e-commerce**.
+
+Bain also expects adoption to run faster for spec-driven buys like batteries than for considered ones like apparel and travel, which puts footwear on the slower end of that curve. That is a longer runway rather than a reprieve — the wrong price is being quoted today, and retrievability and feed governance take months to fix, not weeks.
 
 ### What does an AI agent need in order to buy something?
 
