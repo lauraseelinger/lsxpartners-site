@@ -304,9 +304,9 @@ Everything above came off public sources, and public sources run out. If Columbi
 - **Do the specs exist internally?** Their own product page carries weight in grams and lug height in millimeters, which is better data than most brands publish. If that's already structured internally, this is a plumbing project. If it's hand-written per page, it's a different budget entirely.
 - **US sales were down 4% last quarter** on soft brick-and-mortar traffic and a weaker wholesale environment, against international up 9%. Has anyone tested whether any part of that domestic softness tracks with discovery moving into AI assistants &mdash; the shift I opened this piece with, from describing my trip to an REI associate in 2021 to describing it to a model today? Soft retail traffic has a dozen plausible causes and I'm not going to tell you AI search caused a 4% decline from the outside. But it's a testable question, and the conversation I had in that store is now happening before anyone walks into one.
 
-If you're running marketing at a brand this size and none of the above sounds like something your team currently measures, here's [what AI visibility means for a CMO](/blog/ai-visibility-for-cmos).
-
 All of these findings come from public data. There are organizational details I'm not privy to that would change some of the strategic recommendations, but the core would hold: the brand's stated growth areas and their performance in AI answers are not aligned. With buyer research continuing to move toward AI, the work — opening retrievability, then governing product data across every retailer that carries them — needs to start now, while footwear is still early on the adoption curve and the fixes can be made deliberately instead of under pressure.
+
+If you're running marketing at a brand this size and none of this sounds like something your team currently measures, here's [what AI visibility means for a CMO](/blog/ai-visibility-for-cmos).
 
 ## Sources
 
