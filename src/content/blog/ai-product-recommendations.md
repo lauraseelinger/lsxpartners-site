@@ -85,6 +85,13 @@ Columbia Sportswear is a national brand with a retailer-reliant strategy. The br
 Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit. The full write-up lives in a separate document &mdash; <a href="/reports/columbia-ai-visibility-assessment#overview">start with the Overview tab</a> for the scope and method.
 </aside>
 
+<div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.15rem 1.4rem;margin:1.7rem 0;">
+<strong style="display:block;font-size:1.1rem;color:#1a1a1a;margin-bottom:0.5rem;">Start here: the full assessment</strong>
+<p style="margin:0 0 0.65rem;">Everything in this article comes from one audit, published in full as its own document &mdash; <a href="/reports/columbia-ai-visibility-assessment"><strong>the Columbia Sportswear AI Visibility Assessment &amp; Strategy</strong></a>. That is where the tables, the buyer data and the live product tests live.</p>
+<p style="margin:0 0 0.65rem;">It reads in six tabs: <a href="/reports/columbia-ai-visibility-assessment#overview">Overview</a> for scope and method, <a href="/reports/columbia-ai-visibility-assessment#visibility-baseline">Visibility baseline</a> for what each engine returned, <a href="/reports/columbia-ai-visibility-assessment#audience-intelligence">Audience intelligence</a> for the buyer data the prompts were built from, <a href="/reports/columbia-ai-visibility-assessment#product-data">Product data readiness</a> for the live price and crawler tests, <a href="/reports/columbia-ai-visibility-assessment#strategy">Strategy &amp; priorities</a> for the five recommendations, and <a href="/reports/columbia-ai-visibility-assessment#open-questions">Open questions</a> for what public data cannot answer.</p>
+<p style="margin:0;">What follows here is the summary: the findings that mattered most, and what I would do about them.</p>
+</div>
+
 ## How do you audit whether AI recommends a brand?
 
 The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce. Each one is a strategy exercise in itself, with none of them becoming an autopilot or execution list. The process requires a strategist's review at every step, because if you miss something in step one, everything following it is measured against the wrong thing.
