@@ -1,7 +1,7 @@
 ---
 title: "AI Product Recommendations: Why Your Brand Isn't in the Answer"
 description: "AI product recommendations decide who gets named when buyers ask what to buy. Why household names go invisible in AI, and what a CMO should do about it."
-pubDate: 2026-09-02
+pubDate: 2026-09-08
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "product-data", "ai-shopping-assistant", "ai-search-visibility"]
 heroImage: "/images/blog/ai-product-recommendations-hero.jpg"
