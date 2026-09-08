@@ -4,7 +4,7 @@ description: "AI product recommendations decide who gets named when buyers ask w
 pubDate: 2026-09-02
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "product-data", "ai-shopping-assistant", "ai-search-visibility"]
-heroImage: "/images/blog/ai-product-recommendations-talk-2.jpg"
+heroImage: "/images/blog/ai-product-recommendations-hero.jpg"
 cardImage: "/images/blog/ai-product-recommendations-card.jpg"
 faqs:
   - question: "How do AI product recommendations actually work?"
