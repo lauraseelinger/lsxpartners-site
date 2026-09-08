@@ -13,6 +13,9 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
+    // Optional separate crop for the blog card. Cards centre-crop to a squarer
+    // ratio than the article hero, so a wide hero can lose the subject.
+    cardImage: z.string().optional(),
     // Voice register the post is written in (see laura-public-voice memory).
     register: z.enum(['punchy-personal', 'measured-pillar']).default('punchy-personal'),
     // Tags drive the category/tag routes (e.g. ai-visibility).
