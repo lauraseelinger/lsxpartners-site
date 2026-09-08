@@ -30,7 +30,7 @@ Being found in search doesn't always translate to being included in AI recommend
 
 ### Use Case: Researching a Purchase
 
-Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — do a pile of research, then buy whatever the sources you've collected seem to agree is the trusted pick.
+Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — do a ton of research, then buy whatever the sources you've collected seem to agree is the trusted pick.
 
 So back in 2021, we went to REI, found an associate, described what we'd be doing, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. In fact, this is what nearly half of shoppers (48.5%) do in 2026 — use an AI platform to research prior to making a purchase, according to Alchemer's 2026 Retail Report.
 
@@ -41,13 +41,15 @@ So back in 2021, we went to REI, found an associate, described what we'd be doin
 
 AI is changing the interactions we have prior to making purchases — whether that's absorbing the mid-funnel conversation that used to happen with a store associate, or replacing the 3-4 word keyword search that used to kick the whole thing off. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations get built from what's publicly retrievable about a product — the review sites that tested it, the forums where people who actually own it compare notes, and the structured attribute data sitting on retailer pages. A brand can be included with every online retailer and still lose the recommendation, because it owns none of those three surfaces.
 
-<div style="margin:3rem 0 1.6rem;padding:1.5rem 1.6rem;background:#b55434;border-radius:10px;">
+<p style="margin:2.6rem 0 0;font-size:1.2rem;line-height:1.5;font-weight:600;color:#1a1a1a;border-left:5px solid #b55434;padding:0.15rem 0 0.15rem 1.1rem;">So let&rsquo;s walk through this with a real brand &mdash; we&rsquo;ll see where their AI visibility actually stands, and what I&rsquo;d recommend they implement as an AI visibility expert.</p>
+
+<div style="margin:1.1rem 0 1.6rem;padding:1.5rem 1.6rem;background:#b55434;border-radius:10px;">
 <p style="margin:0 0 0.35rem;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:#f7d9cc;font-weight:800;">Real brand case study</p>
 <p style="margin:0;font-size:1.75rem;line-height:1.2;color:#ffffff;font-weight:700;">Columbia Sportswear</p>
 <p style="margin:0.5rem 0 0;font-size:0.95rem;color:#f7d9cc;">Public data only &middot; audited September 2026</p>
 </div>
 
-So let's walk through this with a real brand — we'll see where their AI visibility actually stands, and what I'd recommend they implement as an AI visibility expert. We'll use Columbia Sportswear — they're a national brand with a retailer-reliant strategy, we know their focus areas of growth thanks to their latest earnings call, and they have a distribution network similar to brands I've already created strategies for (where you prioritize [the recommendation over the citation](/blog/ai-citations-vs-brand-mentions)).
+Columbia Sportswear is a national brand with a retailer-reliant strategy. The brand outlined their focus areas of growth on the last earnings call, and they have a distribution network similar to brands I've already created strategies for (where you prioritize [the recommendation over the citation](/blog/ai-citations-vs-brand-mentions)).
 
 <div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.1rem 1.35rem;margin:1.1rem 0 1.5rem;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.7rem;">The setup</strong>
