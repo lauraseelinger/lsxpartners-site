@@ -14,6 +14,8 @@ faqs:
     answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
   - question: "Why would an AI assistant quote the wrong price for my product?"
     answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
+  - question: "What is an AI brand identity?"
+    answer: "An AI brand identity is the description an AI engine returns when someone asks what a brand is. It gets assembled from publicly retrievable sources — review coverage, retailer product copy, community threads — rather than from the brand's own campaigns. In an audit of Columbia Sportswear across six engines, every one described the brand the same way: mid-tier and value-oriented, accessible, functional, good in rain and cold. That description was consistent and accurate, and none of it came from Columbia's marketing."
   - question: "What is agentic commerce?"
     answer: "Agentic commerce is when an AI assistant goes past recommending a product and handles the transaction itself — finding the item, checking stock in the right size, comparing price across sellers, and completing the purchase on the shopper's behalf. To do that it needs four things: a product page it can reach, stock by size, variant options like size and width, and a price that matches checkout. Bain forecasts US agentic commerce at $300 to $500 billion by 2030, roughly 15 to 25% of all e-commerce."
   - question: "Where can I see the full AI visibility audit data?"
@@ -40,6 +42,19 @@ So back in 2021, we went to REI, found an associate, described what we'd be doin
 </div>
 
 AI is changing the interactions we have prior to making purchases — whether that's absorbing the mid-funnel conversation that used to happen with a store associate, or replacing the 3-4 word keyword search that used to kick the whole thing off. This shift in buyer behavior should be shaping the strategy of every brand on the physical and digital shelf, because AI product recommendations get built from what's publicly retrievable about a product — the review sites that tested it, the forums where people who actually own it compare notes, and the structured attribute data sitting on retailer pages. A brand can be included with every online retailer and still lose the recommendation, because it owns none of those three surfaces.
+
+<nav aria-label="Contents" style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:10px;padding:1.05rem 1.3rem;margin:1.8rem 0;">
+<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:#5b7d88;margin-bottom:0.6rem;">In this article</strong>
+<ol style="margin:0;padding-left:1.15rem;font-size:0.95rem;line-height:1.75;">
+<li><a href="#how-do-you-audit-whether-ai-recommends-a-brand">How do you audit whether AI recommends a brand?</a></li>
+<li><a href="#how-visible-is-a-household-name-in-ai-answers">How visible is a household name in AI answers?</a> &mdash; <a href="#can-strong-google-rankings-fix-ai-visibility">can Google rankings fix it?</a></li>
+<li><a href="#what-do-the-engines-say-columbia-actually-is">What do the engines say the brand actually is?</a> &mdash; <a href="#why-doesnt-ai-mention-our-proprietary-product-names">why AI skips proprietary names</a></li>
+<li><a href="#who-wins-the-answers-a-brand-is-losing">Who wins the answers a brand is losing?</a></li>
+<li><a href="#why-does-an-ai-assistant-quote-the-wrong-price">Why does an AI assistant quote the wrong price?</a> &mdash; <a href="#what-is-agentic-commerce">what is agentic commerce?</a></li>
+<li><a href="#what-should-a-brand-fix-first-to-win-ai-product-recommendations">What should a brand fix first?</a></li>
+<li><a href="#what-cant-you-diagnose-about-ai-visibility-from-public-data">What public data can&rsquo;t tell you</a></li>
+</ol>
+</nav>
 
 <p style="margin:2.6rem 0 0;font-size:1.2rem;line-height:1.5;font-weight:600;color:#1a1a1a;border-left:5px solid #b55434;padding:0.15rem 0 0.15rem 1.1rem;">So let&rsquo;s walk through this with a real brand &mdash; we&rsquo;ll see where their AI visibility actually stands, and what I&rsquo;d recommend they implement as an AI visibility expert.</p>
 
@@ -70,22 +85,9 @@ Columbia Sportswear is a national brand with a retailer-reliant strategy. The br
 Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit. The full write-up lives in a separate document &mdash; <a href="/reports/columbia-ai-visibility-assessment#overview">start with the Overview tab</a> for the scope and method.
 </aside>
 
-<nav aria-label="Contents" style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:10px;padding:1.05rem 1.3rem;margin:1.8rem 0;">
-<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:#5b7d88;margin-bottom:0.6rem;">In this article</strong>
-<ol style="margin:0;padding-left:1.15rem;font-size:0.95rem;line-height:1.75;">
-<li><a href="#how-do-you-audit-whether-ai-recommends-a-brand">How do you audit whether AI recommends a brand?</a></li>
-<li><a href="#how-visible-is-a-household-name-in-ai-answers">How visible is a household name in AI answers?</a> &mdash; <a href="#can-strong-google-rankings-fix-ai-visibility">can Google rankings fix it?</a></li>
-<li><a href="#what-do-the-engines-say-columbia-actually-is">What do the engines say the brand actually is?</a> &mdash; <a href="#why-doesnt-ai-mention-our-proprietary-product-names">why AI skips proprietary names</a></li>
-<li><a href="#who-wins-the-answers-a-brand-is-losing">Who wins the answers a brand is losing?</a></li>
-<li><a href="#why-does-an-ai-assistant-quote-the-wrong-price">Why does an AI assistant quote the wrong price?</a> &mdash; <a href="#what-is-agentic-commerce">what is agentic commerce?</a></li>
-<li><a href="#what-should-a-brand-fix-first-to-win-ai-product-recommendations">What should a brand fix first?</a></li>
-<li><a href="#what-cant-you-diagnose-about-ai-visibility-from-public-data">What public data can&rsquo;t tell you</a></li>
-</ol>
-</nav>
-
 ## How do you audit whether AI recommends a brand?
 
-The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce &mdash; which means testing whether an AI agent can actually reach your product, read stock and size, and return the price a buyer is charged at checkout. [More on that below](#what-is-agentic-commerce). Each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. If you miss a strategic step in one part of the process, everything following it is measured against the wrong thing.
+The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce &mdash; which means testing whether an AI agent can actually reach your product, read stock and size, and return the price a buyer is charged at checkout. I go deeper on [what agentic commerce is and what an agent needs to complete a purchase](#what-is-agentic-commerce) further down. Each one is a strategy exercise in itself, with none of them becoming an autopilot or execution list. The process requires a strategist's review at every step, because if you miss something in step one, everything following it is measured against the wrong thing.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
@@ -146,11 +148,17 @@ Inside Google's own products, partly. Everywhere else, no — and Columbia is th
 | hiking boots waterproof (110,000/mo) | 14 | **6** |
 | **Named in hiking footwear AI answers** | **11%** | **48%** |
 
-They split the head terms, Columbia holding both men's and Merrell both women's, and Merrell still gets named four times as often in the answers. Google rank and AI visibility are two different scoreboards, and the work that closes the second one sits outside the SEO program.
+They split the head terms, Columbia holding both men's and Merrell both women's, and Merrell still gets named four times as often in the answers. Google rank and AI visibility measure different things, and closing the AI gap takes work that sits outside the SEO program.
 
 **The buyer conversation ranks them the same way.** Fishing is where Columbia comes up most in real threads; hiking footwear is where they come up least. I built the two data sets separately and they came back in the same order.
 
 ## What do the engines say Columbia actually is?
+
+### What is an AI brand identity?
+
+Your AI brand identity is the description an engine returns when someone asks what your brand is. It gets assembled from whatever is publicly retrievable — review coverage, retailer copy, community threads — rather than from your campaigns. It is what AI believes about you, and you are rarely the one who wrote it.
+
+That matters because it is the frame every other answer sits inside. If an engine has you filed as the value option, that filing shows up whether the question is about price, quality or what to buy for a first hike. I've written more on [what an AI visibility score can and can't tell you about that identity](/blog/what-your-ai-visibility-score-cant-tell-you).
 
 I asked directly. The answers were near-identical across engines:
 
