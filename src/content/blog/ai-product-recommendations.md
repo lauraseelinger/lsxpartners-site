@@ -87,7 +87,7 @@ Columbia is not an LSX Partners client. This is a case study created with public
 
 ## How do you audit whether AI recommends a brand?
 
-The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce &mdash; which means testing whether an AI agent can actually reach your product, read stock and size, and return the price a buyer is charged at checkout. I go deeper on [what agentic commerce is and what an agent needs to complete a purchase](#what-is-agentic-commerce) further down. Each one is a strategy exercise in itself, with none of them becoming an autopilot or execution list. The process requires a strategist's review at every step, because if you miss something in step one, everything following it is measured against the wrong thing.
+The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce. Each one is a strategy exercise in itself, with none of them becoming an autopilot or execution list. The process requires a strategist's review at every step, because if you miss something in step one, everything following it is measured against the wrong thing.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
