@@ -5,6 +5,7 @@ pubDate: 2026-09-08
 register: punchy-personal
 tags: ["ai-visibility", "agentic-commerce", "product-data", "ai-shopping-assistant", "ai-search-visibility"]
 heroImage: "/images/blog/ai-product-recommendations-hero.jpg"
+heroAlt: "Laura Seelinger speaking at AI Week beside a slide reading: The product built to solve that exact problem didn't show up."
 cardImage: "/images/blog/ai-product-recommendations-card.jpg"
 coverFrom: bottom
 faqs:
