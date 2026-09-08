@@ -3,7 +3,7 @@ title: "AI Visibility for CMOs: What Every Big Brand Needs to Know"
 description: "AI visibility is whether your brand gets named when buyers ask ChatGPT, Perplexity, and Google's AI. What CMOs at big brands need to know—and do now."
 pubDate: 2026-07-29
 register: measured-pillar
-tags: ["ai-visibility", "generative engine optimization", "answer engine optimization", "ai search optimization", "cmo", "marketing-pov"]
+tags: ["ai-visibility", "geo", "aeo", "cmo", "marketing-pov"]
 heroImage: "/images/blog/ai-visibility-for-cmos-v2.jpg"
 faqs:
   - question: "Is AI visibility just SEO?"
