@@ -19,8 +19,9 @@ interface Props {
   related?: { id: string; title: string; heroImage?: string }[];
   sectioned?: boolean;
   hideHero?: boolean;
+  heroNarrow?: boolean;
 }
-const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false, heroNarrow = false } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
 const article = articleSchema({
@@ -53,7 +54,7 @@ const fmt = (d: Date) =>
 
     {heroImage && !hideHero && (
       <div class="container">
-        <img class="post__hero" src={heroImage} alt="" />
+        <img class={heroNarrow ? "post__hero post__hero--narrow" : "post__hero"} src={heroImage} alt="" />
       </div>
     )}
 
@@ -119,6 +120,7 @@ const fmt = (d: Date) =>
     -webkit-mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
     mask-image: radial-gradient(130% 130% at 50% 40%, #000 80%, transparent 100%);
   }
+  .post__hero--narrow { max-width: 620px; margin-inline: auto; }
   .post__body { padding-block: var(--space-4); }
   /* body measure — wide enough to use the space, capped for readability */
   .post__body { max-width: 46rem; }
