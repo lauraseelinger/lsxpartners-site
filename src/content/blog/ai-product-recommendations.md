@@ -80,8 +80,8 @@ Columbia Sportswear is a national brand with a retailer-reliant strategy. The br
 <p style="margin:0;"><strong>The goal:</strong> A conceptualized AI visibility strategy that increases recommendations in the company's stated strategic focus areas.</p>
 </div>
 
-<aside style="background:#fbf0ea;border-left:4px solid #b55434;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
-<strong style="display:block;font-size:1.1rem;color:#b55434;margin-bottom:0.5rem;">Disclaimer</strong>
+<aside style="border-left:3px solid #d9c6bb;padding:0.3rem 0 0.3rem 1.15rem;margin:1.5rem 0;font-size:0.93rem;line-height:1.6;color:#5b6b70;">
+<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.09em;color:#8a7a70;margin-bottom:0.35rem;">Disclaimer</strong>
 Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit. The full write-up lives in a separate document &mdash; <a href="/reports/columbia-ai-visibility-assessment#overview">start with the Overview tab</a> for the scope and method.
 </aside>
 
