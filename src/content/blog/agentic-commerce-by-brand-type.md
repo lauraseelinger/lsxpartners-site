@@ -3,7 +3,7 @@ title: "What Agentic Commerce Means for Your Brand (It Depends on How You Sell)"
 description: "Agentic commerce is here — AI that shops and checks out for your buyer. What you need to do about it depends on who owns the sale. The three brand types, and what each should fix now."
 pubDate: 2026-08-07
 register: punchy-personal
-tags: ["ai-visibility", "agentic-commerce", "aeo", "ecommerce", "marketing-pov"]
+tags: ["ai-visibility", "agentic-commerce", "aeo", "marketing-pov"]
 heroImage: "/images/blog/agentic-commerce-by-brand-type.jpg"
 faqs:
   - question: "What is agentic commerce?"
