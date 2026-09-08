@@ -70,9 +70,22 @@ Columbia Sportswear is a national brand with a retailer-reliant strategy. The br
 Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit. The full write-up lives in a separate document &mdash; <a href="/reports/columbia-ai-visibility-assessment#overview">start with the Overview tab</a> for the scope and method.
 </aside>
 
+<nav aria-label="Contents" style="background:#f8fafb;border:1px solid #dfe6ea;border-radius:10px;padding:1.05rem 1.3rem;margin:1.8rem 0;">
+<strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:#5b7d88;margin-bottom:0.6rem;">In this article</strong>
+<ol style="margin:0;padding-left:1.15rem;font-size:0.95rem;line-height:1.75;">
+<li><a href="#how-do-you-audit-whether-ai-recommends-a-brand">How do you audit whether AI recommends a brand?</a></li>
+<li><a href="#how-visible-is-a-household-name-in-ai-answers">How visible is a household name in AI answers?</a> &mdash; <a href="#can-strong-google-rankings-fix-ai-visibility">can Google rankings fix it?</a></li>
+<li><a href="#what-do-the-engines-say-columbia-actually-is">What do the engines say the brand actually is?</a> &mdash; <a href="#why-doesnt-ai-mention-our-proprietary-product-names">why AI skips proprietary names</a></li>
+<li><a href="#who-wins-the-answers-a-brand-is-losing">Who wins the answers a brand is losing?</a></li>
+<li><a href="#why-does-an-ai-assistant-quote-the-wrong-price">Why does an AI assistant quote the wrong price?</a> &mdash; <a href="#what-is-agentic-commerce">what is agentic commerce?</a></li>
+<li><a href="#what-should-a-brand-fix-first-to-win-ai-product-recommendations">What should a brand fix first?</a></li>
+<li><a href="#what-cant-you-diagnose-about-ai-visibility-from-public-data">What public data can&rsquo;t tell you</a></li>
+</ol>
+</nav>
+
 ## How do you audit whether AI recommends a brand?
 
-The AI visibility process has four core steps, plus a fifth for any brand that needs to know where it stands in agentic commerce. Each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. If you miss a strategic step in one part of the process, everything following it is measured against the wrong thing.
+The AI visibility process has four core steps, plus a fifth for brands who need to measure where they stand in agentic commerce &mdash; which means testing whether an AI agent can actually reach your product, read stock and size, and return the price a buyer is charged at checkout. [More on that below](#what-is-agentic-commerce). Each one is a strategy exercise in itself. None of them is a collection stage you can put on autopilot. If you miss a strategic step in one part of the process, everything following it is measured against the wrong thing.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Conduct the audience intelligence</strong>
