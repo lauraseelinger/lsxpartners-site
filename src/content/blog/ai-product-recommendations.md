@@ -85,7 +85,7 @@ Columbia Sportswear is a national brand with a retailer-reliant strategy. The br
 
 <aside style="border-left:3px solid #d9c6bb;padding:0.3rem 0 0.3rem 1.15rem;margin:1.5rem 0;font-size:0.93rem;line-height:1.6;color:#5b6b70;">
 <strong style="display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.09em;color:#8a7a70;margin-bottom:0.35rem;">Disclaimer</strong>
-Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit. The full write-up lives in a separate document &mdash; <a href="/reports/columbia-ai-visibility-assessment#overview">start with the Overview tab</a> for the scope and method.
+Columbia is not an LSX Partners client. This is a case study created with public information, including Columbia's earnings call, their own product pages, buyer conversations online, retailer listings and a strategic AI prompt audit.
 </aside>
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.15rem 1.4rem;margin:1.7rem 0;">
