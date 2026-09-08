@@ -90,15 +90,15 @@ Columbia is not an LSX Partners client. This is a case study created with public
 
 <div style="background:#fbf3e9;border:1px solid #e8c9a0;border-left:6px solid #b55434;border-radius:8px;padding:1.15rem 1.4rem;margin:1.7rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#1a1a1a;margin-bottom:0.5rem;">Start here: the full assessment</strong>
-<p style="margin:0 0 0.65rem;">Everything in this article comes from one audit, published in full as its own document &mdash; <a href="/reports/columbia-ai-visibility-assessment"><strong>the Columbia Sportswear AI Visibility Assessment &amp; Strategy</strong></a>. That is where the tables, the buyer data and the live product tests live.</p>
+<p style="margin:0 0 0.65rem;">Everything in this article comes from one audit, published in full as its own document &mdash; <a href="/reports/columbia-ai-visibility-assessment" target="_blank" rel="noopener"><strong>the Columbia Sportswear AI Visibility Assessment &amp; Strategy</strong></a>. That is where the tables, the buyer data and the live product tests live.</p>
 <p style="margin:0 0 0.5rem;">It reads in six tabs:</p>
 <ul style="margin:0 0 0.75rem;padding-left:1.15rem;line-height:1.7;">
-<li><a href="/reports/columbia-ai-visibility-assessment#overview">Overview</a> &mdash; scope and method</li>
-<li><a href="/reports/columbia-ai-visibility-assessment#visibility-baseline">Visibility baseline</a> &mdash; what each engine returned</li>
-<li><a href="/reports/columbia-ai-visibility-assessment#audience-intelligence">Audience intelligence</a> &mdash; the buyer data the prompts were built from</li>
-<li><a href="/reports/columbia-ai-visibility-assessment#product-data">Product data readiness</a> &mdash; the live price and crawler tests</li>
-<li><a href="/reports/columbia-ai-visibility-assessment#strategy">Strategy &amp; priorities</a> &mdash; the five recommendations</li>
-<li><a href="/reports/columbia-ai-visibility-assessment#open-questions">Open questions</a> &mdash; what public data cannot answer</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#overview" target="_blank" rel="noopener">Overview</a> &mdash; scope and method</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#visibility-baseline" target="_blank" rel="noopener">Visibility baseline</a> &mdash; what each engine returned</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#audience-intelligence" target="_blank" rel="noopener">Audience intelligence</a> &mdash; the buyer data the prompts were built from</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#product-data" target="_blank" rel="noopener">Product data readiness</a> &mdash; the live price and crawler tests</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#strategy" target="_blank" rel="noopener">Strategy &amp; priorities</a> &mdash; the five recommendations</li>
+<li><a href="/reports/columbia-ai-visibility-assessment#open-questions" target="_blank" rel="noopener">Open questions</a> &mdash; what public data cannot answer</li>
 </ul>
 <p style="margin:0;">What follows here is the summary: the findings that mattered most, and what I would do about them.</p>
 </div>
@@ -134,7 +134,7 @@ The AI visibility process has four core steps, plus a fifth for brands who need 
 
 ## How visible is a household name in AI answers?
 
-I ran 25 buyer questions across six AI engines and captured 145 answers, using [the audit method I use for clients](/blog/how-to-audit-ai-visibility). (You can read [the full Columbia AI visibility report](/reports/columbia-ai-visibility-assessment) if you want the tables, the method and the buyer data rather than the highlights.) On the unbranded prompts — the ones built around the categories Columbia has stated ownership in — they were named just **25.5%** of the time.
+I ran 25 buyer questions across six AI engines and captured 145 answers, using [the audit method I use for clients](/blog/how-to-audit-ai-visibility). (You can read <a href="/reports/columbia-ai-visibility-assessment" target="_blank" rel="noopener">the full Columbia AI visibility report</a> if you want the tables, the method and the buyer data rather than the highlights.) On the unbranded prompts — the ones built around the categories Columbia has stated ownership in — they were named just **25.5%** of the time.
 
 <aside style="background:#eef3f4;border-left:4px solid #a3bbc3;border-radius:6px;padding:0.95rem 1.2rem;margin:1.4rem 0;">
 <strong style="display:block;font-size:1.1rem;color:#3f7fa3;margin-bottom:0.5rem;">A note on scale</strong>
@@ -195,7 +195,7 @@ I've seen (and lived) this marketing vs. reality matchup before. I've [written a
 
 Because a trademark on its own describes nothing, and buyers don't type it. Columbia publishes a technology page defining Omni-Tech as waterproof, breathable and fully seam sealed, and if you ask an engine directly what Omni-Tech is, it can tell you.
 
-The problem is the connection only runs one way. In the buyer conversation I read, the waterproof layer gets named by brand **580 times, almost always Gore-Tex. Omni-Tech comes up 8 times.** So when someone asks for a waterproof hiking boot without naming a brand, nothing points the engine back to Columbia. ([The vocabulary data is in section 3.4 of the report](/reports/columbia-ai-visibility-assessment#audience-intelligence).)
+The problem is the connection only runs one way. In the buyer conversation I read, the waterproof layer gets named by brand **580 times, almost always Gore-Tex. Omni-Tech comes up 8 times.** So when someone asks for a waterproof hiking boot without naming a brand, nothing points the engine back to Columbia. (<a href="/reports/columbia-ai-visibility-assessment#audience-intelligence" target="_blank" rel="noopener">The vocabulary data is in section 3.4 of the report</a>.)
 
 ## Who wins the answers a brand is losing?
 
@@ -272,7 +272,7 @@ So Columbia is not about to lose a quarter to this. What they have is a window, 
 
 ## What should a brand fix first to win AI product recommendations?
 
-Four things, in the order they need to happen. Every one is engineering, data or positioning work, and publishing more content moves none of them. The [full assessment](/reports/columbia-ai-visibility-assessment#strategy) carries all five recommendations with the reasoning attached, alongside the figures by engine and category, the buyer data and the product-data tests.
+Four things, in the order they need to happen. Every one is engineering, data or positioning work, and publishing more content moves none of them. The <a href="/reports/columbia-ai-visibility-assessment#strategy" target="_blank" rel="noopener">full assessment</a> carries all five recommendations with the reasoning attached, alongside the figures by engine and category, the buyer data and the product-data tests.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Let the agents in, and give them stock and size</strong>
@@ -295,7 +295,7 @@ Four things, in the order they need to happen. Every one is engineering, data or
 <div style="background:#fdf0e8;border-left:5px solid #ffbe9f;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">4 &middot; Sequence the categories by what each one costs to win</strong>
 <p style="margin:0;">Columbia will keep running all five growth pillars. The question is narrower: where the incremental AI-visibility effort lands first. PFG is their strongest position in the audit and the least contested — 43.5% of answers, with almost no rival brands named alongside it. Hiking footwear means contesting Merrell, Salomon, Keen, Altra and Lowa at once, in a conversation moving toward trail runners.</p>
-<p style="margin:0.75rem 0 0;padding-top:0.7rem;border-top:1px solid rgba(26,26,26,0.1);"><strong>Why:</strong> the fishing work is cheap, fast and defensive; the footwear work is expensive, slow and contested. Doing the cheap one first is what funds the expensive one, instead of the two competing for the same budget. <a href="/reports/columbia-ai-visibility-assessment#strategy">The full sequencing is in section 5 of the report</a>.</p>
+<p style="margin:0.75rem 0 0;padding-top:0.7rem;border-top:1px solid rgba(26,26,26,0.1);"><strong>Why:</strong> the fishing work is cheap, fast and defensive; the footwear work is expensive, slow and contested. Doing the cheap one first is what funds the expensive one, instead of the two competing for the same budget. <a href="/reports/columbia-ai-visibility-assessment#strategy" target="_blank" rel="noopener">The full sequencing is in section 5 of the report</a>.</p>
 </div>
 
 ## What can't you diagnose about AI visibility from public data?
