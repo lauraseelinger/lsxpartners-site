@@ -3,7 +3,7 @@ title: "AI Citations vs. Brand Mentions: What's the Difference?"
 description: "AI citations vs. brand mentions: a mention is AI name-dropping your brand; a citation is AI using your content as the source. Here's the real difference, why fewer mentions can be good news, and how to get cited by AI."
 pubDate: 2026-07-24
 register: punchy-personal
-tags: ["ai-visibility", "ai-citations", "ai-brand-mentions", "measurement", "aeo"]
+tags: ["ai-visibility", "ai-citations", "ai-brand-mentions", "aeo"]
 heroImage: "/images/blog/ai-citations-vs-brand-mentions.jpg"
 faqs:
   - question: "What's the difference between an AI mention and an AI citation?"
