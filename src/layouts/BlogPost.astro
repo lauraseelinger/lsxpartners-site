@@ -20,8 +20,9 @@ interface Props {
   sectioned?: boolean;
   hideHero?: boolean;
   heroNarrow?: boolean;
+  heroAlt?: string;
 }
-const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false, heroNarrow = false } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqs = [], related = [], sectioned = false, hideHero = false, heroNarrow = false, heroAlt = '' } = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
 const article = articleSchema({
@@ -54,7 +55,7 @@ const fmt = (d: Date) =>
 
     {heroImage && !hideHero && (
       <div class="container">
-        <img class={heroNarrow ? "post__hero post__hero--narrow" : "post__hero"} src={heroImage} alt="" />
+        <img class={heroNarrow ? "post__hero post__hero--narrow" : "post__hero"} src={heroImage} alt={heroAlt} />
       </div>
     )}
 
