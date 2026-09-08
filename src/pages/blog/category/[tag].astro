@@ -55,8 +55,9 @@ const covers = ['pattern-2', 'pattern-5', 'pattern-3', 'pattern-4', 'pattern-pea
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 const cover = (p: typeof posts[number], i: number) => {
   const pat = `/brand/patterns/${covers[i % covers.length]}.jpg`;
-  return p.data.heroImage
-    ? { cls: `has-img from-${p.data.coverFrom}`, style: `background-image:url(${p.data.heroImage}); --pat:url('${pat}')` }
+  const img = p.data.cardImage ?? p.data.heroImage;
+  return img
+    ? { cls: `has-img from-${p.data.coverFrom}`, style: `background-image:url(${img}); --pat:url('${pat}')` }
     : { cls: '', style: `background-image: linear-gradient(rgba(139,140,74,0.16), rgba(139,140,74,0.16)), url('${pat}')` };
 };
 ---

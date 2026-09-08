@@ -13,6 +13,12 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
+    // Alt text for the hero. Empty alt is only correct for decorative images;
+    // heroes carrying readable content need describing.
+    heroAlt: z.string().optional(),
+    // Optional separate crop for the blog card. Cards centre-crop to a squarer
+    // ratio than the article hero, so a wide hero can lose the subject.
+    cardImage: z.string().optional(),
     // Voice register the post is written in (see laura-public-voice memory).
     register: z.enum(['punchy-personal', 'measured-pillar']).default('punchy-personal'),
     // Tags drive the category/tag routes (e.g. ai-visibility).
@@ -25,6 +31,9 @@ const blog = defineCollection({
     // Opt-in: render each section as an alternating tinted block (good for
     // step-by-step guides). Off elsewhere — headers alone do the breaking up.
     sectioned: z.boolean().default(false),
+    // Opt-in: render the hero narrow and centred instead of full-bleed, so the
+    // page pattern shows either side. Suits portrait/vertical source photos.
+    heroNarrow: z.boolean().default(false),
     // Hide the big in-article hero banner (card thumbnail + OG image still use heroImage).
     hideHero: z.boolean().default(false),
     // Set true to keep a URL live but hide from nav/index (unlisted old posts).
