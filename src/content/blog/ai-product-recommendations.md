@@ -247,7 +247,7 @@ So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.
 
 None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colorway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
 
-The mechanism has three links in it and every one is checkable.
+The mechanism has three parts and every one is checkable.
 
 1. **Columbia's own product pages refuse automated access.** Every request I made returned a 403 from their bot-management layer, whatever user-agent I used.
 2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/color variants. Exactly the fields required to answer "is it in stock in an 11 wide."
@@ -259,7 +259,7 @@ Their competitors don't have this problem. Merrell, Salomon and Keen don't block
 
 I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. But one of these companies has clearly sat down and made decisions about AI access, and one hasn't.
 
-**There's a fourth link, and it's the one nothing flags as broken.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
+**There's a fourth part, and it's the one nothing flags as broken.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
 
 ### How much time does a brand like this actually have?
 
