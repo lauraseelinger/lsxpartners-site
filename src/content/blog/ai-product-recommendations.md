@@ -30,7 +30,7 @@ Being found in search doesn't always translate to being included in AI recommend
 
 ### Use Case: Researching a Purchase
 
-Five years ago my husband and I went on our first hiking trip and had to buy a ton of gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — do a ton of research, then buy whatever the sources you've collected seem to agree is the trusted pick.
+Five years ago my husband and I went on our first hiking trip and had to buy gear we knew nothing about — boots, socks, layers, day packs. If you've ever planned a first cruise, or a Disney trip with kids, or a ski weekend, you've gone through the same process — do a ton of research, then buy whatever the sources you've collected seem to agree is the trusted pick.
 
 So back in 2021, we went to REI, found an associate, described what we'd be doing, and basically bought whatever they told us to buy. If I were making these purchases today, the process would be entirely different. I'd turn to AI, describe the trip and get a short list of items and brands and go from there. In fact, this is what nearly half of shoppers (48.5%) do in 2026 — use an AI platform to research prior to making a purchase, according to Alchemer's 2026 Retail Report.
 
