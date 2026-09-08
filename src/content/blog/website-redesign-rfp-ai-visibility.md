@@ -3,7 +3,7 @@ title: "How to Build AI Visibility Into Your Website Redesign RFP (AEO/GEO Check
 description: "Your website redesign RFP needs an AI visibility section. Here's the AEO/GEO checklist to include — so you pick the right agency and don't launch invisible in AI."
 pubDate: 2026-08-03
 register: punchy-personal
-tags: ["ai-visibility", "aeo", "geo", "website-redesign", "rfp", "marketing-pov"]
+tags: ["ai-visibility", "aeo", "geo", "marketing-pov"]
 heroImage: "/images/blog/website-redesign-rfp-ai-visibility.jpg"
 faqs:
   - question: "Why does AI visibility get left out of a website redesign?"
