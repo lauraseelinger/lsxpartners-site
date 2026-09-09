@@ -248,7 +248,7 @@ I opened that exact product page. Style 1594732 is **$110.00**, and 11 Wide is r
 
 So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.99 and $110**. Half of them were at least 30% below what a buyer would actually pay. One was off by 55%.
 
-None of them hallucinated a store. Every number traces to a real listing somewhere. And the pattern is worth sitting with: **the two assistants that went to authorized retailers got the right price. The two that were wrong went somewhere else** — one to a third-party seller, one to Columbia's own page for a number that isn't on it. **That's what makes it a governance problem rather than an AI problem.**
+None of them hallucinated a store. Every number traces to a real listing somewhere. **The two assistants that went to authorized retailers got the right price. The two that were wrong went somewhere else** — one to a third-party seller, one to Columbia's own page for a number that isn't on it.
 
 Columbia's site is fine — the product pages and sitemap are both fully readable. The mechanism is narrower than that, and both parts are checkable in about a minute.
 
