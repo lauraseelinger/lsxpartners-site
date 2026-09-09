@@ -16,7 +16,7 @@ faqs:
   - question: "Why does AI describe my brand differently than our marketing does?"
     answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
   - question: "Why would an AI assistant quote the wrong price for my product?"
-    answer: "Because it's reading a retailer for the part it can't get from you. If your availability and variant endpoints are disallowed in robots.txt, an assistant can read your product page but not live stock by size, so it sources those from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
+    answer: "Because it's reading a retailer for the part it can't get from you. If your availability and variant endpoints are disallowed in robots.txt, an assistant can read your product page but not live stock by size, so it sources those from whichever retailer it can reach. Those listings vary by sale, colorway and third-party seller, and the sellers outside your authorized set are the ones most likely to be wrong. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
   - question: "What is an AI brand identity?"
     answer: "An AI brand identity is the description an AI engine returns when someone asks what a brand is. It gets assembled from publicly retrievable sources — review coverage, retailer product copy, community threads — rather than from the brand's own campaigns. In an audit of Columbia Sportswear across six engines, every one described the brand the same way: mid-tier and value-oriented, accessible, functional, good in rain and cold. That description was consistent and accurate, and none of it came from Columbia's marketing."
   - question: "What is agentic commerce?"
@@ -248,14 +248,14 @@ I opened that exact product page. Style 1594732 is **$110.00**, and 11 Wide is r
 
 So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.99 and $110**. Half of them were at least 30% below what a buyer would actually pay. One was off by 55%.
 
-None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colorway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
+None of them hallucinated a store. Every number traces to a real listing somewhere. And the pattern is worth sitting with: **the two assistants that went to authorized retailers got the right price. The two that were wrong went somewhere else** — one to a third-party seller, one to Columbia's own page for a number that isn't on it. **That's what makes it a governance problem rather than an AI problem.**
 
 Columbia's site works. The product page returns fine to a browser, to Googlebot, and to no user-agent at all — 2.2MB of HTML with the price in it. The sitemap is healthy too: five files, 3,394 URLs, updated daily. The problem is one line in a config file.
 
 Here's the actual mechanism, and both parts are checkable in about a minute.
 
 1. **Two addresses are closed to crawlers.** Columbia's `robots.txt` disallows `/Product-GetAvailability` and `/Product-Variation*` — the endpoints that return stock by size, and the size and color options. Those are exactly the fields you need to answer "is it in stock in an 11 wide."
-2. **So the assistant gets that part from a retailer.** It can read Columbia's page for the product and the list price, but not live availability. For that it goes to Backcountry, Dick's, Amazon, Zappos — who disagree with each other by more than 2x.
+2. **So the assistant gets that part wherever it can.** It can read Columbia's page for the product and the list price, but not live availability. ChatGPT went to Backcountry and got $109.99. Google AI Overview went to Dick's and Backcountry and got ~$110. Gemini went to `lenonlures.com` — a third-party seller — and got $77, while labelling the listing "Columbia."
 
 Perplexity stated in the same answer that it could not see the live size-selector inventory. It answered anyway, with a price it attributed to Columbia's own site and a number that came from somewhere else.
 
