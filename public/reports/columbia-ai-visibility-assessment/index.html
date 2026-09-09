@@ -805,7 +805,7 @@ details p{max-width:none;margin-bottom:0}
         <tr><th>Engine</th><th class="num">Price quoted</th><th>Sourced from</th></tr>
         <tr><td>Google AI Overview</td><td class="num">~$110</td><td>Backcountry, DICK'S</td></tr>
         <tr><td>ChatGPT</td><td class="num">$109.99</td><td>Backcountry</td></tr>
-        <tr class="hi"><td>Gemini</td><td class="num">$77.00</td><td>Amazon, REI, Zappos</td></tr>
+        <tr class="hi"><td>Gemini</td><td class="num">$77.00</td><td>lenonlures.com, BeyondStyle</td></tr>
         <tr class="hi"><td>Perplexity</td><td class="num">$50.00</td><td>attributed to columbia.com</td></tr>
         <tr><td>Claude</td><td class="num">not stated</td><td>Columbia</td></tr>
         <tr><td>Bing</td><td class="num">no AI answer</td><td>&mdash;</td></tr>
@@ -813,8 +813,8 @@ details p{max-width:none;margin-bottom:0}
     </div>
     <div class="note lens"><div class="k"><span class="lensmark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v6.6M19.8 16.5 14.1 13.2M4.2 16.5l5.7-3.3"/></svg></span>Where the variance comes from</div>
       <ul>
-        <li>Every price matches a real listing somewhere in Columbia&rsquo;s distribution network: a sale price, a different colorway, or a marketplace seller.</li>
-        <li>The two engines quoting $110 read it from Backcountry and DICK&rsquo;S. Perplexity attributed $50 to columbia.com, where the page shows $110, and said in the same answer that it could not read that page&rsquo;s live inventory.</li>
+        <li><b>The authorized retailers agree.</b> ChatGPT read $109.99 from Backcountry; Google AI Overview read about $110 from DICK&rsquo;S, Backcountry and Columbia&rsquo;s own store. That matches the verified price.</li>
+        <li><b>Both wrong figures came from outside that set.</b> Gemini priced the boot at $77 from <code>lenonlures.com</code>, a third-party seller, while labelling the listing &ldquo;Columbia.&rdquo; Perplexity attributed $50 to columbia.com, where the page shows $110, and said in the same answer that it could not read that page&rsquo;s live inventory.</li>
       </ul>
       <p class="cap" style="margin-top:11px">The price an agent quotes is set by whichever retailer it reached first. 5.2 covers how to bring those listings back into line.</p></div>
   </div>
@@ -848,7 +848,7 @@ details p{max-width:none;margin-bottom:0}
     </div>
     </details>
   <details open><summary>2 &middot; Retailers supply the part that is missing, and they disagree</summary>
-    <p>Unable to read stock and size from Columbia, the assistants answered from retailers instead. Backcountry, DICK&rsquo;S, Amazon and Zappos all appear as cited sources in the captured answers, and their listings for the same boot differ by more than <b>2&times;</b>.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
+    <p>Unable to read stock and size from Columbia, the assistants answered from whichever seller they could reach. Backcountry, DICK&rsquo;S and Columbia&rsquo;s own store appear as sources, and so do <code>lenonlures.com</code> and <code>BeyondStyle</code> &mdash; third-party sellers carrying the brand name. Across those listings the same boot ranges from $50 to $110.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
       <p><b>Every price in the finding above came from this step.</b> The number a shopper is quoted is decided by whichever retailer the assistant reached first, and Columbia is not in that decision.</p></div></details>
 
   <h3>4.3 Competitor comparison <span class="tag fix">fix</span></h3>
@@ -933,7 +933,7 @@ details p{max-width:none;margin-bottom:0}
     <div class="stats" style="margin:13px 0 0">
       <div><div class="v">3 of 6</div><div class="l">assistants priced the boot from a retailer, not from Columbia</div></div>
       <div><div class="v bad">$50&ndash;$110</div><div class="l">range quoted for one boot on one day, against a verified $110</div></div>
-      <div><div class="v">5</div><div class="l">retailers appeared as cited sources: Backcountry, DICK&rsquo;S, Amazon, Zappos, REI</div></div>
+      <div><div class="v">2</div><div class="l">of the four priced answers came from sellers outside the authorized set</div></div>
       <div><div class="v bad">1</div><div class="l">assistant quoted a figure Columbia&rsquo;s own page does not carry</div></div>
     </div>
 
@@ -941,7 +941,7 @@ details p{max-width:none;margin-bottom:0}
       <div class="sf">
         <div class="n">01</div>
         <div class="b"><h4>Retailer listings &mdash; the brand supplies this already</h4>
-          <p>Backcountry, DICK&rsquo;S, Amazon, Zappos and REI all appear as cited sources in the captured answers. Columbia feeds these listings, so this is the one third-party surface it already controls. Extend the feed from price and stock to the four decision attributes, and hold retailers to them the way a brand holds them to imagery standards.</p>
+          <p>Backcountry, DICK&rsquo;S and Columbia&rsquo;s own store appear as cited sources in the captured answers, alongside third-party sellers Columbia does not feed. The authorized listings are the one third-party surface it already controls. Extend the feed from price and stock to the four decision attributes, and hold retailers to them the way a brand holds them to imagery standards.</p>
           <p class="mv"><b>Owned by:</b> channel and e-commerce. <b>Starts with:</b> the products carried by three or more retailers.</p></div>
       </div>
       <div class="sf">
