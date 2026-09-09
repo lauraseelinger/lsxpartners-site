@@ -250,11 +250,12 @@ So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.
 
 None of them hallucinated a store. Every number traces to a real listing somewhere in the distribution network — a sale, a colorway, a marketplace seller, a clearance page. **That's what makes it a governance problem rather than an AI problem.**
 
-The mechanism has three parts and every one is checkable.
+Columbia's site works. The product page returns fine to a browser, to Googlebot, and to no user-agent at all — 2.2MB of HTML with the price in it. The sitemap is healthy too: five files, 3,394 URLs, updated daily. The problem is one line in a config file.
 
-1. **The product page itself is readable.** Requested with a browser user-agent, with Googlebot's, and with none at all, the page returns 200 and about 2.2MB of HTML with price markup in it. Columbia's sitemap index is valid too — five child sitemaps, 3,394 URLs. Nothing is stopping an engine reading the page.
-2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/color variants. Exactly the fields required to answer "is it in stock in an 11 wide."
-3. **So the assistants ask a retailer for the part they can't get.** Backcountry, Dick's, Amazon, Zappos. And the retailers disagree with each other by more than 2x.
+Here's the actual mechanism, and both parts are checkable in about a minute.
+
+1. **Two addresses are closed to crawlers.** Columbia's `robots.txt` disallows `/Product-GetAvailability` and `/Product-Variation*` — the endpoints that return stock by size, and the size and color options. Those are exactly the fields you need to answer "is it in stock in an 11 wide."
+2. **So the assistant gets that part from a retailer.** It can read Columbia's page for the product and the list price, but not live availability. For that it goes to Backcountry, Dick's, Amazon, Zappos — who disagree with each other by more than 2x.
 
 Perplexity stated in the same answer that it could not see the live size-selector inventory. It answered anyway, with a price it attributed to Columbia's own site and a number that came from somewhere else.
 
