@@ -825,13 +825,9 @@ details p{max-width:none;margin-bottom:0}
     <div class="m"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span><b>What the highlighted line means.</b> The assistant is reporting that it could not read the product page it is quoting. It returned a price and a size answer anyway, sourced from elsewhere and labeled as Columbia&rsquo;s. Style 1594732 was listed at $110.00 on columbia.com that day, with 11 Wide selectable.</div>
   </div>
 
-  <h3>4.2 Why agents cannot reach the data <span class="tag fix">fix</span></h3>
-  <details open><summary>1 &middot; The product page itself is readable</summary>
-    <p>Requested with a browser user-agent, with Googlebot&rsquo;s, and with none at all, columbia.com product pages return <code>HTTP 200</code> and about 2.2&nbsp;MB of HTML carrying price markup. The sitemap index at <code>/sitemap_index.xml</code> is valid as well, listing five child sitemaps and 3,394 URLs.</p>
-    <div class="plain"><div class="ph">In plain terms</div>
-      <div class="row"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11.2v5"/><circle cx="12" cy="7.9" r=".95" fill="currentColor" stroke="none"/></svg></span><p>Nothing prevents an engine reading the product page. The gap is narrower than that, and it sits in the next point.</p></div>
-    </div></details>
-  <details open><summary>2 &middot; The endpoints holding stock and size are disallowed</summary>
+  <h3>4.2 Why an assistant cannot confirm stock and size <span class="tag fix">fix</span></h3>
+  <p>Columbia&rsquo;s site works. Product pages return <code>HTTP 200</code> to a browser user-agent, to Googlebot&rsquo;s and to none at all, carrying about 2.2&nbsp;MB of HTML with price markup. The sitemap index is valid as well: five child sitemaps, 3,394 URLs, updated daily. What follows is two lines in a configuration file.</p>
+  <details open><summary>1 &middot; The endpoints holding stock and size are disallowed</summary>
     <div class="plain"><div class="ph">In plain terms</div>
       <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><p><code>robots.txt</code> is a public file at the root of every website. It lists which addresses crawlers may and may not fetch.</p></div>
       <div class="row"><span class="ico w"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M6.4 17.6 17.6 6.4"/></svg></span><p><code>Disallow</code> means do not fetch this. Below are the live contents of columbia.com/robots.txt, retrieved September 2026.</p></div>
@@ -851,7 +847,7 @@ details p{max-width:none;margin-bottom:0}
         <p><b>Stock by size and the size and color options are the exact fields needed to answer the test question in 4.1</b> &mdash; whether one boot is available in a men&rsquo;s 11 wide. Both are closed.</p></div>
     </div>
     </details>
-  <details open><summary>3 &middot; Retailers set the price answer, and they disagree with each other</summary>
+  <details open><summary>2 &middot; Retailers supply the part that is missing, and they disagree</summary>
     <p>Unable to read stock and size from Columbia, the assistants answered from retailers instead. Backcountry, DICK&rsquo;S, Amazon and Zappos all appear as cited sources in the captured answers, and their listings for the same boot differ by more than <b>2&times;</b>.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
       <p><b>Every price in the finding above came from this step.</b> The number a shopper is quoted is decided by whichever retailer the assistant reached first, and Columbia is not in that decision.</p></div></details>
 
