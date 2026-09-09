@@ -816,7 +816,8 @@ details p{max-width:none;margin-bottom:0}
         <li><b>The authorized retailers agree.</b> ChatGPT read $109.99 from Backcountry; Google AI Overview read about $110 from DICK&rsquo;S, Backcountry and Columbia&rsquo;s own store. That matches the verified price.</li>
         <li><b>Both wrong figures came from outside that set.</b> Gemini priced the boot at $77 from <code>lenonlures.com</code>, a third-party seller, while labelling the listing &ldquo;Columbia.&rdquo; Perplexity attributed $50 to columbia.com, where the page shows $110, and said in the same answer that it could not read that page&rsquo;s live inventory.</li>
       </ul>
-      <p class="cap" style="margin-top:11px">The price an agent quotes is set by whichever retailer it reached first. 5.2 covers how to bring those listings back into line.</p></div>
+      <p class="cap" style="margin-top:11px">The price an agent quotes is set by whichever seller it could reach. 5.1 covers making the authoritative answer reachable; 5.2 covers governing what the authorized listings say.</p>
+      <p class="cap" style="margin-top:12px"><b>One boundary.</b> A third-party seller listing the boot at $77 is a channel control question &mdash; unauthorized sellers, diversion, MAP enforcement &mdash; and Columbia would have it with or without AI. The AI visibility question is the narrower one: why an assistant had to look past the brand at all.</p></div>
   </div>
 
   <div class="ai">
@@ -826,7 +827,7 @@ details p{max-width:none;margin-bottom:0}
   </div>
 
   <h3>4.2 Why an assistant cannot confirm stock and size <span class="tag fix">fix</span></h3>
-  <p>Columbia&rsquo;s site works. Product pages return <code>HTTP 200</code> to a browser user-agent, to Googlebot&rsquo;s and to none at all, carrying about 2.2&nbsp;MB of HTML with price markup. The sitemap index is valid as well: five child sitemaps, 3,394 URLs, updated daily. What follows is two lines in a configuration file.</p>
+  <p>Columbia&rsquo;s site is fine. Product pages and the sitemap index both return normally to a browser, to Googlebot and to no user-agent at all. What follows is narrower than a site problem: two lines in a configuration file.</p>
   <details open><summary>1 &middot; The endpoints holding stock and size are disallowed</summary>
     <div class="plain"><div class="ph">In plain terms</div>
       <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><p><code>robots.txt</code> is a public file at the root of every website. It lists which addresses crawlers may and may not fetch.</p></div>
@@ -849,7 +850,7 @@ details p{max-width:none;margin-bottom:0}
     </details>
   <details open><summary>2 &middot; Retailers supply the part that is missing, and they disagree</summary>
     <p>Unable to read stock and size from Columbia, the assistants answered from whichever seller they could reach. Backcountry, DICK&rsquo;S and Columbia&rsquo;s own store appear as sources, and so do <code>lenonlures.com</code> and <code>BeyondStyle</code> &mdash; third-party sellers carrying the brand name. Across those listings the same boot ranges from $50 to $110.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
-      <p><b>Every price in the finding above came from this step.</b> The number a shopper is quoted is decided by whichever retailer the assistant reached first, and Columbia is not in that decision.</p></div></details>
+      <p><b>Every price in the finding above came from this step.</b> When the authoritative answer is unreachable, the assistant substitutes the best source it can get to, and the quality of that substitute is outside Columbia&rsquo;s control.</p></div></details>
 
   <h3>4.3 Competitor comparison <span class="tag fix">fix</span></h3>
   <div class="g23">
@@ -864,7 +865,7 @@ details p{max-width:none;margin-bottom:0}
     </div>
     <div class="note lens"><div class="k"><span class="lensmark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v6.6M19.8 16.5 14.1 13.2M4.2 16.5l5.7-3.3"/></svg></span>What separates these four</div>
       <p>Columbia is the only one of the four that stops AI assistants from checking whether a boot is in stock in the size the shopper wants. It is also the only one below 20%.</p>
-      <p style="margin-top:9px">Merrell goes furthest and lists eight AI systems by name as welcome. That is worth copying, though it is not why Merrell leads &mdash; Salomon and Keen list none and still rank second and third.</p>
+      <p style="margin-top:9px">Merrell goes furthest and lists eight AI systems by name as welcome. Worth copying, though it does not explain Merrell&rsquo;s position &mdash; Salomon and Keen name none and still rank second and third.</p>
       <p class="do"><b>Recommendation:</b> let the assistants check stock and size (5.1), and add the welcome list while you are in the file.</p></div>
   </div>
 </section>
