@@ -467,7 +467,7 @@ details p{max-width:none;margin-bottom:0}
     <tr><td>Buyer language and category themes</td><td>Outdoor communities on Reddit, captured August 2026</td></tr>
     <tr><td>Organic ranking comparison</td><td>Semrush <code>domain_organic</code>, columbia.com and merrell.com filtered to hiking boot keywords, US database, September 2026</td></tr>
     <tr><td>Technology definitions</td><td><code>columbia.com/c/technology-omnitech/</code>; <code>columbia.com/tech-dry.html</code>; September 2026</td></tr>
-    <tr><td>Price, availability, crawler policy</td><td>columbia.com style 1594732; <code>columbia.com/robots.txt</code>; competitor robots.txt files; September 2026</td></tr>
+    <tr><td>Crawler policy, retrievability, price</td><td>columbia.com style 1594732; <code>columbia.com/robots.txt</code>; competitor robots.txt files; September 2026</td></tr>
     <tr><td>Agentic commerce forecast</td><td>Bain &amp; Company, <em>2030 Forecast: How Agentic AI Will Reshape US Retail</em>, December 17, 2025</td></tr>
     <tr><td>AI shopping behavior</td><td>Alchemer 2026 Retail Report (1,002 US shoppers); L.E.K. Consulting (2,650 US consumers, April 2026)</td></tr>
   </table>
@@ -595,7 +595,7 @@ details p{max-width:none;margin-bottom:0}
       <li>Merrell is named in nearly half these answers. Columbia is named in one of nine, behind five footwear specialists and Hoka.</li>
       <li>Columbia holds 5.2% of all brand mentions. Another 21.6% is spread across eight brands outside the top six. No single brand holds the category.</li>
     </ul>
-    <p class="cap" style="margin-top:11px">Section 4 sets out why the engines cannot read Columbia&rsquo;s product pages, and how that compares with the three brands above it. 5.1 is the fix.</p></div>
+    <p class="cap" style="margin-top:11px">Section 4 sets out which product data an assistant can and cannot retrieve from Columbia, and how that compares with the three brands above it. 5.1 is the fix.</p></div>
 </section>
 
 <!-- 3 -->
@@ -826,14 +826,12 @@ details p{max-width:none;margin-bottom:0}
   </div>
 
   <h3>4.2 Why agents cannot reach the data <span class="tag fix">fix</span></h3>
-  <details open><summary>1 &middot; Product pages refuse automated access</summary>
-    <p>Every request returned <code>HTTP 403</code> from the bot-management layer regardless of user-agent, including a standard browser string.</p><div class="plain"><div class="ph">In plain terms</div>
-      <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9V6z"/></svg></span><p>Columbia runs bot-protection software in front of the site.</p></div>
-      <div class="row"><span class="ico w"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M6.4 17.6 17.6 6.4"/></svg></span><p><code>403</code> is the code for &ldquo;refused.&rdquo; Every automated attempt to read a product page was refused, including ones identifying themselves as an ordinary browser.</p></div>
-      <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11.2v5"/><circle cx="12" cy="7.9" r=".95" fill="currentColor" stroke="none"/></svg></span><p>Google and Bing usually pre-approve their own crawlers by IP address, so this does not show their crawlers are blocked.</p></div>
-      <div class="row"><span class="ico w"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span><p><b>Any automated visitor without that pre-approval is turned away</b> &mdash; which is how an assistant answering a shopper in real time arrives.</p></div>
+  <details open><summary>1 &middot; The product page itself is readable</summary>
+    <p>Requested with a browser user-agent, with Googlebot&rsquo;s, and with none at all, columbia.com product pages return <code>HTTP 200</code> and about 2.2&nbsp;MB of HTML carrying price markup. The sitemap index at <code>/sitemap_index.xml</code> is valid as well, listing five child sitemaps and 3,394 URLs.</p>
+    <div class="plain"><div class="ph">In plain terms</div>
+      <div class="row"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11.2v5"/><circle cx="12" cy="7.9" r=".95" fill="currentColor" stroke="none"/></svg></span><p>Nothing prevents an engine reading the product page. The gap is narrower than that, and it sits in the next point.</p></div>
     </div></details>
-  <details open><summary>2 &middot; robots.txt disallows the two endpoints an agent needs</summary>
+  <details open><summary>2 &middot; The endpoints holding stock and size are disallowed</summary>
     <div class="plain"><div class="ph">In plain terms</div>
       <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><p><code>robots.txt</code> is a public file at the root of every website. It lists which addresses crawlers may and may not fetch.</p></div>
       <div class="row"><span class="ico w"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M6.4 17.6 17.6 6.4"/></svg></span><p><code>Disallow</code> means do not fetch this. Below are the live contents of columbia.com/robots.txt, retrieved September 2026.</p></div>
@@ -854,33 +852,10 @@ details p{max-width:none;margin-bottom:0}
     </div>
     </details>
   <details open><summary>3 &middot; Retailers set the price answer, and they disagree with each other</summary>
-    <p>With the brand&rsquo;s own pages closed, the assistants answered from retailers instead. Backcountry, DICK&rsquo;S, Amazon and Zappos all appear as cited sources in the captured answers, and their listings for the same boot differ by more than <b>2&times;</b>.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
+    <p>Unable to read stock and size from Columbia, the assistants answered from retailers instead. Backcountry, DICK&rsquo;S, Amazon and Zappos all appear as cited sources in the captured answers, and their listings for the same boot differ by more than <b>2&times;</b>.</p><div class="note warn"><div class="k"><span class="wico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6 22 20H2z"/><path d="M12 10.2v4.2"/><circle cx="12" cy="17.4" r=".95" fill="currentColor" stroke="none"/></svg></span>Who sets the price a shopper sees</div>
       <p><b>Every price in the finding above came from this step.</b> The number a shopper is quoted is decided by whichever retailer the assistant reached first, and Columbia is not in that decision.</p></div></details>
 
-  <h3>4.3 Sitemap returns HTTP 200 with no URLs <span class="tag fix">fix</span></h3>
-  <div class="g23">
-    <div>
-      <p><code>robots.txt</code> directs crawlers to <code>/sitemap_index.xml</code>. That address redirects into the bot-protection layer and answers with a success code and an HTML page.</p>
-      <div class="filebox"><div class="fb-h">GET columbia.com/sitemap_index.xml <span>September 2026</span></div>
-        <div class="fb-r"><code>Status</code><span class="bad">HTTP 200 &mdash; success</span></div>
-        <div class="fb-r"><code>Content type</code><span class="bad">text/html</span></div>
-        <div class="fb-r"><code>Body</code><span class="bad">the site&rsquo;s &ldquo;Oops! Have you lost the trail?&rdquo; error page</span></div>
-        <div class="fb-r"><code>&lt;sitemapindex&gt;</code><span class="bad">absent</span></div>
-        <div class="fb-r"><code>&lt;urlset&gt;</code><span class="bad">absent</span></div>
-        <div class="fb-r"><code>Product addresses listed</code><span class="bad">0</span></div>
-      </div>
-      <p class="cap">The address returns the site&rsquo;s own error page content under a success code, so a crawler is told the request worked.</p>
-    </div>
-    <div class="note lens"><div class="k"><span class="lensmark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v6.6M19.8 16.5 14.1 13.2M4.2 16.5l5.7-3.3"/></svg></span>Why this has gone unnoticed</div>
-      <ul>
-        <li>A sitemap is the index file that lists every page on a site for crawlers. Columbia&rsquo;s <code>robots.txt</code> points them to <code>/sitemap_index.xml</code>.</li>
-        <li>That address answers with <code>HTTP 200</code>, the code for &ldquo;here is the page you asked for.&rdquo; What it actually returns is an HTML page containing no product addresses.</li>
-        <li>A crawler reading a success code records a success and moves on. It does not retry, no error is logged, and the catalog is recorded as having no pages in it. Site monitoring reports this as healthy.</li>
-      </ul>
-      <p class="do"><b>Recommendation:</b> serve the sitemap from outside the bot-protection layer and confirm it returns XML listing product addresses. This is a configuration change, not a build.</p></div>
-  </div>
-
-  <h3>4.4 Competitor comparison <span class="tag fix">fix</span></h3>
+  <h3>4.3 Competitor comparison <span class="tag fix">fix</span></h3>
   <div class="g23">
     <div>
     <table>
@@ -905,8 +880,8 @@ details p{max-width:none;margin-bottom:0}
 
     <div class="rec" style="margin-top:18px">
       <h3>5.1 Let the agents in <span class="tag fix">fix</span></h3>
-      <p>Let assistants read stock and size again by opening <code>/Product-GetAvailability</code> and <code>/Product-Variation*</code>, name the AI crawlers explicitly instead of leaving them to the catch-all rule, and make the sitemap return a real list of product addresses.</p>
-      <p style="margin-top:8px">These are settings changes to three files. The team that manages the CDN and the bot-protection rules owns all three.</p>
+      <p>Let assistants read stock and size by opening <code>/Product-GetAvailability</code> and <code>/Product-Variation*</code>, and name the AI crawlers explicitly instead of leaving them to the catch-all rule.</p>
+      <p style="margin-top:8px">Both are edits to <code>robots.txt</code>. The team that owns that file can make them today.</p>
       <div class="why"><b>Why first:</b> a price an assistant reads off another company&rsquo;s page cannot be governed. This is the cheapest item on the list, and the other four only start paying once it is done.</div>
     </div>
     <div class="rec b2" style="margin-top:18px">
