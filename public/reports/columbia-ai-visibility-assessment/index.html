@@ -823,7 +823,7 @@ details p{max-width:none;margin-bottom:0}
   </div>
 
   <h3>4.2 Why an assistant cannot confirm stock and size <span class="tag fix">fix</span></h3>
-  <p>Columbia&rsquo;s site is fine. Product pages and the sitemap index both return normally to a browser, to Googlebot and to no user-agent at all. What follows is narrower than a site problem: two lines in a configuration file.</p>
+  <p>Columbia&rsquo;s product pages and sitemap index both return normally to a browser, to Googlebot and to no user-agent at all. The problem sits in two lines of the robots.txt file.</p>
   <details open><summary>1 &middot; The endpoints holding stock and size are disallowed</summary>
     <div class="plain"><div class="ph">In plain terms</div>
       <div class="row"><span class="ico "><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><p><code>robots.txt</code> is a public file at the root of every website. It lists which addresses crawlers may and may not fetch.</p></div>
