@@ -16,7 +16,7 @@ faqs:
   - question: "Why does AI describe my brand differently than our marketing does?"
     answer: "Because a brand's AI identity gets assembled from third-party sources — review sites, community threads, and the structured product data on retailer pages — rather than from its own campaigns. When the marketing claims a premium position and the review coverage assigns a value position, AI sides with the review coverage, because that's what's publicly retrievable and corroborated across multiple sources."
   - question: "Why would an AI assistant quote the wrong price for my product?"
-    answer: "Because it's reading a retailer, not you. If your own product pages block automated access, or your availability endpoint is disallowed in robots.txt, an assistant sources price and stock from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
+    answer: "Because it's reading a retailer for the part it can't get from you. If your availability and variant endpoints are disallowed in robots.txt, an assistant can read your product page but not live stock by size, so it sources those from whichever retailer it can reach. Those listings vary by sale, colorway and marketplace seller. In one live test, four assistants quoted the same boot at $50, $77, $109.99 and $110 on the same day — against a verified brand-site price of $110."
   - question: "What is an AI brand identity?"
     answer: "An AI brand identity is the description an AI engine returns when someone asks what a brand is. It gets assembled from publicly retrievable sources — review coverage, retailer product copy, community threads — rather than from the brand's own campaigns. In an audit of Columbia Sportswear across six engines, every one described the brand the same way: mid-tier and value-oriented, accessible, functional, good in rain and cold. That description was consistent and accurate, and none of it came from Columbia's marketing."
   - question: "What is agentic commerce?"
@@ -252,17 +252,15 @@ None of them hallucinated a store. Every number traces to a real listing somewhe
 
 The mechanism has three parts and every one is checkable.
 
-1. **Columbia's own product pages refuse automated access.** Every request I made returned a 403 from their bot-management layer, whatever user-agent I used.
+1. **The product page itself is readable.** Requested with a browser user-agent, with Googlebot's, and with none at all, the page returns 200 and about 2.2MB of HTML with price markup in it. Columbia's sitemap index is valid too — five child sitemaps, 3,394 URLs. Nothing is stopping an engine reading the page.
 2. **Their robots.txt disallows the two endpoints an agent needs** — `/Product-GetAvailability` and `/Product-Variation*`. Stock by size, and size/color variants. Exactly the fields required to answer "is it in stock in an 11 wide."
-3. **So the assistants ask a retailer instead.** Backcountry, Dick's, Amazon, Zappos. And the retailers disagree with each other by more than 2x.
+3. **So the assistants ask a retailer for the part they can't get.** Backcountry, Dick's, Amazon, Zappos. And the retailers disagree with each other by more than 2x.
 
 Perplexity stated in the same answer that it could not see the live size-selector inventory. It answered anyway, with a price it attributed to Columbia's own site and a number that came from somewhere else.
 
 Their competitors don't have this problem. Merrell, Salomon and Keen don't block their availability endpoints. Merrell goes further — their robots.txt explicitly names eight AI crawlers and allows every one of them. Columbia names one, with a crawl delay.
 
 I wouldn't claim that robots.txt file is why Merrell wins 48% of trail answers. But one of these companies has clearly sat down and made decisions about AI access, and one hasn't.
-
-**There's a fourth part, and it's the one nothing flags as broken.** Columbia's robots.txt points crawlers to a sitemap. That URL redirects into the bot-protection layer and returns **HTTP 200** with an HTML page and no URLs in it. Not a 403 — a success code, and an empty result. A crawler doesn't retry, doesn't log an error, and concludes the catalogue is empty.
 
 ### How much time does a brand like this actually have?
 
@@ -276,7 +274,7 @@ Four things, in the order they need to happen. Every one is engineering, data or
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.25rem;margin:1.1rem 0;">
 <strong style="display:block;font-size:1.05rem;color:#1a1a1a;margin-bottom:0.5rem;">1 &middot; Let the agents in, and give them stock and size</strong>
-<p style="margin:0;">Open the availability and variant endpoints, allowlist the named AI crawlers, and fix the sitemap that answers 200 with nothing in it.</p>
+<p style="margin:0;">Open the availability and variant endpoints, and allowlist the named AI crawlers instead of leaving them to the wildcard.</p>
 <p style="margin:0.75rem 0 0;padding-top:0.7rem;border-top:1px solid rgba(26,26,26,0.1);"><strong>Why:</strong> you cannot govern a price an agent reads off someone else's page. This is the cheapest fix on the list and it's the one blocking every other fix from mattering.</p>
 </div>
 
