@@ -250,16 +250,16 @@ So on a single day, four AI assistants quoted the same boot at **$50, $77, $109.
 
 None of them invented a store. Every number traces to a real listing. They disagree because Columbia's own page can only answer half the question, so each assistant filled in the other half from wherever it could get to.
 
-The site itself is fine — the product pages and the sitemap are both fully readable. The mechanism is narrower than that, and both parts are checkable in about a minute.
+Columbia's product pages and sitemap are both fully readable. The problem sits in two lines of their robots.txt.
 
-1. **Two addresses are closed to crawlers.** Columbia's `robots.txt` disallows `/Product-GetAvailability` and `/Product-Variation*` — the endpoints that return stock by size, and the size and color options. Those are exactly the fields you need to answer "is it in stock in an 11 wide."
+1. **Two addresses are closed to crawlers.** The disallowed paths are `/Product-GetAvailability` and `/Product-Variation*` — the endpoints that return stock by size, and the size and color options. Those are exactly the fields you need to answer "is it in stock in an 11 wide."
 2. **So the assistant gets that part wherever it can.** It can read Columbia's page for the product and the list price, but not live availability. ChatGPT went to Backcountry and got $109.99. Google AI Overview went to Dick's and Backcountry and got ~$110. Gemini went to `lenonlures.com`, a dealer carrying the line, and got $77.
 
 Perplexity told me in the same answer that it could not see the live size-selector inventory, then answered anyway — with a price it attributed to Columbia's own site and a number that isn't on that page.
 
 **The part Columbia controls is reachability.** When the authoritative answer is blocked, the assistant substitutes the best source it can get to, and which source that is stops being the brand's decision.
 
-Merrell, Salomon and Keen don't disallow their availability endpoints. Merrell also names eight AI crawlers in its robots.txt and allows each one, where Columbia names one with a crawl delay. I can't tell you whether any of that is why Merrell wins 48% of trail answers, and I'm not going to pretend the robots file explains a brand's whole position.
+Merrell, Salomon and Keen leave their availability endpoints open. Merrell also names eight AI crawlers in its robots.txt and allows each one, where Columbia names one with a crawl delay.
 
 ### How much time does a brand like this actually have?
 
