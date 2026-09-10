@@ -63,13 +63,13 @@ The service company needs to be named for a specific job in a specific city, wit
 
 ## What does an AEO page look like when you need AI to cite you?
 
-When what you sell is expertise, there's no cart and no retailer in the middle. The page earns the citation on credibility alone, and that comes down to a named person whose credential anyone can check, plus a finding out of your own operations — a statistic, a process outcome, a piece of research — that no competitor can republish.
+A business selling expertise has no price, no stock, and no retailer link on the page. Getting cited comes down to two things you control: who gets credited with the answer, and what data you can put behind it — a statistic, a process outcome, a piece of research that came out of your own operations and that no competitor can republish.
 
 Most companies already have the credential half handled internally. Somebody senior signs off on this kind of content for accuracy, and their name sits in an approval file rather than on the page. That name needs to move.
 
 The finding is where the real work is. The raw material is usually already in the business, uncounted: how long projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Whichever number you pick has to carry its sample size and its definitions. Without those, a reader and an engine both read it as a marketing claim.
 
-If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. Teams under that constraint tend to hedge the wording until it clears review faster, which produces a page an engine has nothing to quote from. The workaround is picking your number from the part of your data that clears review fastest.
+If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. The usual response is to water the copy down until it passes. Watered-down copy doesn't get cited. Pick data that's easy to approve rather than fighting for a number that will never clear.
 
 <p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">The worked example &mdash; a wearable cardiac monitor sold to cardiology practices</p>
 
