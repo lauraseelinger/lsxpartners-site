@@ -27,8 +27,6 @@ The three templates below are built for a medtech device company, a consumer bra
 
 ## What does a finished page look like?
 
-It looks like a page. That's the part the checklist can't convey.
-
 Every AEO item is a decision about where something sits and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) walks the items one by one; this piece shows them landed on three real page types.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
 
 ## Why do three companies need three different pages?
@@ -60,9 +58,15 @@ Same checklist, three completely different weightings.
 
 ## What does an AEO page look like when you need AI to cite you?
 
+<p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">Example &mdash; B2B medtech: a wearable cardiac monitor sold to cardiology practices</p>
+
 The medtech example is a comparison page: patch cardiac monitoring versus a Holter monitor. It's the question a clinician types before writing an order.
 
 The item carrying the most weight is original data. The page publishes wear-completion rate and report turnaround across 4,200 studies, with a stated method. Nobody else has that table, so an engine looking for the number has one place to get it. That's the hardest item on any AEO checklist to copy and the most durable once it's there.
+
+Original data means a figure you can produce from your own records that no competitor is able to publish. Every business is sitting on some. A services firm knows how long its projects actually run from kickoff to sign-off. A manufacturer knows its warranty claim rate by product line. A distributor knows which size or configuration sells out first every season. A clinic knows its average wait from referral to appointment. None of that is a marketing asset until somebody counts it, states the method, and puts it on a page.
+
+The question to work backward from is which number a buyer would want that only your operations can answer. Then publish it with the sample size and the definitions attached, because an engine quoting a figure needs to see where it came from.
 
 The regulated-category part is what makes this example useful even if you've never sold a medical device. Every figure on the page has to trace to cleared labeling, published data, or an operational record with a method. A marketing team can't round a number up to make the sentence land better. And the page still has to answer the question in specifics, because vague copy is what loses the citation. The work is getting precise language through review.
 
@@ -95,6 +99,8 @@ The original data on that page is **operational** by design. Wear completion and
 *Every numbered section carries a note explaining why it's there — [see the annotated version](/reports/ai-visibility-page-templates).*
 
 ## What changes when your product sells through retailers?
+
+<p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">Example &mdash; consumer brand at retail: kitchen faucets sold through four retailers</p>
 
 Two things change.
 
@@ -130,6 +136,8 @@ There's also a gap in most AEO checklists here. They name FAQ, Article, and Orga
 *The retailer row and the spec table are doing the extraction work here. [Full annotations](/reports/ai-visibility-page-templates).*
 
 ## What changes for a local service business in AI search?
+
+<p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">Example &mdash; local consumer service: a home-services company working three metros</p>
 
 The Google Business Profile goes from a footnote to the item that decides the page. Local AI answers and AI Overviews pull from the profile directly, so a mismatch between the profile and the page is a conflict the engine resolves by trusting neither.
 
