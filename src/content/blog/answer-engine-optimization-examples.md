@@ -19,7 +19,9 @@ faqs:
 
 The AI visibility checklist comes after the in-depth audience intelligence, category research and prompt audit, and it's actually the simplest part — FAQ schema, one topic per page, lead every section with a direct answer. The brands I work with get a comprehensive strategy document, complete with page templates to cover every category page, product type, etc.
 
-**A page template is answer engine optimization applied to one specific page: the answer block written out, the headings phrased as the questions buyers actually ask, the schema specified, and a note on every section explaining why it's there.** Every business gets the same checklist. Which items do the heavy lifting is different for each one, and that depends on whether the business needs AI to cite it, recommend it, or pick it.
+---
+
+**The page templates in this article outline how to apply answer engine optimization to a page, based on the page type and what the business needs out of the AI answer — the answer block written out, the headings phrased as the questions buyers actually ask, and the schema that page type carries.** Every business gets the same checklist. Which items do the heavy lifting is different for each one, and that depends on whether the business needs AI to cite it, recommend it, or pick it.
 
 The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other. The [full annotated versions are here](/reports/ai-visibility-page-templates).
 
