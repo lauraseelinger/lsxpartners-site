@@ -17,9 +17,9 @@ faqs:
     answer: "Not with the page. Start with audience intelligence and a prompt audit, so you know which questions the page has to answer and in whose words. The on-page work is the last mile, and it only pays off when it is aimed at the right questions."
 ---
 
-The on-page layer of an AI visibility strategy is short enough to fit on an index card — FAQ schema, one topic per page, lead every section with a direct answer. What I actually hand clients and their agency teams is a set of page templates, because the person who has to build it needs to see where each item goes.
+The AI visibility checklist comes after the in-depth audience intelligence, category research and prompt audit, and it's actually the simplest part — FAQ schema, one topic per page, lead every section with a direct answer. The brands I work with get a comprehensive strategy document, complete with page templates to cover every category page, product type, etc.
 
-**Answer engine optimization is the structure that makes a page quotable when someone asks ChatGPT, Perplexity, or Google's AI instead of typing into a search box: a front-loaded answer, question-style headings, one topic per page, schema, a named author, a visible date.** The items barely change from company to company. Which ones carry the page changes completely, and that comes down to what the business needs the AI answer to do.
+**Answer engine optimization is the structure that makes a page quotable when someone asks ChatGPT, Perplexity, or Google's AI instead of typing into a search box.** Those items barely change from company to company. Which ones carry the page changes completely, and that comes down to what the business needs the AI answer to do.
 
 So I built three of them. Three fictional companies, the same checklist, and three pages that barely resemble each other: [the page templates are here](/reports/ai-visibility-page-templates), marked up section by section with the reason each one is there.
 
@@ -95,7 +95,7 @@ Look at what the three examples actually share. The consumer brand sold at retai
 
 The question that predicts the work is what you need out of the answer. Cited, recommended, or picked.
 
-![Comparison table across the three businesses showing the win, the query, what the answer block holds, the schema carrying the weight, the highest-leverage item, where corroboration comes from, the metric, and where each one goes wrong.](/images/blog/aeo-page-template-comparison.jpg)
+![Comparison table across the three businesses showing the win, the query, what the answer block holds, the schema carrying the weight, the item that carries each page, where corroboration comes from, the metric, and where each one goes wrong.](/images/blog/aeo-page-template-comparison.jpg)
 
 *The same eleven questions asked of all three businesses. [The full table is in the templates](/reports/ai-visibility-page-templates).*
 
