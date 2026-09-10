@@ -23,7 +23,7 @@ The AI visibility checklist comes after the in-depth audience intelligence, cate
 
 **The page templates in this article outline how to apply answer engine optimization to a page, based on the page type and what the business needs out of the AI answer — the answer block written out, the headings phrased as the questions buyers actually ask, and the schema that page type carries.** Every business gets the same checklist. Which items do the heavy lifting is different for each one, and that depends on whether the business needs AI to cite it, recommend it, or pick it.
 
-The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other. The [full annotated versions are here](/reports/ai-visibility-page-templates).
+The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other — the [full annotated versions](/reports/ai-visibility-page-templates) carry a note on every section explaining what it's doing there.
 
 ## What does a finished page look like?
 
@@ -109,11 +109,11 @@ Two things change.
 
 The specs have to be extractable — numbers in table cells with labeled units, because the same facts written into a paragraph of body copy are much harder to lift cleanly. And the page has to carry retailer data: a price, a stock state, and a named seller for each place you can buy it, in Product schema.
 
-**An AI answer will happily recommend a product with none of that present.** I found the storage containers for my last move by asking an AI assistant, and it named a brand long before it told me where to buy anything. Recommendation and transaction are two different steps.
+**An AI answer will happily recommend a product with none of that present.** I found the storage containers for my last move by asking an AI assistant, and it named a brand long before it told me where to buy anything, which is the gap between being recommended and being transactable.
 
 The retailer data is for the second step. As assistants move from naming a product to putting it in a cart, the products they can act on are the ones whose price, stock, and seller they can read — and the risk of getting that wrong is real. In [the Columbia audit I ran on public data](/blog/ai-product-recommendations), the most damaging finding wasn't about being recommended at all. It was an assistant quoting a price a buyer would never actually pay at checkout. I wrote more about how this splits by sales model in [what agentic commerce means for your brand](/blog/agentic-commerce-by-brand-type).
 
-There's also a gap in most AEO checklists here. They name FAQ, Article, and Organization schema. A brand sold at retail runs on Product schema, and the lists rarely mention it.
+Most AEO checklists name FAQ, Article, and Organization schema and stop there, which leaves out the one a brand sold at retail actually runs on — Product schema, with the offers array carrying price, availability, and a named seller for every place the thing can be bought.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
 <div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The retail template &mdash; wants to be recommended</div>
@@ -148,7 +148,7 @@ The harder conversation is price.
 
 Publishing a price range is the toughest ask on a home-services page, and most brands resist it. I understand why. But the number reaches the buyer either way — from a competitor who published a range, or from a review thread written by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page. Dating that range is what makes it safe to quote and gives your team a set cadence for keeping it current.
 
-These pages fail in one predictable way — forty city pages with the town name swapped and nothing else changed. Each one needs its own permit rules, its own pricing, its own service-area list, its own local reviews. Otherwise you've built forty pages that say the same thing and earned one answer.
+These pages fail in one predictable way, which is forty city pages with the town name swapped and nothing else changed. Each one has to carry its own permit rules, pricing, service-area list, and local reviews, because forty pages saying the same thing will earn the answer for one city at most.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
 <div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The local-service template &mdash; wants to be chosen</div>
