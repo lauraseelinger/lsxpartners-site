@@ -17,9 +17,9 @@ faqs:
     answer: "Not with the page. Start with audience intelligence and a prompt audit, so you know which questions the page has to answer and in whose words. The on-page work is the last mile, and it only pays off when it is aimed at the right questions."
 ---
 
-I've handed AEO checklists to a lot of client and agency teams, and the question that comes back is always the same one. Okay — but where does this go?
+The on-page layer of an AI visibility strategy is short enough to fit on an index card — FAQ schema, one topic per page, lead every section with a direct answer. What I actually hand clients and their agency teams is a set of page templates, because the person who has to build it needs to see where each item goes.
 
-**Answer engine optimization is the on-page layer of an AI visibility strategy: the structure that makes a page quotable when someone asks ChatGPT, Perplexity, or Google's AI instead of typing into a search box.** The list of items is short and it hasn't changed much — a front-loaded answer, question-style headings, one topic per page, schema, a named author, a visible date. What changes from company to company is which of those items carries the page, and that comes down to what the business needs the AI answer to do.
+**Answer engine optimization is the structure that makes a page quotable when someone asks ChatGPT, Perplexity, or Google's AI instead of typing into a search box: a front-loaded answer, question-style headings, one topic per page, schema, a named author, a visible date.** The items barely change from company to company. Which ones carry the page changes completely, and that comes down to what the business needs the AI answer to do.
 
 So I built three of them. Three fictional companies, the same checklist, and three pages that barely resemble each other: [the page templates are here](/reports/ai-visibility-page-templates), marked up section by section with the reason each one is there.
 
@@ -53,6 +53,10 @@ The regulated-category part is what makes this example useful even if you've nev
 
 The original data on that page is **operational** by design. Wear completion and turnaround come from fulfillment records, so they publish without a clinical-claim review. Diagnostic yield would be a clinical claim and belongs in the literature. If you work in a category with a claims chain, publish your proprietary number in the part of the dataset that clears review fastest.
 
+![Annotated page mockup for a medtech device company: a comparison page with a numbered answer block, a clinically reviewed byline, a modality comparison table, and an operational data table.](/images/blog/aeo-page-template-medtech.jpg)
+
+*The medtech template. Every numbered section has a note explaining why it's there — [see the annotated version](/reports/ai-visibility-page-templates).*
+
 ## What changes when your product sells through retailers?
 
 Two things change.
@@ -65,6 +69,10 @@ The retailer data is for the second step. As assistants move from naming a produ
 
 There's also a gap in most AEO checklists here. They name FAQ, Article, and Organization schema. A brand sold at retail runs on Product schema, and the lists rarely mention it.
 
+![Annotated page mockup for a consumer brand sold through retailers: a product page with a fit-first answer block, a retailer availability row, a specification table, and an own-models comparison.](/images/blog/aeo-page-template-retail.jpg)
+
+*The retail template — note the retailer row and the spec table doing the extraction work. [Full annotations here](/reports/ai-visibility-page-templates).*
+
 ## What changes for a local service business?
 
 The Google Business Profile goes from a footnote to the item that decides the page. Local AI answers and AI Overviews pull from the profile directly, so a mismatch between the profile and the page is a conflict the engine resolves by trusting neither.
@@ -75,6 +83,10 @@ Publishing a price range is the toughest ask on a home-services page, and most b
 
 These pages fail in one predictable way — forty city pages with the town name swapped and nothing else changed. Each one needs its own permit rules, its own pricing, its own service-area list, its own local reviews. Otherwise you've built forty pages that say the same thing and earned one answer.
 
+![Annotated page mockup for a local service business: a city-specific service page with a published price range, a price-factors table, a sourced review rating, and a service-area list.](/images/blog/aeo-page-template-local-service.jpg)
+
+*The local-service template, with an actual price range in the answer block. [Full annotations here](/reports/ai-visibility-page-templates).*
+
 ## Does B2B versus B2C tell you which items matter?
 
 No, and it's the split I hear most often.
@@ -82,6 +94,10 @@ No, and it's the split I hear most often.
 Look at what the three examples actually share. The consumer brand sold at retail and the consumer service company sold direct have almost nothing in common on the page — different schema, different answer block, different corroboration, different metric. Meanwhile the B2B device manufacturer and the local HVAC company both live on a named credential: an MD with a board certification, a technician with a state license number.
 
 The question that predicts the work is what you need out of the answer. Cited, recommended, or picked.
+
+![Comparison table across the three businesses showing the win, the query, what the answer block holds, the schema carrying the weight, the highest-leverage item, where corroboration comes from, the metric, and where each one goes wrong.](/images/blog/aeo-page-template-comparison.jpg)
+
+*The same eleven questions asked of all three businesses. [The full table is in the templates](/reports/ai-visibility-page-templates).*
 
 ## What parts of the page can a visitor never see?
 
@@ -101,7 +117,7 @@ If you want the mechanics of the earlier steps, [the AI intelligence loop](/blog
 
 And if you want to see the templates, [they're right here](/reports/ai-visibility-page-templates) — three businesses, every section marked, and the code underneath.
 
-I'm Laura Seelinger, founder of LSX Partners. Page templates like these are what I hand clients and their agency teams so the AEO work actually gets built the way it was scoped. If your team is holding a checklist and wondering where any of it goes, that's a conversation worth having.
+I'm Laura Seelinger, founder of LSX Partners. Page templates like these are what I hand clients and their agency teams so the AEO work actually gets built the way it was scoped. If your team has the checklist and needs the templates, that's the part I build.
 
 ## Sources
 
