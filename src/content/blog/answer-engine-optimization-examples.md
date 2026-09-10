@@ -33,17 +33,32 @@ Every AEO item is a decision about where something sits and how it's worded. "Le
 
 ## Why do three companies need three different pages?
 
-Because the win is different in each case.
+The three companies need three different outcomes from the same answer.
 
 The device company needs to get **cited** — named as the source, with a link back, when a clinician or a patient asks how the technology compares. There's no cart and no retailer in the middle, so the page is competing on credibility. The named clinical reviewer, the original data, and the published literature do most of the work.
 
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
+<strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If what you sell is expertise, the page is judged on whether a real credentialed person and data nobody else has are sitting on it. That applies to a law firm, an engineering consultancy, or a specialty manufacturer the same way it applies to a device company.</p>
+</div>
+
 The consumer brand needs to get **recommended** — named as the product when a shopper asks for the best option under a budget. It controls the specs and none of the checkout, so extractable specs and readable retailer data do the work.
+
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
+<strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If a retailer, marketplace, or distributor owns your checkout, your page has to be the specification of record. The facts an engine can lift decide whether you get named, and whatever you send your channel partners has to match them exactly.</p>
+</div>
 
 The service company needs to get **picked** — named for a specific job in a specific city, with a number and a way to book. Location is in the query, which changes the whole answer.
 
+<div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
+<strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If location is part of the question, your business profile and your review presence carry more weight than anything on your own site, and the page's job is to agree with them. Publishing the number the buyer is actually asking for is what makes the page quotable.</p>
+</div>
+
 Same checklist, three completely different weightings.
 
-## What does the page look like when you need to get cited?
+## What does an AEO page look like when you need AI to cite you?
 
 The medtech example is a comparison page: patch cardiac monitoring versus a Holter monitor. It's the question a clinician types before writing an order.
 
@@ -60,7 +75,7 @@ The original data on that page is **operational** by design. Wear completion and
 <div style="background:#111;color:#fff;padding:9px 13px;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.04em">SOLVANE MEDICAL</div>
 <div style="background:#fafafa;border-bottom:1px solid #e4e4e4;padding:5px 13px;font:10.5px/1.4 system-ui,sans-serif;color:#999">Home / For Clinicians / Patch Monitoring vs. Holter</div>
 <div style="padding:16px 16px 18px">
-<h3 style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Patch Cardiac Monitoring vs. a Holter Monitor</h3>
+<div style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Patch Cardiac Monitoring vs. a Holter Monitor</div>
 <div style="font:11px/1.5 system-ui,sans-serif;color:#666;border-bottom:1px solid #e4e4e4;padding-bottom:8px;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">2</span>Clinically reviewed by <strong>Dana Whitfield, MD, FACC</strong> &mdash; board-certified cardiac electrophysiologist, Medical Director &nbsp;&middot;&nbsp; <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">3</span><strong>Clinical review completed August 19, 2026</strong></div>
 <div style="background:#fff7d6;border:1px solid #e6cf63;border-radius:6px;padding:12px 13px;margin:12px 0;font-size:.9rem;line-height:1.5;color:#5a4a00"><strong style="display:block;font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">4</span>Answer block</strong>A Holter monitor records continuously for 24 to 48 hours through leads and a belt-worn recorder. A patch monitor is a single adhesive device worn on the chest that records for up to 14 days without leads. The practical difference is duration: arrhythmias that occur less than once a day are unlikely to appear in a 24-hour window. Holter remains standard when the goal is dense data over one or two days.</div>
 <div style="border-top:2px solid #111;padding-top:8px;margin:18px 0 8px;font:800 .8rem/1.3 system-ui,sans-serif;color:#222"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">5</span>When is a patch monitor ordered instead of a Holter?</div>
@@ -98,7 +113,7 @@ There's also a gap in most AEO checklists here. They name FAQ, Article, and Orga
 <div style="background:#111;color:#fff;padding:9px 13px;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.04em">CEDARLINE</div>
 <div style="background:#fafafa;border-bottom:1px solid #e4e4e4;padding:5px 13px;font:10.5px/1.4 system-ui,sans-serif;color:#999">Home / Kitchen Faucets / Pull-Down / Ashfield</div>
 <div style="padding:16px 16px 18px">
-<h3 style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Ashfield Single-Handle Pull-Down Kitchen Faucet &mdash; $249</h3>
+<div style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Ashfield Single-Handle Pull-Down Kitchen Faucet &mdash; $249</div>
 <div style="font:11px/1.5 system-ui,sans-serif;color:#666;border-bottom:1px solid #e4e4e4;padding-bottom:8px;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">2</span><strong>Specs verified August 19, 2026</strong> &nbsp;&middot;&nbsp; Model CL-4820 &nbsp;&middot;&nbsp; <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">3</span>Four finishes</div>
 <div style="background:#fff7d6;border:1px solid #e6cf63;border-radius:6px;padding:12px 13px;margin:12px 0;font-size:.9rem;line-height:1.5;color:#5a4a00"><strong style="display:block;font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">4</span>Answer block</strong>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and carries a limited lifetime warranty on the finish and the valve. At $249 it sits below the $300 line for a solid-brass body with a magnetic dock.</div>
 <div style="border-top:2px solid #111;padding-top:8px;margin:18px 0 8px;font:800 .8rem/1.3 system-ui,sans-serif;color:#222"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">5</span>Specifications</div>
@@ -114,7 +129,7 @@ There's also a gap in most AEO checklists here. They name FAQ, Article, and Orga
 
 *The retailer row and the spec table are doing the extraction work here. [Full annotations](/reports/ai-visibility-page-templates).*
 
-## What changes for a local service business?
+## What changes for a local service business in AI search?
 
 The Google Business Profile goes from a footnote to the item that decides the page. Local AI answers and AI Overviews pull from the profile directly, so a mismatch between the profile and the page is a conflict the engine resolves by trusting neither.
 
@@ -131,7 +146,7 @@ These pages fail in one predictable way — forty city pages with the town name 
 <div style="background:#111;color:#fff;padding:9px 13px;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.04em">FIELDSTONE HEATING &amp; AIR</div>
 <div style="background:#fafafa;border-bottom:1px solid #e4e4e4;padding:5px 13px;font:10.5px/1.4 system-ui,sans-serif;color:#999">Home / Furnace Replacement / Columbus, OH</div>
 <div style="padding:16px 16px 18px">
-<h3 style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Furnace Replacement in Columbus, Ohio</h3>
+<div style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Furnace Replacement in Columbus, Ohio</div>
 <div style="font:11px/1.5 system-ui,sans-serif;color:#666;border-bottom:1px solid #e4e4e4;padding-bottom:8px;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">2</span>Reviewed by <strong>Marcus Elder</strong> &mdash; NATE-certified technician, Ohio HVAC contractor license #00000, 22 years &nbsp;&middot;&nbsp; <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">3</span><strong>Pricing verified September 2, 2026</strong></div>
 <div style="background:#fff7d6;border:1px solid #e6cf63;border-radius:6px;padding:12px 13px;margin:12px 0;font-size:.9rem;line-height:1.5;color:#5a4a00"><strong style="display:block;font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">4</span>Answer block</strong>Replacing a furnace in the Columbus area runs $4,200 to $8,900 installed, depending on the furnace&rsquo;s efficiency rating, whether the existing ductwork and venting can be reused, and the size of the unit the house needs. Most replacements take one day. Franklin County requires a mechanical permit and a final inspection, which we pull and schedule.</div>
 <div style="border-top:2px solid #111;padding-top:8px;margin:18px 0 8px;font:800 .8rem/1.3 system-ui,sans-serif;color:#222"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">5</span>What drives the price of a furnace replacement?</div>
