@@ -68,7 +68,7 @@ Original data means a figure you can produce from your own records that no compe
 
 The question to work backward from is which number a buyer would want that only your operations can answer. Then publish it with the sample size and the definitions attached, because an engine quoting a figure needs to see where it came from.
 
-The regulated-category part is what makes this example useful even if you've never sold a medical device. Every figure on the page has to trace to cleared labeling, published data, or an operational record with a method. A marketing team can't round a number up to make the sentence land better. And the page still has to answer the question in specifics, because vague copy is what loses the citation. The work is getting precise language through review.
+The regulated-category part is what makes this example useful even if you're not in the medical device industry. Every figure on the page has to trace to cleared labeling, published data, or an operational record with a method. A marketing team can't round a number up to make the sentence land better. And the page still has to answer the question in specifics, because vague copy is what loses the citation. The work is getting precise language through review.
 
 The original data on that page is **operational** by design. Wear completion and turnaround come from fulfillment records, so they publish without a clinical-claim review. Diagnostic yield would be a clinical claim and belongs in the literature. If you work in a category with a claims chain, publish your proprietary number in the part of the dataset that clears review fastest.
 
