@@ -73,7 +73,7 @@ If your industry has an approval chain — legal, compliance, regulatory, clinic
 
 <p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">The worked example &mdash; a wearable cardiac monitor sold to cardiology practices</p>
 
-The template below answers one question — patch monitoring versus a Holter monitor — because that's what a clinician asks before writing an order. Its number is wear-completion rate and report turnaround across 4,200 studies, pulled from shipping and reporting logs. Publishing clinical outcomes would have meant a journal and a review board first, while those operational numbers were already sitting in the system waiting to be counted.
+The template below compares this company's device to the older alternative, which is the comparison its buyer makes. Its one proprietary number comes from the company's own delivery records — how many patients wore the device for the full time, how fast the reports came back — because publishing clinical results would have meant a journal and a review board first.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
 <div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The medtech template &mdash; wants to be cited</div>
