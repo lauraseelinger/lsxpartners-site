@@ -25,11 +25,11 @@ The AI visibility checklist comes after the in-depth audience intelligence, cate
 
 The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other. The [full annotated versions are here](/reports/ai-visibility-page-templates).
 
-## What does answer engine optimization actually look like on a page?
+## What does a finished page look like?
 
 It looks like a page. That's the part the checklist can't convey.
 
-Every AEO item is a decision about where something sits and how it's worded. "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
+Every AEO item is a decision about where something sits and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) walks the items one by one; this piece shows them landed on three real page types.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
 
 ## Why do three companies need three different pages?
 
