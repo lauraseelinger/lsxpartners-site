@@ -31,7 +31,7 @@ Every AEO item is a decision about where something sits and how it's worded. ([T
 
 ## Why do three companies need three different pages?
 
-The three companies need three different outcomes from the same answer.
+A buyer asking about a cardiac monitor, a kitchen faucet, and a furnace replacement is asking three different kinds of question, and the page that wins each one is built differently.
 
 <p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Cited</p>
 
@@ -63,13 +63,13 @@ The service company needs to be named for a specific job in a specific city, wit
 
 ## What does an AEO page look like when you need AI to cite you?
 
-When what you sell is expertise, there's no cart and no retailer in the middle, so the page earns the citation on credibility alone. Two things carry most of that weight: a named person with a credential anyone can check, and a statistic, process outcome, or research finding that establishes credibility.
+When what you sell is expertise, there's no cart and no retailer in the middle. The page earns the citation on credibility alone, and that comes down to a named person whose credential anyone can check, plus a finding out of your own operations — a statistic, a process outcome, a piece of research — that no competitor can republish.
 
-The credential usually already exists inside the company, since somebody senior reviews this kind of content for accuracy before it goes out and their name lives in an approval file. Moving it onto the page is what gives a reader and an engine a person to attribute the answer to.
+Most companies already have the credential half handled internally. Somebody senior signs off on this kind of content for accuracy, and their name sits in an approval file rather than on the page. That name needs to move.
 
-The finding has to come out of your own operations rather than an industry report everyone else is also citing — how long your projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Most companies already hold the raw material and have never counted it, which is where the work sits, and the counting only pays off if the sample size and the definitions travel with the number, since a figure without them reads as a marketing claim to a reader and to an engine both.
+The finding is where the real work is. The raw material is usually already in the business, uncounted: how long projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Whichever number you pick has to carry its sample size and its definitions. Without those, a reader and an engine both read it as a marketing claim.
 
-There's a catch if your industry has an approval chain, and most B2B industries have one — legal, compliance, regulatory, clinical. Every figure has to trace back to a source document, so the number in the answer block is the number in that document. The temptation is to hedge the wording until it clears review faster, and a hedged page gives an engine nothing to quote. The move that works is choosing your number from the part of your data that clears review fastest, rather than fighting for the one that never will.
+If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. Teams under that constraint tend to hedge the wording until it clears review faster, which produces a page an engine has nothing to quote from. The workaround is picking your number from the part of your data that clears review fastest.
 
 <p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">The worked example &mdash; a wearable cardiac monitor sold to cardiology practices</p>
 
