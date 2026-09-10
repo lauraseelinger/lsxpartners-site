@@ -33,21 +33,27 @@ Every AEO item is a decision about where something sits and how it's worded. ([T
 
 The three companies need three different outcomes from the same answer.
 
-The device company needs to get **cited** — named as the source, with a link back, when a clinician or a patient asks how the technology compares. There's no cart and no retailer in the middle, so the page is competing on credibility. The named clinical reviewer, the original data, and the published literature do most of the work.
+<p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Cited</p>
+
+The device company needs to be named as the source, with a link back, when a clinician or a patient asks how the technology compares. There's no cart and no retailer in the middle, so the page is competing on credibility. The named clinical reviewer, the original data, and the published literature do most of the work.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
 <p style="margin:0;font-size:.95rem;line-height:1.6">If what you sell is expertise, the page is judged on whether a real credentialed person and data nobody else has are sitting on it. That applies to a law firm, an engineering consultancy, or a specialty manufacturer the same way it applies to a device company.</p>
 </div>
 
-The consumer brand needs to get **recommended** — named as the product when a shopper asks for the best option under a budget. It controls the specs and none of the checkout, so extractable specs and readable retailer data do the work.
+<p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Recommended</p>
+
+The consumer brand needs to be named as the product when a shopper asks for the best option under a budget. It controls the specs and none of the checkout, so extractable specs and readable retailer data do the work.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
 <p style="margin:0;font-size:.95rem;line-height:1.6">If a retailer, marketplace, or distributor owns your checkout, your page has to be the specification of record. The facts an engine can lift decide whether you get named, and whatever you send your channel partners has to match them exactly.</p>
 </div>
 
-The service company needs to get **picked** — named for a specific job in a specific city, with a number and a way to book. Location is in the query, which changes the whole answer.
+<p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Picked</p>
+
+The service company needs to be named for a specific job in a specific city, with a number and a way to book. Location is in the query, which changes the whole answer.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
@@ -57,11 +63,11 @@ The service company needs to get **picked** — named for a specific job in a sp
 
 ## What does an AEO page look like when you need AI to cite you?
 
-When what you sell is expertise, there's no cart and no retailer in the middle, so the page earns the citation on credibility alone. Two things carry most of that weight: a named person with a credential anyone can check, and a number nobody else is able to publish.
+When what you sell is expertise, there's no cart and no retailer in the middle, so the page earns the citation on credibility alone. Two things carry most of that weight: a named person with a credential anyone can check, and a statistic, process outcome, or research finding that establishes credibility.
 
-The credential is the easy one, and it's usually already happening internally. Somebody senior reviews this content for accuracy before it goes out, and their name stays in an approval file. Putting it on the page gives a reader and an engine a real person to attribute the answer to.
+The credential usually already exists inside the company, since somebody senior reviews this kind of content for accuracy before it goes out and their name lives in an approval file. Moving it onto the page is what gives a reader and an engine a person to attribute the answer to.
 
-The number is the harder one and the more valuable. Original data means a figure you can produce from your own records that a competitor can't — how long your projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Most companies are sitting on one and have never counted it. Publish it with the sample size and the definitions attached, because an engine quoting a figure needs to see where the figure came from. Once it's on the page it's the hardest thing there for anyone else to copy.
+The finding has to come out of your own operations rather than an industry report everyone else is also citing — how long your projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Most companies already hold the raw material and have never counted it, which is where the work sits, and the counting only pays off if the sample size and the definitions travel with the number, since a figure without them reads as a marketing claim to a reader and to an engine both.
 
 There's a catch if your industry has an approval chain, and most B2B industries have one — legal, compliance, regulatory, clinical. Every figure has to trace back to a source document, so the number in the answer block is the number in that document. The temptation is to hedge the wording until it clears review faster, and a hedged page gives an engine nothing to quote. The move that works is choosing your number from the part of your data that clears review fastest, rather than fighting for the one that never will.
 
