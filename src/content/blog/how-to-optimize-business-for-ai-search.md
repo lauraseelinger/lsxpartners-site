@@ -23,9 +23,9 @@ The AI visibility checklist comes after the in-depth audience intelligence, cate
 
 ---
 
-**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That decides which pages matter and what each one has to carry: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them. Every business works from the same checklist. Which items do the heavy lifting is different for each one.
+**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That decides which pages matter and what each one has to carry: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them.
 
-The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other — the [full annotated versions](/reports/ai-visibility-page-templates) carry a note on every section explaining what it's doing there.
+The templates below are for three types of companies (fictional brands used for educational purposes): a medtech device company, a consumer brand sold through four retailers, and a local or geo-focused home-services company working three metros. The [full annotated versions](/reports/ai-visibility-page-templates) carry a note on every section explaining what it's doing there.
 
 ## How do you structure content for AI search?
 
