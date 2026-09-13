@@ -23,13 +23,13 @@ The AI visibility checklist comes after the in-depth audience intelligence, cate
 
 ---
 
-**How you optimize your business for AI search engines depends on the page type and what the business needs out of the AI answer.** The templates in this article outline it page by page: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema each page type carries. Every business gets the same checklist. Which items do the heavy lifting is different for each one, and that depends on whether the business needs AI to cite it, recommend it, or pick it.
+**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That decides which pages matter and what each one has to carry: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them. Every business works from the same checklist. Which items do the heavy lifting is different for each one.
 
 The three templates below are built for a medtech device company, a consumer brand sold through four retailers, and a home-services company working three metros. They're fictional companies, running the same checklist, and the pages barely resemble each other — the [full annotated versions](/reports/ai-visibility-page-templates) carry a note on every section explaining what it's doing there.
 
 ## How do you structure content for AI search?
 
-Every AEO item is a decision about where something sits and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) walks the items one by one; this piece shows them landed on three real page types.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
+Every AEO item is a decision about where something sits and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) walks the items one by one; this piece shows them landed on pages for three different kinds of business.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
 
 ## Why do three companies need three different pages?
 
