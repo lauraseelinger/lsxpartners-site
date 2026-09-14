@@ -29,7 +29,7 @@ The templates below are for three types of companies (fictional brands used for 
 
 ## How do you structure content for AI search?
 
-Every AEO item is a decision about where something sits and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) walks the items one by one; this piece shows them landed on pages for three different kinds of business.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do live somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
+Every AEO item is a decision about where something goes on the page and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) covers the items one by one; this piece shows what they look like on real pages.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do go somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
 
 ## Why do three companies need three different pages?
 
@@ -41,7 +41,7 @@ The device company needs to be named as the source, with a link back, when a cli
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
-<p style="margin:0;font-size:.95rem;line-height:1.6">If what you sell is expertise, the page is judged on whether a real credentialed person and data nobody else has are sitting on it. That applies to a law firm, an engineering consultancy, or a specialty manufacturer the same way it applies to a device company.</p>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If what you sell is expertise, the page is judged on whether it has a real credentialed person and data nobody else can publish. That applies to a law firm, an engineering consultancy, or a specialty manufacturer the same way it applies to a device company.</p>
 </div>
 
 <p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Recommended</p>
@@ -59,7 +59,7 @@ The service company needs to be named for a specific job in a specific city, wit
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
-<p style="margin:0;font-size:.95rem;line-height:1.6">If location is part of the question, your business profile and your review presence carry more weight than anything on your own site, and the page's job is to agree with them. Publishing the number the buyer is actually asking for is what makes the page quotable.</p>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If location is part of the question, your business profile and your review presence outweigh anything on your own site, and the page's job is to agree with them. Publishing the number the buyer is actually asking for is what makes the page quotable.</p>
 </div>
 
 
@@ -67,9 +67,9 @@ The service company needs to be named for a specific job in a specific city, wit
 
 A business selling expertise has no price, no stock, and no retailer link on the page. Getting cited comes down to two things you control: who gets credited with the answer, and what data you can put behind it — a statistic, a process outcome, a piece of research that came out of your own operations and that no competitor can republish.
 
-Most companies already have the credential half handled internally. Somebody senior signs off on this kind of content for accuracy, and their name sits in an approval file rather than on the page. That name needs to move.
+Most companies already have the credential half handled internally. Somebody senior signs off on this kind of content for accuracy, and that name stays in an approval file. That name needs to move.
 
-The finding is where the real work is. The raw material is usually already in the business, uncounted: how long projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Whichever number you pick has to carry its sample size and its definitions. Without those, a reader and an engine both read it as a marketing claim.
+The finding is where the real work is. The raw material is usually already in the business, uncounted: how long projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Whichever number you pick has to come with its sample size and its definitions. Without those, a reader and an engine both read it as a marketing claim.
 
 If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. The usual response is to water the copy down until it passes. Watered-down copy doesn't get cited. Pick data that's easy to approve rather than fighting for a number that will never clear.
 
@@ -101,7 +101,7 @@ The template below compares this company's device to the older alternative, whic
 </div>
 </div>
 
-*Every numbered section carries a note explaining why it's there — [see the annotated version](/reports/ai-visibility-page-templates).*
+*Every numbered section has a note explaining why it's there — [see the annotated version](/reports/ai-visibility-page-templates).*
 
 ## How do you optimize product pages for AI visibility?
 
@@ -109,13 +109,13 @@ The template below compares this company's device to the older alternative, whic
 
 Two things change.
 
-The specs have to be extractable — numbers in table cells with labeled units, because the same facts written into a paragraph of body copy are much harder to lift cleanly. And the page has to carry retailer data: a price, a stock state, and a named seller for each place you can buy it, in Product schema.
+The specs have to be extractable — numbers in table cells with labeled units, because the same facts written into a paragraph of body copy are much harder to lift cleanly. And the page has to include retailer data: a price, a stock state, and a named seller for each place you can buy it, in Product schema.
 
 **An AI answer will happily recommend a product with none of that present.** I found the storage containers for my last move by asking an AI assistant, and it named a brand long before it told me where to buy anything, which is the gap between being recommended and being transactable.
 
 The retailer data is for the second step. As assistants move from naming a product to putting it in a cart, the products they can act on are the ones whose price, stock, and seller they can read — and the risk of getting that wrong is real. In [the Columbia audit I ran on public data](/blog/ai-product-recommendations), the most damaging finding wasn't about being recommended at all. It was an assistant quoting a price a buyer would never actually pay at checkout. I wrote more about how this splits by sales model in [what agentic commerce means for your brand](/blog/agentic-commerce-by-brand-type).
 
-Most AEO checklists name FAQ, Article, and Organization schema and stop there, which leaves out the one a brand sold at retail actually runs on — Product schema, with the offers array carrying price, availability, and a named seller for every place the thing can be bought.
+Most AEO checklists name FAQ, Article, and Organization schema and stop there, which leaves out the one a brand sold at retail actually runs on — Product schema, with an offers array that names the price, the availability, and the seller for every place the thing can be bought.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
 <div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The retail template &mdash; wants to be recommended</div>
@@ -126,7 +126,7 @@ Most AEO checklists name FAQ, Article, and Organization schema and stop there, w
 <div style="padding:16px 16px 18px">
 <div style="font:800 1.15rem/1.3 system-ui,sans-serif;margin:2px 0 5px;color:#1a1a1a"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">1</span>Ashfield Single-Handle Pull-Down Kitchen Faucet &mdash; $249</div>
 <div style="font:11px/1.5 system-ui,sans-serif;color:#666;border-bottom:1px solid #e4e4e4;padding-bottom:8px;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">2</span><strong>Specs verified August 19, 2026</strong> &nbsp;&middot;&nbsp; Model CL-4820 &nbsp;&middot;&nbsp; <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">3</span>Four finishes</div>
-<div style="background:#fff7d6;border:1px solid #e6cf63;border-radius:6px;padding:12px 13px;margin:12px 0;font-size:.9rem;line-height:1.5;color:#5a4a00"><strong style="display:block;font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">4</span>Answer block</strong>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and carries a limited lifetime warranty on the finish and the valve. At $249 it sits below the $300 line for a solid-brass body with a magnetic dock.</div>
+<div style="background:#fff7d6;border:1px solid #e6cf63;border-radius:6px;padding:12px 13px;margin:12px 0;font-size:.9rem;line-height:1.5;color:#5a4a00"><strong style="display:block;font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">4</span>Answer block</strong>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and carries a limited lifetime warranty on the finish and the valve. At $249 it comes in under $300 for a solid-brass body with a magnetic dock.</div>
 <div style="border-top:2px solid #111;padding-top:8px;margin:18px 0 8px;font:800 .8rem/1.3 system-ui,sans-serif;color:#222"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">5</span>Specifications</div>
 <table style="width:100%;border-collapse:collapse;font-size:.78rem;margin:6px 0"><tr><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Spout height</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">16.5 in</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Flow rate</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">1.8 GPM</td></tr><tr><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Mounting</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">1 or 3 hole</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Body material</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Solid brass</td></tr><tr><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Certification</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">NSF/ANSI 61, cUPC</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Warranty</td><td style="border:1px solid #e4e4e4;padding:6px 8px;text-align:left;vertical-align:top">Limited lifetime</td></tr></table>
 <div style="border-top:2px solid #111;padding-top:8px;margin:18px 0 8px;font:800 .8rem/1.3 system-ui,sans-serif;color:#222"><span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:800 10px/18px system-ui,sans-serif;text-align:center;margin-right:6px;vertical-align:2px">6</span>Frequently asked</div>
@@ -150,7 +150,7 @@ The harder conversation is price.
 
 Publishing a price range is the toughest ask on a home-services page, and most brands resist it. I understand why. But the number reaches the buyer either way — from a competitor who published a range, or from a review thread written by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page. Dating that range is what makes it safe to quote and gives your team a set cadence for keeping it current.
 
-These pages fail in one predictable way, which is forty city pages with the town name swapped and nothing else changed. Each one has to carry its own permit rules, pricing, service-area list, and local reviews, because forty pages saying the same thing will earn the answer for one city at most.
+These pages fail in one predictable way, which is forty city pages with the town name swapped and nothing else changed. Each one needs its own permit rules, pricing, service-area list, and local reviews, because forty pages saying the same thing will earn the answer for one city at most.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
 <div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The local-service template &mdash; wants to be chosen</div>
@@ -176,13 +176,13 @@ These pages fail in one predictable way, which is forty city pages with the town
 </div>
 </div>
 
-*The answer block carries an actual price range. [Full annotations](/reports/ai-visibility-page-templates).*
+*The answer block includes an actual price range. [Full annotations](/reports/ai-visibility-page-templates).*
 
 ## Is optimizing for AI search different for B2B and B2C?
 
 No, and it's the split I hear most often.
 
-Look at what the three examples actually share. The consumer brand sold at retail and the consumer service company sold direct have almost nothing in common on the page — different schema, different answer block, different corroboration, different metric. Meanwhile the B2B device manufacturer and the local HVAC company both live on a named credential: an MD with a board certification, a technician with a state license number.
+Look at what the three examples actually share. The consumer brand sold at retail and the consumer service company sold direct have almost nothing in common on the page — different schema, different answer block, different corroboration, different metric. Meanwhile the B2B device manufacturer and the local HVAC company both depend on a named credential: an MD with a board certification, a technician with a state license number.
 
 The question that predicts the work is what you need out of the answer. Cited, recommended, or picked.
 
@@ -191,8 +191,8 @@ The question that predicts the work is what you need out of the answer. Cited, r
 | **The win** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
 | **The query** | A comparison question asked before an order is written | A shopping question with a constraint — budget, fit, use | A cost or "near me" question with a location in it |
 | **What the answer block holds** | Duration, form factor, the clinical reason the difference matters | Dimensions, fit, flow, finish, price | A price range, the factors that move it, the permit and the timeline |
-| **Schema carrying the weight** | Article and Organization | Product, with an offers array | LocalBusiness and Service |
-| **The item that carries the page** | Original research | Extractable specs plus readable offers | The Google Business Profile |
+| **Schema that matters most** | Article and Organization | Product, with an offers array | LocalBusiness and Service |
+| **The item that decides the page** | Original research | Extractable specs plus readable offers | The Google Business Profile |
 | **Where corroboration comes from** | Peer-reviewed literature, the FDA device listing, trade media | Independent reviews, retailer product pages, community threads | Review platforms, local subreddits, local press |
 | **Where it goes wrong** | Copy written vague enough to clear review, with no number a clinician can use | Specs that disagree between the brand site and the retailer feeds | Forty city pages with the town name swapped and nothing else changed |
 
@@ -202,9 +202,9 @@ The question that predicts the work is what you need out of the answer. Cited, r
 
 Roughly half the list.
 
-The robots.txt allow-list decides whether your pages are eligible at all, and a blocked crawler is invisible in reporting — the pages keep ranking in Google, no AI answer ever cites them, and analytics shows nothing that explains it. The schema is a script tag. The entity records that let an engine confirm your company exists sit on other people's domains.
+The robots.txt allow-list decides whether your pages are eligible at all, and a blocked crawler is invisible in reporting — the pages keep ranking in Google, no AI answer ever cites them, and analytics shows nothing that explains it. The schema is a script tag. The entity records that let an engine confirm your company exists are hosted on other people's domains.
 
-That's the practical reason this half of the checklist tends not to get done: it never touches page design, so it lands with whoever has time rather than whoever owns it. The template set writes all of it out in code under each mockup for that reason.
+That's the practical reason this half of the checklist tends not to get done: it never touches page design, so it falls to whoever has time rather than whoever owns it. The template set writes all of it out in code under each mockup for that reason.
 
 ## Where should you start with answer engine optimization?
 
