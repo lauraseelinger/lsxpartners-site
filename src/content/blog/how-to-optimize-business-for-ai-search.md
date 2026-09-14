@@ -8,7 +8,7 @@ faqs:
   - question: "What does answer engine optimization look like on a page?"
     answer: "A front-loaded answer block in the first hundred words, headings written as the questions buyers actually ask, one topic per page, a named author with a checkable credential, a visible last-updated date, and schema in the code. The list is short. Which items carry the page depends on what the business needs the AI answer to do."
   - question: "Is AEO different for B2B and B2C companies?"
-    answer: "B2B and B2C is the wrong split. A consumer brand sold through retailers and a consumer service company sold direct have almost nothing in common on the page, while a B2B device manufacturer and a local service business both live on a named credential. The useful question is whether you need AI to cite you, recommend you, or pick you."
+    answer: "B2B and B2C is the wrong split. A consumer brand sold through retailers and a consumer service company sold direct have almost nothing in common on the page, while a B2B device manufacturer and a local service business both live on a named credential. The useful question is whether you need AI to cite you, recommend you, or list you."
   - question: "Should a service business publish prices for AI search?"
     answer: "The number reaches the buyer either way — from a competitor who published a range, or from a review thread written by a customer who felt overcharged. Publishing a range with the factors that move it puts the sourced version on your own page, and dating the range is what makes it safe to quote."
   - question: "Which schema types matter most for AI visibility?"
@@ -57,9 +57,9 @@ The consumer brand needs to be named as the product when a shopper asks for the 
 <p style="margin:0;font-size:.95rem;line-height:1.6">If a retailer, marketplace, or distributor owns your checkout, your page has to be the specification of record. The facts an engine can lift decide whether you get named, and whatever you send your channel partners has to match them exactly.</p>
 </div>
 
-<p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Picked</p>
+<p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Listed</p>
 
-The service company needs to be named for a specific job in a specific city, with a number and a way to book. Location is in the query, which changes the whole answer.
+The service company needs to appear in the set of local providers the answer returns, with a number and a way to book. Location is in the query, which changes the whole answer.
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
@@ -157,7 +157,7 @@ Publishing a price range is the toughest ask on a home-services page, and most b
 These pages fail in one predictable way, which is forty city pages with the town name swapped and nothing else changed. Each one needs its own permit rules, pricing, service-area list, and local reviews, because forty pages saying the same thing will earn the answer for one city at most.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
-<div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The local-service template &mdash; wants to be chosen</div>
+<div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The local-service template &mdash; wants to be listed</div>
 <div style="border:1px solid #c4c4c4;border-radius:9px;overflow:hidden;background:#fff">
 <div style="background:#dbdbdb;border-bottom:1px solid #c4c4c4;padding:6px 11px;font:9.5px/1.5 ui-monospace,Menlo,monospace;color:#7d7d7d;overflow:hidden;white-space:nowrap">fieldstonehvac.example/furnace-replacement/columbus-oh</div>
 <div style="background:#111;color:#fff;padding:9px 13px;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.04em">FIELDSTONE HEATING &amp; AIR</div>
@@ -188,9 +188,9 @@ No, and it's the split I hear most often.
 
 Look at what the three examples actually share. The consumer brand sold at retail and the consumer service company sold direct have almost nothing in common on the page — different schema, different answer block, different corroboration, different metric. Meanwhile the B2B device manufacturer and the local HVAC company both depend on a named credential: an MD with a board certification, a technician with a state license number.
 
-The question that predicts the work is what you need out of the answer. Cited, recommended, or picked.
+The question that predicts the work is what you need out of the answer. Cited, recommended, or listed.
 
-| | B2B medical device<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be chosen* |
+| | B2B medical device<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be listed* |
 |---|---|---|---|
 | **The outcome** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
 | **The query** | A comparison question asked before an order is written | A shopping question with a constraint — budget, fit, use | A cost or "near me" question with a location in it |
