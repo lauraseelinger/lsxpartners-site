@@ -23,9 +23,9 @@ The AI visibility checklist comes after the in-depth audience intelligence, cate
 
 ---
 
-**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That decides which pages matter and what each one has to carry: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them.
+**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That distinction impacts which pages matter and what each one should include: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them.
 
-The templates below are for three types of companies (fictional brands used for educational purposes): a medtech device company, a consumer brand sold through four retailers, and a local or geo-focused home-services company working three metros. The [full annotated versions](/reports/ai-visibility-page-templates) carry a note on every section explaining what it's doing there.
+The templates below are for three types of companies (fictional brands used for educational purposes): a medical device company, a consumer brand sold through four retailers, and a local or geo-focused home-services company working three metros. The [full annotated templates](/reports/ai-visibility-page-templates) include in-depth explanations for each section so you can understand the why behind the differences.
 
 ## How do you structure content for AI search?
 
@@ -78,7 +78,7 @@ If your industry has an approval chain — legal, compliance, regulatory, clinic
 The template below compares this company's device to the older alternative, which is the comparison its buyer makes. Its one proprietary number comes from the company's own delivery records — how many patients wore the device for the full time, how fast the reports came back — because publishing clinical results would have meant a journal and a review board first.
 
 <div style="border:1px solid #cbcbcb;border-radius:12px;background:#dedede;padding:12px;margin:1.6rem 0">
-<div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The medtech template &mdash; wants to be cited</div>
+<div style="font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#6f6f6f;margin:0 2px 8px">The medical device template &mdash; wants to be cited</div>
 <div style="border:1px solid #c4c4c4;border-radius:9px;overflow:hidden;background:#fff">
 <div style="background:#dbdbdb;border-bottom:1px solid #c4c4c4;padding:6px 11px;font:9.5px/1.5 ui-monospace,Menlo,monospace;color:#7d7d7d;overflow:hidden;white-space:nowrap">solvanemedical.example/clinicians/patch-vs-holter-monitoring</div>
 <div style="background:#111;color:#fff;padding:9px 13px;font:700 11px/1.4 system-ui,sans-serif;letter-spacing:.04em">SOLVANE MEDICAL</div>
@@ -186,7 +186,7 @@ Look at what the three examples actually share. The consumer brand sold at retai
 
 The question that predicts the work is what you need out of the answer. Cited, recommended, or picked.
 
-| | B2B medtech<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be chosen* |
+| | B2B medical device<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be chosen* |
 |---|---|---|---|
 | **The win** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
 | **The query** | A comparison question asked before an order is written | A shopping question with a constraint — budget, fit, use | A cost or "near me" question with a location in it |
