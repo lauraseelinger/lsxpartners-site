@@ -29,11 +29,15 @@ The templates below are for three types of companies (fictional brands used for 
 
 ## How do you structure content for AI search?
 
-Every AEO item is a decision about where something goes on the page and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) covers the items one by one; this piece shows what they look like on real pages.) "Lead with a direct answer" means an 80-word paragraph above everything else, written to be lifted whole. "One topic per page" means the H1 names a single job somebody searches for, and the nine other things you do go somewhere else. "Add a named author" means a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
+Every AEO item is a decision about where something goes on the page and how it's worded. ([The answer engine optimization guide](/blog/answer-engine-optimization-guide) covers the items one by one; this piece shows what they look like on real pages.)
 
-## Why do three companies need three different pages?
+- **"Lead with a direct answer"** — an 80-word paragraph above everything else, written to be lifted whole.
+- **"One topic per page"** — the H1 names a single job somebody searches for, and the nine other things you do go somewhere else.
+- **"Add a named author"** — a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
 
-A buyer asking about a cardiac monitor, a kitchen faucet, and a furnace replacement is asking three different kinds of question, and the page that wins each one is built differently.
+## How do you optimize a brand for AI answer engines?
+
+A buyer asking about a cardiac monitor, a kitchen faucet, and a furnace replacement is asking three different kinds of question, and the page that gets named in each answer is built differently.
 
 <p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Cited</p>
 
@@ -188,7 +192,7 @@ The question that predicts the work is what you need out of the answer. Cited, r
 
 | | B2B medical device<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be chosen* |
 |---|---|---|---|
-| **The win** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
+| **The outcome** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
 | **The query** | A comparison question asked before an order is written | A shopping question with a constraint — budget, fit, use | A cost or "near me" question with a location in it |
 | **What the answer block holds** | Duration, form factor, the clinical reason the difference matters | Dimensions, fit, flow, finish, price | A price range, the factors that move it, the permit and the timeline |
 | **Schema that matters most** | Article and Organization | Product, with an offers array | LocalBusiness and Service |
