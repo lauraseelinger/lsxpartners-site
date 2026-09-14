@@ -37,7 +37,7 @@ Every AEO item is a decision about where something goes on the page and how it's
 
 ## How do you optimize a brand for AI answer engines?
 
-A buyer asking about a cardiac monitor, a kitchen faucet, and a furnace replacement is asking three different kinds of question, and the page that gets named in each answer is built differently.
+The three businesses in the templates are a medical device company selling to cardiology practices, a consumer brand whose faucets are sold through four retailers, and a home-services company working three metros. A buyer asking about a cardiac monitor, a kitchen faucet, and a furnace replacement is asking three different kinds of question, and the page that gets named in each answer is built differently.
 
 <p style="display:block;font:800 .78rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin:1.4rem 0 .3rem">Cited</p>
 
