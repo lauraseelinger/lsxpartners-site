@@ -192,7 +192,7 @@ The question that predicts the work is what you need out of the answer. Cited, r
 
 | | B2B medical device<br>*wants to be cited* | Retail brand<br>*wants to be recommended* | Local service<br>*wants to be listed* |
 |---|---|---|---|
-| **The outcome** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
+| **The goal** | Named as the source, with a link back | Named as the product, with a price and a place to buy it | Named for a job in a city, with a number and a way to book |
 | **The query** | A comparison question asked before an order is written | A shopping question with a constraint — budget, fit, use | A cost or "near me" question with a location in it |
 | **What the answer block holds** | Duration, form factor, the clinical reason the difference matters | Dimensions, fit, flow, finish, price | A price range, the factors that move it, the permit and the timeline |
 | **Schema that matters most** | Article and Organization | Product, with an offers array | LocalBusiness and Service |
