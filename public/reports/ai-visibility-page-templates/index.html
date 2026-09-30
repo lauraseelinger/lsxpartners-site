@@ -3,11 +3,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Visibility Page Templates: What AEO Looks Like on a Page</title>
-<meta name="description" content="Three annotated page templates — a medtech device company, a brand sold through retailers, and a local service business — showing which on-page AEO items carry a page and why.">
+<meta name="description" content="Three annotated page templates — a medtech device company, a brand sold through retailers, and a local service business — showing which on-page AEO items matter most for each and why.">
 <link rel="canonical" href="https://lsxpartners.com/reports/ai-visibility-page-templates">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AI Visibility Page Templates: What AEO Looks Like on a Page">
-<meta property="og:description" content="Three annotated page templates showing which on-page AEO items carry a page when you need AI to cite you, recommend you, or pick you.">
+<meta property="og:description" content="Three annotated page templates showing which on-page AEO items matter most when you need AI to cite you, recommend you, or list you.">
 <meta property="og:url" content="https://lsxpartners.com/reports/ai-visibility-page-templates">
 <meta name="twitter:card" content="summary">
 <style>
@@ -203,7 +203,7 @@ table.map td:first-child{width:20%;font-weight:700;background:#fbfbfb}
 
   <div class="seclabel">Schema and crawler access</div>
 
-  <div class="acard"><b>robots.txt, at the root of the domain.</b> Four lines that decide whether the site is eligible at all.</div>
+  <div class="acard"><b>robots.txt, at the root of the domain.</b> The allow-list for AI crawlers.</div>
   <div class="code">User-agent: GPTBot
 Allow: /
 
@@ -236,7 +236,7 @@ Allow: /</div>
 }
 &lt;/script&gt;</div>
 
-  <div class="acard" style="margin-top:16px"><b>Article markup</b> carries the reviewer and the dates in machine-readable form. The byline on screen and the markup in code have to agree. <code>reviewedBy</code> is the property that expresses clinical review.</div>
+  <div class="acard" style="margin-top:16px"><b>Article markup</b> states the reviewer and the dates in machine-readable form. <code>reviewedBy</code> is the property that expresses clinical review.</div>
   <div class="code">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -254,7 +254,7 @@ Allow: /</div>
   "publisher": { "@type": "Organization", "name": "Solvane Medical" }
 }</div>
 
-  <div class="acard" style="margin-top:16px"><b>Organization markup</b> carries the company&#39;s identity. <code>sameAs</code> is the list of independent places that confirm the company is real. Schema.org also defines a <code>MedicalDevice</code> type for the device itself, which describes the product for machines that read it even though no search engine renders anything from it today.</div>
+  <div class="acard" style="margin-top:16px"><b>Organization markup</b> states the company&#39;s identity. <code>sameAs</code> is the list of independent places that confirm the company is real. Schema.org also defines a <code>MedicalDevice</code> type for the device itself, which describes the product for machines that read it even though no search engine renders anything from it today.</div>
   <div class="code">{
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -284,7 +284,7 @@ Allow: /</div>
     <div class="n g"><b>Wikidata</b>An entry with the company's founding date, location, and industry, linked from the site's markup.</div>
     <div class="n g"><b>Research</b>The operational dataset, published as a page other people cite, with the clinical questions answered in the literature.</div>
   </div>
-  <div class="callout"><b>What carries this page:</b> a device company that wants to be cited is competing on verifiable precision. The named clinical reviewer, the published literature, and the regulatory record do most of the work; the schema makes them legible to a machine.</div>
+  <div class="callout"><b>What this page competes on:</b> a device company that wants to be cited is competing on verifiable precision. The named clinical reviewer, the published literature, and the regulatory record do most of the work; the schema makes them legible to a machine.</div>
 </div>
 
 <!-- ============ PANEL 2: RETAIL ============ -->
@@ -310,7 +310,7 @@ Allow: /</div>
           <div class="mk-price">$249</div>
           <div style="font-size:10.5px;color:#777"><span class="pin">2</span>Specs verified August 19, 2026 &nbsp;&middot;&nbsp; Model CL-4820</div>
           <div class="mk-swatch"><i style="background:#3a3a3a"></i><i style="background:#c9c2b6"></i><i style="background:#8a6a4b"></i><i style="background:#d8d5cf"></i></div>
-          <div class="mk-ans mk-add" style="margin-top:12px"><b class="lbl">Answer block <span class="pin" style="background:#8a6a00">3</span></b>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and carries a limited lifetime warranty on the finish and the valve. At $249 it sits below the $300 line for a solid-brass body with a magnetic dock.</div>
+          <div class="mk-ans mk-add" style="margin-top:12px"><b class="lbl">Answer block <span class="pin" style="background:#8a6a00">3</span></b>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and comes with a limited lifetime warranty on the finish and the valve. At $249 it comes in under $300 for a solid-brass body with a magnetic dock.</div>
           <div class="mk-fpo mk-add" style="min-height:52px;text-align:left"><span class="pin">4</span>&nbsp;Where to buy &mdash; four retailers, live price and stock for each</div>
         </div>
       </div>
@@ -348,7 +348,7 @@ Allow: /</div>
   <div class="anno"><span class="pn">1</span><div><span class="eye">AI matches one page to one question</span><b>One product, one page.</b> The product page answers "does this specific faucet fit my sink." A separate page answers "which faucet is best for a farmhouse sink," and links to this one. Two intents, two pages.</div></div>
   <div class="anno"><span class="pn">2</span><div><span class="eye">AI favors facts it can see were verified recently</span><b>A verified-on date for the specs.</b> On a product page the freshness signal that matters is whether the specs and price are current, so date the verification rather than the marketing copy.</div></div>
   <div class="anno"><span class="pn">3</span><div><span class="eye">AI quotes the passage that answers the query in specifics</span><b>The answer block, written to the recommendation question.</b> It leads with fit and dimensions because that is what the query is really asking. A spout height that clears an apron front is the detail an answer quotes.</div></div>
-  <div class="anno"><span class="pn">4</span><div><span class="eye">An agent transacts on price, stock, and seller data</span><b>Retailer availability, on the page and in the markup.</b> Four named retailers, each with a price and a stock state. This is the agentic-commerce layer &mdash; an assistant that goes from naming a product to adding it to a cart acts on the price, stock, and seller it can read. Product schema carries all three in code.</div></div>
+  <div class="anno"><span class="pn">4</span><div><span class="eye">An agent transacts on price, stock, and seller data</span><b>Retailer availability, on the page and in the markup.</b> Four named retailers, each with a price and a stock state. This is the agentic-commerce layer &mdash; an assistant that goes from naming a product to adding it to a cart acts on the price, stock, and seller it can read. All three go into Product schema.</div></div>
   <div class="anno"><span class="pn">5</span><div><span class="eye">AI compares products on values it can read from a cell</span><b>A real specification table.</b> Numbers in table cells with labeled units. The same facts written into a paragraph of body copy are far harder to extract cleanly.</div></div>
   <div class="anno"><span class="pn">6</span><div><span class="eye">AI reads an on-page Q&amp;A as an answer already matched to its question</span><b>The FAQ block</b>, answering fit and install questions, with FAQPage markup underneath.</div></div>
   <div class="anno"><span class="pn">7</span><div><span class="eye">AI answers a comparison question with whatever comparison it can find</span><b>An in-line comparison across their own models.</b> The buyer's question is comparative, and this answers it using only facts the brand owns. Naming competitors is usually off the table for a manufacturer; third-party reviewers handle that side.</div></div>
@@ -387,10 +387,10 @@ Allow: /</div>
   <div class="eco">
     <div class="n g"><b>Community</b>The subreddit threads where people ask which faucet fits a farmhouse sink. Named, useful answers; promotional posts get removed.</div>
     <div class="n g"><b>Review press</b>Independent reviews and roundups. These are where a named head-to-head against a competitor can happen.</div>
-    <div class="n g"><b>Retailer listings</b>Four retailer product pages carrying the brand's specs. Cited often, and controlled through the product feed rather than directly.</div>
+    <div class="n g"><b>Retailer listings</b>Four retailer product pages with the brand's specs. Cited often, and controlled through the product feed rather than directly.</div>
     <div class="n g"><b>Wikidata</b>The brand as a known entity, so "Cedarline" resolves to a company rather than a word.</div>
   </div>
-  <div class="callout"><b>What carries this page:</b> a brand that wants to be recommended is competing on fit and availability. Extractable specs and readable retailer offers do most of the work, and third-party reviews supply the corroboration the brand's own page cannot.</div>
+  <div class="callout"><b>What this page competes on:</b> a brand that wants to be recommended is competing on fit and availability. Extractable specs and readable retailer offers do most of the work, and third-party reviews supply the corroboration the brand's own page cannot.</div>
 </div>
 
 <!-- ============ PANEL 3: LOCAL SERVICE ============ -->
@@ -445,11 +445,11 @@ Allow: /</div>
 
   <div class="seclabel">Page notes</div>
   <div class="anno"><span class="pn">1</span><div><span class="eye">AI answers location questions with location-specific pages</span><b>One service, one city, in the H1.</b> The query has two variables and the page answers both. The failure mode here is forty near-identical city pages with the town name swapped &mdash; each one needs its own permit rules, pricing, service-area list, and local reviews, or it adds nothing.</div></div>
-  <div class="anno"><span class="pn">2</span><div><span class="eye">AI weighs who stands behind the claim</span><b>A named, certified technician on the page.</b> Certification, state license number, and years on the job. On a consumer-service page this is the trust signal that carries the most weight, and it costs nothing beyond adding the byline.</div></div>
+  <div class="anno"><span class="pn">2</span><div><span class="eye">AI weighs who stands behind the claim</span><b>A named, certified technician on the page.</b> Certification, state license number, and years on the job. On a consumer-service page this is the strongest trust signal available, and it costs nothing beyond adding the byline.</div></div>
   <div class="anno"><span class="pn">3</span><div><span class="eye">AI needs to see when the price was last checked</span><b>A pricing-verified date.</b> Price is the whole query, so the date is what makes the range safe to quote and gives the team a set cadence for keeping it current.</div></div>
   <div class="anno"><span class="pn">4</span><div><span class="eye">AI can quote your price only if your page publishes one</span><b>The answer block, with an actual number in it.</b> Publishing price is the hardest ask on this page, and most brands resist it. The number reaches the buyer either way &mdash; from a competitor who published a range, or from a Reddit thread by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page.</div></div>
   <div class="anno"><span class="pn">5</span><div><span class="eye">AI answers the follow-up question from the rows of a table</span><b>The price factors as a table.</b> The follow-up question after "how much" is "why does it vary," and a table answers it in cells an engine can lift row by row.</div></div>
-  <div class="anno"><span class="pn">6</span><div><span class="eye">AI reads ratings that carry a source and a count</span><b>Reviews, with a count, a date, and the platforms named.</b> A star rating with no source and no date is decoration. Note the markup limit below &mdash; review markup on your own site has rules.</div></div>
+  <div class="anno"><span class="pn">6</span><div><span class="eye">AI reads ratings that show a source and a count</span><b>Reviews, with a count, a date, and the platforms named.</b> A star rating with no source and no date is decoration. Note the markup limit below &mdash; review markup on your own site has rules.</div></div>
   <div class="anno"><span class="pn">7</span><div><span class="eye">AI pulls the permit and timeline answers straight from the Q&amp;A</span><b>The FAQ block</b>, answering the permit, timeline, and financing questions, with FAQPage markup underneath.</div></div>
   <div class="anno"><span class="pn">8</span><div><span class="eye">AI needs to know which city a page covers</span><b>The service-area list and the links to the other metros.</b> This is what tells an engine which "Columbus" and which suburbs, and it keeps three city pages reading as one company instead of three thin duplicates.</div></div>
   <div class="anno"><span class="pn">9</span><div><span class="eye">AI builds local answers from the business profile</span><b>Name, address, phone, and hours &mdash; identical to the Google Business Profile.</b> Local AI answers and AI Overviews pull from the profile directly, so a mismatch between it and the page is a conflict the engine resolves by trusting neither.</div></div>
@@ -484,7 +484,7 @@ Allow: /</div>
   "sameAs": ["https://www.google.com/maps/place/example"]
 }</div>
 
-  <div class="acard" style="margin-top:16px"><b>The price range, in markup.</b> <code>Service</code> with an <code>offers</code> block carries the number the query is asking for. <code>minPrice</code> and <code>maxPrice</code> are the properties that make a range machine-readable.</div>
+  <div class="acard" style="margin-top:16px"><b>The price range, in markup.</b> <code>Service</code> with an <code>offers</code> block states the number the query is asking for. <code>minPrice</code> and <code>maxPrice</code> are the properties that make a range machine-readable.</div>
   <div class="code">{
   "@context": "https://schema.org",
   "@type": "Service",
@@ -505,16 +505,16 @@ Allow: /</div>
   }
 }</div>
 
-  <div class="acard" style="margin-top:16px"><b>One limit worth knowing on reviews.</b> Schema.org defines <code>AggregateRating</code>, and Google's structured-data guidelines treat reviews a business collects and publishes about itself as self-serving, so they do not earn review rich results. Displaying the rating with its source and count still helps a reader and gives an engine something to read. The rating that carries weight sits on the review platforms themselves.</div>
+  <div class="acard" style="margin-top:16px"><b>One limit worth knowing on reviews.</b> Schema.org defines <code>AggregateRating</code>, and Google's structured-data guidelines treat reviews a business collects and publishes about itself as self-serving, so they do not earn review rich results. Displaying the rating with its source and count still helps a reader and gives an engine something to read. The rating that counts is on the review platforms themselves.</div>
 
   <div class="seclabel">Off-site work</div>
   <div class="eco">
     <div class="n g"><b>Business profile</b>The Google Business Profile, complete and current, for each location. Top of the list for this business.</div>
     <div class="n g"><b>Review platforms</b>Google, Yelp, Angi, Nextdoor. Volume, recency, and owner responses all read.</div>
     <div class="n g"><b>Community</b>Local subreddits and neighborhood groups, where "who did you use for your furnace" gets asked constantly.</div>
-    <div class="n g"><b>Local press</b>Local business journals and "best of" lists carry weight for a location-bound service.</div>
+    <div class="n g"><b>Local press</b>Local business journals and "best of" lists matter for a location-bound service.</div>
   </div>
-  <div class="callout"><b>What carries this page:</b> a local service is competing on proximity, price transparency, and reviews. The business profile and the review platforms carry the answer, and the page's job is to publish a real number and agree with the profile in every detail.</div>
+  <div class="callout"><b>What this page competes on:</b> a local service is competing on proximity, price transparency, and reviews. The business profile and the review platforms supply the answer, and the page's job is to publish a real number and agree with the profile in every detail.</div>
 </div>
 
 <!-- ============ PANEL 4: COMPARE ============ -->
@@ -530,7 +530,7 @@ Allow: /</div>
     <tr><td>The win</td><td>Named as the source, with a link back</td><td>Named as the product, with a price and a place to buy it</td><td>Named for a job in a city, with a number and a way to book</td></tr>
     <tr><td>The query</td><td>A comparison question asked before an order is written</td><td>A shopping question with a constraint &mdash; budget, fit, use</td><td>A cost or "near me" question with a location in it</td></tr>
     <tr><td>What the answer block holds</td><td>Duration, form factor, the clinical reason the difference matters, and where the older option still wins</td><td>Dimensions, fit, flow, finish, price</td><td>A price range, the factors that move it, the permit and the timeline</td></tr>
-    <tr><td>Schema carrying the weight</td><td>Article and Organization &mdash; reviewer, credentials, dates, entity</td><td>Product &mdash; specs as properties, retailer offers with price and stock</td><td>LocalBusiness and Service &mdash; area served, hours, price range</td></tr>
+    <tr><td>Schema that matters most</td><td>Article and Organization &mdash; reviewer, credentials, dates, entity</td><td>Product &mdash; specs as properties, retailer offers with price and stock</td><td>LocalBusiness and Service &mdash; area served, hours, price range</td></tr>
     <tr><td>Highest-leverage item</td><td><b>Original research.</b> Operational data nobody else has, published in the part of the dataset that clears review fastest.</td><td><b>Extractable specs plus readable offers.</b> An answer can only recommend what it can describe and locate.</td><td><b>The Google Business Profile.</b> Local answers pull from it directly, and the page has to match it exactly.</td></tr>
     <tr><td>Where corroboration comes from</td><td>Peer-reviewed literature, conference abstracts, the FDA device listing, clinical trade media</td><td>Independent reviews, retailer product pages, community threads</td><td>Review platforms, local subreddits, local press</td></tr>
     <tr><td>Comparison pages</td><td>Modality vs. modality. Naming a competing manufacturer is usually blocked, so the column header is a device category.</td><td>Own models only. Named head-to-heads live on third-party review sites.</td><td>Comparisons run by option &mdash; repair vs. replace, 80% vs. 95% efficiency. Competitors stay out of it.</td></tr>
@@ -539,7 +539,7 @@ Allow: /</div>
     <tr><td>Where it goes wrong</td><td>Copy written vague enough to clear review with no number a clinician can use</td><td>Specs that disagree between the brand site and the retailer feeds</td><td>Forty city pages with the town name swapped and nothing else changed</td></tr>
   </table>
 
-  <div class="callout" style="margin-top:20px">The on-page checklist takes ten minutes to read. Deciding which parts carry a given business takes judgment, and it depends on what that business needs the answer to do. B2B and B2C is the shorthand people use, and it splits the wrong way &mdash; a consumer brand at retail and a consumer service company have almost nothing in common here, while the medtech company and the local service both live or die on a named credential.</div>
+  <div class="callout" style="margin-top:20px">The on-page checklist takes ten minutes to read. Deciding which parts matter for a given business takes judgment, and it depends on what that business needs the answer to do. B2B and B2C is the shorthand people use, and it splits the wrong way &mdash; a consumer brand at retail and a consumer service company have almost nothing in common here, while the medtech company and the local service both live or die on a named credential.</div>
 
 
   <div class="seclabel">Additional notes</div>
