@@ -4,13 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 // AI Visibility Page Templates — three annotated page mockups (medical device,
 // consumer brand at retail, local service). Built as a page rather than a raw
 // file in public/ so it carries the site header, footer and entity schema.
-// Every class is prefixed tp- so nothing collides with site styles.
+// Class names are prefixed tp- so nothing collides with site styles, and the
+// markup is injected with set:html because the JSON-LD examples contain braces
+// that Astro would otherwise read as JSX expressions.
 const title = 'AI Visibility Page Templates: What AEO Looks Like on a Page';
 const description = 'Three annotated page templates — a medical device company, a brand sold through retailers, and a local service business — showing which on-page AEO items matter most for each and why.';
----
-
-<BaseLayout title={title} description={description} type="article">
-
+const reportHtml = `
 <div class="tp-wrap">
 
 <h1>What AI Visibility Actually Looks Like on a Page</h1>
@@ -452,7 +451,15 @@ Allow: /</div>
   <p class="tp-note">All three brands are fictional. Every specification, price, figure, and license number shown is illustrative and exists to demonstrate the pattern. Schema examples use current schema.org types and properties.</p>
 </div>
 
-<script>
+
+</div>`;
+---
+
+<BaseLayout title={title} description={description} type="article">
+  <Fragment set:html={reportHtml} />
+</BaseLayout>
+
+<script is:inline>
 function showTab(i,el){
   document.querySelectorAll('.tp-panel').forEach(function(p,n){p.classList.toggle('tp-active',n===i)});
   document.querySelectorAll('.tp-tab').forEach(function(t){t.classList.remove('tp-active')});
@@ -460,8 +467,6 @@ function showTab(i,el){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
-</div>
-</BaseLayout>
 
 <style is:global>
 .tp-wrap{--ink:#483729;--muted:#7a6550;--line:#e7d8b8;--bg:#fcf5e5;--card:#fff;--accent:#b55434;--add:#d39000;--win:#8b8c4a;--cream-deep:#faeccd;--forest:#21362c;--peach:#ffbe9f;--tan:#e7d8b8}
