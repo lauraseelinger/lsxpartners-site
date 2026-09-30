@@ -197,9 +197,9 @@ table.map td:first-child{width:20%;font-weight:700;background:var(--cream-deep)}
   <div class="anno"><span class="pn">3</span><div><span class="eye">AI favors pages it can tell are current</span><b>Publish date and clinical-review date, both visible.</b> The review date does two jobs: it tells an engine the page is current, and in a regulated category it is also the audit trail.</div></div>
   <div class="anno"><span class="pn">4</span><div><span class="eye">AI lifts the clearest self-contained passage it can find</span><b>The answer block.</b> It sits above everything else and answers the comparison in specifics: duration, form factor, and the clinical reason duration matters. It also says plainly where the older option is still the right choice.</div></div>
   <div class="anno"><span class="pn">5</span><div><span class="eye">AI matches the buyer's question to a heading</span><b>Section headings written as the questions buyers ask</b>, each followed immediately by its answer. The heading is the retrieval hook; the first sentence under it is the extractable unit.</div></div>
-  <div class="anno"><span class="pn">6</span><div><span class="eye">AI pulls facts from table cells more cleanly than from prose</span><b>The comparison table.</b> A table gives an engine one fact per cell with the unit attached, so it can lift a single value without interpreting a sentence. The same facts written into a paragraph have to be parsed out of prose, and often are not.</div></div>
-  <div class="anno"><span class="pn">7</span><div><span class="eye">AI cites whoever published the number</span><b>Original data with a stated method.</b> Most companies hold two kinds of data: the kind that publishes on a normal timeline and the kind that needs formal review first. Here the wear-completion and turnaround figures come from fulfillment records, while anything about clinical results would need a journal and a review board. Publishing from the faster half still puts a number on the page that no competitor has.</div></div>
-  <div class="anno"><span class="pn">8</span><div><span class="eye">AI reads a question-and-answer pair as a ready-made answer</span><b>The FAQ block</b>, with FAQPage markup underneath. Any fact with an expiry date belongs behind a link to the source that maintains it. The billing-code question here is answered with a link to the current guidance, because the codes change annually and a number typed onto the page would be quoted long after it stopped being true.</div></div>
+  <div class="anno"><span class="pn">6</span><div><span class="eye">AI pulls facts from table cells more cleanly than from sentences</span><b>The comparison table.</b> A table gives an engine one fact per cell with the unit attached, so it can lift a single value without interpreting a sentence. The same facts inside a sentence have to be interpreted before they can be used.</div></div>
+  <div class="anno"><span class="pn">7</span><div><span class="eye">AI cites whoever published the number</span><b>Original data with a stated method.</b> Most companies hold two kinds of data: the kind that publishes on a normal timeline and the kind that needs formal review first. Operational records &mdash; delivery times, completion rates, volumes &mdash; usually clear quickly, while anything that makes a performance claim about the product goes through a longer process. Publishing from the faster half still puts a number on the page that no competitor has.</div></div>
+  <div class="anno"><span class="pn">8</span><div><span class="eye">AI reads a question-and-answer pair as a ready-made answer</span><b>The FAQ block</b>, with FAQPage markup underneath. Any fact with an expiry date belongs behind a link to the source that maintains it. Codes, rates, and thresholds that change on a schedule get linked to the source that maintains them, because a number typed onto the page keeps getting quoted long after it stopped being true.</div></div>
   <div class="anno"><span class="pn">9</span><div><span class="eye">AI needs corroborating records to treat a company as a known entity</span><b>The entity block.</b> One consistent name, address, and phone, plus the outbound links that let an engine confirm the company exists. The strongest of those links is whatever public register your industry keeps &mdash; for a device manufacturer that is the FDA device listing, a government database entry tying the company name to the product.</div></div>
 
   <div class="callout"><b>Claims review shapes every number on this page.</b> Each figure in the answer block, the comparison table, and the FAQ traces to cleared labeling, published data, or an operational record with a stated method. This is not the place for marketing taglines, as vague copy doesn&rsquo;t get cited &mdash; prioritize precise language and data.</div>
@@ -279,15 +279,7 @@ Allow: /</div>
     "https://accessgudid.nlm.nih.gov/devices/example"
   ]
 }</div>
-
-  <div class="seclabel">Off-site work</div>
-  <div class="eco">
-    <div class="n g"><b>Literature and trade press</b>Peer-reviewed publications, conference abstracts, and clinical trade media. The heaviest citation weight available, and the only place clinical performance claims belong.</div>
-    <div class="n g"><b>Regulatory records</b>The FDA device listing. A public database tying the company to the cleared device, which is a stronger identity record than any commercial directory.</div>
-    <div class="n g"><b>Wikidata</b>An entry with the company's founding date, location, and industry, linked from the site's markup.</div>
-    <div class="n g"><b>Research</b>The operational dataset, published as a page other people cite, with the clinical questions answered in the literature.</div>
-  </div>
-  <div class="callout"><b>What this page competes on:</b> a device company that wants to be cited is competing on verifiable precision. The named clinical reviewer, the published literature, and the regulatory record do most of the work; the schema makes them legible to a machine.</div>
+  <div class="callout"><b>What this page competes on:</b> verifiable precision. A named reviewer with a checkable credential and a number nobody else publishes do most of the work; the schema makes both legible to a machine.</div>
 </div>
 
 <!-- ============ PANEL 2: RETAIL ============ -->
@@ -348,14 +340,14 @@ Allow: /</div>
   </div>
 
   <div class="seclabel">Page notes</div>
-  <div class="anno"><span class="pn">1</span><div><span class="eye">AI matches one page to one question</span><b>One product, one page.</b> The product page answers "does this specific faucet fit my sink." A separate page answers "which faucet is best for a farmhouse sink," and links to this one. Two intents, two pages.</div></div>
+  <div class="anno"><span class="pn">1</span><div><span class="eye">AI matches one page to one question</span><b>One product, one page.</b> The product page answers whether this specific item fits the job; a separate page answers which item is best for that job, and links to this one. Two intents, two pages.</div></div>
   <div class="anno"><span class="pn">2</span><div><span class="eye">AI favors facts it can see were verified recently</span><b>A verified-on date for the specs.</b> On a product page the freshness signal that matters is whether the specs and price are current, so the date to publish is the verification date, not the date the copy was written.</div></div>
-  <div class="anno"><span class="pn">3</span><div><span class="eye">AI quotes the passage that answers the query in specifics</span><b>The answer block, written to the recommendation question.</b> It leads with fit and dimensions because that is what the query is really asking. A spout height that clears an apron front is the detail an answer quotes.</div></div>
+  <div class="anno"><span class="pn">3</span><div><span class="eye">AI quotes the passage that answers the query in specifics</span><b>The answer block, written to the recommendation question.</b> It leads with fit and dimensions because that is what the query is really asking. The dimension that decides whether it fits is the detail an answer quotes.</div></div>
   <div class="anno"><span class="pn">4</span><div><span class="eye">An agent transacts on price, stock, and seller data</span><b>Retailer availability, on the page and in the markup.</b> Four named retailers, each with a price and a stock state. This is the agentic-commerce layer &mdash; an assistant that goes from naming a product to adding it to a cart acts on the price, stock, and seller it can read. All three go into Product schema.</div></div>
   <div class="anno"><span class="pn">5</span><div><span class="eye">AI compares products on values it can read from a cell</span><b>A real specification table.</b> One value per cell with its unit attached, so an engine comparing two products can read a number without interpreting a sentence around it.</div></div>
   <div class="anno"><span class="pn">6</span><div><span class="eye">AI reads an on-page Q&amp;A as an answer already matched to its question</span><b>The FAQ block</b>, answering fit and install questions, with FAQPage markup underneath. These are the questions a shopper asks after the specs, and an engine reads each pair as an answer already matched to its question.</div></div>
   <div class="anno"><span class="pn">7</span><div><span class="eye">AI answers a comparison question with whatever comparison it can find</span><b>An in-line comparison across their own models.</b> The buyer's question is comparative, so the page gives an engine a comparison to lift. Everything in it is a fact the brand owns, so it stays publishable when naming other companies is off the table.</div></div>
-  <div class="anno"><span class="pn">8</span><div><span class="eye">AI needs one consistent set of facts across every source</span><b>The entity block.</b> For a brand in four retail catalogs, the risk is conflicting data &mdash; three spellings of the model name and two different spout heights across retailer listings. Consistency across those listings is the work.</div></div>
+  <div class="anno"><span class="pn">8</span><div><span class="eye">AI needs one consistent set of facts across every source</span><b>The entity block.</b> For a brand in several retail catalogs, the risk is conflicting data &mdash; the same product listed under different names, or with different specifications, on different sites. Making every listing agree is the work.</div></div>
 
   <div class="seclabel">Schema</div>
   <div class="acard"><b>Product markup.</b> The <code>offers</code> array is the piece a shopping-oriented answer reads. Price, currency, availability, and the named seller for each retailer.</div>
@@ -385,15 +377,7 @@ Allow: /</div>
   ]
 }</div>
   <p class="fine">The same discipline applies to the data the brand sends its retailers. A spec sheet that says "16.5&Prime;" on the brand site and "16 1/2 inch" in a retailer feed reads as two different products.</p>
-
-  <div class="seclabel">Off-site work</div>
-  <div class="eco">
-    <div class="n g"><b>Community</b>The subreddit threads where people ask which faucet fits a farmhouse sink. Named, useful answers; promotional posts get removed.</div>
-    <div class="n g"><b>Review press</b>Independent reviews and roundups. These are where a named head-to-head against a competitor can happen.</div>
-    <div class="n g"><b>Retailer listings</b>Four retailer product pages with the brand's specs. Cited often, and controlled through the product feed.</div>
-    <div class="n g"><b>Wikidata</b>The brand as a known entity, so "Cedarline" resolves to a company.</div>
-  </div>
-  <div class="callout"><b>What this page competes on:</b> a brand that wants to be recommended is competing on fit and availability. Extractable specs and readable retailer offers do most of the work, and third-party reviews supply the corroboration the brand's own page cannot.</div>
+  <div class="callout"><b>What this page competes on:</b> fit and availability. Extractable specs and readable retailer offers do most of the work, because an answer can only recommend what it can describe and locate.</div>
 </div>
 
 <!-- ============ PANEL 3: LOCAL SERVICE ============ -->
@@ -447,14 +431,14 @@ Allow: /</div>
   </div>
 
   <div class="seclabel">Page notes</div>
-  <div class="anno"><span class="pn">1</span><div><span class="eye">AI answers location questions with location-specific pages</span><b>One service, one city, in the H1.</b> The query has two variables and the page answers both. The failure mode here is forty near-identical city pages with the town name swapped &mdash; each one needs its own permit rules, pricing, service-area list, and local reviews, or it adds nothing.</div></div>
+  <div class="anno"><span class="pn">1</span><div><span class="eye">AI answers location questions with location-specific pages</span><b>One service, one city, in the H1.</b> The query has two variables and the page answers both. The failure mode is a set of near-identical location pages with only the town name swapped. Each one needs its own local rules, pricing, service area, and reviews, or it adds nothing an engine can use.</div></div>
   <div class="anno"><span class="pn">2</span><div><span class="eye">AI weighs who stands behind the claim</span><b>A named, certified technician on the page.</b> Certification, state license number, and years on the job. On a consumer-service page this is the strongest trust signal available, and it costs nothing beyond adding the byline.</div></div>
   <div class="anno"><span class="pn">3</span><div><span class="eye">AI needs to see when the price was last checked</span><b>A pricing-verified date.</b> Price is the whole query, so the range needs a date on it. The date keeps it safe to quote and gives the team a set cadence for updating.</div></div>
   <div class="anno"><span class="pn">4</span><div><span class="eye">AI can quote your price only if your page publishes one</span><b>The answer block, with an actual number in it.</b> Publishing price is the hardest ask on this page, and most brands resist it. The number reaches the buyer either way &mdash; from a competitor who published a range, or from a Reddit thread by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page.</div></div>
-  <div class="anno"><span class="pn">5</span><div><span class="eye">AI answers the follow-up question from the rows of a table</span><b>The price factors as a table.</b> The follow-up question after "how much" is "why does it vary," and a table answers it in cells an engine can lift row by row.</div></div>
+  <div class="anno"><span class="pn">5</span><div><span class="eye">AI answers the follow-up question from the rows of a table</span><b>The price factors as a table.</b> The follow-up to any price question is why it varies, and a table answers that in cells an engine can lift row by row.</div></div>
   <div class="anno"><span class="pn">6</span><div><span class="eye">AI reads ratings that show a source and a count</span><b>Reviews, with a count, a date, and the platforms named.</b> A rating an engine can trace to a platform and a volume is usable; one with no source and no date is decoration. Reviews a business collects and publishes about itself are treated differently, which the markup note below covers.</div></div>
   <div class="anno"><span class="pn">7</span><div><span class="eye">AI pulls the permit and timeline answers straight from the Q&amp;A</span><b>The FAQ block</b>, answering the permit, timeline, and financing questions, with FAQPage markup underneath. These are the objections that come after price, and answering them on the page keeps the engine from going elsewhere for them.</div></div>
-  <div class="anno"><span class="pn">8</span><div><span class="eye">AI needs to know which city a page covers</span><b>The service-area list and the links to the other metros.</b> It tells an engine which Columbus and which suburbs, and it keeps three city pages reading as one company.</div></div>
+  <div class="anno"><span class="pn">8</span><div><span class="eye">AI needs to know which city a page covers</span><b>The service-area list and the links to the other metros.</b> It tells an engine which city and which surrounding towns the business covers, and it keeps the location pages reading as one company.</div></div>
   <div class="anno"><span class="pn">9</span><div><span class="eye">AI builds local answers from the business profile</span><b>Name, address, phone, and hours &mdash; identical to the Google Business Profile.</b> Local AI answers and AI Overviews pull from the profile directly, so a mismatch between it and the page is a conflict the engine resolves by trusting neither.</div></div>
 
   <div class="seclabel">Schema</div>
@@ -509,15 +493,7 @@ Allow: /</div>
 }</div>
 
   <div class="acard" style="margin-top:16px"><b>One limit worth knowing on reviews.</b> Schema.org defines <code>AggregateRating</code>, and Google's structured-data guidelines treat reviews a business collects and publishes about itself as self-serving, so they do not earn review rich results. Displaying the rating with its source and count still helps a reader and gives an engine something to read. The rating that counts is on the review platforms themselves.</div>
-
-  <div class="seclabel">Off-site work</div>
-  <div class="eco">
-    <div class="n g"><b>Business profile</b>The Google Business Profile, complete and current, for each location. Top of the list for this business.</div>
-    <div class="n g"><b>Review platforms</b>Google, Yelp, Angi, Nextdoor. Volume, recency, and owner responses all read.</div>
-    <div class="n g"><b>Community</b>Local subreddits and neighborhood groups, where "who did you use for your furnace" gets asked constantly.</div>
-    <div class="n g"><b>Local press</b>Local business journals and "best of" lists matter for a location-bound service.</div>
-  </div>
-  <div class="callout"><b>What this page competes on:</b> a local service is competing on proximity, price transparency, and reviews. The business profile and the review platforms supply the answer, and the page's job is to publish a real number and agree with the profile in every detail.</div>
+  <div class="callout"><b>What this page competes on:</b> proximity, price transparency, and reviews. The page's job is to publish a real number and to agree with the business profile in every detail.</div>
 </div>
 
 <!-- ============ PANEL 4: COMPARE ============ -->
