@@ -19,7 +19,7 @@ faqs:
     answer: "Not with the page. Start with audience intelligence and a prompt audit, so you know which questions the page has to answer and in whose words. The on-page work is the last mile, and it only pays off when it is aimed at the right questions."
 ---
 
-The AI visibility checklist comes after the in-depth audience intelligence, category research and prompt audit, and it's actually the simplest part — FAQ schema, one topic per page, lead every section with a direct answer. The brands I work with get a comprehensive strategy document, complete with page templates to cover every category page, product type, etc.
+Everyone wants to talk about the checklist — FAQ schema, one topic per page, lead every section with a direct answer — and that's the easy end of this. The work that decides whether any of it pays off happens earlier, in the audience intelligence, category research, and prompt audit that tell you which questions your pages have to answer. The brands I work with get all of that in one strategy document, with page templates covering every category page and product type.
 
 ---
 
