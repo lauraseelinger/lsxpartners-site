@@ -1,0 +1,545 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// AI Visibility Page Templates — three annotated page mockups. A page rather
+// than a raw file in public/, so it carries the site header, footer, favicon
+// and entity schema. Classes are prefixed tp- so nothing collides with site
+// styles; markup goes through set:html because the JSON-LD examples contain
+// braces Astro would otherwise read as JSX.
+const title = 'AI Visibility Page Templates: What AEO Looks Like on a Page';
+const description = 'Three annotated page templates — a medical device company, a brand sold through retailers, and a local service business — showing which on-page AEO items matter most for each and why.';
+const reportHtml = `
+<div class="tp-wrap">
+
+<h1>What AI Visibility Actually Looks Like on a Page</h1>
+<p class="tp-sub">A successful AI visibility strategy is rooted in <a href="https://lsxpartners.com/blog/audience-intelligence" target="_blank" rel="noopener">audience intelligence</a> and category research, an in-depth prompt audit (<a href="https://lsxpartners.com/blog/ai-product-recommendations#how-do-you-audit-whether-ai-recommends-a-brand" target="_blank" rel="noopener">of relevant prompts</a>), and a consistent and strategic content engine. Once you get to the step where you're putting words on the page that you want to be cited or used for the recommendation, it turns into more of a checklist &mdash; FAQ schema, one topic per page, lead every section with a direct answer.</p>
+<p class="tp-sub">When I work with clients and agency teams, the easiest way to showcase this piece is a visual mockup. I actually provide page templates outlined like the below for every category page, product line, etc. to ensure the implementation is successful.</p>
+<p class="tp-sub">The companies referenced here are fictional, for educational purposes, and cover a few of the brand types I work with &mdash; medical/healthcare, CPG with retail distribution, and local consumer services. As the AI-optimized page templates showcase, the on-page priorities are almost entirely different based on the company's goals.</p>
+
+<div class="tp-keybar">
+  <span><span class="tp-kdot" style="background:#fff7d6;border:1px solid #e6cf63"></span> Answer block &mdash; the text AI lifts</span>
+  <span><span class="tp-pin" style="width:17px;height:17px;font-size:9.5px;margin-right:5px">1</span> Marks a section of the page, explained in the notes underneath</span>
+  <span><span class="tp-kdot" style="background:#1d4ed8"></span> Invisible on the page &mdash; code only</span>
+</div>
+
+<div class="tp-tabs">
+  <button class="tp-tab tp-active" onclick="showTab(0,this)"><span class="tp-n">1</span>B2B medical device &mdash; wants to be cited</button>
+  <button class="tp-tab" onclick="showTab(1,this)"><span class="tp-n">2</span>Retail brand &mdash; wants to be recommended</button>
+  <button class="tp-tab" onclick="showTab(2,this)"><span class="tp-n">3</span>Local service &mdash; wants to be listed</button>
+  <button class="tp-tab" onclick="showTab(3,this)"><span class="tp-n">4</span>What changes between them</button>
+</div>
+
+<!-- ============ PANEL 1: B2B ============ -->
+<div class="tp-panel tp-active">
+  <div class="tp-lead-h">
+    <div class="tp-k">Example 1 &middot; Fictional brand</div>
+    <div class="tp-t">Solvane Medical &mdash; a wearable cardiac monitor, sold to cardiology practices</div>
+    <div class="tp-d">Sells a regulated device to clinicians and health systems on a long cycle. A cardiologist or a patient asks AI how the technology compares, and the answer quotes this page and links it. There is no &ldquo;add to cart&rdquo; action, so the goal is to be seen as the trusted and authoritative source of information.</div>
+    <div class="tp-q">The query this page targets: <b>"what is the difference between a Holter monitor and a patch cardiac monitor"</b></div>
+  </div>
+
+  <div class="tp-frame">
+  <div class="tp-frame-lbl"><b>The page &mdash; layout mockup</b><span>Chrome and imagery are placeholders. The answer block, headings, table, and FAQ show real modeled content.</span></div>
+  <div class="tp-mk">
+    <div class="tp-mk-bar"><i></i><i></i><i></i><span class="tp-url">solvanemedical.example/clinicians/patch-vs-holter-monitoring</span></div>
+    <div class="tp-mk-nav"><span class="tp-lg">SOLVANE MEDICAL</span><span class="tp-it">Devices</span><span class="tp-it">For Clinicians</span><span class="tp-it">Evidence</span><span class="tp-sp"></span><span class="tp-it">Request a Demo</span></div>
+    <div class="tp-mk-crumb">Home / For Clinicians / Patch Monitoring vs. Holter</div>
+    <div class="tp-mk-body">
+      <div class="tp-mk-h1"><span class="tp-pin">1</span>Patch Cardiac Monitoring vs. a Holter Monitor</div>
+      <div class="tp-mk-byline"><span class="tp-pin">2</span>Clinically reviewed by <b>Dana Whitfield, MD, FACC</b> &mdash; board-certified cardiac electrophysiologist, Medical Director &nbsp;&middot;&nbsp; <span class="tp-pin">3</span>Published March 4, 2026 &nbsp;&middot;&nbsp; <b>Clinical review completed August 19, 2026</b></div>
+      <div class="tp-mk-ans tp-mk-add"><b class="tp-lbl">Answer block <span class="tp-pin" style="background:#8a6a00">4</span></b>A Holter monitor records continuously for 24 to 48 hours through leads and a belt-worn recorder. A patch monitor is a single adhesive device worn on the chest that records for up to 14 days without leads. The practical difference is duration: arrhythmias that occur less than once a day are unlikely to appear in a 24-hour window. Holter remains standard when the goal is dense data over one or two days.</div>
+      <div class="tp-mk-h"><span class="tp-pin">5</span>When is a patch monitor ordered instead of a Holter?</div>
+      <div class="tp-mk-line"></div><div class="tp-mk-line tp-s"></div>
+      <div class="tp-mk-h"><span class="tp-pin">5</span>How does the report reach the ordering physician?</div>
+      <div class="tp-mk-line"></div><div class="tp-mk-line tp-xs"></div>
+      <div class="tp-mk-h"><span class="tp-pin">6</span>How the two compare</div>
+      <table class="tp-mk-tbl">
+        <tr><th></th><th>Holter monitor</th><th>Solvane Patch</th></tr>
+        <tr><td>Wear duration</td><td>24&ndash;48 hours</td><td>Up to 14 days</td></tr>
+        <tr><td>Form factor</td><td>Leads plus a belt-worn recorder</td><td>Single adhesive patch, no leads</td></tr>
+        <tr><td>Showering</td><td>Device removed</td><td>Worn through showering</td></tr>
+        <tr><td>Report delivery</td><td>After device return</td><td>Uploaded at end of wear, delivered to the EHR</td></tr>
+      </table>
+      <div class="tp-mk-h"><span class="tp-pin">7</span>Wear completion and turnaround &mdash; 4,200 studies, 2024&ndash;2026</div>
+      <table class="tp-mk-tbl">
+        <tr><th>Measure</th><th>Result</th><th>Studies</th></tr>
+        <tr><td>Full prescribed wear completed</td><td>91%</td><td>4,200</td></tr>
+        <tr><td>Median days, order to device shipped</td><td>1</td><td>4,200</td></tr>
+        <tr><td>Median days, end of wear to report delivered</td><td>2</td><td>4,200</td></tr>
+      </table>
+      <div class="tp-fine">Method: Solvane fulfillment and reporting records, US practices, 2024&ndash;2026. Operational measures only.</div>
+      <div class="tp-mk-h"><span class="tp-pin">8</span>Frequently asked</div>
+      <div class="tp-mk-acc">
+        <div>Can the patch stay on during exercise and showering? <span>&#9662;</span></div>
+        <div>What happens if the patient removes it early? <span>&#9662;</span></div>
+        <div>How does the report integrate with our EHR? <span>&#9662;</span></div>
+        <div>Which codes apply to extended-wear monitoring? <span>&#9662;</span></div>
+      </div>
+      <div class="tp-mk-h">Request a demo</div>
+      <div class="tp-mk-fpo" style="min-height:44px;text-align:left">&rarr; Form routed to the clinical sales team, with a practice-size field</div>
+    </div>
+    <div class="tp-mk-foot">
+      <div><b><span class="tp-pin">9</span>Solvane Medical</b>1400 Example Pkwy, Columbus, OH &middot; (555) 555-0142 &middot; Sold to practices in 42 states</div>
+      <div><b>Also listed at</b>LinkedIn &middot; Crunchbase &middot; Wikidata &middot; FDA device listing (AccessGUDID)</div>
+    </div>
+  </div>
+  <div class="tp-frame-end">End of page mockup</div>
+  </div>
+
+  <div class="tp-seclabel">Page notes</div>
+  <div class="tp-anno"><span class="tp-pn">1</span><div><span class="tp-eye">AI matches one page to one question</span><b>One topic, one intent, in the H1.</b> The page is named for the comparison a buyer actually types. A portfolio page covering every product in the line answers no single question well enough to be quoted.</div></div>
+  <div class="tp-anno"><span class="tp-pn">2</span><div><span class="tp-eye">AI search looks for trust and authority signals</span><b>A named reviewer with a credential anyone can check.</b> MD, board certification, job title. Attaching a physician&rsquo;s name and credentials to the content, rather than only having them in the internal review process, gives the AI engines a person to attribute the answer to and establishes credibility.</div></div>
+  <div class="tp-anno"><span class="tp-pn">3</span><div><span class="tp-eye">AI favors pages it can tell are current</span><b>Publish date and clinical-review date, both visible.</b> The review date does two jobs: it tells an engine the page is current, and in a regulated category it is also the audit trail.</div></div>
+  <div class="tp-anno"><span class="tp-pn">4</span><div><span class="tp-eye">AI lifts the clearest self-contained passage it can find</span><b>The answer block.</b> It sits above everything else and answers the comparison in specifics: duration, form factor, and the clinical reason duration matters. It also says plainly where the older option is still the right choice.</div></div>
+  <div class="tp-anno"><span class="tp-pn">5</span><div><span class="tp-eye">AI matches the buyer's question to a heading</span><b>Section headings written as the questions buyers ask</b>, each followed immediately by its answer. The heading is the retrieval hook; the first sentence under it is the extractable unit.</div></div>
+  <div class="tp-anno"><span class="tp-pn">6</span><div><span class="tp-eye">AI pulls facts from table cells more cleanly than from sentences</span><b>The comparison table.</b> A table gives an engine one fact per cell with the unit attached, so it can lift a single value without interpreting a sentence. The same facts inside a sentence have to be interpreted before they can be used.</div></div>
+  <div class="tp-anno"><span class="tp-pn">7</span><div><span class="tp-eye">AI cites whoever published the number</span><b>Original data with a stated method.</b> Most companies hold two kinds of data: the kind that publishes on a normal timeline and the kind that needs formal review first. Operational records &mdash; delivery times, completion rates, volumes &mdash; usually clear quickly, while anything that makes a performance claim about the product goes through a longer process. Publishing from the faster half still puts a number on the page that no competitor has.</div></div>
+  <div class="tp-anno"><span class="tp-pn">8</span><div><span class="tp-eye">AI reads a question-and-answer pair as a ready-made answer</span><b>The FAQ block</b>, with FAQPage markup underneath. Any fact with an expiry date belongs behind a link to the source that maintains it. Codes, rates, and thresholds that change on a schedule get linked to the source that maintains them, because a number typed onto the page keeps getting quoted long after it stopped being true.</div></div>
+  <div class="tp-anno"><span class="tp-pn">9</span><div><span class="tp-eye">AI needs corroborating records to treat a company as a known entity</span><b>The entity block.</b> One consistent name, address, and phone, plus the outbound links that let an engine confirm the company exists. The strongest of those links is whatever public register your industry keeps &mdash; for a device manufacturer that is the FDA device listing, a government database entry tying the company name to the product.</div></div>
+
+  <div class="tp-callout"><b>Claims review shapes every number on this page.</b> Each figure in the answer block, the comparison table, and the FAQ traces to cleared labeling, published data, or an operational record with a stated method. This is not the place for marketing taglines, as vague copy doesn&rsquo;t get cited &mdash; prioritize precise language and data.</div>
+
+  <div class="tp-seclabel">Schema and crawler access</div>
+
+  <div class="tp-acard"><b>robots.txt, at the root of the domain.</b> The allow-list for AI crawlers.</div>
+  <div class="tp-code">User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /</div>
+  <p class="tp-fine">A blocked crawler is invisible in reporting. The pages keep ranking in Google, no AI answer ever cites them, and analytics shows nothing that explains it.</p>
+
+  <div class="tp-acard" style="margin-top:16px"><b>FAQPage markup</b>, in a script tag on the page, matching the visible Q&amp;A word for word.</div>
+  <div class="tp-code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Can the patch stay on during exercise and showering?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Solvane Patch is worn continuously through showering and
+               normal activity for the full prescribed wear period of up
+               to 14 days. Patients are instructed not to submerge the
+               device."
+    }
+  }]
+}
+&lt;/script&gt;</div>
+
+  <div class="tp-acard" style="margin-top:16px"><b>Article markup</b> states the reviewer and the dates in machine-readable form. <code>reviewedBy</code> is the property that expresses clinical review.</div>
+  <div class="tp-code">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Patch Cardiac Monitoring vs. a Holter Monitor",
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-08-19",
+  "reviewedBy": {
+    "@type": "Person",
+    "name": "Dana Whitfield",
+    "honorificSuffix": "MD, FACC",
+    "jobTitle": "Medical Director",
+    "hasCredential": "Board certified, cardiac electrophysiology",
+    "knowsAbout": ["ambulatory cardiac monitoring", "arrhythmia detection"]
+  },
+  "publisher": { "@type": "Organization", "name": "Solvane Medical" }
+}</div>
+
+  <div class="tp-acard" style="margin-top:16px"><b>Organization markup</b> states the company&#39;s identity. <code>sameAs</code> is the list of independent places that confirm the company is real. Schema.org also defines a <code>MedicalDevice</code> type for the device itself, which describes the product for machines that read it even though no search engine renders anything from it today.</div>
+  <div class="tp-code">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Solvane Medical",
+  "url": "https://www.solvanemedical.example",
+  "description": "Wearable ambulatory cardiac monitoring for cardiology practices.",
+  "foundingDate": "2014",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Example Parkway",
+    "addressLocality": "Columbus",
+    "addressRegion": "OH",
+    "postalCode": "43215",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q000000",
+    "https://www.linkedin.com/company/solvane-medical",
+    "https://accessgudid.nlm.nih.gov/devices/example"
+  ]
+}</div>
+  <div class="tp-callout"><b>What this page competes on:</b> verifiable precision. A named reviewer with a checkable credential and a number nobody else publishes do most of the work; the schema makes both legible to a machine.</div>
+</div>
+
+<!-- ============ PANEL 2: RETAIL ============ -->
+<div class="tp-panel">
+  <div class="tp-lead-h">
+    <div class="tp-k">Example 2 &middot; Fictional brand</div>
+    <div class="tp-t">Cedarline &mdash; kitchen faucets, sold through four retailers</div>
+    <div class="tp-d">Sells a physical product it does not sell directly. The goal is to be the product AI recommends, and then to be buyable: the answer names the model, gives a price, and sends the shopper to a retailer. The brand controls the specs and none of the checkout.</div>
+    <div class="tp-q">The query this page targets: <b>"best kitchen faucet for a farmhouse sink under $300"</b></div>
+  </div>
+
+  <div class="tp-frame">
+  <div class="tp-frame-lbl"><b>The page &mdash; layout mockup</b><span>Chrome and imagery are placeholders. The answer block, spec table, FAQ, and comparison show real modeled content.</span></div>
+  <div class="tp-mk">
+    <div class="tp-mk-bar"><i></i><i></i><i></i><span class="tp-url">cedarline.example/kitchen-faucets/ashfield-pull-down-cl-4820</span></div>
+    <div class="tp-mk-nav"><span class="tp-lg">CEDARLINE</span><span class="tp-it">Kitchen</span><span class="tp-it">Bath</span><span class="tp-it">Finishes</span><span class="tp-it">Support</span><span class="tp-sp"></span><span class="tp-it">Where to Buy</span></div>
+    <div class="tp-mk-crumb">Home / Kitchen Faucets / Pull-Down / Ashfield Pull-Down Faucet</div>
+    <div class="tp-mk-body">
+      <div class="tp-mk-row">
+        <div class="tp-mk-fpo" style="min-height:250px">Product photography</div>
+        <div>
+          <div class="tp-mk-h1" style="font-size:19px"><span class="tp-pin">1</span>Ashfield Single-Handle Pull-Down Kitchen Faucet</div>
+          <div class="tp-mk-price">$249</div>
+          <div style="font-size:10.5px;color:#777"><span class="tp-pin">2</span>Specs verified August 19, 2026 &nbsp;&middot;&nbsp; Model CL-4820</div>
+          <div class="tp-mk-swatch"><i style="background:#3a3a3a"></i><i style="background:#c9c2b6"></i><i style="background:#8a6a4b"></i><i style="background:#d8d5cf"></i></div>
+          <div class="tp-mk-ans tp-mk-add" style="margin-top:12px"><b class="tp-lbl">Answer block <span class="tp-pin" style="background:#8a6a00">3</span></b>The Ashfield fits a farmhouse sink with a single-hole or three-hole deck mount and clears an apron-front rim at 16.5 inches of spout height. It runs 1.8 gallons per minute, comes in four finishes, and comes with a limited lifetime warranty on the finish and the valve. At $249 it comes in under $300 for a solid-brass body with a magnetic dock.</div>
+          <div class="tp-mk-fpo tp-mk-add" style="min-height:52px;text-align:left"><span class="tp-pin">4</span>&nbsp;Where to buy &mdash; four retailers, live price and stock for each</div>
+        </div>
+      </div>
+      <div class="tp-mk-h"><span class="tp-pin">5</span>Specifications</div>
+      <table class="tp-mk-tbl">
+        <tr><th>Spout height</th><td>16.5 in</td><th>Flow rate</th><td>1.8 GPM</td></tr>
+        <tr><th>Mounting</th><td>1 or 3 hole</td><th>Body material</th><td>Solid brass</td></tr>
+        <tr><th>Reach</th><td>8.75 in</td><th>Finishes</th><td>Matte black, brushed nickel, bronze, stainless</td></tr>
+        <tr><th>Certification</th><td>NSF/ANSI 61, cUPC</td><th>Warranty</th><td>Limited lifetime, finish and valve</td></tr>
+      </table>
+      <div class="tp-mk-h"><span class="tp-pin">6</span>Frequently asked</div>
+      <div class="tp-mk-acc">
+        <div>Will this fit a farmhouse sink with a 3-hole deck? <span>&#9662;</span></div>
+        <div>Is 1.8 GPM enough to fill a large pot? <span>&#9662;</span></div>
+        <div>Does the matte black finish show water spots? <span>&#9662;</span></div>
+        <div>Can I install it myself, or do I need a plumber? <span>&#9662;</span></div>
+      </div>
+      <div class="tp-mk-h"><span class="tp-pin">7</span>Compare across the pull-down line</div>
+      <table class="tp-mk-tbl">
+        <tr><th>Model</th><th>Spout height</th><th>Flow</th><th>Mount</th><th>Price</th></tr>
+        <tr><td>Ashfield CL-4820</td><td>16.5 in</td><td>1.8 GPM</td><td>1 or 3 hole</td><td>$249</td></tr>
+        <tr><td>Ashfield Tall CL-4825</td><td>18.0 in</td><td>1.8 GPM</td><td>1 hole</td><td>$289</td></tr>
+        <tr><td>Brookvale CL-4610</td><td>15.0 in</td><td>1.5 GPM</td><td>1 or 3 hole</td><td>$189</td></tr>
+      </table>
+    </div>
+    <div class="tp-mk-foot">
+      <div><b><span class="tp-pin">8</span>Cedarline</b>One consistent brand name, address, and description everywhere it appears</div>
+      <div><b>Also listed at</b>LinkedIn &middot; Wikidata &middot; retailer brand stores</div>
+    </div>
+  </div>
+  <div class="tp-frame-end">End of page mockup</div>
+  </div>
+
+  <div class="tp-seclabel">Page notes</div>
+  <div class="tp-anno"><span class="tp-pn">1</span><div><span class="tp-eye">AI matches one page to one question</span><b>One product, one page.</b> The product page answers whether this specific item fits the job; a separate page answers which item is best for that job, and links to this one. Two intents, two pages.</div></div>
+  <div class="tp-anno"><span class="tp-pn">2</span><div><span class="tp-eye">AI favors facts it can see were verified recently</span><b>A verified-on date for the specs.</b> On a product page the freshness signal that matters is whether the specs and price are current, so the date to publish is the verification date, not the date the copy was written.</div></div>
+  <div class="tp-anno"><span class="tp-pn">3</span><div><span class="tp-eye">AI quotes the passage that answers the query in specifics</span><b>The answer block, written to the recommendation question.</b> It leads with fit and dimensions because that is what the query is really asking. The dimension that decides whether it fits is the detail an answer quotes.</div></div>
+  <div class="tp-anno"><span class="tp-pn">4</span><div><span class="tp-eye">An agent transacts on price, stock, and seller data</span><b>Retailer availability, on the page and in the markup.</b> Four named retailers, each with a price and a stock state. This is the agentic-commerce layer &mdash; an assistant that goes from naming a product to adding it to a cart acts on the price, stock, and seller it can read. All three go into Product schema.</div></div>
+  <div class="tp-anno"><span class="tp-pn">5</span><div><span class="tp-eye">AI compares products on values it can read from a cell</span><b>A real specification table.</b> One value per cell with its unit attached, so an engine comparing two products can read a number without interpreting a sentence around it.</div></div>
+  <div class="tp-anno"><span class="tp-pn">6</span><div><span class="tp-eye">AI reads an on-page Q&amp;A as an answer already matched to its question</span><b>The FAQ block</b>, answering fit and install questions, with FAQPage markup underneath. These are the questions a shopper asks after the specs, and an engine reads each pair as an answer already matched to its question.</div></div>
+  <div class="tp-anno"><span class="tp-pn">7</span><div><span class="tp-eye">AI answers a comparison question with whatever comparison it can find</span><b>An in-line comparison across their own models.</b> The buyer's question is comparative, so the page gives an engine a comparison to lift. Everything in it is a fact the brand owns, so it stays publishable when naming other companies is off the table.</div></div>
+  <div class="tp-anno"><span class="tp-pn">8</span><div><span class="tp-eye">AI needs one consistent set of facts across every source</span><b>The entity block.</b> For a brand in several retail catalogs, the risk is conflicting data &mdash; the same product listed under different names, or with different specifications, on different sites. Making every listing agree is the work.</div></div>
+
+  <div class="tp-seclabel">Schema</div>
+  <div class="tp-acard"><b>Product markup.</b> The <code>offers</code> array is the piece a shopping-oriented answer reads. Price, currency, availability, and the named seller for each retailer.</div>
+  <div class="tp-code">{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Ashfield Single-Handle Pull-Down Kitchen Faucet",
+  "sku": "CL-4820",
+  "brand": { "@type": "Brand", "name": "Cedarline" },
+  "material": "Solid brass",
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Spout height", "value": "16.5",
+      "unitCode": "INH" },
+    { "@type": "PropertyValue", "name": "Flow rate", "value": "1.8",
+      "unitText": "GPM" },
+    { "@type": "PropertyValue", "name": "Mounting holes", "value": "1 or 3" }
+  ],
+  "offers": [
+    { "@type": "Offer", "price": "249.00", "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://retailer-a.example/cedarline-ashfield",
+      "seller": { "@type": "Organization", "name": "Retailer A" } },
+    { "@type": "Offer", "price": "259.00", "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://retailer-b.example/cl-4820",
+      "seller": { "@type": "Organization", "name": "Retailer B" } }
+  ]
+}</div>
+  <p class="tp-fine">The same discipline applies to the data the brand sends its retailers. A spec sheet that says "16.5&Prime;" on the brand site and "16 1/2 inch" in a retailer feed reads as two different products.</p>
+  <div class="tp-callout"><b>What this page competes on:</b> fit and availability. Extractable specs and readable retailer offers do most of the work, because an answer can only recommend what it can describe and locate.</div>
+</div>
+
+<!-- ============ PANEL 3: LOCAL SERVICE ============ -->
+<div class="tp-panel">
+  <div class="tp-lead-h">
+    <div class="tp-k">Example 3 &middot; Fictional brand</div>
+    <div class="tp-t">Fieldstone Heating &amp; Air &mdash; a home-services company, three metros</div>
+    <div class="tp-d">Sells directly to consumers, with no retailer and no product to ship. The goal is to be listed and contacted: the answer returns the company among the local providers for a specific job in a specific city, gives a price range, and the homeowner calls or books. Location is part of the query, which changes which checklist items matter.</div>
+    <div class="tp-q">The query this page targets: <b>"how much does it cost to replace a furnace in Columbus"</b></div>
+  </div>
+
+  <div class="tp-frame">
+  <div class="tp-frame-lbl"><b>The page &mdash; layout mockup</b><span>Chrome and imagery are placeholders. The answer block, price table, reviews, and FAQ show real modeled content.</span></div>
+  <div class="tp-mk">
+    <div class="tp-mk-bar"><i></i><i></i><i></i><span class="tp-url">fieldstonehvac.example/furnace-replacement/columbus-oh</span></div>
+    <div class="tp-mk-nav"><span class="tp-lg">FIELDSTONE HEATING &amp; AIR</span><span class="tp-it">Services</span><span class="tp-it">Service Areas</span><span class="tp-it">Financing</span><span class="tp-sp"></span><span class="tp-it">Book Online</span></div>
+    <div class="tp-mk-crumb">Home / Furnace Replacement / Columbus, OH</div>
+    <div class="tp-mk-body">
+      <div class="tp-mk-h1"><span class="tp-pin">1</span>Furnace Replacement in Columbus, Ohio</div>
+      <div class="tp-mk-byline"><span class="tp-pin">2</span>Reviewed by <b>Marcus Elder</b> &mdash; NATE-certified technician, Ohio HVAC contractor license #00000, 22 years &nbsp;&middot;&nbsp; <span class="tp-pin">3</span><b>Pricing verified September 2, 2026</b></div>
+      <div class="tp-mk-ans tp-mk-add"><b class="tp-lbl">Answer block <span class="tp-pin" style="background:#8a6a00">4</span></b>Replacing a furnace in the Columbus area runs $4,200 to $8,900 installed, depending on the furnace's efficiency rating, whether the existing ductwork and venting can be reused, and the size of the unit the house needs. Most replacements take one day. Franklin County requires a mechanical permit and a final inspection, which we pull and schedule. We quote a fixed price after an in-home load calculation.</div>
+      <div class="tp-mk-h"><span class="tp-pin">5</span>What drives the price of a furnace replacement?</div>
+      <table class="tp-mk-tbl">
+        <tr><th>Factor</th><th>Typical range</th><th>Why it moves the price</th></tr>
+        <tr><td>Efficiency rating</td><td>$4,200 &ndash; $6,000 (80% AFUE)<br>$6,100 &ndash; $8,900 (95%+ AFUE)</td><td>High-efficiency units need new venting and a condensate drain</td></tr>
+        <tr><td>Ductwork condition</td><td>+$400 &ndash; $2,100</td><td>Undersized or leaking returns get corrected at replacement</td></tr>
+        <tr><td>Unit sizing</td><td>Varies by BTU</td><td>Set by a load calculation, not by the size of the old unit</td></tr>
+      </table>
+      <div class="tp-fine">Illustrative pricing for a fictional company. Ranges reflect what a quoted, installed job would include.</div>
+      <div class="tp-mk-h"><span class="tp-pin">6</span>What Columbus customers say</div>
+      <div class="tp-mk-rev"><span class="tp-big">4.8</span><span><span class="tp-st">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>412 reviews across Google, Yelp, and Angi &middot; most recent August 28, 2026</span></div>
+      <div class="tp-mk-h"><span class="tp-pin">7</span>Frequently asked</div>
+      <div class="tp-mk-acc">
+        <div>How long does a furnace replacement take? <span>&#9662;</span></div>
+        <div>Do I need a permit to replace a furnace in Franklin County? <span>&#9662;</span></div>
+        <div>Should I replace the AC at the same time? <span>&#9662;</span></div>
+        <div>Do you offer financing? <span>&#9662;</span></div>
+      </div>
+      <div class="tp-mk-h"><span class="tp-pin">8</span>Where we work in Central Ohio</div>
+      <div class="tp-mk-areas"><span>Columbus</span><span>Dublin</span><span>Westerville</span><span>Grove City</span><span>Hilliard</span><span>Gahanna</span></div>
+      <div class="tp-mk-fpo" style="min-height:38px;text-align:left">&rarr; Our other metros: Dayton &middot; Cincinnati &mdash; each with its own permit rules and pricing</div>
+      <div class="tp-mk-h">Book an estimate</div>
+      <div class="tp-mk-fpo" style="min-height:44px;text-align:left">&rarr; Online booking with same-week availability, plus a phone number</div>
+    </div>
+    <div class="tp-mk-foot">
+      <div><b><span class="tp-pin">9</span>Fieldstone Heating &amp; Air &mdash; Columbus</b>2200 Example Rd, Columbus, OH &middot; (555) 555-0188 &middot; Mon&ndash;Sat 7a&ndash;7p</div>
+      <div><b>Matches our profile at</b>Google Business Profile &middot; Yelp &middot; Angi &middot; Ohio contractor license lookup</div>
+    </div>
+  </div>
+  <div class="tp-frame-end">End of page mockup</div>
+  </div>
+
+  <div class="tp-seclabel">Page notes</div>
+  <div class="tp-anno"><span class="tp-pn">1</span><div><span class="tp-eye">AI answers location questions with location-specific pages</span><b>One service, one city, in the H1.</b> The query has two variables and the page answers both. The failure mode is a set of near-identical location pages with only the town name swapped. Each one needs its own local rules, pricing, service area, and reviews, or it adds nothing an engine can use.</div></div>
+  <div class="tp-anno"><span class="tp-pn">2</span><div><span class="tp-eye">AI weighs who stands behind the claim</span><b>A named, certified technician on the page.</b> Certification, state license number, and years on the job. On a consumer-service page this is the strongest trust signal available, and it costs nothing beyond adding the byline.</div></div>
+  <div class="tp-anno"><span class="tp-pn">3</span><div><span class="tp-eye">AI needs to see when the price was last checked</span><b>A pricing-verified date.</b> Price is the whole query, so the range needs a date on it. The date keeps it safe to quote and gives the team a set cadence for updating.</div></div>
+  <div class="tp-anno"><span class="tp-pn">4</span><div><span class="tp-eye">AI can quote your price only if your page publishes one</span><b>The answer block, with an actual number in it.</b> Publishing price is the hardest ask on this page, and most brands resist it. The number reaches the buyer either way &mdash; from a competitor who published a range, or from a Reddit thread by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page.</div></div>
+  <div class="tp-anno"><span class="tp-pn">5</span><div><span class="tp-eye">AI answers the follow-up question from the rows of a table</span><b>The price factors as a table.</b> The follow-up to any price question is why it varies, and a table answers that in cells an engine can lift row by row.</div></div>
+  <div class="tp-anno"><span class="tp-pn">6</span><div><span class="tp-eye">AI reads ratings that show a source and a count</span><b>Reviews, with a count, a date, and the platforms named.</b> A rating an engine can trace to a platform and a volume is usable; one with no source and no date is decoration. Reviews a business collects and publishes about itself are treated differently, which the markup note below covers.</div></div>
+  <div class="tp-anno"><span class="tp-pn">7</span><div><span class="tp-eye">AI pulls the permit and timeline answers straight from the Q&amp;A</span><b>The FAQ block</b>, answering the permit, timeline, and financing questions, with FAQPage markup underneath. These are the objections that come after price, and answering them on the page keeps the engine from going elsewhere for them.</div></div>
+  <div class="tp-anno"><span class="tp-pn">8</span><div><span class="tp-eye">AI needs to know which city a page covers</span><b>The service-area list and the links to the other metros.</b> It tells an engine which city and which surrounding towns the business covers, and it keeps the location pages reading as one company.</div></div>
+  <div class="tp-anno"><span class="tp-pn">9</span><div><span class="tp-eye">AI builds local answers from the business profile</span><b>Name, address, phone, and hours &mdash; identical to the Google Business Profile.</b> Local AI answers and AI Overviews pull from the profile directly, so a mismatch between it and the page is a conflict the engine resolves by trusting neither.</div></div>
+
+  <div class="tp-seclabel">Schema</div>
+  <div class="tp-acard"><b>LocalBusiness markup.</b> <code>HVACBusiness</code> is a real schema.org subtype of LocalBusiness. <code>areaServed</code> and <code>openingHoursSpecification</code> are the properties that answer "near me" and "open now."</div>
+  <div class="tp-code">{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Fieldstone Heating & Air — Columbus",
+  "url": "https://www.fieldstonehvac.example/service-areas/columbus-oh",
+  "telephone": "+1-555-555-0188",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2200 Example Road",
+    "addressLocality": "Columbus",
+    "addressRegion": "OH",
+    "postalCode": "43215",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Columbus" },
+    { "@type": "City", "name": "Dublin" },
+    { "@type": "City", "name": "Westerville" }
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "07:00", "closes": "19:00"
+  }],
+  "sameAs": ["https://www.google.com/maps/place/example"]
+}</div>
+
+  <div class="tp-acard" style="margin-top:16px"><b>The price range, in markup.</b> <code>Service</code> with an <code>offers</code> block states the number the query is asking for. <code>minPrice</code> and <code>maxPrice</code> are the properties that make a range machine-readable.</div>
+  <div class="tp-code">{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Furnace Replacement",
+  "serviceType": "Furnace replacement and installation",
+  "provider": { "@type": "HVACBusiness",
+                "name": "Fieldstone Heating & Air — Columbus" },
+  "areaServed": { "@type": "City", "name": "Columbus" },
+  "offers": {
+    "@type": "Offer",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": "4200.00",
+      "maxPrice": "8900.00",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    }
+  }
+}</div>
+
+  <div class="tp-acard" style="margin-top:16px"><b>One limit worth knowing on reviews.</b> Schema.org defines <code>AggregateRating</code>, and Google's structured-data guidelines treat reviews a business collects and publishes about itself as self-serving, so they do not earn review rich results. Displaying the rating with its source and count still helps a reader and gives an engine something to read. The rating that counts is on the review platforms themselves.</div>
+  <div class="tp-callout"><b>What this page competes on:</b> proximity, price transparency, and reviews. The page's job is to publish a real number and to agree with the business profile in every detail.</div>
+</div>
+
+<!-- ============ PANEL 4: COMPARE ============ -->
+<div class="tp-panel">
+  <div class="tp-lead-h">
+    <div class="tp-k">Side by side</div>
+    <div class="tp-t">The same page checklist across three businesses</div>
+    <div class="tp-d">All of it applies to all three businesses. The weighting is what differs, and it is set by what the business needs out of the answer.</div>
+  </div>
+
+  <table class="tp-map">
+    <tr><th></th><th>B2B medical device<br><span style="font-weight:500;font-size:11px">wants to be cited</span></th><th>Consumer brand at retail<br><span style="font-weight:500;font-size:11px">wants to be recommended</span></th><th>Local consumer service<br><span style="font-weight:500;font-size:11px">wants to be listed</span></th></tr>
+    <tr><td>The goal</td><td>Named as the source, with a link back</td><td>Named as the product, with a price and a place to buy it</td><td>Named for a job in a city, with a number and a way to book</td></tr>
+    <tr><td>The query</td><td>A comparison question asked before an order is written</td><td>A shopping question with a constraint &mdash; budget, fit, use</td><td>A cost or "near me" question with a location in it</td></tr>
+    <tr><td>What the answer block holds</td><td>Duration, form factor, the clinical reason the difference matters, and where the older option still wins</td><td>Dimensions, fit, flow, finish, price</td><td>A price range, the factors that move it, the permit and the timeline</td></tr>
+    <tr><td>Schema that matters most</td><td>Article and Organization &mdash; reviewer, credentials, dates, entity</td><td>Product &mdash; specs as properties, retailer offers with price and stock</td><td>LocalBusiness and Service &mdash; area served, hours, price range</td></tr>
+    <tr><td>Highest-leverage item</td><td><b>Original research.</b> Operational data nobody else has, published in the part of the dataset that clears review fastest.</td><td><b>Extractable specs plus readable offers.</b> An answer can only recommend what it can describe and locate.</td><td><b>The Google Business Profile.</b> Local answers pull from it directly, and the page has to match it exactly.</td></tr>
+    <tr><td>Where corroboration comes from</td><td>Peer-reviewed literature, conference abstracts, the FDA device listing, clinical trade media</td><td>Independent reviews, retailer product pages, community threads</td><td>Review platforms, local subreddits, local press</td></tr>
+    <tr><td>Comparison pages</td><td>Modality vs. modality. Naming a competing manufacturer is usually blocked, so the column header is a device category.</td><td>Own models only. Named head-to-heads live on third-party review sites.</td><td>Comparisons run by option &mdash; repair vs. replace, 80% vs. 95% efficiency. Competitors stay out of it.</td></tr>
+    <tr><td>The metric</td><td>Citation rate and share of voice on a defined set of clinician and patient questions</td><td>Recommendation rate on shopping queries, and whether the quoted specs are right</td><td>Share of local answers by city and service, plus booked calls from AI referrals</td></tr>
+    <tr><td>Lower priority here</td><td>The business profile, and community &mdash; the clinician forums are gated and uncrawlable</td><td>Named authors, on a product page. They belong on the buying guides.</td><td>Wikidata, for a three-metro operator</td></tr>
+    <tr><td>Where it goes wrong</td><td>Copy written vague enough to clear review with no number a clinician can use</td><td>Specs that disagree between the brand site and the retailer feeds</td><td>Forty city pages with the town name swapped and nothing else changed</td></tr>
+  </table>
+
+  <div class="tp-callout" style="margin-top:20px">The on-page checklist takes ten minutes to read. Deciding which parts matter for a given business takes judgment, and it depends on what that business needs the answer to do. B2B and B2C is the shorthand people use, and it splits the wrong way &mdash; a consumer brand at retail and a consumer service company have almost nothing in common here, while the medical device company and the local service both depend on a named credential.</div>
+
+
+  <div class="tp-seclabel">Additional notes</div>
+  <div class="tp-grp3">
+    <div class="tp-g"><b>FAQ schema</b>The markup still helps a machine parse a question and its answer. The other half: Google restricted FAQ rich results to government and health sites in 2023, so FAQPage markup produces nothing visible in ordinary search results. Add it for extraction and set expectations accordingly.</div>
+    <div class="tp-g"><b>Entity schema has three flavors</b>Organization for the device manufacturer, Brand plus Product for the retail brand, LocalBusiness for the service company. Same checklist item, three different schema types, and picking the wrong one wastes the work.</div>
+    <div class="tp-g"><b>Who owns each piece</b>The work splits four ways &mdash; what a visitor sees, code a visitor never sees, activity off the site, and measurement. Only the first belongs to page design, which is why the rest tends to fall to whoever has time.</div>
+  </div>
+
+  <p class="tp-note">All three brands are fictional. Every specification, price, figure, and license number shown is illustrative and exists to demonstrate the pattern. Schema examples use current schema.org types and properties.</p>
+</div>
+
+
+</div>`;
+---
+
+<BaseLayout title={title} description={description} type="article">
+  <Fragment set:html={reportHtml} />
+</BaseLayout>
+
+<script is:inline>
+function showTab(i,el){
+  document.querySelectorAll('.tp-panel').forEach(function(p,n){p.classList.toggle('tp-active',n===i)});
+  document.querySelectorAll('.tp-tab').forEach(function(t){t.classList.remove('tp-active')});
+  el.classList.add('tp-active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+<style is:global>
+.tp-wrap{font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);--ink:#483729;--muted:#7a6550;--line:#e7d8b8;--bg:#fcf5e5;--card:#fff;--accent:#b55434;--add:#d39000;--win:#8b8c4a;--cream-deep:#faeccd;--forest:#21362c;--peach:#ffbe9f;--tan:#e7d8b8}
+*{box-sizing:border-box}
+.tp-wrap{max-width:1120px;margin:0 auto;padding:30px 26px 80px}
+h1{font-size:24px;margin:0 0 4px;letter-spacing:-.01em}
+.tp-sub{color:var(--muted);font-size:13.5px;margin:0 0 18px;max-width:900px}
+.tp-sub a{color:var(--accent);font-weight:600;text-decoration:underline;text-decoration-color:#e0c4b6;text-underline-offset:2px}
+.tp-sub a:hover{text-decoration-color:var(--accent)}
+.tp-tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:0 0 22px;flex-wrap:wrap}
+.tp-tab{padding:11px 14px;font-weight:700;font-size:13px;color:#888;cursor:pointer;border:0;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;gap:7px;align-items:center}
+.tp-tab:hover{color:var(--ink)}.tp-tab.tp-active{color:var(--accent);border-bottom-color:var(--accent)}
+.tp-tab .tp-n{display:inline-flex;width:19px;height:19px;border-radius:50%;background:var(--cream-deep);color:var(--muted);font-size:10.5px;align-items:center;justify-content:center;font-weight:800}
+.tp-tab.tp-active .tp-n{background:var(--accent);color:#fff}
+.tp-panel{display:none;animation:fade .2s ease}.tp-panel.tp-active{display:block}
+@keyframes fade{from{opacity:.3}to{opacity:1}}
+.tp-lead-h{background:var(--forest);color:#fff;border-radius:12px;padding:15px 19px;margin:0 0 16px}
+.tp-lead-h .tp-k{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--peach);font-weight:700}
+.tp-lead-h .tp-t{font-size:17px;font-weight:700;margin:4px 0 6px;letter-spacing:-.01em}
+.tp-lead-h .tp-d{font-size:13.5px;color:#dfe8e2}
+.tp-lead-h .tp-q{background:#2b4539;border-left:3px solid var(--peach);border-radius:0 7px 7px 0;padding:8px 12px;margin:10px 0 0;font-size:13px;color:#fff}
+.tp-seclabel{font:800 12px/1 -apple-system,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:26px 0 9px}
+.tp-acard{border:1px solid var(--line);border-left:3px solid var(--accent);background:#fffdf7;border-radius:9px;padding:13px 15px;font-size:13px;margin:0 0 12px}
+.tp-acard b{color:#1a1a1a}
+.tp-fine{font-size:11.5px;color:var(--muted);margin:6px 0 0}
+.tp-note{color:var(--muted);font-size:12px;margin-top:22px}
+.tp-code{background:#f7f1e3;border:1px solid var(--line);border-radius:6px;padding:10px 12px;font:11px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;color:#1a1a1a;white-space:pre-wrap;overflow-x:auto;margin:7px 0}
+.tp-mock-cap{font-size:11px;color:var(--muted);margin:16px 0 7px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.tp-keybar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:11.5px;background:#fffdf7;border:1px solid var(--line);border-radius:9px;padding:10px 13px;margin:0 0 16px}
+.tp-kdot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.tp-pin{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;vertical-align:middle;flex:none;margin-right:7px;font-style:normal}
+.tp-anno{background:#fffdf7;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:9px 12px;font-size:12.5px;margin:8px 0;display:flex;gap:10px;align-items:baseline;line-height:1.5}
+.tp-anno .tp-pn{flex:none;width:19px;height:19px;border-radius:50%;background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.tp-anno .tp-eye{display:block;font-size:11px;font-weight:800;letter-spacing:.01em;color:var(--accent);margin:0 0 3px}
+.tp-ref{display:inline-block;margin-left:7px;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#a2887b;white-space:nowrap}
+.tp-anno .tp-deck{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#f1ece9;color:#8a4327;border:1px solid #e3d5cd;border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+.tp-anno .tp-off{background:#eaf0ff;color:#1d4ed8;border-color:#c9d6f5}
+/* page-mock frame */
+.tp-frame{background:var(--tan);border:1px solid #d8c49c;border-radius:14px;padding:13px 16px 14px;margin:16px 0 8px;box-shadow:inset 0 1px 3px rgba(0,0,0,.05)}
+.tp-frame-lbl{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 2px 10px}
+.tp-frame-lbl b{font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.tp-frame-lbl span{font-size:10.5px;color:var(--muted)}
+.tp-frame-end{text-align:center;font-size:9.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:11px 0 0}
+.tp-mk-bar{background:#dbdbdb;border-bottom:1px solid #c4c4c4;padding:7px 12px;display:flex;align-items:center;gap:6px}
+.tp-mk-bar i{width:9px;height:9px;border-radius:50%;display:inline-block;background:#bcbcbc;flex:none}
+.tp-mk-bar .tp-url{flex:1;background:#fff;border:1px solid #c9c9c9;border-radius:20px;font:9.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#8d8d8d;padding:3px 11px;margin-left:7px;overflow:hidden;white-space:nowrap}
+/* page mock */
+.tp-mk{border:1px solid #ccc;border-radius:10px;overflow:hidden;margin:10px 0;box-shadow:0 6px 22px rgba(0,0,0,.13)}
+.tp-mk-nav{background:#111;color:#fff;display:flex;align-items:center;gap:13px;padding:9px 14px;font-size:11px}
+.tp-mk-nav .tp-lg{font-weight:800;font-size:14px;letter-spacing:-.01em}.tp-mk-nav .tp-sp{flex:1}.tp-mk-nav .tp-it{color:#ccc}
+.tp-mk-crumb{background:#fafafa;border-bottom:1px solid var(--line);padding:6px 14px;font-size:10.5px;color:#999}
+.tp-mk-body{padding:18px;background:#fff}
+.tp-mk-h1{font-size:21px;font-weight:800;margin:2px 0 6px}
+.tp-mk-byline{font-size:10.5px;color:#777;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:4px}
+.tp-mk-byline b{color:#333}
+.tp-mk-h{font-size:12px;font-weight:800;letter-spacing:.02em;color:#222;margin:18px 0 9px;border-top:2px solid #111;padding-top:9px}
+.tp-mk-ans{background:#fff7d6;border:1px solid #e6cf63;border-radius:7px;padding:14px 15px;font-size:12px;color:#5a4a00;margin:12px 0}
+.tp-mk-ans b.tp-lbl{display:block;margin-bottom:5px;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em}
+.tp-mk-fpo{background:repeating-linear-gradient(45deg,#eee,#eee 9px,#e6e6e6 9px,#e6e6e6 18px);border:1px solid #dbdbdb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-size:10px;font-weight:700;letter-spacing:.04em;text-align:center;padding:8px;min-height:108px}
+.tp-mk-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.tp-mk-line{height:7px;background:#e9e9e9;border-radius:3px;margin:6px 0}.tp-mk-line.tp-s{width:78%}.tp-mk-line.tp-xs{width:52%}
+.tp-mk-acc div{border:1px solid var(--line);border-bottom:0;padding:11px 12px;font-size:12px;font-weight:600;display:flex;justify-content:space-between;color:#333}
+.tp-mk-acc div:last-child{border-bottom:1px solid var(--line)}
+.tp-mk-tbl{width:100%;border-collapse:collapse;font-size:11px;margin:8px 0}
+.tp-mk-tbl td,.tp-mk-tbl th{border:1px solid var(--line);padding:7px 9px;text-align:left}.tp-mk-tbl th{background:#faf7f5;font-weight:700}
+.tp-mk-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tp-mk-swatch{display:flex;gap:7px;margin:9px 0}.tp-mk-swatch i{width:20px;height:20px;border-radius:50%;border:1px solid #bbb;display:inline-block}
+.tp-mk-price{font-size:20px;font-weight:800;margin:8px 0 2px}
+.tp-mk-foot{background:#f4f4f4;border-top:1px solid var(--line);padding:12px 14px;font-size:10.5px;color:#777;display:flex;gap:18px;flex-wrap:wrap}
+.tp-mk-foot b{color:#444;display:block;margin-bottom:3px;font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+.tp-mk-add{outline:2px solid var(--accent);outline-offset:3px;border-radius:7px;position:relative}
+.tp-mk-add::before{content:"ADD";position:absolute;top:-9px;left:9px;background:var(--accent);color:#fff;font-size:7.5px;font-weight:800;letter-spacing:.05em;padding:1px 6px;border-radius:3px;z-index:2}
+.tp-mk-hid{outline:2px dashed #1d4ed8;outline-offset:3px;border-radius:7px;position:relative}
+.tp-mk-hid::before{content:"INVISIBLE ON THE PAGE";position:absolute;top:-9px;left:9px;background:#1d4ed8;color:#fff;font-size:7.5px;font-weight:800;letter-spacing:.05em;padding:1px 6px;border-radius:3px;z-index:2}
+table.tp-map{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0}
+table.tp-map th,table.tp-map td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+table.tp-map th{background:var(--forest);color:#fff;font-weight:700;font-size:12px;letter-spacing:.03em}
+table.tp-map td:first-child{width:20%;font-weight:700;background:var(--cream-deep)}
+.tp-eco{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:10px 0}
+.tp-eco .tp-n{border:1px solid var(--line);background:#fffdf7;border-radius:9px;padding:10px 11px;font-size:11.5px;line-height:1.45}
+.tp-eco .tp-n b{display:block;font-size:11px;margin-bottom:4px;color:#1a1a1a}
+.tp-eco .tp-n.tp-g{border-color:#c9caa0;background:#f7f7ea}
+.tp-callout{background:var(--cream-deep);border:1px solid var(--tan);border-left:3px solid var(--add);border-radius:9px;padding:12px 15px;font-size:12.8px;margin:12px 0;line-height:1.55}
+.tp-callout b{color:var(--accent)}
+@media(max-width:820px){.tp-mk-row{grid-template-columns:1fr}.tp-mk-cards{grid-template-columns:1fr 1fr}.tp-eco{grid-template-columns:1fr 1fr}table.tp-map td:first-child{width:auto}}
+
+.tp-reflist{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;margin:8px 0 0;padding:0;list-style:none;counter-reset:ri}
+.tp-reflist li{font-size:12.3px;padding:5px 0 5px 26px;border-bottom:1px solid #efefef;position:relative;line-height:1.4;counter-increment:ri}
+.tp-reflist li::before{content:counter(ri);position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:4px;background:#f1ece9;color:#8a4327;font-size:9.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.tp-reflist li b{color:#1a1a1a}
+.tp-reflist li.tp-on{background:#fbf7f4}
+.tp-grp3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0}
+.tp-grp3 .tp-g{border:1px solid var(--line);background:#fffdf7;border-radius:9px;padding:12px 13px;font-size:12.3px;line-height:1.5}
+.tp-grp3 .tp-g b{display:block;font-size:12.5px;margin-bottom:5px;color:var(--accent)}
+.tp-mk-rev{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font-size:11px;color:#555}
+.tp-mk-rev .tp-big{font-size:22px;font-weight:800;color:#1a1a1a;line-height:1}
+.tp-mk-rev .tp-st{color:#e0a200;font-size:13px;letter-spacing:1px}
+.tp-mk-areas{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tp-mk-areas span{border:1px solid var(--line);border-radius:6px;padding:6px 11px;font-size:10.5px;color:#666;background:#fbfbfb}
+@media(max-width:820px){.tp-reflist,.tp-grp3{grid-template-columns:1fr}}
+</style>
