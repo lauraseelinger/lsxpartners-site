@@ -23,7 +23,7 @@ When I work with clients and agency teams, the easiest way to showcase this piec
 
 ---
 
-**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or pick you.** That distinction impacts which pages matter and what each one should include: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them.
+**How you optimize your business for AI search engines depends on what kind of business it is — whether you need AI to cite you, recommend you, or list you.** That distinction impacts which pages matter and what each one should include: the answer block written out, the headings phrased as the questions buyers actually ask, and the schema behind them.
 
 The templates below are for three types of companies (fictional brands used for educational purposes): a medical device company, a consumer brand sold through four retailers, and a local or geo-focused home-services company working three metros. The [full annotated templates](/reports/ai-visibility-page-templates) include in-depth explanations for each section so you can understand the why behind the differences.
 
