@@ -33,7 +33,7 @@ Every AEO item is a decision about where something goes on the page and how it's
 
 - **"Lead with a direct answer"** — an 80-word paragraph above everything else, written to be lifted whole.
 - **"One topic per page"** — the H1 names a single job somebody searches for, and the nine other things you do go somewhere else.
-- **"Add a named author"** — a real person's license and years on the page, where a reader and an engine can both see it, instead of in an internal approval file.
+- **"Add a named author"** — a real person's license and years on the page, where a reader and an engine can both see it.
 
 ## How do you optimize a brand for AI answer engines?
 
@@ -63,7 +63,7 @@ The service company needs to appear in the set of local providers the answer ret
 
 <div style="background:#f7ece7;border-left:5px solid #b55434;border-radius:8px;padding:1rem 1.15rem;margin:1.1rem 0">
 <strong style="display:block;font:800 .72rem/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin-bottom:.35rem">What this means</strong>
-<p style="margin:0;font-size:.95rem;line-height:1.6">If location is part of the question, your business profile and your review presence outweigh anything on your own site, and the page's job is to agree with them. Publishing the number the buyer is actually asking for is what makes the page quotable.</p>
+<p style="margin:0;font-size:.95rem;line-height:1.6">If location is part of the question, your business profile and your review presence outweigh anything on your own site, and the page's job is to agree with them. Publishing the number the buyer is actually asking for is what gets the page quoted.</p>
 </div>
 
 
@@ -75,7 +75,7 @@ Most companies already have the credential half handled internally. Somebody sen
 
 The finding is where the real work is. The raw material is usually already in the business, uncounted: how long projects actually run from kickoff to sign-off, what share of orders ship complete the first time, how long a customer waits between request and delivery. Whichever number you pick has to come with its sample size and its definitions. Without those, a reader and an engine both read it as a marketing claim.
 
-If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. The usual response is to water the copy down until it passes. Watered-down copy doesn't get cited. Pick data that's easy to approve rather than fighting for a number that will never clear.
+If your industry has an approval chain — legal, compliance, regulatory, clinical — every figure has to trace back to a source document. The number in the answer block is the number in that document. The usual response is to water the copy down until it passes. Watered-down copy doesn't get cited. Pick data that's easy to approve. Fighting for a number that will never clear costs you the page.
 
 <p style="display:block;font:800 .72rem/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a4327;margin:0 0 .6rem">The worked example &mdash; a wearable cardiac monitor sold to cardiology practices</p>
 
@@ -152,7 +152,7 @@ The Google Business Profile goes from a footnote to the item that decides the pa
 
 The harder conversation is price.
 
-Publishing a price range is the toughest ask on a home-services page, and most brands resist it. I understand why. But the number reaches the buyer either way — from a competitor who published a range, or from a review thread written by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page. Dating that range is what makes it safe to quote and gives your team a set cadence for keeping it current.
+Publishing a price range is the toughest ask on a home-services page, and most brands resist it. I understand why. But the number reaches the buyer either way — from a competitor who published a range, or from a review thread written by a customer who felt overcharged. A range plus the three factors that move it puts the sourced version on your own page. The range needs a date on it. That keeps it safe to quote and gives your team a set cadence for updating.
 
 These pages fail in one predictable way, which is forty city pages with the town name swapped and nothing else changed. Each one needs its own permit rules, pricing, service-area list, and local reviews, because forty pages saying the same thing will earn the answer for one city at most.
 
@@ -208,7 +208,7 @@ Roughly half the list.
 
 The robots.txt allow-list decides whether your pages are eligible at all, and a blocked crawler is invisible in reporting — the pages keep ranking in Google, no AI answer ever cites them, and analytics shows nothing that explains it. The schema is a script tag. The entity records that let an engine confirm your company exists are hosted on other people's domains.
 
-That's the practical reason this half of the checklist tends not to get done: it never touches page design, so it falls to whoever has time rather than whoever owns it. The template set writes all of it out in code under each mockup for that reason.
+That's the practical reason this half of the checklist tends not to get done: it never touches page design, so it falls to whoever has time. The template set writes all of it out in code under each mockup for that reason.
 
 ## Where should you start with answer engine optimization?
 
