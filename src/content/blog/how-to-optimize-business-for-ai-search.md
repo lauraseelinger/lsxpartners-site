@@ -14,12 +14,12 @@ faqs:
   - question: "Which schema types matter most for AI visibility?"
     answer: "It depends on the entity. A firm selling expertise runs on Article and Organization. A brand sold through retailers runs on Product, with an offers array carrying price, availability, and a named seller. A local service business runs on LocalBusiness and Service, with area served, hours, and a price range."
   - question: "How do you appear in AI search results?"
-    answer: "Allow the AI crawlers in robots.txt, then give each page one job: a front-loaded answer in the first hundred words, headings phrased as the questions buyers ask, a named author with a checkable credential, a visible date, and schema in the code. Which of those carries the page depends on whether you need AI to cite you, recommend you, or pick you."
+    answer: "Allow the AI crawlers in robots.txt, then give each page one job: a front-loaded answer in the first hundred words, headings phrased as the questions buyers ask, a named author with a checkable credential, a visible date, and schema in the code. Which of those carries the page depends on whether you need AI to cite you, recommend you, or list you."
   - question: "Where do you start with answer engine optimization?"
     answer: "Not with the page. Start with audience intelligence and a prompt audit, so you know which questions the page has to answer and in whose words. The on-page work is the last mile, and it only pays off when it is aimed at the right questions."
 ---
 
-Everyone wants to talk about the checklist — FAQ schema, one topic per page, lead every section with a direct answer — and that's the easy end of this. The work that decides whether any of it pays off happens earlier, in the audience intelligence, category research, and prompt audit that tell you which questions your pages have to answer. The brands I work with get all of that in one strategy document, with page templates covering every category page and product type.
+When I work with clients and agency teams, the easiest way to showcase this piece is a visual mockup. My deliverables actually provide page templates outlined just like the ones below, for every category page, product line, etc., to ensure the web development and design team implementation is successful.
 
 ---
 
