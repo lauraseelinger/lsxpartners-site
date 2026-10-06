@@ -45,22 +45,40 @@ SHELL = '''<!doctype html>
   <div class="brand">%(brand)s</div>
   <h2>%(headline)s</h2>
   <p>This document is password-protected. Enter the password to view it.</p>
-  <input id="pw" type="password" placeholder="Password" autocomplete="off" autofocus>
+  <input id="pw" type="password" placeholder="Password" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus>
   <button id="go">%(btn)s</button>
   <div class="err" id="err"></div>
 </div>
 <script>
 var P = %(payload)s;
 function b64(s){var bin=atob(s),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u;}
+function cands(pw){
+  var t=pw.replace(/[\u00a0\u2007\u202f\u200b]/g,' ').trim();
+  var raw=[pw,t,t.toUpperCase(),t.toLowerCase()],out=[],seen={};
+  for(var i=0;i<raw.length;i++){var v=raw[i];if(v&&!seen[v]){seen[v]=1;out.push(v);}}
+  return out;
+}
+async function tryPw(pw){
+  var km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+  var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(P.salt),iterations:P.iter,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  return await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(P.iv)},key,b64(P.ct));
+}
 async function open_(){
-  var pw=document.getElementById('pw').value;
-  try{
-    var enc=new TextEncoder();
-    var km=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']);
-    var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(P.salt),iterations:P.iter,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
-    var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(P.iv)},key,b64(P.ct));
-    document.open();document.write(new TextDecoder().decode(pt));document.close();
-  }catch(e){ document.getElementById('err').textContent='Incorrect password. Please try again.'; }
+  var err=document.getElementById('err'),go=document.getElementById('go');
+  if(!(window.crypto&&window.crypto.subtle)){
+    err.textContent='This browser cannot open the document. Open the link directly in Chrome, Edge or Safari over https \u2014 an in-app or preview browser will not work.';
+    return;
+  }
+  var pw=document.getElementById('pw').value||'';
+  if(!pw.trim()){err.textContent='Enter the password.';return;}
+  err.textContent='Opening\u2026';go.disabled=true;
+  var list=cands(pw),pt=null;
+  for(var i=0;i<list.length;i++){
+    try{pt=await tryPw(list[i]);break;}catch(e){}
+  }
+  go.disabled=false;
+  if(pt){document.open();document.write(new TextDecoder().decode(pt));document.close();return;}
+  err.textContent='Incorrect password. If you pasted it, check for an extra space at the end.';
 }
 document.getElementById('go').onclick=open_;
 document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')open_();});
