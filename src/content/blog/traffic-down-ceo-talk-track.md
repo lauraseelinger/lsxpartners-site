@@ -21,14 +21,14 @@ faqs:
 Marketing directors are currently getting questioned by their C-suite about website traffic — meanwhile they're FIGHTING FOR THEIR LIVES in their content strategy to maintain search rankings and learn about AI visibility.
 
 <div class="post-lede" style="background:#f4ece0;border-left:5px solid #b55434;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.6rem 0;">
-<p style="margin:0;">So let me help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade.</p>
+<p style="margin:0;">I’m going to help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade.</p>
 </div>
 
 In short: your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
 
 ## Why is my traffic down when my rankings are fine?
 
-Picture the results page for one of your largest-volume keyword terms a year ago: 10 organic blue links + sponsored results — but you're ranked #4, so your site gets sizeable traffic to that page. Now picture it today: an AI Overview that answers the entire question and recommends a few brands or products, a People Also Ask box, sponsored results, and THEN, finally, more than halfway down the page, your #4 ranking. But the person already got what they needed and bounced from the results page, so no click to your site.
+Picture the results page for one of your largest-volume keyword terms <strong style="color:#b55434;">a year ago</strong>: 10 organic blue links + sponsored results — but you're ranked #4, so your site gets sizeable traffic to that page. <strong style="color:#b55434;">Now picture it today</strong>: an AI Overview that answers the entire question and recommends a few brands or products, a People Also Ask box, sponsored results, and THEN, finally, more than halfway down the page, your #4 ranking. But the person already got what they needed and bounced from the results page, so no click to your site.
 
 And if your larger-volume terms are top-of-funnel, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. But the predicament this leads to is that the big headline stat C-suite is used to skimming is now perpetually red. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
 
@@ -54,7 +54,7 @@ The structure I build for clients, five beats in order. Walk your CEO through th
 >
 > **3. We may not rank the same, but we're all over page one anyway.** List every place you still appear: the AI Overview, People Also Ask, a review-site roundup, a suggested search, your ad, and the AI tools that name you first on the buying question.
 >
-> **4. Traffic is down, BUT the signals that buyers are finding and choosing us are up.** Branded search is up [X]% year over year, AI-referred leads hit [a record] in [quarter], and session-to-contact [held/improved] even as total sessions fell — because most of the sessions we lost were informational searches the AI now answers for free.
+> **4. Traffic is down, and the signals that buyers are finding and choosing us are up.** Branded search is up [X]% year over year, AI-referred leads hit [a record] in [quarter], and session-to-contact [held/improved] even as total sessions fell — because most of the sessions we lost were informational searches the AI now answers for free.
 >
 > **5. What this means going forward.** Keep rankings as a KPI, but report on the whole search picture, traditional and AI, and how the buyer journey shifted. The recommendation: establish an AI visibility baseline this quarter so we walk into next quarter with the strategy already in hand.
 
@@ -70,7 +70,7 @@ Here is a real one I built for a client, with the brand and industry changed so 
 >
 > **3. We're all over page one anyway.** We're named in the AI Overview, we appear in the questions Google shows ("How much does [brand] cost?"), we lead a review site's roundup snippet, we're a suggested search, and our ad runs a 5.0 rating from 100+ reviews. On the question version ("What's the best field service software?"), ChatGPT names us the top pick, while Perplexity and the AI Overview put a competitor first and us in the top three. (The competitor's edge in those answers is deeper accounting integration — worth watching.)
 >
-> **4. Traffic is down, but the buying signals are up.** Branded search is up year over year, which fits buyers hearing about us in an AI answer and then searching our name. AI-referred leads hit an all-time high in Q3 even as AI-referred sessions dipped. Total sessions fell 18% year over year, but session-to-contact improved, and most of the lost sessions were informational searches AI Overviews now answer.
+> **4. Traffic is down, and the buying signals are up.** Branded search is up year over year, which fits buyers hearing about us in an AI answer and then searching our name. AI-referred leads hit an all-time high in Q3 even as AI-referred sessions dipped. Total sessions fell 18% year over year, but session-to-contact improved, and most of the lost sessions were informational searches AI Overviews now answer.
 >
 > **5. What this means for next year.** We keep rankings as a KPI, but we look at search as a whole, traditional and AI, and how the buyer journey changed. Branded search, AI-referred leads, and session-to-contact are part of the same conversation. Recommendation: establish an AI visibility baseline this quarter so the team has the strategy in hand for next quarter.
 
