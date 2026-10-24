@@ -41,7 +41,7 @@ If you have a lot of broad informational pages, expect the traffic decline to be
 
 ## Is site traffic decline related to AI?
 
-Sometimes. Not always. And you genuinely cannot tell from the sessions number alone.
+If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need a full, comprehensive audit of where AI is sending your buyers and if you're the brand it recommends.
 
 Stare at total sessions and it screams decline. Look at who's actually showing up ready to BUY, and a lot of the time it's the opposite story. The three signals I'd pull before I let anyone panic:
 
