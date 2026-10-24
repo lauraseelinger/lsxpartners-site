@@ -37,7 +37,7 @@ What used to be above the fold is now several scrolls below — and includes the
 
 ### If your larger-volume terms are top-of-funnel
 
-If you have a lot of broad informational pages, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. And the only thing the C-suite sees is the one red headline that's ruled decks the past decade: site traffic. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
+If you have a lot of broad informational pages, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. And the only number the C-suite actually watches is the one that's headlined every deck for a decade — site traffic — and now it's red. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
 
 ## Okay, but is a traffic drop actually bad?
 
