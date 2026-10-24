@@ -43,10 +43,10 @@ If you have a lot of broad informational pages, expect the traffic decline to be
 
 If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need a full, comprehensive audit of where AI is sending your buyers and if you're the brand it recommends.
 
-Stare at total sessions and it screams decline. Look at who's actually showing up ready to BUY, and a lot of the time it's the opposite story. The three signals I'd pull before I let anyone panic:
+The first things I look at are:
 
-- **Branded search.** Are more people searching your company name? If that's climbing while generic traffic falls, people are discovering you somewhere — usually inside an AI answer — and then coming to find you directly.
-- **Lead quality, not lead volume.** Fewer sessions but a steady or better session-to-contact rate means you didn't lose buyers, you lost browsers. The informational traffic AI absorbed was never the pipeline.
+- **Branded search:** Is branded traffic up YoY? That's a sign people are discovering you in an AI answer and then searching your brand to visit your site.
+- **Lead quality:** Is your session-to-conversion or action higher? You're getting less top-of-funnel and more qualified visitors.
 - **AI-referred visits.** These are real, and GA4 buries a chunk of them under "Direct" because the AI tools often pass no referrer. So your actual AI-driven traffic is almost always higher than the dashboard admits — say that out loud before anyone writes off "Direct" as a rounding error.
 
 If branded search and lead quality are up while sessions are down, your funnel didn't get weaker. It got SHORTER. That's a genuinely great thing wearing a bad thing's outfit on the one chart everyone screenshots.
