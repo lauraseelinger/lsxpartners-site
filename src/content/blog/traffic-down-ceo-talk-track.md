@@ -31,9 +31,13 @@ In short: your traffic can fall while your rankings hold, because AI now answers
 Picture the results page for one of your largest-volume keyword terms:
 
 - **A year ago:** 10 organic blue links + sponsored results — but you're ranked #4, so your site gets sizeable traffic to that page.
-- **Now:** an AI Overview that answers the entire question and recommends a few brands, a "People Also Ask" box, sponsored results, and THEN, more than halfway down the page, your #4 ranking. What used to be above the fold is now several scrolls below — and includes the full answer without a click.
+- **Now:** an AI Overview that answers the entire question and recommends a few brands, a "People Also Ask" box, sponsored results, and THEN, more than halfway down the page, your #4 ranking.
 
-And if your larger-volume terms are top-of-funnel, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. But the predicament this leads to is that the big headline stat C-suite is used to skimming is now perpetually red. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
+What used to be above the fold is now several scrolls below — and includes the full answer without a click.
+
+### If your larger-volume terms are top-of-funnel
+
+If you have a lot of broad informational pages, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. And the only thing the C-suite sees is the one red headline that's ruled decks the past decade: site traffic. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
 
 ## Okay, but is a traffic drop actually bad?
 
