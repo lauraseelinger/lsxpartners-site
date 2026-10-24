@@ -20,7 +20,11 @@ faqs:
 
 Marketing directors are currently getting questioned by their C-suite about website traffic — meanwhile they're FIGHTING FOR THEIR LIVES in their content strategy to maintain search rankings and learn about AI visibility.
 
-So let me help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade. In short: your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
+<div class="post-lede" style="background:#f4ece0;border-left:5px solid #b55434;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.6rem 0;">
+<p style="margin:0;">So let me help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade.</p>
+</div>
+
+In short: your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
 
 ## Why is my traffic down when my rankings are fine?
 
