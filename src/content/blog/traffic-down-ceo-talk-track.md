@@ -74,7 +74,7 @@ When my clients are going into their next leadership or board meeting, this is t
 
 ## What does recreating the search experience look like?
 
-This is the kind of mock I build for step two — a recreation of the results page for the search in question, with every spot the brand still shows up marked. It turns a rank number nobody can picture into a page leadership can actually see.
+This is the kind of mock I build for step two — a recreation of the results page for the search in question, highlighting every spot the brand still shows up.
 
 <style>
 .sm-wrap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:1.4rem 0 1.6rem;}
@@ -103,7 +103,7 @@ This is the kind of mock I build for step two — a recreation of the results pa
 .sm-key li.sm-miss::before{background:#b9ab98;}
 .sm-key b{display:block;color:#3a2a22;}
 .sm-ai{margin-top:18px;}
-.sm-card{border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:15px 20px;margin-bottom:14px;font-size:13px;line-height:1.65;color:#2b2622;}
+.sm-card{border:1px solid #ece3d6;border-radius:14px;background:#fff;box-shadow:0 1px 4px rgba(60,40,20,.06);padding:15px 20px;margin-bottom:14px;font-size:13px;line-height:1.65;color:#2b2622;}
 .sm-card:last-child{margin-bottom:0;}
 .sm-eng{font:700 10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#a89a86;margin-bottom:10px;}
 .sm-ask{color:#9a8f80;}
@@ -126,7 +126,7 @@ This is the kind of mock I build for step two — a recreation of the results pa
 <div class="sm-zone sm-hit"><span class="sm-num">1</span><div class="sm-lbl">AI Overview</div><div class="sm-aio"><b>Top [Category] Software</b><br><b>Competitor A:</b> best for large teams&hellip;<br><b>Competitor B:</b> strong for budget buyers&hellip;<br><b>Other options:</b> <span class="sm-mark">Your Brand</span> and Competitor C.</div></div>
 <div class="sm-zone sm-miss"><span class="sm-num">2</span><div class="sm-lbl">Top organic results</div><div class="sm-res"><div class="sm-u">competitora.example</div><div class="sm-t">Competitor A | The #1 [Category] Platform</div></div><div class="sm-res"><div class="sm-u">competitorb.example</div><div class="sm-t">[Category] Software for Growing Teams</div></div></div>
 <div class="sm-zone sm-hit"><span class="sm-num">3</span><div class="sm-lbl">People also ask</div><div class="sm-paa"><div>What is the best [category] software?<span>&#8964;</span></div><div><span class="sm-mark">How much does Your Brand cost?</span><span>&#8964;</span></div><div>Is [category] software worth it?<span>&#8964;</span></div></div></div>
-<div class="sm-zone sm-hit"><span class="sm-num">4</span><div class="sm-lbl">Sponsored</div><div class="sm-res"><div class="sm-u"><span class="sm-mark">Your Brand</span> &middot; yourbrand.example</div><div class="sm-t">The [Category] Software Built for You</div><div style="font-size:11px;color:#70757a">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 &mdash; 100+ reviews</div></div></div>
+<div class="sm-zone sm-hit"><span class="sm-num">4</span><div class="sm-lbl">Sponsored</div><div class="sm-res"><div class="sm-u"><span class="sm-mark">Your Brand</span> &middot; yourbrand.example</div><div class="sm-t">The [Category] Software Built for You</div></div></div>
 <div class="sm-zone sm-miss"><span class="sm-num">5</span><div class="sm-lbl">Reddit &middot; 2 years ago</div><div class="sm-res"><div class="sm-t">What [category] software does everyone use?</div><div style="font-size:11.5px;color:#4d5156">&ldquo;Honestly just go with Competitor A, it&rsquo;s what we switched to and never looked back&hellip;&rdquo;</div></div></div>
 <div class="sm-zone sm-hit"><span class="sm-num">6</span><div class="sm-lbl">Review-site roundup</div><div class="sm-res"><div class="sm-t">The Best [Category] Software in 2026</div><div style="font-size:11.5px;color:#4d5156"><span class="sm-mark">Your Brand</span> for ease of use, Competitor A for enterprise, Competitor B for price&hellip;</div></div></div>
 <div class="sm-zone sm-hit" style="margin-bottom:0"><span class="sm-num">7</span><div class="sm-lbl">People also search for</div><div class="sm-chips"><span>[category] software free</span><span class="sm-mark">Your Brand</span><span>Competitor A pricing</span><span>best [category] tools</span><span>[category] software reviews</span></div></div>
@@ -134,9 +134,9 @@ This is the kind of mock I build for step two — a recreation of the results pa
 </div>
 <ul class="sm-key">
 <li><div><b>The AI Overview names you.</b> Google&rsquo;s answer at the top of the page lists your brand, even if it&rsquo;s under &ldquo;other options.&rdquo;</div></li>
-<li class="sm-miss"><div><b>The top organic spots go to competitors.</b> This is the one view leadership checks each week &mdash; and the reason the number looks bad.</div></li>
+<li class="sm-miss"><div><b>The top organic spots go to competitors.</b> This is the one view leadership checks, and now it&rsquo;s only a fraction of the story.</div></li>
 <li><div><b>Buyers ask about you by name.</b> &ldquo;How much does Your Brand cost?&rdquo; shows up in the questions Google surfaces for a generic search.</div></li>
-<li><div><b>Your paid ad is on the page</b> with a 5.0 rating.</div></li>
+<li><div><b>Your paid ad is on the page.</b></div></li>
 <li class="sm-miss"><div><b>An old Reddit thread pushes a competitor</b> and still ranks on page one.</div></li>
 <li><div><b>A review roundup leads with you</b> for the strength buyers care about.</div></li>
 <li><div><b>Your brand is a suggested search</b> right alongside the competitors.</div></li>
@@ -151,15 +151,14 @@ This is the kind of mock I build for step two — a recreation of the results pa
 </div>
 <div class="sm-card">
 <div class="sm-eng">&#10022;&nbsp; Perplexity &middot; same search</div>
-<div class="sm-ask">Same question, different engine.</div>
+<div class="sm-ask">What&rsquo;s the best [category] software for [your use case]?</div>
 <div class="sm-ans"><span class="sm-mark">Your Brand</span> is a [category] software known for [your differentiators]. Competitor A is the enterprise option and Competitor B is the lower-cost pick for small teams.<sup class="sm-cit">[1][2]</sup></div>
 <div class="sm-fn"><b>[1]</b>&nbsp; yourbrand.example &nbsp;&nbsp; <b>[2]</b>&nbsp; a review-site roundup &mdash; the sources Perplexity cites inline.</div>
 </div>
 </div>
-<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</li><li>ChatGPT and Perplexity both name it for the same search.</li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</li></ul></div>
 <div class="sm-src">Illustrative mock. On a real engagement this is built from the client&rsquo;s actual search, signed out, with each AI answer captured the same day.</div>
 </div>
 
-The point lands in one look: the brand isn&rsquo;t in the top organic results, but it&rsquo;s all over the rest of the page, and the AI assistants name it first. That&rsquo;s the story the rank number was hiding.
+In one view, the brand is all over page one — the AI Overview, the questions people ask, the review roundup, the suggested searches — and both ChatGPT and Perplexity name it for the same search. The one place it doesn&rsquo;t show up is the top organic results, which is the number leadership watches every week. That&rsquo;s the story the rank number was hiding.
 
 I'm Laura Seelinger, founder of LSX Partners. Building the version of this talk track with a brand's real numbers — and the AI-visibility baseline behind it — is a big part of what I do. If you've got a traffic chart you're dreading explaining, that's a very good reason to talk.
