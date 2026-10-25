@@ -27,7 +27,7 @@ Your reporting stack was built for a version of search that's changing fast. Org
 
 Here's the version you've probably already seen: a client holds the number one organic ranking for their top keyword, and the traffic from that keyword still drops. Not because the ranking slipped — because AI started answering the question before anyone needed to click. If you send monthly reports, I know you're seeing this.
 
-But the bigger shift is what your clients' customers are even asking. The average Google search is 4.2 words. The average ChatGPT prompt is 23. People aren't typing keywords anymore — they're describing a whole situation and expecting one synthesized answer back, not a page of links to dig through. And that answer names names: specific brands, specific products, specific providers — and if your client isn't one of them, they were invisible for the entire conversation.
+But the bigger shift is what your clients' customers are even asking. LLM queries average around 23 words — roughly 6× a traditional search (SOCi 2026 Visibility Index). People aren't typing keywords anymore — they're describing a whole situation and expecting one synthesized answer back, not a page of links to dig through. And that answer names names: specific brands, specific products, specific providers — and if your client isn't one of them, they were invisible for the entire conversation.
 
 So your clients are in one of two spots right now: getting cited in AI answers, or not. And the agencies that can tell which, and actually do something about it, are the ones winning the next round of renewals and pitches.
 
