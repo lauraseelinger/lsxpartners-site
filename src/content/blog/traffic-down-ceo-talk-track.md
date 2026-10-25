@@ -69,7 +69,7 @@ When my clients are going into their next leadership or board meeting, this is t
 </div>
 
 <div style="font-size:0.95rem;color:#5b4a3f;background:#faf6f0;border-left:3px solid #c9b8a8;border-radius:0 8px 8px 0;padding:0.85rem 1.15rem;margin:1.2rem 0;">
-<strong style="color:#8a6d4f;">On the agency option:</strong> agencies hire me for this too. AI visibility is new, and a lot of them are fumbling through it the same way brands are. No shame in it — it’s just moving faster than most teams can keep up with.
+<strong style="color:#8a6d4f;">On the agency note:</strong> agencies hire me for this too. AI visibility is new, and a lot of them are fumbling through it the same way brands are. No shame in it — it’s just moving faster than most teams can keep up with, especially when unbillable hours are involved.
 </div>
 
 ## What does the talk track look like filled in?
