@@ -1,10 +1,10 @@
 ---
-title: "Why Your Traffic Is Down When Your Rankings Are Fine (and What to Tell Your CEO)"
+title: "Zero-Click Search: Why Traffic Drops When Rankings Hold"
 description: "Organic traffic can fall while your rankings hold because of zero-click search, where AI answers before the click. How to read it and explain it to leadership."
 pubDate: 2026-10-24
 register: punchy-personal
 tags: ["marketing-pov", "ai-visibility", "aeo", "leadership"]
-# heroImage: "/images/blog/traffic-down-ceo-talk-track.jpg"
+heroImage: "/images/blog/traffic-down-zero-click-search.jpg"
 faqs:
   - question: "Why is my organic traffic down when my rankings are fine?"
     answer: "Because AI now answers a lot of searches before anyone clicks. Google puts an AI Overview on top, and the AI assistants hand people a shortlist, so the informational clicks you used to earn never happen even though your page still ranks. The sessions that disappear first are the low-intent ones that rarely converted anyway."
