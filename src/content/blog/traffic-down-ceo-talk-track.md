@@ -102,15 +102,20 @@ This is the kind of mock I build for step two — a recreation of the results pa
 .sm-key li::before{counter-increment:k;content:counter(k);width:20px;height:20px;border-radius:50%;background:#b55434;color:#fff;font:700 10.5px Georgia,serif;display:flex;align-items:center;justify-content:center;margin-top:1px;}
 .sm-key li.sm-miss::before{background:#b9ab98;}
 .sm-key b{display:block;color:#3a2a22;}
-.sm-ai{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
-.sm-card{background:#fff;border:1px solid #e7dcc5;border-radius:12px;padding:13px 15px;}
-.sm-eng{font:700 10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#8a7a6f;margin-bottom:8px;}
-.sm-card table{width:100%;border-collapse:collapse;font-size:12px;}.sm-card td{border-top:1px solid #eee;padding:5px 4px;vertical-align:top;}.sm-card tr:first-child td{border-top:none;}
+.sm-ai{margin-top:18px;}
+.sm-card{border:1px solid #e6ded3;border-radius:14px;background:#faf6f0;padding:15px 20px;margin-bottom:14px;font-size:13px;line-height:1.65;color:#2b2622;}
+.sm-card:last-child{margin-bottom:0;}
+.sm-eng{font:700 10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#a89a86;margin-bottom:10px;}
+.sm-ask{color:#9a8f80;}
+.sm-ans{margin-top:6px;}
+.sm-cit{color:#b55434;font-weight:700;font-size:.72em;vertical-align:super;}
+.sm-fn{border-top:1px solid #ece3d6;margin-top:12px;padding-top:10px;font-size:11px;color:#a89a86;}
+.sm-fn b{color:#b55434;font-weight:700;}
 .sm-note{background:#f3f3e7;border:1px solid #e2e3ca;border-radius:12px;padding:12px 16px;margin-top:16px;}
 .sm-nl{font:700 9.5px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em;color:#6a6b34;margin-bottom:6px;}
 .sm-note ul{margin:0;padding-left:18px;font-size:13px;color:#4d4828;}
 .sm-src{font:10.5px ui-monospace,monospace;color:#8a7a6f;margin-top:10px;}
-@media(max-width:780px){.sm-grid,.sm-ai{grid-template-columns:1fr;}}
+@media(max-width:780px){.sm-grid{grid-template-columns:1fr;}}
 </style>
 
 <div class="sm-wrap">
@@ -138,10 +143,20 @@ This is the kind of mock I build for step two — a recreation of the results pa
 </ul>
 </div>
 <div class="sm-ai">
-<div class="sm-card"><div class="sm-eng">ChatGPT &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>Best fit for [your use case]</td><td>~$X/mo</td></tr><tr><td>Competitor A</td><td>Large teams</td><td>~$X/mo</td></tr><tr><td>Competitor B</td><td>Budget buyers</td><td>Free plan</td></tr></table><p style="font-size:12px;margin:8px 0 0">&ldquo;Start by comparing <span class="sm-mark">Your Brand</span> and Competitor A for [use case].&rdquo;</p></div>
-<div class="sm-card"><div class="sm-eng">Perplexity &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>[Category] software with [your differentiators].</td></tr><tr><td>Competitor A</td><td>Enterprise platform with broad features.</td></tr><tr><td>Competitor B</td><td>Lower-cost option for small teams.</td></tr></table></div>
+<div class="sm-card">
+<div class="sm-eng">&#10022;&nbsp; ChatGPT &middot; same search</div>
+<div class="sm-ask">What&rsquo;s the best [category] software for [your use case]?</div>
+<div class="sm-ans">For [your use case], I&rsquo;d start with <span class="sm-mark">Your Brand</span> &mdash; it&rsquo;s built for exactly that &mdash; then compare it against Competitor A if you need enterprise scale.<sup class="sm-cit">[1]</sup></div>
+<div class="sm-fn"><b>[1]</b>&nbsp; <span class="sm-mark">Your Brand</span> named first for the use case, pulled from review roundups and its own product pages.</div>
 </div>
-<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</div></li><li>ChatGPT and Perplexity both name it for the same search.</div></li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</div></li></ul></div>
+<div class="sm-card">
+<div class="sm-eng">&#10022;&nbsp; Perplexity &middot; same search</div>
+<div class="sm-ask">Same question, different engine.</div>
+<div class="sm-ans"><span class="sm-mark">Your Brand</span> is a [category] software known for [your differentiators]. Competitor A is the enterprise option and Competitor B is the lower-cost pick for small teams.<sup class="sm-cit">[1][2]</sup></div>
+<div class="sm-fn"><b>[1]</b>&nbsp; yourbrand.example &nbsp;&nbsp; <b>[2]</b>&nbsp; a review-site roundup &mdash; the sources Perplexity cites inline.</div>
+</div>
+</div>
+<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</li><li>ChatGPT and Perplexity both name it for the same search.</li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</li></ul></div>
 <div class="sm-src">Illustrative mock. On a real engagement this is built from the client&rsquo;s actual search, signed out, with each AI answer captured the same day.</div>
 </div>
 
