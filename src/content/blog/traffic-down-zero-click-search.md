@@ -1,6 +1,6 @@
 ---
 title: "Why Your Traffic Is Down When Your Rankings Are Fine (and What to Tell Your CEO)"
-description: "Organic traffic can fall while your rankings hold because AI now answers the search before anyone clicks — plus the talk track to explain it to leadership."
+description: "Organic traffic can fall while your rankings hold because of zero-click search, where AI answers before the click. How to read it and explain it to leadership."
 pubDate: 2026-10-24
 register: punchy-personal
 tags: ["marketing-pov", "ai-visibility", "aeo", "leadership"]
@@ -24,7 +24,7 @@ Marketing directors are currently getting questioned by their C-suite about webs
 <p style="margin:0;">I’m going to help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade.</p>
 </div>
 
-Your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
+Your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks — what the industry calls zero-click search. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
 
 ## Why is my traffic down when my rankings are fine?
 
@@ -33,7 +33,12 @@ Picture the results page for one of your largest-volume keyword terms:
 - **A year ago:** 10 organic blue links + sponsored results — you're ranked #4, so your site gets sizeable traffic to that page.
 - **Now:** an AI Overview that answers the entire question and recommends a few brands, a "People Also Ask" box, sponsored results, and THEN, more than halfway down the page, your #4 ranking.
 
-Page one search rankings are starting to feel like page three.
+Page one search rankings are starting to feel like page three. ([Why strong SEO can go invisible in AI search.](/blog/why-strong-seo-invisible-in-ai))
+
+<div style="border:1px solid #e6ded3;border-left:4px solid #b55434;border-radius:10px;background:#faf6f0;padding:12px 16px;margin:1.4rem 0;font-size:0.97rem;line-height:1.6;color:#2b2622;">
+<div style="font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:#a89a86;margin-bottom:6px;">Zero-click search</div>
+A zero-click search is one where the person gets their answer on the results page via an AI Overview, a featured snippet, or an AI assistant's shortlist, and never visits a site. A common reason for site traffic decreases across industries.
+</div>
 
 ### If your larger-volume terms are top-of-funnel
 
@@ -41,7 +46,7 @@ If you have a lot of broad informational pages, expect the traffic decline to be
 
 ## Is site traffic decline related to AI?
 
-If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need a comprehensive audit of where AI is sending your buyers and if you're the brand it recommends.
+If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need [a comprehensive audit](/blog/how-to-audit-ai-visibility) of where AI is sending your buyers and if you're the brand it recommends.
 
 A few signals to look at in your metrics:
 
@@ -158,7 +163,7 @@ This is the kind of mock I build for step two — a recreation of the results pa
 </div>
 </div>
 
-In one view, the brand is all over page one — the AI Overview, the questions people ask, the review roundup, the suggested searches — and both ChatGPT and Perplexity name it for the same search. Instead of focusing on the one place the brand doesn't show up, you tell the full story.
+In one view, the brand is all over page one — the AI Overview, the questions people ask, the review roundup, the suggested searches — and both ChatGPT and Perplexity name it for the same search. Instead of focusing on the one place the brand doesn't show up, you tell the full story. ([More on why your brand does or doesn't land in the AI answer.](/blog/ai-product-recommendations))
 
 ## So where do I start?
 
