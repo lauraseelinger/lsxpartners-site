@@ -7,11 +7,11 @@ tags: ["marketing-pov", "ai-visibility", "aeo", "leadership"]
 # heroImage: "/images/blog/traffic-down-ceo-talk-track.jpg"
 faqs:
   - question: "Why is my organic traffic down when my rankings are fine?"
-    answer: "Because AI now answers a lot of searches before anyone clicks. Google puts an AI Overview on top, and ChatGPT and Perplexity hand people a shortlist, so the informational clicks you used to earn never happen even though your page still ranks. The sessions that disappear first are the low-intent ones that rarely converted anyway."
+    answer: "Because AI now answers a lot of searches before anyone clicks. Google puts an AI Overview on top, and the AI assistants hand people a shortlist, so the informational clicks you used to earn never happen even though your page still ranks. The sessions that disappear first are the low-intent ones that rarely converted anyway."
   - question: "Is it bad that AI is answering searches instead of sending clicks?"
     answer: "Not automatically. If branded search and lead quality are rising while total sessions fall, you're likely dealing with more qualified sessions. Buyers are hearing about you inside the AI answer and coming to you by name. Marketers have to take a step back to see the whole picture, not just focus on single numbers."
   - question: "What should I tell the C-suite when traffic drops?"
-    answer: "Illustrate the search experience. Highlight what other changes have happened, likely in the positive direction. And start updating your metrics reports to show AI visibility numbers as well."
+    answer: "Illustrate the search experience, highlight what other changes have happened (likely in the positive direction), and start updating your metrics reports to include AI visibility numbers."
   - question: "How do I measure AI visibility for leadership?"
     answer: "Put rankings, whether you're named in AI answers, branded search, and lead quality on one report so leadership sees the whole funnel in one place. Tracking rankings alone is why the traffic drop looks like a crisis instead of a shift."
   - question: "Should I still invest in SEO?"
@@ -166,4 +166,4 @@ AI visibility is not a topic I recommend white-knuckling through, especially if 
 
 ---
 
-I'm Laura Seelinger, AI visibility expert and founder of LSX Partners. As a former corporate marketing senior leader, I make my clients' lives easier because I understand how to strategize across silos and speak to the C-suite. If you want to lift the weight of AI search off your team's shoulders, [reach out for an intro call](/contact).
+I'm Laura Seelinger, AI visibility expert and founder of LSX Partners. I make my clients' lives easier because I understand how to strategize across silos and speak to the C-suite. If you want to lift the weight of AI search off your team's shoulders, [reach out for an intro call](/contact).
