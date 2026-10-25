@@ -16,7 +16,7 @@ faqs:
     answer: "Answer engine optimization isn’t optional anymore. It’s the layer between your content strategy and where your customers are actually searching for answers. The shift from typing keywords into Google to describing problems to AI tools isn’t slowing down. It’s accelerating."
 ---
 
-LLM queries average around 23 words — roughly 6× the length of a traditional search (SOCi 2026 Visibility Index).
+LLM queries average around 23 words — roughly 6× the length of a traditional search (SOCi Local Visibility Index).
 
 That difference tells you everything about where search is heading. People aren’t typing fragmented keywords into a search bar anymore. They’re describing full problems, with details and specifics, to AI tools that give them one synthesized answer instead of a page of links to sort through.
 

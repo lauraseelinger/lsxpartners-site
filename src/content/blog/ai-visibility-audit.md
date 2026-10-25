@@ -9,7 +9,7 @@ faqs:
   - question: "What is an AI visibility audit?"
     answer: "An AI visibility audit is a systematic process of testing how AI search platforms respond to queries about a brand, its category and its competitors. That means ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude and others — each of which has different citation behavior, different training data and different trust signals."
   - question: "Why is this now an agency problem?"
-    answer: "AI search isn’t coming. It’s here. The average AI prompt runs around 23 words, roughly 6× a traditional search (SOCi 2026 Visibility Index). Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves."
+    answer: "AI search isn’t coming. It’s here. The average AI prompt runs around 23 words, roughly 6× a traditional search (SOCi Local Visibility Index). Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves."
   - question: "What does an AI visibility audit actually cover?"
     answer: "A thorough AI visibility audit has several layers, and each one requires different work: testing how each platform answers real buyer prompts, measuring share of voice against competitors, checking the grounding searches AI runs in the background, and auditing how accurately AI describes the brand and its features."
   - question: "Can your team do this?"
@@ -32,7 +32,7 @@ The results tend to surprise agency owners more than anyone. Clients with strong
 
 ## Why this is now an agency problem
 
-AI search isn’t coming. It’s here. The average AI prompt runs around 23 words, roughly 6× a traditional search (SOCi 2026 Visibility Index). Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves.
+AI search isn’t coming. It’s here. The average AI prompt runs around 23 words, roughly 6× a traditional search (SOCi Local Visibility Index). Buyers are asking AI full questions, describing problems and asking for comparisons and recommendations, then getting answers rather than a list of links to sort through themselves.
 
 Server logs are already showing AI bots crawling client sites across industries — assuming they can get in, which [more sites are blocking than you'd expect](/blog/cloudflare-blocking-ai-crawlers). Those bots aren’t browsing — they’re researching, indexing and deciding what to cite. Most brands have no idea this is happening, and most of their agencies don’t either.
 
@@ -76,7 +76,7 @@ Yes, and understanding the process is valuable regardless of who runs it. But ag
 
 ### The learning investment is real
 
-Before running a single prompt, your team needs to understand how each platform works, what it trusts and why. These platforms have meaningfully different citation behaviors, and what works for one doesn’t automatically work for another. An analysis of 680 million citations found that only 11% of domains are cited by both ChatGPT and Perplexity ([Averi, March 2026](https://www.averi.ai/how-to/chatgpt-vs.-perplexity-vs.-google-ai-mode-the-b2b-saas-citation-benchmarks-report-%282026%29)), so optimizing for one without understanding the others leaves meaningful coverage on the table.
+Before running a single prompt, your team needs to understand how each platform works, what it trusts and why. These platforms have meaningfully different citation behaviors, and what works for one doesn’t automatically work for another. Only about 11% of domains are cited by both ChatGPT and Perplexity ([Digital Bloom, 2025 AI citation report](https://thedigitalbloom.com/learn/2025-ai-citation-llm-visibility-report/)), so optimizing for one without understanding the others leaves meaningful coverage on the table.
 
 Learning this well — not surface-level well, but well enough to build client strategy around it — takes weeks of focused study. There are frameworks, research papers, industry analyses and emerging best practices being documented in real time, and someone on your team needs to read them, synthesize them and understand how they apply across your specific client base. That’s not a one-afternoon project, and it’s not a one-time investment either, because this keeps moving.
 
