@@ -162,9 +162,9 @@ In one view, the brand is all over page one — the AI Overview, the questions p
 
 ## So where do I start?
 
-The traffic-down story isn't going away. AI is answering more of the search every quarter, not less, so the gap between a flat rank and a falling session count only gets wider from here. The marketers who get ahead of it stop defending one number in isolation and start showing the whole surface their brand actually lives on.
+You can white-knuckle this yourself. Read everything, run the searches, build the mock, and relearn how AI decides who it cites (which changes again the week you finally feel caught up) while still doing your actual job. Plenty of smart marketers are attempting exactly that right now.
 
-Pull the search your buyers really run, build the mock, and get your AI visibility numbers into the same report as rankings and sessions. That's the move from explaining a drop to telling the full story, and it's a much better meeting to walk into.
+The faster path is bringing in someone who already lives in it. AI visibility is too new and moving too fast to sort out between meetings, and the right expert gets you onto the fixes that actually change your citations before your next QBR, not a few quarters after.
 
 ---
 
