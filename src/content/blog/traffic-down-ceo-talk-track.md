@@ -9,13 +9,13 @@ faqs:
   - question: "Why is my organic traffic down when my rankings are fine?"
     answer: "Because AI now answers a lot of searches before anyone clicks. Google puts an AI Overview on top, and ChatGPT and Perplexity hand people a shortlist, so the informational clicks you used to earn never happen even though your page still ranks. The sessions that disappear first are the low-intent ones that rarely converted anyway."
   - question: "Is it bad that AI is answering searches instead of sending clicks?"
-    answer: "Not automatically. If branded search and lead quality are rising while total sessions fall, the funnel got shorter, not weaker: buyers are hearing about you inside the AI answer and coming to you by name. Look at the whole picture, not just the sessions line."
-  - question: "What should I tell my CEO when traffic drops?"
-    answer: "Lead with the mechanism, not an apology. Show that rankings moved during a known volatility window that hit competitors too, that an AI answer now sits above your result, that you still show up inside those AI answers, and that the signals that matter (branded search, lead quality) are holding or up. Then ask to measure AI visibility alongside rankings."
+    answer: "Not automatically. If branded search and lead quality are rising while total sessions fall, you're likely dealing with more qualified sessions. Buyers are hearing about you inside the AI answer and coming to you by name. Marketers have to take a step back to see the whole picture, not just focus on single numbers."
+  - question: "What should I tell the C-suite when traffic drops?"
+    answer: "Illustrate the search experience. Highlight what other changes have happened, likely in the positive direction. And start updating your metrics reports to show AI visibility numbers as well."
   - question: "How do I measure AI visibility for leadership?"
     answer: "Put rankings, whether you're named in AI answers, branded search, and lead quality on one report so leadership sees the whole funnel in one place. Tracking rankings alone is why the traffic drop looks like a crisis instead of a shift."
   - question: "Should I still invest in SEO?"
-    answer: "Yes. Ranking in the underlying index is what makes a page eligible to be pulled into the AI answer. SEO and AI visibility are one funnel measured two ways, so you fund both, you just stop measuring only one of them."
+    answer: "Yes. Ranking in the underlying index is what makes a page eligible to be pulled into the AI answer. SEO and AI visibility are one funnel measured two ways."
 ---
 
 Marketing directors are currently getting questioned by their C-suite about website traffic — meanwhile they're FIGHTING FOR THEIR LIVES adjusting their content strategy to maintain search rankings while simultaneously trying to learn about AI visibility.
@@ -128,20 +128,20 @@ This is the kind of mock I build for step two — a recreation of the results pa
 </div>
 </div>
 <ul class="sm-key">
-<li><b>The AI Overview names you.</b> Google&rsquo;s answer at the top of the page lists your brand, even if it&rsquo;s under &ldquo;other options.&rdquo;</li>
-<li class="sm-miss"><b>The top organic spots go to competitors.</b> This is the one view leadership checks each week &mdash; and the reason the number looks bad.</li>
-<li><b>Buyers ask about you by name.</b> &ldquo;How much does Your Brand cost?&rdquo; shows up in the questions Google surfaces for a generic search.</li>
-<li><b>Your paid ad is on the page</b> with a 5.0 rating.</li>
-<li class="sm-miss"><b>An old Reddit thread pushes a competitor</b> and still ranks on page one.</li>
-<li><b>A review roundup leads with you</b> for the strength buyers care about.</li>
-<li><b>Your brand is a suggested search</b> right alongside the competitors.</li>
+<li><div><b>The AI Overview names you.</b> Google&rsquo;s answer at the top of the page lists your brand, even if it&rsquo;s under &ldquo;other options.&rdquo;</div></li>
+<li class="sm-miss"><div><b>The top organic spots go to competitors.</b> This is the one view leadership checks each week &mdash; and the reason the number looks bad.</div></li>
+<li><div><b>Buyers ask about you by name.</b> &ldquo;How much does Your Brand cost?&rdquo; shows up in the questions Google surfaces for a generic search.</div></li>
+<li><div><b>Your paid ad is on the page</b> with a 5.0 rating.</div></li>
+<li class="sm-miss"><div><b>An old Reddit thread pushes a competitor</b> and still ranks on page one.</div></li>
+<li><div><b>A review roundup leads with you</b> for the strength buyers care about.</div></li>
+<li><div><b>Your brand is a suggested search</b> right alongside the competitors.</div></li>
 </ul>
 </div>
 <div class="sm-ai">
 <div class="sm-card"><div class="sm-eng">ChatGPT &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>Best fit for [your use case]</td><td>~$X/mo</td></tr><tr><td>Competitor A</td><td>Large teams</td><td>~$X/mo</td></tr><tr><td>Competitor B</td><td>Budget buyers</td><td>Free plan</td></tr></table><p style="font-size:12px;margin:8px 0 0">&ldquo;Start by comparing <span class="sm-mark">Your Brand</span> and Competitor A for [use case].&rdquo;</p></div>
 <div class="sm-card"><div class="sm-eng">Perplexity &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>[Category] software with [your differentiators].</td></tr><tr><td>Competitor A</td><td>Enterprise platform with broad features.</td></tr><tr><td>Competitor B</td><td>Lower-cost option for small teams.</td></tr></table></div>
 </div>
-<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</li><li>ChatGPT and Perplexity both name it for the same search.</li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</li></ul></div>
+<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</div></li><li>ChatGPT and Perplexity both name it for the same search.</div></li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</div></li></ul></div>
 <div class="sm-src">Illustrative mock. On a real engagement this is built from the client&rsquo;s actual search, signed out, with each AI answer captured the same day.</div>
 </div>
 
