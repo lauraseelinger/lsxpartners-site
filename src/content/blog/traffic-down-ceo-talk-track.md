@@ -46,14 +46,14 @@ If you've maintained your search rankings and traffic is still sliding, then yes
 A few signals to look at in your metrics:
 
 - **Branded search:** Is branded traffic up YoY? That's a sign people are discovering you in an AI answer and then searching your brand to visit your site.
-- **Lead quality:** Is your session-to-conversion or action higher? You're getting less top-of-funnel and more qualified visitors.
+- **Lead quality:** Is your conversion (key-event) rate per session higher? You're getting less top-of-funnel and more qualified visitors.
 
 <div style="display:flex;gap:0.75rem;align-items:flex-start;background:#f6efe6;border-left:4px solid #b55434;border-radius:0 10px 10px 0;padding:0.95rem 1.2rem;margin:1.3rem 0;">
 <span style="font-size:1.2rem;line-height:1.45;flex:none;">💡</span>
-<p style="margin:0;"><strong>AI-referred traffic:</strong> Can’t you just track the visits coming from ChatGPT and Perplexity? You can, but it’s volatile and undercounted. Most AI tools pass no referrer, and people rarely click the link anyway — they read the answer, then search your brand. So AI traffic mostly surfaces as branded search, which is why that’s the one to trust.</p>
+<p style="margin:0;"><strong>AI-referred traffic:</strong> Can’t you just track the visits coming from ChatGPT and Perplexity? You can, but it’s volatile and undercounted. Most AI tools pass no referrer, and people rarely click the link anyway — they read the answer, then search your brand, (increasing your branded search metric).</p>
 </div>
 
-If branded search and lead quality are up while sessions are down, your funnel didn't get weaker. It got SHORTER. That's a genuinely great thing wearing a bad thing's outfit on the one chart everyone screenshots.
+If branded search and lead quality are up while sessions are down, your funnel didn't get weaker, it got shorter with higher quality sessions.
 
 ## What do I actually say in the leadership meeting?
 
