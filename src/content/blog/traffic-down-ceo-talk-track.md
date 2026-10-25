@@ -63,12 +63,14 @@ When my clients are going into their next leadership or board meeting, this is t
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.8rem;">The talk-track structure</strong>
 <p style="margin:0 0 0.85rem;"><strong>1. Identify what's actually got leadership worried.</strong> Is it a specific keyword ranking, a traffic number, a stage of the funnel? Don't be afraid to highlight that exact thing, because you're going to rewrite what it means for them during the presentation.</p>
 <p style="margin:0 0 0.85rem;"><strong>2. Recreate the real search experience behind it.</strong> Pull up the searches tied to that concern as they look today and show the room what a buyer actually sees now — the AI Overview, the shortlist, the ads, the scrolling — before they ever reach a ranked result. The number means nothing until they see the page.</p>
-<p style="margin:0 0 0.85rem;"><strong>3. Show every place your brand still shows up.</strong> Walk through where you still appear in that experience: named in the AI Overview, cited in the answer, in the recommendations, in the questions Google surfaces. The visibility didn't vanish, it moved — point to exactly where you still win.</p>
+<p style="margin:0 0 0.85rem;"><strong>3. Show every place your brand still shows up.</strong> Walk through where you still appear in that experience: named in the AI Overview, cited in the answer, in the recommendations, in the questions Google surfaces. Your visibility didn't decrease, it's just now spread out in areas that don't show traditional metrics.</p>
 <p style="margin:0 0 0.85rem;"><strong>4. Reframe the scary number.</strong> The ranking or traffic drop is one line of a much bigger story. Set it next to the positive signals — branded search climbing, lead quality up, you being the brand AI names — so leadership sees the whole picture, not the one red number.</p>
-<p style="margin:0;"><strong>5. Set the go-forward.</strong> Keep rankings as a KPI, but report on the whole search picture, traditional and AI, and how the buyer journey shifted. Recommend establishing an AI visibility baseline this quarter so you walk into next quarter with the strategy already in hand.</p>
+<p style="margin:0;"><strong>5. Establish the new baseline.</strong> Keep rankings as a KPI, but report on the whole search picture, traditional and AI, and how the buyer journey shifted. Stop tip-toeing around AI visibility and invest in it — whether that's a full-time hire, a consultant, or making sure your agency <em>actually</em> knows how to measure it.</p>
 </div>
 
-That last beat is the whole pitch. You're not begging for budget to reverse a decline. You're asking to own the surface that ate the clicks you used to count.
+<div style="font-size:0.95rem;color:#5b4a3f;background:#faf6f0;border-left:3px solid #c9b8a8;border-radius:0 8px 8px 0;padding:0.85rem 1.15rem;margin:1.2rem 0;">
+<strong style="color:#8a6d4f;">On the agency option:</strong> agencies hire me for this too. AI visibility is new, and a lot of them are fumbling through it the same way brands are. No shame in it — it’s just moving faster than most teams can keep up with.
+</div>
 
 ## What does the talk track look like filled in?
 
