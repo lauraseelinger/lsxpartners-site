@@ -156,9 +156,16 @@ This is the kind of mock I build for step two — a recreation of the results pa
 <div class="sm-fn"><b>[1]</b>&nbsp; yourbrand.example &nbsp;&nbsp; <b>[2]</b>&nbsp; a review-site roundup &mdash; the sources Perplexity cites inline.</div>
 </div>
 </div>
-<div class="sm-src">Illustrative mock. On a real engagement this is built from the client&rsquo;s actual search, signed out, with each AI answer captured the same day.</div>
 </div>
 
-In one view, the brand is all over page one — the AI Overview, the questions people ask, the review roundup, the suggested searches — and both ChatGPT and Perplexity name it for the same search. The one place it doesn&rsquo;t show up is the top organic results, which is the number leadership watches every week. That&rsquo;s the story the rank number was hiding.
+In one view, the brand is all over page one — the AI Overview, the questions people ask, the review roundup, the suggested searches — and both ChatGPT and Perplexity name it for the same search. Instead of focusing on the one place the brand doesn't show up, you tell the full story.
 
-I'm Laura Seelinger, founder of LSX Partners. Building the version of this talk track with a brand's real numbers — and the AI-visibility baseline behind it — is a big part of what I do. If you've got a traffic chart you're dreading explaining, that's a very good reason to talk.
+## So where do I start?
+
+The traffic-down story isn't going away. AI is answering more of the search every quarter, not less, so the gap between a flat rank and a falling session count only gets wider from here. The marketers who get ahead of it stop defending one number in isolation and start showing the whole surface their brand actually lives on.
+
+Pull the search your buyers really run, build the mock, and get your AI visibility numbers into the same report as rankings and sessions. That's the move from explaining a drop to telling the full story, and it's a much better meeting to walk into.
+
+---
+
+I'm Laura Seelinger, founder of LSX Partners, and AI visibility is the whole thing I do. The talk track in this post is something I build with each client off their real search, their real numbers, and a baseline of where AI is actually sending their buyers. So if your rankings are holding and your traffic is sliding and someone upstairs wants an answer, [you know where to find me](/contact).
