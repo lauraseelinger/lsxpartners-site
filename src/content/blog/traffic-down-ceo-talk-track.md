@@ -41,9 +41,9 @@ If you have a lot of broad informational pages, expect the traffic decline to be
 
 ## Is site traffic decline related to AI?
 
-If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need a full, comprehensive audit of where AI is sending your buyers and if you're the brand it recommends.
+If you've maintained your search rankings and traffic is still sliding, then yes — it's very likely AI absorbing the clicks before they ever reach you. But knowing it's AI is only a fraction of the equation. To build a strategy that protects your conversions, you need a comprehensive audit of where AI is sending your buyers and if you're the brand it recommends.
 
-The first things I look at are:
+A few signals to look at in your metrics:
 
 - **Branded search:** Is branded traffic up YoY? That's a sign people are discovering you in an AI answer and then searching your brand to visit your site.
 - **Lead quality:** Is your session-to-conversion or action higher? You're getting less top-of-funnel and more qualified visitors.
