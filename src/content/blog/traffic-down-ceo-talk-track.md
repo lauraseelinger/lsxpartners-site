@@ -18,26 +18,26 @@ faqs:
     answer: "Yes. Ranking in the underlying index is what makes a page eligible to be pulled into the AI answer. SEO and AI visibility are one funnel measured two ways, so you fund both, you just stop measuring only one of them."
 ---
 
-Marketing directors are currently getting questioned by their C-suite about website traffic — meanwhile they're FIGHTING FOR THEIR LIVES in their content strategy to maintain search rankings and learn about AI visibility.
+Marketing directors are currently getting questioned by their C-suite about website traffic — meanwhile they're FIGHTING FOR THEIR LIVES adjusting their content strategy to maintain search rankings while simultaneously trying to learn about AI visibility.
 
 <div class="post-lede" style="background:#f4ece0;border-left:5px solid #b55434;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.6rem 0;">
 <p style="margin:0;">I’m going to help you write your next leadership-meeting talk track, so you can explain how AI search is changing the traditional metrics marketers have reported on for the last decade.</p>
 </div>
 
-In short: your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
+Your traffic can fall while your rankings hold, because AI now answers the search before anyone clicks. Once you can show WHY the number moved and that the buyers who matter are still finding you, "traffic is down" stops being a crisis and turns into a story you're ahead of.
 
 ## Why is my traffic down when my rankings are fine?
 
 Picture the results page for one of your largest-volume keyword terms:
 
-- **A year ago:** 10 organic blue links + sponsored results — but you're ranked #4, so your site gets sizeable traffic to that page.
+- **A year ago:** 10 organic blue links + sponsored results — you're ranked #4, so your site gets sizeable traffic to that page.
 - **Now:** an AI Overview that answers the entire question and recommends a few brands, a "People Also Ask" box, sponsored results, and THEN, more than halfway down the page, your #4 ranking.
 
-What used to be above the fold is now several scrolls below — and includes the full answer without a click.
+Page one search rankings are starting to feel like page three.
 
 ### If your larger-volume terms are top-of-funnel
 
-If you have a lot of broad informational pages, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. And the only number the C-suite actually watches is the one that's headlined every deck for a decade — site traffic — and now it's red. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
+If you have a lot of broad informational pages, expect the traffic decline to be high because they're most definitely answered in the AI Overview. The "what is," "how do I," and "X vs Y" types of searches are exactly what AI can answer for users in two sentences and a couple bullets. And one of the main KPIs that's been in C-suite decks for the past decade — site traffic — is now red. The key for marketing directors to get through their next quarterly business review is to successfully and succinctly tell the search experience story.
 
 ## Is site traffic decline related to AI?
 
