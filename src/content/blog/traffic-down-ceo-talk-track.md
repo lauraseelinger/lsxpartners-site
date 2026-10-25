@@ -57,17 +57,16 @@ If branded search and lead quality are up while sessions are down, your funnel d
 
 ## What do I actually say in the leadership meeting?
 
-The structure I build for clients, five beats in order. Walk your CEO through them and the "why is traffic down" email answers itself. Fill the brackets with your real numbers, and do NOT wing it — pull them before the meeting.
+When my clients are going into their next leadership or board meeting, this is the talk-track structure I help them prep:
 
-> **1. The rankings changed, but that's only part of the story.** Our rankings for [these searches] moved, partly during a Google volatility window that hit competitors too — and we still show up in [N] spots on page one, with ChatGPT and Perplexity naming us for the same search.
->
-> **2. The page a buyer sees looks different than it did a year ago.** Google now puts an AI Overview at the top, so people get an answer and a shortlist before they ever reach a ranked result. What sits below it is a mix of vendors, roundup sites, and sometimes an old forum thread.
->
-> **3. We may not rank the same, but we're all over page one anyway.** List every place you still appear: the AI Overview, People Also Ask, a review-site roundup, a suggested search, your ad, and the AI tools that name you first on the buying question.
->
-> **4. Traffic is down, and the signals that buyers are finding and choosing us are up.** Branded search is up [X]% year over year, AI-referred leads hit [a record] in [quarter], and session-to-contact [held/improved] even as total sessions fell — because most of the sessions we lost were informational searches the AI now answers for free.
->
-> **5. What this means going forward.** Keep rankings as a KPI, but report on the whole search picture, traditional and AI, and how the buyer journey shifted. The recommendation: establish an AI visibility baseline this quarter so we walk into next quarter with the strategy already in hand.
+<div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem 0 1.6rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.8rem;">The talk-track structure</strong>
+<p style="margin:0 0 0.85rem;"><strong>1. The rankings changed, but that's only part of the story.</strong> Our rankings for [these searches] moved, partly during a Google volatility window that hit competitors too — and we still show up in [N] spots on page one, with ChatGPT and Perplexity naming us for the same search.</p>
+<p style="margin:0 0 0.85rem;"><strong>2. The page a buyer sees looks different than it did a year ago.</strong> Google now puts an AI Overview at the top, so people get an answer and a shortlist before they ever reach a ranked result. What sits below it is a mix of vendors, roundup sites, and sometimes an old forum thread.</p>
+<p style="margin:0 0 0.85rem;"><strong>3. We may not rank the same, but we're all over page one anyway.</strong> List every place you still appear: the AI Overview, People Also Ask, a review-site roundup, a suggested search, your ad, and the AI tools that name you first on the buying question.</p>
+<p style="margin:0 0 0.85rem;"><strong>4. Traffic is down, and the signals that buyers are finding and choosing us are up.</strong> Branded search is up [X]% year over year, AI-referred leads hit [a record] in [quarter], and session-to-contact [held/improved] even as total sessions fell — because most of the sessions we lost were informational searches the AI now answers for free.</p>
+<p style="margin:0;"><strong>5. What this means going forward.</strong> Keep rankings as a KPI, but report on the whole search picture, traditional and AI, and how the buyer journey shifted. The recommendation: establish an AI visibility baseline this quarter so we walk into next quarter with the strategy already in hand.</p>
+</div>
 
 That last beat is the whole pitch. You're not begging for budget to reverse a decline. You're asking to own the surface that ate the clicks you used to count.
 
@@ -75,15 +74,14 @@ That last beat is the whole pitch. You're not begging for budget to reverse a de
 
 Here is a real one I built for a client, with the brand and industry changed so I'm not airing anyone's numbers in public. Say the company sells field-service software and the search is "best field service software."
 
-> **1. Rankings changed, but that's part of a bigger story.** We rank around #29 for "field service software," but we still show up in five places on page one, and ChatGPT and Perplexity both list us first for it.
->
-> **2. The page buyers see looks different than a year ago.** Google now shows an AI Overview at the top, so a buyer gets an answer and a shortlist before the first ranked result. Below it is a mix of vendors, roundup sites, and a two-year-old Reddit thread recommending a competitor.
->
-> **3. We're all over page one anyway.** We're named in the AI Overview, we appear in the questions Google shows ("How much does [brand] cost?"), we lead a review site's roundup snippet, we're a suggested search, and our ad runs a 5.0 rating from 100+ reviews. On the question version ("What's the best field service software?"), ChatGPT names us the top pick, while Perplexity and the AI Overview put a competitor first and us in the top three. (The competitor's edge in those answers is deeper accounting integration — worth watching.)
->
-> **4. Traffic is down, and the buying signals are up.** Branded search is up year over year, which fits buyers hearing about us in an AI answer and then searching our name. AI-referred leads hit an all-time high in Q3 even as AI-referred sessions dipped. Total sessions fell 18% year over year, but session-to-contact improved, and most of the lost sessions were informational searches AI Overviews now answer.
->
-> **5. What this means for next year.** We keep rankings as a KPI, but we look at search as a whole, traditional and AI, and how the buyer journey changed. Branded search, AI-referred leads, and session-to-contact are part of the same conversation. Recommendation: establish an AI visibility baseline this quarter so the team has the strategy in hand for next quarter.
+<div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem 0 1.6rem;">
+<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.8rem;">A real example (brand + industry changed)</strong>
+<p style="margin:0 0 0.85rem;"><strong>1. Rankings changed, but that's part of a bigger story.</strong> We rank around #29 for "field service software," but we still show up in five places on page one, and ChatGPT and Perplexity both list us first for it.</p>
+<p style="margin:0 0 0.85rem;"><strong>2. The page buyers see looks different than a year ago.</strong> Google now shows an AI Overview at the top, so a buyer gets an answer and a shortlist before the first ranked result. Below it is a mix of vendors, roundup sites, and a two-year-old Reddit thread recommending a competitor.</p>
+<p style="margin:0 0 0.85rem;"><strong>3. We're all over page one anyway.</strong> We're named in the AI Overview, we appear in the questions Google shows ("How much does [brand] cost?"), we lead a review site's roundup snippet, we're a suggested search, and our ad runs a 5.0 rating from 100+ reviews. On the question version ("What's the best field service software?"), ChatGPT names us the top pick, while Perplexity and the AI Overview put a competitor first and us in the top three. (The competitor's edge in those answers is deeper accounting integration — worth watching.)</p>
+<p style="margin:0 0 0.85rem;"><strong>4. Traffic is down, and the buying signals are up.</strong> Branded search is up year over year, which fits buyers hearing about us in an AI answer and then searching our name. AI-referred leads hit an all-time high in Q3 even as AI-referred sessions dipped. Total sessions fell 18% year over year, but session-to-contact improved, and most of the lost sessions were informational searches AI Overviews now answer.</p>
+<p style="margin:0;"><strong>5. What this means for next year.</strong> We keep rankings as a KPI, but we look at search as a whole, traditional and AI, and how the buyer journey changed. Branded search, AI-referred leads, and session-to-contact are part of the same conversation. Recommendation: establish an AI visibility baseline this quarter so the team has the strategy in hand for next quarter.</p>
+</div>
 
 Notice what that does. Every beat opens by acknowledging the uncomfortable number, then shows the demand didn't vanish — it moved somewhere you can still win. That's the difference between walking out of the meeting with a budget cut and walking out with a baseline.
 
