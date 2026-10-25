@@ -162,10 +162,8 @@ In one view, the brand is all over page one — the AI Overview, the questions p
 
 ## So where do I start?
 
-You can white-knuckle this yourself. Read everything, run the searches, build the mock, and relearn how AI decides who it cites (which changes again the week you finally feel caught up) while still doing your actual job. Plenty of smart marketers are attempting exactly that right now.
-
-The faster path is bringing in someone who already lives in it. AI visibility is too new and moving too fast to sort out between meetings, and the right expert gets you onto the fixes that actually change your citations before your next QBR, not a few quarters after.
+AI visibility is not a topic I recommend white-knuckling through, especially if it's on the agenda in your leadership meetings. This is a specialty that requires a high level of strategic guidance and cross-functional work. The marketing leaders who bring in a dedicated AI visibility expert will get ahead of their competitors and lift a lot of weight off their team's shoulders.
 
 ---
 
-I'm Laura Seelinger, founder of LSX Partners, and AI visibility is the whole thing I do. The talk track in this post is something I build with each client off their real search, their real numbers, and a baseline of where AI is actually sending their buyers. So if your rankings are holding and your traffic is sliding and someone upstairs wants an answer, [you know where to find me](/contact).
+I'm Laura Seelinger, AI visibility expert and founder of LSX Partners. As a former corporate marketing senior leader, I make my clients' lives easier because I understand how to strategize across silos and speak to the C-suite. If you want to lift the weight of AI search off your team's shoulders, [reach out for an intro call](/contact).
