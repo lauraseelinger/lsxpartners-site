@@ -72,19 +72,79 @@ When my clients are going into their next leadership or board meeting, this is t
 <strong style="color:#8a6d4f;">On the agency note:</strong> agencies hire me for this too. AI visibility is new, and a lot of them are fumbling through it the same way brands are. No shame in it — it’s just moving faster than most teams can keep up with, especially when unbillable hours are involved.
 </div>
 
-## What does the talk track look like filled in?
+## What does recreating the search experience look like?
 
-Here is a real one I built for a client, with the brand and industry changed so I'm not airing anyone's numbers in public. Say the company sells field-service software and the search is "best field service software."
+This is the kind of mock I build for step two — a recreation of the results page for the search in question, with every spot the brand still shows up marked. It turns a rank number nobody can picture into a page leadership can actually see.
 
-<div style="background:#eef3f4;border:1px solid #cfdde1;border-left:6px solid #a3bbc3;border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem 0 1.6rem;">
-<strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.72rem;color:#b55434;margin-bottom:0.8rem;">A real example (brand + industry changed)</strong>
-<p style="margin:0 0 0.85rem;"><strong>1. Rankings changed, but that's part of a bigger story.</strong> We rank around #29 for "field service software," but we still show up in five places on page one, and ChatGPT and Perplexity both list us first for it.</p>
-<p style="margin:0 0 0.85rem;"><strong>2. The page buyers see looks different than a year ago.</strong> Google now shows an AI Overview at the top, so a buyer gets an answer and a shortlist before the first ranked result. Below it is a mix of vendors, roundup sites, and a two-year-old Reddit thread recommending a competitor.</p>
-<p style="margin:0 0 0.85rem;"><strong>3. We're all over page one anyway.</strong> We're named in the AI Overview, we appear in the questions Google shows ("How much does [brand] cost?"), we lead a review site's roundup snippet, we're a suggested search, and our ad runs a 5.0 rating from 100+ reviews. On the question version ("What's the best field service software?"), ChatGPT names us the top pick, while Perplexity and the AI Overview put a competitor first and us in the top three. (The competitor's edge in those answers is deeper accounting integration — worth watching.)</p>
-<p style="margin:0 0 0.85rem;"><strong>4. Traffic is down, and the buying signals are up.</strong> Branded search is up year over year, which fits buyers hearing about us in an AI answer and then searching our name. AI-referred leads hit an all-time high in Q3 even as AI-referred sessions dipped. Total sessions fell 18% year over year, but session-to-contact improved, and most of the lost sessions were informational searches AI Overviews now answer.</p>
-<p style="margin:0;"><strong>5. What this means for next year.</strong> We keep rankings as a KPI, but we look at search as a whole, traditional and AI, and how the buyer journey changed. Branded search, AI-referred leads, and session-to-contact are part of the same conversation. Recommendation: establish an AI visibility baseline this quarter so the team has the strategy in hand for next quarter.</p>
+<style>
+.sm-wrap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:1.4rem 0 1.6rem;}
+.sm-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:start;}
+.sm-serp{background:#fff;border:1px solid #e7dcc5;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(58,42,34,.08);}
+.sm-bar{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:1px solid #eee;}
+.sm-g{font-family:Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:-.5px;}
+.sm-g b:nth-child(1){color:#4285f4}.sm-g b:nth-child(2){color:#ea4335}.sm-g b:nth-child(3){color:#fbbc05}.sm-g b:nth-child(4){color:#4285f4}.sm-g b:nth-child(5){color:#34a853}.sm-g b:nth-child(6){color:#ea4335}
+.sm-q{flex:1;border:1px solid #dfe1e5;border-radius:999px;padding:5px 12px;font:12.5px Arial;color:#202124;}
+.sm-pg{padding:14px 15px 15px;color:#202124;}
+.sm-zone{position:relative;border:1px dashed #d8c9ae;border-radius:8px;padding:11px 11px 9px;margin-bottom:11px;}
+.sm-zone.sm-hit{border-color:#b55434;background:rgba(181,84,52,.05);}
+.sm-num{position:absolute;top:-9px;left:9px;width:18px;height:18px;border-radius:50%;background:#b55434;color:#fff;font:700 10.5px Georgia,serif;display:flex;align-items:center;justify-content:center;}
+.sm-zone.sm-miss .sm-num{background:#b9ab98;}
+.sm-lbl{font-size:10px;color:#5f6368;margin-bottom:4px;}
+.sm-aio{font-size:12px;line-height:1.5;}
+.sm-mark{background:#f9dccf;color:#7a2e14;font-weight:700;padding:0 3px;border-radius:3px;}
+.sm-res{font-size:12px;margin:3px 0;}.sm-t{color:#1a0dab;font-size:13px;}.sm-u{color:#4d5156;font-size:10.5px;}
+.sm-paa div{border-top:1px solid #eee;padding:5px 0;font-size:12px;display:flex;justify-content:space-between;}
+.sm-paa div:first-child{border-top:none;}
+.sm-chips span{display:inline-block;background:#f1f3f4;border-radius:7px;padding:4px 9px;font-size:11.5px;margin:2px 3px 2px 0;}
+.sm-key{list-style:none;padding:0;margin:0;counter-reset:k;}
+.sm-key li{display:grid;grid-template-columns:22px 1fr;gap:0 10px;padding:9px 0;border-top:1px solid #e7dcc5;font-size:13px;line-height:1.5;color:#5a4739;}
+.sm-key li:first-child{border-top:none;}
+.sm-key li::before{counter-increment:k;content:counter(k);width:20px;height:20px;border-radius:50%;background:#b55434;color:#fff;font:700 10.5px Georgia,serif;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.sm-key li.sm-miss::before{background:#b9ab98;}
+.sm-key b{display:block;color:#3a2a22;}
+.sm-ai{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
+.sm-card{background:#fff;border:1px solid #e7dcc5;border-radius:12px;padding:13px 15px;}
+.sm-eng{font:700 10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#8a7a6f;margin-bottom:8px;}
+.sm-card table{width:100%;border-collapse:collapse;font-size:12px;}.sm-card td{border-top:1px solid #eee;padding:5px 4px;vertical-align:top;}.sm-card tr:first-child td{border-top:none;}
+.sm-note{background:#f3f3e7;border:1px solid #e2e3ca;border-radius:12px;padding:12px 16px;margin-top:16px;}
+.sm-nl{font:700 9.5px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em;color:#6a6b34;margin-bottom:6px;}
+.sm-note ul{margin:0;padding-left:18px;font-size:13px;color:#4d4828;}
+.sm-src{font:10.5px ui-monospace,monospace;color:#8a7a6f;margin-top:10px;}
+@media(max-width:780px){.sm-grid,.sm-ai{grid-template-columns:1fr;}}
+</style>
+
+<div class="sm-wrap">
+<div class="sm-grid">
+<div class="sm-serp">
+<div class="sm-bar"><span class="sm-g"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span><span class="sm-q">best [category] software</span></div>
+<div class="sm-pg">
+<div class="sm-zone sm-hit"><span class="sm-num">1</span><div class="sm-lbl">AI Overview</div><div class="sm-aio"><b>Top [Category] Software</b><br><b>Competitor A:</b> best for large teams&hellip;<br><b>Competitor B:</b> strong for budget buyers&hellip;<br><b>Other options:</b> <span class="sm-mark">Your Brand</span> and Competitor C.</div></div>
+<div class="sm-zone sm-miss"><span class="sm-num">2</span><div class="sm-lbl">Top organic results</div><div class="sm-res"><div class="sm-u">competitora.example</div><div class="sm-t">Competitor A | The #1 [Category] Platform</div></div><div class="sm-res"><div class="sm-u">competitorb.example</div><div class="sm-t">[Category] Software for Growing Teams</div></div></div>
+<div class="sm-zone sm-hit"><span class="sm-num">3</span><div class="sm-lbl">People also ask</div><div class="sm-paa"><div>What is the best [category] software?<span>&#8964;</span></div><div><span class="sm-mark">How much does Your Brand cost?</span><span>&#8964;</span></div><div>Is [category] software worth it?<span>&#8964;</span></div></div></div>
+<div class="sm-zone sm-hit"><span class="sm-num">4</span><div class="sm-lbl">Sponsored</div><div class="sm-res"><div class="sm-u"><span class="sm-mark">Your Brand</span> &middot; yourbrand.example</div><div class="sm-t">The [Category] Software Built for You</div><div style="font-size:11px;color:#70757a">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 &mdash; 100+ reviews</div></div></div>
+<div class="sm-zone sm-miss"><span class="sm-num">5</span><div class="sm-lbl">Reddit &middot; 2 years ago</div><div class="sm-res"><div class="sm-t">What [category] software does everyone use?</div><div style="font-size:11.5px;color:#4d5156">&ldquo;Honestly just go with Competitor A, it&rsquo;s what we switched to and never looked back&hellip;&rdquo;</div></div></div>
+<div class="sm-zone sm-hit"><span class="sm-num">6</span><div class="sm-lbl">Review-site roundup</div><div class="sm-res"><div class="sm-t">The Best [Category] Software in 2026</div><div style="font-size:11.5px;color:#4d5156"><span class="sm-mark">Your Brand</span> for ease of use, Competitor A for enterprise, Competitor B for price&hellip;</div></div></div>
+<div class="sm-zone sm-hit" style="margin-bottom:0"><span class="sm-num">7</span><div class="sm-lbl">People also search for</div><div class="sm-chips"><span>[category] software free</span><span class="sm-mark">Your Brand</span><span>Competitor A pricing</span><span>best [category] tools</span><span>[category] software reviews</span></div></div>
+</div>
+</div>
+<ul class="sm-key">
+<li><b>The AI Overview names you.</b> Google&rsquo;s answer at the top of the page lists your brand, even if it&rsquo;s under &ldquo;other options.&rdquo;</li>
+<li class="sm-miss"><b>The top organic spots go to competitors.</b> This is the one view leadership checks each week &mdash; and the reason the number looks bad.</li>
+<li><b>Buyers ask about you by name.</b> &ldquo;How much does Your Brand cost?&rdquo; shows up in the questions Google surfaces for a generic search.</li>
+<li><b>Your paid ad is on the page</b> with a 5.0 rating.</li>
+<li class="sm-miss"><b>An old Reddit thread pushes a competitor</b> and still ranks on page one.</li>
+<li><b>A review roundup leads with you</b> for the strength buyers care about.</li>
+<li><b>Your brand is a suggested search</b> right alongside the competitors.</li>
+</ul>
+</div>
+<div class="sm-ai">
+<div class="sm-card"><div class="sm-eng">ChatGPT &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>Best fit for [your use case]</td><td>~$X/mo</td></tr><tr><td>Competitor A</td><td>Large teams</td><td>~$X/mo</td></tr><tr><td>Competitor B</td><td>Budget buyers</td><td>Free plan</td></tr></table><p style="font-size:12px;margin:8px 0 0">&ldquo;Start by comparing <span class="sm-mark">Your Brand</span> and Competitor A for [use case].&rdquo;</p></div>
+<div class="sm-card"><div class="sm-eng">Perplexity &middot; same search</div><table><tr><td><span class="sm-mark">Your Brand</span></td><td>[Category] software with [your differentiators].</td></tr><tr><td>Competitor A</td><td>Enterprise platform with broad features.</td></tr><tr><td>Competitor B</td><td>Lower-cost option for small teams.</td></tr></table></div>
+</div>
+<div class="sm-note"><div class="sm-nl">What this shows</div><ul><li>Your brand appears in five places on page one without holding a top organic spot.</li><li>ChatGPT and Perplexity both name it for the same search.</li><li>The rank number leadership watches is the one place it isn&rsquo;t &mdash; so that number alone tells the wrong story.</li></ul></div>
+<div class="sm-src">Illustrative mock. On a real engagement this is built from the client&rsquo;s actual search, signed out, with each AI answer captured the same day.</div>
 </div>
 
-Notice what that does. Every beat opens by acknowledging the uncomfortable number, then shows the demand didn't vanish — it moved somewhere you can still win. That's the difference between walking out of the meeting with a budget cut and walking out with a baseline.
+The point lands in one look: the brand isn&rsquo;t in the top organic results, but it&rsquo;s all over the rest of the page, and the AI assistants name it first. That&rsquo;s the story the rank number was hiding.
 
 I'm Laura Seelinger, founder of LSX Partners. Building the version of this talk track with a brand's real numbers — and the AI-visibility baseline behind it — is a big part of what I do. If you've got a traffic chart you're dreading explaining, that's a very good reason to talk.
