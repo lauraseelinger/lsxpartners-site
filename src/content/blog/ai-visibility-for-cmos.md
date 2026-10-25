@@ -55,7 +55,7 @@ Is your team testing the questions your <em>buyers</em> actually ask AI, in thei
 
 <aside style="background:#f0f3f4;border-left:4px solid #a3bbc3;border-radius:6px;padding:0.9rem 1.15rem;margin:1.1rem 0;">
 <strong style="display:block;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;color:#b55434;margin-bottom:0.35rem;">New with AI</strong>
-Have you noticed your top-of-funnel keywords pulling less traffic even though your rankings haven't dropped? That's what it looks like when the answer gets handled inside an AI response before anyone clicks — the top of your funnel moves off your property, and your metrics only start counting once someone actually lands.
+Have you noticed your top-of-funnel keywords pulling less traffic even though your rankings haven't dropped? That's what it looks like when the answer gets handled inside an AI response before anyone clicks — the top of your funnel moves off your property, and your metrics only start counting once someone actually lands. ([Why traffic drops when rankings hold, and what to tell leadership.](/blog/traffic-down-zero-click-search/))
 </aside>
 
 **3. What does AI think we're known for — and is that what we want to be known for?**
