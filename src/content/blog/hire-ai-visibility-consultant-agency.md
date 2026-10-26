@@ -65,9 +65,7 @@ While I am a contracted specialist, there is an option for client deliverables t
 
 ## Does my agency need a one-time project or an ongoing retainer?
 
-It depends on what the client actually needs, and I'll tell you straight which one fits rather than selling you the bigger one.
-
-A project — what I call an AI Visibility Blueprint — sets the foundation. It's the navigation, the sitemap and the page templates built so AI can actually retrieve the client's content, plus a ranked list of ongoing recommendations your team can run with. That's the right call for a redesign, or for getting a single account pointed in the right direction.
+It depends what your client roster or agency requires. Agencies often start off with single project engagements, such as an AI visibility blueprint to set the foundation for a client. This includes a strategic assessment of the brand's identity across AI, as well as an in-depth prompt audit. The blueprint deliverable provides the agency with the findings, recommendations and ready-to-implement page templates for content and structural updates ensuring optimal AI retrievability.
 
 A retainer runs the full loop on a monthly cadence. The site work, the off-site work across social and video and community, and a re-audit at regular intervals so you can see what's moving. That's for the client you're actively growing, where AI visibility is a channel you're going to keep investing in rather than a one-time fix.
 
