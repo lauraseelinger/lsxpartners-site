@@ -61,9 +61,8 @@ The step I see most teams missing is the audience intelligence piece. Buyers usi
 
 As an embedded agency partner, I engage with the team the way a senior strategist would — active in your working docs and internal calls, and prepping with you before the client presentation. When a client requires AI visibility judgment, I handle the research and the strategy, and you get a monthly synthesis rather than a specialist you have to manage day to day. And if a client has specific questions related to their visibility or the process, I am on hand to join the call and explain things directly to them. This takes significant weight off the agency leads responsible for client relationships.
 
-### White-labeling your deliverables
-
-<div style="background:#eaf1f3;border-left:5px solid #a3bbc3;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.2rem 0;font-size:0.97rem;line-height:1.6;color:#26383f;">
+<div style="background:#eaf1f3;border-left:5px solid #a3bbc3;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.4rem 0;font-size:0.97rem;line-height:1.6;color:#26383f;">
+<div style="font-family:var(--font-heading);font-weight:700;font-size:1rem;color:#2f4a53;margin-bottom:6px;">White-labeling your deliverables</div>
 
 While I am a contracted specialist, there is an option for client deliverables to be white-labeled under the agency's brand.
 
@@ -91,4 +90,4 @@ If you're hiring someone to represent your agency, it's always important to make
 
 ---
 
-I'm Laura Seelinger, AI visibility expert and founder of LSX Partners, and AI visibility is the whole thing I do. I work embedded with agencies as the strategy behind the work, named or invisible, across just about every industry you can name. Because I spent years strategizing across silos and speaking to the C-suite, I make the agency's job easier, not harder. If you've got a client asking questions about AI your team doesn't have time to chase down, [reach out for an intro call.](/contact)
+I'm Laura Seelinger, AI visibility expert and founder of LSX Partners. I work embedded with agencies to fill the gap in AEO/GEO expertise and help guide their client strategies. If you've got a client asking questions about AI, your team doesn't have time to "fake it till you make it." [Reach out for an intro call](/contact) and let's see how I can help your agency grow through this search evolution.
