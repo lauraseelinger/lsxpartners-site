@@ -71,9 +71,7 @@ A client retainer starts at the same point as the single engagement, but it sets
 
 ## How do you keep the client relationship clean?
 
-This is the real fear when an agency brings in an outside specialist, and it's a fair one. The agency owns the client, always. I don't go around you, I don't pitch the client my own services, and I don't put my name anywhere you don't want it. If the best outcome is the client believing their agency got dramatically sharper at AI visibility, that's a win I'm happy to be invisible for.
-
-And it's the only version that works anyway. An agency that trusts a partner not to poach the account is the one that brings that partner back on the next client, and the one after that.
+The agency owns the client relationship and makes the decision whether to white-label services or not. There is even an option for me to engage with your clients using an agency domain email address.
 
 ## What should an agency look for when hiring an AI visibility consultant?
 
