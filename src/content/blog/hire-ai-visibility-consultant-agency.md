@@ -55,7 +55,7 @@ As an AI visibility consultant working with agencies, I don't just provide a das
 </div>
 <div class="pe-loop">And it loops. Every answer feeds the next round of research, which is the whole idea behind the AI Intelligence Loop.</div>
 
-Almost everyone skips the second one. Plenty of AI visibility work starts at the audit, running a list of prompts someone guessed at and reporting back the results. But if those prompts aren't built from what your client's actual buyers ask, you've measured visibility for questions nobody is typing. Skip the research and the rest is just well-organized guessing, which is why it's [the step I'd never cut.](/blog/ai-intelligence-loop/) The audit itself merges a prompt run across the engines with a brand-level AI visibility report, so you get both the raw answers and the pattern underneath.
+The step I see most teams missing is the audience intelligence piece. Buyers using AI search are describing their situation or problem, not a short keyword phrase. A brand ranking for a high-volume keyword could be completely absent in AI if the user is typing in a specific situation they don't address in their content. These insights go deeper than audience personas. But how do marketers figure out what questions their audience is asking to fold into their prompt audits? The audience intelligence process.
 
 ## How does working with an embedded fractional partner work?
 
