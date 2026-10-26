@@ -32,7 +32,7 @@ I do this for agencies across every kind of client — B2C and B2B, consumer goo
 
 It usually starts with the client asking something the team can't answer. Why are we invisible in ChatGPT when we're number one on Google? Why is our traffic sliding when our rankings are holding? ([That second one has a specific answer.](/blog/traffic-down-zero-click-search/)) Other times it's a redesign, and someone finally realizes the new site has to be built for AI to retrieve it, not just for humans and Google.
 
-You can absolutely build this capability in-house, and some agencies should. Whether it's your own team, [your existing SEO partner](/blog/ai-visibility-consultant-vs-seo-agency/), or a dedicated specialist is its own call. But I don't recommend white-knuckling it. AI visibility is new, and plenty of agencies are fumbling through it the same way brands are — no shame in it, it's just moving faster than most teams can keep up with, especially when the learning eats unbillable hours. Bringing in a specialist is the faster path to a confident answer, and it spares your team months of trial and error.
+You can absolutely build this capability in-house, and some agencies should. Whether it's your own team, [your existing SEO](/blog/ai-visibility-consultant-vs-seo-agency/) or a dedicated specialist, it's your call, but I don't recommend white-knuckling it. AI visibility is new, and plenty of agencies are fumbling through it the same way brands are — no shame in it, it's just moving faster than most teams can keep up with, especially when the learning eats unbillable hours. Bringing in a specialist is the faster path to a confident answer, and it spares your team months of trial and error — and the client you could lose while you catch up.
 
 ## What does an AI visibility consultant actually do?
 
@@ -48,10 +48,10 @@ As an AI visibility consultant working with agencies, I don't just provide a das
 @media(max-width:700px){.pe-flow{grid-template-columns:1fr 1fr;}}
 </style>
 <div class="pe-flow">
-<div class="pe-step"><div class="pe-n">Step 1</div><div class="pe-h">Background</div><div class="pe-b">The client's business, their category, what they sell and to whom.</div></div>
-<div class="pe-step"><div class="pe-n">Step 2</div><div class="pe-h">Audience intelligence</div><div class="pe-b">The questions real buyers actually ask, pulled from the communities they live in, not guessed.</div></div>
-<div class="pe-step"><div class="pe-n">Step 3</div><div class="pe-h">AI visibility audit</div><div class="pe-b">How the engines answer those questions today, and whether the client is in the answer at all.</div></div>
-<div class="pe-step"><div class="pe-n">Step 4</div><div class="pe-h">Strategy</div><div class="pe-b">The fixes, ranked. What to change on the site, and what to build off it.</div></div>
+<div class="pe-step"><div class="pe-n">Step 1</div><div class="pe-h">Background</div><div class="pe-b">Real immersion in the client's business, category and competitive position — the context every later call depends on.</div></div>
+<div class="pe-step"><div class="pe-n">Step 2</div><div class="pe-h">Audience intelligence</div><div class="pe-b">Manual research into how real buyers describe their problems in the communities they actually use. The hardest part to fake, and the one most teams skip.</div></div>
+<div class="pe-step"><div class="pe-n">Step 3</div><div class="pe-h">AI visibility audit</div><div class="pe-b">A prompt audit across the engines merged with a brand-level visibility report — where you show up, where competitors win, and why.</div></div>
+<div class="pe-step"><div class="pe-n">Step 4</div><div class="pe-h">Strategy</div><div class="pe-b">A prioritized plan of on-site and off-site moves — structure, content, definition blocks and page templates that make the brand retrievable.</div></div>
 </div>
 <div class="pe-loop">And it loops. Every answer feeds the next round of research, which is the whole idea behind the AI Intelligence Loop.</div>
 
