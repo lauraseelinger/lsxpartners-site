@@ -28,7 +28,7 @@ I do this for agencies across wildly different accounts — a home-hardware bran
 
 The trigger is almost always a question the client asked that nobody on the team could answer cleanly. Why are we invisible in ChatGPT when we're number one on Google. Why is our traffic sliding when our rankings are holding. ([That second one has a specific answer.](/blog/traffic-down-zero-click-search/)) Sometimes it's a redesign where someone finally realized the new site needs to be built for AI retrieval, not just for humans and Google.
 
-You can absolutely build this capability in-house, and some agencies should. But it's a full discipline that's moving faster than most teams can keep up with, and the learning curve eats the exact unbillable hours a busy agency doesn't have. Bringing in a specialist is the faster path to a confident answer, and it keeps your team focused on the work they were hired for. The honest version of the hiring decision — specialist, in-house, or the SEO partner you already use — [I wrote up separately here.](/blog/ai-visibility-consultant-vs-seo-agency/)
+You can absolutely build this capability in-house, and some agencies should. But I don't recommend white-knuckling it. AI visibility is new, and plenty of agencies are fumbling through it the same way brands are — no shame in it, it's just moving faster than most teams can keep up with, especially when the learning eats unbillable hours. Bringing in a specialist is the faster path to a confident answer, and it spares your team months of trial and error. The honest version of the hiring decision — specialist, in-house, or the SEO partner you already use — [I wrote up separately here.](/blog/ai-visibility-consultant-vs-seo-agency/)
 
 ## What does an AI visibility consultant actually do?
 
@@ -85,4 +85,4 @@ Measurement matters too, across more than one tool, because different tools answ
 
 And circle back to the relationship. Hire the partner who's trying to make your agency look brilliant to its client, not the one using your account to build their own brand.
 
-I'm Laura Seelinger, founder of LSX Partners, and AI visibility is the whole thing I do. I work embedded with agencies as the strategy behind the work, named or invisible, across just about every industry you can name. If you've got a client asking questions about AI that your team doesn't have time to chase down, [that's the conversation to have.](/contact)
+I'm Laura Seelinger, AI visibility expert and founder of LSX Partners, and AI visibility is the whole thing I do. I work embedded with agencies as the strategy behind the work, named or invisible, across just about every industry you can name. Because I spent years strategizing across silos and speaking to the C-suite, I make the agency's job easier, not harder. If you've got a client asking questions about AI your team doesn't have time to chase down, [reach out for an intro call.](/contact)
