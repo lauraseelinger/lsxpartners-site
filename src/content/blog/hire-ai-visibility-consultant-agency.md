@@ -39,19 +39,19 @@ You can absolutely build this capability in-house, and some agencies should. Whe
 As an AI visibility consultant working with agencies, I don't just provide a dashboard and list of recommendations. I set up a process that first creates a brand and industry-specific AI visibility baseline, and then provides specific optimizations and content topics — with specific definition blocks, H2s, etc. — to position the brand in AI search. And since AI visibility is a newer specialty for marketers, the brands and agencies who invest in this first will enjoy a significant head start as their competition kicks the can down the road.
 
 <style>
-.pe-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.5rem 0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
-.pe-step{border:1px solid #e6ded3;border-radius:12px;background:#faf6f0;padding:14px;}
-.pe-n{font:700 11px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#b55434;margin-bottom:6px;}
-.pe-h{font-weight:700;color:#2b2622;font-size:.98rem;margin-bottom:4px;}
-.pe-b{font-size:.86rem;line-height:1.5;color:#5a4739;}
+.pe-flow{display:flex;align-items:flex-start;background:#faf6f0;border:1px solid #e6ded3;border-radius:14px;padding:20px 14px;margin:1.5rem 0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+.pe-step{flex:1;text-align:center;padding:0 6px;position:relative;}
+.pe-step:not(:last-child)::after{content:"\2192";position:absolute;right:-8px;top:12px;color:#c9b79a;font-size:20px;font-weight:700;line-height:1;}
+.pe-n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#b55434;color:#fff;font:700 15px Georgia,serif;margin-bottom:10px;}
+.pe-h{font-weight:700;color:#2b2622;font-size:.9rem;line-height:1.25;}
 .pe-loop{text-align:center;font-size:.82rem;color:#8a7a6f;margin:-.3rem 0 1.4rem;font-style:italic;}
-@media(max-width:700px){.pe-flow{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.pe-flow{flex-direction:column;gap:18px;padding:22px 16px;}.pe-step:not(:last-child)::after{content:"\2193";right:auto;left:50%;top:auto;bottom:-16px;transform:translateX(-50%);}}
 </style>
 <div class="pe-flow">
-<div class="pe-step"><div class="pe-n">Step 1</div><div class="pe-h">Background</div></div>
-<div class="pe-step"><div class="pe-n">Step 2</div><div class="pe-h">Audience intelligence</div></div>
-<div class="pe-step"><div class="pe-n">Step 3</div><div class="pe-h">AI visibility audit</div></div>
-<div class="pe-step"><div class="pe-n">Step 4</div><div class="pe-h">Strategy</div></div>
+<div class="pe-step"><div class="pe-n">1</div><div class="pe-h">Background</div></div>
+<div class="pe-step"><div class="pe-n">2</div><div class="pe-h">Audience intelligence</div></div>
+<div class="pe-step"><div class="pe-n">3</div><div class="pe-h">AI visibility audit</div></div>
+<div class="pe-step"><div class="pe-n">4</div><div class="pe-h">Strategy</div></div>
 </div>
 <div class="pe-loop">And it loops. Every answer feeds the next round of research, which is the whole idea behind the AI Intelligence Loop.</div>
 
