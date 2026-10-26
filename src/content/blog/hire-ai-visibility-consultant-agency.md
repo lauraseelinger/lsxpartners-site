@@ -48,10 +48,10 @@ As an AI visibility consultant working with agencies, I don't just provide a das
 @media(max-width:700px){.pe-flow{grid-template-columns:1fr 1fr;}}
 </style>
 <div class="pe-flow">
-<div class="pe-step"><div class="pe-n">Step 1</div><div class="pe-h">Background</div><div class="pe-b">Real immersion in the client's business, category and competitive position — the context every later call depends on.</div></div>
-<div class="pe-step"><div class="pe-n">Step 2</div><div class="pe-h">Audience intelligence</div><div class="pe-b">Manual research into how real buyers describe their problems in the communities they actually use. The hardest part to fake, and the one most teams skip.</div></div>
-<div class="pe-step"><div class="pe-n">Step 3</div><div class="pe-h">AI visibility audit</div><div class="pe-b">A prompt audit across the engines merged with a brand-level visibility report — where you show up, where competitors win, and why.</div></div>
-<div class="pe-step"><div class="pe-n">Step 4</div><div class="pe-h">Strategy</div><div class="pe-b">A prioritized plan of on-site and off-site moves — structure, content, definition blocks and page templates that make the brand retrievable.</div></div>
+<div class="pe-step"><div class="pe-n">Step 1</div><div class="pe-h">Background</div></div>
+<div class="pe-step"><div class="pe-n">Step 2</div><div class="pe-h">Audience intelligence</div></div>
+<div class="pe-step"><div class="pe-n">Step 3</div><div class="pe-h">AI visibility audit</div></div>
+<div class="pe-step"><div class="pe-n">Step 4</div><div class="pe-h">Strategy</div></div>
 </div>
 <div class="pe-loop">And it loops. Every answer feeds the next round of research, which is the whole idea behind the AI Intelligence Loop.</div>
 
@@ -61,7 +61,13 @@ The step I see most teams missing is the audience intelligence piece. Buyers usi
 
 As an embedded agency partner, I engage with the team the way a senior strategist would — active in your working docs and internal calls, and prepping with you before the client presentation. When a client requires AI visibility judgment, I handle the research and the strategy, and you get a monthly synthesis rather than a specialist you have to manage day to day. And if a client has specific questions related to their visibility or the process, I am on hand to join the call and explain things directly to them. This takes significant weight off the agency leads responsible for client relationships.
 
+### White-labeling your deliverables
+
+<div style="background:#eaf1f3;border-left:5px solid #a3bbc3;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.2rem 0;font-size:0.97rem;line-height:1.6;color:#26383f;">
+
 While I am a contracted specialist, there is an option for client deliverables to be white-labeled under the agency's brand.
+
+</div>
 
 ## How do agency engagements usually work — project or retainer?
 
