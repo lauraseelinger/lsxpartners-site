@@ -26,7 +26,7 @@ An AI visibility consultant is an expert who audits how AI engines describe your
 
 </div>
 
-I do this for agencies across industries — B2C, B2B, healthcare, nonprofit — so the process below is the same whether your client is in CPG, software sales or medical technology.
+I do this for agencies across every kind of client — B2C and B2B, consumer goods to software to healthcare to nonprofits — so the process below doesn't change with the industry.
 
 ## When should an agency bring in an AI visibility consultant?
 
