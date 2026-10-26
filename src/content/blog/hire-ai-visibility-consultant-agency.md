@@ -75,14 +75,14 @@ The agency owns the client relationship and makes the decision whether to white-
 
 ## What should an agency look for when hiring an AI visibility consultant?
 
-A few things separate a partner worth hiring from someone selling you a dashboard login.
+AI visibility is a newer area of marketing. If an agency is considering hiring a specialist, it's important to ensure the candidate has actually implemented, measured and reported on the related KPIs. If not, the agency will be stuck with a new dashboard or report they don't understand or know how to present to their client.
 
-Start with honesty about certainty. Nobody can guarantee your client gets cited by AI. The engines generate their answers first and attach citations afterward, so the real work raises the probability of showing up, it doesn't promise it. Anyone selling guaranteed citations is selling something the industry doesn't have, and that's your first tell.
+As an AI visibility expert, I believe the part you can't fake about this work is the audience intelligence research. It requires strategic experience to identify patterns and create a plan to solve them. And while the foundation of the work is the same, every client and industry has its own nuances.
 
-Then look for real audience intelligence behind the recommendations, not a tool's output reworded into a slide. That research is the part that's hard to fake and hard to commoditize. The framework wrapped around it is not.
+I wouldn't be afraid to ask what tools they use either. Each tool measures things differently, and some settings may inflate numbers or give false positives. Probe how they set up their dashboards and, if they have a demo client or anonymous report, ask for them to walk through it with you.
 
-Measurement matters too, across more than one tool, because different tools answer different questions. One gauges how AI perceives the brand against its competitors, another checks how accurately AI describes it. Lean on a single score and you get a single, flattering story.
+If you're hiring someone to represent your agency, it's always important to make sure you like their communication style as well — especially if you'll be having them client-facing.
 
-And circle back to the relationship. Hire the partner who's trying to make your agency look brilliant to its client, not the one using your account to build their own brand.
+---
 
 I'm Laura Seelinger, AI visibility expert and founder of LSX Partners, and AI visibility is the whole thing I do. I work embedded with agencies as the strategy behind the work, named or invisible, across just about every industry you can name. Because I spent years strategizing across silos and speaking to the C-suite, I make the agency's job easier, not harder. If you've got a client asking questions about AI your team doesn't have time to chase down, [reach out for an intro call.](/contact)
