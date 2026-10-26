@@ -20,7 +20,11 @@ faqs:
 
 Agencies are in a tough spot right now. Teams are at capacity executing content and don't have the time or resources to integrate AI visibility. Mastering a new expertise in-house either requires a new FT hire, or countless unbillable hours of research. But when the longtime client asks the dreaded question about where they stand in ChatGPT or another AI's search, agencies have to make the call — do you keep up the charade or do you bring in someone who already knows the AI visibility landscape.
 
+<div class="post-lede" style="background:#f4ece0;border-left:5px solid #b55434;border-radius:0 10px 10px 0;padding:1.1rem 1.4rem;margin:1.6rem 0;">
+
 An AI visibility consultant is an expert who audits how AI engines describe your client, finds out who gets recommended instead and why, and builds the strategy to fix it — working alongside your team, often invisibly under your brand. Hiring one adds the expertise without adding headcount, and without sending the account out the door.
+
+</div>
 
 I do this for agencies across industries — B2C, B2B, healthcare, nonprofit — so the process below is the same whether your client is in CPG, software sales or medical technology.
 
