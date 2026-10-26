@@ -36,7 +36,7 @@ You can absolutely build this capability in-house, and some agencies should. Whe
 
 ## What does an AI visibility consultant actually do?
 
-Not a dashboard login and a pile of recommendations. The work runs through four functions, in order, and skipping any of them is where most AI visibility work goes wrong.
+As an AI visibility consultant working with agencies, I don't just provide a dashboard and list of recommendations. I set up a process that first creates a brand and industry-specific AI visibility baseline, and then provides specific optimizations and content topics — with specific definition blocks, H2s, etc. — to position the brand in AI search. And since AI visibility is a newer specialty for marketers, the brands and agencies who invest in this first will enjoy a significant head start as their competition kicks the can down the road.
 
 <style>
 .pe-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:1.5rem 0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
