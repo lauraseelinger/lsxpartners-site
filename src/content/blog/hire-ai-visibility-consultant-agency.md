@@ -59,7 +59,7 @@ The step I see most teams missing is the audience intelligence piece. Buyers usi
 
 ## How does working with an embedded fractional partner work?
 
-I don't lob a PDF over the wall and disappear. I work embedded in the agency's team the way a senior strategist would, in your docs and your calls, as a fractional partner rather than a vendor. You tag me for the decisions that need AI visibility judgment, I handle the research and the strategy, and you get a monthly synthesis rather than a specialist you have to manage day to day.
+As an embedded agency partner, I engage with the team the way a senior strategist would — active in your working docs and internal calls, and prepping with you before the client presentation. When a client requires AI visibility judgment, I handle the research and the strategy, and you get a monthly synthesis rather than a specialist you have to manage day to day. And if a client has specific questions related to their visibility or the process, I am on hand to join the call and explain things directly to them. This takes significant weight off the agency leads responsible for client relationships.
 
 A lot of this work ships entirely under the agency's brand — on plenty of accounts the client has no idea a specialist was ever involved, which is exactly how the agency wants it. Other times I'm a named partner who meets the client directly. The agency decides how visible I am, and I build to that.
 
