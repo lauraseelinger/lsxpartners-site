@@ -61,7 +61,7 @@ The step I see most teams missing is the audience intelligence piece. Buyers usi
 
 As an embedded agency partner, I engage with the team the way a senior strategist would — active in your working docs and internal calls, and prepping with you before the client presentation. When a client requires AI visibility judgment, I handle the research and the strategy, and you get a monthly synthesis rather than a specialist you have to manage day to day. And if a client has specific questions related to their visibility or the process, I am on hand to join the call and explain things directly to them. This takes significant weight off the agency leads responsible for client relationships.
 
-A lot of this work ships entirely under the agency's brand — on plenty of accounts the client has no idea a specialist was ever involved, which is exactly how the agency wants it. Other times I'm a named partner who meets the client directly. The agency decides how visible I am, and I build to that.
+While I am a contracted specialist, there is an option for client deliverables to be white-labeled under the agency's brand.
 
 ## Does my agency need a one-time project or an ongoing retainer?
 
