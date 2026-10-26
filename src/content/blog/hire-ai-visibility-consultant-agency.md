@@ -26,7 +26,7 @@ I do this for agencies across industries — B2C, B2B, healthcare, nonprofit —
 
 ## When should an agency bring in an AI visibility consultant?
 
-The trigger is almost always a question the client asked that nobody on the team could answer cleanly. Why are we invisible in ChatGPT when we're number one on Google. Why is our traffic sliding when our rankings are holding. ([That second one has a specific answer.](/blog/traffic-down-zero-click-search/)) Sometimes it's a redesign where someone finally realized the new site needs to be built for AI retrieval, not just for humans and Google.
+It usually starts with the client asking something the team can't answer. Why are we invisible in ChatGPT when we're number one on Google? Why is our traffic sliding when our rankings are holding? ([That second one has a specific answer.](/blog/traffic-down-zero-click-search/)) Other times it's a redesign, and someone finally realizes the new site has to be built for AI to retrieve it, not just for humans and Google.
 
 You can absolutely build this capability in-house, and some agencies should. But I don't recommend white-knuckling it. AI visibility is new, and plenty of agencies are fumbling through it the same way brands are — no shame in it, it's just moving faster than most teams can keep up with, especially when the learning eats unbillable hours. Bringing in a specialist is the faster path to a confident answer, and it spares your team months of trial and error. The honest version of the hiring decision — specialist, in-house, or the SEO partner you already use — [I wrote up separately here.](/blog/ai-visibility-consultant-vs-seo-agency/)
 
@@ -69,7 +69,7 @@ A retainer runs the full loop on a monthly cadence. The site work, the off-site 
 
 ## How do you keep the client relationship clean?
 
-This is the real fear when an agency brings in an outside specialist, and it's a fair one. The answer is simple: the agency owns the client, always. I don't go around you, I don't pitch the client my own services, and I don't put my name anywhere you don't want it. If the best outcome is the client believing their agency got dramatically sharper at AI visibility, that's a win I'm happy to be invisible for.
+This is the real fear when an agency brings in an outside specialist, and it's a fair one. The agency owns the client, always. I don't go around you, I don't pitch the client my own services, and I don't put my name anywhere you don't want it. If the best outcome is the client believing their agency got dramatically sharper at AI visibility, that's a win I'm happy to be invisible for.
 
 That's not a favor. It's the only version of this that works. An agency that trusts a partner not to poach the account is an agency that brings that partner in again on the next client, and the one after that.
 
