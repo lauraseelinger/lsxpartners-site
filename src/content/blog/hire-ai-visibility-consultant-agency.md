@@ -22,7 +22,7 @@ Your client ranks number one, the monthly report is full of green arrows, and th
 
 That's usually the moment an agency brings in an AI visibility consultant. An AI visibility consultant is a specialist who audits how AI engines describe your client, finds out who gets recommended instead and why, and builds the strategy to fix it, working alongside your team and often invisibly under your brand. Hiring one adds the expertise without adding headcount and without sending the account out the door.
 
-I do this for agencies across wildly different accounts — a home-hardware brand, a national architecture firm, a nonprofit — so the process below is the same whether your client sells deadbolts, designs airports or raises money. Here's how the engagement actually works.
+I do this for agencies across industries — B2C, B2B, healthcare, nonprofit — so the process below is the same whether your client is in CPG, software sales or medical technology.
 
 ## When should an agency bring in an AI visibility consultant?
 
