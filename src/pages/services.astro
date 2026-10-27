@@ -13,8 +13,9 @@ const flagship = ENGAGEMENTS.find((e) => e.flagship)!;
 const others = ENGAGEMENTS.filter((e) => !e.flagship);
 const faqs = [
   { question: 'Isn’t AI visibility just SEO with a new name?', answer: 'Partly, and that’s the nuance that matters. AI answers are built on top of search indexes, so good SEO still helps — on tight engines like Claude (which leans on Brave) it gets you most of the way. But looser engines like ChatGPT weight structure, earned media and third-party authority differently, so ranking isn’t enough. Knowing which lever each engine pulls is the actual work.' },
-  { question: 'Do I need an AI visibility tool?', answer: 'A tool tells you the score. It won’t tell you what to do about it. I use the tools (and test new ones constantly), but the value is the strategy: reading your current AI brand identity, finding the openings, and deciding what to amplify. That’s not something a dashboard does.' },
+  { question: 'Do I need an AI visibility tool?', answer: 'A tool tells you the score. It won’t tell you what to do about it. I use the tools (and test new ones constantly), but the value is the strategy: reading your current AI brand identity, finding the openings and deciding what to amplify. That’s not something a dashboard does.' },
   { question: 'How is this different from SEO?', answer: 'SEO gets you ranked in a list of links; AI visibility gets you quoted in the answer. They run in the same strategy — you can rank #1 on Google and still be invisible, or uncited, in AI answers.' },
+  { question: 'How do I explain AI visibility to my CEO or board?', answer: 'Start with what AI says about your brand today, in its own words, next to what it says about your two closest competitors. Leadership reacts to the actual answer far more than to a visibility score. Then give them a direction with a sequence (what gets fixed first and why) and be straight about what nobody can promise yet, since no one can guarantee an AI citation. I build that readout into every engagement, and I write it for the C-suite specifically.' },
   { question: 'Is it too early to invest in this?', answer: 'The audience-conversation layer — what real buyers say and ask — is durable now; you don’t have to wait for the models to settle. And citations move faster than SEO rankings, so the ground you take early compounds.' },
   { question: 'Do you work with brands or agencies?', answer: 'Both. Brands hire me directly to come in and get their AI visibility together; agencies bring me in as an embedded, often white-labeled, strategy partner. Same caliber of work either way.' },
   { question: 'What does it cost?', answer: 'Engagements are scoped to the brand and the goal, from a one-time audit to the one-month Intensive. The fastest way to a real number is a short call.' },
@@ -22,7 +23,7 @@ const faqs = [
 ---
 <BaseLayout
   title="Services"
-  description="AI visibility audits, strategy, and a one-month intensive to get your brand cited by AI — for brands and agencies."
+  description="AI visibility audits, strategy and a one-month intensive to get your brand cited by AI — for brands and agencies."
   schemas={[serviceSchema()]}
 >
   <!-- HERO -->
@@ -32,9 +33,10 @@ const faqs = [
       <p class="subhead">ai visibility &amp; strategy</p>
       <h1>Bring me in. I’ll get your AI visibility together.</h1>
       <p class="hero__lede">
-        Whether you need a one-month intensive to fix it now, a blueprint for a
-        rebuild, or an ongoing partner — the goal is the same: when AI talks about
-        your category, your brand is the answer it cites. For brands and agencies.
+        Bring in a specialist, get a direction your leadership can say yes to and
+        get every team that touches it moving the same way. A one-month Intensive,
+        a blueprint for a rebuild or an ongoing partner, for brands and the agencies
+        behind them.
       </p>
       <a class="button" href={CTA.calendly}>Book a call</a>
     </div>

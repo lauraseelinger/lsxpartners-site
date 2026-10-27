@@ -7,42 +7,45 @@ import { CTA } from '../../consts';
 // Name is a PLACEHOLDER pending the CMO audience-intel naming work.
 // No pricing — premium, by scope.
 const deliverables = [
-  { n: '01', t: 'The full picture', d: 'Where your brand stands across ChatGPT, Claude, Gemini, Perplexity and Google AI — what gets said, what gets cited, and who’s getting the credit instead of you.' },
+  { n: '01', t: 'The full picture', d: 'Where your brand stands across ChatGPT, Claude, Gemini, Perplexity and Google AI — what gets said, what gets cited and who’s getting the credit instead of you.' },
   { n: '02', t: 'Audience intelligence', d: 'The real language your buyers use, mined from where they actually talk — the input most brand strategies are missing entirely.' },
   { n: '03', t: 'Your AI brand identity', d: 'What the internet has decided you are, where that diverges from how you see yourself, and the third-party sources you can uniquely amplify in your favor.' },
-  { n: '04', t: 'The mapped strategy', d: 'A prioritized, brand-specific roadmap: where your real opportunities are, what to do about them, and in what order. The judgment, not a checklist.' },
-  { n: '05', t: 'Department alignment', d: 'Every team that touches this — marketing, brand, legal and compliance, web — walked through the plan and bought into their part of it. This is the hard part, and it’s the whole point.' },
-  { n: '06', t: 'A path your team can follow', d: 'You leave the month with an agreed direction and the monitoring in place to track it — so the work actually moves once I’m gone.' },
+  { n: '04', t: 'The mapped strategy', d: 'A prioritized, brand-specific roadmap: where your real opportunities are, what to do about them and in what order. The judgment, not a checklist.' },
+  { n: '05', t: 'Department alignment', d: 'Every team that touches this — marketing, brand, legal and compliance, web — walked through the plan and bought into their part of it, with the monitoring in place to track it once I’m gone.' },
+  { n: '06', t: 'The leadership story', d: 'A readout written for the C-suite and the board: where the brand shows up today in AI, what messaging is retrievable, a competitive audit and your brand’s engine-specific identities. Information that is honest about what work lies ahead, but also tells the difficult story of AI visibility — that it’s a new area and now your brand is working with one of the top experts in the space. You bring confidence and clarity to the agenda instead of last QBR’s anxiety.' },
 ];
 const weeks = [
   { label: 'Launch', title: 'Kickoff & discovery', desc: 'Stakeholder interviews and the audit running in the background — grounding the strategy in your goals and mapping where to dig for audience intel.' },
   { label: 'Mine', title: 'Audience intel + strategy', desc: 'The research runs while I turn it into the strategy — what’s foundational first, and the moves that come after launch.' },
   { label: 'Align', title: 'Department sign-off', desc: 'I walk it through each relevant team to catch any no-gos and lock in sign-off.' },
-  { label: 'Hand off', title: 'Exec presentation & path forward', desc: 'Final presentation to leadership, an implementation map, and options to keep going together.' },
+  { label: 'Hand off', title: 'Exec presentation & path forward', desc: 'The leadership readout, with talking points for your next C-suite or board conversation, plus an implementation map and options to keep going together.' },
 ];
 ---
 <EngagementLayout
   title="The AI Visibility Intensive"
   eyebrow="the flagship · one month"
-  lede="When a big brand needs to get serious about AI visibility, I come in for one month: audit what AI says about you, map the strategy, and get every relevant department aligned on the path — so the plan actually moves once I’m gone."
+  lede="When a big brand needs to get serious about AI visibility, I come in for one month: audit what AI says about you, map the strategy and get every relevant department aligned on the path — so the plan actually moves once I’m gone."
   heroImage="/images/intensive-power.jpg"
   heroRatio="3 / 4"
-  description="A one-month flagship engagement: I audit your AI visibility, map the strategy to your brand, and align every relevant department on a clear path to follow."
+  description="A one-month flagship engagement: I audit your AI visibility, map the strategy to your brand and align every relevant department on a clear path to follow."
 >
   <!-- WHO IT'S FOR -->
   <section class="band">
     <div class="container measure" data-reveal>
       <p class="subhead">who this is for</p>
-      <h2>The brand that can’t wait another quarter to own its AI brand identity</h2>
+      <h2>For the marketing leader who owes leadership an answer on AI search</h2>
       <p>
-        You’re a known name. You rank fine on Google — for now. But clicks from
-        the usual sources are about to drop fast as buyers ask ChatGPT, Perplexity
-        and Gemini instead, and right now those answers are missing you, getting
-        you wrong, or handing the credit to a competitor and a Reddit thread. You
-        don’t want to be playing catch-up when that shift fully lands — you want to
-        already own your AI brand identity and everything that comes with it. So we
-        skip the slow retainer: I come in, find the truth, map the strategy, and
-        get your whole organization pointed the same direction in a month.
+        You’re a known brand, and AI search has been on your team’s plate for a
+        while now. People have stretch goals against it, the search specialist built
+        a prompt-tracking spreadsheet and you’ve sat through a few vendor demos.
+        You’ve done everything you have the resources and capacity to do, but
+        leadership is looking for definitive answers, and the versions of “we’re
+        still figuring it out” shared up until now won’t work anymore. Hire me as your
+        AI visibility strategist and I come in, find out what AI actually says about
+        your brand, map the strategy and get every department that touches it
+        aligned and ready to implement. You’ll have a strategy to present to the
+        C-suite with confidence — and with The AI Visibility Intensive, you can get
+        all of this in one month’s time.
       </p>
     </div>
   </section>
@@ -98,7 +101,8 @@ const weeks = [
       <div class="creds">
         <div class="cred" data-reveal><span class="cred__big">15+ yrs</span><span>across agency &amp; corporate marketing</span></div>
         <div class="cred" data-reveal data-reveal-delay="1"><span class="cred__big">Regulated</span><span>healthcare &amp; MedTech — medical, legal &amp; brand sign-off</span></div>
-        <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">Every day</span><span>testing tools + running real client work</span></div>
+        <div class="cred" data-reveal data-reveal-delay="2"><span class="cred__big">Fortune 20</span><span>corporate marketing leadership — I know what the C-suite asks</span></div>
+        <div class="cred" data-reveal data-reveal-delay="3"><span class="cred__big">Every day</span><span>testing tools + running real client work</span></div>
       </div>
       <a class="button" href={CTA.calendly} style="margin-top: var(--space-4)">See if it’s a fit</a>
     </div>
@@ -114,10 +118,11 @@ const weeks = [
   @media (max-width: 680px) { .delivs { grid-template-columns: 1fr; } }
 
   /* Credentials strip on the rust band */
-  .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+  .creds { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
   .cred { display: flex; flex-direction: column; gap: 0.2rem; border-top: 2px solid rgba(252, 245, 229, 0.4); padding-top: var(--space-2); }
   .cred__big { font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--cream); line-height: 1; }
   .cred span:last-child { font-size: var(--text-sm); color: var(--cream); opacity: 0.9; }
+  @media (max-width: 900px) { .creds { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 680px) { .creds { grid-template-columns: 1fr; } }
 
   .asterisk { color: var(--rust); font-size: 0.5em; vertical-align: super; }
