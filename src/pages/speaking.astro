@@ -196,7 +196,7 @@ const talks = [
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">on the calendar</p>
         <h2>Where to find me next</h2>
-        <p>A few places you can catch me live this fall. Come say hi.</p>
+        <p>A few places you can catch me live. Come say hi.</p>
       </div>
       <div class="next-grid" data-reveal>
         <article class="next-card">
@@ -296,13 +296,14 @@ const talks = [
 
   /* Where to find me next — upcoming highlight (peach) */
   .next__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); margin-top: var(--space-2); }
-  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); align-items: start; }
-  .next-card { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-4); box-shadow: var(--shadow-card); }
-  .next-card__kicker { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 var(--space-1); }
-  .next-card h3 { color: var(--rust); margin: 0 0 0.3rem; font-size: var(--text-xl); }
-  .next-card__meta { font-weight: 700; color: var(--brown); font-size: var(--text-sm); margin: 0 0 var(--space-2); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .next-card { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0.4rem; background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-4); box-shadow: var(--shadow-card); }
+  .next-card > * { margin: 0; }
+  .next-card__kicker { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); }
+  .next-card h3 { color: var(--rust); font-size: var(--text-xl); }
+  .next-card__meta { font-weight: 700; color: var(--brown); font-size: var(--text-sm); }
   .next-card__meta a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; }
-  .next-card p { margin: 0; }
+  .next-card > p:last-child { font-size: var(--text-sm); border-top: 1px solid rgba(72, 55, 41, 0.15); padding-top: var(--space-2); }
   @media (max-width: 920px) { .next-grid { grid-template-columns: 1fr; max-width: 40rem; } }
 
   @media (max-width: 760px) {
