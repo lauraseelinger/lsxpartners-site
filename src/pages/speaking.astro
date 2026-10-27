@@ -124,22 +124,28 @@ const talks = [
       <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
         <p class="subhead">on the calendar</p>
         <h2>Where to find me next</h2>
-        <p>I’ll be at <a href="https://www.greatlakesaiweek.com/agenda">Great Lakes AI Week</a> this November with two sessions — a solo talk and a fireside with Shannon Villalba. Come find me.</p>
-        <p class="next__meta">Great Lakes AI Week · November 10–12, 2026 · Bowling Green State University + University of Toledo</p>
+        <p>A few places you can catch me live this fall. Come say hi.</p>
       </div>
       <div class="next-grid" data-reveal>
         <article class="next-card">
-          <p class="next-card__kicker">Solo session</p>
+          <p class="next-card__kicker">Great Lakes AI Week · Solo session</p>
           <h3>The AI Brand Identity You’re Up Against</h3>
+          <p class="next-card__meta">Nov 10–12, 2026 · Bowling Green &amp; Toledo, OH · <a href="https://www.greatlakesaiweek.com/agenda">agenda</a></p>
           <p>Ask AI about your brand and it tells a whole story — who you are, what you’re good for, who it recommends instead — built from the entire internet, not your homepage copy. I’ll pull up real brands live, show the parts that make everyone a little uncomfortable and walk through how a company can win at SEO while AI still tells the wrong story — and what to do about it.</p>
         </article>
         <article class="next-card">
-          <p class="next-card__kicker">Fireside with Shannon Villalba</p>
+          <p class="next-card__kicker">Great Lakes AI Week · Fireside with Shannon Villalba</p>
           <h3>Known by AI. Owned by You.</h3>
+          <p class="next-card__meta">Nov 10–12, 2026 · Bowling Green &amp; Toledo, OH · <a href="https://www.greatlakesaiweek.com/agenda">agenda</a></p>
           <p>A candid fireside with Shannon Villalba, Legal Architect and creator of Creative Sovereignty™. We get into two sides of the same brand problem — whether AI understands your brand, and whether the equity you’re building actually belongs to you — plus the gap between the brand you present, the brand AI perceives and the brand you can actually protect.</p>
         </article>
+        <article class="next-card">
+          <p class="next-card__kicker">Innovate New Albany · Expert Office Hours</p>
+          <h3>AI Visibility Office Hours</h3>
+          <p class="next-card__meta">Thursday, Nov 19, 2026 · 8:45–11:45 AM · New Albany, OH · <a href="https://innovatenewalbany.org/new-events/category/expert-office-hours">details</a></p>
+          <p>Open office hours for New Albany founders and businesses. Book a slot and bring your AI visibility questions — why AI recommends your competitors instead of you, how to tell whether AI even knows your brand and where AEO and GEO actually start.</p>
+        </article>
       </div>
-      <p class="next__cta" data-reveal><a class="button" href="https://www.greatlakesaiweek.com/agenda">See the full agenda</a></p>
     </div>
   </section>
 
@@ -290,13 +296,14 @@ const talks = [
 
   /* Where to find me next — upcoming highlight (peach) */
   .next__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); margin-top: var(--space-2); }
-  .next-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); align-items: start; }
   .next-card { background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-4); box-shadow: var(--shadow-card); }
   .next-card__kicker { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); margin: 0 0 var(--space-1); }
-  .next-card h3 { color: var(--rust); margin: 0 0 var(--space-1); font-size: var(--text-xl); }
+  .next-card h3 { color: var(--rust); margin: 0 0 0.3rem; font-size: var(--text-xl); }
+  .next-card__meta { font-weight: 700; color: var(--brown); font-size: var(--text-sm); margin: 0 0 var(--space-2); }
+  .next-card__meta a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; }
   .next-card p { margin: 0; }
-  .next__cta { margin-top: var(--space-4); }
-  @media (max-width: 760px) { .next-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 920px) { .next-grid { grid-template-columns: 1fr; max-width: 40rem; } }
 
   @media (max-width: 760px) {
     .intro-split { grid-template-columns: 1fr; }
