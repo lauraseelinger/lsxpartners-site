@@ -4,7 +4,7 @@ description: "An AI visibility consultant audits how AI engines describe your cl
 pubDate: 2026-10-27
 register: measured-pillar
 tags: ["ai-visibility", "aeo", "agencies"]
-heroImage: "/images/blog/hire-ai-visibility-consultant-agency.jpg"
+heroImage: "/images/blog/hire-ai-visibility-consultant-agency-2.jpg"
 heroAlt: "An AI visibility consultant working alongside an agency team at a laptop"
 hideHero: true
 faqs:
