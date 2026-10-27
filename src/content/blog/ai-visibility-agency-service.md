@@ -115,7 +115,7 @@ If you haven't already opened ChatGPT and searched your clients' categories just
 
 That gut check is usually all it takes to make the client conversation feel urgent instead of hypothetical. And bringing that conversation to them proactively always beats reacting to it after they bring it to you.
 
-For a deeper look at how AI decides what to cite and what content structure actually drives visibility, [the AEO guide for 2026](/blog/answer-engine-optimization-guide) covers it. And if you want to talk through what adding this looks like for your specific agency and client mix, [reach out](/contact) — it's worth having before your clients bring it to you.
+For a deeper look at how AI decides what to cite and what content structure actually drives visibility, [the AEO guide for 2026](/blog/answer-engine-optimization-guide) covers it. If you'd rather bring in a specialist than build this in-house, here's [how to hire an AI visibility consultant for your agency](/blog/hire-ai-visibility-consultant-agency/). And if you want to talk through what adding this looks like for your specific agency and client mix, [reach out](/contact) — it's worth having before your clients bring it to you.
 
 ### Ready to see what this looks like for one of your clients?
 

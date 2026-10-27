@@ -92,6 +92,8 @@ Not necessarily. If you're a small brand with a little time to experiment, you c
 
 Where a strategist makes the difference is the interpretation. I've spent over 16 years in marketing strategy, so when I look at a pile of AI outputs I'm reading more than where you show up. I'm reading *why* you do or don't, what your buyer is actually thinking when they ask the question, and which single change will move the most. That's the psychology underneath the data, and it's the part someone newer to marketing wouldn't catch yet. A small business especially can punch way above its weight with that kind of read — you skip months of trial-and-error and go straight to the levers that matter.
 
+(If you run an agency rather than weighing this for your own brand, I wrote a separate guide on [how to hire an AI visibility consultant for your agency](/blog/hire-ai-visibility-consultant-agency/), covering white-labeling and how the engagements work.)
+
 ---
 
 I'm Laura Seelinger, founder of LSX Partners. Figuring out where your brand is invisible in AI — and building the strategy to fix it — is the whole thing I do. If you just read this and got a little nervous about what AI is saying about you, [we should talk](/contact). ;)

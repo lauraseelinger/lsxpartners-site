@@ -83,6 +83,7 @@ strong { font-weight: 600; }
   font-family: var(--font-heading); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.1rem);
   color: var(--brown); margin-top: var(--space-5); padding-top: var(--space-2);
   border-top: 2px solid color-mix(in srgb, var(--rust) 30%, transparent); line-height: 1.2;
+  text-wrap: pretty;
 }
 /* sections are neutral by default — the H2 header treatment does the breaking up */
 .post__body .post-section { margin-block: var(--space-3); }
