@@ -72,17 +72,17 @@ There is an option for client deliverables to be white-labeled under the agency'
 
 ## How do agency engagements usually work — project or retainer?
 
-It depends what your client roster or agency requires. Agencies often start off with single project engagements, such as an AI Visibility Blueprint to set the foundation for a client. This includes a strategic assessment of the brand's identity across AI, as well as an in-depth prompt audit. The Blueprint deliverable provides the agency with the findings, recommendations and ready-to-implement page templates for content and structural updates ensuring optimal AI retrievability.
+It depends what your client roster or agency requires. You'll usually start with a single project engagement, such as an AI Visibility Blueprint to set the foundation for a client. This includes a strategic assessment of the brand's identity across AI, as well as an in-depth prompt audit. The Blueprint deliverable gives you the findings, recommendations and ready-to-implement page templates for content and structural updates ensuring optimal AI retrievability.
 
 A client retainer starts at the same point as the single engagement, but it sets the client up for ongoing monitoring. The Blueprint serves as the AI visibility baseline, informing on-site and third-party content strategies. Retainer clients receive a monthly report of the brand's AI visibility within their category (Share of Voice, answer mentions, citations), along with strategic recommendations and prioritizations for the next round of content.
 
 ## How do you keep the client relationship clean?
 
-The agency owns the client relationship and makes the decision whether to white-label services or not. There is even an option for me to engage with your clients using an agency domain email address.
+You own the client relationship and make the decision whether to white-label the work or not. There is even an option for me to engage with your clients using an agency domain email address.
 
 ## What should an agency look for when hiring an AI visibility consultant?
 
-AI visibility is a newer area of marketing. If an agency is considering hiring a specialist, it's important to ensure the candidate has actually implemented, measured and reported on the related KPIs. If not, the agency will be stuck with a new dashboard or report they don't understand or know how to present to their client.
+AI visibility is a newer area of marketing. If you're considering hiring a specialist, make sure the candidate has actually implemented, measured and reported on the related KPIs. If not, you'll be stuck with a new dashboard or report you don't understand or know how to present to your client.
 
 As an AI visibility expert, I believe the part you can't fake about this work is the audience intelligence research. It requires strategic experience to identify patterns and create a plan to solve them. And while the foundation of the work is the same, every client and industry has its own nuances.
 
