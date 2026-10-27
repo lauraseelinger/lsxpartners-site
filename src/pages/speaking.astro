@@ -79,11 +79,35 @@ const talks = [
     linkLabel: 'Listen to the episode →',
   },
 ];
+// Upcoming — mirrors the "Where to find me next" cards, emitted as Event schema.
+const upcoming = [
+  {
+    event: 'Great Lakes AI Week',
+    title: 'The AI Brand Identity You’re Up Against',
+    startISO: '2026-11-12',
+    venue: 'The University of Toledo', city: 'Toledo, OH',
+    description: 'A live look at the brand identity AI has built for you from the entire internet — why strong SEO doesn’t mean AI knows who you are, where the wrong story comes from and what to do about it.',
+  },
+  {
+    event: 'Great Lakes AI Week',
+    title: 'Known by AI. Owned by You.',
+    startISO: '2026-11-12',
+    venue: 'The University of Toledo', city: 'Toledo, OH',
+    description: 'A fireside with Shannon Villalba on two sides of the same brand problem — whether AI understands your brand, and whether the equity you’re building actually belongs to you.',
+  },
+  {
+    event: 'Innovate New Albany Expert Office Hours',
+    title: 'AI Visibility Office Hours',
+    startISO: '2026-11-19T08:45:00-05:00', endISO: '2026-11-19T11:45:00-05:00',
+    venue: 'Innovate New Albany', city: 'New Albany, OH',
+    description: 'Open office hours on AI visibility for New Albany founders and businesses — AEO and GEO, how to tell whether AI knows your brand and why it may be recommending competitors instead.',
+  },
+];
 ---
 <BaseLayout
   title="Speaking"
   description="Laura Seelinger speaks on AI visibility, GEO and AEO — talks and workshops that leave marketing teams, agencies and events with a plan they can act on."
-  schemas={talks.filter((t) => t.startISO).map((t) => eventSchema(t))}
+  schemas={[...talks.filter((t) => t.startISO), ...upcoming].map((t) => eventSchema(t))}
 >
   <!-- HERO -->
   <section class="hero media-overlay media-overlay--hero">
