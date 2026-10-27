@@ -6,6 +6,7 @@ register: measured-pillar
 tags: ["ai-visibility", "aeo", "agencies"]
 heroImage: "/images/blog/hire-ai-visibility-consultant-agency.jpg"
 heroAlt: "Laura Seelinger, AI visibility consultant and founder of LSX Partners"
+hideHero: true
 faqs:
   - question: "When should an agency bring in an AI visibility consultant?"
     answer: "Usually when a client asks something the team can't answer cleanly — why they're invisible in ChatGPT, or why traffic is sliding while rankings hold. You can learn AI visibility in-house, but it moves faster than most teams can keep up with and the learning eats unbillable hours, so bringing in a specialist is the faster path to a confident answer and spares your team months of trial and error."
