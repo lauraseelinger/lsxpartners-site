@@ -20,7 +20,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
     <div class="container hero__grid">
       <div class="hero__text">
         <p class="subhead">ai visibility &amp; strategy</p>
-        <h1>Get cited by AI —<br />and bring leadership a plan they’ll approve</h1>
+        <h1>Get cited by AI<span class="hero__h1-sub"> and bring leadership a plan they’ll approve</span></h1>
         <p class="hero__lede">
           You’ve had your team working on AI search for months, with stretch goals
           and side experiments stacked on top of their actual jobs. I come in, find
@@ -209,6 +209,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   .hero__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--space-5); align-items: center; min-height: clamp(440px, 60vh, 580px); }
   .hero__text { max-width: 36rem; }
   .hero h1 { font-size: clamp(2.6rem, 1.7rem + 4vw, 5rem); margin-block: var(--space-1) var(--space-2); }
+  .hero__h1-sub { display: block; font-size: clamp(1.45rem, 1.05rem + 1.5vw, 2.2rem); line-height: 1.15; color: var(--brown); margin-top: 0.5rem; max-width: 22ch; }
   .hero__lede { font-size: var(--text-lg); max-width: 44ch; margin-bottom: var(--space-3); }
 
   /* photo + sticker cluster */
