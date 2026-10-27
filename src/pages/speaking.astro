@@ -79,11 +79,35 @@ const talks = [
     linkLabel: 'Listen to the episode →',
   },
 ];
+// Upcoming — mirrors the "Where to find me next" cards, emitted as Event schema.
+const upcoming = [
+  {
+    event: 'Great Lakes AI Week',
+    title: 'The AI Brand Identity You’re Up Against',
+    startISO: '2026-11-12',
+    venue: 'The University of Toledo', city: 'Toledo, OH',
+    description: 'A live look at the brand identity AI has built for you from the entire internet — why strong SEO doesn’t mean AI knows who you are, where the wrong story comes from and what to do about it.',
+  },
+  {
+    event: 'Great Lakes AI Week',
+    title: 'Known by AI. Owned by You.',
+    startISO: '2026-11-12',
+    venue: 'The University of Toledo', city: 'Toledo, OH',
+    description: 'A fireside with Shannon Villalba on two sides of the same brand problem — whether AI understands your brand, and whether the equity you’re building actually belongs to you.',
+  },
+  {
+    event: 'Innovate New Albany Expert Office Hours',
+    title: 'AI Visibility Office Hours',
+    startISO: '2026-11-19T08:45:00-05:00', endISO: '2026-11-19T11:45:00-05:00',
+    venue: 'Innovate New Albany', city: 'New Albany, OH',
+    description: 'Open office hours on AI visibility for New Albany founders and businesses — AEO and GEO, how to tell whether AI knows your brand and why it may be recommending competitors instead.',
+  },
+];
 ---
 <BaseLayout
   title="Speaking"
   description="Laura Seelinger speaks on AI visibility, GEO and AEO — talks and workshops that leave marketing teams, agencies and events with a plan they can act on."
-  schemas={talks.filter((t) => t.startISO).map((t) => eventSchema(t))}
+  schemas={[...talks.filter((t) => t.startISO), ...upcoming].map((t) => eventSchema(t))}
 >
   <!-- HERO -->
   <section class="hero media-overlay media-overlay--hero">
@@ -189,6 +213,38 @@ const talks = [
     });
   </script>
 
+  <!-- WHERE TO FIND ME NEXT — upcoming (peach highlight) -->
+  <StitchDivider bg="peach" stitch="rust" />
+  <section class="band section--peach">
+    <div class="container">
+      <div class="measure" data-reveal style="margin-bottom: var(--space-3)">
+        <p class="subhead">on the calendar</p>
+        <h2>Where to find me next</h2>
+        <p>A few places you can catch me talking live about AI visibility.</p>
+      </div>
+      <div class="next-grid" data-reveal>
+        <article class="next-card">
+          <p class="next-card__kicker">Great Lakes AI Week</p>
+          <h3>The AI Brand Identity You’re Up Against</h3>
+          <p class="next-card__meta">Nov 12, 2026 · The University of Toledo · <a href="https://www.greatlakesaiweek.com/agenda">agenda</a></p>
+          <p>Ask AI about your brand and it tells a whole story — who you are, what you’re good for, who it recommends instead — built from the entire internet, not your homepage copy. I’ll pull up real brands live, show the parts that make everyone a little uncomfortable and walk through how a company can win at SEO while AI still tells the wrong story — and what to do about it.</p>
+        </article>
+        <article class="next-card">
+          <p class="next-card__kicker">Great Lakes AI Week</p>
+          <h3>Known by AI. Owned by You.</h3>
+          <p class="next-card__meta">Nov 12, 2026 · The University of Toledo · <a href="https://www.greatlakesaiweek.com/agenda">agenda</a></p>
+          <p>A candid fireside with Shannon Villalba, Legal Architect and creator of Creative Sovereignty™. We get into two sides of the same brand problem — whether AI understands your brand, and whether the equity you’re building actually belongs to you — plus the gap between the brand you present, the brand AI perceives and the brand you can actually protect.</p>
+        </article>
+        <article class="next-card">
+          <p class="next-card__kicker">Innovate New Albany</p>
+          <h3>AI Visibility Office Hours</h3>
+          <p class="next-card__meta">Thursday, Nov 19, 2026 · <a href="https://innovatenewalbany.org/new-events/category/expert-office-hours">details</a></p>
+          <p>Open office hours for New Albany founders and businesses. Book a slot and bring your AI visibility questions — why AI recommends your competitors instead of you, how to tell whether AI even knows your brand and where AEO and GEO actually start.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA (forest) -->
   <StitchDivider bg="forest" stitch="yellow" />
   <section class="band section--forest">
@@ -261,6 +317,18 @@ const talks = [
   .talk a.talk__link:hover { color: var(--brown); }
   .also { margin-top: var(--space-4); font-size: var(--text-sm); }
   .also a { color: var(--cream); text-decoration: underline; font-weight: 600; }
+
+  /* Where to find me next — upcoming highlight (peach) */
+  .next__meta { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--brown); font-size: var(--text-sm); margin-top: var(--space-2); }
+  .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .next-card { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0.4rem; background: var(--cream); color: var(--brown); border-radius: 16px; padding: var(--space-4); box-shadow: var(--shadow-card); }
+  .next-card > * { margin: 0; }
+  .next-card__kicker { font-family: var(--font-sub); font-weight: 800; font-style: italic; color: var(--olive); font-size: var(--text-sm); }
+  .next-card h3 { color: var(--rust); font-size: var(--text-xl); }
+  .next-card__meta { font-weight: 700; color: var(--brown); font-size: var(--text-sm); }
+  .next-card__meta a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; }
+  .next-card > p:last-child { font-size: var(--text-sm); border-top: 1px solid rgba(72, 55, 41, 0.15); padding-top: var(--space-2); }
+  @media (max-width: 920px) { .next-grid { grid-template-columns: 1fr; max-width: 40rem; } }
 
   @media (max-width: 760px) {
     .intro-split { grid-template-columns: 1fr; }
