@@ -5,7 +5,7 @@ pubDate: 2026-10-27
 register: measured-pillar
 tags: ["ai-visibility", "aeo", "agencies"]
 heroImage: "/images/blog/hire-ai-visibility-consultant-agency.jpg"
-heroAlt: "Laura Seelinger, AI visibility consultant and founder of LSX Partners"
+heroAlt: "An AI visibility consultant working alongside an agency team at a laptop"
 hideHero: true
 faqs:
   - question: "When should an agency bring in an AI visibility consultant?"
