@@ -67,14 +67,16 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
           Google and still be invisible in the answer.
         </p>
       </div>
+      <h4 class="stat-source" data-reveal>LSX client data; Medtech industry</h4>
       <div class="stat-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px;">
         <div data-reveal data-reveal-delay="1">
+          <p class="stat__eyebrow">Up to</p>
           <div class="stat__num"><span data-count="40" data-suffix="%">40%</span></div>
-          <p class="stat__label">share of AI answers for a med-tech client, up from ~24% three months earlier <span class="cite">(first-party client data, 2026)</span>.</p>
+          <p class="stat__label">from 24% in Share of AI answers in three months <span class="cite">(first-party client data, 2026)</span>.</p>
         </div>
         <div data-reveal data-reveal-delay="2">
           <div class="stat__num"><span data-count="4" data-suffix="×">4×</span></div>
-          <p class="stat__label">more AI citations for that same client in the same window (22 to 93), while competitors lost ground <span class="cite">(first-party client data, 2026)</span>.</p>
+          <p class="stat__label">more AI citations in three months (22 → 93).</p>
         </div>
       </div>
     </div>
@@ -254,6 +256,22 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   .measure--center { margin-inline: auto; text-align: center; }
   .measure--center .ctas { justify-content: center; }
   .cite { font-size: 0.82em; opacity: 0.85; }
+  .stat-source {
+    font-family: var(--font-sub);
+    font-weight: 800;
+    font-size: var(--text-sm);
+    letter-spacing: 0.02em;
+    opacity: 0.85;
+    margin: 0 0 var(--space-2);
+  }
+  .stat__eyebrow {
+    font-family: var(--font-sub);
+    font-style: italic;
+    font-size: var(--text-sm);
+    opacity: 0.85;
+    margin: 0 0 var(--space-1);
+    line-height: 1;
+  }
 
   .banner { min-height: 60vh; display: flex; align-items: center; }
 
