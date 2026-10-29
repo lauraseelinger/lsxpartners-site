@@ -71,9 +71,8 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
         <h4 class="stat-source">LSX client data</h4>
         <p class="stat-source-body">First-party client data in the medical technology industry</p>
       </div>
-      <div class="stat-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px;">
+      <div class="stat-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-top: 0;">
         <div data-reveal data-reveal-delay="1">
-          <p class="stat__eyebrow">Up to</p>
           <div class="stat__num"><span data-count="40" data-suffix="%">40%</span></div>
           <p class="stat__label">in AI Share of Voice; up 16% in a three-month period</p>
         </div>
@@ -259,7 +258,7 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
   .measure--center { margin-inline: auto; text-align: center; }
   .measure--center .ctas { justify-content: center; }
   .cite { font-size: 0.82em; opacity: 0.85; }
-  .stat-source-block { margin: 0 0 var(--space-3); }
+  .stat-source-block { margin: var(--space-4) 0 var(--space-1); }
   .stat-source {
     font-family: var(--font-body);
     text-transform: uppercase;
@@ -267,21 +266,13 @@ const marquee = ['ai visibility', 'get cited by ai', 'aeo', 'geo', 'audience int
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--amber);
-    margin: 0 0 var(--space-1);
+    margin: 0;
   }
   .stat-source-body {
     font-size: var(--text-sm);
     opacity: 0.85;
-    margin: 0;
-    max-width: 48ch;
-  }
-  .stat__eyebrow {
-    font-family: var(--font-sub);
-    font-style: italic;
-    font-size: var(--text-sm);
-    opacity: 0.85;
-    margin: 0 0 var(--space-1);
-    line-height: 1;
+    margin: var(--space-1) 0 0;
+    max-width: none;
   }
 
   .banner { min-height: 60vh; display: flex; align-items: center; }
