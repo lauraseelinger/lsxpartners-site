@@ -234,6 +234,17 @@ const upcoming = [
           <p class="next-card__meta">Thursday, Nov 19, 2026 · <a href="https://innovatenewalbany.org/new-events/category/expert-office-hours">details</a></p>
           <p>Open office hours for New Albany founders and businesses. Book a slot and bring your AI visibility questions — why AI recommends your competitors instead of you, how to tell whether AI even knows your brand and where AEO and GEO actually start.</p>
         </article>
+        <article class="next-card next-card--book">
+          <p class="next-card__kicker">Your event next?</p>
+          <h3>Bring me to your stage</h3>
+          <p class="next-card__meta">Keynotes, workshops, panels and podcasts</p>
+          <div class="next-card__book">
+            <ul class="next-card__topics">
+              {topics.map((t) => <li>{t.title}</li>)}
+            </ul>
+            <a class="button" href="/contact?topic=speaking#note">Invite me to speak</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -324,6 +335,8 @@ const upcoming = [
   .next-card__meta { font-weight: 700; color: var(--brown); font-size: var(--text-sm); }
   .next-card__meta a { color: var(--rust); text-decoration: underline; text-underline-offset: 2px; }
   .next-card > p:last-child { font-size: var(--text-sm); border-top: 1px solid rgba(72, 55, 41, 0.15); padding-top: var(--space-2); }
+  .next-card__book { border-top: 1px solid rgba(72, 55, 41, 0.15); padding-top: var(--space-2); display: flex; flex-direction: column; gap: var(--space-2); align-items: flex-start; }
+  .next-card__topics { margin: 0; padding-left: 1.1em; font-size: var(--text-sm); display: flex; flex-direction: column; gap: 0.35rem; }
   @media (max-width: 920px) { .next-grid { grid-template-columns: 1fr; max-width: 40rem; } }
 
   @media (max-width: 760px) {
