@@ -27,26 +27,7 @@ const talks = [
     description: 'How AI decides who your brand is, where it gets its information and why the answer can change minutes later — with live tests, real client numbers and how to have more of a say in it.',
     url: '/speaking/great-lakes-ai-week-2026/',
     linkLabel: 'See the slides →',
-  },
-  {
-    event: 'Great Lakes AI Week',
-    title: 'From Our Workflows to Your Visibility: Ask Us Anything About AI & Marketing',
-    track: 'AI Innovation Track',
-    dateDisplay: 'November 2026',
-    startISO: '2026-11-12T14:30:00-05:00',
-    venue: 'The University of Toledo', city: 'Toledo, OH',
-    description: 'An open Q&A with Melanie Dunn of Three Seven on how we use AI in our own marketing work and what it takes to show up in AI answers.',
-    url: '',
-  },
-  {
-    event: 'Great Lakes AI Week',
-    title: 'Roundtable: AI for Marketing and Revenue',
-    track: 'Roundtable',
-    dateDisplay: 'November 2026',
-    startISO: '2026-11-12T12:00:00-05:00',
-    venue: 'The University of Toledo', city: 'Toledo, OH',
-    description: 'A curated roundtable with marketing and revenue leaders from across the region on where AI is earning its place in the work.',
-    url: '',
+    sub: { title: 'From Our Workflows to Your Visibility: Ask Us Anything About AI & Marketing', note: 'A follow-up Q&A with Melanie Dunn of Three Seven' },
   },
   {
     event: 'Cincy AI Week',
@@ -211,6 +192,12 @@ const upcoming = [
               <p class="talk__meta">{[t.dateDisplay, t.city].filter(Boolean).join(' · ')}</p>
             )}
             <p class="talk__desc">{t.description}</p>
+            {t.sub && (
+              <div class="talk__sub">
+                <p class="talk__subtitle">+ {t.sub.title}</p>
+                <p class="talk__subnote">{t.sub.note}</p>
+              </div>
+            )}
             {t.url && <a class="talk__link" href={t.url}>{t.linkLabel ?? 'Event details →'}</a>}
           </article>
         ))}
@@ -319,6 +306,9 @@ const upcoming = [
   .talk a.talk__titlelink:hover { color: var(--rust); }
   .talk__meta { font-size: var(--text-sm); font-weight: 600; color: var(--olive); margin-bottom: var(--space-1); }
   .talk__desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+  .talk__sub { border-left: 3px solid var(--rust); padding-left: var(--space-1); margin-bottom: var(--space-1); }
+  .talk__subtitle { font-size: var(--text-sm); font-weight: 600; color: var(--brown); }
+  .talk__subnote { font-size: var(--text-sm); color: var(--color-text-muted); }
   .talk a.talk__link { font-size: var(--text-sm); font-weight: 600; color: var(--rust); text-decoration: underline; text-underline-offset: 2px; }
   .talk a.talk__link:hover { color: var(--brown); }
   .also { margin-top: var(--space-4); font-size: var(--text-sm); }
