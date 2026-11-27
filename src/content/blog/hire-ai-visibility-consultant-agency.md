@@ -5,7 +5,7 @@ pubDate: 2026-10-27
 register: measured-pillar
 tags: ["ai-visibility", "aeo", "agencies"]
 heroImage: "/images/blog/hire-ai-visibility-consultant-agency-3.jpg"
-heroAlt: "An AI visibility consultant working alongside an agency team at a laptop"
+heroAlt: "Laura Seelinger presenting on AI visibility at Great Lakes AI Week"
 hideHero: true
 faqs:
   - question: "When should an agency bring in an AI visibility consultant?"
