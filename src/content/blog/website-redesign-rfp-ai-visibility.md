@@ -6,6 +6,7 @@ register: punchy-personal
 tags: ["ai-visibility", "aeo", "geo", "marketing-pov"]
 heroImage: "/images/blog/website-redesign-rfp-ai-visibility.jpg"
 heroAlt: "Laura Seelinger speaking at Great Lakes AI Week"
+hideHero: true
 faqs:
   - question: "Why does AI visibility get left out of a website redesign?"
     answer: "Because it's easy to assume 'SEO' already covers it. AEO/GEO is a newer, separate layer, so if it isn't named specifically in the RFP, there's no guarantee it gets scoped, quoted, or built — and it's the first thing to fall out when timelines and budgets tighten. You launch a gorgeous new site that's invisible in AI the day it goes live."
